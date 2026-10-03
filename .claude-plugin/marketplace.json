@@ -306,6 +306,113 @@
         "url": "niijoey/prompter-mod",
         "path": "plugins/prompter"
       }
+    },
+    {
+      "name": "overalls",
+      "source": {
+        "source": "github",
+        "repo": "Troepster/overalls"
+      }
+    },
+    {
+      "name": "clawd-spinner",
+      "source": {
+        "source": "github",
+        "repo": "saiharsha03/clawd-spinner"
+      }
+    },
+    {
+      "name": "env",
+      "source": {
+        "source": "github",
+        "repo": "davekiss/env"
+      }
+    },
+    {
+      "name": "ctx-handoff",
+      "source": {
+        "source": "github",
+        "repo": "cablate/ctx-handoff-mod"
+      }
+    },
+    {
+      "name": "eta",
+      "source": {
+        "source": "git-subdir",
+        "url": "hamza-siddiq/claude-eta",
+        "path": "eta"
+      }
+    },
+    {
+      "name": "md-prompt",
+      "source": {
+        "source": "git-subdir",
+        "url": "nogu66/md-prompt",
+        "path": "plugins/md-prompt"
+      }
+    },
+    {
+      "name": "plushie",
+      "source": {
+        "source": "github",
+        "repo": "xyc/plushie"
+      }
+    },
+    {
+      "name": "micro-compaction",
+      "source": {
+        "source": "github",
+        "repo": "ruihe774/cc-micro-compaction"
+      }
+    },
+    {
+      "name": "aside",
+      "source": {
+        "source": "github",
+        "repo": "JayDoubleu/aside"
+      }
+    },
+    {
+      "name": "lightbox",
+      "source": {
+        "source": "github",
+        "repo": "arihantbansal/claude-lightbox"
+      }
+    },
+    {
+      "name": "gfm-render",
+      "source": {
+        "source": "github",
+        "repo": "briangtn/claude-gfm-render"
+      }
+    },
+    {
+      "name": "session-brief",
+      "source": {
+        "source": "github",
+        "repo": "skanehira/claude-session-brief"
+      }
+    },
+    {
+      "name": "rtl-text",
+      "source": {
+        "source": "github",
+        "repo": "aliir74/claude-code-rtl"
+      }
+    },
+    {
+      "name": "catch-me-up",
+      "source": {
+        "source": "github",
+        "repo": "oliverow/catch-me-up"
+      }
+    },
+    {
+      "name": "linear-claude-mod",
+      "source": {
+        "source": "github",
+        "repo": "rjohnt/linear-claude-mod"
+      }
     }
   ]
 }
