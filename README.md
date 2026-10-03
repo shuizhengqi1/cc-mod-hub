@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 170 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 197 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 170 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 197 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 170 mods, see the Chinese section below.
+For detailed descriptions of all 197 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 170 个精选 Claude Code mods：
+以下是本市场的 197 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -794,6 +794,140 @@ SQL 拼接监视。
 #### burn-meter
 提示框上方会话花费「火焰」条与限额，/burn 看每回合费用。  
 **来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/burn-meter
+
+#### darkroom
+把 Claude 读/写/生成以及你粘贴的图片做成聊天里的胶片条预览。  
+**许可证**：MIT  
+**来源**：https://github.com/govlog/claude-darkroom
+
+#### paste-view
+在提示框上方预览粘贴的图片缩略图与长文本。  
+**许可证**：MIT  
+**来源**：https://github.com/Amorfx/claude-paste-view
+
+#### typing-speed
+提示框上方打字速度计，提交后显示 WPM、准确率与个人最佳。  
+**许可证**：MIT  
+**来源**：https://github.com/borabiricik/claude-mods/tree/main/plugins/typing-speed
+
+#### context-dungeon
+把会话做成肉鸽：上下文是 HP，报错出怪，绿测击杀，只观察 tool.call，不改调用。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/context-dungeon
+
+#### departure-board
+翻牌式出发板，把当前任务翻成车站到发显示。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/departure-board
+
+#### netrunner-hud
+会话仪表盘：上下文条、token 示波与状态窗格。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/netrunner-hud
+
+#### boot-sequence
+会话开始时做一次本机开机检查（git、工具链）。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/boot-sequence
+
+#### transit-map
+把 git 历史画成地铁图，分支是线，提交是站。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/transit-map
+
+#### codebase-galaxy
+用盲文点阵把仓库文件画成星空，跟着 Claude 碰过的文件。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/codebase-galaxy
+
+#### fault-lacquer
+失败的操作在漆片上裂开，修好后愈合。  
+**许可证**：MIT  
+**来源**：https://github.com/ccdwyer/fault-lacquer
+
+#### minefield
+Claude 工作时在窗格里玩扫雷。  
+**许可证**：MIT  
+**来源**：https://github.com/reporails/arcade/tree/main/minefield
+
+#### prayer-times
+提示框下方显示下次礼拜时间。  
+**许可证**：MIT, except hooks/times.ts is LGPL-3.0.  
+**来源**：https://github.com/mkbuilds4/mods/tree/main/plugins/prayer-times
+
+#### limit-bars
+提示框下四个动画环，显示上下文、会话和周限额。  
+**许可证**：MIT  
+**来源**：https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars
+
+#### transcript-fx
+给 transcript 上色：工具块、提示面板和 spinner。  
+**许可证**：MIT  
+**来源**：https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/transcript-fx
+
+#### reply-highlight
+用彩虹边和紫色底突出 Claude 的回复。  
+**许可证**：MIT  
+**来源**：https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/reply-highlight
+
+#### backlog-pane
+侧栏看 git 状态和 Backlog.md 任务。  
+**许可证**：MIT  
+**来源**：https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane
+
+#### pro-hud
+Pro 计划用量表盘：5 小时、7 天限额、上下文和回合回执。  
+**许可证**：MIT  
+**来源**：https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/pro-hud
+
+#### cache-clock
+显示提示缓存还热多久。  
+**许可证**：MIT  
+**来源**：https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/cache-clock
+
+#### context-xray
+窗格拆开上下文占用：系统提示、工具、记忆、skills、消息。  
+**许可证**：MIT  
+**来源**：https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/context-xray
+
+#### session-receipt
+/receipt 窗格列出每回合的 token 花费。  
+**许可证**：MIT  
+**来源**：https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/session-receipt
+
+#### cache-timer
+倒计时提示缓存何时过期。  
+**许可证**：MIT  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/cache-timer
+
+#### turn-timeline
+/timeline 把当前回合画成时间线。  
+**许可证**：MIT  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/turn-timeline
+
+#### turn-footer
+每条回答下方改成回合摘要（工具、请求、tokens、缓存命中）。  
+**许可证**：MIT  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/turn-footer
+
+#### change-ledger
+/changes 列出本会话改过的文件和行数。  
+**许可证**：MIT  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/change-ledger
+
+#### leftovers
+记下 Claude 留在本机或服务器上的后台进程。  
+**许可证**：MIT  
+**来源**：https://github.com/homieyangg/claude-code-mods/tree/main/leftovers
+
+#### deadlines
+状态行的截止日期倒计时，/ddl 增删。  
+**来源**：https://github.com/richardcsuwandi/claude-mods/tree/main/plugins/deadlines
+
+#### cc-idle
+挂在 Claude 旁边的放置游戏，只用本机会话进度。  
+**许可证**：MIT  
+**来源**：https://github.com/RichardAtCT/cc-idle/tree/main/plugins/cc-idle
 
 ## 许可证
 
