@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 263 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 288 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 263 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 288 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 263 mods, see the Chinese section below.
+For detailed descriptions of all 288 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 263 个精选 Claude Code mods：
+以下是本市场的 288 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -1207,6 +1207,106 @@ Claude 工作时的像素小游戏。
 #### secret-mask
 在工具输出写入对话前遮罩疑似密钥。备注：会改写展示给模型的工具结果文本（本地遮罩，不外传）。  
 **来源**：https://github.com/homieyangg/claude-code-mods/tree/main/secret-mask
+
+#### pong
+提示上方的乒乓小游戏（/pong），Claude 工作时可玩，回合结束暂停。  
+**来源**：https://github.com/ambareeshav/claude-pong-mod
+
+#### fortune-cookie
+/fortune 弹出一句编程运势 toast。  
+**来源**：https://github.com/tobinsouth/fortune-cookie-mod
+
+#### claude-maru-run
+Claude 工作时提示上方滚动的橙白猫动画（/maru）。  
+**来源**：https://github.com/lemonlatte/claude-maru-run
+
+#### cc-dino
+提示上方离线小恐龙（/dino），纯本地、不上传。  
+**来源**：https://github.com/manfye/cc-dino
+
+#### cc-pokedex
+提示上方野生遭遇小游戏（/dex），按提示内容出怪。  
+**来源**：https://github.com/deonmenezes/claude-mods-pokedex
+
+#### cc-buddy
+/buddy 像素伙伴；提到名字时会注入说明上下文并用模型回气泡（本地）。备注：被提及时会注入 prompt context 并调用本地 $.model.complete。  
+**来源**：https://github.com/vmallela0/cc-buddy
+
+#### statusbar
+Desktop 会话状态条：用量窗口、上下文与费用。  
+**来源**：https://github.com/sgmonda/statusbar
+
+#### loose-ends
+提示上方未完事项清单；用本地 $.model.complete 从对话提取。备注：会调用本地 $.model.complete 分析对话。  
+**来源**：https://github.com/fernandomoraes/loose-ends
+
+#### gamba
+讽刺老虎机，筹码只来自本回合消耗的 token，无真钱。  
+**来源**：https://github.com/salatmaster/claude-gamba
+
+#### claude-slots
+把 spinner 换成 ASCII 老虎机动画。  
+**来源**：https://github.com/WorldInnovationsDepartment/claude_slots
+
+#### music-mod
+/music 显示 macOS Music.app 正在播放（本机 osascript）。备注：会运行本机 osascript 读取 Music.app 状态。  
+**来源**：https://github.com/zyx1121/music-mod
+
+#### holdtime
+Claude 工作时提示上方短学习卡片。  
+**来源**：https://github.com/ItsRohith-A/holdtime
+
+#### korkmaz-trail
+只读审计条：命令/改文件/外连与风险，不改工具调用。  
+**来源**：https://github.com/BersanKayraKorkmaz/korkmaz-trail
+
+#### clawdgotchi
+提示上方像素 Clawd，随上下文成长。  
+**来源**：https://github.com/arthurseredaa/clawdgotchi
+
+#### usage-wrapup
+用量将尽时向工具结果注入收尾说明，让 agent 收尾。备注：会改 tool 返回的 context。  
+**来源**：https://github.com/DaKev/usage-wrapup
+
+#### usage-report
+状态行显示上下文填充与用量配额警告。  
+**来源**：https://github.com/Schweem/usage-report
+
+#### idle-compact
+空闲接近 prompt cache 过期时自动 $.session.compact。备注：会主动压缩会话。  
+**来源**：https://github.com/davidar/claude-idle-compact
+
+#### tps-report
+Claude 工作时提示上方「Bill / TPS report」恶搞动画。  
+**来源**：https://github.com/vgnshiyer/tps-report
+
+#### cache-ttl-timer
+页脚旁的 prompt-cache 倒计时。  
+**来源**：https://github.com/WQGGSEY/cache-ttl-timer
+
+#### wavy-usage
+提示上方液态圆环显示 5 小时/7 天用量与上下文。  
+**来源**：https://github.com/BatuhanCakmakk/wavy-usage
+
+#### nowloading
+把工作中动画线换成复古主题（磁带/时刻表等），只观察不改工具。  
+**来源**：https://github.com/vgnshiyer/nowloading
+
+#### essential-conversation
+/conversation 侧栏对照每轮用户提示与回答。  
+**来源**：https://github.com/SuzumiyaAoba/claude-essential-conversation-mod
+
+#### repo-pulse
+提示上方 git 健康条（分支/脏文件/ahead-behind），只跑本机 git。备注：会运行本机 git 命令读取仓库状态。  
+**来源**：https://github.com/5d0tal1gat0r/repo-pulse
+
+#### stepscope
+工具调用时间线窗格与循环告警，观察不改写。  
+**来源**：https://github.com/5d0tal1gat0r/stepscope
+
+#### drift
+统计「交付」vs 改工具/配置/文档的比例，只读 tool.call。  
+**来源**：https://github.com/azkhh/drift
 
 ## 许可证
 
