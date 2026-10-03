@@ -1584,6 +1584,125 @@
         "url": "y-hirakaw/claude-code-mods",
         "path": "touch-map"
       }
+    },
+    {
+      "name": "think-meter",
+      "source": {
+        "source": "github",
+        "repo": "Huuuuung/think-meter"
+      }
+    },
+    {
+      "name": "chameleon",
+      "source": {
+        "source": "git-subdir",
+        "url": "aksh1618/claude-mods",
+        "path": "chameleon"
+      }
+    },
+    {
+      "name": "skill-session-mods",
+      "source": {
+        "source": "git-subdir",
+        "url": "aksh1618/claude-mods",
+        "path": "skill-session-mods"
+      }
+    },
+    {
+      "name": "paste-peek",
+      "source": {
+        "source": "git-subdir",
+        "url": "nokiy/claude-code-mods",
+        "path": "plugins/paste-peek"
+      }
+    },
+    {
+      "name": "agent-monitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "nokiy/claude-code-mods",
+        "path": "plugins/agent-monitor"
+      }
+    },
+    {
+      "name": "garde-du-corps",
+      "source": {
+        "source": "git-subdir",
+        "url": "Para-FR/claude-code-mods-fr",
+        "path": "garde-du-corps"
+      }
+    },
+    {
+      "name": "maomao",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "maomao"
+      }
+    },
+    {
+      "name": "ctx-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "ctx-panel"
+      }
+    },
+    {
+      "name": "files",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "files"
+      }
+    },
+    {
+      "name": "timeline",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "timeline"
+      }
+    },
+    {
+      "name": "prompts",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "prompts"
+      }
+    },
+    {
+      "name": "tokens",
+      "source": {
+        "source": "git-subdir",
+        "url": "jessetsai1024/claude-mods",
+        "path": "tokens"
+      }
+    },
+    {
+      "name": "ai-usage-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "arvakme/claude-code-butler",
+        "path": "ai-usage-band"
+      }
+    },
+    {
+      "name": "no-attribution",
+      "source": {
+        "source": "git-subdir",
+        "url": "claudemodz/mods",
+        "path": "plugins/no-attribution"
+      }
+    },
+    {
+      "name": "standup",
+      "source": {
+        "source": "git-subdir",
+        "url": "claudemodz/mods",
+        "path": "plugins/standup"
+      }
     }
   ]
 }
