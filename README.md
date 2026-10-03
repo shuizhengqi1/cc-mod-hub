@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 70 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 89 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 70 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 89 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 70 mods, see the Chinese section below.
+For detailed descriptions of all 89 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 70 个精选 Claude Code mods：
+以下是本市场的 89 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -380,6 +380,90 @@ Clawd 按 spinner 词表演动画（本地绘制，零 token）。
 Linear 指派工单面板；点击可加载详情、评论或改状态。  
 **许可证**：MIT  
 **来源**：https://github.com/rjohnt/linear-claude-mod
+
+#### next-steps
+每轮结束后在输入框上方建议最多三个下一步提示，可按数字键快速填入；fork 会话向模型问询并共享提示缓存，成本低廉。  
+**来源**：https://github.com/anthropics/claude-plugins-community/tree/main/next-steps
+
+#### pet
+一只嘴碎的火烈鸟吉祥物 Flingo，在侧栏或状态行陪伴你码字，代 Claude 说话、吐槽代码、喂养玩耍、换装（皇冠、礼帽、蝴蝶结、墨镜），用 /flingo 聊天。  
+**许可证**：MIT  
+**来源**：https://github.com/graugart/flingo
+
+#### pets
+像素宠物窗格：闲逛、记笔记、完成回合时跳跃、限额 80% 流泪、闲置两分钟午睡；八种动物（猫、小鸡、狗、史莱姆、兔子、仓鼠、企鹅、青蛙），可命名、喂食、升级，跨会话记忆。  
+**许可证**：MIT  
+**来源**：https://github.com/uppinote20/claude-pets
+
+#### dev-dash
+开发者仪表板窗格，集中显示会话状态与项目信息。  
+**来源**：https://github.com/RanaRauff/claude-dev-dashboard/tree/main/plugins/dev-dash
+
+#### avatar7
+机器脸随工具调用作评论，可选声线（SHODAN、HAL、GLaDOS 风格实验室 AI、Ada、duck7、Pod 042、Kaneda、Commis），在人类决策时陪伴等待并朗读通知。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/avatar7
+
+#### usage-bell
+接近限额时响铃：上下文占用（70/85/95%）、5 小时/7 天限额（80/95%）、自动记忆索引达 200 行或 25 kB；状态栏显示当前百分比，/usage7 查看详情。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/usage-bell
+
+#### mesh7-pane
+从 localhost:9090 每 1.5 秒轮询 mesh7 决策：每次调用的 ALLOW/DENY/HUMAN 及规则参数、待批准请求、紧急停止横幅、状态行计数、每个新拒绝或批准请求时 toast；只读。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane
+
+#### jukebox7
+白话点播音乐（"放点环境音"）：YouTube 音频通过隐藏 VLC 播放，无需浏览器也不抢焦点；窗格带流派按钮（每个是艺人电台）和当值头像的精选。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/jukebox7
+
+#### atelier-bell
+告知 atelier 完成时机：flux7-studio 渲染进度显示为 toast 和状态行（studio: rendering、studio: last …），/bell 查看状态。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/atelier-bell
+
+#### fable-pin
+每个子代理运行你选的模型，不是提示要的那个：在 agent.spawn 时将 model 改写为 fable（除非是 fork 继承父级），/fable-pin on/off 切换，/fable-pin status 查看。  
+**来源**：https://github.com/karanb192/claude-code-mods/tree/main/plugins/fable-pin
+
+#### image-peek
+文本光标移到粘贴的 [Image #1] 标记上时显示图像，移开隐藏；宽窗口用大预览窗格（深色画布居中），窄窗口用提示框上方区域；键盘焦点保持在提示框。  
+**来源**：https://github.com/karanb192/claude-code-mods/tree/main/plugins/image-peek
+
+#### git-gates
+Git 工作授权与整洁：追踪用户提示，拦截未授权的 commit/push/merge；检查提交消息（Conventional Commits、issue 引用）和 PR/MR 描述；Haiku 审查。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/git-gates
+
+#### lean-comments
+限制注释膨胀：Edit/Write 时标记多注释编辑，回合结束时检查 diff 的新注释行；Haiku 审查不值得保留的注释（复述代码或叙述改动）。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-comments
+
+#### lean-docs
+文档值得保留：Haiku 审查 git checkout 中增长的文档（runbook、设置页、叙述）、标记代码重复标识符的文档行、回合结束时检查 diff 的新文档。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-docs
+
+#### lean-scripts
+脚本值得保留：Haiku 审查在 git checkout 中写入或增长的脚本，标记那些你需要时直接打出来更快的脚本。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-scripts
+
+#### claude-games
+提示框上方的街机游戏（/racer、/breakout、/dino、/shooter），在 Claude 工作时玩；游戏对 Claude 的行为作出反应：通过的测试清理道路、失败的测试扔障碍、提交给护盾或炸弹；回合结束时游戏暂停。  
+**许可证**：MIT  
+**来源**：https://github.com/mohi-devhub/claude-games
+
+#### segmem
+长期记忆：区分身份（你是谁）、过程（仓库如何工作）、情节（周二发生了什么）与人物档案；按衰减窗口加载，项目级作用域，压缩历史为摘要，无需服务器或守护进程。  
+**来源**：https://github.com/mahuebel/segmem
+
+#### tw-stock-mod
+提示框上方的台股/美股观察清单带状栏，台股交易时段显示台股（红涨绿跌）、美股交易时段显示美股（绿涨红跌）；支持 Yahoo 延迟报价或券商即时行情（永豐 shioaji、群益 capital）；显示持仓损益。  
+**来源**：https://github.com/darrell-tw/darrelltw-mods/tree/main/mods/tw-stock-mod
+
+#### agent-router
+代理路由器，管理子代理调用。  
+**来源**：https://github.com/alexandernicholson/agent-router/tree/main/agent-router
 
 ## 许可证
 
