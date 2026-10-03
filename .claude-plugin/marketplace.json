@@ -2304,6 +2304,80 @@
         "url": "kzarzycki/claude-mods",
         "path": "plugins/resume-on-stop"
       }
+    },
+    {
+      "name": "cc-subway",
+      "source": {
+        "source": "git",
+        "url": "lucastononro/cc-subway"
+      }
+    },
+    {
+      "name": "claude-mine",
+      "source": {
+        "source": "git",
+        "url": "swan4er/claude-mine"
+      }
+    },
+    {
+      "name": "claude-dino",
+      "source": {
+        "source": "git",
+        "url": "swan4er/claude-dino"
+      }
+    },
+    {
+      "name": "adlib-lyrics",
+      "source": {
+        "source": "git",
+        "url": "bixxter/adlib-lyrics"
+      }
+    },
+    {
+      "name": "sudus",
+      "source": {
+        "source": "git",
+        "url": "eas4ai/sudus"
+      }
+    },
+    {
+      "name": "shunt",
+      "source": {
+        "source": "git-subdir",
+        "url": "pleaseai/shunt",
+        "path": "plugins/shunt"
+      }
+    },
+    {
+      "name": "secrets-veil",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonatangross/orchestkit",
+        "path": "mods/secrets-veil"
+      }
+    },
+    {
+      "name": "2048",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/2048"
+      }
+    },
+    {
+      "name": "tetris",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/tetris"
+      }
+    },
+    {
+      "name": "ambient",
+      "source": {
+        "source": "git",
+        "url": "barisdemirhan/claude-ambient"
+      }
     }
   ]
 }
