@@ -2202,38 +2202,6 @@
       }
     },
     {
-      "name": "amp-inbox-band",
-      "source": {
-        "source": "git-subdir",
-        "url": "23blocks-OS/ai-maestro",
-        "path": "mods/amp-inbox-band"
-      }
-    },
-    {
-      "name": "reflect-mod",
-      "source": {
-        "source": "git-subdir",
-        "url": "BayramAnnakov/claude-reflect",
-        "path": "mod"
-      }
-    },
-    {
-      "name": "emotion-statusline",
-      "source": {
-        "source": "git-subdir",
-        "url": "bencium/bencium-marketplace",
-        "path": "emotion-statusline"
-      }
-    },
-    {
-      "name": "followthrough-band",
-      "source": {
-        "source": "git-subdir",
-        "url": "BayramAnnakov/followthrough",
-        "path": "mod"
-      }
-    },
-    {
       "name": "oneform-line",
       "source": {
         "source": "git-subdir",
@@ -2250,27 +2218,11 @@
       }
     },
     {
-      "name": "draft-pane",
-      "source": {
-        "source": "git-subdir",
-        "url": "meganemura/draft-pane",
-        "path": "plugin"
-      }
-    },
-    {
       "name": "context-bar",
       "source": {
         "source": "git-subdir",
         "url": "k-wolfe99/claude-context-bar",
         "path": "mod"
-      }
-    },
-    {
-      "name": "wake",
-      "source": {
-        "source": "git-subdir",
-        "url": "henderson-tech/vybava",
-        "path": "mods/wake"
       }
     },
     {
@@ -2295,14 +2247,6 @@
         "source": "git-subdir",
         "url": "abhibansal60/claude-mods",
         "path": "browser-guard"
-      }
-    },
-    {
-      "name": "resume-on-stop",
-      "source": {
-        "source": "git-subdir",
-        "url": "kzarzycki/claude-mods",
-        "path": "plugins/resume-on-stop"
       }
     }
   ]
