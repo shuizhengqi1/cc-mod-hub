@@ -141,6 +141,47 @@ session.compact mod。
 **许可证**：AGPL-3.0  
 **来源**：https://github.com/ShiftinBits/constellation-claude
 
+#### usage-band
+在提示框上方显示 5 小时/7 天限额、上下文窗口与缓存命中率。  
+**许可证**：MIT  
+**来源**：https://github.com/JetsonChan/CC-Usage-Band
+
+#### glass
+给终端 transcript 换桌面级外观：着色命令、工具树、回合页脚等。  
+**许可证**：MIT  
+**来源**：https://github.com/rashedInt32/glass
+
+#### trek-band
+提示框上方星际迷航风格用量环与像素动画场景。  
+**许可证**：MIT  
+**来源**：https://github.com/rb17080/trek-band
+
+#### clawd
+思考行旁的像素 Clawd 吉祥物，按工具/命令表演动作。  
+**来源**：https://github.com/raresmun/claude-mods/tree/main/plugins/clawd
+
+#### cctop
+btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。  
+**来源**：https://github.com/tomstagl/cctop
+
+#### terminal-browser
+在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。  
+**许可证**：MIT  
+**来源**：https://github.com/zenbu-labs/terminal-browser
+
+#### effort-cycle
+Alt+E / Alt+Shift+E 切换 effort，页脚显示模型与档位。  
+**许可证**：MIT  
+**来源**：https://github.com/Anerco/claude-code-effort-cycle
+
+#### claude-mermaid
+把助手回复里的 mermaid 块画成彩色 box art。  
+**来源**：https://github.com/galElmalah/claude-mods/tree/main/claude-mermaid
+
+#### claude-queue
+/q 在回合进行中排队提示，回合结束后自动发出。  
+**来源**：https://github.com/galElmalah/claude-mods/tree/main/claude-queue
+
 ## 许可证
 
 此市场仓库本身不包含代码，仅作为插件目录。各个 mod 的许可证请参阅其源仓库。
