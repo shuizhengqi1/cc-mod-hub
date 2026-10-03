@@ -1,28 +1,61 @@
-# cc-mod-hub
+# Claude Code Mod Marketplace · Claude Code 插件市场
 
-这是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。需要 Claude Code 2.1.287 或更高版本。
+**cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-## 安装指南
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 24 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
-### 添加此市场
+> **Requirements** | **要求**  
+> Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
 
-在 Claude Code 中运行以下命令添加此市场：
+---
+
+## 🚀 Quick Start | 快速开始
+
+### Add This Marketplace | 添加此市场
+
+Run in Claude Code | 在 Claude Code 中运行：
 
 ```
 /plugin marketplace add shuizhengqi1/cc-mod-hub
 ```
 
-### 安装 mod
+### Install a Mod | 安装 mod
 
-从此市场安装 mod：
+Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ```
-/plugin install <mod名称>@cc-mod-hub
+/plugin install <mod-name>@cc-mod-hub
 ```
 
-**重要提示**：Mod 以与 Claude Code 相同的访问权限运行，请仅从您信任的来源安装 mod。
+**⚠️ Important | 重要提示**: Mods run with the same access as Claude Code. Only install mods from sources you trust. | Mod 以与 Claude Code 相同的访问权限运行，请仅从您信任的来源安装 mod。
 
-## Mod 列表
+---
+
+## 📖 English
+
+### What is cc-mod-hub?
+
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 24 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+
+This marketplace includes:
+- **Built-in mods** from the Claude Code core repository
+- **Official examples** from Anthropic's playground
+- **Community mods** contributed by developers worldwide
+
+### How to Use
+
+1. Add this marketplace: `/plugin marketplace add shuizhengqi1/cc-mod-hub`
+2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
+3. Install: `/plugin install <mod-name>@cc-mod-hub`
+
+For detailed descriptions of all 24 mods, see the Chinese section below.
+
+---
+
+## 📦 Mod 列表 | Available Mods
+
+以下是本市场的 24 个精选 Claude Code mods：
+
 
 ### 内置 Mod
 
