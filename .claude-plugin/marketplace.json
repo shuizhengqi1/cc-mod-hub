@@ -524,6 +524,154 @@
         "source": "github",
         "repo": "rjohnt/linear-claude-mod"
       }
+    },
+    {
+      "name": "next-steps",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-plugins-community",
+        "path": "next-steps"
+      }
+    },
+    {
+      "name": "pet",
+      "source": {
+        "source": "github",
+        "repo": "graugart/flingo"
+      }
+    },
+    {
+      "name": "pets",
+      "source": {
+        "source": "github",
+        "repo": "uppinote20/claude-pets"
+      }
+    },
+    {
+      "name": "dev-dash",
+      "source": {
+        "source": "git-subdir",
+        "url": "RanaRauff/claude-dev-dashboard",
+        "path": "plugins/dev-dash"
+      }
+    },
+    {
+      "name": "avatar7",
+      "source": {
+        "source": "git-subdir",
+        "url": "KTCrisis/flux7-mods",
+        "path": "avatar7"
+      }
+    },
+    {
+      "name": "usage-bell",
+      "source": {
+        "source": "git-subdir",
+        "url": "KTCrisis/flux7-mods",
+        "path": "usage-bell"
+      }
+    },
+    {
+      "name": "mesh7-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "KTCrisis/flux7-mods",
+        "path": "mesh7-pane"
+      }
+    },
+    {
+      "name": "jukebox7",
+      "source": {
+        "source": "git-subdir",
+        "url": "KTCrisis/flux7-mods",
+        "path": "jukebox7"
+      }
+    },
+    {
+      "name": "atelier-bell",
+      "source": {
+        "source": "git-subdir",
+        "url": "KTCrisis/flux7-mods",
+        "path": "atelier-bell"
+      }
+    },
+    {
+      "name": "fable-pin",
+      "source": {
+        "source": "git-subdir",
+        "url": "karanb192/claude-code-mods",
+        "path": "plugins/fable-pin"
+      }
+    },
+    {
+      "name": "image-peek",
+      "source": {
+        "source": "git-subdir",
+        "url": "karanb192/claude-code-mods",
+        "path": "plugins/image-peek"
+      }
+    },
+    {
+      "name": "git-gates",
+      "source": {
+        "source": "git-subdir",
+        "url": "bahaospanov/claude-mods",
+        "path": "git-gates"
+      }
+    },
+    {
+      "name": "lean-comments",
+      "source": {
+        "source": "git-subdir",
+        "url": "bahaospanov/claude-mods",
+        "path": "lean-comments"
+      }
+    },
+    {
+      "name": "lean-docs",
+      "source": {
+        "source": "git-subdir",
+        "url": "bahaospanov/claude-mods",
+        "path": "lean-docs"
+      }
+    },
+    {
+      "name": "lean-scripts",
+      "source": {
+        "source": "git-subdir",
+        "url": "bahaospanov/claude-mods",
+        "path": "lean-scripts"
+      }
+    },
+    {
+      "name": "claude-games",
+      "source": {
+        "source": "github",
+        "repo": "mohi-devhub/claude-games"
+      }
+    },
+    {
+      "name": "segmem",
+      "source": {
+        "source": "github",
+        "repo": "mahuebel/segmem"
+      }
+    },
+    {
+      "name": "tw-stock-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "darrell-tw/darrelltw-mods",
+        "path": "mods/tw-stock-mod"
+      }
+    },
+    {
+      "name": "agent-router",
+      "source": {
+        "source": "git-subdir",
+        "url": "alexandernicholson/agent-router",
+        "path": "agent-router"
+      }
     }
   ]
 }
