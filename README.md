@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 299 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 308 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 299 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 308 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 299 mods, see the Chinese section below.
+For detailed descriptions of all 308 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 299 个精选 Claude Code mods：
+以下是本市场的 308 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -1375,6 +1375,49 @@ TPS 风格工作报告窗格。
 #### resume-on-stop
 检测「说了要动手却停住」的意外停轮，经 decision 模型确认后自动续一轮。备注：依赖 decision-model；会自动 $.prompt.submit 续跑（每提示最多一次）。  
 **来源**：https://github.com/kzarzycki/claude-mods/tree/main/plugins/resume-on-stop
+
+#### cc-subway
+地铁跑酷小游戏，可在右侧窗格或提示框上方游玩。  
+**许可证**：MIT  
+**来源**：https://github.com/lucastononro/cc-subway
+
+#### claude-mine
+提示框上方的体素沙盒小游戏（不是扫雷）。  
+**来源**：https://github.com/swan4er/claude-mine
+
+#### claude-dino
+提示框上方的恐龙跑酷小游戏（来源与已上架的 cc-dino 不同）。  
+**来源**：https://github.com/swan4er/claude-dino
+
+#### adlib-lyrics
+用 osascript 读取本机 Music/Spotify 当前曲目，并向 lrclib.net 拉取歌词显示在提示框上方（会访问外网歌词 API）。  
+**许可证**：MIT  
+**来源**：https://github.com/bixxter/adlib-lyrics
+
+#### sudus
+本地运行 `sudus wake`（或插件自带 node bin）在提示框上方/窗格显示项目 verdict；不调用模型。  
+**许可证**：MIT  
+**来源**：https://github.com/eas4ai/sudus
+
+#### shunt
+用用户自己的 gateway / token（SHUNT_* 或 ANTHROPIC_*）请求 GET /usage，在本地显示配额窗口；请求体为空。  
+**许可证**：MIT OR Apache-2.0  
+**来源**：https://github.com/pleaseai/shunt（path plugins/shunt）
+
+#### secrets-veil
+工具执行后遮盖结果中的疑似密钥字符串，不改写命令本身；可读取本机常见厂商环境变量名用于匹配。  
+**许可证**：MIT  
+**来源**：https://github.com/yonatangross/orchestkit（path mods/secrets-veil）
+
+#### 2048
+提示框上方玩 2048；仅 UI/命令，不注入 prompt、不改工具。  
+**许可证**：MIT  
+**来源**：https://github.com/davila7/claude-code-templates（path cli-tool/components/mods/games/2048）
+
+#### tetris
+提示框上方俄罗斯方块；仅 UI/命令。  
+**许可证**：MIT  
+**来源**：https://github.com/davila7/claude-code-templates（path cli-tool/components/mods/games/tetris）
 
 ## 许可证
 
