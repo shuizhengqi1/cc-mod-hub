@@ -1,0 +1,183 @@
+{
+  "name": "cc-mod-hub",
+  "owner": {
+    "name": "shuizhengqi1"
+  },
+  "plugins": [
+    {
+      "name": "diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code",
+        "path": "mods/diff"
+      }
+    },
+    {
+      "name": "agents-md",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code",
+        "path": "mods/agents-md"
+      }
+    },
+    {
+      "name": "sec-default",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code",
+        "path": "mods/sec-default"
+      }
+    },
+    {
+      "name": "telemetry",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code",
+        "path": "mods/telemetry"
+      }
+    },
+    {
+      "name": "token-weather",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code-playground",
+        "path": "claude-code/mods/token-weather"
+      }
+    },
+    {
+      "name": "blast-radius",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code-playground",
+        "path": "claude-code/mods/blast-radius"
+      }
+    },
+    {
+      "name": "replay-theater",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthropics/claude-code-playground",
+        "path": "claude-code/mods/replay-theater"
+      }
+    },
+    {
+      "name": "cache-tax",
+      "source": {
+        "source": "github",
+        "repo": "karanb192/cache-tax"
+      }
+    },
+    {
+      "name": "claude-council",
+      "source": {
+        "source": "github",
+        "repo": "hex/claude-council"
+      }
+    },
+    {
+      "name": "winnow",
+      "source": {
+        "source": "github",
+        "repo": "GhalebDweikat/winnow"
+      }
+    },
+    {
+      "name": "flowpane",
+      "source": {
+        "source": "github",
+        "repo": "mpolatcan/flowpane"
+      }
+    },
+    {
+      "name": "pixelband",
+      "source": {
+        "source": "github",
+        "repo": "furqan-khan07/pixelband"
+      }
+    },
+    {
+      "name": "cc-side",
+      "source": {
+        "source": "github",
+        "repo": "Ahmad8864/cc-side"
+      }
+    },
+    {
+      "name": "ContextSaver",
+      "source": {
+        "source": "github",
+        "repo": "AlmogBaku/ContextSaver"
+      }
+    },
+    {
+      "name": "cc-arcade",
+      "source": {
+        "source": "github",
+        "repo": "sezaakgun/cc-arcade"
+      }
+    },
+    {
+      "name": "mindful-claude",
+      "source": {
+        "source": "github",
+        "repo": "halluton/Mindful-Claude"
+      }
+    },
+    {
+      "name": "12ui-plugin",
+      "source": {
+        "source": "github",
+        "repo": "just-every/12ui-plugin"
+      }
+    },
+    {
+      "name": "cueloop",
+      "source": {
+        "source": "github",
+        "repo": "mmurakaru/cueloop"
+      }
+    },
+    {
+      "name": "lcm",
+      "source": {
+        "source": "github",
+        "repo": "lossless-claude/lcm"
+      }
+    },
+    {
+      "name": "taskcut",
+      "source": {
+        "source": "github",
+        "repo": "wasd96040501/taskcut"
+      }
+    },
+    {
+      "name": "Katharsis",
+      "source": {
+        "source": "github",
+        "repo": "OpenScribbler/Katharsis"
+      }
+    },
+    {
+      "name": "fast-jev-compaction",
+      "source": {
+        "source": "github",
+        "repo": "tamaratran/fast-jev-compaction"
+      }
+    },
+    {
+      "name": "claude-image-generation",
+      "source": {
+        "source": "github",
+        "repo": "hex/claude-image-generation"
+      }
+    },
+    {
+      "name": "constellation-claude",
+      "source": {
+        "source": "github",
+        "repo": "ShiftinBits/constellation-claude"
+      }
+    }
+  ]
+}
