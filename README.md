@@ -54,7 +54,7 @@ For detailed descriptions of all 206 mods, see the Chinese section below.
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 200 个精选 Claude Code mods：
+以下是本市场的 206 个精选 Claude Code mods：
 
 
 ### 内置 Mod
