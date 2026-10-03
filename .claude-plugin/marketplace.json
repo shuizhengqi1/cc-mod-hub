@@ -672,6 +672,653 @@
         "url": "alexandernicholson/agent-router",
         "path": "agent-router"
       }
+    },
+    {
+      "name": "human-in-the-loop",
+      "source": {
+        "source": "github",
+        "repo": "tzafrir/human-in-the-loop"
+      }
+    },
+    {
+      "name": "file-explorer",
+      "source": {
+        "source": "git-subdir",
+        "url": "tak-kam/claude-mods",
+        "path": "file-explorer"
+      }
+    },
+    {
+      "name": "radio",
+      "source": {
+        "source": "git-subdir",
+        "url": "sivori/claude-mods",
+        "path": "plugins/radio"
+      }
+    },
+    {
+      "name": "spend-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "sivori/claude-mods",
+        "path": "plugins/spend-meter"
+      }
+    },
+    {
+      "name": "commit-drift",
+      "source": {
+        "source": "git-subdir",
+        "url": "sivori/claude-mods",
+        "path": "plugins/commit-drift"
+      }
+    },
+    {
+      "name": "backlog-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "sivori/claude-mods",
+        "path": "plugins/backlog-band"
+      }
+    },
+    {
+      "name": "commonplace-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "sivori/claude-mods",
+        "path": "plugins/commonplace-pane"
+      }
+    },
+    {
+      "name": "mize-coworker",
+      "source": {
+        "source": "git-subdir",
+        "url": "TheMizeGuy/clawdagotchi",
+        "path": "plugins/mize-coworker"
+      }
+    },
+    {
+      "name": "usage-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "HolyGrail/claude-mods",
+        "path": "plugins/usage-meter"
+      }
+    },
+    {
+      "name": "notice-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "HolyGrail/claude-mods",
+        "path": "plugins/notice-board"
+      }
+    },
+    {
+      "name": "pr-relay",
+      "source": {
+        "source": "git-subdir",
+        "url": "HolyGrail/claude-mods",
+        "path": "plugins/pr-relay"
+      }
+    },
+    {
+      "name": "zsh-safe",
+      "source": {
+        "source": "git-subdir",
+        "url": "HolyGrail/claude-mods",
+        "path": "plugins/zsh-safe"
+      }
+    },
+    {
+      "name": "compact-tools",
+      "source": {
+        "source": "git-subdir",
+        "url": "AJclemendor/my-mods",
+        "path": "plugins/compact-tools"
+      }
+    },
+    {
+      "name": "live-thinking",
+      "source": {
+        "source": "git-subdir",
+        "url": "AJclemendor/my-mods",
+        "path": "plugins/live-thinking"
+      }
+    },
+    {
+      "name": "sidebar-controls",
+      "source": {
+        "source": "git-subdir",
+        "url": "AJclemendor/my-mods",
+        "path": "plugins/sidebar-controls"
+      }
+    },
+    {
+      "name": "pr-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "ASRagab/asragab-claude-marketplace",
+        "path": "plugins/pr-pane"
+      }
+    },
+    {
+      "name": "hyday-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "mukiwu/muki-ai-plugins",
+        "path": "plugins/hyday-pet"
+      }
+    },
+    {
+      "name": "flash-veille",
+      "source": {
+        "source": "git-subdir",
+        "url": "camilleroux/flash-veille",
+        "path": "plugins/flash-veille"
+      }
+    },
+    {
+      "name": "pulse-cc",
+      "source": {
+        "source": "git-subdir",
+        "url": "fatwang2/Pulse",
+        "path": "plugins/claude-code"
+      }
+    },
+    {
+      "name": "action-pin",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/action-pin"
+      }
+    },
+    {
+      "name": "ask-autopick",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/ask-autopick"
+      }
+    },
+    {
+      "name": "bash-diet",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/bash-diet"
+      }
+    },
+    {
+      "name": "bg-tasks",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/bg-tasks"
+      }
+    },
+    {
+      "name": "bughunt",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/bughunt"
+      }
+    },
+    {
+      "name": "cache-warm",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/cache-warm"
+      }
+    },
+    {
+      "name": "commit-cadence",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/commit-cadence"
+      }
+    },
+    {
+      "name": "config-parse",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/config-parse"
+      }
+    },
+    {
+      "name": "context-restore",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/context-restore"
+      }
+    },
+    {
+      "name": "contract-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/contract-watch"
+      }
+    },
+    {
+      "name": "council",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/council"
+      }
+    },
+    {
+      "name": "dep-sentinel",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/dep-sentinel"
+      }
+    },
+    {
+      "name": "desk-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/desk-notify"
+      }
+    },
+    {
+      "name": "diagram-render",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/diagram-render"
+      }
+    },
+    {
+      "name": "disk-janitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/disk-janitor"
+      }
+    },
+    {
+      "name": "doc-drift-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/doc-drift-watch"
+      }
+    },
+    {
+      "name": "edit-loop",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/edit-loop"
+      }
+    },
+    {
+      "name": "effort-auto",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/effort-auto"
+      }
+    },
+    {
+      "name": "env-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/env-sync"
+      }
+    },
+    {
+      "name": "error-poke",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/error-poke"
+      }
+    },
+    {
+      "name": "flaky-memory",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/flaky-memory"
+      }
+    },
+    {
+      "name": "gemini-advisor",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/gemini-advisor"
+      }
+    },
+    {
+      "name": "gemini-compact",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/gemini-compact"
+      }
+    },
+    {
+      "name": "gemini-core",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/gemini-core"
+      }
+    },
+    {
+      "name": "gemini-plan-review",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/gemini-plan-review"
+      }
+    },
+    {
+      "name": "gemini-review",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/gemini-review"
+      }
+    },
+    {
+      "name": "git-commit",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/git-commit"
+      }
+    },
+    {
+      "name": "i18n-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/i18n-watch"
+      }
+    },
+    {
+      "name": "idle-art",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/idle-art"
+      }
+    },
+    {
+      "name": "limit-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/limit-watch"
+      }
+    },
+    {
+      "name": "lockfile-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/lockfile-sync"
+      }
+    },
+    {
+      "name": "mcp-doctor",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/mcp-doctor"
+      }
+    },
+    {
+      "name": "memory-save",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/memory-save"
+      }
+    },
+    {
+      "name": "mod-doctor",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/mod-doctor"
+      }
+    },
+    {
+      "name": "orphan-server",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/orphan-server"
+      }
+    },
+    {
+      "name": "output-flood",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/output-flood"
+      }
+    },
+    {
+      "name": "pin-note",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/pin-note"
+      }
+    },
+    {
+      "name": "probe-runner",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/probe-runner"
+      }
+    },
+    {
+      "name": "prompt-deck",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/prompt-deck"
+      }
+    },
+    {
+      "name": "prompt-offload",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/prompt-offload"
+      }
+    },
+    {
+      "name": "prompt-time",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/prompt-time"
+      }
+    },
+    {
+      "name": "sage-memory",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/sage-memory"
+      }
+    },
+    {
+      "name": "self-command",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/self-command"
+      }
+    },
+    {
+      "name": "session-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/session-watch"
+      }
+    },
+    {
+      "name": "shot-inline",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/shot-inline"
+      }
+    },
+    {
+      "name": "sidebar",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/sidebar"
+      }
+    },
+    {
+      "name": "slash-chain",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/slash-chain"
+      }
+    },
+    {
+      "name": "sql-concat-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/sql-concat-watch"
+      }
+    },
+    {
+      "name": "storage-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/storage-guard"
+      }
+    },
+    {
+      "name": "subagent-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/subagent-ledger"
+      }
+    },
+    {
+      "name": "task-poke",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/task-poke"
+      }
+    },
+    {
+      "name": "tool-coach",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/tool-coach"
+      }
+    },
+    {
+      "name": "ua-fallback",
+      "source": {
+        "source": "git-subdir",
+        "url": "KilimcininKorOglu/claude-code-mods",
+        "path": "plugins/ua-fallback"
+      }
+    },
+    {
+      "name": "spx-chart",
+      "source": {
+        "source": "github",
+        "repo": "zviryatko/claude-spx"
+      }
+    },
+    {
+      "name": "cockpit",
+      "source": {
+        "source": "git-subdir",
+        "url": "Brxerq/claude-cockpit",
+        "path": "plugins/cockpit"
+      }
+    },
+    {
+      "name": "workface",
+      "source": {
+        "source": "github",
+        "repo": "scodge-24/workface"
+      }
+    },
+    {
+      "name": "handoff-compact",
+      "source": {
+        "source": "github",
+        "repo": "trytofly94/handoff-compact"
+      }
+    },
+    {
+      "name": "context-view",
+      "source": {
+        "source": "github",
+        "repo": "kongyo2/context-view"
+      }
+    },
+    {
+      "name": "filetree",
+      "source": {
+        "source": "github",
+        "repo": "data-goblin/claude-code-filetree"
+      }
+    },
+    {
+      "name": "flightdeck",
+      "source": {
+        "source": "github",
+        "repo": "scasella/claude-flightdeck"
+      }
+    },
+    {
+      "name": "mdview",
+      "source": {
+        "source": "github",
+        "repo": "xuanji86/claude-mdview"
+      }
+    },
+    {
+      "name": "image-view",
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-image-view"
+      }
+    },
+    {
+      "name": "burn-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "burn-meter"
+      }
     }
   ]
 }

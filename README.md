@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 89 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 171 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 89 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 171 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 89 mods, see the Chinese section below.
+For detailed descriptions of all 171 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 89 个精选 Claude Code mods：
+以下是本市场的 171 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -464,6 +464,340 @@ Git 工作授权与整洁：追踪用户提示，拦截未授权的 commit/push/
 #### agent-router
 代理路由器，管理子代理调用。  
 **来源**：https://github.com/alexandernicholson/agent-router/tree/main/agent-router
+
+#### human-in-the-loop
+把只有用户能做的事挂在 My tasks 窗格里，完成后再回给 Claude。  
+**许可证**：MIT  
+**来源**：https://github.com/tzafrir/human-in-the-loop
+
+#### file-explorer
+VS Code 风格文件树/变更/历史/diff 窗格。  
+**来源**：https://github.com/tak-kam/claude-mods/tree/main/file-explorer
+
+#### radio
+/radio 在会话里听网络电台，状态行与提示框上方控制。  
+**来源**：https://github.com/sivori/claude-mods/tree/main/plugins/radio
+
+#### spend-meter
+状态行显示会话费用、上下文与 5 小时限额。  
+**来源**：https://github.com/sivori/claude-mods/tree/main/plugins/spend-meter
+
+#### commit-drift
+状态行未提交文件数与距上次提交时间，久未提交会提醒。  
+**来源**：https://github.com/sivori/claude-mods/tree/main/plugins/commit-drift
+
+#### backlog-band
+提示框上方显示 BACKLOG.md 的 Now 项。  
+**来源**：https://github.com/sivori/claude-mods/tree/main/plugins/backlog-band
+
+#### commonplace-pane
+侧边窗格展示芝加哥艺术学院公版画，随仓库状态变「天气」。  
+**来源**：https://github.com/sivori/claude-mods/tree/main/plugins/commonplace-pane
+
+#### mize-coworker
+像素 Claude 吉祥物，随 spinner 词表演场景，空闲时在状态行呼吸走动。  
+**许可证**：MIT  
+**来源**：https://github.com/TheMizeGuy/clawdagotchi/tree/main/plugins/mize-coworker
+
+#### usage-meter
+提示框上方常显上下文与 5 小时/周限额。  
+**来源**：https://github.com/HolyGrail/claude-mods/tree/main/plugins/usage-meter
+
+#### notice-board
+同仓库各会话共享通知板。  
+**来源**：https://github.com/HolyGrail/claude-mods/tree/main/plugins/notice-board
+
+#### pr-relay
+监视会话 PR，合并或 Codex 评论时唤醒。  
+**来源**：https://github.com/HolyGrail/claude-mods/tree/main/plugins/pr-relay
+
+#### zsh-safe
+把 bash 写法的 Bash 命令改写成 macOS zsh 可跑。  
+**来源**：https://github.com/HolyGrail/claude-mods/tree/main/plugins/zsh-safe
+
+#### compact-tools
+压缩工具输出显示（含 MCP/Bash 错误）。  
+**来源**：https://github.com/AJclemendor/my-mods/tree/main/plugins/compact-tools
+
+#### live-thinking
+对话里流式显示 thinking 摘要。  
+**来源**：https://github.com/AJclemendor/my-mods/tree/main/plugins/live-thinking
+
+#### sidebar-controls
+把 compact-tools/live-thinking 开关放进右上侧栏。  
+**来源**：https://github.com/AJclemendor/my-mods/tree/main/plugins/sidebar-controls
+
+#### pr-pane
+/prs 提示框上方列出你的 GitHub PR 并可打开。  
+**许可证**：MIT  
+**来源**：https://github.com/ASRagab/asragab-claude-marketplace/tree/main/plugins/pr-pane
+
+#### hyday-pet
+提示框上方虚拟宠物，随 Claude 工作成长、可小游戏/商店。  
+**许可证**：MIT  
+**来源**：https://github.com/mukiwu/muki-ai-plugins/tree/main/plugins/hyday-pet
+
+#### flash-veille
+提示框上方轮播开发者资讯（Human Coders、Anthropic 博客等）。  
+**许可证**：MIT  
+**来源**：https://github.com/camilleroux/flash-veille/tree/main/plugins/flash-veille
+
+#### pulse-cc
+提示框上方显示股票报价（Yahoo 或 Pulse Mac 自选）。  
+**许可证**：MIT  
+**来源**：https://github.com/fatwang2/Pulse/tree/main/plugins/claude-code
+
+#### action-pin
+把常用动作钉在提示框上方。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/action-pin
+
+#### ask-autopick
+自动采纳或拒绝提问。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/ask-autopick
+
+#### bash-diet
+精简 Bash 命令输出。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bash-diet
+
+#### bg-tasks
+后台任务管理器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bg-tasks
+
+#### bughunt
+追踪与报告 bug。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bughunt
+
+#### cache-warm
+缓存预热工具。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/cache-warm
+
+#### commit-cadence
+提交节奏提醒。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/commit-cadence
+
+#### config-parse
+配置文件解析器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/config-parse
+
+#### context-restore
+恢复上下文状态。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/context-restore
+
+#### contract-watch
+监视合约变更。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/contract-watch
+
+#### council
+代理协商决策。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/council
+
+#### dep-sentinel
+依赖变更哨兵。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/dep-sentinel
+
+#### desk-notify
+桌面通知提醒。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/desk-notify
+
+#### diagram-render
+图表实时渲染。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/diagram-render
+
+#### disk-janitor
+清理临时文件。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/disk-janitor
+
+#### doc-drift-watch
+监视文档漂移。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/doc-drift-watch
+
+#### edit-loop
+编辑循环检测。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/edit-loop
+
+#### effort-auto
+自动切换 effort。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/effort-auto
+
+#### env-sync
+环境变量同步。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/env-sync
+
+#### error-poke
+错误提醒助手。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/error-poke
+
+#### flaky-memory
+不稳定记忆诊断。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/flaky-memory
+
+#### gemini-advisor
+Gemini 顾问模式。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/gemini-advisor
+
+#### gemini-compact
+Gemini 压缩助手。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/gemini-compact
+
+#### gemini-core
+Gemini 核心集成。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/gemini-core
+
+#### gemini-plan-review
+Gemini 计划审查。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/gemini-plan-review
+
+#### gemini-review
+Gemini 代码审查。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/gemini-review
+
+#### git-commit
+Git 提交助手。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/git-commit
+
+#### i18n-watch
+国际化监视器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/i18n-watch
+
+#### idle-art
+空闲时显示艺术。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/idle-art
+
+#### limit-watch
+限额监视器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch
+
+#### lockfile-sync
+锁文件同步检查。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/lockfile-sync
+
+#### mcp-doctor
+MCP 健康诊断。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/mcp-doctor
+
+#### memory-save
+记忆保存助手。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/memory-save
+
+#### mod-doctor
+Mod 健康检查。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/mod-doctor
+
+#### orphan-server
+孤儿进程检测。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/orphan-server
+
+#### output-flood
+输出洪水控制。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/output-flood
+
+#### pin-note
+固定便签功能。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/pin-note
+
+#### probe-runner
+探针运行器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/probe-runner
+
+#### prompt-deck
+提示卡片管理。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/prompt-deck
+
+#### prompt-offload
+提示卸载优化。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/prompt-offload
+
+#### prompt-time
+提示时间标记。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/prompt-time
+
+#### sage-memory
+智慧记忆系统。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sage-memory
+
+#### self-command
+自定义命令系统。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/self-command
+
+#### session-watch
+会话监视器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/session-watch
+
+#### shot-inline
+内联截图功能。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/shot-inline
+
+#### sidebar
+侧栏扩展面板。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sidebar
+
+#### slash-chain
+斜杠命令链。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/slash-chain
+
+#### sql-concat-watch
+SQL 拼接监视。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sql-concat-watch
+
+#### storage-guard
+存储保护器。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard
+
+#### subagent-ledger
+子代理账本。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/subagent-ledger
+
+#### task-poke
+任务提醒助手。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/task-poke
+
+#### tool-coach
+工具使用教练。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/tool-coach
+
+#### ua-fallback
+用户代理降级。  
+**来源**：https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/ua-fallback
+
+#### spx-chart
+在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。  
+**来源**：https://github.com/zviryatko/claude-spx
+
+#### cockpit
+计划/todo 进度条，并按 quick/normal/hard 路由模型与 effort。  
+**来源**：https://github.com/Brxerq/claude-cockpit/tree/main/plugins/cockpit
+
+#### workface
+长任务工作笔记，compaction 时保住 workface 状态。  
+**来源**：https://github.com/scodge-24/workface
+
+#### handoff-compact
+用固定大纲的 handoff 替换默认摘要，少丢决策与否决项。  
+**来源**：https://github.com/trytofly94/handoff-compact
+
+#### context-view
+提示框上方一行上下文占用与距 auto-compact 余量。  
+**来源**：https://github.com/kongyo2/context-view
+
+#### filetree
+侧栏文件树，跟住 Claude 正在读/写的文件并可点选带入提示。  
+**来源**：https://github.com/data-goblin/claude-code-filetree
+
+#### flightdeck
+只读观测面板，集中看权限裁决与子代理进度。  
+**来源**：https://github.com/scasella/claude-flightdeck
+
+#### mdview
+侧栏渲染对话里的 Markdown，可点选让 Claude 改。  
+**来源**：https://github.com/xuanji86/claude-mdview
+
+#### image-view
+粘贴图片后在提示框上方显示像素缩略图。  
+**来源**：https://github.com/jarrodwatts/claude-image-view
+
+#### burn-meter
+提示框上方会话花费「火焰」条与限额，/burn 看每回合费用。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/burn-meter
 
 ## 许可证
 
