@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 200 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 206 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 200 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 206 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 200 mods, see the Chinese section below.
+For detailed descriptions of all 206 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 200 个精选 Claude Code mods：
+以下是本市场的 206 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -941,6 +941,36 @@ Pro 计划用量表盘：5 小时、7 天限额、上下文和回合回执。
 #### bash-guardrails
 用本地规则拒绝危险或畸形的 Bash 与 Monitor 调用（只读命令字符串做判定，不改写命令）。  
 **来源**：https://github.com/ruihe774/cc-bash-guardrails
+
+#### notify
+桌面通知：Claude 回合完成或等待决策时发系统原生通知，后台时召回焦点。  
+**许可证**：MIT  
+**来源**：https://github.com/XD3an/cc-notify
+
+#### usage-bar
+用量条：可调用 Anthropic 的 OAuth 用量 API（使用当前登录凭证，请求体为空）查看 5 小时与 7 天限额、上下文与缓存命中率。  
+**许可证**：MIT  
+**来源**：https://github.com/muratkaragozgil/claude-code-usage-bar
+
+#### netsignal
+网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。  
+**许可证**：MIT  
+**来源**：https://github.com/avazibra/claude-statusbar
+
+#### usage-bars
+上下文迷你图：把本会话的上下文占用画成字符级走势条，随回合增长刷新。  
+**许可证**：MIT  
+**来源**：https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/usage-bars
+
+#### agent-watch
+子代理侧栏：在窗格里列出活跃子代理、状态与简报，点击可查看 transcript。  
+**许可证**：MIT  
+**来源**：https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/agent-watch
+
+#### touch-map
+文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。  
+**许可证**：MIT  
+**来源**：https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map
 
 ## 许可证
 
