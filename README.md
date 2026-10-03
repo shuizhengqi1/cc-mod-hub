@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 41 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 60 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 41 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 60 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 41 mods, see the Chinese section below.
+For detailed descriptions of all 60 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 41 个精选 Claude Code mods：
+以下是本市场的 60 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -253,6 +253,94 @@ Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需�
 #### prompter
 边聊边整理需求：把零散想法变成干净 brief，并填入本仓库上下文。  
 **来源**：https://github.com/niijoey/prompter-mod
+
+#### next-steps
+回合结束后在提示框上方建议最多 3 条下一步 prompt（可按 1/2/3 填入草稿，0 关闭）。  
+**许可证**：MIT  
+**来源**：https://github.com/anthropics/claude-plugins-community/tree/main/next-steps
+
+#### pet
+侧栏/状态行里的毒舌 ASCII 火烈鸟：替 Claude 说话、吐槽你的代码，还可喂养换装。  
+**许可证**：MIT  
+**来源**：https://github.com/graugart/flingo
+
+#### pets
+像素宠物住在 Claude Code 面板里，随工具调用/回合反应并跨会话升级。  
+**许可证**：MIT  
+**来源**：https://github.com/uppinote20/claude-pets
+
+#### dev-dash
+开发者仪表盘面板：会话/子代理、用量限额、git 与 PR 等注意力信息。  
+**许可证**：MIT  
+**来源**：https://github.com/RanaRauff/claude-dev-dashboard/tree/main/plugins/dev-dash
+
+#### avatar7
+可切换人设的机器脸，围观 tool.call 并用角色语气点评。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/avatar7
+
+#### usage-bell
+接近上下文/5 小时/7 天限额或自动记忆索引上限时响铃并显示状态行。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/usage-bell
+
+#### mesh7-pane
+只读面板展示 mesh7 治理决策（ALLOW/DENY/HUMAN）与待审批（需本机 mesh7）。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane
+
+#### jukebox7
+用自然语言点播 YouTube 音频（本地播放），带小型控制面板。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/jukebox7
+
+#### atelier-bell
+atelier/flux7-studio 渲染完成时 toast 与状态行提醒。  
+**许可证**：MIT  
+**来源**：https://github.com/KTCrisis/flux7-mods/tree/main/atelier-bell
+
+#### fable-pin
+把每个 subagent 的 model 钉到 Fable（/fable-pin on|off|status）。  
+**来源**：https://github.com/karanb192/claude-code-mods/tree/main/plugins/fable-pin
+
+#### image-peek
+macOS 粘贴图片时在标记旁预览（本地剪贴板，零模型）。  
+**来源**：https://github.com/karanb192/claude-code-mods/tree/main/plugins/image-peek
+
+#### git-gates
+拦截 git commit/push/merge，需用户授权并校验 Conventional Commits。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/git-gates
+
+#### lean-comments
+限制注释过多的 Edit/Write，超预算跟进精简。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-comments
+
+#### lean-docs
+文档卫生：拦重复叙述代码的文档。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-docs
+
+#### lean-scripts
+新脚本写入后判断是否值得保留。  
+**来源**：https://github.com/bahaospanov/claude-mods/tree/main/lean-scripts
+
+#### claude-games
+提示框上方四款街机小游戏，随测试/提交反应，零 token。  
+**许可证**：MIT  
+**来源**：https://github.com/mohi-devhub/claude-games
+
+#### segmem
+本地 SQLite 长期记忆，按 prompt/Bash 召回。  
+**来源**：https://github.com/mahuebel/segmem
+
+#### tw-stock-mod
+提示框上方台股/美股/加密货币看板与持仓盈亏（Yahoo，零模型）。  
+**许可证**：MIT  
+**来源**：https://github.com/darrell-tw/darrelltw-mods/tree/main/mods/tw-stock-mod
+
+#### agent-router
+按角色为 subagent 指定模型/effort（需兼容网关），带活动面板。  
+**许可证**：MIT  
+**来源**：https://github.com/alexandernicholson/agent-router/tree/main/agent-router
 
 ## 许可证
 
