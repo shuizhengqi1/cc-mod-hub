@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 55 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 70 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 55 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 70 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 55 mods, see the Chinese section below.
+For detailed descriptions of all 70 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 55 个精选 Claude Code mods：
+以下是本市场的 70 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -309,6 +309,77 @@ Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需�
 #### multi-core
 把 ChatGPT/Cursor/Zen 等接入 /model（需 claude-multi launcher）。  
 **来源**：https://github.com/greenpolo/cc-multi-cli-plugin/tree/main/plugins/multi-core
+
+#### overalls
+提示框上方状态条：上下文预报、用量限额，以及 Ponytail/Caveman 档位（可配置）。  
+**许可证**：MIT  
+**来源**：https://github.com/Troepster/overalls
+
+#### clawd-spinner
+Clawd 按 spinner 词表演动画（本地绘制，零 token）。  
+**许可证**：MIT  
+**来源**：https://github.com/saiharsha03/clawd-spinner
+
+#### env
+在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。  
+**许可证**：MIT  
+**来源**：https://github.com/davekiss/env
+
+#### ctx-handoff
+上下文达阈值时自动生成 handoff 并 /clear；空闲时还能续热缓存。  
+**来源**：https://github.com/cablate/ctx-handoff-mod
+
+#### eta
+在 spinner 行显示本轮剩余时间（按任务节奏或历史回合学习，零 token）。  
+**来源**：https://github.com/hamza-siddiq/claude-eta/tree/main/eta
+
+#### md-prompt
+输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。  
+**许可证**：MIT  
+**来源**：https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt
+
+#### plushie
+提示框上方的毛绒 Clawd，会随工具/上下文做出反应。  
+**许可证**：MIT  
+**来源**：https://github.com/xyc/plushie
+
+#### micro-compaction
+提供 `/compact micro`：精简 Read 结果并去掉 thinking，保留对话结构。  
+**许可证**：Unlicense  
+**来源**：https://github.com/ruihe774/cc-micro-compaction
+
+#### aside
+`/aside` 只读侧聊：基于会话 transcript fork 问答，不写回主线程。  
+**许可证**：MIT  
+**来源**：https://github.com/JayDoubleu/aside
+
+#### lightbox
+粘贴图片时在提示框上方大预览，并带说明缩略图。  
+**许可证**：MIT  
+**来源**：https://github.com/arihantbansal/claude-lightbox
+
+#### gfm-render
+在 transcript 里渲染 GFM：alerts、任务列表、删除线与 Mermaid。  
+**许可证**：MIT  
+**来源**：https://github.com/briangtn/claude-gfm-render
+
+#### session-brief
+提示框上方保持会话简报；`/brief` 补充已做决定与下一步。  
+**来源**：https://github.com/skanehira/claude-session-brief
+
+#### rtl-text
+用 fribidi 把波斯语/阿拉伯语/希伯来语在 transcript 里按 RTL 整形对齐。  
+**来源**：https://github.com/aliir74/claude-code-rtl
+
+#### catch-me-up
+侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。  
+**许可证**：MIT  
+**来源**：https://github.com/oliverow/catch-me-up
+
+#### linear-claude-mod
+Linear 指派工单面板；点击可加载详情、评论或改状态。  
+**许可证**：MIT  
+**来源**：https://github.com/rjohnt/linear-claude-mod
 
 ## 许可证
 
