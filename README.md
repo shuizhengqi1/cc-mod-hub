@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 200 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 209 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 200 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 209 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 200 mods, see the Chinese section below.
+For detailed descriptions of all 209 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 200 个精选 Claude Code mods：
+以下是本市场的 209 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -941,6 +941,50 @@ Pro 计划用量表盘：5 小时、7 天限额、上下文和回合回执。
 #### bash-guardrails
 用本地规则拒绝危险或畸形的 Bash 与 Monitor 调用（只读命令字符串做判定，不改写命令）。  
 **来源**：https://github.com/ruihe774/cc-bash-guardrails
+
+#### notify
+会话开始、回合结束、工具失败、上下文将满或需要授权时弹出桌面通知（本地，可 /notify 静音）。  
+**许可证**：MIT  
+**来源**：https://github.com/XD3an/cc-notify
+
+#### loop-detector
+观察工具调用是否陷入重复编辑/命令/失败循环，在提示框上方警告并可暂停或重思。  
+**许可证**：MIT  
+**来源**：https://github.com/ktripathi2281/LoopDetector/tree/main/loop-detector
+
+#### usage-bar
+提示框上方一行用量条：5 小时/周限额倒计时、会话 token 与费用；可选通过当前登录拉取 Anthropic 用量 API 的分模型限额。  
+**许可证**：MIT  
+**来源**：https://github.com/muratkaragozgil/claude-code-usage-bar
+
+#### netsignal
+状态栏网络信号：探测到 api.anthropic.com 的延迟，以及周期性带宽采样（不上传会话内容）。  
+**许可证**：MIT  
+**来源**：https://github.com/avazibra/claude-statusbar
+
+#### usage-bars
+提示词下方的上下文占用与每回合 token 火花线、限额与 git 摘要。  
+**许可证**：MIT  
+**来源**：https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/usage-bars
+
+#### agent-watch
+侧栏实时跟随本会话子代理的工具步骤与状态。  
+**许可证**：MIT  
+**来源**：https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/agent-watch
+
+#### touch-map
+用树与活动图展示 Claude 已列出、读取、编辑、创建或删除的文件。  
+**许可证**：MIT  
+**来源**：https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map
+
+#### persistent-monitor
+注册可持久（无截止）的本地 monitor/waitpid/waitfile 工具，在后台监视命令或文件并向会话投递事件（本地进程，不改写 Bash 命令字符串）。  
+**来源**：https://github.com/ruihe774/cc-persistent-monitor
+
+#### leitstand
+提示框上方控制室：后台 Agent/Bash、磁盘与上下文一览；可选环境变量 LEITSTAND_DISK_HOST 用 ssh 测远程磁盘。  
+**许可证**：MIT  
+**来源**：https://github.com/dominikmartn/leitstand
 
 ## 许可证
 
