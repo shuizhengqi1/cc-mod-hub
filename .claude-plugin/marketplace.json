@@ -1518,6 +1518,34 @@
         "url": "RichardAtCT/cc-idle",
         "path": "plugins/cc-idle"
       }
+    },
+    {
+      "name": "prompt-stash",
+      "source": {
+        "source": "github",
+        "repo": "gonzaloserrano/cc-prompt-stash"
+      }
+    },
+    {
+      "name": "pomodoro",
+      "source": {
+        "source": "github",
+        "repo": "sneycampos/claude-pomodoro"
+      }
+    },
+    {
+      "name": "bash-guardrails",
+      "source": {
+        "source": "github",
+        "repo": "ruihe774/cc-bash-guardrails"
+      }
+    },
+    {
+      "name": "nerv",
+      "source": {
+        "source": "github",
+        "repo": "gonzalonicolasr/claude-code-nerv"
+      }
     }
   ]
 }
