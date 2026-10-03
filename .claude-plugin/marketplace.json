@@ -1539,6 +1539,51 @@
         "source": "github",
         "repo": "ruihe774/cc-bash-guardrails"
       }
+    },
+    {
+      "name": "notify",
+      "source": {
+        "source": "github",
+        "repo": "XD3an/cc-notify"
+      }
+    },
+    {
+      "name": "usage-bar",
+      "source": {
+        "source": "github",
+        "repo": "muratkaragozgil/claude-code-usage-bar"
+      }
+    },
+    {
+      "name": "netsignal",
+      "source": {
+        "source": "github",
+        "repo": "avazibra/claude-statusbar"
+      }
+    },
+    {
+      "name": "usage-bars",
+      "source": {
+        "source": "git-subdir",
+        "url": "AndreasOA/claude-code-mods",
+        "path": "plugins/usage-bars"
+      }
+    },
+    {
+      "name": "agent-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "AndreasOA/claude-code-mods",
+        "path": "plugins/agent-watch"
+      }
+    },
+    {
+      "name": "touch-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "y-hirakaw/claude-code-mods",
+        "path": "touch-map"
+      }
     }
   ]
 }
