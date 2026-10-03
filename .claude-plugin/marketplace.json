@@ -306,6 +306,117 @@
         "url": "niijoey/prompter-mod",
         "path": "plugins/prompter"
       }
+    },
+    {
+      "name": "secret-redactor",
+      "source": {
+        "source": "git-subdir",
+        "url": "ray-amjad/awesome-claude-code-function-hooks",
+        "path": "plugins/secret-redactor"
+      }
+    },
+    {
+      "name": "vercel-deploy-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "ray-amjad/awesome-claude-code-function-hooks",
+        "path": "plugins/vercel-deploy-status"
+      }
+    },
+    {
+      "name": "pii-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "danyuchn/pii-guard",
+        "path": "examples/claude-code-mod"
+      }
+    },
+    {
+      "name": "prompt-rail",
+      "source": {
+        "source": "git-subdir",
+        "url": "oikon48/prompt-rail",
+        "path": "plugins/prompt-rail"
+      }
+    },
+    {
+      "name": "agent-flow",
+      "source": {
+        "source": "github",
+        "repo": "Charlie0113-T/claude-agent-flow"
+      }
+    },
+    {
+      "name": "plan-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "zycck/claude-mods",
+        "path": "plugins/plan-progress"
+      }
+    },
+    {
+      "name": "context-lens",
+      "source": {
+        "source": "git-subdir",
+        "url": "Arunjay4213/claude-mods",
+        "path": "plugins/context-lens"
+      }
+    },
+    {
+      "name": "budget-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Arunjay4213/claude-mods",
+        "path": "plugins/budget-guard"
+      }
+    },
+    {
+      "name": "quota-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "Arunjay4213/claude-mods",
+        "path": "plugins/quota-meter"
+      }
+    },
+    {
+      "name": "token-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "Arunjay4213/claude-mods",
+        "path": "plugins/token-ledger"
+      }
+    },
+    {
+      "name": "gh-ci-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "diegorv/claude-functions-hook",
+        "path": "plugins/gh-ci-status"
+      }
+    },
+    {
+      "name": "time",
+      "source": {
+        "source": "git-subdir",
+        "url": "diegorv/claude-functions-hook",
+        "path": "plugins/time"
+      }
+    },
+    {
+      "name": "firstmate-calm",
+      "source": {
+        "source": "git-subdir",
+        "url": "kunchenguid/firstmate",
+        "path": ".claude/mods/firstmate-calm"
+      }
+    },
+    {
+      "name": "multi-core",
+      "source": {
+        "source": "git-subdir",
+        "url": "greenpolo/cc-multi-cli-plugin",
+        "path": "plugins/multi-core"
+      }
     }
   ]
 }

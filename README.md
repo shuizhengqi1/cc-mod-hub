@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 41 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 55 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 41 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 55 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 41 mods, see the Chinese section below.
+For detailed descriptions of all 55 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 41 个精选 Claude Code mods：
+以下是本市场的 55 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -253,6 +253,62 @@ Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需�
 #### prompter
 边聊边整理需求：把零散想法变成干净 brief，并填入本仓库上下文。  
 **来源**：https://github.com/niijoey/prompter-mod
+
+#### secret-redactor
+在模型看到前把密钥/邮箱/IP 换成占位符，工具输入时再还原。  
+**来源**：https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor
+
+#### vercel-deploy-status
+提示框上方显示 Vercel 部署队列（零 token）。  
+**来源**：https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status
+
+#### pii-guard
+台湾 PII 可逆脱敏（经本地 hookd）；需 Python/uv。  
+**来源**：https://github.com/danyuchn/pii-guard/tree/main/examples/claude-code-mod
+
+#### prompt-rail
+提示条/侧栏：悬停读、点击跳回历史 prompt。  
+**来源**：https://github.com/oikon48/prompt-rail/tree/main/plugins/prompt-rail
+
+#### agent-flow
+/flow 侧栏实时显示 subagent 树（零 token）。  
+**来源**：https://github.com/Charlie0113-T/claude-agent-flow
+
+#### plan-progress
+计划进度条 + 子代理条带。  
+**来源**：https://github.com/zycck/claude-mods/tree/main/plugins/plan-progress
+
+#### context-lens
+固定显示上下文占用、增长与距 compaction 的回合数。  
+**来源**：https://github.com/Arunjay4213/claude-mods/tree/main/plugins/context-lens
+
+#### budget-guard
+费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。  
+**来源**：https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard
+
+#### quota-meter
+计划限额条与重置倒计时。  
+**来源**：https://github.com/Arunjay4213/claude-mods/tree/main/plugins/quota-meter
+
+#### token-ledger
+会话成本与上轮 tokens；面板查看近期回合。  
+**来源**：https://github.com/Arunjay4213/claude-mods/tree/main/plugins/token-ledger
+
+#### gh-ci-status
+提示框上方钉住 GitHub Actions 状态。  
+**来源**：https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status
+
+#### time
+每条用户消息上方显示发送时间。  
+**来源**：https://github.com/diegorv/claude-functions-hook/tree/main/plugins/time
+
+#### firstmate-calm
+/calm 隐藏工具行并换成帆船 spinner；需开启 function hooks。  
+**来源**：https://github.com/kunchenguid/firstmate/tree/main/.claude/mods/firstmate-calm
+
+#### multi-core
+把 ChatGPT/Cursor/Zen 等接入 /model（需 claude-multi launcher）。  
+**来源**：https://github.com/greenpolo/cc-multi-cli-plugin/tree/main/plugins/multi-core
 
 ## 许可证
 
