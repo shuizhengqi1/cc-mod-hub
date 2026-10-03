@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 299 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 300 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 299 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 300 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 299 mods, see the Chinese section below.
+For detailed descriptions of all 300 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 299 个精选 Claude Code mods：
+以下是本市场的 300 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -1319,25 +1319,6 @@ TPS 风格工作报告窗格。
 **许可证**：MIT  
 **来源**：https://github.com/azkhh/drift
 
-#### amp-inbox-band
-在提示框上方显示未读 AMP 消息，可 toast / 状态栏提示；可选 autoWake 在空闲时自动提交读信提示。备注：依赖本机 `~/.local/bin/amp-inbox.sh`；autoWake 默认关闭。  
-**许可证**：MIT  
-**来源**：https://github.com/23blocks-OS/ai-maestro/tree/main/mods/amp-inbox-band
-
-#### reflect-mod
-用模型检查短提示是否含可复用规则，上方条带一键写入 CLAUDE.md。备注：调用 $.model.complete（用户自己的 Claude）；会写本地 CLAUDE.md；prompt.compose 注入本会话已保存规则。  
-**许可证**：MIT  
-**来源**：https://github.com/BayramAnnakov/claude-reflect/tree/main/mod
-
-#### emotion-statusline
-状态条/提示框上显示本回合工具成败弧与 Haiku 分类的「情绪」缓存。备注：读本地 `~/.claude/cache/claude-emotion-*.json`；另有 command hook 跑 classify-emotion.sh。  
-**来源**：https://github.com/bencium/bencium-marketplace/tree/main/emotion-statusline
-
-#### followthrough-band
-提示框上方列出本仓库到期的 followthrough 检查（Run/Snooze/Close），并在无检查就发版时提醒。备注：依赖本机 followthrough CLI；仅观察 Bash 结果，不改写命令。  
-**许可证**：MIT  
-**来源**：https://github.com/BayramAnnakov/followthrough/tree/main/mod
-
 #### oneform-line
 提示框上方显示 OneForm 当日睡眠/蛋白/训练与下周计划；/oneform 查看全日。备注：用用户配置的 OneForm URL + API key 经 $.http.fetch 拉取（仅 https 或 localhost）。  
 **来源**：https://github.com/hamzafer/claude-code-mods/tree/main/mods/oneform-line
@@ -1346,17 +1327,9 @@ TPS 风格工作报告窗格。
 侧栏窗格展示 claude-inbox 各分区会话，支持快捷键操作。备注：读写本机 `~/.config/claude-inbox/`；可在无写入时拉起 `claude-inbox --headless`。  
 **来源**：https://github.com/jordanbyron/claude-inbox/tree/main/mod
 
-#### draft-pane
-侧栏展示模型 ```draft 块，支持划选批注后一次提交反馈。备注：仅读会话 transcript / 本地 draft 文件；按钮触发 $.prompt.submit。  
-**来源**：https://github.com/meganemura/draft-pane/tree/main/plugin
-
 #### context-bar
 提示下方（可改上方）显示上下文窗口进度条与 prompt-cache TTL 倒计时。备注：可 tail 本地 transcript；仅本地读。  
 **来源**：https://github.com/k-wolfe99/claude-context-bar/tree/main/mod
-
-#### wake
-订阅 PR/CI/devbox 等状态，条件达成时唤醒空闲会话。备注：经本机 unix socket 调 vybava watch 守护进程；会 $.prompt.submit 唤醒。  
-**来源**：https://github.com/henderson-tech/vybava/tree/main/mods/wake
 
 #### ruview-live
 /ruview 打开 CSI/雷达传感只读窗格（瀑布图与雷达视图）。备注：运行插件旁的 @ruvnet/ruview CLI（node）；只读设备数据。  
@@ -1372,9 +1345,42 @@ TPS 风格工作报告窗格。
 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap status`。  
 **来源**：https://github.com/abhibansal60/claude-mods/tree/main/browser-guard
 
-#### resume-on-stop
-检测「说了要动手却停住」的意外停轮，经 decision 模型确认后自动续一轮。备注：依赖 decision-model；会自动 $.prompt.submit 续跑（每提示最多一次）。  
-**来源**：https://github.com/kzarzycki/claude-mods/tree/main/plugins/resume-on-stop
+#### cc-subway
+UI 游戏，在提示框上方玩地铁跑酷。  
+**许可证**：MIT  
+**来源**：https://github.com/lucastononro/cc-subway
+
+#### claude-mine
+UI 游戏，扫雷玩法。  
+**来源**：https://github.com/swan4er/claude-mine
+
+#### claude-dino
+UI 游戏，恐龙跑酷（与 cc-dino 不同版本）。  
+**来源**：https://github.com/swan4er/claude-dino
+
+#### adlib-lyrics
+通过本地 osascript 读取 Music/Spotify 当前曲目，再经 GET lrclib.net 查询歌词（只传曲名与艺人，不含播放历史）。  
+**许可证**：MIT  
+**来源**：https://github.com/bixxter/adlib-lyrics
+
+#### claude-chan
+侧聊助手：用 $.model.complete 开启旁路问答，携带主对话最后 400 字符上下文，不写回主线程。  
+**来源**：https://github.com/swan4er/claude-chan
+
+#### sudus
+执行本地 `sudus wake` 或此插件自带 node bin 唤醒会话；hooks 文件是 mod/hooks.json。  
+**许可证**：MIT  
+**来源**：https://github.com/eas4ai/sudus
+
+#### shunt
+GET 用户自己的网关 /usage 端点（携带用户 token，请求体为空）查询配额。  
+**许可证**：MIT and Apache-2.0  
+**来源**：https://github.com/pleaseai/shunt/tree/main/plugins/shunt
+
+#### secrets-veil
+工具运行后，在返回结果中遮罩疑似密钥的字符串，不改写命令。  
+**许可证**：MIT  
+**来源**：https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil
 
 ## 许可证
 
