@@ -1351,7 +1351,7 @@ UI 游戏，在提示框上方玩地铁跑酷。
 **来源**：https://github.com/lucastononro/cc-subway
 
 #### claude-mine
-UI 游戏，扫雷玩法。  
+UI 游戏，体素沙盒。  
 **来源**：https://github.com/swan4er/claude-mine
 
 #### claude-dino
