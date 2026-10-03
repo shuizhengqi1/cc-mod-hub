@@ -1695,6 +1695,350 @@
         "url": "claudemodz/mods",
         "path": "plugins/standup"
       }
+    },
+    {
+      "name": "ding",
+      "source": {
+        "source": "git-subdir",
+        "url": "lucenity0/claude-code-mods",
+        "path": "ding"
+      }
+    },
+    {
+      "name": "seatbelt",
+      "source": {
+        "source": "git-subdir",
+        "url": "lucenity0/claude-code-mods",
+        "path": "seatbelt"
+      }
+    },
+    {
+      "name": "session-dash",
+      "source": {
+        "source": "git-subdir",
+        "url": "lucenity0/claude-code-mods",
+        "path": "session-dash"
+      }
+    },
+    {
+      "name": "turn-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "lucenity0/claude-code-mods",
+        "path": "turn-meter"
+      }
+    },
+    {
+      "name": "collapse-answers",
+      "source": {
+        "source": "git-subdir",
+        "url": "adriancoman/claude-code-mods",
+        "path": "collapse-answers"
+      }
+    },
+    {
+      "name": "prompt-highlight",
+      "source": {
+        "source": "git-subdir",
+        "url": "adriancoman/claude-code-mods",
+        "path": "prompt-highlight"
+      }
+    },
+    {
+      "name": "usage-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "adriancoman/claude-code-mods",
+        "path": "usage-status"
+      }
+    },
+    {
+      "name": "cache-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthonyhungnguyen/claude-code-mods",
+        "path": "cache-watch"
+      }
+    },
+    {
+      "name": "context-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthonyhungnguyen/claude-code-mods",
+        "path": "context-guard"
+      }
+    },
+    {
+      "name": "cost-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthonyhungnguyen/claude-code-mods",
+        "path": "cost-pane"
+      }
+    },
+    {
+      "name": "turn-timer",
+      "source": {
+        "source": "git-subdir",
+        "url": "anthonyhungnguyen/claude-code-mods",
+        "path": "turn-timer"
+      }
+    },
+    {
+      "name": "quiet-spinner",
+      "source": {
+        "source": "git-subdir",
+        "url": "schreibse/claude-code-mods",
+        "path": "quiet-spinner"
+      }
+    },
+    {
+      "name": "mr-banner",
+      "source": {
+        "source": "git-subdir",
+        "url": "schreibse/claude-code-mods",
+        "path": "mr-banner"
+      }
+    },
+    {
+      "name": "reminder-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "schreibse/claude-code-mods",
+        "path": "reminder-log"
+      }
+    },
+    {
+      "name": "quiet-bash",
+      "source": {
+        "source": "git-subdir",
+        "url": "schreibse/claude-code-mods",
+        "path": "quiet-bash"
+      }
+    },
+    {
+      "name": "cache-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "DarioFontanel/claude-code-mods",
+        "path": "cache-meter"
+      }
+    },
+    {
+      "name": "quick-buttons",
+      "source": {
+        "source": "git-subdir",
+        "url": "DarioFontanel/claude-code-mods",
+        "path": "quick-buttons"
+      }
+    },
+    {
+      "name": "snake",
+      "source": {
+        "source": "git-subdir",
+        "url": "hamzafer/claude-code-mods",
+        "path": "mods/snake"
+      }
+    },
+    {
+      "name": "where-am-i",
+      "source": {
+        "source": "git-subdir",
+        "url": "hamzafer/claude-code-mods",
+        "path": "mods/where-am-i"
+      }
+    },
+    {
+      "name": "agent-radar",
+      "source": {
+        "source": "git-subdir",
+        "url": "hamzafer/claude-code-mods",
+        "path": "mods/agent-radar"
+      }
+    },
+    {
+      "name": "search-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "arasovic/claude-code-mods",
+        "path": "search-meter"
+      }
+    },
+    {
+      "name": "compact-keeper",
+      "source": {
+        "source": "git-subdir",
+        "url": "arasovic/claude-code-mods",
+        "path": "compact-keeper"
+      }
+    },
+    {
+      "name": "guardrails",
+      "source": {
+        "source": "git-subdir",
+        "url": "arasovic/claude-code-mods",
+        "path": "guardrails"
+      }
+    },
+    {
+      "name": "code-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "code-pet"
+      }
+    },
+    {
+      "name": "session-wrapped",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "session-wrapped"
+      }
+    },
+    {
+      "name": "boss-fight",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "boss-fight"
+      }
+    },
+    {
+      "name": "sportscaster",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "sportscaster"
+      }
+    },
+    {
+      "name": "swarm",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "swarm"
+      }
+    },
+    {
+      "name": "agent-race",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "agent-race"
+      }
+    },
+    {
+      "name": "inner-monologue",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "inner-monologue"
+      }
+    },
+    {
+      "name": "launch-codes",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "launch-codes"
+      }
+    },
+    {
+      "name": "md-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "scoobynko/claude-code-mods",
+        "path": "plugins/md-view"
+      }
+    },
+    {
+      "name": "image-preview",
+      "source": {
+        "source": "git-subdir",
+        "url": "scoobynko/claude-code-mods",
+        "path": "plugins/image-preview"
+      }
+    },
+    {
+      "name": "little-harvest",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/little-harvest"
+      }
+    },
+    {
+      "name": "pocket-familiar",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/pocket-familiar"
+      }
+    },
+    {
+      "name": "night-feast",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/night-feast"
+      }
+    },
+    {
+      "name": "change-journal",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/change-journal"
+      }
+    },
+    {
+      "name": "behavior-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/behavior-map"
+      }
+    },
+    {
+      "name": "check-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "LeeHigma0201/claude-code-mods",
+        "path": "mods/check-ledger"
+      }
+    },
+    {
+      "name": "collision-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "nateherkai/claude-code-mods",
+        "path": "collision-guard"
+      }
+    },
+    {
+      "name": "adhkar",
+      "source": {
+        "source": "git-subdir",
+        "url": "ashafizullah/claude-code-muslim-mods",
+        "path": "adhkar"
+      }
+    },
+    {
+      "name": "daily-ayah",
+      "source": {
+        "source": "git-subdir",
+        "url": "ashafizullah/claude-code-muslim-mods",
+        "path": "daily-ayah"
+      }
+    },
+    {
+      "name": "secret-mask",
+      "source": {
+        "source": "git-subdir",
+        "url": "homieyangg/claude-code-mods",
+        "path": "secret-mask"
+      }
     }
   ]
 }

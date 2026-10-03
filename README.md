@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 220 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 263 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 220 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 263 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 220 mods, see the Chinese section below.
+For detailed descriptions of all 263 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 220 个精选 Claude Code mods：
+以下是本市场的 263 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -1035,6 +1035,178 @@ Pro 计划用量表盘：5 小时、7 天限额、上下文和回合回执。
 跨会话记录你的提问与改动文件，/standup 用模型写成日报摘要。  
 **许可证**：MIT  
 **来源**：https://github.com/claudemodz/mods/tree/main/plugins/standup
+
+#### ding
+长回合结束 toast+可选音效提醒。  
+**来源**：https://github.com/lucenity0/claude-code-mods/tree/main/ding
+
+#### seatbelt
+本地规则拦截危险 Bash/写文件（只拒绝不改写命令）。备注：会 deny 匹配的工具调用。  
+**来源**：https://github.com/lucenity0/claude-code-mods/tree/main/seatbelt
+
+#### session-dash
+会话仪表盘窗格：用量与回合概览。  
+**来源**：https://github.com/lucenity0/claude-code-mods/tree/main/session-dash
+
+#### turn-meter
+状态行显示当前回合耗时与 token。  
+**来源**：https://github.com/lucenity0/claude-code-mods/tree/main/turn-meter
+
+#### collapse-answers
+折叠过长回复，界面更干净。  
+**来源**：https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers
+
+#### prompt-highlight
+高亮用户消息气泡背景，便于扫读。  
+**来源**：https://github.com/adriancoman/claude-code-mods/tree/main/prompt-highlight
+
+#### usage-status
+状态行显示 5h/周限额占用。  
+**来源**：https://github.com/adriancoman/claude-code-mods/tree/main/usage-status
+
+#### cache-watch
+提示缓存重建时 toast 告警并估算回合费用。  
+**来源**：https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/cache-watch
+
+#### context-guard
+上下文占用状态行，越过阈值 toast 提醒 /compact。  
+**来源**：https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/context-guard
+
+#### cost-pane
+费用窗格：本会话与按日花费汇总。  
+**来源**：https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/cost-pane
+
+#### turn-timer
+轻量回合计时状态。  
+**来源**：https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer
+
+#### quiet-spinner
+弱化/安静化等待 spinner。  
+**来源**：https://github.com/schreibse/claude-code-mods/tree/main/quiet-spinner
+
+#### mr-banner
+MR/PR 相关横幅提示。  
+**来源**：https://github.com/schreibse/claude-code-mods/tree/main/mr-banner
+
+#### reminder-log
+本地提醒日志窗格。  
+**来源**：https://github.com/schreibse/claude-code-mods/tree/main/reminder-log
+
+#### quiet-bash
+精简 Bash 行展示，可选本地 magick 缩略图。备注：会本地调用 magick/identify 生成缩略图。  
+**来源**：https://github.com/schreibse/claude-code-mods/tree/main/quiet-bash
+
+#### cache-meter
+提示框上方提示缓存剩余 TTL 条。  
+**来源**：https://github.com/DarioFontanel/claude-code-mods/tree/main/cache-meter
+
+#### quick-buttons
+侧栏快捷按钮启动已选 slash 命令。备注：点击会 $.command.run。  
+**来源**：https://github.com/DarioFontanel/claude-code-mods/tree/main/quick-buttons
+
+#### snake
+Claude 工作时可玩的贪吃蛇窗格（/snake）。  
+**来源**：https://github.com/hamzafer/claude-code-mods/tree/main/mods/snake
+
+#### where-am-i
+提示上方只读回顾：目标/正在做/等你什么（观察工具调用，不改写）。  
+**来源**：https://github.com/hamzafer/claude-code-mods/tree/main/mods/where-am-i
+
+#### agent-radar
+每个运行中子代理一行实时状态。  
+**来源**：https://github.com/hamzafer/claude-code-mods/tree/main/mods/agent-radar
+
+#### search-meter
+统计模型搜索（Bash grep/find、WebSearch、ToolSearch）命中着色。  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/search-meter
+
+#### compact-keeper
+压缩后把摘要与编辑文件清单存到本地 ~/.claude/handoffs/。备注：只写本地 handoff 文件。  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/compact-keeper
+
+#### guardrails
+本地拒绝 Cloudflare 写命令、带归因行的 commit、claude/ 分支前缀。备注：只读 Bash 命令字符串做 deny，不改写。  
+**来源**：https://github.com/arasovic/claude-code-mods/tree/main/guardrails
+
+#### code-pet
+像素宠物窗格，随 Claude 活动反应。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet
+
+#### session-wrapped
+会话「年终总结」式统计动画。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/session-wrapped
+
+#### boss-fight
+失败测试变 boss，通过测试打血条的像素小游戏。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/boss-fight
+
+#### sportscaster
+会话实况解说（本地 $.audio.speak，不上传会话）。备注：使用本机 TTS。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/sportscaster
+
+#### swarm
+子代理/团队任务控制室窗格。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm
+
+#### agent-race
+多会话任务赛跑分屏。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/agent-race
+
+#### inner-monologue
+会话旁白式内心独白窗格。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue
+
+#### launch-codes
+危险 Bash 需解锁码才放行。备注：会 deny 危险命令直至用户解锁。  
+**来源**：https://github.com/OneWave-AI/claude-code-mods/tree/main/launch-codes
+
+#### md-view
+点击回复里的 Markdown 文件渲染预览。  
+**来源**：https://github.com/scoobynko/claude-code-mods/tree/main/plugins/md-view
+
+#### image-preview
+会话图片窗格预览。备注：本地 sips/magick 转 PNG，不外传。  
+**来源**：https://github.com/scoobynko/claude-code-mods/tree/main/plugins/image-preview
+
+#### little-harvest
+随回合生长的自动小花园。  
+**来源**：https://github.com/theonly1me/claude-code-mods/tree/main/plugins/little-harvest
+
+#### pocket-familiar
+伴随工作的养成伙伴窗格。  
+**来源**：https://github.com/theonly1me/claude-code-mods/tree/main/plugins/pocket-familiar
+
+#### night-feast
+Claude 工作时的像素小游戏。  
+**来源**：https://github.com/theonly1me/claude-code-mods/tree/main/plugins/night-feast
+
+#### change-journal
+编辑变更的即时说明窗格。  
+**来源**：https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal
+
+#### behavior-map
+改动前后行为流图。  
+**来源**：https://github.com/theonly1me/claude-code-mods/tree/main/plugins/behavior-map
+
+#### check-ledger
+记录跑过哪些检查、之后又有哪些编辑（/evidence）。  
+**来源**：https://github.com/LeeHigma0201/claude-code-mods/tree/main/mods/check-ledger
+
+#### collision-guard
+另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。  
+**来源**：https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard
+
+#### adhkar
+在 Claude Code 中显示赞念/记主内容。  
+**来源**：https://github.com/ashafizullah/claude-code-muslim-mods/tree/main/adhkar
+
+#### daily-ayah
+每日经文展示。  
+**来源**：https://github.com/ashafizullah/claude-code-muslim-mods/tree/main/daily-ayah
+
+#### secret-mask
+在工具输出写入对话前遮罩疑似密钥。备注：会改写展示给模型的工具结果文本（本地遮罩，不外传）。  
+**来源**：https://github.com/homieyangg/claude-code-mods/tree/main/secret-mask
 
 ## 许可证
 
