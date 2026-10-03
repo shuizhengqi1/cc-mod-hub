@@ -2039,6 +2039,167 @@
         "url": "homieyangg/claude-code-mods",
         "path": "secret-mask"
       }
+    },
+    {
+      "name": "pong",
+      "source": {
+        "source": "git",
+        "url": "ambareeshav/claude-pong-mod"
+      }
+    },
+    {
+      "name": "fortune-cookie",
+      "source": {
+        "source": "git",
+        "url": "tobinsouth/fortune-cookie-mod"
+      }
+    },
+    {
+      "name": "claude-maru-run",
+      "source": {
+        "source": "git",
+        "url": "lemonlatte/claude-maru-run"
+      }
+    },
+    {
+      "name": "cc-dino",
+      "source": {
+        "source": "git",
+        "url": "manfye/cc-dino"
+      }
+    },
+    {
+      "name": "cc-pokedex",
+      "source": {
+        "source": "git",
+        "url": "deonmenezes/claude-mods-pokedex"
+      }
+    },
+    {
+      "name": "statusbar",
+      "source": {
+        "source": "git",
+        "url": "sgmonda/statusbar"
+      }
+    },
+    {
+      "name": "loose-ends",
+      "source": {
+        "source": "git",
+        "url": "fernandomoraes/loose-ends"
+      }
+    },
+    {
+      "name": "gamba",
+      "source": {
+        "source": "git",
+        "url": "salatmaster/claude-gamba"
+      }
+    },
+    {
+      "name": "claude-slots",
+      "source": {
+        "source": "git",
+        "url": "WorldInnovationsDepartment/claude_slots"
+      }
+    },
+    {
+      "name": "music-mod",
+      "source": {
+        "source": "git",
+        "url": "zyx1121/music-mod"
+      }
+    },
+    {
+      "name": "holdtime",
+      "source": {
+        "source": "git",
+        "url": "ItsRohith-A/holdtime"
+      }
+    },
+    {
+      "name": "korkmaz-trail",
+      "source": {
+        "source": "git",
+        "url": "BersanKayraKorkmaz/korkmaz-trail"
+      }
+    },
+    {
+      "name": "clawdgotchi",
+      "source": {
+        "source": "git",
+        "url": "arthurseredaa/clawdgotchi"
+      }
+    },
+    {
+      "name": "usage-report",
+      "source": {
+        "source": "git",
+        "url": "Schweem/usage-report"
+      }
+    },
+    {
+      "name": "idle-compact",
+      "source": {
+        "source": "git",
+        "url": "davidar/claude-idle-compact"
+      }
+    },
+    {
+      "name": "tps-report",
+      "source": {
+        "source": "git",
+        "url": "vgnshiyer/tps-report"
+      }
+    },
+    {
+      "name": "cache-ttl-timer",
+      "source": {
+        "source": "git",
+        "url": "WQGGSEY/cache-ttl-timer"
+      }
+    },
+    {
+      "name": "wavy-usage",
+      "source": {
+        "source": "git",
+        "url": "BatuhanCakmakk/wavy-usage"
+      }
+    },
+    {
+      "name": "nowloading",
+      "source": {
+        "source": "git",
+        "url": "vgnshiyer/nowloading"
+      }
+    },
+    {
+      "name": "essential-conversation",
+      "source": {
+        "source": "git",
+        "url": "SuzumiyaAoba/claude-essential-conversation-mod"
+      }
+    },
+    {
+      "name": "repo-pulse",
+      "source": {
+        "source": "git",
+        "url": "5d0tal1gat0r/repo-pulse"
+      }
+    },
+    {
+      "name": "stepscope",
+      "source": {
+        "source": "git",
+        "url": "5d0tal1gat0r/stepscope"
+      }
+    },
+    {
+      "name": "drift",
+      "source": {
+        "source": "git",
+        "url": "azkhh/drift"
+      }
     }
   ]
 }
