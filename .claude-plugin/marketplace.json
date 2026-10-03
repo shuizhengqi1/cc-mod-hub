@@ -841,14 +841,6 @@
       }
     },
     {
-      "name": "bash-diet",
-      "source": {
-        "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
-        "path": "plugins/bash-diet"
-      }
-    },
-    {
       "name": "bg-tasks",
       "source": {
         "source": "git-subdir",
