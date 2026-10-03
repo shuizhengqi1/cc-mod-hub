@@ -178,6 +178,76 @@
         "source": "github",
         "repo": "ShiftinBits/constellation-claude"
       }
+    },
+    {
+      "name": "usage-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "JetsonChan/CC-Usage-Band",
+        "path": "usage-band"
+      }
+    },
+    {
+      "name": "glass",
+      "source": {
+        "source": "github",
+        "repo": "rashedInt32/glass"
+      }
+    },
+    {
+      "name": "trek-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "rb17080/trek-band",
+        "path": "plugins/trek-band"
+      }
+    },
+    {
+      "name": "clawd",
+      "source": {
+        "source": "git-subdir",
+        "url": "raresmun/claude-mods",
+        "path": "plugins/clawd"
+      }
+    },
+    {
+      "name": "cctop",
+      "source": {
+        "source": "git-subdir",
+        "url": "tomstagl/cctop",
+        "path": "plugin"
+      }
+    },
+    {
+      "name": "terminal-browser",
+      "source": {
+        "source": "git-subdir",
+        "url": "zenbu-labs/terminal-browser",
+        "path": "claude-code-plugin"
+      }
+    },
+    {
+      "name": "effort-cycle",
+      "source": {
+        "source": "github",
+        "repo": "Anerco/claude-code-effort-cycle"
+      }
+    },
+    {
+      "name": "claude-mermaid",
+      "source": {
+        "source": "git-subdir",
+        "url": "galElmalah/claude-mods",
+        "path": "claude-mermaid"
+      }
+    },
+    {
+      "name": "claude-queue",
+      "source": {
+        "source": "git-subdir",
+        "url": "galElmalah/claude-mods",
+        "path": "claude-queue"
+      }
     }
   ]
 }
