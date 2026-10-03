@@ -2304,6 +2304,125 @@
         "url": "kzarzycki/claude-mods",
         "path": "plugins/resume-on-stop"
       }
+    },
+    {
+      "name": "today-mod",
+      "source": {
+        "source": "github",
+        "repo": "zyx1121/today-mod"
+      }
+    },
+    {
+      "name": "herdr-hud",
+      "source": {
+        "source": "github",
+        "repo": "Dan-Seo/herdr-hud"
+      }
+    },
+    {
+      "name": "prismantis",
+      "source": {
+        "source": "github",
+        "repo": "NahumLitvin/prismantis"
+      }
+    },
+    {
+      "name": "cc-subway",
+      "source": {
+        "source": "github",
+        "repo": "lucastononro/cc-subway"
+      }
+    },
+    {
+      "name": "adlib-lyrics",
+      "source": {
+        "source": "github",
+        "repo": "bixxter/adlib-lyrics"
+      }
+    },
+    {
+      "name": "claude-chan",
+      "source": {
+        "source": "github",
+        "repo": "swan4er/claude-chan"
+      }
+    },
+    {
+      "name": "claude-mine",
+      "source": {
+        "source": "github",
+        "repo": "swan4er/claude-mine"
+      }
+    },
+    {
+      "name": "claude-dino",
+      "source": {
+        "source": "github",
+        "repo": "swan4er/claude-dino"
+      }
+    },
+    {
+      "name": "sudus",
+      "source": {
+        "source": "git-subdir",
+        "url": "eas4ai/sudus",
+        "path": "mod"
+      }
+    },
+    {
+      "name": "shunt",
+      "source": {
+        "source": "git-subdir",
+        "url": "pleaseai/shunt",
+        "path": "plugins/shunt"
+      }
+    },
+    {
+      "name": "secrets-veil",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonatangross/orchestkit",
+        "path": "mods/secrets-veil"
+      }
+    },
+    {
+      "name": "memory-lens",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonatangross/orchestkit",
+        "path": "mods/memory-lens"
+      }
+    },
+    {
+      "name": "lesson-cards",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonatangross/orchestkit",
+        "path": "mods/lesson-cards"
+      }
+    },
+    {
+      "name": "promote-lights",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonatangross/orchestkit",
+        "path": "mods/promote-lights"
+      }
+    },
+    {
+      "name": "cs-update",
+      "source": {
+        "source": "git-subdir",
+        "url": "hex/claude-sessions",
+        "path": "mods/cs-update"
+      }
+    },
+    {
+      "name": "block-creds",
+      "source": {
+        "source": "github",
+        "repo": "skpersonal/claude-code-block-creds-mod"
+      }
     }
   ]
 }

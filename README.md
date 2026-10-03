@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 299 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 315 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 299 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 315 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 299 mods, see the Chinese section below.
+For detailed descriptions of all 315 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 299 个精选 Claude Code mods：
+以下是本市场的 315 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -1375,6 +1375,70 @@ TPS 风格工作报告窗格。
 #### resume-on-stop
 检测「说了要动手却停住」的意外停轮，经 decision 模型确认后自动续一轮。备注：依赖 decision-model；会自动 $.prompt.submit 续跑（每提示最多一次）。  
 **来源**：https://github.com/kzarzycki/claude-mods/tree/main/plugins/resume-on-stop
+
+#### today-mod
+提示框上方显示今日日历 / E3 截止日期 / Reminders，并注入 `today` 上下文块。备注：仅跑本机 zyx utils / 可配置 scripts；读写 TMPDIR 共享缓存。  
+**来源**：https://github.com/zyx1121/today-mod
+
+#### herdr-hud
+提示框上方显示 Herdr agent 状态条。备注：本机 `herdr agent list`；可选 `delegate` 会把 git diff 交给 Codex worker（默认关）。  
+**来源**：https://github.com/Dan-Seo/herdr-hud
+
+#### prismantis
+彩色主题渲染回复：表格、告警、代码块与 Mermaid。备注：可选往 prompt context 注入绘图提示；纯 UI。  
+**来源**：https://github.com/NahumLitvin/prismantis
+
+#### cc-subway
+/subway 在侧栏打开跑酷小游戏。备注：仅 UI + 本地 store 记分。  
+**来源**：https://github.com/lucastononro/cc-subway
+
+#### adlib-lyrics
+提示框上显示本机 Music/Spotify 同步歌词与 Adlib 吉祥物。备注：osascript 读播放状态；歌名/歌手查询 lrclib.net。  
+**来源**：https://github.com/bixxter/adlib-lyrics
+
+#### claude-chan
+提示框上的二次元助手气泡；「chan, …」或 /chan 对话。备注：拦截以「чан,」开头的用户输入；用 $.model.complete（用户自己的模型）。  
+**来源**：https://github.com/swan4er/claude-chan
+
+#### claude-mine
+/mine 在提示框上方打开体素沙盒。备注：仅 UI + 本地存档。  
+**来源**：https://github.com/swan4er/claude-mine
+
+#### claude-dino
+/dino 在提示框上方打开恐龙跑酷（与已上架的 manfye/cc-dino 不同源）。备注：仅 UI + 本地纪录。  
+**来源**：https://github.com/swan4er/claude-dino
+
+#### sudus
+Sudus 状态条/窗格：跑本机 `sudus wake` 显示下一步。备注：依赖本机 sudus CLI 或插件自带 copy；不改写 Bash。  
+**来源**：https://github.com/eas4ai/sudus/tree/main/mod
+
+#### shunt
+/shunt:usage 从用户自己的 Shunt 网关 GET /usage 显示额度。备注：用用户的 SHUNT_TOKEN / ANTHROPIC_* 调自己的网关。  
+**来源**：https://github.com/pleaseai/shunt/tree/main/plugins/shunt
+
+#### secrets-veil
+工具结果中的密钥形态/高熵串打码后再给模型看（无还原路径）。备注：读本机常见 *API_KEY 环境变量做命名匹配；不改写工具命令。  
+**来源**：https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil
+
+#### memory-lens
+按提示/路径检索本机 Claude memory 文件，注入 top 命中到 context。备注：仅读 `~/.claude/projects/.../memory`；无网络。  
+**来源**：https://github.com/yonatangross/orchestkit/tree/main/mods/memory-lens
+
+#### lesson-cards
+按本地 lesson 语料匹配 Bash/Edit/Write，在工具行下显示卡片；block 级可先询问再执行。备注：仅本地 hq-ext / lessons.md。  
+**来源**：https://github.com/yonatangross/orchestkit/tree/main/mods/lesson-cards
+
+#### promote-lights
+提示框上方显示 promote/watch PR 的 CI 灯。备注：本机 `gh` 查询；不改写工具。  
+**来源**：https://github.com/yonatangross/orchestkit/tree/main/mods/promote-lights
+
+#### cs-update
+cs 有新版本时侧栏显示发行说明并用 `cs -update` 安装。备注：仅 cs 会话；本机 CS_BIN。  
+**来源**：https://github.com/hex/claude-sessions/tree/main/mods/cs-update
+
+#### block-creds
+用本机 betterleaks 扫描并打码/拦截提示与工具结果中的凭证。备注：依赖本机 betterleaks；可在工具调用前把占位符还原为真实值以便工具工作。  
+**来源**：https://github.com/skpersonal/claude-code-block-creds-mod
 
 ## 许可证
 
