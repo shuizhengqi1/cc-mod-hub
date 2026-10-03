@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 24 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 39 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 24 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 39 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (Chinese descriptions with source links)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 24 mods, see the Chinese section below.
+For detailed descriptions of all 39 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 24 个精选 Claude Code mods：
+以下是本市场的 39 个精选 Claude Code mods：
 
 
 ### 内置 Mod
@@ -214,6 +214,45 @@ Alt+E / Alt+Shift+E 切换 effort，页脚显示模型与档位。
 #### claude-queue
 /q 在回合进行中排队提示，回合结束后自动发出。  
 **来源**：https://github.com/galElmalah/claude-mods/tree/main/claude-queue
+
+#### statuspane
+提示框上方浮动状态卡：模型、effort、上下文、5 小时/周限额、费用与分支，另有可供脚本/其他 mod 写入的进度条 API。  
+**许可证**：MIT  
+**来源**：https://github.com/xuanji86/claude-statuspane
+
+#### effort-guard
+上下文/token 条带、升级信号与每回合 effort 日志。  
+**许可证**：MIT  
+**来源**：https://github.com/stefanochieli/claude-effort-guard
+
+#### gsd-status-mod
+面向 GSD 项目：在提示框上方显示阶段/进度与 STATE.md 漂移警告，并把下一步动作放进提示行。  
+**许可证**：MIT  
+**来源**：https://github.com/helenkwok/gsd-status-mod
+
+#### skins
+给 transcript 换肤：主题化工具行、回复边栏与 spinner 文案；桌面端把表格/代码/diff/shell 画成动画卡片。  
+**许可证**：MIT  
+**来源**：https://github.com/hellosverre/claude-skins
+
+#### cc-pr-tracker
+在提示框上方盯着 GitHub PR 的合并状态、评审与必需检查，有变化时 toast。  
+**许可证**：MIT  
+**来源**：https://github.com/sezaakgun/cc-pr-tracker
+
+#### intermission
+Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需要输入时自动切回。  
+**许可证**：MIT  
+**来源**：https://github.com/jarrodwatts/intermission
+
+#### editor-context
+在桌面端提示框上方显示 Cursor/VS Code 当前文件与选区，并在每次提交时把你正在看的内容悄悄告诉 Claude。  
+**许可证**：MIT  
+**来源**：https://github.com/talbarina/claude-editor-context
+
+#### prompter
+边聊边整理需求：把零散想法变成干净 brief，并填入本仓库上下文。  
+**来源**：https://github.com/niijoey/prompter-mod
 
 ## 许可证
 

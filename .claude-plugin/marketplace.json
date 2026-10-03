@@ -248,6 +248,64 @@
         "url": "galElmalah/claude-mods",
         "path": "claude-queue"
       }
+    },
+    {
+      "name": "statuspane",
+      "source": {
+        "source": "github",
+        "repo": "xuanji86/claude-statuspane"
+      }
+    },
+    {
+      "name": "effort-guard",
+      "source": {
+        "source": "github",
+        "repo": "stefanochieli/claude-effort-guard"
+      }
+    },
+    {
+      "name": "gsd-status-mod",
+      "source": {
+        "source": "github",
+        "repo": "helenkwok/gsd-status-mod"
+      }
+    },
+    {
+      "name": "skins",
+      "source": {
+        "source": "github",
+        "repo": "hellosverre/claude-skins"
+      }
+    },
+    {
+      "name": "cc-pr-tracker",
+      "source": {
+        "source": "github",
+        "repo": "sezaakgun/cc-pr-tracker"
+      }
+    },
+    {
+      "name": "intermission",
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/intermission"
+      }
+    },
+    {
+      "name": "editor-context",
+      "source": {
+        "source": "git-subdir",
+        "url": "talbarina/claude-editor-context",
+        "path": "plugins/editor-context"
+      }
+    },
+    {
+      "name": "prompter",
+      "source": {
+        "source": "git-subdir",
+        "url": "niijoey/prompter-mod",
+        "path": "plugins/prompter"
+      }
     }
   ]
 }
