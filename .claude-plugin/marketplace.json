@@ -1665,14 +1665,6 @@
       }
     },
     {
-      "name": "prompts",
-      "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "prompts"
-      }
-    },
-    {
       "name": "tokens",
       "source": {
         "source": "git-subdir",
