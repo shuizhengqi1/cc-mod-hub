@@ -2498,14 +2498,6 @@
       }
     },
     {
-      "name": "receipt",
-      "source": {
-        "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
-        "path": "receipt"
-      }
-    },
-    {
       "name": "wod-band",
       "source": {
         "source": "git-subdir",
