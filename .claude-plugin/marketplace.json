@@ -2535,6 +2535,52 @@
         "url": "Conte777/mermaid-inline",
         "path": "mermaid-inline"
       }
+    },
+    {
+      "name": "whats-agent-doing",
+      "source": {
+        "source": "git",
+        "url": "tzafrir/whats-agent-doing"
+      }
+    },
+    {
+      "name": "turn-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "tsumugilabo/turn-progress",
+        "path": "plugins/turn-progress"
+      }
+    },
+    {
+      "name": "ccoverhead",
+      "source": {
+        "source": "git-subdir",
+        "url": "shengyy/ccoverhead",
+        "path": "plugin"
+      }
+    },
+    {
+      "name": "usage-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "qingyashizi/claude-usage-mod",
+        "path": "plugins/usage-mod"
+      }
+    },
+    {
+      "name": "tasknotes-preview",
+      "source": {
+        "source": "git",
+        "url": "cbruyndoncx/claude-tasknotes-renderer-mod"
+      }
+    },
+    {
+      "name": "push",
+      "source": {
+        "source": "git-subdir",
+        "url": "robertgregorywest/claude-mods",
+        "path": "mods/push"
+      }
     }
   ]
 }
