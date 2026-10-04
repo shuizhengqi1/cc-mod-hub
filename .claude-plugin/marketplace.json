@@ -2899,6 +2899,53 @@
         "source": "git",
         "url": "XavierYounan/claude-code-tmux-status"
       }
+    },
+    {
+      "name": "weektoken",
+      "source": {
+        "source": "git-subdir",
+        "url": "3dnow/claude-mods",
+        "path": "weektoken"
+      }
+    },
+    {
+      "name": "pokemon",
+      "source": {
+        "source": "git",
+        "url": "dgokcin/claude-pokemon-mod"
+      }
+    },
+    {
+      "name": "looks",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/looks"
+      }
+    },
+    {
+      "name": "samurai-dojo",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/samurai-dojo"
+      }
+    },
+    {
+      "name": "slayer-corps",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/slayer-corps"
+      }
+    },
+    {
+      "name": "scope-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/scope-guard"
+      }
     }
   ]
 }
