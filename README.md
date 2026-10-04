@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 301 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 317 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 301 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 317 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 301 mods, see the Chinese section below.
+For detailed descriptions of all 317 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 301 个精选 Claude Code mods，按类别组织：
+以下是本市场的 317 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -101,6 +101,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | limit-bars | 提示框下四个动画环，显示上下文、会话和周限额。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars) |
 | limit-watch | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
 | netrunner-hud | 会话仪表盘：上下文条、token 示波与状态窗格。 | MIT | [链接](https://github.com/ccdwyer/netrunner-hud) |
+| omp-quota | omp 各 provider 剩余配额条（/quota）；备注：通过本机 `omp usage --json` 读取，不改写工具。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/omp-quota) |
 | overalls | 提示框上方状态条：上下文预报、用量限额，以及 Ponytail/Caveman 档位（可配置）。 | MIT | [链接](https://github.com/Troepster/overalls) |
 | pets | 像素宠物窗格：闲逛、记笔记、完成回合时跳跃、限额 80% 流泪、闲置两分钟午睡；八种动物（猫、小鸡、狗、史莱姆、兔子、仓鼠、企鹅、青蛙），可命名、喂食、升... | MIT | [链接](https://github.com/uppinote20/claude-pets) |
 | pro-hud | Pro 计划用量表盘：5 小时、7 天限额、上下文和回合回执。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/pro-hud) |
@@ -165,6 +166,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | netsignal | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
 | on-me | 提示框上条带：Claude 正在做什么，以及轮到你处理的事项。 | MIT | [链接](https://github.com/abhibansal60/claude-mods/tree/main/on-me) |
 | pixelband | 在提示框上方显示像素艺术。 |  | [链接](https://github.com/furqan-khan07/pixelband) |
+| powerline-bar | Powerline 风格 AbovePrompt 条：目录、git、模型与上下文占用。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/powerline-bar) |
 | prompt-highlight | 高亮用户消息气泡背景，便于扫读。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/prompt-highlight) |
 | prompt-rail | 提示条/侧栏：悬停读、点击跳回历史 prompt。 |  | [链接](https://github.com/oikon48/prompt-rail/tree/main/plugins/prompt-rail) |
 | quick-buttons | 侧栏快捷按钮启动已选 slash 命令。备注：点击会 $.command.run。 |  | [链接](https://github.com/DarioFontanel/claude-code-mods/tree/main/quick-buttons) |
@@ -175,6 +177,8 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | ruview-live | /ruview 打开 CSI/雷达传感只读窗格（瀑布图与雷达视图）。备注：运行插件旁的 @ruvnet/ruview CLI（node）；只读设备数据。 | MIT | [链接](https://github.com/ruvnet/RuView/tree/main/harness/ruview/mod) |
 | search-meter | 统计模型搜索（Bash grep/find、WebSearch、ToolSearch）命中着色。 |  | [链接](https://github.com/arasovic/claude-code-mods/tree/main/search-meter) |
 | sidebar | 侧栏扩展面板。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sidebar) |
+| spinner-stats | 在 Claude 自带 spinner 后缀追加耗时、当前工具与调用次数。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/spinner-stats) |
+| status-band | 可主题化状态条：模型/effort、目录、git、上下文与配额等；/band 配置。 | MIT | [链接](https://github.com/dukechain2333/cc-status-band) |
 | stepscope | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
@@ -210,29 +214,37 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | pong | 在提示框上方玩 Pong 游戏，Claude 工作时可打发时间。 | MIT | [链接](https://github.com/ambareeshav/claude-pong-mod) |
 | snake | Claude 工作时可玩的贪吃蛇窗格（/snake）。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/snake) |
 | tetris | 提示框上方俄罗斯方块；仅 UI/命令。 ## 许可证 此市场仓库本身不包含代码，仅作为插件目录。各个 mod 的许可证请参阅其源仓库。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/tetris) |
+| tycoon | Token Tycoon 挂机游戏窗格：工具调用赚代币买升级。备注：可选加入全球排行榜时会向作者 Cloudflare Worker 发送游戏存档（非会话原文），默认可不加入。 | MIT | [链接](https://github.com/barisdemirhan/claude-tycoon) |
 
 ### 安全防护 Security & Safety
 
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | bash-guardrails | 用本地规则拒绝危险或畸形的 Bash 与 Monitor 调用（只读命令字符串做判定，不改写命令）。 |  | [链接](https://github.com/ruihe774/cc-bash-guardrails) |
+| branch-guard | 在受保护分支上拦截 Write/Edit 与变更型 git，可询问后放行或建议 worktree。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/branch-guard) |
 | browser-guard | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | collision-guard | 另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。 |  | [链接](https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard) |
 | env | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
 | flash-veille | 提示框上方轮播开发者资讯（Human Coders、Anthropic 博客等）。 | MIT | [链接](https://github.com/camilleroux/flash-veille/tree/main/plugins/flash-veille) |
 | guardrails | 本地拒绝 Cloudflare 写命令、带归因行的 commit、claude/ 分支前缀。备注：只读 Bash 命令字符串做 deny，不改写。 |  | [链接](https://github.com/arasovic/claude-code-mods/tree/main/guardrails) |
 | launch-codes | 危险 Bash 需解锁码才放行。备注：会 deny 危险命令直至用户解锁。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/launch-codes) |
+| path-guard | 拒绝项目根外或 .git 内的 Write/Edit（可选护 Read）。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/path-guard) |
 | pii-guard | 台湾 PII 可逆脱敏（经本地 hookd）；需 Python/uv。 |  | [链接](https://github.com/danyuchn/pii-guard/tree/main/examples/claude-code-mod) |
+| redact | Read 结果里把疑似密钥字符串替换成 `[REDACTED:…]` 再给模型。备注：改写的是 Read 结果文本，不改写命令。 | MIT | [链接](https://github.com/thkt/dotclaude/tree/main/mods/redact) |
 | seatbelt | 本地规则拦截危险 Bash/写文件（只拒绝不改写命令）。备注：会 deny 匹配的工具调用。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/seatbelt) |
+| secret-guard | 拦截即将写入文件或 Bash 的疑似密钥内容。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/secret-guard) |
 | secret-mask | 在工具输出写入对话前遮罩疑似密钥。备注：会改写展示给模型的工具结果文本（本地遮罩，不外传）。 |  | [链接](https://github.com/homieyangg/claude-code-mods/tree/main/secret-mask) |
 | secret-redactor | 在模型看到前把密钥/邮箱/IP 换成占位符，工具输入时再还原。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) |
 | secrets-veil | 工具执行后遮盖结果中的疑似密钥字符串，不改写命令本身。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil) |
+| sensitive-file-guard | 拦截触及 .env/密钥/凭证路径的工具调用。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/sensitive-file-guard) |
 | storage-guard | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
+| test-guard | 拦截弱化/删除测试的 Write/Edit/Bash。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/test-guard) |
 
 ### 开发工具 Dev Tools
 
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
+| auto-checkpoint | 每回合开始在 refs/claude-checkpoints 做工作树快照；/checkpoints 与 /undo-turn。纯本地 git。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/auto-checkpoint) |
 | boot-sequence | 会话开始时做一次本机开机检查（git、工具链）。 | MIT | [链接](https://github.com/ccdwyer/boot-sequence) |
 | change-ledger | /changes 列出本会话改过的文件和行数。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/change-ledger) |
 | claude-mermaid | 把助手回复里的 mermaid 块画成彩色 box art。 |  | [链接](https://github.com/galElmalah/claude-mods/tree/main/claude-mermaid) |
@@ -293,6 +305,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | mesh7-pane | 从 localhost:9090 每 1.5 秒轮询 mesh7 决策：每次调用的 ALLOW/DENY/HUMAN 及规则参数、待批准请求、紧急停止横幅... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane) |
 | notice-board | 同仓库各会话共享通知板。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/notice-board) |
 | notify | 桌面通知：Claude 回合完成或等待决策时发系统原生通知，后台时召回焦点。 | MIT | [链接](https://github.com/XD3an/cc-notify) |
+| notify-on-finish | 长回合结束后桌面通知（macOS osascript / Linux notify-send / 否则 toast）。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/notify-on-finish) |
 | nowloading | 显示加载动画与进度提示。 | MIT | [链接](https://github.com/vgnshiyer/nowloading) |
 | pomodoro | 番茄钟状态条与配置面板，纯本地计时与提醒。 | MIT | [链接](https://github.com/sneycampos/claude-pomodoro) |
 | reminder-log | 本地提醒日志窗格。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/reminder-log) |
@@ -322,6 +335,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | image-view | 粘贴图片后在提示框上方显示像素缩略图。 |  | [链接](https://github.com/jarrodwatts/claude-image-view) |
 | jukebox7 | 白话点播音乐（"放点环境音"）：YouTube 音频通过隐藏 VLC 播放，无需浏览器也不抢焦点；窗格带流派按钮（每个是艺人电台）和当值头像的精选。 | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/jukebox7) |
 | lightbox | 粘贴图片时在提示框上方大预览，并带说明缩略图。 | MIT | [链接](https://github.com/arihantbansal/claude-lightbox) |
+| mathcat | 把公式渲成 PNG 并在窗格展示。备注：依赖本机已安装的 `mathcat` CLI（同仓库 Python 包）。 | Do No Harm | [链接](https://github.com/johndpope/mathcat) |
 | md-view | 点击回复里的 Markdown 文件渲染预览。 |  | [链接](https://github.com/scoobynko/claude-code-mods/tree/main/plugins/md-view) |
 | music-mod | 通过 osascript 控制 macOS Music.app 播放音乐。 | MIT | [链接](https://github.com/zyx1121/music-mod) |
 | paste-peek | 粘贴图片实时像素预览（⌥←/→ 切换，⌥↑ 放大，⌥↓ 侧栏）；需支持图片的终端。 | MIT | [链接](https://github.com/nokiy/claude-code-mods/tree/main/plugins/paste-peek) |
@@ -352,6 +366,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
+| calendar | AbovePrompt 显示即将到来的 Google Calendar 事件（/cal）。备注：通过用户已配置的「claude.ai Google Calendar」MCP 读取。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/calendar) |
 | gh-ci-status | 提示框上方钉住 GitHub Actions 状态。 |  | [链接](https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status) |
 | inbox-pane | 侧栏窗格展示 claude-inbox 各分区会话，支持快捷键操作。备注：读写本机 `~/.config/claude-inbox/`；可在无写入时拉起 ... |  | [链接](https://github.com/jordanbyron/claude-inbox/tree/main/mod) |
 | linear-claude-mod | Linear 指派工单面板；点击可加载详情、评论或改状态。 | MIT | [链接](https://github.com/rjohnt/linear-claude-mod) |
@@ -385,6 +400,7 @@ For detailed descriptions of all 301 mods, see the Chinese section below.
 | constellation-claude | 注册导出 mod。 | AGPL-3.0 | [链接](https://github.com/ShiftinBits/constellation-claude) |
 | ContextSaver | 标记浪费会话习惯。 | MIT | [链接](https://github.com/AlmogBaku/ContextSaver) |
 | contract-watch | 监视合约变更。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/contract-watch) |
+| cost-bar | AbovePrompt 费用条：本会话花费、5h/7d 计划限额与可选预算条。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/cost-bar) |
 | cueloop | tool.call mod。 | Apache-2.0 | [链接](https://github.com/mmurakaru/cueloop) |
 | dep-sentinel | 依赖变更哨兵。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/dep-sentinel) |
 | doc-drift-watch | 监视文档漂移。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/doc-drift-watch) |
