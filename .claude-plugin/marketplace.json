@@ -2315,6 +2315,131 @@
         "url": "davila7/claude-code-templates",
         "path": "cli-tool/components/mods/games/tetris"
       }
+    },
+    {
+      "name": "cost-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/cost-bar"
+      }
+    },
+    {
+      "name": "notify-on-finish",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/notify-on-finish"
+      }
+    },
+    {
+      "name": "spinner-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/spinner-stats"
+      }
+    },
+    {
+      "name": "powerline-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/powerline-bar"
+      }
+    },
+    {
+      "name": "auto-checkpoint",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/auto-checkpoint"
+      }
+    },
+    {
+      "name": "branch-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/branch-guard"
+      }
+    },
+    {
+      "name": "path-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/path-guard"
+      }
+    },
+    {
+      "name": "secret-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/secret-guard"
+      }
+    },
+    {
+      "name": "sensitive-file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/sensitive-file-guard"
+      }
+    },
+    {
+      "name": "test-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Justmalhar/awesome-claude-mods",
+        "path": "mods/test-guard"
+      }
+    },
+    {
+      "name": "status-band",
+      "source": {
+        "source": "github",
+        "repo": "dukechain2333/cc-status-band"
+      }
+    },
+    {
+      "name": "omp-quota",
+      "source": {
+        "source": "git-subdir",
+        "url": "musingfox/cc-plugins",
+        "path": "omp-quota"
+      }
+    },
+    {
+      "name": "calendar",
+      "source": {
+        "source": "git-subdir",
+        "url": "musingfox/cc-plugins",
+        "path": "calendar"
+      }
+    },
+    {
+      "name": "mathcat",
+      "source": {
+        "source": "github",
+        "repo": "johndpope/mathcat"
+      }
+    },
+    {
+      "name": "redact",
+      "source": {
+        "source": "git-subdir",
+        "url": "thkt/dotclaude",
+        "path": "mods/redact"
+      }
+    },
+    {
+      "name": "tycoon",
+      "source": {
+        "source": "github",
+        "repo": "barisdemirhan/claude-tycoon"
+      }
     }
   ]
 }
