@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 365 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 376 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 365 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 376 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 365 mods, see the Chinese section below.
+For detailed descriptions of all 376 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 365 个精选 Claude Code mods，按类别组织：
+以下是本市场的 376 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -205,6 +205,7 @@ For detailed descriptions of all 365 mods, see the Chinese section below.
 | stepscope | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
+| tool-timing-badge | 给每次工具调用旁加耗时彩色徽章；只测时+画 UI，不改写工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/tool-timing-badge) |
 | tps-report | TPS 风格工作报告窗格。 | MIT | [链接](https://github.com/vgnshiyer/tps-report) |
 | transcript-fx | 给 transcript 上色：工具块、提示面板和 spinner。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/transcript-fx) |
 | turn-timer | 轻量回合计时状态。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer) |
@@ -217,6 +218,14 @@ For detailed descriptions of all 365 mods, see the Chinese section below.
 |-----------|------------------|----------------|-------------|
 | 2048 | 提示框上方玩 2048；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/2048) |
 | agent-race | 多会话任务赛跑分屏。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/agent-race) |
+| tokencraft | Minecraft 风格 HUD：工具调用变方块与 XP，爱心=限额、饥饿=上下文。备注：本机读 .git/HEAD 与 maios/planning/sprint.local.md；回合结束把战利品行拼进回答文本，不外传。 | MIT | [链接](https://github.com/DanielPodolsky/tokencraft) |
+| doom | 提示框上方 Doom 走廊射击；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/doom) |
+| pacman | 提示框上方吃豆人；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/pacman) |
+| flappy | 提示框上方 Flappy；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/flappy) |
+| invaders | 提示框上方太空侵略者；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/invaders) |
+| minesweeper | 提示框上方扫雷；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/minesweeper) |
+| tool-defense | 塔防：每个敌人对应一次 Claude 工具调用；仅 UI，监听 tool.call 不改写。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/tool-defense) |
+| diff-invaders | Diff 侵略者：Edit/Write 新增行变成波次；仅 UI，不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/diff-invaders) |
 | boss-fight | 失败测试变 boss，通过测试打血条的像素小游戏。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/boss-fight) |
 | cc-arcade | 在提示框上方显示游戏，点击不会调用模型。 |  | [链接](https://github.com/sezaakgun/cc-arcade) |
 | cc-dino | Chrome 恐龙跑酷游戏，Claude 忙时可玩。 | MIT | [链接](https://github.com/manfye/cc-dino) |
@@ -287,6 +296,7 @@ For detailed descriptions of all 365 mods, see the Chinese section below.
 | files | 侧栏本会话新建/修改/删除的文件清单与行数（只观察工具，不改写）。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/files) |
 | filetree | 侧栏文件树，跟住 Claude 正在读/写的文件并可点选带入提示。 |  | [链接](https://github.com/data-goblin/claude-code-filetree) |
 | git-commit | Git 提交助手。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/git-commit) |
+| git-sidebar | lazygit 风格侧栏：worktree/分支列表；本机 git（可 git switch，脏树拒绝）与 /cd。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/git-sidebar) |
 | git-gates | Git 工作授权与整洁：追踪用户提示，拦截未授权的 commit/push/merge；检查提交消息（Conventional Commits、issue... |  | [链接](https://github.com/bahaospanov/claude-mods/tree/main/git-gates) |
 | glass | 给终端 transcript 换桌面级外观：着色命令、工具树、回合页脚等。 | MIT | [链接](https://github.com/rashedInt32/glass) |
 | lean-comments | 限制注释膨胀：Edit/Write 时标记多注释编辑，回合结束时检查 diff 的新注释行；Haiku 审查不值得保留的注释（复述代码或叙述改动）。 |  | [链接](https://github.com/bahaospanov/claude-mods/tree/main/lean-comments) |
@@ -390,6 +400,7 @@ For detailed descriptions of all 365 mods, see the Chinese section below.
 | backlog-band | 提示框上方显示 BACKLOG.md 的 Now 项。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/backlog-band) |
 | backlog-pane | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bg-tasks | 后台任务管理器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bg-tasks) |
+| bw-peek | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
 | check-ledger | 记录跑过哪些检查、之后又有哪些编辑（/evidence）。 |  | [链接](https://github.com/LeeHigma0201/claude-code-mods/tree/main/mods/check-ledger) |
 | cockpit | 计划/todo 进度条，并按 quick/normal/hard 路由模型与 effort。 |  | [链接](https://github.com/Brxerq/claude-cockpit/tree/main/plugins/cockpit) |
 | deadlines | 状态行的截止日期倒计时，/ddl 增删。 |  | [链接](https://github.com/richardcsuwandi/claude-mods/tree/main/plugins/deadlines) |
