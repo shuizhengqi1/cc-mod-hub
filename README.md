@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 316 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 323 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 316 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 323 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,7 +48,7 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 316 mods, see the Chinese section below.
+For detailed descriptions of all 323 mods, see the Chinese section below.
 
 ---
 
@@ -92,6 +92,7 @@ For detailed descriptions of all 316 mods, see the Chinese section below.
 | cache-warm | 缓存预热工具。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/cache-warm) |
 | cache-watch | 提示缓存重建时 toast 告警并估算回合费用。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/cache-watch) |
 | cctop | btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。 |  | [链接](https://github.com/tomstagl/cctop/tree/main/plugin) |
+| cost-meter | 侧栏实时费用计数器：本会话累计花费与回合成本（纯本地 UI）。 | MIT | [链接](https://github.com/zaferayan/claude-cost-meter/tree/main/cost-meter) |
 | clawd-spinner | Clawd 按 spinner 词表演动画（本地绘制，零 token）。 | MIT | [链接](https://github.com/saiharsha03/clawd-spinner) |
 | context-bar | 提示下方（可改上方）显示上下文窗口进度条与 prompt-cache TTL 倒计时。备注：可 tail 本地 transcript；仅本地读。 |  | [链接](https://github.com/k-wolfe99/claude-context-bar/tree/main/mod) |
 | context-xray | 窗格拆开上下文占用：系统提示、工具、记忆、skills、消息。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/context-xray) |
@@ -264,10 +265,13 @@ For detailed descriptions of all 316 mods, see the Chinese section below.
 | lockfile-sync | 锁文件同步检查。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/lockfile-sync) |
 | md-prompt | 输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。 | MIT | [链接](https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt) |
 | mdview | 侧栏渲染对话里的 Markdown，可点选让 Claude 改。 |  | [链接](https://github.com/xuanji86/claude-mdview) |
+| message-timestamps | 每条消息气泡旁显示时间戳（纯本地 UI）。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
 | skill-session-mods | 按本地 SKILL.md 元数据给 /skill 会话命名与上色（只读本地技能文件）。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/skill-session-mods) |
 | skins | 给 transcript 换肤：主题化工具行、回复边栏与 spinner 文案；桌面端把表格/代码/diff/shell 画成动画卡片。 | MIT | [链接](https://github.com/hellosverre/claude-skins) |
+| spell-bar | 状态栏拼写检查条：监视输入并标记错误（纯本地 UI）。 | MIT | [链接](https://github.com/powerofjinbo/claude-code-spell-bar/tree/main/plugins/spell-bar) |
 | spx-chart | 在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。 |  | [链接](https://github.com/zviryatko/claude-spx) |
+| starfleet-panel | 提示框上方面板：显示 git 分支、仓库、主机名（本地 git 和 hostname 命令）。 | MIT | [链接](https://github.com/dukechain2333/starfleet-panel/tree/main/plugin) |
 | statusbar | 状态栏显示当前 git 分支与仓库状态，仅本地 git rev-parse 查询。 | MIT | [链接](https://github.com/sgmonda/statusbar) |
 | touch-map | 文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map) |
 | transit-map | 把 git 历史画成地铁图，分支是线，提交是站。 | MIT | [链接](https://github.com/ccdwyer/transit-map) |
@@ -299,6 +303,7 @@ For detailed descriptions of all 316 mods, see the Chinese section below.
 | commit-drift | 状态行未提交文件数与距上次提交时间，久未提交会提醒。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commit-drift) |
 | desk-notify | 桌面通知提醒。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/desk-notify) |
 | ding | 长回合结束 toast+可选音效提醒。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/ding) |
+| done-blink | 回合完成时用本地 shell 命令闪烁 iTerm2 标签页；prompt.submit 只停止闪烁然后调 next（纯本地行为）。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/done-blink) |
 | error-poke | 错误提醒助手。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/error-poke) |
 | gfm-render | 在 transcript 里渲染 GFM：alerts、任务列表、删除线与 Mermaid。 | MIT | [链接](https://github.com/briangtn/claude-gfm-render) |
 | mesh7-pane | 从 localhost:9090 每 1.5 秒轮询 mesh7 决策：每次调用的 ALLOW/DENY/HUMAN 及规则参数、待批准请求、紧急停止横幅... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane) |
@@ -329,6 +334,7 @@ For detailed descriptions of all 316 mods, see the Chinese section below.
 | adlib-lyrics | 用 osascript 读取本机 Music/Spotify 当前曲目，并向 lrclib.net 拉取歌词显示在提示框上方（会访问外网歌词 API）。 | MIT | [链接](https://github.com/bixxter/adlib-lyrics) |
 | claude-image-generation | 通过 tool.call 生成图像。 |  | [链接](https://github.com/hex/claude-image-generation) |
 | darkroom | 把 Claude 读/写/生成以及你粘贴的图片做成聊天里的胶片条预览。 | MIT | [链接](https://github.com/govlog/claude-darkroom) |
+| figures | 回复中用本地 mmdc、mmdr、dot、d2 和 resvg 将 Mermaid/Graphviz/D2/PlantUML 渲成内嵌图片。 | Apache-2.0 | [链接](https://github.com/natsukium/claude-code-figures-plugin) |
 | image-peek | 文本光标移到粘贴的 [Image #1] 标记上时显示图像，移开隐藏；宽窗口用大预览窗格（深色画布居中），窄窗口用提示框上方区域；键盘焦点保持在提示框。 |  | [链接](https://github.com/karanb192/claude-code-mods/tree/main/plugins/image-peek) |
 | image-preview | 会话图片窗格预览。备注：本地 sips/magick 转 PNG，不外传。 |  | [链接](https://github.com/scoobynko/claude-code-mods/tree/main/plugins/image-preview) |
 | image-view | 粘贴图片后在提示框上方显示像素缩略图。 |  | [链接](https://github.com/jarrodwatts/claude-image-view) |
@@ -380,6 +386,7 @@ For detailed descriptions of all 316 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | adhkar | 在 Claude Code 中显示赞念/记主内容。 |  | [链接](https://github.com/ashafizullah/claude-code-muslim-mods/tree/main/adhkar) |
+| copy-band | 用本地 pbcopy 复制回复文本并追加到 ~/.claude/copy-stash（纯本地行为）。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/copy-band) |
 | daily-ayah | 每日经文展示。 |  | [链接](https://github.com/ashafizullah/claude-code-muslim-mods/tree/main/daily-ayah) |
 | garde-du-corps | 本地拒绝访问 .env 与危险 Bash（rm -rf、force push、hard reset、DROP TABLE）；只读路径/命令字符串做 den... | MIT | [链接](https://github.com/Para-FR/claude-code-mods-fr/tree/main/garde-du-corps) |
 | prayer-times | 提示框下方显示下次礼拜时间。 | MIT | [链接](https://github.com/mkbuilds4/mods/tree/main/plugins/prayer-times) |

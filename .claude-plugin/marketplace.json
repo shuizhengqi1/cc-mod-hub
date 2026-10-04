@@ -2433,6 +2433,61 @@
         "url": "thkt/dotclaude",
         "path": "mods/redact"
       }
+    },
+    {
+      "name": "figures",
+      "source": {
+        "source": "git",
+        "url": "natsukium/claude-code-figures-plugin"
+      }
+    },
+    {
+      "name": "starfleet-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "dukechain2333/starfleet-panel",
+        "path": "plugin"
+      }
+    },
+    {
+      "name": "message-timestamps",
+      "source": {
+        "source": "git-subdir",
+        "url": "benjaminmodayil/live-recap",
+        "path": "plugins/message-timestamps"
+      }
+    },
+    {
+      "name": "cost-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "zaferayan/claude-cost-meter",
+        "path": "cost-meter"
+      }
+    },
+    {
+      "name": "spell-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "powerofjinbo/claude-code-spell-bar",
+        "path": "plugins/spell-bar"
+      }
+    },
+    {
+      "name": "copy-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "copy-band"
+      }
+    },
+    {
+      "name": "done-blink",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "done-blink"
+      }
     }
   ]
 }
