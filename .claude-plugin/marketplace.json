@@ -2813,6 +2813,100 @@
         "source": "git",
         "url": "XavierYounan/claude-code-tmux-status"
       }
+    },
+    {
+      "name": "tokencraft",
+      "source": {
+        "source": "git",
+        "url": "DanielPodolsky/tokencraft"
+      }
+    },
+    {
+      "name": "doom",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/doom"
+      }
+    },
+    {
+      "name": "pacman",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/pacman"
+      }
+    },
+    {
+      "name": "flappy",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/flappy"
+      }
+    },
+    {
+      "name": "invaders",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/invaders"
+      }
+    },
+    {
+      "name": "minesweeper",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/minesweeper"
+      }
+    },
+    {
+      "name": "tool-defense",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/tool-defense"
+      }
+    },
+    {
+      "name": "diff-invaders",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/diff-invaders"
+      }
+    },
+    {
+      "name": "chess",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/chess"
+      }
+    },
+    {
+      "name": "git-sidebar",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/ui/git-sidebar"
+      }
+    },
+    {
+      "name": "tool-timing-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/ui/tool-timing-badge"
+      }
+    },
+    {
+      "name": "bw-peek",
+      "source": {
+        "source": "git",
+        "url": "iautom8things/bw-peek"
+      }
     }
   ]
 }
