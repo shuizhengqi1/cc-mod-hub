@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 376 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 383 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 376 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 383 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 376 mods, see the Chinese section below.
+For detailed descriptions of all 383 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 376 个精选 Claude Code mods，按类别组织：
+以下是本市场的 383 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -129,6 +129,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | usage-bar | 用量条：可调用 Anthropic 的 OAuth 用量 API（使用当前登录凭证，请求体为空）查看 5 小时与 7 天限额、上下文与缓存命中率。 | MIT | [链接](https://github.com/muratkaragozgil/claude-code-usage-bar) |
 | usage-bars | 上下文迷你图：把本会话的上下文占用画成字符级走势条，随回合增长刷新。 | MIT | [链接](https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/usage-bars) |
 | usage-deck | 计划限额、上下文占用与缓存温度合成动画甲板（/deck 显隐）。 | MIT | [链接](https://github.com/codeclawd/usage-deck/tree/main/plugins/usage-deck) |
+| usage-forecast | 提示框上方 5 小时/周限额条与重置时间，以及上下文预报火花线（/forecast）。纯 UI。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/usage-forecast) |
 | usage-bell | 接近限额时响铃：上下文占用（70/85/95%）、5 小时/7 天限额（80/95%）、自动记忆索引达 200 行或 25 kB；状态栏显示当前百分比，/... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/usage-bell) |
 | usage-meter | 提示框上方常显上下文与 5 小时/周限额。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/usage-meter) |
 | usage-mod | 提示框上方显示上下文与 5h/7d 额度及重置时间；按钮可触发本机 /compact。 | MIT | [链接](https://github.com/qingyashizi/claude-usage-mod/tree/main/plugins/usage-mod) |
@@ -285,11 +286,14 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | auto-checkpoint | 每回合开始在 refs/claude-checkpoints 做工作树快照；/checkpoints 与 /undo-turn。纯本地 git。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/auto-checkpoint) |
 | boot-sequence | 会话开始时做一次本机开机检查（git、工具链）。 | MIT | [链接](https://github.com/ccdwyer/boot-sequence) |
 | change-ledger | /changes 列出本会话改过的文件和行数。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/change-ledger) |
+| changed-files | 本会话 Claude 改过的文件侧栏，含 +/- 行数；观察 Edit/Write，不改写工具。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/changed-files) |
 | claude-mermaid | 把助手回复里的 mermaid 块画成彩色 box art。 |  | [链接](https://github.com/galElmalah/claude-mods/tree/main/claude-mermaid) |
+| codebase-atlas | 代码库架构图与变更/调用/决策窗格（/atlas）。备注：本机 git；可选 $.model.fork / $.model.complete 提取决策，会话不外传。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/codebase-atlas) |
 | codebase-galaxy | 用盲文点阵把仓库文件画成星空，跟着 Claude 碰过的文件。 | MIT | [链接](https://github.com/ccdwyer/codebase-galaxy) |
 | config-parse | 配置文件解析器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/config-parse) |
 | diagram-render | 图表实时渲染。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/diagram-render) |
 | diff-review | 每次 Edit/Write 后在侧栏展示未提交 hunk，keep/revert 按钮；revert 用本机 git apply -R（新建文件二次确认后 rm）。模型看不到操作。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/diff-review) |
+| diff-minimap | Edit/Write 旁细条 minimap，标出改动行位置；纯 UI。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/diff-minimap) |
 | disk-janitor | 清理临时文件。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/disk-janitor) |
 | editor-context | 在桌面端提示框上方显示 Cursor/VS Code 当前文件与选区，并在每次提交时把你正在看的内容悄悄告诉 Claude。 | MIT | [链接](https://github.com/talbarina/claude-editor-context/tree/main/plugins/editor-context) |
 | file-explorer | VS Code 风格文件树/变更/历史/diff 窗格。 |  | [链接](https://github.com/tak-kam/claude-mods/tree/main/file-explorer) |
@@ -305,6 +309,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | lockfile-sync | 锁文件同步检查。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/lockfile-sync) |
 | md-prompt | 输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。 | MIT | [链接](https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt) |
 | mdview | 侧栏渲染对话里的 Markdown，可点选让 Claude 改。 |  | [链接](https://github.com/xuanji86/claude-mdview) |
+| mission-control | /mission 工具调用时间线与子代理泳道；观察 only，不改写。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/mission-control) |
 | proc-registry | /procs 面板登记本会话后台 Bash 与子代理；只观察，不改写工具。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/proc-registry) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
 | skill-session-mods | 按本地 SKILL.md 元数据给 /skill 会话命名与上色（只读本地技能文件）。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/skill-session-mods) |
@@ -314,6 +319,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | statusbar | 状态栏显示当前 git 分支与仓库状态，仅本地 git rev-parse 查询。 | MIT | [链接](https://github.com/sgmonda/statusbar) |
 | touch-map | 文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map) |
 | transit-map | 把 git 历史画成地铁图，分支是线，提交是站。 | MIT | [链接](https://github.com/ccdwyer/transit-map) |
+| workbench | /wb 工作台：状态带 + Now/Changes/Preview/Artifacts/Map/Usage。备注：本机 git；预览 HTML 时启动本机已安装的 Chrome 或 Chromium headless 截图，不下载浏览器。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/workbench) |
 
 ### 子代理管理 Subagent Management
 
@@ -325,6 +331,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | agent-watch | 子代理侧栏：在窗格里列出活跃子代理、状态与简报，点击可查看 transcript。 | MIT | [链接](https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/agent-watch) |
 | claude-council | 并行运行多个编码代理，可并排查看。 |  | [链接](https://github.com/hex/claude-council) |
 | council | 代理协商决策。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/council) |
+| crew | /crew 子代理像素侧栏：模型/effort/上下文/费用与任务依赖；观察 only。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/crew) |
 | fable-pin | 每个子代理运行你选的模型，不是提示要的那个：在 agent.spawn 时将 model 改写为 fable（除非是 fork 继承父级），/fable-... |  | [链接](https://github.com/karanb192/claude-code-mods/tree/main/plugins/fable-pin) |
 | flightdeck | 只读观测面板，集中看权限裁决与子代理进度。 |  | [链接](https://github.com/scasella/claude-flightdeck) |
 | multi-core | 把 ChatGPT/Cursor/Zen 等接入 /model（需 claude-multi launcher）。 |  | [链接](https://github.com/greenpolo/cc-multi-cli-plugin/tree/main/plugins/multi-core) |
