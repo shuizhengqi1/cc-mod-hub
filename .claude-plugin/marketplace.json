@@ -354,6 +354,13 @@
       }
     },
     {
+      "name": "pi-agent-for-claude",
+      "source": {
+        "source": "git",
+        "url": "FazalAAli/pi-agent-for-claude"
+      }
+    },
+    {
       "name": "plan-progress",
       "source": {
         "source": "git-subdir",
@@ -462,6 +469,14 @@
       }
     },
     {
+      "name": "explore-model",
+      "source": {
+        "source": "git-subdir",
+        "url": "rlorenzo/ai-coding-setup",
+        "path": "mods/explore-model"
+      }
+    },
+    {
       "name": "md-prompt",
       "source": {
         "source": "git-subdir",
@@ -530,6 +545,14 @@
       "source": {
         "source": "github",
         "repo": "rjohnt/linear-claude-mod"
+      }
+    },
+    {
+      "name": "linear-tickets",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/integrations/linear-tickets"
       }
     },
     {
@@ -670,6 +693,14 @@
         "source": "git-subdir",
         "url": "darrell-tw/darrelltw-mods",
         "path": "mods/tw-stock-mod"
+      }
+    },
+    {
+      "name": "vercel-deploys",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/integrations/vercel-deploys"
       }
     },
     {
@@ -2303,6 +2334,14 @@
       "source": {
         "source": "git",
         "url": "zyx1121/music-mod"
+      }
+    },
+    {
+      "name": "herdr",
+      "source": {
+        "source": "git-subdir",
+        "url": "bendrucker/claude",
+        "path": "plugins/herdr"
       }
     },
     {
