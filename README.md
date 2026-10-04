@@ -163,6 +163,7 @@ For detailed descriptions of all 323 mods, see the Chinese section below.
 | firstmate-calm | /calm 隐藏工具行并换成帆船 spinner；需开启 function hooks。 |  | [链接](https://github.com/kunchenguid/firstmate/tree/main/.claude/mods/firstmate-calm) |
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
+| message-timestamps | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | netsignal | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
 | on-me | 提示框上条带：Claude 正在做什么，以及轮到你处理的事项。 | MIT | [链接](https://github.com/abhibansal60/claude-mods/tree/main/on-me) |
 | pixelband | 在提示框上方显示像素艺术。 |  | [链接](https://github.com/furqan-khan07/pixelband) |
@@ -176,6 +177,8 @@ For detailed descriptions of all 323 mods, see the Chinese section below.
 | ruview-live | /ruview 打开 CSI/雷达传感只读窗格（瀑布图与雷达视图）。备注：运行插件旁的 @ruvnet/ruview CLI（node）；只读设备数据。 | MIT | [链接](https://github.com/ruvnet/RuView/tree/main/harness/ruview/mod) |
 | search-meter | 统计模型搜索（Bash grep/find、WebSearch、ToolSearch）命中着色。 |  | [链接](https://github.com/arasovic/claude-code-mods/tree/main/search-meter) |
 | sidebar | 侧栏扩展面板。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sidebar) |
+| spell-bar | 按 effort 等级绘制的动画施法条（Clawd / Avada Kedavra 六档）。纯 UI，不改写工具或提示。 | MIT | [链接](https://github.com/powerofjinbo/claude-code-spell-bar/tree/main/plugins/spell-bar) |
+| starfleet-panel | 提示框下方 LCARS 风格状态面板（模型/上下文/限额/分支等）；只读跟随 red-alert。本地 git/hostname。 | MIT | [链接](https://github.com/dukechain2333/starfleet-panel/tree/main/plugin) |
 | stepscope | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
@@ -429,8 +432,6 @@ For detailed descriptions of all 323 mods, see the Chinese section below.
 | self-command | 自定义命令系统。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/self-command) |
 | session-brief | 提示框上方保持会话简报；/brief 补充已做决定与下一步。 |  | [链接](https://github.com/skanehira/claude-session-brief) |
 | session-watch | 会话监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/session-watch) |
-| spell-bar | 按 effort 等级绘制的动画施法条（Clawd / Avada Kedavra 六档）。纯 UI，不改写工具或提示。 | MIT | [链接](https://github.com/powerofjinbo/claude-code-spell-bar/tree/main/plugins/spell-bar) |
-| starfleet-panel | 提示框下方 LCARS 风格状态面板（模型/上下文/限额/分支等）；只读跟随 red-alert。本地 git/hostname。 | MIT | [链接](https://github.com/dukechain2333/starfleet-panel/tree/main/plugin) |
 | session-wrapped | 会话「年终总结」式统计动画。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/session-wrapped) |
 | shot-inline | 内联截图功能。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/shot-inline) |
 | slash-chain | 斜杠命令链。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/slash-chain) |
