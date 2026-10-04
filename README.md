@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 376 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 381 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 376 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 381 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 376 mods, see the Chinese section below.
+For detailed descriptions of all 381 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 376 个精选 Claude Code mods，按类别组织：
+以下是本市场的 381 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -139,6 +139,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | usage-tracker | 实时 5h/7d 用量、节奏与火花线（含本机读 Codex 日志）。备注：本机 process（tail）。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/usage-tracker) |
 | vercel-deploy-status | 提示框上方显示 Vercel 部署队列（零 token）。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status) |
 | wavy-usage | 波浪动画风格的用量显示条。 | MIT | [链接](https://github.com/BatuhanCakmakk/wavy-usage) |
+| cache-band | 提示框上方提示缓存冷热条与 Compact；可开 Auto cache / Auto compact。备注：Auto cache 用 $.model.fork 保活（不带会话正文进对话）；本机 process/fs 读本地 transcript mtime；AbovePrompt 会调用 next。 | MIT | [链接](https://github.com/MohabYasser2/claude-code-mods/tree/main/cache-band) |
 
 ### 上下文管理 Context Management
 
@@ -211,6 +212,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | turn-timer | 轻量回合计时状态。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer) |
 | turn-progress | 状态行显示本回合阶段、经过时间与完成标记；可注册 progress 工具申报进度。 | MIT | [链接](https://github.com/tsumugilabo/turn-progress/tree/main/plugins/turn-progress) |
 | whats-agent-doing | 提示框上方显示 Claude 当前在做什么（读提示、思考、写回复、跑工具、等审批），可展开历史。 | MIT | [链接](https://github.com/tzafrir/whats-agent-doing) |
+| qa-guide | AskUserQuestion 侧栏：上下文、选项说明与回答历史；可选 AI 解释。备注：可选 $.model.fork / $.model.complete；只观察 prompt.submit，不注入上下文。 | MIT | [链接](https://github.com/aieo-product/claude_qamods/tree/main/plugins/qa-guide) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -314,6 +316,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | statusbar | 状态栏显示当前 git 分支与仓库状态，仅本地 git rev-parse 查询。 | MIT | [链接](https://github.com/sgmonda/statusbar) |
 | touch-map | 文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map) |
 | transit-map | 把 git 历史画成地铁图，分支是线，提交是站。 | MIT | [链接](https://github.com/ccdwyer/transit-map) |
+| effort-router | 按任务自动选定 reasoning effort；可询问或自动切换；子代理可单独定级；/route。备注：会改写 turn.step 的 effort；用 $.model.complete 分类；可 $.command.run /effort；只观察 prompt.submit，不注入上下文。 | MIT | [链接](https://github.com/tommy5dollar/claude-mods/tree/main/effort-router) |
 
 ### 子代理管理 Subagent Management
 
@@ -331,6 +334,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | plan-progress | 计划进度条 + 子代理条带。 |  | [链接](https://github.com/zycck/claude-mods/tree/main/plugins/plan-progress) |
 | subagent-ledger | 子代理账本。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/subagent-ledger) |
 | swarm | 子代理/团队任务控制室窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm) |
+| scout-router | 探索/调研类子代理改走 Sonnet；规划/审计/评审仍用主模型。备注：会改写 agent.spawn 的 model（类似 fable-pin）。 | MIT | [链接](https://github.com/MohabYasser2/claude-code-mods/tree/main/scout-router) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -392,6 +396,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | mermaid-inline | 把助手回复里的 mermaid 围栏画进 transcript（图片或盒装 ASCII）；本机 node 跑插件内置 render-svg。fork of claude-mermaid。 | MIT | [链接](https://github.com/Conte777/mermaid-inline/tree/main/mermaid-inline) |
 | terminal-browser | 在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。 | MIT | [链接](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin) |
 | yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
+| image-thumbs | 粘贴图片在 transcript 下显示缩略图，可点击放大或 /image 开窗格。备注：本机 process（macOS sips/mktemp/base64）；主要在 terminal。 |  | [链接](https://github.com/ohade/claude-mods/tree/main/image-thumbs) |
 
 ### 任务与项目 Task & Project
 

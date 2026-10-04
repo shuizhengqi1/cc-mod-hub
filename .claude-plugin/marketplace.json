@@ -2899,6 +2899,46 @@
         "source": "git",
         "url": "XavierYounan/claude-code-tmux-status"
       }
+    },
+    {
+      "name": "cache-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "MohabYasser2/claude-code-mods",
+        "path": "cache-band"
+      }
+    },
+    {
+      "name": "scout-router",
+      "source": {
+        "source": "git-subdir",
+        "url": "MohabYasser2/claude-code-mods",
+        "path": "scout-router"
+      }
+    },
+    {
+      "name": "image-thumbs",
+      "source": {
+        "source": "git-subdir",
+        "url": "ohade/claude-mods",
+        "path": "image-thumbs"
+      }
+    },
+    {
+      "name": "effort-router",
+      "source": {
+        "source": "git-subdir",
+        "url": "tommy5dollar/claude-mods",
+        "path": "effort-router"
+      }
+    },
+    {
+      "name": "qa-guide",
+      "source": {
+        "source": "git-subdir",
+        "url": "aieo-product/claude_qamods",
+        "path": "plugins/qa-guide"
+      }
     }
   ]
 }
