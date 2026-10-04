@@ -2488,6 +2488,61 @@
         "url": "yash-gadodia/claude-mods",
         "path": "done-blink"
       }
+    },
+    {
+      "name": "merge-gate",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "merge-gate"
+      }
+    },
+    {
+      "name": "receipt",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "receipt"
+      }
+    },
+    {
+      "name": "wod-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "wod-band"
+      }
+    },
+    {
+      "name": "wod-timer",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "wod-timer"
+      }
+    },
+    {
+      "name": "diff-review",
+      "source": {
+        "source": "git-subdir",
+        "url": "yash-gadodia/claude-mods",
+        "path": "diff-review"
+      }
+    },
+    {
+      "name": "at-work",
+      "source": {
+        "source": "git",
+        "url": "zhuoxingzhang/pixel-at-work"
+      }
+    },
+    {
+      "name": "mermaid-inline",
+      "source": {
+        "source": "git-subdir",
+        "url": "Conte777/mermaid-inline",
+        "path": "mermaid-inline"
+      }
     }
   ]
 }
