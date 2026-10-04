@@ -2899,6 +2899,46 @@
         "source": "git",
         "url": "XavierYounan/claude-code-tmux-status"
       }
+    },
+    {
+      "name": "agent-narrator",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "agent-narrator"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "autonomous-loop",
+      "source": {
+        "source": "git",
+        "url": "yai333/autonomous-loop"
+      }
+    },
+    {
+      "name": "claude-chef",
+      "source": {
+        "source": "git",
+        "url": "schalkneethling/claude-chef"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "flashmodel",
+      "source": {
+        "source": "git",
+        "url": "Rafael-CRL/FlashModel"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "leitstand",
+      "source": {
+        "source": "git",
+        "url": "dominikmartn/leitstand"
+      },
+      "license": "MIT"
     }
   ]
 }
