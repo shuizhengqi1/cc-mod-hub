@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 376 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 383 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 376 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 383 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 376 mods, see the Chinese section below.
+For detailed descriptions of all 383 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 376 个精选 Claude Code mods，按类别组织：
+以下是本市场的 383 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -139,6 +139,8 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | usage-tracker | 实时 5h/7d 用量、节奏与火花线（含本机读 Codex 日志）。备注：本机 process（tail）。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/usage-tracker) |
 | vercel-deploy-status | 提示框上方显示 Vercel 部署队列（零 token）。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status) |
 | wavy-usage | 波浪动画风格的用量显示条。 | MIT | [链接](https://github.com/BatuhanCakmakk/wavy-usage) |
+| cache-buster | 输入框上方显示提示缓存剩余时间、命中率和 Compact 按钮，快过期时提醒；会调 next 叠在其他行之上，只有点按钮才压缩。 |  | [链接](https://github.com/dblanken-yale/cache-buster) |
+| cc-usage | 状态行显示 5 小时与 7 天用量、重置倒计时、token、费用和每秒 token；注册 /usage-bar，可能与已有的 usage-bar 冲突，二选一；隐藏时 $.ui.status(undefined) 会清掉状态行。 | MIT | [链接](https://github.com/leonardokidd/cc-usage) |
 
 ### 上下文管理 Context Management
 
@@ -160,6 +162,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | segmem | 长期记忆：区分身份（你是谁）、过程（仓库如何工作）、情节（周二发生了什么）与人物档案；按衰减窗口加载，项目级作用域，压缩历史为摘要，无需服务器或守护进程。 |  | [链接](https://github.com/mahuebel/segmem) |
 | sidebar-controls | 把 compact-tools/live-thinking 开关放进右上侧栏。 |  | [链接](https://github.com/AJclemendor/my-mods/tree/main/plugins/sidebar-controls) |
 | workface | 长任务工作笔记，compaction 时保住 workface 状态。 |  | [链接](https://github.com/scodge-24/workface) |
+| tool-trim-compaction | 接管 compaction：删掉较早的工具调用和结果、保留原话不做摘要，削减不足 25% 时回到标准摘要；上下文到 60% 时会自动触发压缩。 | MIT | [链接](https://github.com/okamyuji/tool-trim-compaction) |
 
 ### UI 与主题 UI & Themes
 
@@ -211,6 +214,8 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | turn-timer | 轻量回合计时状态。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer) |
 | turn-progress | 状态行显示本回合阶段、经过时间与完成标记；可注册 progress 工具申报进度。 | MIT | [链接](https://github.com/tsumugilabo/turn-progress/tree/main/plugins/turn-progress) |
 | whats-agent-doing | 提示框上方显示 Claude 当前在做什么（读提示、思考、写回复、跑工具、等审批），可展开历史。 | MIT | [链接](https://github.com/tzafrir/whats-agent-doing) |
+| reply-frame | 把 Claude 的回复包在圆角彩色边框里；超过 1 万字符的回复交回默认渲染。 | MIT | [链接](https://github.com/takosasi-dev/reply-frame) |
+| ambient | 输入框上方的动态场景带（水族箱、盆景、天际线、天气等），配本机音效；显示时 AbovePrompt 不调 next，会盖住别的行；用 /ambient weather 开启真实天气后会把城市名和经纬度发给 Open-Meteo（不含会话内容）。 | MIT | [链接](https://github.com/barisdemirhan/claude-ambient) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -277,6 +282,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | sensitive-file-guard | 拦截触及 .env/密钥/凭证路径的工具调用。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/sensitive-file-guard) |
 | storage-guard | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
 | test-guard | 拦截弱化/删除测试的 Write/Edit/Bash。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/test-guard) |
+| explain-permission | 每次权限请求时在侧栏用白话解释做什么、为什么、风险多大；用 $.model.fork 或 $.model.complete（haiku）生成说明，只解释，不拦截也不改写。 |  | [链接](https://github.com/petershk/explain-permission) |
 
 ### 开发工具 Dev Tools
 
@@ -444,6 +450,7 @@ For detailed descriptions of all 376 mods, see the Chinese section below.
 | push | /push 把当前分支推到上游；本机 git。 |  | [链接](https://github.com/robertgregorywest/claude-mods/tree/main/mods/push) |
 | sportscaster | 会话实况解说（本地 $.audio.speak，不上传会话）。备注：使用本机 TTS。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/sportscaster) |
 | tmux-status | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
+| quickswitch | 在提示下方点一下切换 Claude 账号；本机 process 调用需自备的 ccswitch 读取账号列表，只在点击时切换，切换后需重启 Claude Code。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
 
 ### 其他工具 Other Tools
 
