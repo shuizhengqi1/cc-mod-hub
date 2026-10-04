@@ -2690,6 +2690,65 @@
         "url": "robertgregorywest/claude-mods",
         "path": "mods/push"
       }
+    },
+    {
+      "name": "agents-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "ushironoko/dotfiles",
+        "path": "claude/.claude/skills/agents-view"
+      }
+    },
+    {
+      "name": "file-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "ushironoko/dotfiles",
+        "path": "claude/.claude/skills/file-view"
+      }
+    },
+    {
+      "name": "muse-pet",
+      "source": {
+        "source": "git",
+        "url": "Soyn/mububu-pet"
+      }
+    },
+    {
+      "name": "orange-prompt",
+      "source": {
+        "source": "git",
+        "url": "philsimon/orange-prompt"
+      }
+    },
+    {
+      "name": "quota-pets",
+      "source": {
+        "source": "git-subdir",
+        "url": "Open01277/claude-mods",
+        "path": "plugins/quota-pets"
+      }
+    },
+    {
+      "name": "secret-sentry",
+      "source": {
+        "source": "git",
+        "url": "ccdwyer/secret-sentry"
+      }
+    },
+    {
+      "name": "shell-highlight",
+      "source": {
+        "source": "git",
+        "url": "Turbo-Thorschten/shell-highlight"
+      }
+    },
+    {
+      "name": "tmux-status",
+      "source": {
+        "source": "git",
+        "url": "XavierYounan/claude-code-tmux-status"
+      }
     }
   ]
 }
