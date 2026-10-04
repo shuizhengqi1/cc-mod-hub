@@ -1151,6 +1151,14 @@
       }
     },
     {
+      "name": "proc-registry",
+      "source": {
+        "source": "git-subdir",
+        "url": "Chronosauros/claude-mods",
+        "path": "plugins/proc-registry"
+      }
+    },
+    {
       "name": "prompt-deck",
       "source": {
         "source": "git-subdir",
@@ -1324,10 +1332,26 @@
       }
     },
     {
+      "name": "context-tokens",
+      "source": {
+        "source": "git-subdir",
+        "url": "0xBADC0FFEE/claude-code-mods",
+        "path": "context-tokens"
+      }
+    },
+    {
       "name": "context-view",
       "source": {
         "source": "github",
         "repo": "kongyo2/context-view"
+      }
+    },
+    {
+      "name": "context-weather",
+      "source": {
+        "source": "git-subdir",
+        "url": "Chronosauros/claude-mods",
+        "path": "plugins/context-weather"
       }
     },
     {
@@ -2497,6 +2521,22 @@
       }
     },
     {
+      "name": "status-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "tylergraydev/cc-mods",
+        "path": "status-bar"
+      }
+    },
+    {
+      "name": "status-hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "hymleong/claude-mods",
+        "path": "plugins/status-hud"
+      }
+    },
+    {
       "name": "omp-quota",
       "source": {
         "source": "git-subdir",
@@ -2677,6 +2717,22 @@
       }
     },
     {
+      "name": "usage-limits",
+      "source": {
+        "source": "git-subdir",
+        "url": "Chronosauros/claude-mods",
+        "path": "plugins/usage-limits"
+      }
+    },
+    {
+      "name": "usage-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "tylergraydev/cc-mods",
+        "path": "usage-tracker"
+      }
+    },
+    {
       "name": "tasknotes-preview",
       "source": {
         "source": "git",
@@ -2741,6 +2797,14 @@
       "source": {
         "source": "git",
         "url": "Turbo-Thorschten/shell-highlight"
+      }
+    },
+    {
+      "name": "shell-flow",
+      "source": {
+        "source": "git-subdir",
+        "url": "apolenkov/claude-mods",
+        "path": "mods/shell-flow"
       }
     },
     {
