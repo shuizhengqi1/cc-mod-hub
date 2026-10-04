@@ -2961,6 +2961,44 @@
         "url": "davila7/claude-code-templates",
         "path": "cli-tool/components/mods/observability/universal-audit-log"
       }
+    },
+    {
+      "name": "typing-test",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/games/typing-test"
+      }
+    },
+    {
+      "name": "familiar",
+      "source": {
+        "source": "git",
+        "url": "lucenity0/claude-familiar"
+      }
+    },
+    {
+      "name": "statusline",
+      "source": {
+        "source": "git-subdir",
+        "url": "david-crespo/dotfiles",
+        "path": "claude/mods/statusline"
+      }
+    },
+    {
+      "name": "classifier-telemetry",
+      "source": {
+        "source": "git-subdir",
+        "url": "bendrucker/claude",
+        "path": "plugins/classifier-telemetry"
+      }
+    },
+    {
+      "name": "diff-seismograph",
+      "source": {
+        "source": "git",
+        "url": "ccdwyer/diff-seismograph"
+      }
     }
   ]
 }
