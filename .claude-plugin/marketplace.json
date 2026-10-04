@@ -1175,14 +1175,6 @@
       }
     },
     {
-      "name": "prove-it",
-      "source": {
-        "source": "git-subdir",
-        "url": "pourya7/claude-code-mods",
-        "path": "prove-it"
-      }
-    },
-    {
       "name": "sage-memory",
       "source": {
         "source": "git-subdir",

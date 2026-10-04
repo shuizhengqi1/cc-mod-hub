@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 350 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 349 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 350 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 349 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 350 mods, see the Chinese section below.
+For detailed descriptions of all 349 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 350 个精选 Claude Code mods，按类别组织：
+以下是本市场的 349 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -249,7 +249,6 @@ For detailed descriptions of all 350 mods, see the Chinese section below.
 | merge-gate | 除非最新人工消息含 merge，否则拒绝 Bash 里的 merge / gh pr merge / 推送到主干。备注：只 deny，不改写命令；用本机 git。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/merge-gate) |
 | path-guard | 拒绝项目根外或 .git 内的 Write/Edit（可选护 Read）。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/path-guard) |
 | pii-guard | 台湾 PII 可逆脱敏（经本地 hookd）；需 Python/uv。 |  | [链接](https://github.com/danyuchn/pii-guard/tree/main/examples/claude-code-mod) |
-| prove-it | 先跑红测再允许 git push / gh pr create；只 deny。备注：本机 process 跑测试。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/prove-it) |
 | redact | Read 结果里把疑似密钥字符串替换成 `[REDACTED:…]` 再给模型。备注：改写的是 Read 结果文本，不改写命令。 | MIT | [链接](https://github.com/thkt/dotclaude/tree/main/mods/redact) |
 | seatbelt | 本地规则拦截危险 Bash/写文件（只拒绝不改写命令）。备注：会 deny 匹配的工具调用。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/seatbelt) |
 | secret-guard | 拦截即将写入文件或 Bash 的疑似密钥内容。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/secret-guard) |
@@ -367,7 +366,7 @@ For detailed descriptions of all 350 mods, see the Chinese section below.
 | shot-view | 收集 Read/工具里的 PNG，/shots 侧栏翻页预览。备注：本机 process（sips/open）。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/shot-view) |
 | mermaid-inline | 把助手回复里的 mermaid 围栏画进 transcript（图片或盒装 ASCII）；本机 node 跑插件内置 render-svg。fork of claude-mermaid。 | MIT | [链接](https://github.com/Conte777/mermaid-inline/tree/main/mermaid-inline) |
 | terminal-browser | 在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。 | MIT | [链接](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin) |
-| yt-control | 用本机 cliamp 控制 YouTube 播放与缩略图。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
+| yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
 
 ### 任务与项目 Task & Project
 
@@ -384,12 +383,12 @@ For detailed descriptions of all 350 mods, see the Chinese section below.
 | gsd-status-mod | 面向 GSD 项目：在提示框上方显示阶段/进度与 STATE.md 漂移警告，并把下一步动作放进提示行。 | MIT | [链接](https://github.com/helenkwok/gsd-status-mod) |
 | human-in-the-loop | 把只有用户能做的事挂在 My tasks 窗格里，完成后再回给 Claude。 | MIT | [链接](https://github.com/tzafrir/human-in-the-loop) |
 | loose-ends | 追踪会话中未完成的待办事项，回合结束用 $.model.complete 总结剩余任务。 | MIT | [链接](https://github.com/fernandomoraes/loose-ends) |
-| party | 本机多会话「团战」面板与 PR 锁提示；只 deny/ask，不改写。备注：本机 git。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/party) |
+| party | 本机多会话面板；别的会话碰过同一 PR 时 ask，不改写命令。/broadcast 把用户刚输入的文字发给本机另一个会话。备注：本机 git。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/party) |
 | standup | 跨会话记录你的提问与改动文件，/standup 用模型写成日报摘要。 | MIT | [链接](https://github.com/claudemodz/mods/tree/main/plugins/standup) |
 | sticky-todos | 待办侧栏；观察 TodoWrite/Task*，不改写工具。 | MIT | [链接](https://github.com/paweechinagarn/claude-code-mods/tree/main/sticky-todos) |
 | sudus | 本地运行 sudus wake（或插件自带 node bin）在提示框上方或窗格显示项目 verdict；不调用模型。 | MIT | [链接](https://github.com/eas4ai/sudus) |
 | taskcut | turn.step mod。 | MIT | [链接](https://github.com/wasd96040501/taskcut) |
-| task-eta | 长任务步骤/进度条/剩余时间；超时用 $.model.fork 估步骤。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
+| task-eta | 长任务步骤与剩余时间。超时用 $.model.fork，提示里带工具轨迹、用户新消息和回复片段。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
 
 ### 外部集成 External Integrations
@@ -459,7 +458,7 @@ For detailed descriptions of all 350 mods, see the Chinese section below.
 | memory-save | 记忆保存助手。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/memory-save) |
 | mindful-claude | 显示呼吸带。 |  | [链接](https://github.com/halluton/Mindful-Claude) |
 | mod-doctor | Mod 健康检查。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/mod-doctor) |
-| mod-hub | /mods 本机 mod 开关与码头 UI。纯 UI。 |  | [链接](https://github.com/eshin087/claude-code-mods/tree/main/mod-hub) |
+| mod-hub | /mods 列出同目录的 mod；用户按开关时，在本机改写那个 mod 的 hooks/hooks.json，关掉时再写入 hooks/off.tsx。 |  | [链接](https://github.com/eshin087/claude-code-mods/tree/main/mod-hub) |
 | mr-banner | MR/PR 相关横幅提示。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/mr-banner) |
 | no-attribution | 去掉或替换 Co-Authored-By 提交尾注与 "Generated with Claude Code" PR 页脚。 | MIT | [链接](https://github.com/claudemodz/mods/tree/main/plugins/no-attribution) |
 | orphan-server | 孤儿进程检测。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/orphan-server) |
