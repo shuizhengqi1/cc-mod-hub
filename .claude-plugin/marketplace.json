@@ -68,6 +68,13 @@
       }
     },
     {
+      "name": "cache-refresher",
+      "source": {
+        "source": "git",
+        "url": "olddonkey/cache-refresher"
+      }
+    },
+    {
       "name": "claude-council",
       "source": {
         "source": "github",
@@ -761,6 +768,14 @@
       }
     },
     {
+      "name": "yt-control",
+      "source": {
+        "source": "git-subdir",
+        "url": "Unayung/cc-mods-youtube",
+        "path": "plugins/yt-control"
+      }
+    },
+    {
       "name": "zsh-safe",
       "source": {
         "source": "git-subdir",
@@ -1089,6 +1104,14 @@
       }
     },
     {
+      "name": "mod-hub",
+      "source": {
+        "source": "git-subdir",
+        "url": "eshin087/claude-code-mods",
+        "path": "mod-hub"
+      }
+    },
+    {
       "name": "orphan-server",
       "source": {
         "source": "git-subdir",
@@ -1110,6 +1133,13 @@
         "source": "git-subdir",
         "url": "KilimcininKorOglu/claude-code-mods",
         "path": "plugins/pin-note"
+      }
+    },
+    {
+      "name": "pin-message",
+      "source": {
+        "source": "git",
+        "url": "GruperTal/claude-pin-message"
       }
     },
     {
@@ -1145,6 +1175,14 @@
       }
     },
     {
+      "name": "prove-it",
+      "source": {
+        "source": "git-subdir",
+        "url": "pourya7/claude-code-mods",
+        "path": "prove-it"
+      }
+    },
+    {
       "name": "sage-memory",
       "source": {
         "source": "git-subdir",
@@ -1169,11 +1207,27 @@
       }
     },
     {
+      "name": "severance-mdr",
+      "source": {
+        "source": "git-subdir",
+        "url": "magnuswiderberg/claude-code-mods",
+        "path": "plugins/severance-mdr"
+      }
+    },
+    {
       "name": "shot-inline",
       "source": {
         "source": "git-subdir",
         "url": "KilimcininKorOglu/claude-code-mods",
         "path": "plugins/shot-inline"
+      }
+    },
+    {
+      "name": "shot-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "Bearisbug/cc-mods",
+        "path": "shot-view"
       }
     },
     {
@@ -1222,6 +1276,14 @@
         "source": "git-subdir",
         "url": "KilimcininKorOglu/claude-code-mods",
         "path": "plugins/task-poke"
+      }
+    },
+    {
+      "name": "task-eta",
+      "source": {
+        "source": "git-subdir",
+        "url": "Bearisbug/cc-mods",
+        "path": "task-eta"
       }
     },
     {
@@ -1320,6 +1382,14 @@
       }
     },
     {
+      "name": "party",
+      "source": {
+        "source": "git-subdir",
+        "url": "pourya7/claude-code-mods",
+        "path": "party"
+      }
+    },
+    {
       "name": "paste-view",
       "source": {
         "source": "github",
@@ -1332,6 +1402,14 @@
         "source": "git-subdir",
         "url": "borabiricik/claude-mods",
         "path": "plugins/typing-speed"
+      }
+    },
+    {
+      "name": "context-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "EricJamie/claude-code-mods",
+        "path": "plugins/context-band"
       }
     },
     {
@@ -1567,6 +1645,14 @@
         "source": "git-subdir",
         "url": "AndreasOA/claude-code-mods",
         "path": "plugins/usage-bars"
+      }
+    },
+    {
+      "name": "usage-deck",
+      "source": {
+        "source": "git-subdir",
+        "url": "codeclawd/usage-deck",
+        "path": "plugins/usage-deck"
       }
     },
     {
@@ -2083,6 +2169,13 @@
       }
     },
     {
+      "name": "statusband",
+      "source": {
+        "source": "git",
+        "url": "dip497/claude-statusband"
+      }
+    },
+    {
       "name": "loose-ends",
       "source": {
         "source": "git",
@@ -2192,6 +2285,14 @@
       "source": {
         "source": "git",
         "url": "5d0tal1gat0r/stepscope"
+      }
+    },
+    {
+      "name": "sticky-todos",
+      "source": {
+        "source": "git-subdir",
+        "url": "paweechinagarn/claude-code-mods",
+        "path": "sticky-todos"
       }
     },
     {
@@ -2466,6 +2567,14 @@
       }
     },
     {
+      "name": "cost-info",
+      "source": {
+        "source": "git-subdir",
+        "url": "falconsw/cost-info",
+        "path": "cost-info"
+      }
+    },
+    {
       "name": "spell-bar",
       "source": {
         "source": "git-subdir",
@@ -2565,6 +2674,14 @@
         "source": "git-subdir",
         "url": "qingyashizi/claude-usage-mod",
         "path": "plugins/usage-mod"
+      }
+    },
+    {
+      "name": "usage-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "tanuu5/usage-log",
+        "path": "plugins/usage-log"
       }
     },
     {
