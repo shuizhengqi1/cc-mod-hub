@@ -2399,8 +2399,8 @@
     {
       "name": "status-band",
       "source": {
-        "source": "github",
-        "repo": "dukechain2333/cc-status-band"
+        "source": "git",
+        "url": "dukechain2333/cc-status-band"
       }
     },
     {
@@ -2422,8 +2422,8 @@
     {
       "name": "mathcat",
       "source": {
-        "source": "github",
-        "repo": "johndpope/mathcat"
+        "source": "git",
+        "url": "johndpope/mathcat"
       }
     },
     {
@@ -2432,13 +2432,6 @@
         "source": "git-subdir",
         "url": "thkt/dotclaude",
         "path": "mods/redact"
-      }
-    },
-    {
-      "name": "tycoon",
-      "source": {
-        "source": "github",
-        "repo": "barisdemirhan/claude-tycoon"
       }
     }
   ]
