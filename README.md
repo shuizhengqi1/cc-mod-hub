@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 401 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 409 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 401 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 409 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 401 mods, see the Chinese section below.
+For detailed descriptions of all 409 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 401 个精选 Claude Code mods，按类别组织：
+以下是本市场的 409 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -85,6 +85,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | budget-guard | 费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard) |
 | burn-meter | 提示框上方会话花费「火焰」条与限额，/burn 看每回合费用。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/burn-meter) |
 | cache-clock | 显示提示缓存还热多久。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/cache-clock) |
+| cache-countdown | 提示框上方缓存导火索与上下文/限额条；可按钮 Keep warm 或 Compact。备注：Keep warm 用 $.model.fork；可读本地 transcript（process/fs）。 | MIT | [链接](https://github.com/iamomiid/cache-countdown) |
 | cache-meter | 提示框上方提示缓存剩余 TTL 条。 |  | [链接](https://github.com/DarioFontanel/claude-code-mods/tree/main/cache-meter) |
 | cache-refresher | 提示缓存倒计时与 lapse 成本；可选 $.model.fork 保活 ping。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/olddonkey/cache-refresher) |
 | cost-meter | 会话费用实时条（同 /cost 口径），可选预算阈值与颜色提示。 | MIT | [链接](https://github.com/zaferayan/claude-cost-meter/tree/main/cost-meter) |
@@ -97,6 +98,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | ccoverhead | 提示框上方显示上下文窗口、每轮增长、5h/7d 额度与缓存热度（只读会话用量）。 | MIT | [链接](https://github.com/shengyy/ccoverhead/tree/main/plugin) |
 | cctop | btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。 |  | [链接](https://github.com/tomstagl/cctop/tree/main/plugin) |
 | clawd-spinner | Clawd 按 spinner 词表演动画（本地绘制，零 token）。 | MIT | [链接](https://github.com/saiharsha03/clawd-spinner) |
+| clawd-hud | 提示框上方像素 Clawd 用量带：上下文与限额，回合中显示实时 token 估计。纯 UI。 |  | [链接](https://github.com/segfaultlab/clawd-hud) |
 | claude-chef | 提示框上方上下文占用预报与火花图，纯 UI。 | MIT | [链接](https://github.com/schalkneethling/claude-chef) |
 | context-bar | 提示下方（可改上方）显示上下文窗口进度条与 prompt-cache TTL 倒计时。备注：可 tail 本地 transcript；仅本地读。 |  | [链接](https://github.com/k-wolfe99/claude-context-bar/tree/main/mod) |
 | context-band | 限额/token/缓存/费用状态带。备注：本机 process（主题检测与本地 python 估价）。 |  | [链接](https://github.com/EricJamie/claude-code-mods/tree/main/plugins/context-band) |
@@ -108,6 +110,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | eta | 在 spinner 行显示本轮剩余时间（按任务节奏或历史回合学习，零 token）。 |  | [链接](https://github.com/hamza-siddiq/claude-eta/tree/main/eta) |
 | limit-bars | 提示框下四个动画环，显示上下文、会话和周限额。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars) |
 | limit-watch | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
+| native-hud | 输入框下方原生 HUD：模型、路径、git/worktree、上下文、5h/7d 用量、输出速度与缓存命中。备注：本机 git。 | MIT | [链接](https://github.com/Luban-Labs/native-hud) |
 | netrunner-hud | 会话仪表盘：上下文条、token 示波与状态窗格。 | MIT | [链接](https://github.com/ccdwyer/netrunner-hud) |
 | omp-quota | omp 各 provider 剩余配额条（/quota）；备注：通过本机 `omp usage --json` 读取，不改写工具。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/omp-quota) |
 | overalls | 提示框上方状态条：上下文预报、用量限额，以及 Ponytail/Caveman 档位（可配置）。 | MIT | [链接](https://github.com/Troepster/overalls) |
@@ -212,6 +215,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | status-bar | 把各 mod 状态行折成一行（或上方 band）。纯 UI。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/status-bar) |
 | stepscope | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
+| thinking-band | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
 | tool-timing-badge | 给每次工具调用旁加耗时彩色徽章；只测时+画 UI，不改写工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/tool-timing-badge) |
 | tps-report | TPS 风格工作报告窗格。 | MIT | [链接](https://github.com/vgnshiyer/tps-report) |
@@ -233,6 +237,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | invaders | 提示框上方太空侵略者；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/invaders) |
 | minesweeper | 提示框上方扫雷；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/minesweeper) |
 | tool-defense | 塔防：每个敌人对应一次 Claude 工具调用；仅 UI，监听 tool.call 不改写。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/tool-defense) |
+| tokenrun | /tokenrun 跑酷小游戏窗格：空提示框时空格跳跃；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/NipunBinjola/tokenrun) |
 | diff-invaders | Diff 侵略者：Edit/Write 新增行变成波次；仅 UI，不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/diff-invaders) |
 | boss-fight | 失败测试变 boss，通过测试打血条的像素小游戏。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/boss-fight) |
 | cc-arcade | 在提示框上方显示游戏，点击不会调用模型。 |  | [链接](https://github.com/sezaakgun/cc-arcade) |
@@ -245,6 +250,7 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | claude-maru-run | Claude 工作时在窗格里看方块跑酷小游戏。 |  | [链接](https://github.com/lemonlatte/claude-maru-run) |
 | claude-mine | 提示框上方的体素沙盒小游戏（不是扫雷）。 |  | [链接](https://github.com/swan4er/claude-mine) |
 | claude-slots | 老虎机游戏，等待时可玩。 | MIT | [链接](https://github.com/WorldInnovationsDepartment/claude_slots) |
+| clawd-park | Spinner 下方像素恐龙公园：随工具活动表演，连续失败测试逼近陨石；只观察 tool.call，零模型调用。 | MIT | [链接](https://github.com/falkoro/clawd-park/tree/main/plugins/clawd-park) |
 | context-dungeon | 把会话做成肉鸽：上下文是 HP，报错出怪，绿测击杀，只观察 tool.call，不改调用。 | MIT | [链接](https://github.com/ccdwyer/context-dungeon) |
 | cs-radio | 会话/长回合/部署时播放 CS 电台音效；/radio 开关；不改写、不外泄。 | MIT | [链接](https://github.com/ben-rogerson/claude-counter-strike) |
 | gamba | 在提示框上方玩老虎机小游戏。 |  | [链接](https://github.com/salatmaster/claude-gamba) |
@@ -388,10 +394,12 @@ For detailed descriptions of all 401 mods, see the Chinese section below.
 | familiar | 提示框上方像素伙伴，随会话反应并可手绘；可选 Haiku 吐槽。备注：可选 $.model.complete 与 $.model.fork。 | MIT | [链接](https://github.com/lucenity0/claude-familiar) |
 | maomao | 提示框上方 8-bit 毛毛（垂耳兔）随工作状态跑跳；/maomao 收起或叫出。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/maomao) |
 | mize-coworker | 像素 Claude 吉祥物，随 spinner 词表演场景，空闲时在状态行呼吸走动。 | MIT | [链接](https://github.com/TheMizeGuy/clawdagotchi/tree/main/plugins/mize-coworker) |
+| mod-ferro | 长回合时提示框上方像素诺福克梗 Ferro 跑过草地，过久会睡着。纯 UI（桌面 Svg）。 |  | [链接](https://github.com/Vatroslav/mod-ferro/tree/main/plugin) |
 | muse-pet | 提示框上方像素 Muse：等待时招手/叮咚，长回合结束跳跃，显示上下文与费用；/muse 可从 gadget.mububu.app 拉取自定义形象。备注：可选访问外网拉宠物料 JSON，不上传会话；本机 process（claude --version）。 | MIT | [链接](https://github.com/Soyn/mububu-pet) |
 | plushie | 提示框上方的毛绒 Clawd，会随工具/上下文做出反应。 | MIT | [链接](https://github.com/xyc/plushie) |
 | pocket-familiar | 伴随工作的养成伙伴窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/pocket-familiar) |
 | quota-pets | 额度假宠扭蛋：每对话抽猫/狗，限额告急讲鬼故事、用完阵亡；context 当肚子（/petdex 肚子）。备注：本机读 session.messages 估算肚子内容。 |  | [链接](https://github.com/Open01277/claude-mods/tree/main/plugins/quota-pets) |
+| ricky-pixel-mod | 像素猫 Ricky：夜空窗格看板 + 提示框上方猫带；只观察会话事件做动画，不改写工具/提示。 | MIT | [链接](https://github.com/muxia23/ricky-pixel-mod) |
 
 ### 图片与媒体 Images & Media
 

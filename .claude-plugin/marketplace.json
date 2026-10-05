@@ -3087,6 +3087,64 @@
         "url": "OneWave-AI/claude-code-mods",
         "path": "agent-narrator"
       }
+    },
+    {
+      "name": "thinking-band",
+      "source": {
+        "source": "git",
+        "url": "orfevre-34/thinking-band"
+      }
+    },
+    {
+      "name": "clawd-hud",
+      "source": {
+        "source": "git",
+        "url": "segfaultlab/clawd-hud"
+      }
+    },
+    {
+      "name": "tokenrun",
+      "source": {
+        "source": "git",
+        "url": "NipunBinjola/tokenrun"
+      }
+    },
+    {
+      "name": "clawd-park",
+      "source": {
+        "source": "git-subdir",
+        "url": "falkoro/clawd-park",
+        "path": "plugins/clawd-park"
+      }
+    },
+    {
+      "name": "mod-ferro",
+      "source": {
+        "source": "git-subdir",
+        "url": "Vatroslav/mod-ferro",
+        "path": "plugin"
+      }
+    },
+    {
+      "name": "ricky-pixel-mod",
+      "source": {
+        "source": "git",
+        "url": "muxia23/ricky-pixel-mod"
+      }
+    },
+    {
+      "name": "native-hud",
+      "source": {
+        "source": "git",
+        "url": "Luban-Labs/native-hud"
+      }
+    },
+    {
+      "name": "cache-countdown",
+      "source": {
+        "source": "git",
+        "url": "iamomiid/cache-countdown"
+      }
     }
   ]
 }
