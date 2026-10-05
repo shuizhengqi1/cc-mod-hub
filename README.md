@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 507 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 509 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 507 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 509 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 507 mods, see the Chinese section below.
+For detailed descriptions of all 509 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 507 个精选 Claude Code mods，按类别组织：
+以下是本市场的 509 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -447,6 +447,7 @@ For detailed descriptions of all 507 mods, see the Chinese section below.
 | done-blink | 主回合结束后闪烁 iTerm2 标签页，直到再次输入或超时。仅本机 tty/本地 shell。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/done-blink) |
 | error-poke | 错误提醒助手。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/error-poke) |
 | gfm-render | 在 transcript 里渲染 GFM：alerts、任务列表、删除线与 Mermaid。 | MIT | [链接](https://github.com/briangtn/claude-gfm-render) |
+| goodfriend | 生日提醒（仅 macOS）：本机 process 用 osascript 读通讯录生日和「信息」App 的聊天成员与群名（不读消息正文；电话号码和邮箱留在本机，不发给模型）；/seed 会把最多 80 个联系人姓名和群名通过 $.model.complete 发给模型挑出 10 个重要的人；改写 Spinner 文案时仍调 next，生日卡片显示时 AbovePrompt 不调 next；点「Text」用 open sms: 打开信息并预填祝福，由你自己按发送；注册 set_birthday/list_birthdays 两个工具。 | MIT | [链接](https://github.com/nicodunks/goodfriend) |
 | mesh7-pane | 从 localhost:9090 每 1.5 秒轮询 mesh7 决策：每次调用的 ALLOW/DENY/HUMAN 及规则参数、待批准请求、紧急停止横幅... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/mesh7-pane) |
 | notice-board | 同仓库各会话共享通知板。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/notice-board) |
 | notify | 桌面通知：Claude 回合完成或等待决策时发系统原生通知，后台时召回焦点。 | MIT | [链接](https://github.com/XD3an/cc-notify) |
@@ -528,6 +529,7 @@ For detailed descriptions of all 507 mods, see the Chinese section below.
 | taskcut | turn.step mod。 | MIT | [链接](https://github.com/wasd96040501/taskcut) |
 | task-eta | 长任务步骤与剩余时间。超时用 $.model.fork，提示里带工具轨迹、用户新消息和回复片段。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
+| taskrail | 在输入框上方显示本会话计划的波次任务看板，Claude 通过它注册的 plan/set/show 三个工具更新；/taskrail 切换 off/bar/full/both；看板显示时 AbovePrompt 不调 next；计划按会话存在本机 $.store。 | MIT | [链接](https://github.com/drolosoft/taskrail) |
 | ssi-cockpit | 配合 ssi 流程，读本机 .ssi/state.json，在提示框上方显示 8 阶段进度条，阶段变化时 toast，/ssi-map 打开阶段图。只观察。没有 .ssi/state.json 快照时会调用 $.ui.status(undefined) 并可能清除其他 mod 的状态行。备注：有状态时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ssime-git/ssi-ai-skill/tree/main/mods/ssi-cockpit) |
 | workflow-band | 在提示框上方显示 Document Workflow 关卡（workflow-cli status）的检查结果与下一步。只观察。备注：本机 process（workflow-cli）；AbovePrompt 会盖住别的行。 |  | [链接](https://github.com/berlysia/dotfiles/tree/master/mods/workflow-band) |
 | todos | 会话开始在提示上方列出仓库 TODO/FIXME/HACK（git blame 排序）；备注：本机 git。 | MIT | [链接](https://github.com/bengous/claude-code-plugins/tree/main/todos) |
