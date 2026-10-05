@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 630 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 637 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 630 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 637 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 630 mods, see the Chinese section below.
+For detailed descriptions of all 637 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 630 个精选 Claude Code mods，按类别组织：
+以下是本市场的 637 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -117,6 +117,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | limit-bars | 提示框下四个动画环，显示上下文、会话和周限额。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars) |
 | limit-meter | 提示框上方 5h/周限额条与重置倒计时；/limits；可 toast 告警。纯 UI，只读会话用量。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/limit-meter) |
 | limit-watch | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
+| medidor-de-caixa | 提示框上方一行（葡萄牙语）显示本会话按 API 价格估算的花费、上一次请求的增量、上下文百分比，以及 1 小时提示缓存还剩几分钟，剩 5 分钟时弹提醒。只读 session.usage，AbovePrompt 调 next，不改提示或工具，不联网。 |  | [链接](https://github.com/plasdigital/mods-claude-code-kit-aluno/tree/main/mods/medidor-de-caixa) |
 | mod-usage | 桌面/VS Code/移动端提示框上方显示上下文与 5 小时/7 天用量渐变条（只读 $.session.usage / session.measure）；AbovePrompt 会先调 next 再叠在其他 band 下方；可配置语言。备注：本机 process 可能读 macOS defaults 以解析显示语言。 | MIT | [链接](https://github.com/jack21/claude-mod-usage) |
 | native-hud | 输入框下方原生 HUD：模型、路径、git/worktree、上下文、5h/7d 用量、输出速度与缓存命中。备注：本机 git。 | MIT | [链接](https://github.com/Luban-Labs/native-hud) |
 | netrunner-hud | 会话仪表盘：上下文条、token 示波与状态窗格。 | MIT | [链接](https://github.com/ccdwyer/netrunner-hud) |
@@ -136,6 +137,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | statusline | 桌面端提示框上方显示上下文 tokens、会话费用与缓存冷却估计。纯 UI。 | MIT | [链接](https://github.com/david-crespo/dotfiles/tree/main/claude/mods/statusline) |
 | status-hud | 提示框上方活动阶段与 5h/周限额/上下文窗口状态条。纯 UI。 | MIT | [链接](https://github.com/hymleong/claude-mods/tree/main/plugins/status-hud) |
 | token-ledger | 会话成本与上轮 tokens；面板查看近期回合。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/token-ledger) |
+| token-limit | 在提示框底栏用彩色小条显示上下文占用和 5 小时/7 天等限额（含 5 小时重置时间），以及当前模型和推理强度。只读用量，turn.step 原样转发；SessionMode 插槽不调用 next 而自绘（保留模式名）。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/token-limit) |
 | token-meter | 提示框上方会话 token/工具次数/工作时长与缓存倒计时带。不只是纯 UI：除非调查显示时，AbovePrompt 带不调 next，可覆盖其他 mod 行。 |  | [链接](https://github.com/tunglt1810/claude-gadgets/tree/main/mods/token-meter) |
 | token-usage | 窗格与提示上方条显示上下文、限额窗口和费用；只读 $.session.usage；条显示时 AbovePrompt 不调 next；/usage-band 命令可能与已有 usage-band 冲突。 | MIT | [链接](https://github.com/monowu/claude-mod-token-usage) |
 | tokens | 侧栏 token 往来：每次请求送出/等待/收到与合计。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/tokens) |
@@ -193,6 +195,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | context-guard | 上下文占用状态行，越过阈值 toast 提醒 /compact。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/context-guard) |
 | context-lens | 固定显示上下文占用、增长与距 compaction 的回合数。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/context-lens) |
 | context-meter | 在底部模式栏显示上下文用量（已用/窗口与百分比），到 80% 时弹出提示建议 /compact；只读会话用量。 | MIT | [链接](https://github.com/Vibe-Commit/claude-context-mods/tree/main/plugins/context-meter) |
+| context-pane | /context-pane 侧边窗格列出本会话读过和改过的文件、用过的 skill、MCP 服务器调用次数，以及已载入的记忆文件（CLAUDE.md 等）和估算 token；会话开始时自动打开。只观察：tool.call、skill.prompt、session.compact 都先 next 再记录，不改写；用量用本机 summary 估算，不发计数请求。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/context-pane) |
 | context-restore | 恢复上下文状态。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/context-restore) |
 | context-view | 提示框上方一行上下文占用与距 auto-compact 余量。 |  | [链接](https://github.com/kongyo2/context-view) |
 | context-gauge | 提示脚注彩色 ctx NN% 上下文用量；/ctx 看分类拆解。 | MIT | [链接](https://github.com/tommy5dollar/claude-mods/tree/main/context-gauge) |
@@ -247,6 +250,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | firstmate-calm | /calm 隐藏工具行并换成帆船 spinner；需开启 function hooks。 |  | [链接](https://github.com/kunchenguid/firstmate/tree/main/.claude/mods/firstmate-calm) |
 | flashmodel | 提示框上方点选切换模型与 effort（走内置 /model、/effort），纯 UI。 | MIT | [链接](https://github.com/Rafael-CRL/FlashModel) |
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
+| helix-spinner | 把 spinner 行换成旋转的盲文双螺旋、随机动词和本回合用时与 token；/helix-dex 收集动词，/helix-theme 节日主题，/helix-demo 预览。只改显示，不改提示或工具，不联网；在终端和桌面端 Spinner 插槽不调用 next 而自绘（其他界面仍调 next，只换动词）；$.store 存收集和设置。 |  | [链接](https://github.com/dylan-chalkboard/helix-spinner/tree/main/plugins/helix-spinner) |
 | hide-diffs | 把 Edit/Write/NotebookEdit/Bash 的完整 diff 收成一行加减摘要，ctrl+q 切换显示。纯 UI，不改写工具。 | MIT | [链接](https://github.com/gixxy22/hide-diffs) |
 | hint-mod | 隐藏输入框下方的灰色提示行（如 ? for shortcuts、esc to interrupt），只改 PromptHint 的显示。 | MIT | [链接](https://github.com/zyx1121/hint-mod) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
@@ -276,6 +280,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | shell-highlight | Bash/PowerShell 工具调用语法高亮展示。纯 UI，不改写命令。 | MIT | [链接](https://github.com/Turbo-Thorschten/shell-highlight) |
 | sidebar | 侧栏扩展面板。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sidebar) |
 | smooth-stream | 打字机效果：流式回复按约 30 帧/秒逐字显示，只改显示，不改回复内容。 | MIT | [链接](https://github.com/kyongsik-yoon/claude-mods/tree/main/smooth-stream) |
+| speaker-colours | 你的消息加浅蓝竖条和底色，Claude 的回复加橙色竖条和底色。只改显示，不联网；输入框里键入的提示由它自绘 UserMessage、不调用 next（其他来源的消息照常交给引擎），AssistantMessage 调 next 后在外面包一层。 |  | [链接](https://github.com/herman925/925-cc-plugins/tree/main/speaker-colours) |
 | spell-bar | 按 effort 等级绘制的动画施法条（Clawd / Avada Kedavra 六档）。纯 UI，不改写工具或提示。 | MIT | [链接](https://github.com/powerofjinbo/claude-code-spell-bar/tree/main/plugins/spell-bar) |
 | spinner-stats | 在 Claude 自带 spinner 后缀追加耗时、当前工具与调用次数。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/spinner-stats) |
 | starfleet-panel | 提示框下方 LCARS 风格状态面板（模型/上下文/限额/分支等）；只读跟随 red-alert。本地 git/hostname。 | MIT | [链接](https://github.com/dukechain2333/starfleet-panel/tree/main/plugin) |
@@ -285,6 +290,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | thinking-band | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
+| title-bar | 在提示下方的 PromptHint 显示会话名、文件夹和 git 分支，并同步成终端窗口标题。本机每 5 秒跑 git branch/rev-parse；读本会话 transcript 只取标题行；设置 CLAUDE_CODE_DISABLE_TERMINAL_TITLE=1 关掉引擎自带标题；macOS/Linux 用 printf 写 /dev/tty，Windows 运行仓库里的 scripts/set-title.ps1（-ExecutionPolicy Bypass，只调 SetConsoleTitleW）。classic.UserPromptSubmit 只记录 transcript 路径和会话标题后原样 next，不改写提示；Bash 工具调用原样 next 后再刷新。显示标题时 PromptHint 不调用 next 而自绘（保留原提示文字）。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/title-bar) |
 | tool-cards | 终端里把工具调用画成卡片（高亮 Bash、可展开输出）；纯 UI，不改写工具。 | MIT | [链接](https://github.com/mustafa89/my-claude-code-mods/tree/main/tool-cards) |
 | tool-timing-badge | 给每次工具调用旁加耗时彩色徽章；只测时+画 UI，不改写工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/tool-timing-badge) |
 | tps-report | TPS 风格工作报告窗格。 | MIT | [链接](https://github.com/vgnshiyer/tps-report) |
@@ -459,6 +465,7 @@ For detailed descriptions of all 630 mods, see the Chinese section below.
 | mdview | 侧栏渲染对话里的 Markdown，可点选让 Claude 改。 |  | [链接](https://github.com/xuanji86/claude-mdview) |
 | mission-control | 工具调用时间线：输入/输出/状态与子代理泳道；只观察。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/mission-control) |
 | multirepo-diff-mod | /multi-diff 面板：浏览当前文件夹下每个 git 仓库（含 worktree）的未提交改动，可切换对比 HEAD、暂存区、分支相对基线或本会话改动。备注：本机 git，只读（status、diff、rev-parse、worktree list 等）；Edit/Write 类工具运行前把原文件复制到本机 /tmp/multirepo-diff-mod 供本会话对比，不改工具参数。 | MIT | [链接](https://github.com/nvsravank/multirepo-diff-mod) |
+| open-in-vscode | 仅桌面版：把回复里指向本地文件的链接改成可点链接，点击后用 VS Code 打开到对应行。有可点的文件链接时 AssistantMessage 不调用 next 而用 Markdown 自绘（只改显示，不改会话内容），否则原样 next；点击时本机运行仓库里的 scripts/open-in-vscode.sh（调 code CLI，Remote-SSH 下走 VS Code 的 IPC socket）。可选：手动运行 scripts/install-vscode-extension.sh 从仓库源码打包安装 Claude Open Bridge 扩展，它只在本机 unix socket 上监听，用于 Markdown 预览定位。不联网。 | MIT | [链接](https://github.com/gggg5151/claude-desktop-links-to-vscode-mod) |
 | proc-registry | /procs 面板登记本会话后台 Bash 与子代理；只观察，不改写工具。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/proc-registry) |
 | query-table | 把 BigQuery MCP 和 bq query / dbt show 的结果画成对齐、上色的表格；只改显示，tool.call 只记录 SQL 后原样 next，不改命令。 |  | [链接](https://github.com/michelr/query-table) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |

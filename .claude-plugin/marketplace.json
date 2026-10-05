@@ -4840,6 +4840,61 @@
         "url": "https://github.com/a2uicatalog/a2ui.git",
         "path": "claude-code-surface"
       }
+    },
+    {
+      "name": "helix-spinner",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/dylan-chalkboard/helix-spinner.git",
+        "path": "plugins/helix-spinner"
+      }
+    },
+    {
+      "name": "speaker-colours",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/herman925/925-cc-plugins.git",
+        "path": "speaker-colours"
+      }
+    },
+    {
+      "name": "medidor-de-caixa",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/plasdigital/mods-claude-code-kit-aluno.git",
+        "path": "mods/medidor-de-caixa"
+      }
+    },
+    {
+      "name": "token-limit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/akagaya/claude-code-mods.git",
+        "path": "plugins/token-limit"
+      }
+    },
+    {
+      "name": "title-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/akagaya/claude-code-mods.git",
+        "path": "plugins/title-bar"
+      }
+    },
+    {
+      "name": "context-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/akagaya/claude-code-mods.git",
+        "path": "plugins/context-pane"
+      }
+    },
+    {
+      "name": "open-in-vscode",
+      "source": {
+        "source": "github",
+        "repo": "gggg5151/claude-desktop-links-to-vscode-mod"
+      }
     }
   ]
 }
