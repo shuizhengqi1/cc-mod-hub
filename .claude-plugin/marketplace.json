@@ -4020,6 +4020,21 @@
         "url": "Humpens/claude-mods",
         "path": "u"
       }
+    },
+    {
+      "name": "cc-mod-park",
+      "source": {
+        "source": "git",
+        "url": "GGGODLIN/cc-mod-park"
+      }
+    },
+    {
+      "name": "chat-bubbles",
+      "source": {
+        "source": "git-subdir",
+        "url": "angeldelbiondo/claude-chat-bubbles",
+        "path": "chat-bubbles"
+      }
     }
   ]
 }
