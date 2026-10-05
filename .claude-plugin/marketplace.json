@@ -4274,6 +4274,21 @@
         "url": "vincentlauriat/ModsTools",
         "path": "mods/tool-heatmap"
       }
+    },
+    {
+      "name": "zen-breath",
+      "source": {
+        "source": "git",
+        "url": "mindthink/zen-breath"
+      }
+    },
+    {
+      "name": "i18n-pixel",
+      "source": {
+        "source": "git-subdir",
+        "url": "Ponpon55837/i18n-check-mods",
+        "path": "plugins/i18n-pixel"
+      }
     }
   ]
 }
