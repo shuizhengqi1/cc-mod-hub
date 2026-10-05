@@ -1830,6 +1830,13 @@
       }
     },
     {
+      "name": "script-gate",
+      "source": {
+        "source": "git",
+        "url": "ABDUAZIZX/script-gate"
+      }
+    },
+    {
       "name": "seatbelt",
       "source": {
         "source": "git-subdir",
@@ -2568,6 +2575,14 @@
       }
     },
     {
+      "name": "branch-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "Spardutti/claude-mods",
+        "path": "plugins/branch-status"
+      }
+    },
+    {
       "name": "path-guard",
       "source": {
         "source": "git-subdir",
@@ -2690,6 +2705,13 @@
         "source": "git-subdir",
         "url": "falconsw/cost-info",
         "path": "cost-info"
+      }
+    },
+    {
+      "name": "cs-radio",
+      "source": {
+        "source": "git",
+        "url": "ben-rogerson/claude-counter-strike"
       }
     },
     {
