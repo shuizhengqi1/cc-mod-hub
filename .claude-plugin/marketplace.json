@@ -3915,6 +3915,50 @@
         "source": "git",
         "url": "nicodunks/goodfriend"
       }
+    },
+    {
+      "name": "mod-usage",
+      "source": {
+        "source": "git",
+        "url": "jack21/claude-mod-usage"
+      }
+    },
+    {
+      "name": "glance",
+      "source": {
+        "source": "git",
+        "url": "VibeMage/claude-mod-glance"
+      }
+    },
+    {
+      "name": "test-progress",
+      "source": {
+        "source": "git",
+        "url": "fabiopbarbieri/claude-test-progress"
+      }
+    },
+    {
+      "name": "kit-sink",
+      "source": {
+        "source": "git-subdir",
+        "url": "eduardocruz/cc-kit",
+        "path": "mods/kit-sink"
+      }
+    },
+    {
+      "name": "clawd-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "IKnowJot/clawd-plugins",
+        "path": "plugins/clawd-tracker"
+      }
+    },
+    {
+      "name": "cc-math-renderer",
+      "source": {
+        "source": "git",
+        "url": "andrewroxby/cc-math-renderer"
+      }
     }
   ]
 }

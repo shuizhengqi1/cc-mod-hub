@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 509 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 515 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 509 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 515 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 509 mods, see the Chinese section below.
+For detailed descriptions of all 515 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 509 个精选 Claude Code mods，按类别组织：
+以下是本市场的 515 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -109,9 +109,11 @@ For detailed descriptions of all 509 mods, see the Chinese section below.
 | cost-pane | 费用窗格：本会话与按日花费汇总。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/cost-pane) |
 | effort-guard | 上下文/token 条带、升级信号与每回合 effort 日志。 | MIT | [链接](https://github.com/stefanochieli/claude-effort-guard) |
 | eta | 在 spinner 行显示本轮剩余时间（按任务节奏或历史回合学习，零 token）。 |  | [链接](https://github.com/hamza-siddiq/claude-eta/tree/main/eta) |
+| glance | 提示下方 HUD：模型、本机 git、费用、上下文与 5h/7d 条、工具/技能/MCP/子代理与 todo；只读会话与本机 git status。备注：本机 process（git）；PromptHint 不调 next（可把引擎 hint 画在 HUD 下方）。 | MIT | [链接](https://github.com/VibeMage/claude-mod-glance) |
 | limit-bars | 提示框下四个动画环，显示上下文、会话和周限额。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars) |
 | limit-meter | 提示框上方 5h/周限额条与重置倒计时；/limits；可 toast 告警。纯 UI，只读会话用量。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/limit-meter) |
 | limit-watch | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
+| mod-usage | 桌面/VS Code/移动端提示框上方显示上下文与 5 小时/7 天用量渐变条（只读 $.session.usage / session.measure）；AbovePrompt 会先调 next 再叠在其他 band 下方；可配置语言。备注：本机 process 可能读 macOS defaults 以解析显示语言。 | MIT | [链接](https://github.com/jack21/claude-mod-usage) |
 | native-hud | 输入框下方原生 HUD：模型、路径、git/worktree、上下文、5h/7d 用量、输出速度与缓存命中。备注：本机 git。 | MIT | [链接](https://github.com/Luban-Labs/native-hud) |
 | netrunner-hud | 会话仪表盘：上下文条、token 示波与状态窗格。 | MIT | [链接](https://github.com/ccdwyer/netrunner-hud) |
 | omp-quota | omp 各 provider 剩余配额条（/quota）；备注：通过本机 `omp usage --json` 读取，不改写工具。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/omp-quota) |
@@ -199,9 +201,11 @@ For detailed descriptions of all 509 mods, see the Chinese section below.
 | aside | /aside 只读侧聊：基于会话 transcript fork 问答，不写回主线程。 | MIT | [链接](https://github.com/JayDoubleu/aside) |
 | at-work | 提示框上方像素场景动画，按当前工具活动切换画面；spinner 计算机笑话；节日装饰。纯 UI，不改写工具/提示。 | MIT | [链接](https://github.com/zhuoxingzhang/pixel-at-work) |
 | catch-me-up | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
+| cc-math-renderer | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | cc-pokedex | 在侧栏查看宝可梦图鉴，按名字或编号搜索。 |  | [链接](https://github.com/deonmenezes/claude-mods-pokedex) |
 | chameleon | 在 /rename 与 /branch 时给会话随机上色（/color），便于区分窗口。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/chameleon) |
 | change-journal | 编辑变更的即时说明窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal) |
+| clawd-tracker | Domino 式订单进度条（主题 pizza/coffee/rocket/construction）：读本机会话与 $.tool.check 只判断是否会询问许可，不改写工具；prompt.submit 只本地取标题后原样 next；送达可 $.audio.play 自建 WAV。备注：进度显示时 AbovePrompt 不调 next（可点隐藏）。 | MIT | [链接](https://github.com/IKnowJot/clawd-plugins/tree/main/plugins/clawd-tracker) |
 | clawdify | /clawdify 改 spinner、页脚、提示、横幅、状态行和对话行样式，可用自然语言描述（走 $.model.complete，只发当前设置和你的请求）；可按你设的规则改写回答的显示文本（只改显示）、替换 PromptHint/UserMessage、横幅开启时 AbovePrompt 不调 next、可隐藏提示通知；启动时 $.ui.status(undefined)，并扫描本机 ~/.claude/plugins/store 迁移旧设置；读取本地 .git/HEAD 获得分支名。 | MIT | [链接](https://github.com/viik2k/clawdify) |
 | looks | 提示框上方显示配色主题切换菜单，纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/looks) |
 | collapse-answers | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
@@ -218,6 +222,7 @@ For detailed descriptions of all 509 mods, see the Chinese section below.
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
 | hide-diffs | 把 Edit/Write/NotebookEdit/Bash 的完整 diff 收成一行加减摘要，ctrl+q 切换显示。纯 UI，不改写工具。 | MIT | [链接](https://github.com/gixxy22/hide-diffs) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
+| kit-sink | /kit sink 打开组件厨房水槽窗格，演示候选 UI 组件；只观察 tool.call/turn.complete 且先调 next，不改写工具或提示。 | MIT | [链接](https://github.com/eduardocruz/cc-kit/tree/main/mods/kit-sink) |
 | netsignal | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
 | on-me | 提示框上条带：Claude 正在做什么，以及轮到你处理的事项。 | MIT | [链接](https://github.com/abhibansal60/claude-mods/tree/main/on-me) |
 | orange-prompt | 输入草稿白字橙底高亮（可配合 Orange Dark 主题）。纯 UI。 | MIT | [链接](https://github.com/philsimon/orange-prompt) |
@@ -402,6 +407,7 @@ For detailed descriptions of all 509 mods, see the Chinese section below.
 | skins | 给 transcript 换肤：主题化工具行、回复边栏与 spinner 文案；桌面端把表格/代码/diff/shell 画成动画卡片。 | MIT | [链接](https://github.com/hellosverre/claude-skins) |
 | spx-chart | 在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。 |  | [链接](https://github.com/zviryatko/claude-spx) |
 | statusbar | 状态栏显示当前 git 分支与仓库状态，仅本地 git rev-parse 查询。 | MIT | [链接](https://github.com/sgmonda/statusbar) |
+| test-progress | 后台测试进度窗格（backend/frontend）；/test-progress 查询或启动已配置的本机测试命令；AbovePrompt 先调 next 再叠加一行摘要。备注：本机 process（bash/PowerShell 收集器可跑本机测试）。 | MIT | [链接](https://github.com/fabiopbarbieri/claude-test-progress) |
 | touch-map | 文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map) |
 | transit-map | 把 git 历史画成地铁图，分支是线，提交是站。 | MIT | [链接](https://github.com/ccdwyer/transit-map) |
 | telescreen | 读本机 .claude/flywheel/LEARNINGS.md，读写到被引用的文件时在提示框上方显示对应经验条目，/telescreen 看统计。只观察。备注：显示时 AbovePrompt 会盖住别的行（可点 Hide）。 | MIT | [链接](https://github.com/arazvan-ec/xmarks/tree/main/mods/telescreen) |
