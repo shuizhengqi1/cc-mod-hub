@@ -3373,6 +3373,30 @@
         "url": "bennewton999/claude-code-mods",
         "path": "session-activity"
       }
+    },
+    {
+      "name": "lights-out",
+      "source": {
+        "source": "git-subdir",
+        "url": "ivanvyd/ground-rules",
+        "path": "plugins/lights-out"
+      }
+    },
+    {
+      "name": "stay-put",
+      "source": {
+        "source": "git-subdir",
+        "url": "ivanvyd/ground-rules",
+        "path": "plugins/stay-put"
+      }
+    },
+    {
+      "name": "token-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "tunglt1810/claude-gadgets",
+        "path": "mods/token-meter"
+      }
     }
   ]
 }
