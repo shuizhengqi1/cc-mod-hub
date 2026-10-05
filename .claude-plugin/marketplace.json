@@ -3866,6 +3866,20 @@
         "url": "manishkumar/reins",
         "path": "mods/reins-status"
       }
+    },
+    {
+      "name": "review-pane",
+      "source": {
+        "source": "git",
+        "url": "r3al1tym/claude-review"
+      }
+    },
+    {
+      "name": "skill-audit",
+      "source": {
+        "source": "git",
+        "url": "DepickereSven/skill-audit"
+      }
     }
   ]
 }
