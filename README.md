@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 441 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 446 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 441 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 446 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 441 mods, see the Chinese section below.
+For detailed descriptions of all 446 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 441 个精选 Claude Code mods，按类别组织：
+以下是本市场的 446 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -150,6 +150,7 @@ For detailed descriptions of all 441 mods, see the Chinese section below.
 | usage-forecast | 提示上方用量带：5 小时/周限额、重置时间与是否会用尽；/forecast。可能遮挡其他提示框上方条。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/usage-forecast) |
 | vercel-deploy-status | 提示框上方显示 Vercel 部署队列（零 token）。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status) |
 | wavy-usage | 波浪动画风格的用量显示条。 | MIT | [链接](https://github.com/BatuhanCakmakk/wavy-usage) |
+| weektoken | 提示框上方 5 小时/周限额配速条与 /weektoken 面板。备注：本机 process（perl/tail/bash 读用量；macOS defaults 读语言）。 | MIT | [链接](https://github.com/3dnow/claude-mods/tree/main/weektoken) |
 
 ### 上下文管理 Context Management
 
@@ -184,6 +185,7 @@ For detailed descriptions of all 441 mods, see the Chinese section below.
 | cc-pokedex | 在侧栏查看宝可梦图鉴，按名字或编号搜索。 |  | [链接](https://github.com/deonmenezes/claude-mods-pokedex) |
 | chameleon | 在 /rename 与 /branch 时给会话随机上色（/color），便于区分窗口。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/chameleon) |
 | change-journal | 编辑变更的即时说明窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal) |
+| looks | 提示框上方显示配色主题切换菜单，纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/looks) |
 | collapse-answers | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
 | message-timestamps | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | commonplace-pane | 侧边窗格展示芝加哥艺术学院公版画，随仓库状态变「天气」。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commonplace-pane) |
@@ -252,6 +254,8 @@ For detailed descriptions of all 441 mods, see the Chinese section below.
 | diff-invaders | Diff 侵略者：Edit/Write 新增行变成波次；仅 UI，不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/diff-invaders) |
 | boss-fight | 失败测试变 boss，通过测试打血条的像素小游戏。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/boss-fight) |
 | cc-arcade | 在提示框上方显示游戏，点击不会调用模型。 |  | [链接](https://github.com/sezaakgun/cc-arcade) |
+| samurai-dojo | 每次工具调用变成武士斩击动画，跨会话记斩杀；备注：赛季可写 ~/.claude/mods/active-game。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/samurai-dojo) |
+| slayer-corps | 鬼灭队主题战斗动画：工具调用出招、回合收尾；纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/slayer-corps) |
 | cc-dino | Chrome 恐龙跑酷游戏，Claude 忙时可玩。 | MIT | [链接](https://github.com/manfye/cc-dino) |
 | cc-idle | 挂在 Claude 旁边的放置游戏，只用本机会话进度。 | MIT | [链接](https://github.com/RichardAtCT/cc-idle/tree/main/plugins/cc-idle) |
 | cc-range | 提示上方像素射击馆小游戏（鼠标瞄准开火，零 token）。 | MIT | [链接](https://github.com/germanfndez/cc-range) |
@@ -424,6 +428,7 @@ For detailed descriptions of all 441 mods, see the Chinese section below.
 | plushie | 提示框上方的毛绒 Clawd，会随工具/上下文做出反应。 | MIT | [链接](https://github.com/xyc/plushie) |
 | pocket-familiar | 伴随工作的养成伙伴窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/pocket-familiar) |
 | quota-pets | 额度假宠扭蛋：每对话抽猫/狗，限额告急讲鬼故事、用完阵亡；context 当肚子（/petdex 肚子）。备注：本机读 session.messages 估算肚子内容。 |  | [链接](https://github.com/Open01277/claude-mods/tree/main/plugins/quota-pets) |
+| pokemon | 提示框上方像素宝可梦：随回合战斗、升级与组队动画，纯 UI。 |  | [链接](https://github.com/dgokcin/claude-pokemon-mod) |
 | ricky-pixel-mod | 像素猫 Ricky：夜空窗格看板 + 提示框上方猫带；只观察会话事件做动画，不改写工具/提示。 | MIT | [链接](https://github.com/muxia23/ricky-pixel-mod) |
 
 ### 图片与媒体 Images & Media
