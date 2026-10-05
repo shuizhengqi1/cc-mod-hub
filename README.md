@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 581 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 583 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 581 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 583 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 581 mods, see the Chinese section below.
+For detailed descriptions of all 583 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 581 个精选 Claude Code mods，按类别组织：
+以下是本市场的 583 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -214,6 +214,7 @@ For detailed descriptions of all 581 mods, see the Chinese section below.
 | btw-fix | 接管内置 /btw（不调 next），把答案作为普通对话行输出而不是阻塞侧栏；用 $.model.fork 带当前会话问模型（与内置 /btw 相同）。 |  | [链接](https://github.com/m-mahiro/claude-code-mods/tree/main/mods/btw-fix) |
 | catch-me-up | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
 | cc-math-renderer | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
+| al-syntax | 把回复里 ```al 代码块（Business Central AL 语言）用 tree-sitter 着色显示，其他回复不动。备注：本机 process 用 node 运行仓库自带的 tree-sitter 高亮脚本和 wasm 语法文件（随插件一起，不另下载）；只改回复显示，不改原文，不联网。 | MIT | [链接](https://github.com/abonckus/claude-code-al-syntax) |
 | cc-pokedex | 在侧栏查看宝可梦图鉴，按名字或编号搜索。 |  | [链接](https://github.com/deonmenezes/claude-mods-pokedex) |
 | chameleon | 在 /rename 与 /branch 时给会话随机上色（/color），便于区分窗口。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/chameleon) |
 | change-journal | 编辑变更的即时说明窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal) |
@@ -552,6 +553,7 @@ For detailed descriptions of all 581 mods, see the Chinese section below.
 | lightbox | 粘贴图片时在提示框上方大预览，并带说明缩略图。 | MIT | [链接](https://github.com/arihantbansal/claude-lightbox) |
 | mathcat | 把公式渲成 PNG 并在窗格展示。备注：依赖本机已安装的 `mathcat` CLI（同仓库 Python 包）。 | Do No Harm | [链接](https://github.com/johndpope/mathcat) |
 | md-preview | `/md-preview` 也会打开同一侧栏预览（斜杠或点击 .md 链接）。点击回复里的 .md 文件链接，在侧栏按文档页样式预览（表格、提示块、代码高亮、mermaid 图），文件改动自动重载。备注：本机 process 调已装的 nvim（tree-sitter 高亮）和 mermaid-ascii；回复显示会改写成可点链接（只改显示，不改原文）；只读本机文件，不外传。 | MIT | [链接](https://github.com/abonckus/claude-code-md-preview) |
+| file-preview | `/preview <路径>` 或点击回复里的 .md/.json/.yaml 文件链接，在侧栏按文档页样式预览（可搜索，文件改动自动重载）。备注：回复显示会把存在的本机文件改写成可点链接（只改显示，不改原文）；本机 process 调 mermaid-ascii 和你在设置里自配的外部高亮命令；只读本机文件，不外传；与 md-preview 都会改写回复里的文件链接，同时装可能互相覆盖。 | MIT | [链接](https://github.com/abonckus/claude-code-file-preview) |
 | md-view | 点击回复里的 Markdown 文件渲染预览。 |  | [链接](https://github.com/scoobynko/claude-code-mods/tree/main/plugins/md-view) |
 | music-mod | 通过 osascript 控制 macOS Music.app 播放音乐。 | MIT | [链接](https://github.com/zyx1121/music-mod) |
 | paste-peek | 粘贴图片实时像素预览（⌥←/→ 切换，⌥↑ 放大，⌥↓ 侧栏）；需支持图片的终端。 | MIT | [链接](https://github.com/nokiy/claude-code-mods/tree/main/plugins/paste-peek) |
