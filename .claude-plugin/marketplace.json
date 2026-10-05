@@ -5354,14 +5354,6 @@
       }
     },
     {
-      "name": "ship-state",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/tyree88/tempered_plugins.git",
-        "path": "ship-state"
-      }
-    },
-    {
       "name": "session-board",
       "source": {
         "source": "git-subdir",

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 700 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 699 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 700 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 699 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 700 mods, see the Chinese section below.
+For detailed descriptions of all 699 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 700 个精选 Claude Code mods，按类别组织：
+以下是本市场的 699 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -527,7 +527,6 @@ For detailed descriptions of all 700 mods, see the Chinese section below.
 | git-diff | 提示框上方显示未提交改动：文件数、增删行数和 GitHub 式色块条，右侧显示分支；/git-diff 或 + 按钮打开面板按列表/树看每个文件。备注：本机只读调用 git diff/ls-files/branch；tool.call 只在 Edit/Write 后刷新统计，原样返回。 |  | [链接](https://github.com/cjmellor/mella-marketplace/tree/main/plugins/git-diff) |
 | ailang-lens | 编辑 .ail 文件后自动打开面板，显示该 AILANG 模块的函数、类型、副作用和类型错误；/ail-lens 可手动分析某个文件。备注：本机运行 `ailang iface` / `ailang check`；tool.call 只在 Edit/Write/Bash 后刷新，原样返回，不把结果加进模型上下文。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/ailang-lens) |
 | prepush-gate | Claude 执行 git push 或 gh pr create/merge 前，先在本机跑 gofmt、make lint、make check-file-sizes（仓库有对应目标才跑），失败就拒绝这次推送并给出输出；启动环境设 AILANG_SKIP_PREPUSH=1 可跳过。备注：只 deny，不改写命令；会执行当前仓库自己的 Makefile 目标。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/prepush-gate) |
-| ship-state | 提示框上方显示当前分支、脏文件数、相对上游领先/落后、PR、CI 和生产部署；CI 结束或生产上线/失败时弹 toast。备注：本机 git 与 gh api（读 check-runs、status、Production deployment）；每 20 秒刷新本地 git，远程约每 5 分钟，推送或合并后约 10 分钟内更勤；Bash 的 tool.call 先 next 再刷新；有状态且无调查时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/tyree88/tempered_plugins/tree/main/ship-state) |
 
 ### 子代理管理 Subagent Management
 
