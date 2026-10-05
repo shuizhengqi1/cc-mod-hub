@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 784 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 787 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 784 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 787 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 784 mods, see the Chinese section below.
+For detailed descriptions of all 787 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 784 个精选 Claude Code mods，按类别组织：
+以下是本市场的 787 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -206,6 +206,7 @@ For detailed descriptions of all 784 mods, see the Chinese section below.
 | linha-do-tempo | 会话时间线面板：逐回合显示模型、推理强度、用过的工具、token 和耗时（/timeline，可导出或清空）。备注：只观察回合事件，纯本机 UI；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/linha-do-tempo) |
 | rich-statusline | 提示框下的多行状态面板：模型、目录、git 分支与改动、上下文构成、用量限额与费用，三种布局，提示框上方有设置菜单。备注：本机运行只读 git（rev-parse、diff --shortstat）；运行 gh pr view 查当前分支 PR 号（需本机 gh 登录才显示）；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/blackpaw-studio/claude-plugins/tree/main/plugins/rich-statusline) |
 | glyph-hud | 点阵风 HUD 面板（/glyph）：按模型统计聊天 token、5 小时限额估算、缓存计时和代码改动统计。备注：prompt.edit/prompt.submit 只用来估算草稿 token，不改写提示；大 transcript 用插件自带的本机 python 脚本读用量；可选开关 blockAttribution（默认关）开启后只拒绝带 Co-Authored-By 的 git commit；不调用模型。 | MIT | [链接](https://github.com/MridulNegi2005/glyph-hud) |
+| session-band | 提示框上方一行状态条：当前模型与推理强度、上下文已用/窗口大小及百分比、距自动压缩还剩多少 token（不足 10 万变黄），5 小时/每周/花费限额用到 50% 以上时显示百分比。备注：只读 $.session.usage，纯本机 UI，不调用模型、不联网。 |  | [链接](https://github.com/howells/howells-plugins/tree/main/mods/session-band) |
 
 ### 上下文管理 Context Management
 
@@ -490,6 +491,7 @@ For detailed descriptions of all 784 mods, see the Chinese section below.
 | vigia-api | 付费 API 看门：调用会花钱或花额度的工具和命令（Magnific、Kling、HeyGen、OpenRouter、Groq 等）前先问你，可授权 1 小时（/vigia）。备注：只拒绝不改写（deny）；没人在屏前时直接拒绝；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/vigia-api) |
 | guarda-colisao | 编辑前检查文件是否在本会话之外被改过（其他会话、你的编辑器或别的程序），有就问你怎么办（/colisao）。备注：只拒绝不改写（deny）；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/guarda-colisao) |
 | pdpa-blur | 把 transcript 里的个人数据（泰国身份证号、电话、邮箱、银行卡/账号、IP、token/密码等）画成灰块，鼠标悬停才显示；/pdpa-blur 开关。备注：只改本机显示，复制仍得原文；纯本机正则识别，不外发。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/pdpa-blur) |
+| bash-guard | 本地解析 Bash 命令（含 sh -c 嵌套、包装命令），拒绝 `&` 后台/disown/setsid/coproc、pkill/killall 按名批量杀进程、`kill %作业号` 和 sleep 等待，并提示改用 run_in_background、TaskStop 等内置方式。备注：只 deny 不改写命令；纯本机，不联网。 |  | [链接](https://github.com/mary-ext/claude-skills/tree/trunk/plugins/bash-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -579,6 +581,7 @@ For detailed descriptions of all 784 mods, see the Chinese section below.
 | replay-edicoes | 回放本会话的编辑：逐步查看每次 Edit/Write 的 diff，前后翻页并可复制（/replay）。备注：只读会话消息，纯本机 UI；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/replay-edicoes) |
 | where-were-we | 给 transcript 里每条你的提示打上时间戳，页脚加上/下跳转；/where-were-we 列最近提示、last 回顾本项目上一个会话；新会话开头弹一条回顾提示（可关）。备注：session.append 只读不改；本机 grep 读当前 transcript 和 Claude Code 的提示历史；纯本机。 | MIT | [链接](https://github.com/scarrillo/agent-plugins/tree/main/where-were-we) |
 | session-tracker | 侧栏列出本机所有打开的 Claude Code 会话，需要你处理的排最前，带提示音。备注：本机 ps/grep/tail 读会话文件；可在面板里给其它会话发消息（$.session.send），并在二次确认后 kill -TERM 其它会话进程（只在你点击时）。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |
+| watch-loop | 防止空转轮询：同一代理连续第三次执行轮询/等待类 Bash（gh run watch、gh pr checks、vercel logs、until/while 循环、sleep ≥10 秒）且中间没有任何 Edit/Write 时拒绝，并弹提示。备注：只 deny 不改写命令；prompt.submit 只用来清零计数，不改写提示；纯本机。 |  | [链接](https://github.com/howells/howells-plugins/tree/main/mods/watch-loop) |
 
 ### 子代理管理 Subagent Management
 

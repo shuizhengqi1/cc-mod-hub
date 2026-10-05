@@ -6111,6 +6111,33 @@
         "repo": "MridulNegi2005/glyph-hud",
         "sha": "0dc775eeecb613b4587767f127aadf68af7bdf25"
       }
+    },
+    {
+      "name": "session-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/howells/howells-plugins.git",
+        "path": "mods/session-band",
+        "sha": "d8afa5d1790128a52e6d12d8cffc9e7f58692d4f"
+      }
+    },
+    {
+      "name": "watch-loop",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/howells/howells-plugins.git",
+        "path": "mods/watch-loop",
+        "sha": "d8afa5d1790128a52e6d12d8cffc9e7f58692d4f"
+      }
+    },
+    {
+      "name": "bash-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mary-ext/claude-skills.git",
+        "path": "plugins/bash-guard",
+        "sha": "105399d2fcf92ea48ca6098fde4cbcbf4184b14f"
+      }
     }
   ]
 }
