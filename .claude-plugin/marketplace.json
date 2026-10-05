@@ -4550,6 +4550,37 @@
         "source": "git",
         "url": "mashiro-no-rabo/blaze-mod"
       }
+    },
+    {
+      "name": "barometer",
+      "source": {
+        "source": "git-subdir",
+        "url": "Alchez/claude-mods",
+        "path": "barometer"
+      }
+    },
+    {
+      "name": "session-panel",
+      "source": {
+        "source": "git",
+        "url": "arsenii-cmd/Claude-mod"
+      }
+    },
+    {
+      "name": "message-banniere",
+      "source": {
+        "source": "git-subdir",
+        "url": "177cubicube-star/claude-code-mods",
+        "path": "message-banniere"
+      }
+    },
+    {
+      "name": "goblin-chrome",
+      "source": {
+        "source": "git-subdir",
+        "url": "JasonWarrenUK/goblin-mode",
+        "path": "marketplace/goblin-chrome"
+      }
     }
   ]
 }
