@@ -3145,6 +3145,30 @@
         "source": "git",
         "url": "iamomiid/cache-countdown"
       }
+    },
+    {
+      "name": "herdr",
+      "source": {
+        "source": "git-subdir",
+        "url": "bendrucker/claude",
+        "path": "plugins/herdr"
+      }
+    },
+    {
+      "name": "linear-tickets",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/integrations/linear-tickets"
+      }
+    },
+    {
+      "name": "vercel-deploys",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/integrations/vercel-deploys"
+      }
     }
   ]
 }
