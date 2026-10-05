@@ -3894,6 +3894,13 @@
         "source": "git",
         "url": "viik2k/clawdify"
       }
+    },
+    {
+      "name": "capi",
+      "source": {
+        "source": "git",
+        "url": "danieldeusing/capi-cc-mod"
+      }
     }
   ]
 }
