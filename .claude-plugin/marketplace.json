@@ -4366,6 +4366,51 @@
         "source": "git",
         "url": "eddiezhan/xhs-count-mod"
       }
+    },
+    {
+      "name": "pixipet",
+      "source": {
+        "source": "git",
+        "url": "VibeMage/claude-mod-pet"
+      }
+    },
+    {
+      "name": "token-usage",
+      "source": {
+        "source": "git",
+        "url": "monowu/claude-mod-token-usage"
+      }
+    },
+    {
+      "name": "loc-split",
+      "source": {
+        "source": "git-subdir",
+        "url": "RomanHotsiy/claude-mods",
+        "path": "loc-split"
+      }
+    },
+    {
+      "name": "vn-stockmarket-heatmap",
+      "source": {
+        "source": "git",
+        "url": "NgoTuong12345/claude-mod-vn-stock-watch"
+      }
+    },
+    {
+      "name": "cc-notify-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "kukaka/cc-mods",
+        "path": "cc-notify-mod"
+      }
+    },
+    {
+      "name": "btw-fix",
+      "source": {
+        "source": "git-subdir",
+        "url": "m-mahiro/claude-code-mods",
+        "path": "mods/btw-fix"
+      }
     }
   ]
 }

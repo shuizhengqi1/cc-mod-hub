@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 568 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 574 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 568 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 574 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 568 mods, see the Chinese section below.
+For detailed descriptions of all 574 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 568 个精选 Claude Code mods，按类别组织：
+以下是本市场的 574 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -136,6 +136,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | status-hud | 提示框上方活动阶段与 5h/周限额/上下文窗口状态条。纯 UI。 | MIT | [链接](https://github.com/hymleong/claude-mods/tree/main/plugins/status-hud) |
 | token-ledger | 会话成本与上轮 tokens；面板查看近期回合。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/token-ledger) |
 | token-meter | 提示框上方会话 token/工具次数/工作时长与缓存倒计时带。不只是纯 UI：除非调查显示时，AbovePrompt 带不调 next，可覆盖其他 mod 行。 |  | [链接](https://github.com/tunglt1810/claude-gadgets/tree/main/mods/token-meter) |
+| token-usage | 窗格与提示上方条显示上下文、限额窗口和费用；只读 $.session.usage；条显示时 AbovePrompt 不调 next；/usage-band 命令可能与已有 usage-band 冲突。 | MIT | [链接](https://github.com/monowu/claude-mod-token-usage) |
 | tokens | 侧栏 token 往来：每次请求送出/等待/收到与合计。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/tokens) |
 | trek-band | 提示框上方星际迷航风格用量环与像素动画场景。 | MIT | [链接](https://github.com/rb17080/trek-band/tree/main/plugins/trek-band) |
 | turn-footer | 每条回答下方改成回合摘要（工具、请求、tokens、缓存命中）。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/turn-footer) |
@@ -209,6 +210,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | aside | /aside 只读侧聊：基于会话 transcript fork 问答，不写回主线程。 | MIT | [链接](https://github.com/JayDoubleu/aside) |
 | at-work | 提示框上方像素场景动画，按当前工具活动切换画面；spinner 计算机笑话；节日装饰。纯 UI，不改写工具/提示。 | MIT | [链接](https://github.com/zhuoxingzhang/pixel-at-work) |
 | better-tool-rows | Read/Edit/Write 显示相对路径，Edit/Write 结果显示加减行数，长 Bash 命令截成一行并折叠长输出；只改显示，Bash 工具调用只记命令形状、原样返回。备注：Bash/Edit/Write 的 ToolResult 槽在已显示输出或行数时直接画空、不调 next，可能盖住其他改这个槽的 mod；在本机读会话记录来算行间距。 | MIT | [链接](https://github.com/akilin/claude-plugins/tree/main/plugins/better-tool-rows) |
+| btw-fix | 接管内置 /btw（不调 next），把答案作为普通对话行输出而不是阻塞侧栏；用 $.model.fork 带当前会话问模型（与内置 /btw 相同）。 |  | [链接](https://github.com/m-mahiro/claude-code-mods/tree/main/mods/btw-fix) |
 | catch-me-up | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
 | cc-math-renderer | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | cc-pokedex | 在侧栏查看宝可梦图鉴，按名字或编号搜索。 |  | [链接](https://github.com/deonmenezes/claude-mods-pokedex) |
@@ -419,6 +421,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | lean-comments | 限制注释膨胀：Edit/Write 时标记多注释编辑，回合结束时检查 diff 的新注释行；Haiku 审查不值得保留的注释（复述代码或叙述改动）。 |  | [链接](https://github.com/bahaospanov/claude-mods/tree/main/lean-comments) |
 | lean-docs | 文档值得保留：Haiku 审查 git checkout 中增长的文档（runbook、设置页、叙述）、标记代码重复标识符的文档行、回合结束时检查 dif... |  | [链接](https://github.com/bahaospanov/claude-mods/tree/main/lean-docs) |
 | lean-scripts | 脚本值得保留：Haiku 审查在 git checkout 中写入或增长的脚本，标记那些你需要时直接打出来更快的脚本。 |  | [链接](https://github.com/bahaospanov/claude-mods/tree/main/lean-scripts) |
+| loc-split | 相对 main 的改动行数按代码/注释/测试/文档/生成文件拆分，可展开逐提交表；本机只读 git；条显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/RomanHotsiy/claude-mods/tree/main/loc-split) |
 | lockfile-sync | 锁文件同步检查。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/lockfile-sync) |
 | md-prompt | 输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。 | MIT | [链接](https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt) |
 | mdview | 侧栏渲染对话里的 Markdown，可点选让 Claude 改。 |  | [链接](https://github.com/xuanji86/claude-mdview) |
@@ -479,6 +482,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | atelier-bell | 告知 atelier 完成时机：flux7-studio 渲染进度显示为 toast 和状态行（studio: rendering、studio: las... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/atelier-bell) |
 | avatar7 | 机器脸随工具调用作评论，可选声线（SHODAN、HAL、GLaDOS 风格实验室 AI、Ada、duck7、Pod 042、Kaneda、Commis），... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/avatar7) |
 | baton-notify | 回合结束、提问、等待计划或权限确认时发 macOS 通知（可选提示音和语音），标出文件夹名和最近一次提问的前 40 字。备注：本机 process（osascript、afplay）。 | MIT | [链接](https://github.com/Humpens/claude-mods/tree/main/baton-notify) |
+| cc-notify-mod | 任务完成、Bash 连续失败、AskUserQuestion 时发 macOS 通知；本机 process（osascript），通知内容含回复摘要、报错或提问文字，只在本机显示；仅 macOS。许可证 Apache-2.0。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-notify-mod) |
 | cc-pr-tracker | 在提示框上方盯着 GitHub PR 的合并状态、评审与必需检查，有变化时 toast。 | MIT | [链接](https://github.com/sezaakgun/cc-pr-tracker) |
 | commit-cadence | 提交节奏提醒。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/commit-cadence) |
 | commit-drift | 状态行未提交文件数与距上次提交时间，久未提交会提醒。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commit-drift) |
@@ -519,6 +523,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | muse-pet | 提示框上方像素 Muse：等待时招手/叮咚，长回合结束跳跃，显示上下文与费用；/muse 可从 gadget.mububu.app 拉取自定义形象。备注：可选访问外网拉宠物料 JSON，不上传会话；本机 process（claude --version）。 | MIT | [链接](https://github.com/Soyn/mububu-pet) |
 | pet-widget | 像素 Clawd 宠物卡片，随工具成败和上下文占用变换心情并升级；工具调用只观察原样返回，需配合 widgets。备注：开启时每 600 毫秒重绘一次，卡片被隐藏也照跑；升级时弹提示；经验值存在本机，多个会话共享宠物所在会话。 | MIT | [链接](https://github.com/oMaN-Rod/claude-code-widgets/tree/main/plugins/pet-widget) |
 | pixel-buddy | /buddy 打开侧边像素陪伴娃娃窗格（小橘、史莱姆、机器人、幽灵四种形象），用来问和主会话无关的小问题，可复制回答。备注：在窗格按 Enter 时用 $.model.complete（Haiku）发送你的问题和这个侧聊最近 10 条对话，不带主会话内容；每次开会话都会弹一条载入提示；会话全程每 400ms 触发一次界面重绘（窗格关着也一样）；形象选择存本机 $.store；不联网。 | MIT | [链接](https://github.com/monowu/claude-mod-pixel-buddy) |
+| pixipet | 像素宠物，观察 Claude 的工作成长；/pet 窗格；tool.call 与 prompt.submit 原样 next；$.store 存状态。 | MIT | [链接](https://github.com/VibeMage/claude-mod-pet) |
 | plushie | 提示框上方的毛绒 Clawd，会随工具/上下文做出反应。 | MIT | [链接](https://github.com/xyc/plushie) |
 | pocket-familiar | 伴随工作的养成伙伴窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/pocket-familiar) |
 | quota-pets | 额度假宠扭蛋：每对话抽猫/狗，限额告急讲鬼故事、用完阵亡；context 当肚子（/petdex 肚子）。备注：本机读 session.messages 估算肚子内容。 |  | [链接](https://github.com/Open01277/claude-mods/tree/main/plugins/quota-pets) |
@@ -606,6 +611,7 @@ For detailed descriptions of all 568 mods, see the Chinese section below.
 | pulse-cc | 提示框上方显示股票报价（Yahoo 或 Pulse Mac 自选）。 | MIT | [链接](https://github.com/fatwang2/Pulse/tree/main/plugins/claude-code) |
 | tw-stock-mod | 提示框上方的台股/美股观察清单带状栏，台股交易时段显示台股（红涨绿跌）、美股交易时段显示美股（绿涨红跌）；支持 Yahoo 延迟报价或券商即时行情（永豐 ... |  | [链接](https://github.com/darrell-tw/darrelltw-mods/tree/main/mods/tw-stock-mod) |
 | vercel-deploys | /vercel 只读侧栏，使用用户的 token 调用 api.vercel.com，不发送会话内容；健康检查 GET 部署域名时不携带会话主体。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/vercel-deploys) |
+| vn-stockmarket-heatmap | 越南股市热力图与报价窗格；联网拉取 SSI iBoard 公开行情（只发送股票代码）；自选列表存本机。 | MIT | [链接](https://github.com/NgoTuong12345/claude-mod-vn-stock-watch) |
 
 ### 本地工具 Local Tools
 
