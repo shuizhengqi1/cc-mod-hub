@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 583 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 585 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 583 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 585 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 583 mods, see the Chinese section below.
+For detailed descriptions of all 585 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 583 个精选 Claude Code mods，按类别组织：
+以下是本市场的 585 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -175,6 +175,7 @@ For detailed descriptions of all 583 mods, see the Chinese section below.
 | cache-buster | 提示框上方条带显示缓存剩余时间与命中率。**调用 next 可堆叠**。仅在用户按钮时压缩。 |  | [链接](https://github.com/dblanken-yale/cache-buster) |
 | cc-usage | 状态行显示 5 小时与 7 天用量。**注册 /usage-bar，可能与已列出的 usage-bar mod 冲突，请二选一**。隐藏时 $.ui.status(undefined) 清除状态行。 | MIT | [链接](https://github.com/leonardokidd/cc-usage) |
 | status-line | 提示框下方一行显示目录、模型、上下文占比和 5 小时/每周用量及本地重置时间，/quota 展开详情，用量过 90% 弹提示；纯 UI，只读会话用量，不用网络。 | MIT | [链接](https://github.com/mikljohansson/claude-code-status-line) |
+| desktop-statusline | 只在 Claude Desktop 的 Code 页提示框上方画状态条：目录、git 分支与改动、会话时长、提问数与费用、上下文条、5 小时/每周用量与重置倒计时、上一轮模型/耗时/缓存命中、空闲对比缓存 TTL、压缩次数和运行中的子代理，用量到 80%/95% 弹提示；本机 git，只改显示，不用网络。 | MIT | [链接](https://github.com/centminmod/claude-plugins/tree/master/plugins/desktop-statusline) |
 
 ### 上下文管理 Context Management
 
@@ -537,6 +538,7 @@ For detailed descriptions of all 583 mods, see the Chinese section below.
 | ember | 一团小火苗跟着会话：在转圈行写当前步骤，提示框上方显示轮到谁，轮到你时本机播放提示音（/ember mute 静音，/ember pane 打开窗格）。默认 AbovePrompt 行除非 hasSurvey 不调用 next，会覆盖其他 mod 的行；带状还会显示上一条用户提示。 | MIT | [链接](https://github.com/nickdemari/ember) |
 | sidebot | 侧边像素机器人小窗旁路问答（/buddy）。备注：会话开始自动打开小窗；提问时用 $.model.fork 带上主会话全文，prompt 另含侧窗最近约 20 条对话；主会话尚无内容时改用 Haiku $.model.complete，只发人设与侧窗对话；每 400 毫秒重绘（关窗也跑）；/buddy 命令与 pixel-buddy 的 /buddy 冲突。 | MIT | [链接](https://github.com/monowu/claude-mod-sidebot) |
 | tama | 提示框上方像素宠物小游戏；纯本地 store/clock/ui。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/tama) |
+| pixel-pet | 提示框上方的像素宠物随每次工具调用做动作，下方 HP/MP/ST 用量 HUD，子代理显示小跟班；注册 preview_theme/set_theme/get_theme 三个换主题工具，preview_theme 会把 HTML 预览写到本机指定路径；工具调用只观察原样返回，不用网络。 | MIT | [链接](https://github.com/Namenomeaning/pixel-pet/tree/main/plugins/pixel-pet) |
 
 ### 图片与媒体 Images & Media
 
