@@ -4895,6 +4895,147 @@
         "source": "github",
         "repo": "gggg5151/claude-desktop-links-to-vscode-mod"
       }
+    },
+    {
+      "name": "open-file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/open-file-guard"
+      }
+    },
+    {
+      "name": "turn-chime",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/turn-chime"
+      }
+    },
+    {
+      "name": "quick-reply",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/quick-reply"
+      }
+    },
+    {
+      "name": "shelf",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/shelf"
+      }
+    },
+    {
+      "name": "sources",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/sources"
+      }
+    },
+    {
+      "name": "outputs",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/outputs"
+      }
+    },
+    {
+      "name": "hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/hud"
+      }
+    },
+    {
+      "name": "github-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/github-panel"
+      }
+    },
+    {
+      "name": "auto-resume",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanrobertwright/claude-mods.git",
+        "path": "mods/auto-resume"
+      }
+    },
+    {
+      "name": "ci-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/shissncg/claude-mods.git",
+        "path": "mods/ci-status"
+      }
+    },
+    {
+      "name": "turn-timestamp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/shissncg/claude-mods.git",
+        "path": "mods/turn-timestamp"
+      }
+    },
+    {
+      "name": "explorai-loading",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Tomy-Phillip/claude-mods.git",
+        "path": "plugins/explorai-loading"
+      }
+    },
+    {
+      "name": "ptt",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/chenyao0910/claude-ptt-mod.git",
+        "path": "plugins/ptt"
+      }
+    },
+    {
+      "name": "freeze",
+      "source": {
+        "source": "github",
+        "repo": "francktrouillez/claude-freeze"
+      }
+    },
+    {
+      "name": "pulse",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gfsaaser24/claude-code-mod-examples.git",
+        "path": "pulse"
+      }
+    },
+    {
+      "name": "prompts",
+      "source": {
+        "source": "github",
+        "repo": "jessetsai1024/claude-prompts"
+      }
+    },
+    {
+      "name": "rtl",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ofekbetzalel/claude-code-cli-rtl.git",
+        "path": "mod/rtl"
+      }
+    },
+    {
+      "name": "pikachu",
+      "source": {
+        "source": "github",
+        "repo": "ottho-nocode/claude-mod-pokemon"
+      }
     }
   ]
 }
