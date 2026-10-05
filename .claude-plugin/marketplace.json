@@ -6050,6 +6050,67 @@
         "path": "mods/replay-edicoes",
         "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
       }
+    },
+    {
+      "name": "pdpa-blur",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Boom-Vitt/claude-mods-boombignose.git",
+        "path": "pdpa-blur",
+        "sha": "066d36a9ca291e078a802feb025d137f561e87e2"
+      }
+    },
+    {
+      "name": "agents-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Boom-Vitt/claude-mods-boombignose.git",
+        "path": "agents-panel",
+        "sha": "066d36a9ca291e078a802feb025d137f561e87e2"
+      }
+    },
+    {
+      "name": "where-were-we",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/scarrillo/agent-plugins.git",
+        "path": "where-were-we",
+        "sha": "38fe44d64a3db6ebe94641804c5a067aec899a47"
+      }
+    },
+    {
+      "name": "clauisc",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mireabot/Clauisc.git",
+        "path": "plugins/clauisc",
+        "sha": "2223981d3e64db35797428ea53f7710cb3f68aa7"
+      }
+    },
+    {
+      "name": "session-tracker",
+      "source": {
+        "source": "github",
+        "repo": "fixter-dev/claude-code-session-tracker",
+        "sha": "ac8480f0da7e8cc2f99d2e896ebdedebb7048d5e"
+      }
+    },
+    {
+      "name": "rich-statusline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/blackpaw-studio/claude-plugins.git",
+        "path": "plugins/rich-statusline",
+        "sha": "19e5bc38cfd48d162e3b4aa22db6f015f7ad7f49"
+      }
+    },
+    {
+      "name": "glyph-hud",
+      "source": {
+        "source": "github",
+        "repo": "MridulNegi2005/glyph-hud",
+        "sha": "0dc775eeecb613b4587767f127aadf68af7bdf25"
+      }
     }
   ]
 }

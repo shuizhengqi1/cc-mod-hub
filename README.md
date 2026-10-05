@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 777 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 784 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 777 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 784 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 777 mods, see the Chinese section below.
+For detailed descriptions of all 784 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 777 个精选 Claude Code mods，按类别组织：
+以下是本市场的 784 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -204,6 +204,8 @@ For detailed descriptions of all 777 mods, see the Chinese section below.
 | session-models | 显示主模型、每个模型被多少子代理使用（几个正在跑），子代理扎堆或某个子代理上下文过大时弹提醒。备注：只读会话与子代理用量，纯本机 UI。 | MIT | [链接](https://github.com/AbhiramDwivedi/claude-mods/tree/main/plugins/session-models) |
 | omp-statusline | Oh My Pi 风格的状态条：模型、当前目录、git 分支、PR 号、订阅标记、上下文占用和窗口大小。备注：本机运行只读 git rev-parse；分支变化时运行 gh pr view 查 PR 号（需本机 gh 登录才显示）。 |  | [链接](https://github.com/yi-john-huang/claude-garage/tree/main/plugins/omp-statusline) |
 | linha-do-tempo | 会话时间线面板：逐回合显示模型、推理强度、用过的工具、token 和耗时（/timeline，可导出或清空）。备注：只观察回合事件，纯本机 UI；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/linha-do-tempo) |
+| rich-statusline | 提示框下的多行状态面板：模型、目录、git 分支与改动、上下文构成、用量限额与费用，三种布局，提示框上方有设置菜单。备注：本机运行只读 git（rev-parse、diff --shortstat）；运行 gh pr view 查当前分支 PR 号（需本机 gh 登录才显示）；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/blackpaw-studio/claude-plugins/tree/main/plugins/rich-statusline) |
+| glyph-hud | 点阵风 HUD 面板（/glyph）：按模型统计聊天 token、5 小时限额估算、缓存计时和代码改动统计。备注：prompt.edit/prompt.submit 只用来估算草稿 token，不改写提示；大 transcript 用插件自带的本机 python 脚本读用量；可选开关 blockAttribution（默认关）开启后只拒绝带 Co-Authored-By 的 git commit；不调用模型。 | MIT | [链接](https://github.com/MridulNegi2005/glyph-hud) |
 
 ### 上下文管理 Context Management
 
@@ -487,6 +489,7 @@ For detailed descriptions of all 777 mods, see the Chinese section below.
 | pm-guard | Claude 用 npm/npx/yarn 时，若仓库锁文件指定 bun 或 pnpm 就 deny 并提示改用对应包管理器；没有锁文件时默认要求 bun。备注：只 deny，不改写命令；「无锁文件默认 bun」是作者偏好。 |  | [链接](https://github.com/narrowstacks/claude-code-mods/tree/master/pm-guard) |
 | vigia-api | 付费 API 看门：调用会花钱或花额度的工具和命令（Magnific、Kling、HeyGen、OpenRouter、Groq 等）前先问你，可授权 1 小时（/vigia）。备注：只拒绝不改写（deny）；没人在屏前时直接拒绝；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/vigia-api) |
 | guarda-colisao | 编辑前检查文件是否在本会话之外被改过（其他会话、你的编辑器或别的程序），有就问你怎么办（/colisao）。备注：只拒绝不改写（deny）；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/guarda-colisao) |
+| pdpa-blur | 把 transcript 里的个人数据（泰国身份证号、电话、邮箱、银行卡/账号、IP、token/密码等）画成灰块，鼠标悬停才显示；/pdpa-blur 开关。备注：只改本机显示，复制仍得原文；纯本机正则识别，不外发。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/pdpa-blur) |
 
 ### 开发工具 Dev Tools
 
@@ -574,6 +577,8 @@ For detailed descriptions of all 777 mods, see the Chinese section below.
 | followthrough-band | 提示框上方显示本仓库到期的 followthrough 跟进检查（Run / Snooze / Close）；会话里部署/发布后若没登记检查会提醒。备注：需安装 followthrough CLI；本机运行 followthrough 固定子命令；tool.call 原样返回；按「Run」或「Register checks」会以你的身份提交一条提示（你按才会）。 | MIT | [链接](https://github.com/BayramAnnakov/followthrough/tree/main/mod) |
 | mapa-calor | 项目文件夹热力图：每个文件夹有多少文件、占多少空间，带彩色条（/mapa、/mapa bytes）。备注：只用 fs.list 列文件，不读内容；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/mapa-calor) |
 | replay-edicoes | 回放本会话的编辑：逐步查看每次 Edit/Write 的 diff，前后翻页并可复制（/replay）。备注：只读会话消息，纯本机 UI；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/replay-edicoes) |
+| where-were-we | 给 transcript 里每条你的提示打上时间戳，页脚加上/下跳转；/where-were-we 列最近提示、last 回顾本项目上一个会话；新会话开头弹一条回顾提示（可关）。备注：session.append 只读不改；本机 grep 读当前 transcript 和 Claude Code 的提示历史；纯本机。 | MIT | [链接](https://github.com/scarrillo/agent-plugins/tree/main/where-were-we) |
+| session-tracker | 侧栏列出本机所有打开的 Claude Code 会话，需要你处理的排最前，带提示音。备注：本机 ps/grep/tail 读会话文件；可在面板里给其它会话发消息（$.session.send），并在二次确认后 kill -TERM 其它会话进程（只在你点击时）。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |
 
 ### 子代理管理 Subagent Management
 
@@ -607,6 +612,7 @@ For detailed descriptions of all 777 mods, see the Chinese section below.
 | browser-lanes | 显示本会话的 Playwright 浏览器及当前占用者；子代理要用浏览器时排队等前一个用完（等超过 5 分钟则拒绝）；/browser clean 关掉残留浏览器。备注：只等待/deny，不改写工具调用；/browser clean 会结束本会话残留的浏览器进程（你执行才会）。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/browser-lanes) |
 | agent-jobs | /jobs 面板列出运行中的子代理和后台 shell（用时、Stop 按钮），后台任务结束时弹 toast。备注：tool.call 原样返回；prompt.submit/session.receive 只读取任务通知，不改写。 |  | [链接](https://github.com/narrowstacks/claude-code-mods/tree/master/agent-jobs) |
 | activity | 实时面板显示 Claude 正在做什么：运行中的工具（真实命令和计时）、等你批准的调用、子代理和当前待办计划；/activity 打开。备注：tool.call 原样返回，只用 $.tool.check 读取是否需要批准；纯本机 UI。 | MIT | [链接](https://github.com/mishgoldenberg/claude-mods/tree/main/plugins/activity) |
+| agents-panel | /agents-panel 打开侧栏，列出本项目、用户和插件定义的子代理（描述、模型、token），每个带 ▶ run 按钮。备注：读本机 .claude/agents/*.md；只有你点 ▶ run 才会用 $.agent.spawn 启动该子代理。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/agents-panel) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -718,6 +724,7 @@ For detailed descriptions of all 777 mods, see the Chinese section below.
 | lofi | 会话配乐：idle/focus/flow 与测试通过/失败提示音；/lofi on。备注：本机音频（插件内 mp3）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/lofi) |
 | show-me | /show-me <问题> 让 Claude 用 mermaid 图回答，并在面板里把回答中的 mermaid 图渲染成图片；不带参数则打开面板。备注：带问题时会以你的身份提交该问题并附加「用 mermaid 图回答」说明（你执行命令才会）；需本机 mmdc 和支持 kitty 图形协议的终端；临时文件在 $TMPDIR/show-me，旧目录会被清理。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/show-me) |
 | now-playing | 提示框上方一行显示 Spotify 正在播放的歌曲、进度和当前歌词，带上一首/暂停/下一首按钮，/music 也能控制（仅 macOS）。备注：本机 osascript 控制 Spotify；经 $.http 向 lrclib.net 查歌词，只发送歌名、歌手等曲目信息，不发送会话内容。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/now-playing) |
+| clauisc | 提示框上方的 Apple Music 正在播放条：像素封面、歌名、歌手和跟着节拍晃动的 Claude 玩偶。备注：仅 macOS；每 2 秒用本机 osascript 只读查询正在播放信息（首次会弹 macOS 授权）；其它系统只显示无法读取。 | MIT | [链接](https://github.com/mireabot/Clauisc/tree/main/plugins/clauisc) |
 
 ### 任务与项目 Task & Project
 
