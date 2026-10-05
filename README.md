@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 528 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 531 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 528 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 531 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 528 mods, see the Chinese section below.
+For detailed descriptions of all 531 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 528 个精选 Claude Code mods，按类别组织：
+以下是本市场的 531 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -416,6 +416,7 @@ For detailed descriptions of all 528 mods, see the Chinese section below.
 | spx-chart | 在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。 |  | [链接](https://github.com/zviryatko/claude-spx) |
 | statusbar | 状态栏显示当前 git 分支与仓库状态，仅本地 git rev-parse 查询。 | MIT | [链接](https://github.com/sgmonda/statusbar) |
 | test-progress | 后台测试进度窗格（backend/frontend）；/test-progress 查询或启动已配置的本机测试命令；AbovePrompt 先调 next 再叠加一行摘要。备注：本机 process（bash/PowerShell 收集器可跑本机测试）。 | MIT | [链接](https://github.com/fabiopbarbieri/claude-test-progress) |
+| tool-meter | 提示框上方显示本会话各工具调用次数的条形图，并在状态栏显示最近工具与总次数；只计数、不改写工具调用，显示时不调 next。 |  | [链接](https://github.com/VerbodhDev/tool-meter) |
 | touch-map | 文件活动热力图：把 Claude 本会话读过、写过的文件画成文件树热力图，按访问频率着色。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/touch-map) |
 | transit-map | 把 git 历史画成地铁图，分支是线，提交是站。 | MIT | [链接](https://github.com/ccdwyer/transit-map) |
 | telescreen | 读本机 .claude/flywheel/LEARNINGS.md，读写到被引用的文件时在提示框上方显示对应经验条目，/telescreen 看统计。只观察。备注：显示时 AbovePrompt 会盖住别的行（可点 Hide）。 | MIT | [链接](https://github.com/arazvan-ec/xmarks/tree/main/mods/telescreen) |
@@ -443,6 +444,7 @@ For detailed descriptions of all 528 mods, see the Chinese section below.
 | flightdeck | 只读观测面板，集中看权限裁决与子代理进度。 |  | [链接](https://github.com/scasella/claude-flightdeck) |
 | multi-core | 把 ChatGPT/Cursor/Zen 等接入 /model（需 claude-multi launcher）。 |  | [链接](https://github.com/greenpolo/cc-multi-cli-plugin/tree/main/plugins/multi-core) |
 | plan-progress | 计划进度条 + 子代理条带。 |  | [链接](https://github.com/zycck/claude-mods/tree/main/plugins/plan-progress) |
+| prompt-posse | 主代理和每个子代理化身像素小人在提示框上方来回走动，速度随输出量变化，可显示子代理任务描述图例；只改显示，/posse 开关，显示时不调 next。 | MIT | [链接](https://github.com/RyanEmslie/prompt-posse) |
 | subagent-ledger | 子代理账本。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/subagent-ledger) |
 | swarm | 子代理/团队任务控制室窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm) |
 | maestro-lanes | 配合 Maestro，每 2 秒读本机 /tmp/maestro-lanes 下的 lane 输出文件，在提示框上方显示各外部 lane 的状态与耗时。只观察。备注：有运行项时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ricardosuman/maestro/tree/main/mods/lanes) |
@@ -541,6 +543,7 @@ For detailed descriptions of all 528 mods, see the Chinese section below.
 | human-in-the-loop | 把只有用户能做的事挂在 My tasks 窗格里，完成后再回给 Claude。 | MIT | [链接](https://github.com/tzafrir/human-in-the-loop) |
 | loose-ends | 追踪会话中未完成的待办事项，回合结束用 $.model.complete 总结剩余任务。 | MIT | [链接](https://github.com/fernandomoraes/loose-ends) |
 | party | 本机多会话面板；别的会话碰过同一 PR 时 ask，不改写命令。/broadcast 把用户刚输入的文字发给本机另一个会话。备注：本机 git。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/party) |
+| recap-plus | 在提示框上方显示本会话的目的与现状，/recap-plus 打开窗格查看已完成、决定、待你确认和下一步。备注：会读本地会话记录；每轮主回答结束后（以及打开已有会话时）调用 $.model.complete（Haiku），发送上一版摘要、本轮请求（≤800 字）与回答（≤3000 字）、本轮问答、工具活动（Bash 命令或描述首行、编辑的文件路径、URL、搜索词、子代理描述、MCP 工具名），首次还会带上压缩摘要（≤2000 字）和前 20 条请求首行；AbovePrompt 条有内容时不调用 next，可能盖住其他 mod 的内容；不联网。 | MIT | [链接](https://github.com/skanehira/claude-recap-plus) |
 | standup | 跨会话记录你的提问与改动文件，/standup 用模型写成日报摘要。 | MIT | [链接](https://github.com/claudemodz/mods/tree/main/plugins/standup) |
 | sticky-todos | 待办侧栏；观察 TodoWrite/Task*，不改写工具。 | MIT | [链接](https://github.com/paweechinagarn/claude-code-mods/tree/main/sticky-todos) |
 | sudus | 本地运行 sudus wake（或插件自带 node bin）在提示框上方或窗格显示项目 verdict；不调用模型。 | MIT | [链接](https://github.com/eas4ai/sudus) |
