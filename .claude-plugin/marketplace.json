@@ -4597,6 +4597,13 @@
         "url": "nogu66/claude-code",
         "path": "git-ops"
       }
+    },
+    {
+      "name": "crypto-band",
+      "source": {
+        "source": "git",
+        "url": "thewhitewizard/crypto-band"
+      }
     }
   ]
 }
