@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 518 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 523 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 518 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 523 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 518 mods, see the Chinese section below.
+For detailed descriptions of all 523 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 518 个精选 Claude Code mods，按类别组织：
+以下是本市场的 523 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -138,6 +138,7 @@ For detailed descriptions of all 518 mods, see the Chinese section below.
 | trek-band | 提示框上方星际迷航风格用量环与像素动画场景。 | MIT | [链接](https://github.com/rb17080/trek-band/tree/main/plugins/trek-band) |
 | turn-footer | 每条回答下方改成回合摘要（工具、请求、tokens、缓存命中）。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/turn-footer) |
 | turn-meter | 状态行显示当前回合耗时与 token。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/turn-meter) |
+| u | 在状态栏显示 5 小时、7 天等限额用量和按 API 价格折算的费用，/meter 打开详情面板；只读会话用量；无显示内容时状态文本为 undefined，$.ui.status(undefined) 会清除其他 mod 的状态；不使用网络。 | MIT | [链接](https://github.com/Humpens/claude-mods/tree/main/u) |
 | usage-band | 在提示框上方显示 5 小时/7 天限额、上下文窗口与缓存命中率。 | MIT | [链接](https://github.com/JetsonChan/CC-Usage-Band/tree/main/usage-band) |
 | usage-bar | 用量条：可调用 Anthropic 的 OAuth 用量 API（使用当前登录凭证，请求体为空）查看 5 小时与 7 天限额、上下文与缓存命中率。 | MIT | [链接](https://github.com/muratkaragozgil/claude-code-usage-bar) |
 | usage-bars | 上下文迷你图：把本会话的上下文占用画成字符级走势条，随回合增长刷新。 | MIT | [链接](https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/usage-bars) |
@@ -177,6 +178,7 @@ For detailed descriptions of all 518 mods, see the Chinese section below.
 | compact-tools | 压缩工具输出显示（含 MCP/Bash 错误）。 |  | [链接](https://github.com/AJclemendor/my-mods/tree/main/plugins/compact-tools) |
 | context-guard | 上下文占用状态行，越过阈值 toast 提醒 /compact。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/context-guard) |
 | context-lens | 固定显示上下文占用、增长与距 compaction 的回合数。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/context-lens) |
+| context-meter | 在底部模式栏显示上下文用量（已用/窗口与百分比），到 80% 时弹出提示建议 /compact；只读会话用量。 | MIT | [链接](https://github.com/Vibe-Commit/claude-context-mods/tree/main/plugins/context-meter) |
 | context-restore | 恢复上下文状态。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/context-restore) |
 | context-view | 提示框上方一行上下文占用与距 auto-compact 余量。 |  | [链接](https://github.com/kongyo2/context-view) |
 | context-gauge | 提示脚注彩色 ctx NN% 上下文用量；/ctx 看分类拆解。 | MIT | [链接](https://github.com/tommy5dollar/claude-mods/tree/main/context-gauge) |
@@ -222,6 +224,7 @@ For detailed descriptions of all 518 mods, see the Chinese section below.
 | flashmodel | 提示框上方点选切换模型与 effort（走内置 /model、/effort），纯 UI。 | MIT | [链接](https://github.com/Rafael-CRL/FlashModel) |
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
 | hide-diffs | 把 Edit/Write/NotebookEdit/Bash 的完整 diff 收成一行加减摘要，ctrl+q 切换显示。纯 UI，不改写工具。 | MIT | [链接](https://github.com/gixxy22/hide-diffs) |
+| hint-mod | 隐藏输入框下方的灰色提示行（如 ? for shortcuts、esc to interrupt），只改 PromptHint 的显示。 | MIT | [链接](https://github.com/zyx1121/hint-mod) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
 | kit-sink | /kit sink 打开组件厨房水槽窗格，演示候选 UI 组件；只观察 tool.call/turn.complete 且先调 next，不改写工具或提示。 | MIT | [链接](https://github.com/eduardocruz/cc-kit/tree/main/mods/kit-sink) |
 | netsignal | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
@@ -448,6 +451,7 @@ For detailed descriptions of all 518 mods, see the Chinese section below.
 |-----------|------------------|----------------|-------------|
 | atelier-bell | 告知 atelier 完成时机：flux7-studio 渲染进度显示为 toast 和状态行（studio: rendering、studio: las... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/atelier-bell) |
 | avatar7 | 机器脸随工具调用作评论，可选声线（SHODAN、HAL、GLaDOS 风格实验室 AI、Ada、duck7、Pod 042、Kaneda、Commis），... | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/avatar7) |
+| baton-notify | 回合结束、提问、等待计划或权限确认时发 macOS 通知（可选提示音和语音），标出文件夹名和最近一次提问的前 40 字。备注：本机 process（osascript、afplay）。 | MIT | [链接](https://github.com/Humpens/claude-mods/tree/main/baton-notify) |
 | cc-pr-tracker | 在提示框上方盯着 GitHub PR 的合并状态、评审与必需检查，有变化时 toast。 | MIT | [链接](https://github.com/sezaakgun/cc-pr-tracker) |
 | commit-cadence | 提交节奏提醒。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/commit-cadence) |
 | commit-drift | 状态行未提交文件数与距上次提交时间，久未提交会提醒。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commit-drift) |
@@ -540,6 +544,7 @@ For detailed descriptions of all 518 mods, see the Chinese section below.
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
 | taskrail | 在输入框上方显示本会话计划的波次任务看板，Claude 通过它注册的 plan/set/show 三个工具更新；/taskrail 切换 off/bar/full/both；看板显示时 AbovePrompt 不调 next；计划按会话存在本机 $.store。 | MIT | [链接](https://github.com/drolosoft/taskrail) |
 | ssi-cockpit | 配合 ssi 流程，读本机 .ssi/state.json，在提示框上方显示 8 阶段进度条，阶段变化时 toast，/ssi-map 打开阶段图。只观察。没有 .ssi/state.json 快照时会调用 $.ui.status(undefined) 并可能清除其他 mod 的状态行。备注：有状态时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ssime-git/ssi-ai-skill/tree/main/mods/ssi-cockpit) |
+| today | 按 Today/◎/○/△ 分级管理本机 todo.md（默认 ~/todo.md），状态栏显示今日件数，/todo 打开面板，并注册 add_task、move_task 工具供 Claude 改清单；AbovePrompt 带默认关闭，仅在 /todo band 后显示且不调用 next；/todo off 设置 $.ui.status(undefined)，会清除其他 mod 的状态。 | MIT | [链接](https://github.com/Humpens/claude-mods/tree/main/today) |
 | workflow-band | 在提示框上方显示 Document Workflow 关卡（workflow-cli status）的检查结果与下一步。只观察。备注：本机 process（workflow-cli）；AbovePrompt 会盖住别的行。 |  | [链接](https://github.com/berlysia/dotfiles/tree/master/mods/workflow-band) |
 | todos | 会话开始在提示上方列出仓库 TODO/FIXME/HACK（git blame 排序）；备注：本机 git。 | MIT | [链接](https://github.com/bengous/claude-code-plugins/tree/main/todos) |
 | task-line | 提示框上方任务列表进度行（TodoWrite/TaskCreate 等填充）；测试失败时标红。纯 UI，只观察，不改写。 | MIT | [链接](https://github.com/muellerei/task-line) |

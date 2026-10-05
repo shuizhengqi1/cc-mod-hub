@@ -3981,6 +3981,45 @@
         "url": "kyongsik-yoon/claude-mods",
         "path": "smooth-stream"
       }
+    },
+    {
+      "name": "hint-mod",
+      "source": {
+        "source": "git",
+        "url": "zyx1121/hint-mod"
+      }
+    },
+    {
+      "name": "context-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "Vibe-Commit/claude-context-mods",
+        "path": "plugins/context-meter"
+      }
+    },
+    {
+      "name": "baton-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "Humpens/claude-mods",
+        "path": "baton-notify"
+      }
+    },
+    {
+      "name": "today",
+      "source": {
+        "source": "git-subdir",
+        "url": "Humpens/claude-mods",
+        "path": "today"
+      }
+    },
+    {
+      "name": "u",
+      "source": {
+        "source": "git-subdir",
+        "url": "Humpens/claude-mods",
+        "path": "u"
+      }
     }
   ]
 }
