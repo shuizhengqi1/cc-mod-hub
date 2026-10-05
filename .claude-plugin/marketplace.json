@@ -4785,6 +4785,61 @@
         "source": "github",
         "repo": "narze/flappy-claude-mod"
       }
+    },
+    {
+      "name": "secrets-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/BioInfo/slopless.git",
+        "path": "mods/secrets-guard"
+      }
+    },
+    {
+      "name": "guardclaw",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/TakeInterestInc/guardclaw-core.git",
+        "path": "claude-code-mod"
+      }
+    },
+    {
+      "name": "agent-diary",
+      "source": {
+        "source": "github",
+        "repo": "hemanth/agent-diary"
+      }
+    },
+    {
+      "name": "progress-bar-3000",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/atomicstack/progress-bar-3000.git",
+        "path": "claude-code-mod"
+      }
+    },
+    {
+      "name": "xmuse",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/iiyazu/Cross-Muse.git",
+        "path": "integrations/claude-code"
+      }
+    },
+    {
+      "name": "cielinux-scenes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/JamsMendez/CieLinux.git",
+        "path": "integrations/claude-code"
+      }
+    },
+    {
+      "name": "a2ui-claude-code",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/a2uicatalog/a2ui.git",
+        "path": "claude-code-surface"
+      }
     }
   ]
 }
