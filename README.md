@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 485 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 491 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 485 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 491 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 485 mods, see the Chinese section below.
+For detailed descriptions of all 491 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 485 个精选 Claude Code mods，按类别组织：
+以下是本市场的 491 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -162,6 +162,8 @@ For detailed descriptions of all 485 mods, see the Chinese section below.
 | otto-hud | 桌面端提示框上方 Otto 章鱼用量预报（上下文/5h/7d）；终端不绘制。纯 UI。 | Apache-2.0 | [链接](https://github.com/manuacl/claude-mods/tree/main/plugins/otto-hud) |
 | chai-meter | 会话花费用「几杯 chai」展示；/chai。纯 UI，只读会话用量。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/chai-meter) |
 | pixelbar | 提示框上方像素状态带：模型/上下文/限额/费用/git 与回合摘要；/session-files。备注：本机 git；AbovePrompt 显示时可不调 next。 |  | [链接](https://github.com/elkinaguas/claude-mods/tree/main/pixelbar) |
+| cache-buster | 提示框上方条带显示缓存剩余时间与命中率。**调用 next 可堆叠**。仅在用户按钮时压缩。 |  | [链接](https://github.com/dblanken-yale/cache-buster) |
+| cc-usage | 状态行显示 5 小时与 7 天用量。**注册 /usage-bar，可能与已列出的 usage-bar mod 冲突，请二选一**。隐藏时 $.ui.status(undefined) 清除状态行。 | MIT | [链接](https://github.com/leonardokidd/cc-usage) |
 
 ### 上下文管理 Context Management
 
@@ -192,6 +194,7 @@ For detailed descriptions of all 485 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | 12ui-plugin | 提供设计面板。 |  | [链接](https://github.com/just-every/12ui-plugin) |
+| ambient | 提示框上方动画场景带与本地音效。**显示时 AbovePrompt 不调用 next 并盖住其他带**。/ambient weather 仅发送城市名与坐标到 Open-Meteo，不含会话内容。**在无指针终端上 PromptHint 改写提示尾部但仍调用 next**。 | MIT | [链接](https://github.com/barisdemirhan/claude-ambient) |
 | aside | /aside 只读侧聊：基于会话 transcript fork 问答，不写回主线程。 | MIT | [链接](https://github.com/JayDoubleu/aside) |
 | at-work | 提示框上方像素场景动画，按当前工具活动切换画面；spinner 计算机笑话；节日装饰。纯 UI，不改写工具/提示。 | MIT | [链接](https://github.com/zhuoxingzhang/pixel-at-work) |
 | catch-me-up | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
@@ -225,6 +228,7 @@ For detailed descriptions of all 485 mods, see the Chinese section below.
 | quick-buttons | 侧栏快捷按钮启动已选 slash 命令。备注：点击会 $.command.run。 |  | [链接](https://github.com/DarioFontanel/claude-code-mods/tree/main/quick-buttons) |
 | quiet-bash | 精简 Bash 行展示，可选本地 magick 缩略图。备注：会本地调用 magick/identify 生成缩略图。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/quiet-bash) |
 | quiet-spinner | 弱化/安静化等待 spinner。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/quiet-spinner) |
+| reply-frame | 给助手回复套上圆角彩色边框；超过 1 万字符的回复回退到默认渲染。 | MIT | [链接](https://github.com/takosasi-dev/reply-frame) |
 | reply-highlight | 用彩虹边和紫色底突出 Claude 的回复。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/reply-highlight) |
 | rtl-text | 用 fribidi 把波斯语/阿拉伯语/希伯来语在 transcript 里按 RTL 整形对齐。 |  | [链接](https://github.com/aliir74/claude-code-rtl) |
 | ruview-live | /ruview 打开 CSI/雷达传感只读窗格（瀑布图与雷达视图）。备注：运行插件旁的 @ruvnet/ruview CLI（node）；只读设备数据。 | MIT | [链接](https://github.com/ruvnet/RuView/tree/main/harness/ruview/mod) |
@@ -347,6 +351,7 @@ For detailed descriptions of all 485 mods, see the Chinese section below.
 | valet-mode | 代客模式：除 Read/Grep/Glob/WebSearch/WebFetch 外一律 deny；锁文件跨窗口。备注：只 deny，不改写。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/valet-mode) |
 | main-guard | 在受保护分支上拦截危险 git（force-push/hard reset 等）；可询问后放行 push。显示阻断理由时，其 AbovePrompt 返回自己的行且不调 next，可能覆盖其他 mod 的行。备注：只 deny，不改写命令；本机 git。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/main-guard) |
 | whoopgate | 心率超阈值时拒绝危险 Bash（读本机 ~/.whoopgate/hr.json）。备注：只 deny，不改写；本机读文件/git。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/whoopgate) |
+| explain-permission | 收到权限请求时在侧窗格用 $.model.fork 或 $.model.complete（haiku）解释。**仅解释：不拒绝、不改写**。 |  | [链接](https://github.com/petershk/explain-permission) |
 
 ### 开发工具 Dev Tools
 
@@ -552,6 +557,7 @@ For detailed descriptions of all 485 mods, see the Chinese section below.
 | usage-reporter | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | agent-shell-watch | 状态行与窗格跟踪本会话 Bash/后台任务与 runner（Codex/Pi 等）；只观察，不改写。备注：本机 process（tail）。 | MIT | [链接](https://github.com/apolenkov/agent-shell-watch) |
 | tts-lite | 回合结束后本机 TTS 朗读短回复；长回复用 $.model.complete 摘要。空闲且旧 status hook 移除时调用 $.ui.status(undefined)，会清除其他 mod 使用的状态行。备注：本机 process（piper/espeak/paplay）；使用 $.model.complete。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/tts-lite) |
+| quickswitch | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
 
 ### 其他工具 Other Tools
 
