@@ -4443,6 +4443,29 @@
         "url": "Vatroslav/cc-mod-ferro",
         "path": "plugin"
       }
+    },
+    {
+      "name": "handover-report",
+      "source": {
+        "source": "git-subdir",
+        "url": "bzatrok/claudemods",
+        "path": "handover-report"
+      }
+    },
+    {
+      "name": "tldr",
+      "source": {
+        "source": "git-subdir",
+        "url": "bzatrok/claudemods",
+        "path": "tldr"
+      }
+    },
+    {
+      "name": "status-line",
+      "source": {
+        "source": "git",
+        "url": "mikljohansson/claude-code-status-line"
+      }
     }
   ]
 }
