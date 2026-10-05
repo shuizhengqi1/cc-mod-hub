@@ -3317,6 +3317,62 @@
         "url": "harshitmywork17/claude-mods",
         "path": "plugins/workbench"
       }
+    },
+    {
+      "name": "kiko",
+      "source": {
+        "source": "git-subdir",
+        "url": "kikostefanov-lab/claude-code-mods",
+        "path": "kiko"
+      }
+    },
+    {
+      "name": "files-seen",
+      "source": {
+        "source": "git-subdir",
+        "url": "Alyan-khattak/Claude-Code-Mods",
+        "path": "files-seen"
+      }
+    },
+    {
+      "name": "limit-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "Alyan-khattak/Claude-Code-Mods",
+        "path": "limit-meter"
+      }
+    },
+    {
+      "name": "session-journal",
+      "source": {
+        "source": "git-subdir",
+        "url": "Alyan-khattak/Claude-Code-Mods",
+        "path": "session-journal"
+      }
+    },
+    {
+      "name": "slick-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "mustafa89/my-claude-code-mods",
+        "path": "slick-bar"
+      }
+    },
+    {
+      "name": "tool-cards",
+      "source": {
+        "source": "git-subdir",
+        "url": "mustafa89/my-claude-code-mods",
+        "path": "tool-cards"
+      }
+    },
+    {
+      "name": "session-activity",
+      "source": {
+        "source": "git-subdir",
+        "url": "bennewton999/claude-code-mods",
+        "path": "session-activity"
+      }
     }
   ]
 }
