@@ -3065,6 +3065,28 @@
         "source": "git",
         "url": "germanfndez/cc-range"
       }
+    },
+    {
+      "name": "claude-chef",
+      "source": {
+        "source": "git",
+        "url": "schalkneethling/claude-chef"
+      }
+    },
+    {
+      "name": "flashmodel",
+      "source": {
+        "source": "git",
+        "url": "Rafael-CRL/FlashModel"
+      }
+    },
+    {
+      "name": "agent-narrator",
+      "source": {
+        "source": "git-subdir",
+        "url": "OneWave-AI/claude-code-mods",
+        "path": "agent-narrator"
+      }
     }
   ]
 }
