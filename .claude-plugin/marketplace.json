@@ -3021,6 +3021,13 @@
         "source": "git",
         "url": "ccdwyer/diff-seismograph"
       }
+    },
+    {
+      "name": "crosstalk",
+      "source": {
+        "source": "git",
+        "url": "kbrdn1/claude-crosstalk"
+      }
     }
   ]
 }

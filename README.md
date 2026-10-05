@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 392 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 393 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 392 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 393 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 392 mods, see the Chinese section below.
+For detailed descriptions of all 393 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 392 个精选 Claude Code mods，按类别组织：
+以下是本市场的 393 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -177,6 +177,7 @@ For detailed descriptions of all 392 mods, see the Chinese section below.
 | collapse-answers | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
 | message-timestamps | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | commonplace-pane | 侧边窗格展示芝加哥艺术学院公版画，随仓库状态变「天气」。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commonplace-pane) |
+| crosstalk | /crosstalk 打开窗格，记录本会话与其他 Claude Code 会话的 peer 收发，并可在窗格内回复；只读观察、不改写工具。备注：hook 本机 find/grep 扫描 session journal；thread 存 local store。 | MIT | [链接](https://github.com/kbrdn1/claude-crosstalk) |
 | diff-seismograph | 提示框上方 braille 地震图式编辑幅度、大改 quake 提醒与仓库热力 treemap。备注：使用本机 git。 | MIT | [链接](https://github.com/ccdwyer/diff-seismograph) |
 | drift | 漂移动画效果窗格。 | MIT | [链接](https://github.com/azkhh/drift) |
 | file-view | 点击 Read/Edit/Write 行的路径，在侧栏打开文件内容。备注：本机读文件。 |  | [链接](https://github.com/ushironoko/dotfiles/tree/main/claude/.claude/skills/file-view) |
