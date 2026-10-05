@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 655 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 658 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 655 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 658 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 655 mods, see the Chinese section below.
+For detailed descriptions of all 658 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 655 个精选 Claude Code mods，按类别组织：
+以下是本市场的 658 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -254,6 +254,7 @@ For detailed descriptions of all 655 mods, see the Chinese section below.
 | helix-spinner | 把 spinner 行换成旋转的盲文双螺旋、随机动词和本回合用时与 token；/helix-dex 收集动词，/helix-theme 节日主题，/helix-demo 预览。只改显示，不改提示或工具，不联网；在终端和桌面端 Spinner 插槽不调用 next 而自绘（其他界面仍调 next，只换动词）；$.store 存收集和设置。 |  | [链接](https://github.com/dylan-chalkboard/helix-spinner/tree/main/plugins/helix-spinner) |
 | hide-diffs | 把 Edit/Write/NotebookEdit/Bash 的完整 diff 收成一行加减摘要，ctrl+q 切换显示。纯 UI，不改写工具。 | MIT | [链接](https://github.com/gixxy22/hide-diffs) |
 | hint-mod | 隐藏输入框下方的灰色提示行（如 ? for shortcuts、esc to interrupt），只改 PromptHint 的显示。 | MIT | [链接](https://github.com/zyx1121/hint-mod) |
+| hyperspace | Spinner 行换成 X-wing 或 TIE 战机穿越视差星空的动画（激光齐射，每 24 秒跳一次超空间），/ship 切换战机；提示语为俄语。只改显示，不改提示或工具，不联网；终端且宽度足够时 Spinner 插槽不调用 next 而自绘（其他情况调 next，只换文案）；$.store 记住所选战机。 | MIT | [链接](https://github.com/alexregrets/hyperspace) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
 | kit-sink | /kit sink 打开组件厨房水槽窗格，演示候选 UI 组件；只观察 tool.call/turn.complete 且先调 next，不改写工具或提示。 | MIT | [链接](https://github.com/eduardocruz/cc-kit/tree/main/mods/kit-sink) |
 | msg-timestamps | 在每段 Claude 回复前加彩色本地时间戳（到达时间）。turn.step 流式内容原样转发不改写；session.start 本机运行 `date +%z` 取时区；**有时间戳时 AssistantMessage 自绘该行、不调用 next**；不上网。 |  | [链接](https://github.com/FukKwang/claude-msg-timestamps) |
@@ -288,6 +289,7 @@ For detailed descriptions of all 655 mods, see the Chinese section below.
 | status-band | 可主题化状态条：模型/effort、目录、git、上下文与配额等；/band 配置。 | MIT | [链接](https://github.com/dukechain2333/cc-status-band) |
 | status-bar | 把各 mod 状态行折成一行（或上方 band）。纯 UI。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/status-bar) |
 | stepscope | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
+| themes | 用 Monokai Pro 配色（6 套，/plugin configure 选）重绘 Claude 回复：标题、粗斜体、行内代码、链接、列表和代码块高亮。只改显示，存储的消息和 Claude 下一轮读到的内容不变，不联网。备注：终端里 AssistantMessage 插槽自绘时不调用 next；仓库内置了 marked 与 highlight.js 的压缩版 JS（均 MIT）。 | MIT | [链接](https://github.com/danishmughal/claude-code-themes) |
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | thinking-band | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
@@ -571,6 +573,7 @@ For detailed descriptions of all 655 mods, see the Chinese section below.
 | clawd-factory | /clawd-factory 打开窗格（每次会话开始也会自动打开并弹出"已加载"提示），每次工具调用多一只 Clawd 在对应工位（查阅、编辑、命令、子代理、其他）干活，显示当前工具、回合计时与失败次数。备注：使用 $.model.complete（Haiku，最多每 6 秒一次，只针对主代理 10 秒内的工具调用），把作业类别、工具名和目标（文件路径末两段，或命令、任务描述、搜索模式、URL、查询的首行）发去生成 12 字以内的日文台词。 | MIT | [链接](https://github.com/HayatoKonya/clawd-factory/tree/main/plugins/clawd-factory) |
 | clawdgotchi | 电子宠物 Clawd，在侧栏养成与互动。 | MIT | [链接](https://github.com/arthurseredaa/clawdgotchi) |
 | code-pet | 像素宠物窗格，随 Claude 活动反应。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet) |
+| coding-pet | 从蛋里孵出的宠物（/pet 打开窗格），随回合、提交、测试、成就成长，可喂养照顾，有日记和成就页；界面为日语。备注：prompt.submit 原样放行，只检测是否说了「谢谢」，不保存提示文字；tool.call 原样放行，只计数（日记只写固定句子，不记命令或文件）；开启聊天能力后经 $.model.complete（Haiku）只发宠物种类、名字、心情和计数，不发代码、路径、命令或提示；$.store 存档，$.audio 播放自带的 wav 音效；不联网。 | MIT | [链接](https://github.com/ytskmt14/coding-pet/tree/main/plugins/coding-pet) |
 | desk-pet | 提示框上方/侧栏小宠物，随工具与回合反应；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/isr431/desk-pet) |
 | dotpet | 输入框上方的像素宠物（待机、工作、完成、睡觉换图）；/dotpet 开关和改大小。备注：AbovePrompt 会先调 next；只用 $.store；附带浏览器里的画图编辑器；画作另见 LICENSE-ART.md。 | MIT | [链接](https://github.com/i-noma-ru/claude-dotpet) |
 | dragon-lair | 提示框上方像素龙穴小游戏。备注：本机 $.agent.list；prompt/tool 只观察。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dragon-lair) |

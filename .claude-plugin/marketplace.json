@@ -5036,6 +5036,28 @@
         "source": "github",
         "repo": "ottho-nocode/claude-mod-pokemon"
       }
+    },
+    {
+      "name": "hyperspace",
+      "source": {
+        "source": "github",
+        "repo": "alexregrets/hyperspace"
+      }
+    },
+    {
+      "name": "themes",
+      "source": {
+        "source": "github",
+        "repo": "danishmughal/claude-code-themes"
+      }
+    },
+    {
+      "name": "coding-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ytskmt14/coding-pet.git",
+        "path": "plugins/coding-pet"
+      }
     }
   ]
 }
