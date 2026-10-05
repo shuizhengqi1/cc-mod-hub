@@ -4721,6 +4721,21 @@
         "url": "https://github.com/Deluha/council-of-elrond.git",
         "path": "mods/council-of-elrond"
       }
+    },
+    {
+      "name": "msg-timestamps",
+      "source": {
+        "source": "github",
+        "repo": "FukKwang/claude-msg-timestamps"
+      }
+    },
+    {
+      "name": "notify-router",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pradyb/claude-mods.git",
+        "path": "notify-router"
+      }
     }
   ]
 }

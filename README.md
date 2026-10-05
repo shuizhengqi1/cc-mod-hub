@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 614 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 616 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 614 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 616 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 614 mods, see the Chinese section below.
+For detailed descriptions of all 616 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 614 个精选 Claude Code mods，按类别组织：
+以下是本市场的 616 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -248,6 +248,7 @@ For detailed descriptions of all 614 mods, see the Chinese section below.
 | hint-mod | 隐藏输入框下方的灰色提示行（如 ? for shortcuts、esc to interrupt），只改 PromptHint 的显示。 | MIT | [链接](https://github.com/zyx1121/hint-mod) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
 | kit-sink | /kit sink 打开组件厨房水槽窗格，演示候选 UI 组件；只观察 tool.call/turn.complete 且先调 next，不改写工具或提示。 | MIT | [链接](https://github.com/eduardocruz/cc-kit/tree/main/mods/kit-sink) |
+| msg-timestamps | 在每段 Claude 回复前加彩色本地时间戳（到达时间）。turn.step 流式内容原样转发不改写；session.start 本机运行 `date +%z` 取时区；**有时间戳时 AssistantMessage 自绘该行、不调用 next**；不上网。 |  | [链接](https://github.com/FukKwang/claude-msg-timestamps) |
 | netsignal | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
 | on-me | 提示框上条带：Claude 正在做什么，以及轮到你处理的事项。 | MIT | [链接](https://github.com/abhibansal60/claude-mods/tree/main/on-me) |
 | orange-prompt | 输入草稿白字橙底高亮（可配合 Orange Dark 主题）。纯 UI。 | MIT | [链接](https://github.com/philsimon/orange-prompt) |
@@ -523,6 +524,7 @@ For detailed descriptions of all 614 mods, see the Chinese section below.
 | notice-board | 同仓库各会话共享通知板。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/notice-board) |
 | notify | 桌面通知：Claude 回合完成或等待决策时发系统原生通知，后台时召回焦点。 | MIT | [链接](https://github.com/XD3an/cc-notify) |
 | notify-on-finish | 长回合结束后桌面通知（macOS osascript / Linux notify-send / 否则 toast）。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/notify-on-finish) |
+| notify-router | 按规则决定何时提醒（完成、等待你、出错）和发到哪里：macOS 通知（本机 osascript）、提示音、可选 ntfy。备注：**ntfy 默认关闭**，只有填写 ntfy topic 后才 $.http POST 到 ntfy 服务器，内容仅为状态文字（耗时、结束原因、Claude Code 通知文案，最多 200 字）和可关闭的文件夹名，不含对话内容；prompt.submit/tool.call 只用于取消待发提醒，原样 next 不改写；仅 macOS 有桌面通知与提示音。 |  | [链接](https://github.com/pradyb/claude-mods/tree/main/notify-router) |
 | nowloading | 显示加载动画与进度提示。 | MIT | [链接](https://github.com/vgnshiyer/nowloading) |
 | pomodoro | 番茄钟状态条与配置面板，纯本地计时与提醒。 | MIT | [链接](https://github.com/sneycampos/claude-pomodoro) |
 | pomodoro-widget | 番茄钟卡片，本地计时，到点 toast 提醒，需配合 widgets。备注：计时期间每秒刷新，卡片被隐藏也照跑。 | MIT | [链接](https://github.com/oMaN-Rod/claude-code-widgets/tree/main/plugins/pomodoro-widget) |
