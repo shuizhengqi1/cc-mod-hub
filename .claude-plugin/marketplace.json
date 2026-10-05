@@ -4085,6 +4085,13 @@
         "source": "git",
         "url": "monowu/claude-mod-pixel-buddy"
       }
+    },
+    {
+      "name": "ix-flow",
+      "source": {
+        "source": "git",
+        "url": "agent-ix/ix-flow"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 532 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 533 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 532 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 533 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 532 mods, see the Chinese section below.
+For detailed descriptions of all 533 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 532 个精选 Claude Code mods，按类别组织：
+以下是本市场的 533 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -542,6 +542,7 @@ For detailed descriptions of all 532 mods, see the Chinese section below.
 | dev-dash | 开发者仪表板窗格，集中显示会话状态与项目信息。 |  | [链接](https://github.com/RanaRauff/claude-dev-dashboard/tree/main/plugins/dev-dash) |
 | gsd-status-mod | 面向 GSD 项目：在提示框上方显示阶段/进度与 STATE.md 漂移警告，并把下一步动作放进提示行。 | MIT | [链接](https://github.com/helenkwok/gsd-status-mod) |
 | human-in-the-loop | 把只有用户能做的事挂在 My tasks 窗格里，完成后再回给 Claude。 | MIT | [链接](https://github.com/tzafrir/human-in-the-loop) |
+| ix-flow | 在提示框上方显示 ix-flow 工作流的阶段进度条（`/flow-status RUN_ID [绝对状态目录]\|demo\|off`）。备注：需自行 `npm i -g @agent-ix/ix-flow`，插件不下载 CLI；选中运行后每 2 秒，以及每轮结束和 Claude 每次用 Bash 调用 ix-flow 后，在本机执行 `ix-flow progress <运行ID> --json [--state-dir 目录]`（超时 3 秒，可用环境变量 `IX_FLOW_MOD_CLI` 换成别的可执行文件路径），只传运行 ID 和状态目录，不传会话内容；会读取 Claude 运行 ix-flow 的 Bash 输出来自动选中运行，工具结果原样返回，但会先等一次查询（最多约 3 秒）；AbovePrompt 调用 next，不遮挡其他 mod；附带 `/ix-flow`、`/ix-flow-create` 命令和两个技能，会让 Claude 用 Bash 运行 ix-flow 创建和推进工作流，并在 `~/.ix/flows` 写状态文件，人工审批关卡需用户确认；mod 本身不联网。 | MIT | [链接](https://github.com/agent-ix/ix-flow) |
 | loose-ends | 追踪会话中未完成的待办事项，回合结束用 $.model.complete 总结剩余任务。 | MIT | [链接](https://github.com/fernandomoraes/loose-ends) |
 | party | 本机多会话面板；别的会话碰过同一 PR 时 ask，不改写命令。/broadcast 把用户刚输入的文字发给本机另一个会话。备注：本机 git。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/party) |
 | recap-plus | 在提示框上方显示本会话的目的与现状，/recap-plus 打开窗格查看已完成、决定、待你确认和下一步。备注：会读本地会话记录；每轮主回答结束后（以及打开已有会话时）调用 $.model.complete（Haiku），发送上一版摘要、本轮请求（≤800 字）与回答（≤3000 字）、本轮问答、工具活动（Bash 命令或描述首行、编辑的文件路径、URL、搜索词、子代理描述、MCP 工具名），首次还会带上压缩摘要（≤2000 字）和前 20 条请求首行；AbovePrompt 条有内容时不调用 next，可能盖住其他 mod 的内容；不联网。 | MIT | [链接](https://github.com/skanehira/claude-recap-plus) |
