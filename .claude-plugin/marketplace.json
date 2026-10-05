@@ -4078,6 +4078,13 @@
         "source": "git",
         "url": "RyanEmslie/prompt-posse"
       }
+    },
+    {
+      "name": "pixel-buddy",
+      "source": {
+        "source": "git",
+        "url": "monowu/claude-mod-pixel-buddy"
+      }
     }
   ]
 }
