@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 525 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 528 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 525 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 528 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 525 mods, see the Chinese section below.
+For detailed descriptions of all 528 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 525 个精选 Claude Code mods，按类别组织：
+以下是本市场的 528 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -82,6 +82,7 @@ For detailed descriptions of all 525 mods, see the Chinese section below.
 | agent-flow | /flow 侧栏实时显示 subagent 树（零 token）。 |  | [链接](https://github.com/Charlie0113-T/claude-agent-flow) |
 | agent-monitor | 子代理监视带与 /sub 历史窗格：冲突/卡住提醒与费用估计（本地事件，不改写工具）。 | MIT | [链接](https://github.com/nokiy/claude-code-mods/tree/main/plugins/agent-monitor) |
 | ai-usage-band | 提示框上方用量带：上下文占用、限额窗口与会话费用（$.session.usage）。 |  | [链接](https://github.com/arvakme/claude-code-butler/tree/main/ai-usage-band) |
+| barra-usage-model | 提示框上方显示 5 小时、每周与上下文用量条（界面文字为葡萄牙语），提示框下方显示精简百分比、模型与 effort，可点击收起或展开（只读 $.session.usage）。备注：有内容时 AbovePrompt 与 SessionMode 不调 next，会盖掉其他 mod 在这两处的显示。 | MIT | [链接](https://github.com/sidneyfrancois/barra-usage-model) |
 | budget-guard | 费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard) |
 | burn | 提示框上方限额/用量积分与花费；/burn 看近 7 天。备注：用本机 Anthropic OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/PickleBoxer/burn) |
 | burn-meter | 提示框上方会话花费「火焰」条与限额，/burn 看每回合费用。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/burn-meter) |
@@ -477,7 +478,9 @@ For detailed descriptions of all 525 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | clawd | 思考行旁的像素 Clawd 吉祥物，按工具/命令表演动作。 |  | [链接](https://github.com/raresmun/claude-mods/tree/main/plugins/clawd) |
+| clawd-actor | 回合进行中在提示框上方让 Clawd 按 spinner 的 -ing 词或正在运行的工具表演场景（26 个场景），只改显示。 | MIT | [链接](https://github.com/BrianHuang813/clawd-actor) |
 | clawd-band | 提示框上方像素猫，随思考/编辑/搜索等状态动画；仅 UI。 | MIT | [链接](https://github.com/tomada1114/clawd-band/tree/main/plugins/clawd-band) |
+| clawd-factory | /clawd-factory 打开窗格（每次会话开始也会自动打开并弹出"已加载"提示），每次工具调用多一只 Clawd 在对应工位（查阅、编辑、命令、子代理、其他）干活，显示当前工具、回合计时与失败次数。备注：使用 $.model.complete（Haiku，最多每 6 秒一次，只针对主代理 10 秒内的工具调用），把作业类别、工具名和目标（文件路径末两段，或命令、任务描述、搜索模式、URL、查询的首行）发去生成 12 字以内的日文台词。 | MIT | [链接](https://github.com/HayatoKonya/clawd-factory/tree/main/plugins/clawd-factory) |
 | clawdgotchi | 电子宠物 Clawd，在侧栏养成与互动。 | MIT | [链接](https://github.com/arthurseredaa/clawdgotchi) |
 | code-pet | 像素宠物窗格，随 Claude 活动反应。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet) |
 | desk-pet | 提示框上方/侧栏小宠物，随工具与回合反应；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/isr431/desk-pet) |

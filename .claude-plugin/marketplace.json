@@ -4035,6 +4035,28 @@
         "url": "angeldelbiondo/claude-chat-bubbles",
         "path": "chat-bubbles"
       }
+    },
+    {
+      "name": "clawd-actor",
+      "source": {
+        "source": "git",
+        "url": "BrianHuang813/clawd-actor"
+      }
+    },
+    {
+      "name": "clawd-factory",
+      "source": {
+        "source": "git-subdir",
+        "url": "HayatoKonya/clawd-factory",
+        "path": "plugins/clawd-factory"
+      }
+    },
+    {
+      "name": "barra-usage-model",
+      "source": {
+        "source": "git",
+        "url": "sidneyfrancois/barra-usage-model"
+      }
     }
   ]
 }
