@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 431 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 438 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 431 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 438 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 431 mods, see the Chinese section below.
+For detailed descriptions of all 438 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 431 个精选 Claude Code mods，按类别组织：
+以下是本市场的 438 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -110,6 +110,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | effort-guard | 上下文/token 条带、升级信号与每回合 effort 日志。 | MIT | [链接](https://github.com/stefanochieli/claude-effort-guard) |
 | eta | 在 spinner 行显示本轮剩余时间（按任务节奏或历史回合学习，零 token）。 |  | [链接](https://github.com/hamza-siddiq/claude-eta/tree/main/eta) |
 | limit-bars | 提示框下四个动画环，显示上下文、会话和周限额。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/limit-bars) |
+| limit-meter | 提示框上方 5h/周限额条与重置倒计时；/limits；可 toast 告警。纯 UI，只读会话用量。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/limit-meter) |
 | limit-watch | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
 | native-hud | 输入框下方原生 HUD：模型、路径、git/worktree、上下文、5h/7d 用量、输出速度与缓存命中。备注：本机 git。 | MIT | [链接](https://github.com/Luban-Labs/native-hud) |
 | netrunner-hud | 会话仪表盘：上下文条、token 示波与状态窗格。 | MIT | [链接](https://github.com/ccdwyer/netrunner-hud) |
@@ -122,6 +123,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | session-dash | 会话仪表盘窗格：用量与回合概览。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/session-dash) |
 | session-receipt | /receipt 窗格列出每回合的 token 花费。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/session-receipt) |
 | shunt | 用用户自己的 gateway / token（SHUNT_* 或 ANTHROPIC_*）请求 GET /usage，在本地显示配额窗口；请求体为空。 | MIT | [链接](https://github.com/pleaseai/shunt/tree/main/plugins/shunt) |
+| slick-bar | 提示脚状态条：模型/目录/分支/上下文/限额与可选 cache-warm。备注：PromptHint 渲染时不调用 next，可能覆盖其他 mod 的提示行；本机 git。 | MIT | [链接](https://github.com/mustafa89/my-claude-code-mods/tree/main/slick-bar) |
 | spend-meter | 状态行显示会话费用、上下文与 5 小时限额。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/spend-meter) |
 | statuspane | 提示框上方浮动状态卡：模型、effort、上下文、5 小时/周限额、费用与分支，另有可供脚本/其他 mod 写入的进度条 API。 | MIT | [链接](https://github.com/xuanji86/claude-statuspane) |
 | statusband | 提示框上方两行状态带：上下文、缓存倒计时、限额与 git。备注：本机 git。 | MIT | [链接](https://github.com/dip497/claude-statusband) |
@@ -189,6 +191,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | drift | 漂移动画效果窗格。 | MIT | [链接](https://github.com/azkhh/drift) |
 | diff-minimap | Edit/Write 旁细迷你图条，标记改动位置；仅 UI。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/diff-minimap) |
 | file-view | 点击 Read/Edit/Write 行的路径，在侧栏打开文件内容。备注：本机读文件。 |  | [链接](https://github.com/ushironoko/dotfiles/tree/main/claude/.claude/skills/file-view) |
+| files-seen | 状态行与 /seen 窗格列出本会话读过/改过的文件。纯 UI，只观察 tool.call。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/files-seen) |
 | firstmate-calm | /calm 隐藏工具行并换成帆船 spinner；需开启 function hooks。 |  | [链接](https://github.com/kunchenguid/firstmate/tree/main/.claude/mods/firstmate-calm) |
 | flashmodel | 提示框上方点选切换模型与 effort（走内置 /model、/effort），纯 UI。 | MIT | [链接](https://github.com/Rafael-CRL/FlashModel) |
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
@@ -222,6 +225,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | think-meter | 桌面端回合计时器：等待/思考/写出/工具分段与 tok/s，附 /think-stats。 | MIT | [链接](https://github.com/Huuuuung/think-meter) |
 | thinking-band | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
 | timeline | 侧栏时间轴：本回合时间花在等待/思考/写出/工具/等帮手等。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/timeline) |
+| tool-cards | 终端里把工具调用画成卡片（高亮 Bash、可展开输出）；纯 UI，不改写工具。 | MIT | [链接](https://github.com/mustafa89/my-claude-code-mods/tree/main/tool-cards) |
 | tool-timing-badge | 给每次工具调用旁加耗时彩色徽章；只测时+画 UI，不改写工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/tool-timing-badge) |
 | tps-report | TPS 风格工作报告窗格。 | MIT | [链接](https://github.com/vgnshiyer/tps-report) |
 | transcript-fx | 给 transcript 上色：工具块、提示面板和 spinner。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/transcript-fx) |
@@ -262,6 +266,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | gamba | 在提示框上方玩老虎机小游戏。 |  | [链接](https://github.com/salatmaster/claude-gamba) |
 | hyday-pet | 提示框上方虚拟宠物，随 Claude 工作成长、可小游戏/商店。 | MIT | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/main/plugins/hyday-pet) |
 | intermission | Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需要输入时自动切回。 | MIT | [链接](https://github.com/jarrodwatts/intermission) |
+| kiko | 提示框上方拳击小游戏：每回合开打，工具调用当出拳；/kiko on|off|stats。正常 K.O. 时默认调用 $.session.append 添加系统消息，包含得分行（对手名取自用户提示）、读写次数与 token 计数；只观察会话事件，不改写工具调用。 | MIT | [链接](https://github.com/kikostefanov-lab/claude-code-mods/tree/main/kiko) |
 | korkmaz-trail | 俄勒冈小径风格像素游戏。 | MIT | [链接](https://github.com/BersanKayraKorkmaz/korkmaz-trail) |
 | lava-lamp | 提示框旁熔岩灯侧栏动画；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/CtrlAltFocus/claude-mods/tree/main/plugins/lava-lamp) |
 | little-harvest | 随回合生长的自动小花园。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/little-harvest) |
@@ -347,6 +352,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | mission-control | 工具调用时间线：输入/输出/状态与子代理泳道；只观察。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/mission-control) |
 | proc-registry | /procs 面板登记本会话后台 Bash 与子代理；只观察，不改写工具。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/proc-registry) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
+| session-activity | 侧栏 ledger 记录本会话外泄动作，等待中工作显示在 spinner；execute_sql 写操作可询问后 deny。备注：只 deny，不改写。 | MIT | [链接](https://github.com/bennewton999/claude-code-mods/tree/main/session-activity) |
 | skill-session-mods | 按本地 SKILL.md 元数据给 /skill 会话命名与上色（只读本地技能文件）。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/skill-session-mods) |
 | shell-flow | 状态行与窗格跟踪本会话 Bash/后台任务与 runner；只观察。备注：本机 process（tail）。 | MIT | [链接](https://github.com/apolenkov/claude-mods/tree/main/mods/shell-flow) |
 | skins | 给 transcript 换肤：主题化工具行、回复边栏与 spinner 文案；桌面端把表格/代码/diff/shell 画成动画卡片。 | MIT | [链接](https://github.com/hellosverre/claude-skins) |
@@ -497,6 +503,7 @@ For detailed descriptions of all 431 mods, see the Chinese section below.
 | push | /push 把当前分支推到上游；本机 git。 |  | [链接](https://github.com/robertgregorywest/claude-mods/tree/main/mods/push) |
 | config-snapshots | 快照/回滚 Claude Code 配置；备注：本机 process 跑插件内 claude-config。 | MIT | [链接](https://github.com/MichaelP17/claude-mods/tree/main/config-snapshots) |
 | service-radar | 跟踪 Claude 拉起的后台服务并可关掉；只观察 Bash，不改写。备注：本机 process（docker、colima、brew、launchctl）。 | MIT | [链接](https://github.com/MichaelP17/claude-mods/tree/main/service-radar) |
+| session-journal | 每回合把提问/改文件/命令追加到本机 .claude/journal/日期.md；/standup。备注：本机写本地文件。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/session-journal) |
 | sportscaster | 会话实况解说（本地 $.audio.speak，不上传会话）。备注：使用本机 TTS。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/sportscaster) |
 | tmux-status | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
 
