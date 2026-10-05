@@ -4667,6 +4667,60 @@
         "url": "https://github.com/theishandubey/claude-mods.git",
         "path": "plugins/agent-graph"
       }
+    },
+    {
+      "name": "bunny-spinner",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DenisGuiraudet/claude-mods.git",
+        "path": "bunny-spinner"
+      }
+    },
+    {
+      "name": "meadow",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DenisGuiraudet/claude-mods.git",
+        "path": "meadow"
+      }
+    },
+    {
+      "name": "safety-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pradyb/claude-mods.git",
+        "path": "safety-guard"
+      }
+    },
+    {
+      "name": "task-list",
+      "source": {
+        "source": "github",
+        "repo": "amaezey/task-list"
+      }
+    },
+    {
+      "name": "wxmp-preview",
+      "source": {
+        "source": "github",
+        "repo": "GrubbyLee/claude_wechat_view_mod"
+      }
+    },
+    {
+      "name": "usage-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/manson341349-beep/claude-desktop-mods.git",
+        "path": "plugins/usage-pet"
+      }
+    },
+    {
+      "name": "council-of-elrond",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Deluha/council-of-elrond.git",
+        "path": "mods/council-of-elrond"
+      }
     }
   ]
 }
