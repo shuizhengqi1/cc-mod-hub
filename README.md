@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 789 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 792 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 789 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 792 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 789 mods, see the Chinese section below.
+For detailed descriptions of all 792 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 789 个精选 Claude Code mods，按类别组织：
+以下是本市场的 792 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -361,6 +361,9 @@ For detailed descriptions of all 789 mods, see the Chinese section below.
 | dock | 提示框下方一排可点的按钮：开关 deck、files、preview 等 mod，或运行你钉上去的任意斜杠命令。备注：只有你点按钮才运行对应命令；纯本机。 | MIT | [链接](https://github.com/manikosto/dock) |
 | switch | /switch 打开模型与推理强度面板，一键切换；/switch opus 或 /switch high 直接切换。备注：点击时运行 Claude Code 自带的 /model 或 /effort；engine.create 只用来拿界面句柄；说明为法语。 | MIT | [链接](https://github.com/devohmycode/claude-mods/tree/main/claude-switch-mod) |
 | echo-widget | 提示框上方的方框小部件，用命令开关：番茄钟和日历。备注：纯本机计时与绘制。 |  | [链接](https://github.com/echo724/echo-claude-mod/tree/main/mods/echo-widget) |
+| syntax | 输入时给提示框草稿上色：Markdown、代码围栏里的代码，以及 shell 模式下的命令。备注：prompt.edit 只追加颜色装饰，不改动草稿文字；纯本机，不联网、不跑进程；若装了同仓库 statusline 会读取其编辑模式（本市场已有同名 statusline，未收录 thefuga 版）。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/syntax) |
+| vim | 提示框上方的 vim 命令行：:w / :e 按会话保存和读回草稿，:q 退出（:q! 强制），输入其他名字就执行对应斜杠命令，支持 Tab 补全；用聚焦快捷键打开。备注：prompt.fill 只把你自己 :w 保存的草稿回填到空提示框，不自动提交；classic.UserPromptSubmit 只在发送后删掉已存草稿，不改写 prompt；草稿存于插件本地 store，不联网。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/vim) |
+| attachments | 把草稿里的附件显示成提示框上方的小卡片：粘贴的图片和文本、@ 提到的文件与文件夹，各带类型图标、路径和简介，点 × 从草稿里移除。备注：prompt.fill 只在你点 × 时删掉对应占位或 @ 引用；会用本机 ffprobe（若已安装）读取媒体尺寸时长，并跑 id -u 定位临时图片目录；不联网、不提交 prompt。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/attachments) |
 
 ### 游戏与娱乐 Games & Entertainment
 
