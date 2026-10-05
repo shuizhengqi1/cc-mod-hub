@@ -3794,6 +3794,78 @@
         "source": "git",
         "url": "afu-it/cc-cli-rail"
       }
+    },
+    {
+      "name": "gopher-spinner",
+      "source": {
+        "source": "git-subdir",
+        "url": "ripta/coding_agent_standards",
+        "path": "mods/gopher-spinner"
+      }
+    },
+    {
+      "name": "mogger-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "yonitesser/claude-mogger",
+        "path": "mods/mogger-status"
+      }
+    },
+    {
+      "name": "maestro-lanes",
+      "source": {
+        "source": "git-subdir",
+        "url": "ricardosuman/maestro",
+        "path": "mods/lanes"
+      }
+    },
+    {
+      "name": "ssi-cockpit",
+      "source": {
+        "source": "git-subdir",
+        "url": "ssime-git/ssi-ai-skill",
+        "path": "mods/ssi-cockpit"
+      }
+    },
+    {
+      "name": "bus-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "mariomosca/agent-team-os",
+        "path": "mods/bus-band"
+      }
+    },
+    {
+      "name": "workflow-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "berlysia/dotfiles",
+        "path": "mods/workflow-band"
+      }
+    },
+    {
+      "name": "telescreen",
+      "source": {
+        "source": "git-subdir",
+        "url": "arazvan-ec/xmarks",
+        "path": "mods/telescreen"
+      }
+    },
+    {
+      "name": "ration-book",
+      "source": {
+        "source": "git-subdir",
+        "url": "arazvan-ec/xmarks",
+        "path": "mods/ration-book"
+      }
+    },
+    {
+      "name": "reins-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "manishkumar/reins",
+        "path": "mods/reins-status"
+      }
     }
   ]
 }
