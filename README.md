@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 409 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 412 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 409 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 412 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 409 mods, see the Chinese section below.
+For detailed descriptions of all 412 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 409 个精选 Claude Code mods，按类别组织：
+以下是本市场的 412 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -458,11 +458,13 @@ For detailed descriptions of all 409 mods, see the Chinese section below.
 | gh-ci-status | 提示框上方钉住 GitHub Actions 状态。 |  | [链接](https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status) |
 | inbox-pane | 侧栏窗格展示 claude-inbox 各分区会话，支持快捷键操作。备注：读写本机 `~/.config/claude-inbox/`；可在无写入时拉起 ... |  | [链接](https://github.com/jordanbyron/claude-inbox/tree/main/mod) |
 | linear-claude-mod | Linear 指派工单面板；点击可加载详情、评论或改状态。 | MIT | [链接](https://github.com/rjohnt/linear-claude-mod) |
+| linear-tickets | /linear 只读侧栏，使用用户的 API key 调用 api.linear.app，不发送会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/linear-tickets) |
 | oneform-line | 提示框上方显示 OneForm 当日睡眠/蛋白/训练与下周计划；/oneform 查看全日。备注：用用户配置的 OneForm URL + API key... |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/oneform-line) |
 | pr-pane | /prs 提示框上方列出你的 GitHub PR 并可打开。 | MIT | [链接](https://github.com/ASRagab/asragab-claude-marketplace/tree/main/plugins/pr-pane) |
 | pr-relay | 监视会话 PR，合并或 Codex 评论时唤醒。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/pr-relay) |
 | pulse-cc | 提示框上方显示股票报价（Yahoo 或 Pulse Mac 自选）。 | MIT | [链接](https://github.com/fatwang2/Pulse/tree/main/plugins/claude-code) |
 | tw-stock-mod | 提示框上方的台股/美股观察清单带状栏，台股交易时段显示台股（红涨绿跌）、美股交易时段显示美股（绿涨红跌）；支持 Yahoo 延迟报价或券商即时行情（永豐 ... |  | [链接](https://github.com/darrell-tw/darrelltw-mods/tree/main/mods/tw-stock-mod) |
+| vercel-deploys | /vercel 只读侧栏，使用用户的 token 调用 api.vercel.com，不发送会话内容；健康检查 GET 部署域名时不携带会话主体。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/vercel-deploys) |
 
 ### 本地工具 Local Tools
 
@@ -472,6 +474,7 @@ For detailed descriptions of all 409 mods, see the Chinese section below.
 | copy-band | 上一条回答的代码块/引用草稿一键复制到剪贴板，并本地 stash。依赖本机 pbcopy（macOS）与本地文件。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/copy-band) |
 | daily-ayah | 每日经文展示。 |  | [链接](https://github.com/ashafizullah/claude-code-muslim-mods/tree/main/daily-ayah) |
 | garde-du-corps | 本地拒绝访问 .env 与危险 Bash（rm -rf、force push、hard reset、DROP TABLE）；只读路径/命令字符串做 den... | MIT | [链接](https://github.com/Para-FR/claude-code-mods-fr/tree/main/garde-du-corps) |
+| herdr | 向本地 herdr 窗格报告会话生命周期。本机 process（herdr）。 | MIT | [链接](https://github.com/bendrucker/claude/tree/main/plugins/herdr) |
 | prayer-times | 提示框下方显示下次礼拜时间。 | MIT | [链接](https://github.com/mkbuilds4/mods/tree/main/plugins/prayer-times) |
 | prompt-stash | 本地 /stash 提示词栈：存、列、弹出到输入框，不进模型上下文。 |  | [链接](https://github.com/gonzaloserrano/cc-prompt-stash) |
 | push | /push 把当前分支推到上游；本机 git。 |  | [链接](https://github.com/robertgregorywest/claude-mods/tree/main/mods/push) |
