@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 577 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 578 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 577 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 578 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 577 mods, see the Chinese section below.
+For detailed descriptions of all 578 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 577 个精选 Claude Code mods，按类别组织：
+以下是本市场的 578 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -509,6 +509,7 @@ For detailed descriptions of all 577 mods, see the Chinese section below.
 
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
+| cc-mod-ferro | 回合超过 20 秒时，提示框上方一只像素诺维奇梗犬 Ferro 在草地上奔跑（偶尔追橙色小球或停下便便），3 分钟后趴下睡觉；仅桌面版显示，纯本地 clock/ui，不改工具、不外传。 |  | [链接](https://github.com/Vatroslav/cc-mod-ferro/tree/main/plugin) |
 | clawd | 思考行旁的像素 Clawd 吉祥物，按工具/命令表演动作。 |  | [链接](https://github.com/raresmun/claude-mods/tree/main/plugins/clawd) |
 | clawd-actor | 回合进行中在提示框上方让 Clawd 按 spinner 的 -ing 词或正在运行的工具表演场景（26 个场景），只改显示。 | MIT | [链接](https://github.com/BrianHuang813/clawd-actor) |
 | clawd-band | 提示框上方像素猫，随思考/编辑/搜索等状态动画；仅 UI。 | MIT | [链接](https://github.com/tomada1114/clawd-band/tree/main/plugins/clawd-band) |
