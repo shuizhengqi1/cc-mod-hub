@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 605 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 607 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 605 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 607 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 605 mods, see the Chinese section below.
+For detailed descriptions of all 607 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 605 个精选 Claude Code mods，按类别组织：
+以下是本市场的 607 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -180,6 +180,7 @@ For detailed descriptions of all 605 mods, see the Chinese section below.
 | usage-dollars | 把订阅 5 小时窗口和一周用量折算成 API 等价美元，估算额度、生成花费报表（/usage-dollars）。备注：本机 process（node 跑仓库自带 scripts/usage-cost.mjs），读本机 ~/.claude/projects 会话记录与 ~/.claude.json 账号信息，不联网。 |  | [链接](https://github.com/hyvanmielenpelit/claudecodemods/tree/main/usage-dollars) |
 | barometer | 提示框上方显示上下文与套餐限额仪表，上下文到红线时出现 Compact 按钮（点按才压缩），并显示账号和 effort。备注：本机 process（跑 claude auth status 读账号邮箱与套餐），只读会话用量，不用网络。 | MIT | [链接](https://github.com/Alchez/claude-mods/tree/main/barometer) |
 | session-panel | 提示框上方显示模型、上下文、5 小时/7 天限额、会话花费和 Git 分支。备注：本机 git（symbolic-ref、rev-parse 读当前分支），不用网络。 | MIT | [链接](https://github.com/arsenii-cmd/Claude-mod) |
+| meter | 提示框上方的会话用量条（上下文、限额、费用），/meter 打开详细指标窗格；只观察事件、工具调用原样放行，提示框条显示时不调 next。 |  | [链接](https://github.com/theishandubey/claude-mods/tree/main/plugins/meter) |
 
 ### 上下文管理 Context Management
 
@@ -493,6 +494,7 @@ For detailed descriptions of all 605 mods, see the Chinese section below.
 | maestro-lanes | 配合 Maestro，每 2 秒读本机 /tmp/maestro-lanes 下的 lane 输出文件，在提示框上方显示各外部 lane 的状态与耗时。只观察。备注：有运行项时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ricardosuman/maestro/tree/main/mods/lanes) |
 | agent-party | 把运行中的子代理画成 16×16 像素英雄放在提示框上方，显示任务、当前动作、耗时和上下文，可选语音播报。备注：本机 process（Linux 下用 spd-say 播报）；只观察 agent.spawn 与工具调用、原样放行。 | MIT | [链接](https://github.com/ytruong11201/claude-code-mods/tree/main/plugins/agent-party) |
 | agent-aquarium | /aquarium 在窗格里把会话画成鱼缸（kitty 图形，不支持时用半块字符）：主循环是大鱼，子代理是出生又游走的小鱼，工具调用是鱼的动作，水位跟随上下文占用。备注：只观察 tool.call、agent.spawn，先调 next 原样放行；只读插件自带图片素材，不跑进程、不联网。 |  | [链接](https://github.com/nogu66/claude-code/tree/main/agent-aquarium) |
+| agent-graph | 桌面端窗格，把正在运行的子代理画成从左到右的关系图（模型、步数、费用估计）；/agent-graph 打开，只观察、工具调用原样放行。 |  | [链接](https://github.com/theishandubey/claude-mods/tree/main/plugins/agent-graph) |
 
 ### 通知提醒 Notifications & Alerts
 
