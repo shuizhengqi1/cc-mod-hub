@@ -3703,6 +3703,41 @@
         "url": "ShriD5/claude-mods",
         "path": "whoopgate"
       }
+    },
+    {
+      "name": "tool-snake",
+      "source": {
+        "source": "git",
+        "url": "Yash1927/claude-code-snake"
+      }
+    },
+    {
+      "name": "gamble-with-claude-code",
+      "source": {
+        "source": "git",
+        "url": "szarkans/gamble-with-claude-code"
+      }
+    },
+    {
+      "name": "ember",
+      "source": {
+        "source": "git",
+        "url": "nickdemari/ember"
+      }
+    },
+    {
+      "name": "git-diff-timeline",
+      "source": {
+        "source": "git",
+        "url": "liawzishen/git-diff-timeline"
+      }
+    },
+    {
+      "name": "notes-panel",
+      "source": {
+        "source": "git",
+        "url": "Sickin/claude-code-notes-panel"
+      }
     }
   ]
 }
