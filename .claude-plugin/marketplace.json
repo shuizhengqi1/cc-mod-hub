@@ -4289,6 +4289,69 @@
         "url": "Ponpon55837/i18n-check-mods",
         "path": "plugins/i18n-pixel"
       }
+    },
+    {
+      "name": "task-progress-mod",
+      "source": {
+        "source": "git",
+        "url": "hahahahahahahahah6/task-progress-mod"
+      }
+    },
+    {
+      "name": "guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "StanislavKozachenko/claude-mods",
+        "path": "plugins/guard"
+      }
+    },
+    {
+      "name": "shared-file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/shared-file-guard"
+      }
+    },
+    {
+      "name": "dash-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/dash-guard"
+      }
+    },
+    {
+      "name": "dragon-lair",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/dragon-lair"
+      }
+    },
+    {
+      "name": "tama",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/tama"
+      }
+    },
+    {
+      "name": "jackpot",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/jackpot"
+      }
+    },
+    {
+      "name": "outlaw",
+      "source": {
+        "source": "git-subdir",
+        "url": "mutlumehmet/claude-plugins",
+        "path": "plugins/outlaw"
+      }
     }
   ]
 }

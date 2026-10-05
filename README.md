@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 558 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 566 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 558 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 566 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 558 mods, see the Chinese section below.
+For detailed descriptions of all 566 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 558 个精选 Claude Code mods，按类别组织：
+以下是本市场的 566 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -317,12 +317,14 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | gamba | 在提示框上方玩老虎机小游戏。 |  | [链接](https://github.com/salatmaster/claude-gamba) |
 | hyday-pet | 提示框上方虚拟宠物，随 Claude 工作成长、可小游戏/商店。 | MIT | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/main/plugins/hyday-pet) |
 | intermission | Claude 工作时在 Ghostty/kitty 窗格里开 Doom 死斗，回合结束或需要输入时自动切回。 | MIT | [链接](https://github.com/jarrodwatts/intermission) |
+| jackpot | 提示框上方像素老虎机；纯本地 store/clock/ui。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/jackpot) |
 | kiko | 提示框上方拳击小游戏：每回合开打，工具调用当出拳；/kiko on|off|stats。正常 K.O. 时默认调用 $.session.append 添加系统消息，包含得分行（对手名取自用户提示）、读写次数与 token 计数；只观察会话事件，不改写工具调用。 | MIT | [链接](https://github.com/kikostefanov-lab/claude-code-mods/tree/main/kiko) |
 | korkmaz-trail | 俄勒冈小径风格像素游戏。 | MIT | [链接](https://github.com/BersanKayraKorkmaz/korkmaz-trail) |
 | lava-lamp | 提示框旁熔岩灯侧栏动画；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/CtrlAltFocus/claude-mods/tree/main/plugins/lava-lamp) |
 | little-harvest | 随回合生长的自动小花园。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/little-harvest) |
 | minefield | Claude 工作时在窗格里玩扫雷。 | MIT | [链接](https://github.com/reporails/arcade/tree/main/minefield) |
 | night-feast | Claude 工作时的像素小游戏。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/night-feast) |
+| outlaw | 提示框上方像素 outlaw 小游戏；纯本地 store/clock/ui。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/outlaw) |
 | pet | 一只嘴碎的火烈鸟吉祥物 Flingo，在侧栏或状态行陪伴你码字，代 Claude 说话、吐槽代码、喂养玩耍、换装（皇冠、礼帽、蝴蝶结、墨镜），用 /fli... | MIT | [链接](https://github.com/graugart/flingo) |
 | pong | 在提示框上方玩 Pong 游戏，Claude 工作时可打发时间。 | MIT | [链接](https://github.com/ambareeshav/claude-pong-mod) |
 | roll-credits | /credits 电影片尾字幕窗格：本会话编辑文件与工具调用统计（本地、零 token）。 | MIT | [链接](https://github.com/smukh/roll-credits) |
@@ -353,6 +355,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | delete-guard | 拦截 rm -rf 等危险删除，可拒绝或移入本机回收站；不改写命令。备注：本机 process。 |  | [链接](https://github.com/Tihi321/claude-mods/tree/main/plugins/delete-guard) |
 | env | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
 | flash-veille | 提示框上方轮播开发者资讯（Human Coders、Anthropic 博客等）。 | MIT | [链接](https://github.com/camilleroux/flash-veille/tree/main/plugins/flash-veille) |
+| guard | 拦截危险 Bash 与密钥文件读写，只拒绝不改写。备注：本机 $.fs.stat；无拦截时可用 $.ui.status(undefined) 清状态行。 | MIT | [链接](https://github.com/StanislavKozachenko/claude-mods/tree/main/plugins/guard) |
 | guardrails | 本地拒绝 Cloudflare 写命令、带归因行的 commit、claude/ 分支前缀。备注：只读 Bash 命令字符串做 deny，不改写。 |  | [链接](https://github.com/arasovic/claude-code-mods/tree/main/guardrails) |
 | launch-codes | 危险 Bash 需解锁码才放行。备注：会 deny 危险命令直至用户解锁。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/launch-codes) |
 | machine-guard | 改机器的 Bash 先征求确认；仅拒绝，不改写命令。 | MIT | [链接](https://github.com/MichaelP17/claude-mods/tree/main/machine-guard) |
@@ -370,6 +373,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | secret-sentry | 双向密钥清洗：模型看到前脱敏，并拦截把密钥写入受跟踪文件或 shell。备注：可 deny；脱敏 prompt/工具结果文本，不外传；本机 git。 | MIT | [链接](https://github.com/ccdwyer/secret-sentry) |
 | secrets-veil | 工具执行后遮盖结果中的疑似密钥字符串，不改写命令本身。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil) |
 | sensitive-file-guard | 拦截触及 .env/密钥/凭证路径的工具调用。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/sensitive-file-guard) |
+| shared-file-guard | 共享文件本会话未读或已被别会话改过时拒绝 Bash 写入；只拒绝不改写。备注：本机 $.fs.stat。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/shared-file-guard) |
 | stay-put | 拦截 `cd dir && …` 链式 Bash/PowerShell，只拒绝并提示单命令写法（不改写命令）；teach/watch/off。除非 off，会在 Bash 与 PowerShell 工具描述追加不要链 cd 的指示。弹跳带显示时 AbovePrompt 不调 next，可覆盖其他 mod 行。 | MIT | [链接](https://github.com/ivanvyd/ground-rules/tree/main/plugins/stay-put) |
 | storage-guard | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
 | test-guard | 拦截弱化/删除测试的 Write/Edit/Bash。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/test-guard) |
@@ -397,6 +401,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | codebase-atlas | 代码库架构图随读写点亮；可选用本机 $.model.complete 与 $.model.fork 提取决策，向用户模型发函数源码与 git diff HEAD，不外传。备注：本机 git。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/codebase-atlas) |
 | command-buttons | 在助手 shell 代码块下画 Run/Copy 按钮与热键带；备注：本机 process（剪贴板），用户按按钮才经 tool.call 跑 Bash。 | MIT | [链接](https://github.com/faridmurzone/command-buttons-claude-code) |
 | config-parse | 配置文件解析器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/config-parse) |
+| dash-guard | 拒绝在 md/txt 写入 em dash、en dash 或双连字符；只拒绝不改写。备注：本机 $.fs.read。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dash-guard) |
 | diagram-render | 图表实时渲染。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/diagram-render) |
 | diff-review | 每次 Edit/Write 后在侧栏展示未提交 hunk，keep/revert 按钮；revert 用本机 git apply -R（新建文件二次确认后 rm）。模型看不到操作。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/diff-review) |
 | disk-janitor | 清理临时文件。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/disk-janitor) |
@@ -506,6 +511,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | clawdgotchi | 电子宠物 Clawd，在侧栏养成与互动。 | MIT | [链接](https://github.com/arthurseredaa/clawdgotchi) |
 | code-pet | 像素宠物窗格，随 Claude 活动反应。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet) |
 | desk-pet | 提示框上方/侧栏小宠物，随工具与回合反应；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/isr431/desk-pet) |
+| dragon-lair | 提示框上方像素龙穴小游戏。备注：本机 $.agent.list；prompt/tool 只观察。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dragon-lair) |
 | familiar | 提示框上方像素伙伴，随会话反应并可手绘；可选 Haiku 吐槽。备注：可选 $.model.complete 与 $.model.fork。 | MIT | [链接](https://github.com/lucenity0/claude-familiar) |
 | maomao | 提示框上方 8-bit 毛毛（垂耳兔）随工作状态跑跳；/maomao 收起或叫出。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/maomao) |
 | mize-coworker | 像素 Claude 吉祥物，随 spinner 词表演场景，空闲时在状态行呼吸走动。 | MIT | [链接](https://github.com/TheMizeGuy/clawdagotchi/tree/main/plugins/mize-coworker) |
@@ -521,6 +527,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | ricky-pixel-mod | 像素猫 Ricky：夜空窗格看板 + 提示框上方猫带；只观察会话事件做动画，不改写工具/提示。 | MIT | [链接](https://github.com/muxia23/ricky-pixel-mod) |
 | ember | 一团小火苗跟着会话：在转圈行写当前步骤，提示框上方显示轮到谁，轮到你时本机播放提示音（/ember mute 静音，/ember pane 打开窗格）。默认 AbovePrompt 行除非 hasSurvey 不调用 next，会覆盖其他 mod 的行；带状还会显示上一条用户提示。 | MIT | [链接](https://github.com/nickdemari/ember) |
 | sidebot | 侧边像素机器人小窗旁路问答（/buddy）。备注：会话开始自动打开小窗；提问时用 $.model.fork 带上主会话全文，prompt 另含侧窗最近约 20 条对话；主会话尚无内容时改用 Haiku $.model.complete，只发人设与侧窗对话；每 400 毫秒重绘（关窗也跑）；/buddy 命令与 pixel-buddy 的 /buddy 冲突。 | MIT | [链接](https://github.com/monowu/claude-mod-sidebot) |
+| tama | 提示框上方像素宠物小游戏；纯本地 store/clock/ui。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/tama) |
 
 ### 图片与媒体 Images & Media
 
@@ -573,6 +580,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below.
 | sudus | 本地运行 sudus wake（或插件自带 node bin）在提示框上方或窗格显示项目 verdict；不调用模型。 | MIT | [链接](https://github.com/eas4ai/sudus) |
 | taskcut | turn.step mod。 | MIT | [链接](https://github.com/wasd96040501/taskcut) |
 | task-eta | 长任务步骤与剩余时间。超时用 $.model.fork，提示里带工具轨迹、用户新消息和回复片段。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
+| task-progress-mod | 提示框上方 TodoWrite 进度条；tool.call 只观察 TodoWrite 原样放行；进度条显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/hahahahahahahahah6/task-progress-mod) |
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
 | taskrail | 在输入框上方显示本会话计划的波次任务看板，Claude 通过它注册的 plan/set/show 三个工具更新；/taskrail 切换 off/bar/full/both；看板显示时 AbovePrompt 不调 next；计划按会话存在本机 $.store。 | MIT | [链接](https://github.com/drolosoft/taskrail) |
 | ssi-cockpit | 配合 ssi 流程，读本机 .ssi/state.json，在提示框上方显示 8 阶段进度条，阶段变化时 toast，/ssi-map 打开阶段图。只观察。没有 .ssi/state.json 快照时会调用 $.ui.status(undefined) 并可能清除其他 mod 的状态行。备注：有状态时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ssime-git/ssi-ai-skill/tree/main/mods/ssi-cockpit) |
