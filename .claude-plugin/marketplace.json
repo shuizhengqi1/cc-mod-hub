@@ -3780,6 +3780,20 @@
         "source": "git",
         "url": "barisdemirhan/claude-ambient"
       }
+    },
+    {
+      "name": "sidequest",
+      "source": {
+        "source": "git",
+        "url": "farhad-aman/claude-sidequest"
+      }
+    },
+    {
+      "name": "cc-cli-rail",
+      "source": {
+        "source": "git",
+        "url": "afu-it/cc-cli-rail"
+      }
     }
   ]
 }
