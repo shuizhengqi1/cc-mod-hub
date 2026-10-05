@@ -4466,6 +4466,20 @@
         "source": "git",
         "url": "mikljohansson/claude-code-status-line"
       }
+    },
+    {
+      "name": "al-syntax",
+      "source": {
+        "source": "git",
+        "url": "abonckus/claude-code-al-syntax"
+      }
+    },
+    {
+      "name": "file-preview",
+      "source": {
+        "source": "git",
+        "url": "abonckus/claude-code-file-preview"
+      }
     }
   ]
 }
