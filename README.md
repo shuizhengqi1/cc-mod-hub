@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 523 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 525 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 523 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 525 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 523 mods, see the Chinese section below.
+For detailed descriptions of all 525 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 523 个精选 Claude Code mods，按类别组织：
+以下是本市场的 525 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -208,6 +208,7 @@ For detailed descriptions of all 523 mods, see the Chinese section below.
 | cc-pokedex | 在侧栏查看宝可梦图鉴，按名字或编号搜索。 |  | [链接](https://github.com/deonmenezes/claude-mods-pokedex) |
 | chameleon | 在 /rename 与 /branch 时给会话随机上色（/color），便于区分窗口。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/chameleon) |
 | change-journal | 编辑变更的即时说明窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal) |
+| chat-bubbles | 聊天气泡式界面：你的提示在右、Claude 在左，运行中或失败的工具高亮、已完成的变暗，441 套主题（/bubbles）；只改显示，不改提示或工具，不联网。应用主题后，这些 ui.render 插槽不调用 next 而绘制自己的元素，因此可以覆盖其他 mod 的渲染：完整模式下的 UserMessage 和 AssistantMessage、SessionMode、TurnDuration，以及终端外的 PromptHint 和 Spinner。还会为每个 mod 的 Pane 添加背景色（该插槽调用 next）。默认无主题，因此在执行 /bubbles 前一切都透传。 | MIT | [链接](https://github.com/angeldelbiondo/claude-chat-bubbles/tree/main/chat-bubbles) |
 | clawd-tracker | Domino 式订单进度条（主题 pizza/coffee/rocket/construction）：读本机会话与 $.tool.check 只判断是否会询问许可，不改写工具；prompt.submit 只本地取标题后原样 next；送达可 $.audio.play 自建 WAV。备注：进度显示时 AbovePrompt 不调 next（可点隐藏）。 | MIT | [链接](https://github.com/IKnowJot/clawd-plugins/tree/main/plugins/clawd-tracker) |
 | clawdify | /clawdify 改 spinner、页脚、提示、横幅、状态行和对话行样式，可用自然语言描述（走 $.model.complete，只发当前设置和你的请求）；可按你设的规则改写回答的显示文本（只改显示）、替换 PromptHint/UserMessage、横幅开启时 AbovePrompt 不调 next、可隐藏提示通知；启动时 $.ui.status(undefined)，并扫描本机 ~/.claude/plugins/store 迁移旧设置；读取本地 .git/HEAD 获得分支名。 | MIT | [链接](https://github.com/viik2k/clawdify) |
 | looks | 提示框上方显示配色主题切换菜单，纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/looks) |
@@ -527,6 +528,7 @@ For detailed descriptions of all 523 mods, see the Chinese section below.
 | backlog-pane | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bg-tasks | 后台任务管理器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bg-tasks) |
 | bw-peek | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
+| cc-mod-park | /park 记下当前会话（本机 ~/.local/state/cc-mod-park/parked.json）并退出；同目录新会话在提示框上方给出按钮一键接回（本机 /resume、/model、/effort），接回后若默认 model/effort 被改动会写回本机 settings.json；读本机 transcript 取首条提示作标题，本机 git 读分支，不联网。 | MIT | [链接](https://github.com/GGGODLIN/cc-mod-park) |
 | check-ledger | 记录跑过哪些检查、之后又有哪些编辑（/evidence）。 |  | [链接](https://github.com/LeeHigma0201/claude-code-mods/tree/main/mods/check-ledger) |
 | cockpit | 计划/todo 进度条，并按 quick/normal/hard 路由模型与 effort。 |  | [链接](https://github.com/Brxerq/claude-cockpit/tree/main/plugins/cockpit) |
 | deadlines | 状态行的截止日期倒计时，/ddl 增删。 |  | [链接](https://github.com/richardcsuwandi/claude-mods/tree/main/plugins/deadlines) |
