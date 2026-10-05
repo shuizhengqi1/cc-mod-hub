@@ -5883,6 +5883,173 @@
         "path": "output-ladder",
         "sha": "4896e0fc219bd13db7ef862e7251e0970ac7f57a"
       }
+    },
+    {
+      "name": "account-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Amnesiac9/claude-mods.git",
+        "path": "account-badge",
+        "sha": "199a91026a202e456f00db751dd2ccc1732a5f0f"
+      }
+    },
+    {
+      "name": "enable-todo-tools",
+      "source": {
+        "source": "github",
+        "repo": "muellerei/enable-todo-tools",
+        "sha": "a9747243a4537408a2fc82fd92f3bccf18cb56d3"
+      }
+    },
+    {
+      "name": "inbox-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/soyakaai-studio/claude-herdr-mods.git",
+        "path": "mods/inbox-band",
+        "sha": "64dcdbb68ed0c2f8238d37cf33024d3f7b7ead13"
+      }
+    },
+    {
+      "name": "omp-statusline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yi-john-huang/claude-garage.git",
+        "path": "plugins/omp-statusline",
+        "sha": "b39ea759edd1ddccf3e61cbef7a11d277a13fcf5"
+      }
+    },
+    {
+      "name": "combo-meter",
+      "source": {
+        "source": "github",
+        "repo": "SARTHAK2511/claude-combo",
+        "sha": "7f01ec059e073901facde77b8b6e670221cc33c4"
+      }
+    },
+    {
+      "name": "dock",
+      "source": {
+        "source": "github",
+        "repo": "manikosto/dock",
+        "sha": "197a1c8b31c08339d5bc23879ffadce30264997e"
+      }
+    },
+    {
+      "name": "echo-widget",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/echo724/echo-claude-mod.git",
+        "path": "mods/echo-widget",
+        "sha": "789b31ad5ba38a50dd0965078ce1fbb0e5111a5d"
+      }
+    },
+    {
+      "name": "handoff-relay",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/drdickgraysonjr/chalkery.git",
+        "path": "plugins/handoff-relay",
+        "sha": "321adc99936de130d0ecb14693f0bc8a3c3c0397"
+      }
+    },
+    {
+      "name": "green-lantern",
+      "source": {
+        "source": "github",
+        "repo": "vogiaan1904/green-lantern-claude",
+        "sha": "aefb758a8f5cfb91bd536a44015358ce50de305d"
+      }
+    },
+    {
+      "name": "martian-base",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Chaveex/martians-mods-4-claude.git",
+        "path": "martian-base",
+        "sha": "42ef9abf8b0202e035eb7ca13beef9bd8f1a9003"
+      }
+    },
+    {
+      "name": "nukey",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arifamir/nukey-kit.git",
+        "path": "plugins/nukey",
+        "sha": "054486988148fefb5af53afbc74ba66bf1485a99"
+      }
+    },
+    {
+      "name": "switch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devohmycode/claude-mods.git",
+        "path": "claude-switch-mod",
+        "sha": "dcb78189f212d5ac603c0a2a90b2683311bab4c0"
+      }
+    },
+    {
+      "name": "session-models",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AbhiramDwivedi/claude-mods.git",
+        "path": "plugins/session-models",
+        "sha": "3e8f233884ccc3ae7d50a87b0ba54fca86a2c06a"
+      }
+    },
+    {
+      "name": "vigia-api",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/vigia-api",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
+    },
+    {
+      "name": "guarda-colisao",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/guarda-colisao",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
+    },
+    {
+      "name": "bichinho",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/bichinho",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
+    },
+    {
+      "name": "mapa-calor",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/mapa-calor",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
+    },
+    {
+      "name": "linha-do-tempo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/linha-do-tempo",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
+    },
+    {
+      "name": "replay-edicoes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/replay-edicoes",
+        "sha": "07fda7a4a74834a7bf8f763998a63f86564a6103"
+      }
     }
   ]
 }
