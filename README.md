@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 491 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 493 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 491 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 493 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 491 mods, see the Chinese section below.
+For detailed descriptions of all 493 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 491 个精选 Claude Code mods，按类别组织：
+以下是本市场的 493 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -257,6 +257,7 @@ For detailed descriptions of all 491 mods, see the Chinese section below.
 | steering-wheel | /steering-wheel 写入 ~/.claude/keybindings.json 绑定 F5 立即发送，并改写 PromptHint「send now」文案；备注：本机写配置文件。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/steering-wheel) |
 | progress-bar | 提示框上方本回合进度条、估时与工具次数；等待审批时暂停计时。纯 UI，只观察 turn/tool，不改写。 |  | [链接](https://github.com/kshitiz-swim/claude-plugins/tree/main/plugins/progress-bar) |
 | qa-guide | prompt.submit 仅记录然后调用 next 且不注入上下文，AskUserQuestion 说明文字使用 $.model.fork / $.model.complete 并默认开启直至手动切换。 | MIT | [链接](https://github.com/aieo-product/claude_qamods/tree/main/plugins/qa-guide) |
+| cc-cli-rail | prompt-rail 的竖向分叉：在对话旁列出本会话的历史 prompt，点击或 /cc-cli-rail next/prev/编号/find 跳回。备注：本机 process（用 tail 读本会话记录文件）；隐藏或窄屏时 AbovePrompt 不调 next，会盖住别的提示框上方行；与已有 prompt-rail 同源，二选一。 | MIT | [链接](https://github.com/afu-it/cc-cli-rail) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -310,6 +311,7 @@ For detailed descriptions of all 491 mods, see the Chinese section below.
 | typing-test | 提示框上方打字测速；Claude 工作时可玩，回合结束暂停，记录最佳成绩；零 token。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/typing-test) |
 | tool-snake | Claude 每调用一次工具就往贪吃蛇里掉一颗食物（/snake）；每次提交提示会自动打开窗格，结束时用本机语音朗读成绩；和已有的 snake 都注册 /snake，二选一安装。 | MIT | [链接](https://github.com/Yash1927/claude-code-snake) |
 | gamble-with-claude-code | 用今天烧掉的 token 当筹码玩老虎机、轮盘和二十一点（/casino），不涉及真钱；会在本机 process 运行 python3，读取本机 ~/.claude 下的会话记录统计 token，不外传。 | MIT | [链接](https://github.com/szarkans/gamble-with-claude-code) |
+| sidequest | Claude 工作时在侧栏窗格玩贪吃蛇（/sidequest [on|off|游戏名]）。默认开启：回合开始约 2 秒后自动开窗，需要你确认权限或回答问题时自动收起；窗格放不下时在提示框上方给"开始玩"按钮（会调 next）。只用 $.store 存进度，纯 UI。 | MIT | [链接](https://github.com/farhad-aman/claude-sidequest) |
 
 ### 安全防护 Security & Safety
 
