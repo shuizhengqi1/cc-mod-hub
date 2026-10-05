@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 674 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 687 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 674 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 687 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 674 mods, see the Chinese section below.
+For detailed descriptions of all 687 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 674 个精选 Claude Code mods，按类别组织：
+以下是本市场的 687 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -187,6 +187,10 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | meter | 提示框上方的会话用量条（上下文、限额、费用），/meter 打开详细指标窗格；只观察事件、工具调用原样放行，提示框条显示时不调 next。 |  | [链接](https://github.com/theishandubey/claude-mods/tree/main/plugins/meter) |
 | hud | 提示框下方两行彩色动态状态：模型、推理强度、上下文、限额、回合计时、工具调用数、子代理、git 状态、费用、会话时长和目录。备注：本机 git status；turn.step 原样转发；不改提示或工具，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/hud) |
 | redline | 转速表：统计本机同时在跑的 Claude 会话数，指针进红区提示别再开新会话；可选 5H/7D/上下文油表。备注：用本机 ps、lsof 读进程与工作目录；AbovePrompt 终端自绘不调 next；不联网。 | MIT | [链接](https://github.com/jamubc/toolbox/tree/main/plugins/redline) |
+| turn-usage | 每条 Claude 回复下方加一行暗色小字：当前 5 小时会话额度已用多少、这一回合花了多少；按量付费时显示美元花费；language 设为西语时显示西语，否则英语。备注：只读 $.session.usage，不改写回复，只在 AssistantMessage 下方追加一行。 | MIT | [链接](https://github.com/gmorubio/claude-mods/tree/main/turn-usage) |
+| llm-speed | 右下用量条上方加一行：平均首 token 时间（TTFT）、输出 tokens/s 和请求次数。备注：turn.step 只计时、原样透传流；纯本机 UI。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/llm-speed) |
+| usage-hint | 输入框下方提示行显示 5h / 7d / Fable 额度与上下文百分比，超过 75% 变黄；/usage-hint 列出原始限额窗口。备注：只读用量；终端里整行重画 PromptHint 不调 next（保留原提示文字），会盖住其他改同位置的 mod；界面文案为日语。 |  | [链接](https://github.com/tett23/dotfiles/tree/master/claude/mods/usage-hint) |
+| session-stats | 提示框上方一条：模型、effort、上下文填充和各限额窗口及重置倒计时；/session-stats 或 + 按钮打开面板看 token 拆分、缓存命中、各模型占比和上下文类别。备注：只读用量；/model、/effort 命令原样透传，只记录结果；纯本机 UI。 |  | [链接](https://github.com/cjmellor/mella-marketplace/tree/main/plugins/session-stats) |
 
 ### 上下文管理 Context Management
 
@@ -215,6 +219,9 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | context-card | 提示框上方上下文占用拆解与周限额；可展开分类条。备注：本机写缓存；用用户 OAuth 读官方用量 API，不带会话正文；卡片显示后，AbovePrompt 返回自己的行且不调用 next（除非正在显示调查），因此可覆盖其他 mod 的行；另 tail 本地会话 transcript 但不上传。 | MIT | [链接](https://github.com/Nongfsq/frank-claude-cockpit/tree/main/context-card) |
 | teach-me | 改代码后在提示框上方出一道多选题；/a 作答。备注：使用 $.model.complete（本机 diff，不外传）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/teach-me) |
 | bubble-contesto | 面板里一个随会话上下文用量变满的气泡（SVG），/bubble 开关；终端里显示文字进度条，/compact 后清空。只读 $.session.usage，只改显示。 | MIT | [链接](https://github.com/maxturazzini/bubble-contesto) |
+| context-cache | 右下加一行：上下文窗口占比、提示缓存命中率和按 API 报告 TTL 的倒计时；上下文到 70/85/95%、缓存即将过期或已过期、大量缓存未命中时弹 toast。备注：只读用量，不自动发送或压缩；纯本机 UI。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/context-cache) |
+| context-watch | 上下文到 80%/90% 时弹 toast 提醒；/context-top 打开面板列出本会话占上下文最多的工具结果（按 4 字符≈1 token 估算）。备注：tool.call 只读结果长度，原样返回，不改写。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/context-watch) |
+| token-face | 提示框上方一张随上下文变满越来越诡异的脸，配百分比、近 12 回合迷你柱状图和上回合增量；桌面版可用插件目录 faces/1-4 的自定义图片。备注：只读用量；提示框上方条不调 next，会盖住其他 mod 的同位置内容。 | MIT | [链接](https://github.com/MohamedEmbarak/token-face/tree/main/plugins/token-face) |
 
 ### UI 与主题 UI & Themes
 
@@ -316,6 +323,9 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | explorai-loading | 提示框上方显示 Explorai 标志，随任务完成逐步填上品牌色，旁边有小人跳舞。备注：prompt.submit 只启动动画不改写；Task/Todo 工具调用原样放行；不联网。 |  | [链接](https://github.com/Tomy-Phillip/claude-mods/tree/main/plugins/explorai-loading) |
 | rtl | 让 Claude Code 终端正确显示希伯来语、阿拉伯语、波斯语等从右到左文字（消息、命令输出、提示预览）。备注：只改显示，提交内容不变；可选的 recap 横幅默认关闭，开启后会在空闲时对本会话额外调用一次模型（$.model.fork，计费）；内置 MIT 的 bidi-js 源码；不联网。 | MIT | [链接](https://github.com/ofekbetzalel/claude-code-cli-rtl/tree/main/mod/rtl) |
 | md-render | 把助手回复重绘成带颜色的 Markdown（标题、粗斜体、代码、列表、引用）。备注：只在 AssistantMessage 槽位终端自绘，不调 next；表格/代码块交回内置 Markdown；不联网、不跑进程。 | MIT | [链接](https://github.com/deepskyblue86/claude-markdown-mod) |
+| model-band | 提示框上方一条显示当前模型与 reasoning effort，可下拉直接切换。备注：只在用户手动选择时执行 /model、/effort 命令；模型列表写死在源码里，不在列表的当前模型仍会显示。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/model-band) |
+| prompt-hint-trim | 从输入框下方提示行去掉「N shells」和「← for agents」两段，其余原样保留。备注：只改提示行显示文字，纯本机 UI。 | MIT | [链接](https://github.com/mataku/dotfiles/tree/develop/claude/mods/prompt-hint-trim) |
+| prompt-clock | 在对话里给每条你发出的消息前加发送时间，并在回合耗时行加开始→结束时间；可配置是否显示秒。备注：session.append 只记录时间不改写消息，显示时只改 UI 文本；恢复会话时读本机 transcript 文件取旧时间。 | Apache-2.0 | [链接](https://github.com/vampik33/claude-plugins/tree/main/plugins/prompt-clock) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -436,6 +446,7 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | explain-permission | 收到权限请求时在侧窗格用 $.model.fork 或 $.model.complete（haiku）解释。**仅解释：不拒绝、不改写**。 |  | [链接](https://github.com/petershk/explain-permission) |
 | open-file-guard | Claude 要写/改你正打开的 Word、Excel、PowerPoint 文件前，先问你关掉（最多问 3 次），否则拒绝这次调用。备注：tool.call 只放行或 deny，不改参数；只检查本机锁文件，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/open-file-guard) |
 | registro-scritture | 每轮结束在提示框上方列出本轮写到仓库外的操作（MCP 写入、git push、gh 修改、curl POST 等），带结果链接与失败/被拒标记。备注：tool.call 只观察，原样调用 next 并返回结果，不改写；只在本机读工具结果找第一个 https 链接；意大利语界面；不联网。 | MIT | [链接](https://github.com/andreabrugnoli/mods/tree/main/registro-scritture) |
+| dot-guard | 拦截对整个 $HOME 工作树的 git add（如 dot add -A / . / *），避免把整个家目录提交进 dotfiles 仓库；可配置包装命令名（默认 dot）。备注：只 deny，不改写命令。 |  | [链接](https://github.com/theagitist/claude-mods/tree/main/dot-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -507,6 +518,7 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | outputs | 侧栏列出本会话新建或改过的文件（新的在前），点一下用系统程序打开或复制路径。备注：只扫描项目目录，打开时本机调用 open/xdg-open/start；tool.call 原样放行；不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/outputs) |
 | bdt-status | 提示框上方显示当前分支的 PR、构建状态和它关闭的 issue（可点链接）。备注：需本机 PATH 上有 bmsuisse/devtools 的 bdt CLI，每 30 秒及每轮结束调用 bdt pr info --json；AbovePrompt 先调 next 再追加一行；仓库无许可证文件。 |  | [链接](https://github.com/bmsuisse/skills/tree/main/mods/bdt-status) |
 | aichemist-pr-review-pane | 只读面板显示当前 PR 的 Copilot 审查状态、CI 与未解决评论线程。备注：用本机已登录的 gh 读 GitHub PR 数据（不发送会话内容）；「Run review loop」按钮只在你点时以你的身份发一句固定提示，需配合 AIchemist 的 pr-review-loop skill。 | MIT | [链接](https://github.com/Anras573/AIchemist/tree/main/mods/pr-review-pane) |
+| git-diff | 提示框上方显示未提交改动：文件数、增删行数和 GitHub 式色块条，右侧显示分支；/git-diff 或 + 按钮打开面板按列表/树看每个文件。备注：本机只读调用 git diff/ls-files/branch；tool.call 只在 Edit/Write 后刷新统计，原样返回。 |  | [链接](https://github.com/cjmellor/mella-marketplace/tree/main/plugins/git-diff) |
 
 ### 子代理管理 Subagent Management
 
@@ -606,6 +618,7 @@ For detailed descriptions of all 674 mods, see the Chinese section below.
 | goblin-chrome | 提示框上方的哥布林随会话状态换表情、说怪话，按模型档位换边框，带昼夜循环，提问框上方加哥布林脸，可选播放自带音效。备注：PromptHint 改写提示尾巴但仍调 next；读本机 ~/.claude/skills 下的 SKILL.md 判断指定模型、读本机主题配色；工具调用只观察、原样返回，不用网络。 |  | [链接](https://github.com/JasonWarrenUK/goblin-mode/tree/main/marketplace/goblin-chrome) |
 | pikachu | 在面板里养一只宝可梦（五条进化线可选），随上下文占用进化，带进度条和曲线。备注：只读上下文用量；不改提示或工具，不联网。 | MIT | [链接](https://github.com/ottho-nocode/claude-mod-pokemon) |
 | token-printer | Clawd 在提示框上方开「token 印钞机」，随 Claude 工作强度加速，回复下附 token/费用小票，/brrr 生成梗图，/token-reserve 打开统计面板。备注：Spinner 只改文案后调 next；prompt.edit 只读草稿让 Clawd 眼睛跟光标，原样返回；turn.complete 只在回答下加一行小票；不联网。 | MIT | [链接](https://github.com/BorjaGM1/token-printer) |
+| clawd-gotchi | 左下复古 RPG 小宠物：缓存命中和 git commit 喂养它，跑测试失败的套件变成 Boss，测试全过击败得 XP；可配置名字。备注：tool.call 只读 Bash 输出数失败数，原样返回；状态存本机 $.store；界面文案为法语。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/clawd-gotchi) |
 
 ### 图片与媒体 Images & Media
 
