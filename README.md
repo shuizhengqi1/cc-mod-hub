@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 623 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 630 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 623 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 630 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 623 mods, see the Chinese section below.
+For detailed descriptions of all 630 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 623 个精选 Claude Code mods，按类别组织：
+以下是本市场的 630 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -216,6 +216,8 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | 12ui-plugin | 提供设计面板。 |  | [链接](https://github.com/just-every/12ui-plugin) |
+| a2ui-claude-code | 在窗格里原生渲染 A2UI 目录块（/a2ui 读文件或内联 JSON，并自动画 a2uicatalog MCP 载荷），带动画进度和长任务仪表盘（/a2ui-job，回合超过 60 秒后打开）。备注：tool.call 原样放行；只读本机文件，不联网；源仓库约 800 MB，首次安装较慢。 | MIT | [链接](https://github.com/a2uicatalog/a2ui/tree/main/claude-code-surface) |
+| agent-diary | 斯多葛工程日记窗格（/diary、/diary-note、/diary-open），改 spinner 与提示框上方文字。备注：tool.call 原样放行；turn.complete 时跑本机 `agent-diary sync`（同仓库 CLI，需 `npm i -g` 或 `npm link`，没有就静默跳过），把本机 ~/.claude/projects 会话记录读进 ~/.agent-diary 并生成本地 HTML 日记；不联网。 | MIT | [链接](https://github.com/hemanth/agent-diary) |
 | ambient | 提示框上方动画场景带与本地音效。**显示时 AbovePrompt 不调用 next 并盖住其他带**。/ambient weather 仅发送城市名与坐标到 Open-Meteo，不含会话内容。**在无指针终端上 PromptHint 改写提示尾部但仍调用 next**。 | MIT | [链接](https://github.com/barisdemirhan/claude-ambient) |
 | aside | /aside 只读侧聊：基于会话 transcript fork 问答，不写回主线程。 | MIT | [链接](https://github.com/JayDoubleu/aside) |
 | at-work | 提示框上方像素场景动画，按当前工具活动切换画面；spinner 计算机笑话；节日装饰。纯 UI，不改写工具/提示。 | MIT | [链接](https://github.com/zhuoxingzhang/pixel-at-work) |
@@ -295,6 +297,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | logo | 提示上方显示自设 PNG logo（终端 Raster）；备注：本机 process（powershell 缩图）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/logo) |
 | steering-wheel | /steering-wheel 写入 ~/.claude/keybindings.json 绑定 F5 立即发送，并改写 PromptHint「send now」文案；备注：本机写配置文件。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/steering-wheel) |
 | progress-bar | 提示框上方本回合进度条、估时与工具次数；等待审批时暂停计时。纯 UI，只观察 turn/tool，不改写。 |  | [链接](https://github.com/kshitiz-swim/claude-plugins/tree/main/plugins/progress-bar) |
+| progress-bar-3000 | 注册自己的 `progress` 工具和 /progress-bar-3000 命令，驱动本机渲染器在 tmux 里画两行进度窗格。备注：Go 程序，同仓库 `make build`，把路径设到 `binary` 选项；只处理自己的工具；只开本机 tmux 进程，不联网。 | MIT | [链接](https://github.com/atomicstack/progress-bar-3000/tree/main/claude-code-mod) |
 | qa-guide | prompt.submit 仅记录然后调用 next 且不注入上下文，AskUserQuestion 说明文字使用 $.model.fork / $.model.complete 并默认开启直至手动切换。 | MIT | [链接](https://github.com/aieo-product/claude_qamods/tree/main/plugins/qa-guide) |
 | cc-cli-rail | prompt-rail 的竖向分叉：在对话旁列出本会话的历史 prompt，点击或 /cc-cli-rail next/prev/编号/find 跳回。备注：本机 process（用 tail 读本会话记录文件）；隐藏或窄屏时 AbovePrompt 不调 next，会盖住别的提示框上方行；与已有 prompt-rail 同源，二选一。 | MIT | [链接](https://github.com/afu-it/cc-cli-rail) |
 | widgets | 小部件卡片布局：/widgets 把卡片放在提示框上方、下方或全屏时的侧边窗格，下面所有 *-widget 都依赖它；只改显示。备注：上次选了侧栏时，会话开始约 0.4 秒后会自动重新打开侧栏。 | MIT | [链接](https://github.com/oMaN-Rod/claude-code-widgets/tree/main/plugins/widgets) |
@@ -325,6 +328,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | cc-idle | 挂在 Claude 旁边的放置游戏，只用本机会话进度。 | MIT | [链接](https://github.com/RichardAtCT/cc-idle/tree/main/plugins/cc-idle) |
 | cc-range | 提示上方像素射击馆小游戏（鼠标瞄准开火，零 token）。 | MIT | [链接](https://github.com/germanfndez/cc-range) |
 | cc-subway | 地铁跑酷小游戏，可在右侧窗格或提示框上方游玩。 | MIT | [链接](https://github.com/lucastononro/cc-subway) |
+| cielinux-scenes | 随 Claude Code 活动（回合、工具、子代理、权限提示）切换 CieLinux 壁纸场景并发提醒：把场景名和提醒名 POST 到本机 CieLinux HTTP API（默认 http://127.0.0.1:43811，bearer token 读本机 token 文件）。备注：tool.call 原样放行，不发送会话内容；需要 CieLinux（仅 Linux）。 |  | [链接](https://github.com/JamsMendez/CieLinux/tree/main/integrations/claude-code) |
 | claude-dino | 提示框上方的恐龙跑酷小游戏（来源与已上架的 cc-dino 不同）。 |  | [链接](https://github.com/swan4er/claude-dino) |
 | claude-games | 提示框上方的街机游戏（/racer、/breakout、/dino、/shooter），在 Claude 工作时玩；游戏对 Claude 的行为作出反应：... | MIT | [链接](https://github.com/mohi-devhub/claude-games) |
 | claude-maru-run | Claude 工作时在窗格里看方块跑酷小游戏。 |  | [链接](https://github.com/lemonlatte/claude-maru-run) |
@@ -380,6 +384,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | env | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
 | flash-veille | 提示框上方轮播开发者资讯（Human Coders、Anthropic 博客等）。 | MIT | [链接](https://github.com/camilleroux/flash-veille/tree/main/plugins/flash-veille) |
 | guard | 拦截危险 Bash 与密钥文件读写，只拒绝不改写。备注：本机 $.fs.stat；无拦截时可用 $.ui.status(undefined) 清状态行。 | MIT | [链接](https://github.com/StanislavKozachenko/claude-mods/tree/main/plugins/guard) |
+| guardclaw | 只拒绝、失败即关闭：每条 shell 命令交给本机 `guardclaw-scan` 扫描，并挡住文件工具碰凭据与设置文件。备注：完整模式需要本机 guardclaw-scan 二进制（同仓库 `go install github.com/TakeInterestInc/guardclaw-core/cmd/guardclaw-scan@latest`；没有则退回内置规则）；不联网；会拒绝加载钩住风险事件的其他非信任 mod（包括本市场里的 mod），除非加进它的 `allowMods` 选项。 | Apache-2.0 | [链接](https://github.com/TakeInterestInc/guardclaw-core/tree/main/claude-code-mod) |
 | guardrails | 本地拒绝 Cloudflare 写命令、带归因行的 commit、claude/ 分支前缀。备注：只读 Bash 命令字符串做 deny，不改写。 |  | [链接](https://github.com/arasovic/claude-code-mods/tree/main/guardrails) |
 | launch-codes | 危险 Bash 需解锁码才放行。备注：会 deny 危险命令直至用户解锁。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/launch-codes) |
 | machine-guard | 改机器的 Bash 先征求确认；仅拒绝，不改写命令。 | MIT | [链接](https://github.com/MichaelP17/claude-mods/tree/main/machine-guard) |
@@ -399,6 +404,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | secret-mask | 在工具输出写入对话前遮罩疑似密钥。备注：会改写展示给模型的工具结果文本（本地遮罩，不外传）。 |  | [链接](https://github.com/homieyangg/claude-code-mods/tree/main/secret-mask) |
 | secret-redactor | 在模型看到前把密钥/邮箱/IP 换成占位符，工具输入时再还原。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) |
 | secret-sentry | 双向密钥清洗：模型看到前脱敏，并拦截把密钥写入受跟踪文件或 shell。备注：可 deny；脱敏 prompt/工具结果文本，不外传；本机 git。 | MIT | [链接](https://github.com/ccdwyer/secret-sentry) |
+| secrets-guard | 拒绝 Edit/Write/NotebookEdit/Bash 写入密钥文件（.env、密钥、~/.ssh、~/.aws/credentials 等）或内容呈凭据形态的调用，并拒绝 cat/head .env 与 id_rsa。备注：只拒绝不改写，不联网；与已有的 `secret-guard` 是不同项目。 | MIT | [链接](https://github.com/BioInfo/slopless/tree/main/mods/secrets-guard) |
 | secrets-veil | 工具执行后遮盖结果中的疑似密钥字符串，不改写命令本身。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil) |
 | sensitive-file-guard | 拦截触及 .env/密钥/凭证路径的工具调用。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/sensitive-file-guard) |
 | shared-file-guard | 共享文件本会话未读或已被别会话改过时拒绝 Bash 写入；只拒绝不改写。备注：本机 $.fs.stat。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/shared-file-guard) |
@@ -659,6 +665,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below.
 | tw-stock-mod | 提示框上方的台股/美股观察清单带状栏，台股交易时段显示台股（红涨绿跌）、美股交易时段显示美股（绿涨红跌）；支持 Yahoo 延迟报价或券商即时行情（永豐 ... |  | [链接](https://github.com/darrell-tw/darrelltw-mods/tree/main/mods/tw-stock-mod) |
 | vercel-deploys | /vercel 只读侧栏，使用用户的 token 调用 api.vercel.com，不发送会话内容；健康检查 GET 部署域名时不携带会话主体。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/vercel-deploys) |
 | vn-stockmarket-heatmap | 越南股市热力图与报价窗格；联网拉取 SSI iBoard 公开行情（只发送股票代码）；自选列表存本机。 | MIT | [链接](https://github.com/NgoTuong12345/claude-mod-vn-stock-watch) |
+| xmuse | Cross-Muse（xmuse）房间看板配套：状态行、toast、窗格和状态工具，以及需人批准的分屏决定（短时授权）。备注：只连本机 xmuse API（默认 http://127.0.0.1:8201，网页界面 127.0.0.1:3000），不发送会话内容；需要 Cross-Muse 在运行。 | MIT | [链接](https://github.com/iiyazu/Cross-Muse/tree/main/integrations/claude-code) |
 
 ### 本地工具 Local Tools
 
