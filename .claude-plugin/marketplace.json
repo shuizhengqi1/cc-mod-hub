@@ -3540,6 +3540,58 @@
         "url": "DJPalefaceSD/rostech-mods",
         "path": "plugins/pop"
       }
+    },
+    {
+      "name": "claude-code-usage-quota",
+      "source": {
+        "source": "git",
+        "url": "anantraghunath/claude-code-usage-quota-mod"
+      }
+    },
+    {
+      "name": "usage-reporter",
+      "source": {
+        "source": "git",
+        "url": "tksunw/usage-reporter"
+      }
+    },
+    {
+      "name": "context-card",
+      "source": {
+        "source": "git-subdir",
+        "url": "Nongfsq/frank-claude-cockpit",
+        "path": "context-card"
+      }
+    },
+    {
+      "name": "progress-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "kshitiz-swim/claude-plugins",
+        "path": "plugins/progress-bar"
+      }
+    },
+    {
+      "name": "task-line",
+      "source": {
+        "source": "git",
+        "url": "muellerei/task-line"
+      }
+    },
+    {
+      "name": "git-graph",
+      "source": {
+        "source": "git-subdir",
+        "url": "nemokoala/claude-mods",
+        "path": "plugins/git-graph"
+      }
+    },
+    {
+      "name": "agent-shell-watch",
+      "source": {
+        "source": "git",
+        "url": "apolenkov/agent-shell-watch"
+      }
     }
   ]
 }
