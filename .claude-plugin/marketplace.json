@@ -3028,6 +3028,43 @@
         "source": "git",
         "url": "kbrdn1/claude-crosstalk"
       }
+    },
+    {
+      "name": "todos",
+      "source": {
+        "source": "git-subdir",
+        "url": "bengous/claude-code-plugins",
+        "path": "todos"
+      }
+    },
+    {
+      "name": "command-buttons",
+      "source": {
+        "source": "git",
+        "url": "faridmurzone/command-buttons-claude-code"
+      }
+    },
+    {
+      "name": "anchorwatch-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "anchorwatch-dev/anchorwatch",
+        "path": "plugins/anchorwatch-mod"
+      }
+    },
+    {
+      "name": "roll-credits",
+      "source": {
+        "source": "git",
+        "url": "smukh/roll-credits"
+      }
+    },
+    {
+      "name": "cc-range",
+      "source": {
+        "source": "git",
+        "url": "germanfndez/cc-range"
+      }
     }
   ]
 }

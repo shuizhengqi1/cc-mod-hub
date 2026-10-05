@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 393 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 398 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 393 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 398 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 393 mods, see the Chinese section below.
+For detailed descriptions of all 398 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 393 个精选 Claude Code mods，按类别组织：
+以下是本市场的 398 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -236,6 +236,7 @@ For detailed descriptions of all 393 mods, see the Chinese section below.
 | cc-arcade | 在提示框上方显示游戏，点击不会调用模型。 |  | [链接](https://github.com/sezaakgun/cc-arcade) |
 | cc-dino | Chrome 恐龙跑酷游戏，Claude 忙时可玩。 | MIT | [链接](https://github.com/manfye/cc-dino) |
 | cc-idle | 挂在 Claude 旁边的放置游戏，只用本机会话进度。 | MIT | [链接](https://github.com/RichardAtCT/cc-idle/tree/main/plugins/cc-idle) |
+| cc-range | 提示上方像素射击馆小游戏（鼠标瞄准开火，零 token）。 | MIT | [链接](https://github.com/germanfndez/cc-range) |
 | cc-subway | 地铁跑酷小游戏，可在右侧窗格或提示框上方游玩。 | MIT | [链接](https://github.com/lucastononro/cc-subway) |
 | claude-dino | 提示框上方的恐龙跑酷小游戏（来源与已上架的 cc-dino 不同）。 |  | [链接](https://github.com/swan4er/claude-dino) |
 | claude-games | 提示框上方的街机游戏（/racer、/breakout、/dino、/shooter），在 Claude 工作时玩；游戏对 Claude 的行为作出反应：... | MIT | [链接](https://github.com/mohi-devhub/claude-games) |
@@ -253,6 +254,7 @@ For detailed descriptions of all 393 mods, see the Chinese section below.
 | night-feast | Claude 工作时的像素小游戏。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/night-feast) |
 | pet | 一只嘴碎的火烈鸟吉祥物 Flingo，在侧栏或状态行陪伴你码字，代 Claude 说话、吐槽代码、喂养玩耍、换装（皇冠、礼帽、蝴蝶结、墨镜），用 /fli... | MIT | [链接](https://github.com/graugart/flingo) |
 | pong | 在提示框上方玩 Pong 游戏，Claude 工作时可打发时间。 | MIT | [链接](https://github.com/ambareeshav/claude-pong-mod) |
+| roll-credits | /credits 电影片尾字幕窗格：本会话编辑文件与工具调用统计（本地、零 token）。 | MIT | [链接](https://github.com/smukh/roll-credits) |
 | severance-mdr | Severance 风格 MDR 小游戏面板；代理工作时可自动打开。纯 UI。 |  | [链接](https://github.com/magnuswiderberg/claude-code-mods/tree/main/plugins/severance-mdr) |
 | snake | Claude 工作时可玩的贪吃蛇窗格（/snake）。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/snake) |
 | wod-band | 提示框上方像素运动员：工具调用计 rep，会话当 AMRAP。纯 UI。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/wod-band) |
@@ -265,6 +267,7 @@ For detailed descriptions of all 393 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | admin-capability-lockdown | 组织级管控：剥夺下层插件的 http/process，并可拒绝 Bash 或网络客户端。备注：只 deny/能力剥夺，不改写命令；宜放 managed prepend。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/enterprise/admin-capability-lockdown) |
+| anchorwatch-mod | Bash 危险命令本地 deny（rm -rf、force push、DROP、curl\|sh、读 .env 等）；备注：只 deny 不改写；本机 git 查当前分支。 | MIT | [链接](https://github.com/anchorwatch-dev/anchorwatch/tree/main/plugins/anchorwatch-mod) |
 | bash-guardrails | 用本地规则拒绝危险或畸形的 Bash 与 Monitor 调用（只读命令字符串做判定，不改写命令）。 |  | [链接](https://github.com/ruihe774/cc-bash-guardrails) |
 | block-destructive-commands | 按模式拒绝危险 Bash（递归删根、force push、硬重置、破坏性 SQL 等）。备注：只 deny，不改写命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/security/block-destructive-commands) |
 | branch-guard | 在受保护分支上拦截 Write/Edit 与变更型 git，可询问后放行或建议 worktree。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/branch-guard) |
@@ -302,6 +305,7 @@ For detailed descriptions of all 393 mods, see the Chinese section below.
 | classifier-telemetry | 把每次工具调用的权限判定与耗时写到本机 ~/.claude/classifier-telemetry/。备注：本机写本地文件。 | MIT | [链接](https://github.com/bendrucker/claude/tree/main/plugins/classifier-telemetry) |
 | claude-mermaid | 把助手回复里的 mermaid 块画成彩色 box art。 |  | [链接](https://github.com/galElmalah/claude-mods/tree/main/claude-mermaid) |
 | codebase-galaxy | 用盲文点阵把仓库文件画成星空，跟着 Claude 碰过的文件。 | MIT | [链接](https://github.com/ccdwyer/codebase-galaxy) |
+| command-buttons | 在助手 shell 代码块下画 Run/Copy 按钮与热键带；备注：本机 process（剪贴板），用户按按钮才经 tool.call 跑 Bash。 | MIT | [链接](https://github.com/faridmurzone/command-buttons-claude-code) |
 | config-parse | 配置文件解析器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/config-parse) |
 | diagram-render | 图表实时渲染。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/diagram-render) |
 | diff-review | 每次 Edit/Write 后在侧栏展示未提交 hunk，keep/revert 按钮；revert 用本机 git apply -R（新建文件二次确认后 rm）。模型看不到操作。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/diff-review) |
@@ -433,6 +437,7 @@ For detailed descriptions of all 393 mods, see the Chinese section below.
 | taskcut | turn.step mod。 | MIT | [链接](https://github.com/wasd96040501/taskcut) |
 | task-eta | 长任务步骤与剩余时间。超时用 $.model.fork，提示里带工具轨迹、用户新消息和回复片段。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
+| todos | 会话开始在提示上方列出仓库 TODO/FIXME/HACK（git blame 排序）；备注：本机 git。 | MIT | [链接](https://github.com/bengous/claude-code-plugins/tree/main/todos) |
 
 ### 外部集成 External Integrations
 
