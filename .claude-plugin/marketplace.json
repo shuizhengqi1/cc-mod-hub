@@ -6217,6 +6217,78 @@
         "path": "plugins/vnext-session-record",
         "sha": "470f85adcea3a4b28f008d3cd21c981506bfb705"
       }
+    },
+    {
+      "name": "todo-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NewSoulOnTheBlock/personal-agentic-core.git",
+        "path": "plugins/todo-pane",
+        "sha": "837ff998cdea4630210d4d0990e360e59dcb865e"
+      }
+    },
+    {
+      "name": "clean-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Dos2Locos/claude-code-mods.git",
+        "path": "plugins/clean-view",
+        "sha": "0066483b23d7f4a3cc9c6ad96a8176c83801c1dd"
+      }
+    },
+    {
+      "name": "spinner-packs",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/fun/spinner-packs",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "buddy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/fun/buddy",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "tool-radar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/awareness/tool-radar",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/safety/file-guard",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "git-pulse",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/awareness/git-pulse",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "tablero-consumo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kit-para-devs/mods.git",
+        "path": "plugins/tablero-consumo",
+        "sha": "3c2b106646e87f7bc435d771905bb73a9939fce8"
+      }
     }
   ]
 }
