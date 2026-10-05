@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 607 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 614 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 607 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 614 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 607 mods, see the Chinese section below.
+For detailed descriptions of all 614 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 607 个精选 Claude Code mods，按类别组织：
+以下是本市场的 614 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -153,6 +153,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | usage-limits | 提示框上方显示 5h/周限额剩余与重置倒计时。纯 UI。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/usage-limits) |
 | usage-line | 提示框上方一行显示会话费用、上下文占用、5 小时与每周额度及消耗速度，/usage-style 换条形样式；备注：读本机 ~/.claude.json 只取邮箱 @ 前的用户名显示。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/usage-line) |
 | usage-pace | 提示框上方一行显示 5 小时窗口已用百分比、距重置时间和节奏红黄绿灯；只读 $.session.usage。备注：AbovePrompt 显示时不调 next，可能盖住同样改这块的 mod；每 60 秒刷新显示。 | MIT | [链接](https://github.com/diazgonza17/usage-pace) |
+| usage-pet | 提示框上方 Clawd 宠物信息栏，显示上下文与 5 小时/周限额并随用量养成；/clawd-card 导出战报 PNG（本机 process：macOS 用 qlmanage/sips/osascript，Windows 用 PowerShell 跑自带脚本调 Edge/Chrome 无头截图，旧卡片移进废纸篓）；AbovePrompt 显示时不调 next。 | MIT | [链接](https://github.com/manson341349-beep/claude-desktop-mods/tree/main/plugins/usage-pet) |
 | usage-report | 显示会话用量与费用报告。 | MIT | [链接](https://github.com/Schweem/usage-report) |
 | usage-status | 状态行显示 5h/周限额占用。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/usage-status) |
 | usage-tracker | 实时 5h/7d 用量、节奏与火花线（含本机读 Codex 日志）。备注：本机 process（tail）。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/usage-tracker) |
@@ -219,6 +220,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | at-work | 提示框上方像素场景动画，按当前工具活动切换画面；spinner 计算机笑话；节日装饰。纯 UI，不改写工具/提示。 | MIT | [链接](https://github.com/zhuoxingzhang/pixel-at-work) |
 | better-tool-rows | Read/Edit/Write 显示相对路径，Edit/Write 结果显示加减行数，长 Bash 命令截成一行并折叠长输出；只改显示，Bash 工具调用只记命令形状、原样返回。备注：Bash/Edit/Write 的 ToolResult 槽在已显示输出或行数时直接画空、不调 next，可能盖住其他改这个槽的 mod；在本机读会话记录来算行间距。 | MIT | [链接](https://github.com/akilin/claude-plugins/tree/main/plugins/better-tool-rows) |
 | btw-fix | 接管内置 /btw（不调 next），把答案作为普通对话行输出而不是阻塞侧栏；用 $.model.fork 带当前会话问模型（与内置 /btw 相同）。 |  | [链接](https://github.com/m-mahiro/claude-code-mods/tree/main/mods/btw-fix) |
+| bunny-spinner | 把加载提示行改成小兔子口吻（名字可配置），工具运行时加「nom nom…」；只改 Spinner 显示。 |  | [链接](https://github.com/DenisGuiraudet/claude-mods/tree/main/bunny-spinner) |
 | catch-me-up | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
 | cc-math-renderer | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | al-syntax | 把回复里 ```al 代码块（Business Central AL 语言）用 tree-sitter 着色显示，其他回复不动。备注：本机 process 用 node 运行仓库自带的 tree-sitter 高亮脚本和 wasm 语法文件（随插件一起，不另下载）；只改回复显示，不改原文，不联网。 | MIT | [链接](https://github.com/abonckus/claude-code-al-syntax) |
@@ -230,6 +232,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | clawdify | /clawdify 改 spinner、页脚、提示、横幅、状态行和对话行样式，可用自然语言描述（走 $.model.complete，只发当前设置和你的请求）；可按你设的规则改写回答的显示文本（只改显示）、替换 PromptHint/UserMessage、横幅开启时 AbovePrompt 不调 next、可隐藏提示通知；启动时 $.ui.status(undefined)，并扫描本机 ~/.claude/plugins/store 迁移旧设置；读取本地 .git/HEAD 获得分支名。 | MIT | [链接](https://github.com/viik2k/clawdify) |
 | looks | 提示框上方显示配色主题切换菜单，纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/looks) |
 | collapse-answers | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
+| meadow | 把助手回复画成像素草地气泡（首块上方天空山丘、末块下方草地）；只改 AssistantMessage 显示，画图时不调 next，可能盖住其他改回复样式的 mod。 |  | [链接](https://github.com/DenisGuiraudet/claude-mods/tree/main/meadow) |
 | message-timestamps | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | commonplace-pane | 侧边窗格展示芝加哥艺术学院公版画，随仓库状态变「天气」。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commonplace-pane) |
 | crosstalk | /crosstalk 打开窗格，记录本会话与其他 Claude Code 会话的 peer 收发，并可在窗格内回复；只读观察、不改写工具。备注：hook 本机 find/grep 扫描 session journal；thread 存 local store。 | MIT | [链接](https://github.com/kbrdn1/claude-crosstalk) |
@@ -366,6 +369,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | branch-guard | 在受保护分支上拦截 Write/Edit 与变更型 git，可询问后放行或建议 worktree。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/branch-guard) |
 | browser-guard | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | collision-guard | 另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。 |  | [链接](https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard) |
+| council-of-elrond | 按规则给每次工具调用分级：放行、拦下、问你，或交给 $.model.complete 审核（会发送工具调用、最近一次提示和本会话写过的脚本内容，已脱敏）；只拒绝不改写；在本机项目里写审计日志。 | MIT | [链接](https://github.com/Deluha/council-of-elrond/tree/main/mods/council-of-elrond) |
 | danger-check | rm -rf、git reset --hard、强推等会毁掉工作的命令先弹窗问你，选阻止就拒绝；备注：只拒绝不改写；本机 git 预览（git status / clean -n / stash list）。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/danger-check) |
 | delete-guard | 拦截 rm -rf 等危险删除，可拒绝或移入本机回收站；不改写命令。备注：本机 process。 |  | [链接](https://github.com/Tihi321/claude-mods/tree/main/plugins/delete-guard) |
 | env | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
@@ -383,6 +387,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | pnpm-only | 拒绝 npm / npx 命令并告诉 Claude 对应的 pnpm 写法；备注：只拒绝不改写。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/pnpm-only) |
 | protected-paths-guard | 拒绝 Edit/Write/NotebookEdit 触及 .env、锁文件、CI 工作流、git 内部与私钥等路径（可配置 allow）。备注：只 deny，不改写。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/security/protected-paths-guard) |
 | redact | Read 结果里把疑似密钥字符串替换成 `[REDACTED:…]` 再给模型。备注：改写的是 Read 结果文本，不改写命令。 | MIT | [链接](https://github.com/thkt/dotclaude/tree/main/mods/redact) |
+| safety-guard | 拦下 curl 管道进 shell、对根目录/家目录的 rm -r、git 强推/reset --hard/clean -f、dd 写设备、mkfs、chmod -R 777，以及读写 .env、私钥、.aws 凭据等密钥文件；只拒绝不改写。 |  | [链接](https://github.com/pradyb/claude-mods/tree/main/safety-guard) |
 | script-gate | Bash 拦截「下载即执行」管道、Encoded PowerShell、LOLBin 等；只拒绝不改写命令。备注：只拒绝不改写。 | MIT | [链接](https://github.com/ABDUAZIZX/script-gate) |
 | seatbelt | 本地规则拦截危险 Bash/写文件（只拒绝不改写命令）。备注：会 deny 匹配的工具调用。 |  | [链接](https://github.com/lucenity0/claude-code-mods/tree/main/seatbelt) |
 | secret-guard | 拦截即将写入文件或 Bash 的疑似密钥内容。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/secret-guard) |
@@ -468,6 +473,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | bg-task-band | 提示框上方后台 Bash/Monitor/Agent 任务条。备注：本机 process（find/tail）；AbovePrompt 显示时可不调 next。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/bg-task-band) |
 | git-diff-timeline | 提示框上方的 git 提交时间线：点提交看 diff、点两个比较，分支标签页比较两个分支（/gitdiff）；只在本机运行 git log、git diff 等只读 git 命令。当默认带状显示时（git 就绪或错误），AbovePrompt 返回自己的条带不调用 next，会覆盖其他 mod 的行。 |  | [链接](https://github.com/liawzishen/git-diff-timeline) |
 | git-ops | /git 在提示框上方显示可点的 git 面板：分支按钮带筛选、切换前确认，pull、push、fetch、全部暂存和提交，也可用文本子命令。备注：本机 git（$.process.run 参数数组），只在你点按钮或输入子命令时运行，不提供强推、reset、rebase；面板显示时 AbovePrompt 仍调 next。 |  | [链接](https://github.com/nogu66/claude-code/tree/main/git-ops) |
+| wxmp-preview | 在侧边面板预览微信小程序 / uni-app 页面，Edit/Write 原样 next 后自动刷新；本机 process：node 桥接脚本、可自动 npm run 启动项目 dev server、无头 Chrome 截图、微信开发者工具 CLI，只连 localhost；桥接依赖需自行 npm 安装。 | Apache-2.0 | [链接](https://github.com/GrubbyLee/claude_wechat_view_mod) |
 
 ### 子代理管理 Subagent Management
 
@@ -614,6 +620,7 @@ For detailed descriptions of all 607 mods, see the Chinese section below.
 | sudus | 本地运行 sudus wake（或插件自带 node bin）在提示框上方或窗格显示项目 verdict；不调用模型。 | MIT | [链接](https://github.com/eas4ai/sudus) |
 | taskcut | turn.step mod。 | MIT | [链接](https://github.com/wasd96040501/taskcut) |
 | task-eta | 长任务步骤与剩余时间。超时用 $.model.fork，提示里带工具轨迹、用户新消息和回复片段。备注：使用 $.model.fork。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/task-eta) |
+| task-list | 把项目 TASKS.md 显示成侧边任务面板，/task 添加任务，注册 tasks 工具让 Claude 读改清单；其他工具调用原样 next；粘贴按钮在本机跑 pbpaste（本机 process）。 |  | [链接](https://github.com/amaezey/task-list) |
 | task-progress-mod | 提示框上方 TodoWrite 进度条；tool.call 只观察 TodoWrite 原样放行；进度条显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/hahahahahahahahah6/task-progress-mod) |
 | tasknotes-preview | 侧栏按 Obsidian Bases 视图展示 TaskNotes（看板/列表/日程/依赖图）；本机读 vault，本机 process 打开 Obsidian。 | MIT | [链接](https://github.com/cbruyndoncx/claude-tasknotes-renderer-mod) |
 | taskrail | 在输入框上方显示本会话计划的波次任务看板，Claude 通过它注册的 plan/set/show 三个工具更新；/taskrail 切换 off/bar/full/both；看板显示时 AbovePrompt 不调 next；计划按会话存在本机 $.store。 | MIT | [链接](https://github.com/drolosoft/taskrail) |
