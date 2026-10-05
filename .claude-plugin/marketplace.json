@@ -5288,6 +5288,110 @@
         "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
         "path": "clawd-gotchi"
       }
+    },
+    {
+      "name": "model-search",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/junjiezhou1122/plugins.git",
+        "path": "model-search"
+      }
+    },
+    {
+      "name": "sprint-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sunholo-data/ailang_bootstrap.git",
+        "path": "plugins/sprint-status"
+      }
+    },
+    {
+      "name": "ailang-brand",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sunholo-data/ailang_bootstrap.git",
+        "path": "plugins/ailang-brand"
+      }
+    },
+    {
+      "name": "ailang-inbox-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sunholo-data/ailang_bootstrap.git",
+        "path": "plugins/ailang-inbox-band"
+      }
+    },
+    {
+      "name": "ailang-lens",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sunholo-data/ailang_bootstrap.git",
+        "path": "plugins/ailang-lens"
+      }
+    },
+    {
+      "name": "prepush-gate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sunholo-data/ailang_bootstrap.git",
+        "path": "plugins/prepush-gate"
+      }
+    },
+    {
+      "name": "rtk-quota",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
+        "path": "rtk-quota"
+      }
+    },
+    {
+      "name": "vast-cost",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wmayner/dotfiles.git",
+        "path": "claude/vast-cost"
+      }
+    },
+    {
+      "name": "ship-state",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tyree88/tempered_plugins.git",
+        "path": "ship-state"
+      }
+    },
+    {
+      "name": "session-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/oualid0/claude-mods.git",
+        "path": "plugins/session-board"
+      }
+    },
+    {
+      "name": "usage-ring",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/oualid0/claude-mods.git",
+        "path": "plugins/usage-ring"
+      }
+    },
+    {
+      "name": "burnrate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nemke82/claude-code-burnrate.git",
+        "path": "burnrate"
+      }
+    },
+    {
+      "name": "compact-large-idle-context",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mataku/dotfiles.git",
+        "path": "claude/mods/compact-large-idle-context"
+      }
     }
   ]
 }
