@@ -4651,6 +4651,22 @@
         "url": "https://github.com/achapla/cc-mods.git",
         "path": "usage-line"
       }
+    },
+    {
+      "name": "meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/theishandubey/claude-mods.git",
+        "path": "plugins/meter"
+      }
+    },
+    {
+      "name": "agent-graph",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/theishandubey/claude-mods.git",
+        "path": "plugins/agent-graph"
+      }
     }
   ]
 }
