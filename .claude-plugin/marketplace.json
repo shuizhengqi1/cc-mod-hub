@@ -5058,6 +5058,132 @@
         "url": "https://github.com/ytskmt14/coding-pet.git",
         "path": "plugins/coding-pet"
       }
+    },
+    {
+      "name": "md-render",
+      "source": {
+        "source": "github",
+        "repo": "deepskyblue86/claude-markdown-mod"
+      }
+    },
+    {
+      "name": "workflow-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/alonbaron/claude-skills.git",
+        "path": "mods/workflow-watch"
+      }
+    },
+    {
+      "name": "bdt-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bmsuisse/skills.git",
+        "path": "mods/bdt-status"
+      }
+    },
+    {
+      "name": "redline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jamubc/toolbox.git",
+        "path": "plugins/redline"
+      }
+    },
+    {
+      "name": "autodream-focus",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/STRML/autodream.git",
+        "path": "mods/autodream-focus"
+      }
+    },
+    {
+      "name": "registro-scritture",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "registro-scritture"
+      }
+    },
+    {
+      "name": "conferma",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "conferma"
+      }
+    },
+    {
+      "name": "lezioni",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "lezioni"
+      }
+    },
+    {
+      "name": "token-printer",
+      "source": {
+        "source": "github",
+        "repo": "BorjaGM1/token-printer"
+      }
+    },
+    {
+      "name": "aichemist-beads-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Anras573/AIchemist.git",
+        "path": "mods/beads-band"
+      }
+    },
+    {
+      "name": "aichemist-pr-review-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Anras573/AIchemist.git",
+        "path": "mods/pr-review-pane"
+      }
+    },
+    {
+      "name": "devbrain-live",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pushthev1be/devbrain.git",
+        "path": "mods/devbrain-live"
+      }
+    },
+    {
+      "name": "agent-state-observer",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szotasz/marveen.git",
+        "path": "plugins/agent-state-observer"
+      }
+    },
+    {
+      "name": "cortex-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lktiep/cortex-hub.git",
+        "path": "mods/cortex-bar"
+      }
+    },
+    {
+      "name": "needs-you",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/robfresh2o/fresh2o-plugins.git",
+        "path": "plugins/needs-you"
+      }
+    },
+    {
+      "name": "keel-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/berkayturanci/keel.git",
+        "path": "mods/keel-progress"
+      }
     }
   ]
 }
