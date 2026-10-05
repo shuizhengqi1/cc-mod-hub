@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 469 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 480 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 469 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 480 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 469 mods, see the Chinese section below.
+For detailed descriptions of all 480 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 469 个精选 Claude Code mods，按类别组织：
+以下是本市场的 480 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -158,6 +158,10 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | oil | 提示上方机油表：本周 Fable 用量计数（本机 store）；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/oil) |
 | claude-code-usage-quota | 提示框上方计划限额/上下文与耗尽预报；可一键或自动 compact。备注：本机 process（主题检测）；用用户 OAuth 读官方用量 API，不带会话正文；用量带显示时（默认开启，一旦存在快照），AbovePrompt slot 返回自己的行且不调用 next，因此可覆盖其他 mod 的行。 | MIT | [链接](https://github.com/anantraghunath/claude-code-usage-quota-mod) |
 | cache-band | Auto cache 使用 $.model.fork 保持缓存热度且不把会话文本注入对话；通过本地 fs/process 读本地 transcript mtime；AbovePrompt 调用 next；Auto compact 与 Compact 按钮运行 $.command.run({ command: 'compact' })。 | MIT | [链接](https://github.com/MohabYasser2/claude-code-mods/tree/main/cache-band) |
+| runway | 提示框上方 Command Code 套餐额度与节奏；读本机凭据调 billing API，不上传会话正文。备注：本机读配置文件/密钥。 | MIT | [链接](https://github.com/Jovan1666/claude-code-runway) |
+| otto-hud | 桌面端提示框上方 Otto 章鱼用量预报（上下文/5h/7d）；终端不绘制。纯 UI。 | Apache-2.0 | [链接](https://github.com/manuacl/claude-mods/tree/main/plugins/otto-hud) |
+| chai-meter | 会话花费用「几杯 chai」展示；/chai。纯 UI，只读会话用量。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/chai-meter) |
+| pixelbar | 提示框上方像素状态带：模型/上下文/限额/费用/git 与回合摘要；/session-files。备注：本机 git；AbovePrompt 显示时可不调 next。 |  | [链接](https://github.com/elkinaguas/claude-mods/tree/main/pixelbar) |
 
 ### 上下文管理 Context Management
 
@@ -181,6 +185,7 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | sidebar-controls | 把 compact-tools/live-thinking 开关放进右上侧栏。 |  | [链接](https://github.com/AJclemendor/my-mods/tree/main/plugins/sidebar-controls) |
 | workface | 长任务工作笔记，compaction 时保住 workface 状态。 |  | [链接](https://github.com/scodge-24/workface) |
 | context-card | 提示框上方上下文占用拆解与周限额；可展开分类条。备注：本机写缓存；用用户 OAuth 读官方用量 API，不带会话正文；卡片显示后，AbovePrompt 返回自己的行且不调用 next（除非正在显示调查），因此可覆盖其他 mod 的行；另 tail 本地会话 transcript 但不上传。 | MIT | [链接](https://github.com/Nongfsq/frank-claude-cockpit/tree/main/context-card) |
+| teach-me | 改代码后在提示框上方出一道多选题；/a 作答。备注：使用 $.model.complete（本机 diff，不外传）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/teach-me) |
 
 ### UI 与主题 UI & Themes
 
@@ -338,6 +343,8 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | hands-off | 用户标记路径后拒绝 Edit/Write/NotebookEdit。备注：只 deny，不改写。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/hands-off) |
 | query-guard | Bash 中疑似危险/慢 SQL（无 WHERE 的 DELETE/UPDATE、DROP 等）先询问再放行。备注：只 deny，不改写命令。 | MIT | [链接](https://github.com/nu0ma/query-guard/tree/main/plugins/query-guard) |
 | valet-mode | 代客模式：除 Read/Grep/Glob/WebSearch/WebFetch 外一律 deny；锁文件跨窗口。备注：只 deny，不改写。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/valet-mode) |
+| main-guard | 在受保护分支上拦截危险 git（force-push/hard reset 等）；可询问后放行 push。显示阻断理由时，其 AbovePrompt 返回自己的行且不调 next，可能覆盖其他 mod 的行。备注：只 deny，不改写命令；本机 git。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/main-guard) |
+| whoopgate | 心率超阈值时拒绝危险 Bash（读本机 ~/.whoopgate/hr.json）。备注：只 deny，不改写；本机读文件/git。 | MIT | [链接](https://github.com/ShriD5/claude-mods/tree/main/whoopgate) |
 
 ### 开发工具 Dev Tools
 
@@ -385,6 +392,8 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | workbench | 工作台：状态带 + Now/Changes/Preview/Artifacts/Code Map/Usage；只观察。备注：本机 git 与启动已安装的 Chrome/Chromium headless 截本地屏，不下载浏览器。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/workbench) |
 | universal-audit-log | 把 tool/prompt/turn 等事件记成本地 JSONL 审计日志（含拒绝）。备注：只写本地文件，不外传。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/observability/universal-audit-log) |
 | git-graph | 可折叠 Git 提交图面板（/git-graph）。备注：本机 git。 |  | [链接](https://github.com/nemokoala/claude-mods/tree/main/plugins/git-graph) |
+| vhs | /vhs 回放本会话每次 Edit/Write 的本地录像；可 rewind 写回文件。备注：本机读/写文件。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/vhs) |
+| bg-task-band | 提示框上方后台 Bash/Monitor/Agent 任务条。备注：本机 process（find/tail）；AbovePrompt 显示时可不调 next。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/bg-task-band) |
 
 ### 子代理管理 Subagent Management
 
@@ -472,6 +481,7 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | terminal-browser | 在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。 | MIT | [链接](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin) |
 | yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
 | image-thumbs | 在终端显示缩略图，使用本地 process（macOS sips、mktemp、base64 与临时文件清理）。不改写消息。 |  | [链接](https://github.com/ohade/claude-mods/tree/main/image-thumbs) |
+| lofi | 会话配乐：idle/focus/flow 与测试通过/失败提示音；/lofi on。备注：本机音频（插件内 mp3）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/lofi) |
 
 ### 任务与项目 Task & Project
 
@@ -537,6 +547,7 @@ For detailed descriptions of all 469 mods, see the Chinese section below.
 | pop | /pop 用本机打开器打开 URL/文件。备注：本机 process（open/xdg-open/powershell）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/pop) |
 | usage-reporter | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | agent-shell-watch | 状态行与窗格跟踪本会话 Bash/后台任务与 runner（Codex/Pi 等）；只观察，不改写。备注：本机 process（tail）。 | MIT | [链接](https://github.com/apolenkov/agent-shell-watch) |
+| tts-lite | 回合结束后本机 TTS 朗读短回复；长回复用 $.model.complete 摘要。空闲且旧 status hook 移除时调用 $.ui.status(undefined)，会清除其他 mod 使用的状态行。备注：本机 process（piper/espeak/paplay）；使用 $.model.complete。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/tts-lite) |
 
 ### 其他工具 Other Tools
 

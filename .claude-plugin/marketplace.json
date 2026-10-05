@@ -3616,6 +3616,93 @@
         "url": "aieo-product/claude_qamods",
         "path": "plugins/qa-guide"
       }
+    },
+    {
+      "name": "pixelbar",
+      "source": {
+        "source": "git-subdir",
+        "url": "elkinaguas/claude-mods",
+        "path": "pixelbar"
+      }
+    },
+    {
+      "name": "runway",
+      "source": {
+        "source": "git",
+        "url": "Jovan1666/claude-code-runway"
+      }
+    },
+    {
+      "name": "otto-hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "manuacl/claude-mods",
+        "path": "plugins/otto-hud"
+      }
+    },
+    {
+      "name": "teach-me",
+      "source": {
+        "source": "git-subdir",
+        "url": "saksham10arora-dotcom/claude-mods",
+        "path": "plugins/teach-me"
+      }
+    },
+    {
+      "name": "lofi",
+      "source": {
+        "source": "git-subdir",
+        "url": "saksham10arora-dotcom/claude-mods",
+        "path": "plugins/lofi"
+      }
+    },
+    {
+      "name": "vhs",
+      "source": {
+        "source": "git-subdir",
+        "url": "saksham10arora-dotcom/claude-mods",
+        "path": "plugins/vhs"
+      }
+    },
+    {
+      "name": "bg-task-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "ipartington/claude-mods",
+        "path": "bg-task-band"
+      }
+    },
+    {
+      "name": "tts-lite",
+      "source": {
+        "source": "git-subdir",
+        "url": "ipartington/claude-mods",
+        "path": "tts-lite"
+      }
+    },
+    {
+      "name": "chai-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "ShriD5/claude-mods",
+        "path": "chai-meter"
+      }
+    },
+    {
+      "name": "main-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "ShriD5/claude-mods",
+        "path": "main-guard"
+      }
+    },
+    {
+      "name": "whoopgate",
+      "source": {
+        "source": "git-subdir",
+        "url": "ShriD5/claude-mods",
+        "path": "whoopgate"
+      }
     }
   ]
 }
