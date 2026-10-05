@@ -4196,6 +4196,84 @@
         "url": "codywilliamson/claude-mods",
         "path": "shiplog"
       }
+    },
+    {
+      "name": "usage-pace",
+      "source": {
+        "source": "git",
+        "url": "diazgonza17/usage-pace"
+      }
+    },
+    {
+      "name": "subagents-monitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "Fazzani/claude-mods",
+        "path": "plugins/subagents-monitor"
+      }
+    },
+    {
+      "name": "tools-usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "Fazzani/claude-mods",
+        "path": "plugins/tools-usage"
+      }
+    },
+    {
+      "name": "daily-grind",
+      "source": {
+        "source": "git-subdir",
+        "url": "sreshtalluri/claude-mods",
+        "path": "plugins/daily-grind"
+      }
+    },
+    {
+      "name": "sidebot",
+      "source": {
+        "source": "git",
+        "url": "monowu/claude-mod-sidebot"
+      }
+    },
+    {
+      "name": "gitgraph",
+      "source": {
+        "source": "git-subdir",
+        "url": "TCcodemaster/claude-mods",
+        "path": "gitgraph"
+      }
+    },
+    {
+      "name": "cache-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "TheTsungYing/claude-cache-bar",
+        "path": "plugins/cache-bar"
+      }
+    },
+    {
+      "name": "streak",
+      "source": {
+        "source": "git-subdir",
+        "url": "vincentlauriat/ModsTools",
+        "path": "mods/streak"
+      }
+    },
+    {
+      "name": "agent-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "vincentlauriat/ModsTools",
+        "path": "mods/agent-tracker"
+      }
+    },
+    {
+      "name": "tool-heatmap",
+      "source": {
+        "source": "git-subdir",
+        "url": "vincentlauriat/ModsTools",
+        "path": "mods/tool-heatmap"
+      }
     }
   ]
 }
