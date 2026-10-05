@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 599 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 605 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 599 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 605 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 599 mods, see the Chinese section below.
+For detailed descriptions of all 605 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 599 个精选 Claude Code mods，按类别组织：
+以下是本市场的 605 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -151,6 +151,7 @@ For detailed descriptions of all 599 mods, see the Chinese section below.
 | usage-mod | 提示框上方显示上下文与 5h/7d 额度及重置时间；按钮可触发本机 /compact。 | MIT | [链接](https://github.com/qingyashizi/claude-usage-mod/tree/main/plugins/usage-mod) |
 | usage-log | 每回合写本地 jsonl 用量日志，并显示相对 7 日节奏的差距。备注：本机 process 写本地文件。 | MIT | [链接](https://github.com/tanuu5/usage-log/tree/main/plugins/usage-log) |
 | usage-limits | 提示框上方显示 5h/周限额剩余与重置倒计时。纯 UI。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/usage-limits) |
+| usage-line | 提示框上方一行显示会话费用、上下文占用、5 小时与每周额度及消耗速度，/usage-style 换条形样式；备注：读本机 ~/.claude.json 只取邮箱 @ 前的用户名显示。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/usage-line) |
 | usage-pace | 提示框上方一行显示 5 小时窗口已用百分比、距重置时间和节奏红黄绿灯；只读 $.session.usage。备注：AbovePrompt 显示时不调 next，可能盖住同样改这块的 mod；每 60 秒刷新显示。 | MIT | [链接](https://github.com/diazgonza17/usage-pace) |
 | usage-report | 显示会话用量与费用报告。 | MIT | [链接](https://github.com/Schweem/usage-report) |
 | usage-status | 状态行显示 5h/周限额占用。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/usage-status) |
@@ -364,6 +365,7 @@ For detailed descriptions of all 599 mods, see the Chinese section below.
 | branch-guard | 在受保护分支上拦截 Write/Edit 与变更型 git，可询问后放行或建议 worktree。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/branch-guard) |
 | browser-guard | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | collision-guard | 另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。 |  | [链接](https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard) |
+| danger-check | rm -rf、git reset --hard、强推等会毁掉工作的命令先弹窗问你，选阻止就拒绝；备注：只拒绝不改写；本机 git 预览（git status / clean -n / stash list）。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/danger-check) |
 | delete-guard | 拦截 rm -rf 等危险删除，可拒绝或移入本机回收站；不改写命令。备注：本机 process。 |  | [链接](https://github.com/Tihi321/claude-mods/tree/main/plugins/delete-guard) |
 | env | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
 | flash-veille | 提示框上方轮播开发者资讯（Human Coders、Anthropic 博客等）。 | MIT | [链接](https://github.com/camilleroux/flash-veille/tree/main/plugins/flash-veille) |
@@ -373,8 +375,11 @@ For detailed descriptions of all 599 mods, see the Chinese section below.
 | machine-guard | 改机器的 Bash 先征求确认；仅拒绝，不改写命令。 | MIT | [链接](https://github.com/MichaelP17/claude-mods/tree/main/machine-guard) |
 | large-edit-confirmation | 编辑或覆盖超大文件前用 AskUserQuestion 确认；无人应答默认拒绝。备注：可 deny，不改写内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/security/large-edit-confirmation) |
 | merge-gate | 除非最新人工消息含 merge，否则拒绝 Bash 里的 merge / gh pr merge / 推送到主干。备注：只 deny，不改写命令；用本机 git。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/merge-gate) |
+| no-new-branch | 要新建 git 分支、worktree 或带 worktree 的子代理时先问你；备注：只拒绝不改写。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/no-new-branch) |
+| no-process-kill | 要 kill / 停止正在运行的进程或 TaskStop 时先问你；备注：只拒绝不改写。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/no-process-kill) |
 | path-guard | 拒绝项目根外或 .git 内的 Write/Edit（可选护 Read）。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/path-guard) |
 | pii-guard | 台湾 PII 可逆脱敏（经本地 hookd）；需 Python/uv。 |  | [链接](https://github.com/danyuchn/pii-guard/tree/main/examples/claude-code-mod) |
+| pnpm-only | 拒绝 npm / npx 命令并告诉 Claude 对应的 pnpm 写法；备注：只拒绝不改写。 | MIT | [链接](https://github.com/achapla/cc-mods/tree/main/pnpm-only) |
 | protected-paths-guard | 拒绝 Edit/Write/NotebookEdit 触及 .env、锁文件、CI 工作流、git 内部与私钥等路径（可配置 allow）。备注：只 deny，不改写。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/security/protected-paths-guard) |
 | redact | Read 结果里把疑似密钥字符串替换成 `[REDACTED:…]` 再给模型。备注：改写的是 Read 结果文本，不改写命令。 | MIT | [链接](https://github.com/thkt/dotclaude/tree/main/mods/redact) |
 | script-gate | Bash 拦截「下载即执行」管道、Encoded PowerShell、LOLBin 等；只拒绝不改写命令。备注：只拒绝不改写。 | MIT | [链接](https://github.com/ABDUAZIZX/script-gate) |
@@ -438,6 +443,7 @@ For detailed descriptions of all 599 mods, see the Chinese section below.
 | mission-control | 工具调用时间线：输入/输出/状态与子代理泳道；只观察。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/mission-control) |
 | multirepo-diff-mod | /multi-diff 面板：浏览当前文件夹下每个 git 仓库（含 worktree）的未提交改动，可切换对比 HEAD、暂存区、分支相对基线或本会话改动。备注：本机 git，只读（status、diff、rev-parse、worktree list 等）；Edit/Write 类工具运行前把原文件复制到本机 /tmp/multirepo-diff-mod 供本会话对比，不改工具参数。 | MIT | [链接](https://github.com/nvsravank/multirepo-diff-mod) |
 | proc-registry | /procs 面板登记本会话后台 Bash 与子代理；只观察，不改写工具。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/proc-registry) |
+| query-table | 把 BigQuery MCP 和 bq query / dbt show 的结果画成对齐、上色的表格；只改显示，tool.call 只记录 SQL 后原样 next，不改命令。 |  | [链接](https://github.com/michelr/query-table) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
 | session-activity | 侧栏 ledger 记录本会话外泄动作，等待中工作显示在 spinner；execute_sql 写操作可询问后 deny。备注：只 deny，不改写。 | MIT | [链接](https://github.com/bennewton999/claude-code-mods/tree/main/session-activity) |
 | skill-audit | 记录技能调用与文件改动的审计时间线窗格，/skill-audit-pane 开关。本机 process：自带 shell 钩子记录技能名称、调用参数与变更文件路径，不写入 stdout，追加到本机 ~/.claude/skill-audit/<会话>.ndjson，窗格读取同一本机日志。不改写工具或提示，不外发。 | MIT | [链接](https://github.com/DepickereSven/skill-audit) |
