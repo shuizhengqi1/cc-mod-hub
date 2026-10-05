@@ -4480,6 +4480,22 @@
         "source": "git",
         "url": "abonckus/claude-code-file-preview"
       }
+    },
+    {
+      "name": "desktop-statusline",
+      "source": {
+        "source": "git-subdir",
+        "url": "centminmod/claude-plugins",
+        "path": "plugins/desktop-statusline"
+      }
+    },
+    {
+      "name": "pixel-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "Namenomeaning/pixel-pet",
+        "path": "plugins/pixel-pet"
+      }
     }
   ]
 }
