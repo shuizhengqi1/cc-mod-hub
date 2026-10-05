@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 592 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 596 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 592 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 596 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 592 mods, see the Chinese section below.
+For detailed descriptions of all 596 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 592 个精选 Claude Code mods，按类别组织：
+以下是本市场的 596 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -177,6 +177,8 @@ For detailed descriptions of all 592 mods, see the Chinese section below.
 | status-line | 提示框下方一行显示目录、模型、上下文占比和 5 小时/每周用量及本地重置时间，/quota 展开详情，用量过 90% 弹提示；纯 UI，只读会话用量，不用网络。 | MIT | [链接](https://github.com/mikljohansson/claude-code-status-line) |
 | desktop-statusline | 只在 Claude Desktop 的 Code 页提示框上方画状态条：目录、git 分支与改动、会话时长、提问数与费用、上下文条、5 小时/每周用量与重置倒计时、上一轮模型/耗时/缓存命中、空闲对比缓存 TTL、压缩次数和运行中的子代理，用量到 80%/95% 弹提示；本机 git，只改显示，不用网络。 | MIT | [链接](https://github.com/centminmod/claude-plugins/tree/master/plugins/desktop-statusline) |
 | usage-dollars | 把订阅 5 小时窗口和一周用量折算成 API 等价美元，估算额度、生成花费报表（/usage-dollars）。备注：本机 process（node 跑仓库自带 scripts/usage-cost.mjs），读本机 ~/.claude/projects 会话记录与 ~/.claude.json 账号信息，不联网。 |  | [链接](https://github.com/hyvanmielenpelit/claudecodemods/tree/main/usage-dollars) |
+| barometer | 提示框上方显示上下文与套餐限额仪表，上下文到红线时出现 Compact 按钮（点按才压缩），并显示账号和 effort。备注：本机 process（跑 claude auth status 读账号邮箱与套餐），只读会话用量，不用网络。 | MIT | [链接](https://github.com/Alchez/claude-mods/tree/main/barometer) |
+| session-panel | 提示框上方显示模型、上下文、5 小时/7 天限额、会话花费和 Git 分支。备注：本机 git（symbolic-ref、rev-parse 读当前分支），不用网络。 | MIT | [链接](https://github.com/arsenii-cmd/Claude-mod) |
 
 ### 上下文管理 Context Management
 
@@ -288,6 +290,7 @@ For detailed descriptions of all 592 mods, see the Chinese section below.
 | qa-guide | prompt.submit 仅记录然后调用 next 且不注入上下文，AskUserQuestion 说明文字使用 $.model.fork / $.model.complete 并默认开启直至手动切换。 | MIT | [链接](https://github.com/aieo-product/claude_qamods/tree/main/plugins/qa-guide) |
 | cc-cli-rail | prompt-rail 的竖向分叉：在对话旁列出本会话的历史 prompt，点击或 /cc-cli-rail next/prev/编号/find 跳回。备注：本机 process（用 tail 读本会话记录文件）；隐藏或窄屏时 AbovePrompt 不调 next，会盖住别的提示框上方行；与已有 prompt-rail 同源，二选一。 | MIT | [链接](https://github.com/afu-it/cc-cli-rail) |
 | widgets | 小部件卡片布局：/widgets 把卡片放在提示框上方、下方或全屏时的侧边窗格，下面所有 *-widget 都依赖它；只改显示。备注：上次选了侧栏时，会话开始约 0.4 秒后会自动重新打开侧栏。 | MIT | [链接](https://github.com/oMaN-Rod/claude-code-widgets/tree/main/plugins/widgets) |
+| message-banniere | 用黑底黄字的粗体横幅和状态行显示当前会话名，/banniere 打开面板；纯 UI，只观察 prompt.submit、原样放行，不用网络。 |  | [链接](https://github.com/177cubicube-star/claude-code-mods/tree/main/message-banniere) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -545,6 +548,7 @@ For detailed descriptions of all 592 mods, see the Chinese section below.
 | tama | 提示框上方像素宠物小游戏；纯本地 store/clock/ui。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/tama) |
 | pixel-pet | 提示框上方的像素宠物随每次工具调用做动作，下方 HP/MP/ST 用量 HUD，子代理显示小跟班；注册 preview_theme/set_theme/get_theme 三个换主题工具，preview_theme 会把 HTML 预览写到本机指定路径；工具调用只观察原样返回，不用网络。 | MIT | [链接](https://github.com/Namenomeaning/pixel-pet/tree/main/plugins/pixel-pet) |
 | clawd-dance | 提示框上方的帯里 Clawd 随工作状态跳舞并显示用量，回合结束和提问时可播合成提示音或语音。备注：本机 process（/bin/date 取时区），读本机 ~/.claude/usage-log/pace.json；只观察 prompt.submit 与工具调用、原样放行。 | MIT | [链接](https://github.com/tanuu5/clawd-dance/tree/main/plugins/clawd-dance) |
+| goblin-chrome | 提示框上方的哥布林随会话状态换表情、说怪话，按模型档位换边框，带昼夜循环，提问框上方加哥布林脸，可选播放自带音效。备注：PromptHint 改写提示尾巴但仍调 next；读本机 ~/.claude/skills 下的 SKILL.md 判断指定模型、读本机主题配色；工具调用只观察、原样返回，不用网络。 |  | [链接](https://github.com/JasonWarrenUK/goblin-mode/tree/main/marketplace/goblin-chrome) |
 
 ### 图片与媒体 Images & Media
 
