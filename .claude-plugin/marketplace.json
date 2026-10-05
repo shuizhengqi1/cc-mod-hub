@@ -6154,6 +6154,33 @@
         "repo": "krika2810/keep-cache-warm",
         "sha": "037316e9bd0aae3d11267361c96930406528598d"
       }
+    },
+    {
+      "name": "syntax",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thefuga/claude-x.git",
+        "path": "mods/syntax",
+        "sha": "5ac4f04d62b932d33d4996963f02e91c505e3856"
+      }
+    },
+    {
+      "name": "vim",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thefuga/claude-x.git",
+        "path": "mods/vim",
+        "sha": "5ac4f04d62b932d33d4996963f02e91c505e3856"
+      }
+    },
+    {
+      "name": "attachments",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thefuga/claude-x.git",
+        "path": "mods/attachments",
+        "sha": "5ac4f04d62b932d33d4996963f02e91c505e3856"
+      }
     }
   ]
 }
