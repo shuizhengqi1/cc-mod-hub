@@ -3397,6 +3397,45 @@
         "url": "tunglt1810/claude-gadgets",
         "path": "mods/token-meter"
       }
+    },
+    {
+      "name": "weektoken",
+      "source": {
+        "source": "git-subdir",
+        "url": "3dnow/claude-mods",
+        "path": "weektoken"
+      }
+    },
+    {
+      "name": "looks",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/looks"
+      }
+    },
+    {
+      "name": "samurai-dojo",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/samurai-dojo"
+      }
+    },
+    {
+      "name": "slayer-corps",
+      "source": {
+        "source": "git-subdir",
+        "url": "theonly1me/claude-code-mods",
+        "path": "plugins/slayer-corps"
+      }
+    },
+    {
+      "name": "pokemon",
+      "source": {
+        "source": "git",
+        "url": "dgokcin/claude-pokemon-mod"
+      }
     }
   ]
 }
