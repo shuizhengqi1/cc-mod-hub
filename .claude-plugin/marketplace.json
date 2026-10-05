@@ -4736,6 +4736,55 @@
         "url": "https://github.com/pradyb/claude-mods.git",
         "path": "notify-router"
       }
+    },
+    {
+      "name": "readout",
+      "source": {
+        "source": "github",
+        "repo": "lucenity0/claude-readout"
+      }
+    },
+    {
+      "name": "dotpet",
+      "source": {
+        "source": "github",
+        "repo": "i-noma-ru/claude-dotpet"
+      }
+    },
+    {
+      "name": "clawd-dash",
+      "source": {
+        "source": "github",
+        "repo": "pinkpixel-dev/clawd-dash"
+      }
+    },
+    {
+      "name": "oyen",
+      "source": {
+        "source": "github",
+        "repo": "zulfikar-ditya/claude-mods-oyen"
+      }
+    },
+    {
+      "name": "side-chat",
+      "source": {
+        "source": "github",
+        "repo": "varunmoka7/side-chat"
+      }
+    },
+    {
+      "name": "tiktok-break",
+      "source": {
+        "source": "github",
+        "repo": "Chinteyley/tiktok-break"
+      }
+    },
+    {
+      "name": "flappy-claude",
+      "source": {
+        "source": "github",
+        "repo": "narze/flappy-claude-mod"
+      }
     }
   ]
 }
