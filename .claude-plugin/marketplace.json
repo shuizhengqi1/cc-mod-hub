@@ -3738,6 +3738,48 @@
         "source": "git",
         "url": "Sickin/claude-code-notes-panel"
       }
+    },
+    {
+      "name": "reply-frame",
+      "source": {
+        "source": "git",
+        "url": "takosasi-dev/reply-frame"
+      }
+    },
+    {
+      "name": "cache-buster",
+      "source": {
+        "source": "git",
+        "url": "dblanken-yale/cache-buster"
+      }
+    },
+    {
+      "name": "cc-usage",
+      "source": {
+        "source": "git",
+        "url": "leonardokidd/cc-usage"
+      }
+    },
+    {
+      "name": "quickswitch",
+      "source": {
+        "source": "git",
+        "url": "Rocha101/claude-code-quickswitch"
+      }
+    },
+    {
+      "name": "explain-permission",
+      "source": {
+        "source": "git",
+        "url": "petershk/explain-permission"
+      }
+    },
+    {
+      "name": "ambient",
+      "source": {
+        "source": "git",
+        "url": "barisdemirhan/claude-ambient"
+      }
     }
   ]
 }
