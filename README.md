@@ -460,7 +460,7 @@ For detailed descriptions of all 598 mods, see the Chinese section below.
 | vhs | /vhs 回放本会话每次 Edit/Write 的本地录像；可 rewind 写回文件。备注：本机读/写文件。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/vhs) |
 | bg-task-band | 提示框上方后台 Bash/Monitor/Agent 任务条。备注：本机 process（find/tail）；AbovePrompt 显示时可不调 next。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/bg-task-band) |
 | git-diff-timeline | 提示框上方的 git 提交时间线：点提交看 diff、点两个比较，分支标签页比较两个分支（/gitdiff）；只在本机运行 git log、git diff 等只读 git 命令。当默认带状显示时（git 就绪或错误），AbovePrompt 返回自己的条带不调用 next，会覆盖其他 mod 的行。 |  | [链接](https://github.com/liawzishen/git-diff-timeline) |
-| git-ops | /git 在提示框上方显示可点的 git 面板：分支按钮带筛选、切换前确认，pull、push、fetch、全部暂存和提交，也可用文本子命令。备注：本机 git（$.process.run 参数数组），只在你点按钮或输入子命令时运行，不提供强推、reset、rebase；面板显示时 AbovePrompt 仍调 next。 | MIT | [链接](https://github.com/nogu66/claude-code/tree/main/git-ops) |
+| git-ops | /git 在提示框上方显示可点的 git 面板：分支按钮带筛选、切换前确认，pull、push、fetch、全部暂存和提交，也可用文本子命令。备注：本机 git（$.process.run 参数数组），只在你点按钮或输入子命令时运行，不提供强推、reset、rebase；面板显示时 AbovePrompt 仍调 next。 |  | [链接](https://github.com/nogu66/claude-code/tree/main/git-ops) |
 
 ### 子代理管理 Subagent Management
 
@@ -486,7 +486,7 @@ For detailed descriptions of all 598 mods, see the Chinese section below.
 | swarm | 子代理/团队任务控制室窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm) |
 | maestro-lanes | 配合 Maestro，每 2 秒读本机 /tmp/maestro-lanes 下的 lane 输出文件，在提示框上方显示各外部 lane 的状态与耗时。只观察。备注：有运行项时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ricardosuman/maestro/tree/main/mods/lanes) |
 | agent-party | 把运行中的子代理画成 16×16 像素英雄放在提示框上方，显示任务、当前动作、耗时和上下文，可选语音播报。备注：本机 process（Linux 下用 spd-say 播报）；只观察 agent.spawn 与工具调用、原样放行。 | MIT | [链接](https://github.com/ytruong11201/claude-code-mods/tree/main/plugins/agent-party) |
-| agent-aquarium | /aquarium 在窗格里把会话画成鱼缸（kitty 图形，不支持时用半块字符）：主循环是大鱼，子代理是出生又游走的小鱼，工具调用是鱼的动作，水位跟随上下文占用。备注：只观察 tool.call、agent.spawn，先调 next 原样放行；只读插件自带图片素材，不跑进程、不联网。 | MIT | [链接](https://github.com/nogu66/claude-code/tree/main/agent-aquarium) |
+| agent-aquarium | /aquarium 在窗格里把会话画成鱼缸（kitty 图形，不支持时用半块字符）：主循环是大鱼，子代理是出生又游走的小鱼，工具调用是鱼的动作，水位跟随上下文占用。备注：只观察 tool.call、agent.spawn，先调 next 原样放行；只读插件自带图片素材，不跑进程、不联网。 |  | [链接](https://github.com/nogu66/claude-code/tree/main/agent-aquarium) |
 
 ### 通知提醒 Notifications & Alerts
 
