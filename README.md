@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 466 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 469 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 466 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 469 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 466 mods, see the Chinese section below.
+For detailed descriptions of all 469 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 466 个精选 Claude Code mods，按类别组织：
+以下是本市场的 469 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -157,6 +157,7 @@ For detailed descriptions of all 466 mods, see the Chinese section below.
 | speedometer | 提示上方速度表：上下文窗口占用 0→MAX；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/speedometer) |
 | oil | 提示上方机油表：本周 Fable 用量计数（本机 store）；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/oil) |
 | claude-code-usage-quota | 提示框上方计划限额/上下文与耗尽预报；可一键或自动 compact。备注：本机 process（主题检测）；用用户 OAuth 读官方用量 API，不带会话正文；用量带显示时（默认开启，一旦存在快照），AbovePrompt slot 返回自己的行且不调用 next，因此可覆盖其他 mod 的行。 | MIT | [链接](https://github.com/anantraghunath/claude-code-usage-quota-mod) |
+| cache-band | Auto cache 使用 $.model.fork 保持缓存热度且不把会话文本注入对话；通过本地 fs/process 读本地 transcript mtime；AbovePrompt 调用 next；Auto compact 与 Compact 按钮运行 $.command.run({ command: 'compact' })。 | MIT | [链接](https://github.com/MohabYasser2/claude-code-mods/tree/main/cache-band) |
 
 ### 上下文管理 Context Management
 
@@ -246,6 +247,7 @@ For detailed descriptions of all 466 mods, see the Chinese section below.
 | logo | 提示上方显示自设 PNG logo（终端 Raster）；备注：本机 process（powershell 缩图）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/logo) |
 | steering-wheel | /steering-wheel 写入 ~/.claude/keybindings.json 绑定 F5 立即发送，并改写 PromptHint「send now」文案；备注：本机写配置文件。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/steering-wheel) |
 | progress-bar | 提示框上方本回合进度条、估时与工具次数；等待审批时暂停计时。纯 UI，只观察 turn/tool，不改写。 |  | [链接](https://github.com/kshitiz-swim/claude-plugins/tree/main/plugins/progress-bar) |
+| qa-guide | prompt.submit 仅记录然后调用 next 且不注入上下文，AskUserQuestion 说明文字使用 $.model.fork / $.model.complete 并默认开启直至手动切换。 | MIT | [链接](https://github.com/aieo-product/claude_qamods/tree/main/plugins/qa-guide) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -469,6 +471,7 @@ For detailed descriptions of all 466 mods, see the Chinese section below.
 | mermaid-inline | 把助手回复里的 mermaid 围栏画进 transcript（图片或盒装 ASCII）；本机 node 跑插件内置 render-svg。fork of claude-mermaid。 | MIT | [链接](https://github.com/Conte777/mermaid-inline/tree/main/mermaid-inline) |
 | terminal-browser | 在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。 | MIT | [链接](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin) |
 | yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
+| image-thumbs | 在终端显示缩略图，使用本地 process（macOS sips、mktemp、base64 与临时文件清理）。不改写消息。 |  | [链接](https://github.com/ohade/claude-mods/tree/main/image-thumbs) |
 
 ### 任务与项目 Task & Project
 

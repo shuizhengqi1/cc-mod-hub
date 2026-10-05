@@ -3592,6 +3592,30 @@
         "source": "git",
         "url": "apolenkov/agent-shell-watch"
       }
+    },
+    {
+      "name": "cache-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "MohabYasser2/claude-code-mods",
+        "path": "cache-band"
+      }
+    },
+    {
+      "name": "image-thumbs",
+      "source": {
+        "source": "git-subdir",
+        "url": "ohade/claude-mods",
+        "path": "image-thumbs"
+      }
+    },
+    {
+      "name": "qa-guide",
+      "source": {
+        "source": "git-subdir",
+        "url": "aieo-product/claude_qamods",
+        "path": "plugins/qa-guide"
+      }
     }
   ]
 }
