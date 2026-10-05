@@ -3169,6 +3169,42 @@
         "url": "davila7/claude-code-templates",
         "path": "cli-tool/components/mods/integrations/vercel-deploys"
       }
+    },
+    {
+      "name": "assertion-guardian",
+      "source": {
+        "source": "git",
+        "url": "ccdwyer/assertion-guardian"
+      }
+    },
+    {
+      "name": "blackjack",
+      "source": {
+        "source": "git",
+        "url": "michaeldavodovski/claude-code-blackjack"
+      }
+    },
+    {
+      "name": "burn",
+      "source": {
+        "source": "git",
+        "url": "PickleBoxer/burn"
+      }
+    },
+    {
+      "name": "clawd-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "tomada1114/clawd-band",
+        "path": "plugins/clawd-band"
+      }
+    },
+    {
+      "name": "desk-pet",
+      "source": {
+        "source": "git",
+        "url": "isr431/desk-pet"
+      }
     }
   ]
 }

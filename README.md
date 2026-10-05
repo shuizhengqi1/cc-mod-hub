@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 412 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 417 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 412 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 417 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 412 mods, see the Chinese section below.
+For detailed descriptions of all 417 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 412 个精选 Claude Code mods，按类别组织：
+以下是本市场的 417 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -83,6 +83,7 @@ For detailed descriptions of all 412 mods, see the Chinese section below.
 | agent-monitor | 子代理监视带与 /sub 历史窗格：冲突/卡住提醒与费用估计（本地事件，不改写工具）。 | MIT | [链接](https://github.com/nokiy/claude-code-mods/tree/main/plugins/agent-monitor) |
 | ai-usage-band | 提示框上方用量带：上下文占用、限额窗口与会话费用（$.session.usage）。 |  | [链接](https://github.com/arvakme/claude-code-butler/tree/main/ai-usage-band) |
 | budget-guard | 费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard) |
+| burn | 提示框上方限额/用量积分与花费；/burn 看近 7 天。备注：用本机 Anthropic OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/PickleBoxer/burn) |
 | burn-meter | 提示框上方会话花费「火焰」条与限额，/burn 看每回合费用。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/burn-meter) |
 | cache-clock | 显示提示缓存还热多久。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/cache-clock) |
 | cache-countdown | 提示框上方缓存导火索与上下文/限额条；可按钮 Keep warm 或 Compact。备注：Keep warm 用 $.model.fork；可读本地 transcript（process/fs）。 | MIT | [链接](https://github.com/iamomiid/cache-countdown) |
@@ -230,6 +231,7 @@ For detailed descriptions of all 412 mods, see the Chinese section below.
 |-----------|------------------|----------------|-------------|
 | 2048 | 提示框上方玩 2048；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/2048) |
 | agent-race | 多会话任务赛跑分屏。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/agent-race) |
+| blackjack | 侧栏二十一点牌桌，Claude 工作时可玩；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/michaeldavodovski/claude-code-blackjack) |
 | tokencraft | Minecraft 风格 HUD：工具调用变方块与 XP，爱心=限额、饥饿=上下文。备注：本机读 .git/HEAD 与 maios/planning/sprint.local.md；回合结束把战利品行拼进回答文本，不外传。 | MIT | [链接](https://github.com/DanielPodolsky/tokencraft) |
 | doom | 提示框上方 Doom 走廊射击；仅 UI/命令，不注入 prompt、不改工具。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/doom) |
 | pacman | 提示框上方吃豆人；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/pacman) |
@@ -276,6 +278,7 @@ For detailed descriptions of all 412 mods, see the Chinese section below.
 |-----------|------------------|----------------|-------------|
 | admin-capability-lockdown | 组织级管控：剥夺下层插件的 http/process，并可拒绝 Bash 或网络客户端。备注：只 deny/能力剥夺，不改写命令；宜放 managed prepend。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/enterprise/admin-capability-lockdown) |
 | anchorwatch-mod | Bash 危险命令本地 deny（rm -rf、force push、DROP、curl\|sh、读 .env 等）；备注：只 deny 不改写；本机 git 查当前分支。 | MIT | [链接](https://github.com/anchorwatch-dev/anchorwatch/tree/main/plugins/anchorwatch-mod) |
+| assertion-guardian | 拦截削弱测试的 Edit/Write/Bash（删断言、加 skip 等）；只拒绝不改写。备注：本机 git 读旧版对比。 | MIT | [链接](https://github.com/ccdwyer/assertion-guardian) |
 | bash-guardrails | 用本地规则拒绝危险或畸形的 Bash 与 Monitor 调用（只读命令字符串做判定，不改写命令）。 |  | [链接](https://github.com/ruihe774/cc-bash-guardrails) |
 | block-destructive-commands | 按模式拒绝危险 Bash（递归删根、force push、硬重置、破坏性 SQL 等）。备注：只 deny，不改写命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/security/block-destructive-commands) |
 | branch-guard | 在受保护分支上拦截 Write/Edit 与变更型 git，可询问后放行或建议 worktree。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/branch-guard) |
@@ -389,8 +392,10 @@ For detailed descriptions of all 412 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | clawd | 思考行旁的像素 Clawd 吉祥物，按工具/命令表演动作。 |  | [链接](https://github.com/raresmun/claude-mods/tree/main/plugins/clawd) |
+| clawd-band | 提示框上方像素猫，随思考/编辑/搜索等状态动画；仅 UI。 | MIT | [链接](https://github.com/tomada1114/clawd-band/tree/main/plugins/clawd-band) |
 | clawdgotchi | 电子宠物 Clawd，在侧栏养成与互动。 | MIT | [链接](https://github.com/arthurseredaa/clawdgotchi) |
 | code-pet | 像素宠物窗格，随 Claude 活动反应。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet) |
+| desk-pet | 提示框上方/侧栏小宠物，随工具与回合反应；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/isr431/desk-pet) |
 | familiar | 提示框上方像素伙伴，随会话反应并可手绘；可选 Haiku 吐槽。备注：可选 $.model.complete 与 $.model.fork。 | MIT | [链接](https://github.com/lucenity0/claude-familiar) |
 | maomao | 提示框上方 8-bit 毛毛（垂耳兔）随工作状态跑跳；/maomao 收起或叫出。 |  | [链接](https://github.com/jessetsai1024/claude-mods/tree/main/maomao) |
 | mize-coworker | 像素 Claude 吉祥物，随 spinner 词表演场景，空闲时在状态行呼吸走动。 | MIT | [链接](https://github.com/TheMizeGuy/clawdagotchi/tree/main/plugins/mize-coworker) |
