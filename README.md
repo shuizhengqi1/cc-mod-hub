@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 515 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 518 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 515 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 518 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 515 mods, see the Chinese section below.
+For detailed descriptions of all 518 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 515 个精选 Claude Code mods，按类别组织：
+以下是本市场的 518 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -95,6 +95,7 @@ For detailed descriptions of all 515 mods, see the Chinese section below.
 | cache-timer | 倒计时提示缓存何时过期。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/cache-timer) |
 | cache-ttl-timer | 提示缓存 TTL 倒计时，并 tail 本地 transcript 文件。 | MIT | [链接](https://github.com/WQGGSEY/cache-ttl-timer) |
 | cache-warm | 缓存预热工具。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/cache-warm) |
+| cache-warmer | 提示缓存保温：缓存过期前自动用 $.model.fork 复刻主会话最后一次请求，添加提示 "Prompt cache refresh. Reply with the single word ok."，不拒绝工具也不限输出长度，按普通请求计费；空闲时默认最多 5 次，且每次须预计省下至少 $0.05，并显示每次刷新费用与估算节省；可在 5m 与 1h 缓存寿命间切换（本会话设 CLAUDE_CODE_PROMPT_CACHE_TTL 环境变量，1h 写入为 2 倍输入价）。备注：每次刷新用 $.session.append 往会话记录写一条系统通知；提示框上方条显示时 AbovePrompt 不调 next，可能盖住别的条；开调试时本机写 ~/.claude/cache-warmer/debug。 | MIT | [链接](https://github.com/paulbkim-dev/claude-code-cache-warmer) |
 | cache-watch | 提示缓存重建时 toast 告警并估算回合费用。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/cache-watch) |
 | ccoverhead | 提示框上方显示上下文窗口、每轮增长、5h/7d 额度与缓存热度（只读会话用量）。 | MIT | [链接](https://github.com/shengyy/ccoverhead/tree/main/plugin) |
 | cctop | btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。 |  | [链接](https://github.com/tomstagl/cctop/tree/main/plugin) |
@@ -244,6 +245,7 @@ For detailed descriptions of all 515 mods, see the Chinese section below.
 | sea | 输入栏上方像素浅海动画（昼/夕/夜）与可选波声音效；/sea 开关。备注：本机 process 播放插件内 wav。 | MIT | [链接](https://github.com/himazintom/claude-code-sea) |
 | shell-highlight | Bash/PowerShell 工具调用语法高亮展示。纯 UI，不改写命令。 | MIT | [链接](https://github.com/Turbo-Thorschten/shell-highlight) |
 | sidebar | 侧栏扩展面板。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/sidebar) |
+| smooth-stream | 打字机效果：流式回复按约 30 帧/秒逐字显示，只改显示，不改回复内容。 | MIT | [链接](https://github.com/kyongsik-yoon/claude-mods/tree/main/smooth-stream) |
 | spell-bar | 按 effort 等级绘制的动画施法条（Clawd / Avada Kedavra 六档）。纯 UI，不改写工具或提示。 | MIT | [链接](https://github.com/powerofjinbo/claude-code-spell-bar/tree/main/plugins/spell-bar) |
 | spinner-stats | 在 Claude 自带 spinner 后缀追加耗时、当前工具与调用次数。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/spinner-stats) |
 | starfleet-panel | 提示框下方 LCARS 风格状态面板（模型/上下文/限额/分支等）；只读跟随 red-alert。本地 git/hostname。 | MIT | [链接](https://github.com/dukechain2333/starfleet-panel/tree/main/plugin) |
@@ -398,6 +400,7 @@ For detailed descriptions of all 515 mods, see the Chinese section below.
 | md-prompt | 输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。 | MIT | [链接](https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt) |
 | mdview | 侧栏渲染对话里的 Markdown，可点选让 Claude 改。 |  | [链接](https://github.com/xuanji86/claude-mdview) |
 | mission-control | 工具调用时间线：输入/输出/状态与子代理泳道；只观察。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/mission-control) |
+| multirepo-diff-mod | /multi-diff 面板：浏览当前文件夹下每个 git 仓库（含 worktree）的未提交改动，可切换对比 HEAD、暂存区、分支相对基线或本会话改动。备注：本机 git，只读（status、diff、rev-parse、worktree list 等）；Edit/Write 类工具运行前把原文件复制到本机 /tmp/multirepo-diff-mod 供本会话对比，不改工具参数。 | MIT | [链接](https://github.com/nvsravank/multirepo-diff-mod) |
 | proc-registry | /procs 面板登记本会话后台 Bash 与子代理；只观察，不改写工具。 | MIT | [链接](https://github.com/Chronosauros/claude-mods/tree/main/plugins/proc-registry) |
 | repo-pulse | 显示仓库活动脉搏，仅本地 git status 查询。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
 | session-activity | 侧栏 ledger 记录本会话外泄动作，等待中工作显示在 spinner；execute_sql 写操作可询问后 deny。备注：只 deny，不改写。 | MIT | [链接](https://github.com/bennewton999/claude-code-mods/tree/main/session-activity) |

@@ -3959,6 +3959,28 @@
         "source": "git",
         "url": "andrewroxby/cc-math-renderer"
       }
+    },
+    {
+      "name": "cache-warmer",
+      "source": {
+        "source": "git",
+        "url": "paulbkim-dev/claude-code-cache-warmer"
+      }
+    },
+    {
+      "name": "multirepo-diff-mod",
+      "source": {
+        "source": "git",
+        "url": "nvsravank/multirepo-diff-mod"
+      }
+    },
+    {
+      "name": "smooth-stream",
+      "source": {
+        "source": "git-subdir",
+        "url": "kyongsik-yoon/claude-mods",
+        "path": "smooth-stream"
+      }
     }
   ]
 }
