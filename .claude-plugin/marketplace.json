@@ -3901,6 +3901,20 @@
         "source": "git",
         "url": "danieldeusing/capi-cc-mod"
       }
+    },
+    {
+      "name": "taskrail",
+      "source": {
+        "source": "git",
+        "url": "drolosoft/taskrail"
+      }
+    },
+    {
+      "name": "goodfriend",
+      "source": {
+        "source": "git",
+        "url": "nicodunks/goodfriend"
+      }
     }
   ]
 }
