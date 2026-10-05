@@ -3205,6 +3205,118 @@
         "source": "git",
         "url": "isr431/desk-pet"
       }
+    },
+    {
+      "name": "changed-files",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/changed-files"
+      }
+    },
+    {
+      "name": "codebase-atlas",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/codebase-atlas"
+      }
+    },
+    {
+      "name": "config-snapshots",
+      "source": {
+        "source": "git-subdir",
+        "url": "MichaelP17/claude-mods",
+        "path": "config-snapshots"
+      }
+    },
+    {
+      "name": "context-gauge",
+      "source": {
+        "source": "git-subdir",
+        "url": "tommy5dollar/claude-mods",
+        "path": "context-gauge"
+      }
+    },
+    {
+      "name": "crew",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/crew"
+      }
+    },
+    {
+      "name": "delete-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "Tihi321/claude-mods",
+        "path": "plugins/delete-guard"
+      }
+    },
+    {
+      "name": "diff-minimap",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/diff-minimap"
+      }
+    },
+    {
+      "name": "lava-lamp",
+      "source": {
+        "source": "git-subdir",
+        "url": "CtrlAltFocus/claude-mods",
+        "path": "plugins/lava-lamp"
+      }
+    },
+    {
+      "name": "machine-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "MichaelP17/claude-mods",
+        "path": "machine-guard"
+      }
+    },
+    {
+      "name": "mission-control",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/mission-control"
+      }
+    },
+    {
+      "name": "pr-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "AydinHassan/claude-mods",
+        "path": "plugins/pr-links"
+      }
+    },
+    {
+      "name": "service-radar",
+      "source": {
+        "source": "git-subdir",
+        "url": "MichaelP17/claude-mods",
+        "path": "service-radar"
+      }
+    },
+    {
+      "name": "usage-forecast",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/usage-forecast"
+      }
+    },
+    {
+      "name": "workbench",
+      "source": {
+        "source": "git-subdir",
+        "url": "harshitmywork17/claude-mods",
+        "path": "plugins/workbench"
+      }
     }
   ]
 }
