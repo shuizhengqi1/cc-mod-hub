@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 506 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 507 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 506 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 507 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 506 mods, see the Chinese section below.
+For detailed descriptions of all 507 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 506 个精选 Claude Code mods，按类别组织：
+以下是本市场的 507 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -582,6 +582,7 @@ For detailed descriptions of all 506 mods, see the Chinese section below.
 | ask-autopick | 自动采纳或拒绝提问。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/ask-autopick) |
 | behavior-map | 改动前后行为流图。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/behavior-map) |
 | bughunt | 追踪与报告 bug。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/bughunt) |
+| capi | 提示框上方的水豚语言学习卡片，一张卡同时教一个真实知识点和一个外语词句。说明：用 $.model.complete 生成卡片，请求里带最近用过的工具名和 Bash 程序名；横幅显示时 AbovePrompt 不调 next；本机 process（hostname/scutil、brctl、mkdir、mv）；学习记录写到 ~/Library/Mobile Documents/com~apple~CloudDocs/capi（会随 iCloud 同步）；可用 $.audio.speak 本机朗读。 | MIT | [链接](https://github.com/danieldeusing/capi-cc-mod) |
 | cc-side | 提供 /side 命令开启第二个对话。 |  | [链接](https://github.com/Ahmad8864/cc-side) |
 | claude-queue | /q 在回合进行中排队提示，回合结束后自动发出。 |  | [链接](https://github.com/galElmalah/claude-mods/tree/main/claude-queue) |
 | constellation-claude | 注册导出 mod。 | AGPL-3.0 | [链接](https://github.com/ShiftinBits/constellation-claude) |
