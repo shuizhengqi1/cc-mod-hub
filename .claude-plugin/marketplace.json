@@ -4352,6 +4352,20 @@
         "url": "mutlumehmet/claude-plugins",
         "path": "plugins/outlaw"
       }
+    },
+    {
+      "name": "md-preview",
+      "source": {
+        "source": "git",
+        "url": "abonckus/claude-code-md-preview"
+      }
+    },
+    {
+      "name": "xhs-count",
+      "source": {
+        "source": "git",
+        "url": "eddiezhan/xhs-count-mod"
+      }
     }
   ]
 }
