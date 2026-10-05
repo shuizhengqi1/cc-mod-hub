@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 398 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 401 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 398 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 401 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 398 mods, see the Chinese section below.
+For detailed descriptions of all 401 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 398 个精选 Claude Code mods，按类别组织：
+以下是本市场的 401 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -97,6 +97,7 @@ For detailed descriptions of all 398 mods, see the Chinese section below.
 | ccoverhead | 提示框上方显示上下文窗口、每轮增长、5h/7d 额度与缓存热度（只读会话用量）。 | MIT | [链接](https://github.com/shengyy/ccoverhead/tree/main/plugin) |
 | cctop | btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。 |  | [链接](https://github.com/tomstagl/cctop/tree/main/plugin) |
 | clawd-spinner | Clawd 按 spinner 词表演动画（本地绘制，零 token）。 | MIT | [链接](https://github.com/saiharsha03/clawd-spinner) |
+| claude-chef | 提示框上方上下文占用预报与火花图，纯 UI。 | MIT | [链接](https://github.com/schalkneethling/claude-chef) |
 | context-bar | 提示下方（可改上方）显示上下文窗口进度条与 prompt-cache TTL 倒计时。备注：可 tail 本地 transcript；仅本地读。 |  | [链接](https://github.com/k-wolfe99/claude-context-bar/tree/main/mod) |
 | context-band | 限额/token/缓存/费用状态带。备注：本机 process（主题检测与本地 python 估价）。 |  | [链接](https://github.com/EricJamie/claude-code-mods/tree/main/plugins/context-band) |
 | context-tokens | 桌面端提示脚旁显示上下文 token 用量（绿/黄/红阈值）。纯 UI，只读 $.session.usage。 | MIT | [链接](https://github.com/0xBADC0FFEE/claude-code-mods/tree/main/context-tokens) |
@@ -182,6 +183,7 @@ For detailed descriptions of all 398 mods, see the Chinese section below.
 | drift | 漂移动画效果窗格。 | MIT | [链接](https://github.com/azkhh/drift) |
 | file-view | 点击 Read/Edit/Write 行的路径，在侧栏打开文件内容。备注：本机读文件。 |  | [链接](https://github.com/ushironoko/dotfiles/tree/main/claude/.claude/skills/file-view) |
 | firstmate-calm | /calm 隐藏工具行并换成帆船 spinner；需开启 function hooks。 |  | [链接](https://github.com/kunchenguid/firstmate/tree/main/.claude/mods/firstmate-calm) |
+| flashmodel | 提示框上方点选切换模型与 effort（走内置 /model、/effort），纯 UI。 | MIT | [链接](https://github.com/Rafael-CRL/FlashModel) |
 | flowpane | 实时显示工作流程图。 |  | [链接](https://github.com/mpolatcan/flowpane) |
 | hide-diffs | 把 Edit/Write/NotebookEdit/Bash 的完整 diff 收成一行加减摘要，ctrl+q 切换显示。纯 UI，不改写工具。 | MIT | [链接](https://github.com/gixxy22/hide-diffs) |
 | inner-monologue | 会话旁白式内心独白窗格。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/inner-monologue) |
@@ -341,6 +343,7 @@ For detailed descriptions of all 398 mods, see the Chinese section below.
 |-----------|------------------|----------------|-------------|
 | agents-view | 侧栏列出本会话子代理状态，点选查看 prompt/工具结果。纯 UI。 |  | [链接](https://github.com/ushironoko/dotfiles/tree/main/claude/.claude/skills/agents-view) |
 | agent-radar | 每个运行中子代理一行实时状态。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/agent-radar) |
+| agent-narrator | 窗格白话叙述每步工具与节省时间；可选 haiku 润色（$.model.complete）。 | MIT | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/agent-narrator) |
 | agent-router | 代理路由器，管理子代理调用。 |  | [链接](https://github.com/alexandernicholson/agent-router/tree/main/agent-router) |
 | agent-watch | 子代理侧栏：在窗格里列出活跃子代理、状态与简报，点击可查看 transcript。 | MIT | [链接](https://github.com/AndreasOA/claude-code-mods/tree/main/plugins/agent-watch) |
 | claude-council | 并行运行多个编码代理，可并排查看。 |  | [链接](https://github.com/hex/claude-council) |
