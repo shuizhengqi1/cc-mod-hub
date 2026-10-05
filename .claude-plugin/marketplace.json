@@ -5184,6 +5184,110 @@
         "url": "https://github.com/berkayturanci/keel.git",
         "path": "mods/keel-progress"
       }
+    },
+    {
+      "name": "turn-usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gmorubio/claude-mods.git",
+        "path": "turn-usage"
+      }
+    },
+    {
+      "name": "llm-speed",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
+        "path": "llm-speed"
+      }
+    },
+    {
+      "name": "usage-hint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tett23/dotfiles.git",
+        "path": "claude/mods/usage-hint"
+      }
+    },
+    {
+      "name": "session-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cjmellor/mella-marketplace.git",
+        "path": "plugins/session-stats"
+      }
+    },
+    {
+      "name": "context-cache",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
+        "path": "context-cache"
+      }
+    },
+    {
+      "name": "context-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wmayner/dotfiles.git",
+        "path": "claude/context-watch"
+      }
+    },
+    {
+      "name": "token-face",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MohamedEmbarak/token-face.git",
+        "path": "plugins/token-face"
+      }
+    },
+    {
+      "name": "model-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
+        "path": "model-band"
+      }
+    },
+    {
+      "name": "prompt-hint-trim",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mataku/dotfiles.git",
+        "path": "claude/mods/prompt-hint-trim"
+      }
+    },
+    {
+      "name": "prompt-clock",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vampik33/claude-plugins.git",
+        "path": "plugins/prompt-clock"
+      }
+    },
+    {
+      "name": "dot-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/theagitist/claude-mods.git",
+        "path": "dot-guard"
+      }
+    },
+    {
+      "name": "git-diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cjmellor/mella-marketplace.git",
+        "path": "plugins/git-diff"
+      }
+    },
+    {
+      "name": "clawd-gotchi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Lunik/gmz-claude-marketplace.git",
+        "path": "clawd-gotchi"
+      }
     }
   ]
 }
