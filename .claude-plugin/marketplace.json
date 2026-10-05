@@ -4496,6 +4496,60 @@
         "url": "Namenomeaning/pixel-pet",
         "path": "plugins/pixel-pet"
       }
+    },
+    {
+      "name": "bubble-contesto",
+      "source": {
+        "source": "git",
+        "url": "maxturazzini/bubble-contesto"
+      }
+    },
+    {
+      "name": "done-sound",
+      "source": {
+        "source": "git-subdir",
+        "url": "myudav4iik/claude-mods",
+        "path": "done-sound"
+      }
+    },
+    {
+      "name": "clawd-dance",
+      "source": {
+        "source": "git-subdir",
+        "url": "tanuu5/clawd-dance",
+        "path": "plugins/clawd-dance"
+      }
+    },
+    {
+      "name": "usage-dollars",
+      "source": {
+        "source": "git-subdir",
+        "url": "hyvanmielenpelit/claudecodemods",
+        "path": "usage-dollars"
+      }
+    },
+    {
+      "name": "code-quest",
+      "source": {
+        "source": "git-subdir",
+        "url": "vardhankirti/claude-code-mods",
+        "path": "code-quest"
+      }
+    },
+    {
+      "name": "agent-party",
+      "source": {
+        "source": "git-subdir",
+        "url": "ytruong11201/claude-code-mods",
+        "path": "plugins/agent-party"
+      }
+    },
+    {
+      "name": "blaze",
+      "source": {
+        "source": "git",
+        "url": "mashiro-no-rabo/blaze-mod"
+      }
     }
   ]
 }
