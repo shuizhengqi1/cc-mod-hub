@@ -4057,6 +4057,27 @@
         "source": "git",
         "url": "sidneyfrancois/barra-usage-model"
       }
+    },
+    {
+      "name": "tool-meter",
+      "source": {
+        "source": "git",
+        "url": "VerbodhDev/tool-meter"
+      }
+    },
+    {
+      "name": "recap-plus",
+      "source": {
+        "source": "git",
+        "url": "skanehira/claude-recap-plus"
+      }
+    },
+    {
+      "name": "prompt-posse",
+      "source": {
+        "source": "git",
+        "url": "RyanEmslie/prompt-posse"
+      }
     }
   ]
 }
