@@ -6138,6 +6138,22 @@
         "path": "plugins/bash-guard",
         "sha": "105399d2fcf92ea48ca6098fde4cbcbf4184b14f"
       }
+    },
+    {
+      "name": "cluide",
+      "source": {
+        "source": "github",
+        "repo": "TWim3/cluide",
+        "sha": "63a30293d7c7067dd8d982f29fd24402c06f6496"
+      }
+    },
+    {
+      "name": "cache-keepalive",
+      "source": {
+        "source": "github",
+        "repo": "krika2810/keep-cache-warm",
+        "sha": "037316e9bd0aae3d11267361c96930406528598d"
+      }
     }
   ]
 }
