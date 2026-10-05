@@ -4366,6 +4366,30 @@
         "source": "git",
         "url": "eddiezhan/xhs-count-mod"
       }
+    },
+    {
+      "name": "vitrin",
+      "source": {
+        "source": "git-subdir",
+        "url": "yasinozmeen/claude-code-mods",
+        "path": "vitrin"
+      }
+    },
+    {
+      "name": "vurgu",
+      "source": {
+        "source": "git-subdir",
+        "url": "yasinozmeen/claude-code-mods",
+        "path": "vurgu"
+      }
+    },
+    {
+      "name": "lavish-pages",
+      "source": {
+        "source": "git-subdir",
+        "url": "FoCDoT/lavish-pages",
+        "path": "lavish-pages"
+      }
     }
   ]
 }
