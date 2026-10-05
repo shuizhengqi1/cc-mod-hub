@@ -4604,6 +4604,53 @@
         "source": "git",
         "url": "thewhitewizard/crypto-band"
       }
+    },
+    {
+      "name": "query-table",
+      "source": {
+        "source": "git",
+        "url": "michelr/query-table"
+      }
+    },
+    {
+      "name": "danger-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "achapla/cc-mods",
+        "path": "danger-check"
+      }
+    },
+    {
+      "name": "no-new-branch",
+      "source": {
+        "source": "git-subdir",
+        "url": "achapla/cc-mods",
+        "path": "no-new-branch"
+      }
+    },
+    {
+      "name": "no-process-kill",
+      "source": {
+        "source": "git-subdir",
+        "url": "achapla/cc-mods",
+        "path": "no-process-kill"
+      }
+    },
+    {
+      "name": "pnpm-only",
+      "source": {
+        "source": "git-subdir",
+        "url": "achapla/cc-mods",
+        "path": "pnpm-only"
+      }
+    },
+    {
+      "name": "usage-line",
+      "source": {
+        "source": "git-subdir",
+        "url": "achapla/cc-mods",
+        "path": "usage-line"
+      }
     }
   ]
 }
