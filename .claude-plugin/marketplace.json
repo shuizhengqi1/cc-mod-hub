@@ -6181,6 +6181,42 @@
         "path": "mods/attachments",
         "sha": "5ac4f04d62b932d33d4996963f02e91c505e3856"
       }
+    },
+    {
+      "name": "message-time",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jonathan-fielding/dotclaude.git",
+        "path": "plugins/message-time",
+        "sha": "d11a93fbe5f7ec2fd9c80c70096e3b826c65ab3a"
+      }
+    },
+    {
+      "name": "workflow-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RoacherM/Wayne-Skills.git",
+        "path": "skills/workflow-graph/pane",
+        "sha": "f834aede2b2c5e97f85e72e8b66ee9a05d38e783"
+      }
+    },
+    {
+      "name": "tamaclaude",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/settivishal/tamaclaude.git",
+        "path": "tamaclaude",
+        "sha": "fc3a13d8e748d40536dedb55619dcdea68a9f160"
+      }
+    },
+    {
+      "name": "vnext-session-record",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RazAndAlex/vnext-workforce.git",
+        "path": "plugins/vnext-session-record",
+        "sha": "470f85adcea3a4b28f008d3cd21c981506bfb705"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 792 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 796 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 792 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 796 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 792 mods, see the Chinese section below.
+For detailed descriptions of all 796 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 792 个精选 Claude Code mods，按类别组织：
+以下是本市场的 796 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -364,6 +364,7 @@ For detailed descriptions of all 792 mods, see the Chinese section below.
 | syntax | 输入时给提示框草稿上色：Markdown、代码围栏里的代码，以及 shell 模式下的命令。备注：prompt.edit 只追加颜色装饰，不改动草稿文字；纯本机，不联网、不跑进程；若装了同仓库 statusline 会读取其编辑模式（本市场已有同名 statusline，未收录 thefuga 版）。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/syntax) |
 | vim | 提示框上方的 vim 命令行：:w / :e 按会话保存和读回草稿，:q 退出（:q! 强制），输入其他名字就执行对应斜杠命令，支持 Tab 补全；用聚焦快捷键打开。备注：prompt.fill 只把你自己 :w 保存的草稿回填到空提示框，不自动提交；classic.UserPromptSubmit 只在发送后删掉已存草稿，不改写 prompt；草稿存于插件本地 store，不联网。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/vim) |
 | attachments | 把草稿里的附件显示成提示框上方的小卡片：粘贴的图片和文本、@ 提到的文件与文件夹，各带类型图标、路径和简介，点 × 从草稿里移除。备注：prompt.fill 只在你点 × 时删掉对应占位或 @ 引用；会用本机 ffprobe（若已安装）读取媒体尺寸时长，并跑 id -u 定位临时图片目录；不联网、不提交 prompt。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/attachments) |
+| message-time | 在对话记录里你发的每条消息下面加一行暗色「sent HH:MM」发送时间，跨天的第一条带星期和日期；Remote Control 发来的也会标。备注：只改 UserMessage 行的显示，不碰消息内容；纯本机，不联网；恢复的旧会话里的消息会标成模块加载时间。 |  | [链接](https://github.com/jonathan-fielding/dotclaude/tree/main/plugins/message-time) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -621,6 +622,7 @@ For detailed descriptions of all 792 mods, see the Chinese section below.
 | agent-jobs | /jobs 面板列出运行中的子代理和后台 shell（用时、Stop 按钮），后台任务结束时弹 toast。备注：tool.call 原样返回；prompt.submit/session.receive 只读取任务通知，不改写。 |  | [链接](https://github.com/narrowstacks/claude-code-mods/tree/master/agent-jobs) |
 | activity | 实时面板显示 Claude 正在做什么：运行中的工具（真实命令和计时）、等你批准的调用、子代理和当前待办计划；/activity 打开。备注：tool.call 原样返回，只用 $.tool.check 读取是否需要批准；纯本机 UI。 | MIT | [链接](https://github.com/mishgoldenberg/claude-mods/tree/main/plugins/activity) |
 | agents-panel | /agents-panel 打开侧栏，列出本项目、用户和插件定义的子代理（描述、模型、token），每个带 ▶ run 按钮。备注：读本机 .claude/agents/*.md；只有你点 ▶ run 才会用 $.agent.spawn 启动该子代理。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/agents-panel) |
+| vnext-session-record | 记录本会话启动的子代理（类型、模型、状态、简短描述）、每次请求的模型和 token 用量，并在 /vnext 面板里显示。备注：所有钩子只观察、原样传递；不保存提示词正文，只存子代理描述前 120 字；写到项目 .vnext/host/<会话id>.jsonl（项目没有 .vnext 时写 ~/.vnext/host/），单文件上限 3 MB；纯本机，不联网；为 vNext workforce 设计，单独用也能看子代理面板。 | MIT | [链接](https://github.com/RazAndAlex/vnext-workforce/tree/main/plugins/vnext-session-record) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -701,6 +703,7 @@ For detailed descriptions of all 792 mods, see the Chinese section below.
 | nukey | 微波炉 Nukey 站在提示框上方，按 Claude 在读、写代码、思考、搜索等表演动作，回合结束「叮」一声；旁边的控制面板显示上下文和额度用量。备注：只观察事件并原样返回，纯本机 UI。 | MIT | [链接](https://github.com/arifamir/nukey-kit/tree/main/plugins/nukey) |
 | martian-base | Martian Base 的火星人站在提示框上方，随 Claude 的动作变换动画，并显示 5 小时和每周用量条。备注：tool.check/tool.call 只观察并原样返回；说明为法语。 |  | [链接](https://github.com/Chaveex/martians-mods-4-claude/tree/main/martian-base) |
 | bichinho | 提示框上方的 ASCII 小宠物，会「吃掉」Claude 读、改、新建的文件（/bichinho on 或 off）。备注：只观察 Read/Edit/Write 结果；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/bichinho) |
+| tamaclaude | 提示框上方的像素宠物：会随会话长大，写文件时蹦跳、测试通过时跳舞、被拒绝或测试失败时生闷气、久不操作就睡觉，上下文快满或额度快用完时会提醒；/tamaclaude 查看、喂食、改名或重置。备注：prompt.submit 只读取提示里有没有夸奖来触发跳舞，原样传递不改写；tool.call 只观察结果；宠物状态存在插件本地 store；可在插件配置里调大小、安静模式和入睡时间。 | MIT | [链接](https://github.com/settivishal/tamaclaude/tree/main/tamaclaude) |
 
 ### 图片与媒体 Images & Media
 
@@ -779,6 +782,7 @@ For detailed descriptions of all 792 mods, see the Chinese section below.
 | orch-session | 显示本会话持有的 orch 工单：状态行、提示框上方「轮到谁」一行、/orch 面板和交接 toast。备注：本机只读运行 `orch list --mine` / `orch show`（需安装 orch-core CLI）；tool.call 只在 orch 命令后刷新，原样返回。 | Apache-2.0 | [链接](https://github.com/severinlindenmann/orch-core/tree/main/plugins/orch-session) |
 | moai-board | 只读侧边面板 /moai-board 显示 MoAI 看板队列、工厂 lanes 和 SPEC 文档，可刷新、打开、pick。备注：本机运行 moai CLI 的固定命令（需安装 moai-adk）；pick 前弹框确认。 | Apache-2.0 | [链接](https://github.com/modu-ai/moai-adk/tree/main/mods/moai-board) |
 | moai-status | MoAI 只读状态：提示框上方显示用量/上下文警告条和健康状态行，lane 通知弹 toast。备注：只观察；本机运行 moai 固定只读命令；session.receive 只弹 toast 并原样传递；只改 Spinner 后缀文字。 | Apache-2.0 | [链接](https://github.com/modu-ai/moai-adk/tree/main/mods/moai-status) |
+| workflow-pane | /workflow-pane 打开面板，按任务列出 workflow-graph 日志（.workflow/log.jsonl）里的节点、状态、退回次数和周期，提示框下方一行显示计数，任务等你处理时弹 toast。备注：只读日志、只显示，不写日志也不发起回合；需配合同仓库 workflow-graph skill 生成的日志；界面文字为中文。 |  | [链接](https://github.com/RoacherM/Wayne-Skills/tree/main/skills/workflow-graph/pane) |
 
 ### 外部集成 External Integrations
 
