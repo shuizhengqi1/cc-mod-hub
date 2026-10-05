@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 574 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 577 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 574 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 577 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 574 mods, see the Chinese section below.
+For detailed descriptions of all 577 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 574 个精选 Claude Code mods，按类别组织：
+以下是本市场的 577 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -274,6 +274,7 @@ For detailed descriptions of all 574 mods, see the Chinese section below.
 | transcript-fx | 给 transcript 上色：工具块、提示面板和 spinner。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/transcript-fx) |
 | turn-timer | 轻量回合计时状态。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer) |
 | turn-progress | 状态行显示本回合阶段、经过时间与完成标记；可注册 progress 工具申报进度。 | MIT | [链接](https://github.com/tsumugilabo/turn-progress/tree/main/plugins/turn-progress) |
+| vurgu | 把连续工具调用折成一行、按发言者给消息上色，并在提示框上方加跳转按钮；本机 process（python3 读本机会话记录），tool.call 只观察，只改显示，显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/yasinozmeen/claude-code-mods/tree/main/vurgu) |
 | whats-agent-doing | 提示框上方显示 Claude 当前在做什么（读提示、思考、写回复、跑工具、等审批），可展开历史。 | MIT | [链接](https://github.com/tzafrir/whats-agent-doing) |
 | bumper-sticker | 用自定义词替换 Spinner 忙碌文案；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/bumper-sticker) |
 | logo | 提示上方显示自设 PNG logo（终端 Raster）；备注：本机 process（powershell 缩图）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/logo) |
@@ -557,6 +558,7 @@ For detailed descriptions of all 574 mods, see the Chinese section below.
 | shot-view | 收集 Read/工具里的 PNG，/shots 侧栏翻页预览。备注：本机 process（sips/open）。 | MIT | [链接](https://github.com/Bearisbug/cc-mods/tree/main/shot-view) |
 | mermaid-inline | 把助手回复里的 mermaid 围栏画进 transcript（图片或盒装 ASCII）；本机 node 跑插件内置 render-svg。fork of claude-mermaid。 | MIT | [链接](https://github.com/Conte777/mermaid-inline/tree/main/mermaid-inline) |
 | terminal-browser | 在会话旁嵌入终端浏览器，预览网页/本地 HTML/PR。 | MIT | [链接](https://github.com/zenbu-labs/terminal-browser/tree/main/claude-code-plugin) |
+| vitrin | 媒体侧栏：把回复和工具生成的图片、视频、PDF、音频、Markdown 收进窗格预览与对比；仅 macOS，本机 process（node 起本机无头 Chrome，sips、qlmanage、ffmpeg、open），只开本机 127.0.0.1 服务，tool.call 原样 next，只改回复显示。 | MIT | [链接](https://github.com/yasinozmeen/claude-code-mods/tree/main/vitrin) |
 | yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
 | image-thumbs | 在终端显示缩略图，使用本地 process（macOS sips、mktemp、base64 与临时文件清理）。不改写消息。 |  | [链接](https://github.com/ohade/claude-mods/tree/main/image-thumbs) |
 | lofi | 会话配乐：idle/focus/flow 与测试通过/失败提示音；/lofi on。备注：本机音频（插件内 mp3）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/lofi) |
@@ -603,6 +605,7 @@ For detailed descriptions of all 574 mods, see the Chinese section below.
 | calendar | AbovePrompt 显示即将到来的 Google Calendar 事件（/cal）。备注：通过用户已配置的「claude.ai Google Calendar」MCP 读取。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/calendar) |
 | gh-ci-status | 提示框上方钉住 GitHub Actions 状态。 |  | [链接](https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status) |
 | inbox-pane | 侧栏窗格展示 claude-inbox 各分区会话，支持快捷键操作。备注：读写本机 `~/.config/claude-inbox/`；可在无写入时拉起 ... |  | [链接](https://github.com/jordanbyron/claude-inbox/tree/main/mod) |
+| lavish-pages | 在提示框上方列出本会话打开的 Lavish 页面和状态，可 open、end、reopen；本机 process（find、grep 读本机会话记录，open，lavish-axi），http 只 GET 页面服务的 /health（默认 127.0.0.1:4387），$.model.complete 把页面可见文字（最多 4000 字）交给 Haiku 生成一行描述，tool.call 原样 next，显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/FoCDoT/lavish-pages/tree/main/lavish-pages) |
 | linear-claude-mod | Linear 指派工单面板；点击可加载详情、评论或改状态。 | MIT | [链接](https://github.com/rjohnt/linear-claude-mod) |
 | linear-tickets | /linear 只读侧栏，使用用户的 API key 调用 api.linear.app，不发送会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/linear-tickets) |
 | oneform-line | 提示框上方显示 OneForm 当日睡眠/蛋白/训练与下周计划；/oneform 查看全日。备注：用用户配置的 OneForm URL + API key... |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/oneform-line) |
