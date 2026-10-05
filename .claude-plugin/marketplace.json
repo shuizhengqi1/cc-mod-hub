@@ -2899,6 +2899,68 @@
         "source": "git",
         "url": "XavierYounan/claude-code-tmux-status"
       }
+    },
+    {
+      "name": "hide-diffs",
+      "source": {
+        "source": "git",
+        "url": "gixxy22/hide-diffs"
+      }
+    },
+    {
+      "name": "sea",
+      "source": {
+        "source": "git",
+        "url": "himazintom/claude-code-sea"
+      }
+    },
+    {
+      "name": "block-destructive-commands",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/security/block-destructive-commands"
+      }
+    },
+    {
+      "name": "large-edit-confirmation",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/security/large-edit-confirmation"
+      }
+    },
+    {
+      "name": "protected-paths-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/security/protected-paths-guard"
+      }
+    },
+    {
+      "name": "admin-capability-lockdown",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/enterprise/admin-capability-lockdown"
+      }
+    },
+    {
+      "name": "prompt-cache-control",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/observability/prompt-cache-control"
+      }
+    },
+    {
+      "name": "universal-audit-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "davila7/claude-code-templates",
+        "path": "cli-tool/components/mods/observability/universal-audit-log"
+      }
     }
   ]
 }
