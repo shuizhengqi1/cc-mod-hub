@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 578 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 581 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 578 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 581 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 578 mods, see the Chinese section below.
+For detailed descriptions of all 581 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 578 个精选 Claude Code mods，按类别组织：
+以下是本市场的 581 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -174,6 +174,7 @@ For detailed descriptions of all 578 mods, see the Chinese section below.
 | pixelbar | 提示框上方像素状态带：模型/上下文/限额/费用/git 与回合摘要；/session-files。备注：本机 git；AbovePrompt 显示时可不调 next。 |  | [链接](https://github.com/elkinaguas/claude-mods/tree/main/pixelbar) |
 | cache-buster | 提示框上方条带显示缓存剩余时间与命中率。**调用 next 可堆叠**。仅在用户按钮时压缩。 |  | [链接](https://github.com/dblanken-yale/cache-buster) |
 | cc-usage | 状态行显示 5 小时与 7 天用量。**注册 /usage-bar，可能与已列出的 usage-bar mod 冲突，请二选一**。隐藏时 $.ui.status(undefined) 清除状态行。 | MIT | [链接](https://github.com/leonardokidd/cc-usage) |
+| status-line | 提示框下方一行显示目录、模型、上下文占比和 5 小时/每周用量及本地重置时间，/quota 展开详情，用量过 90% 弹提示；纯 UI，只读会话用量，不用网络。 | MIT | [链接](https://github.com/mikljohansson/claude-code-status-line) |
 
 ### 上下文管理 Context Management
 
@@ -598,6 +599,7 @@ For detailed descriptions of all 578 mods, see the Chinese section below.
 | workflow-band | 在提示框上方显示 Document Workflow 关卡（workflow-cli status）的检查结果与下一步。只观察。备注：本机 process（workflow-cli）；AbovePrompt 会盖住别的行。 |  | [链接](https://github.com/berlysia/dotfiles/tree/master/mods/workflow-band) |
 | todos | 会话开始在提示上方列出仓库 TODO/FIXME/HACK（git blame 排序）；备注：本机 git。 | MIT | [链接](https://github.com/bengous/claude-code-plugins/tree/main/todos) |
 | task-line | 提示框上方任务列表进度行（TodoWrite/TaskCreate 等填充）；测试失败时标红。纯 UI，只观察，不改写。 | MIT | [链接](https://github.com/muellerei/task-line) |
+| handover-report | /handover-report 打开窗格，汇总仓库里 .handovers/handover_log.md 的未完成交接、相关分支、未决问题和过期 worktree；只在本机跑只读 git（log/show/rev-parse/worktree list），不 fetch、不写入。 |  | [链接](https://github.com/bzatrok/claudemods/tree/main/handover-report) |
 
 ### 外部集成 External Integrations
 
@@ -714,6 +716,7 @@ For detailed descriptions of all 578 mods, see the Chinese section below.
 | zen-breath | /meditate 侧边冥想呼吸面板（方箱、4-7-8、平静三种节奏），ASCII 佛祖敲木鱼，状态栏显示剩余时间；次数和连续天数存本机 $.store；开会话起每秒 tick（未在冥想时几乎无操作）；结束时会清掉其他 mod 的状态行。 | MIT | [链接](https://github.com/mindthink/zen-breath) |
 | zsh-safe | 把 bash 写法的 Bash 命令改写成 macOS zsh 可跑。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/zsh-safe) |
 | notes-panel | 每个会话一份 markdown 便签窗格（/note），可追加、勾选、清空和清理旧笔记，只存在本机。 |  | [链接](https://github.com/Sickin/claude-code-notes-panel) |
+| tldr | /tldr 把 Claude 最后一条回复用 $.model.complete（haiku）总结成几行，只以通知行显示、不进对话；会把最后一条回复文本交给 $.model.complete。 |  | [链接](https://github.com/bzatrok/claudemods/tree/main/tldr) |
 
 ---
 
