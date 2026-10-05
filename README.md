@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 446 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 459 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 446 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 459 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 446 mods, see the Chinese section below.
+For detailed descriptions of all 459 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 446 个精选 Claude Code mods，按类别组织：
+以下是本市场的 459 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -151,6 +151,11 @@ For detailed descriptions of all 446 mods, see the Chinese section below.
 | vercel-deploy-status | 提示框上方显示 Vercel 部署队列（零 token）。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status) |
 | wavy-usage | 波浪动画风格的用量显示条。 | MIT | [链接](https://github.com/BatuhanCakmakk/wavy-usage) |
 | weektoken | 提示框上方 5 小时/周限额配速条与 /weektoken 面板。备注：本机 process（perl/tail/bash 读用量；macOS defaults 读语言）。 | MIT | [链接](https://github.com/3dnow/claude-mods/tree/main/weektoken) |
+| gas-gauge | 提示上方油量表风格显示 5h/周限额剩余；纯 UI，只读 session.usage/measure。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/gas-gauge) |
+| odometer | 提示上方里程表：本会话时长与花费；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/odometer) |
+| tach | 提示上方转速表：近期 token 燃烧速率（可设窗口）；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/tach) |
+| speedometer | 提示上方速度表：上下文窗口占用 0→MAX；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/speedometer) |
+| oil | 提示上方机油表：本周 Fable 用量计数（本机 store）；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/oil) |
 
 ### 上下文管理 Context Management
 
@@ -235,6 +240,9 @@ For detailed descriptions of all 446 mods, see the Chinese section below.
 | turn-timer | 轻量回合计时状态。 |  | [链接](https://github.com/anthonyhungnguyen/claude-code-mods/tree/main/turn-timer) |
 | turn-progress | 状态行显示本回合阶段、经过时间与完成标记；可注册 progress 工具申报进度。 | MIT | [链接](https://github.com/tsumugilabo/turn-progress/tree/main/plugins/turn-progress) |
 | whats-agent-doing | 提示框上方显示 Claude 当前在做什么（读提示、思考、写回复、跑工具、等审批），可展开历史。 | MIT | [链接](https://github.com/tzafrir/whats-agent-doing) |
+| bumper-sticker | 用自定义词替换 Spinner 忙碌文案；纯 UI。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/bumper-sticker) |
+| logo | 提示上方显示自设 PNG logo（终端 Raster）；备注：本机 process（powershell 缩图）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/logo) |
+| steering-wheel | /steering-wheel 写入 ~/.claude/keybindings.json 绑定 F5 立即发送，并改写 PromptHint「send now」文案；备注：本机写配置文件。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/steering-wheel) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -322,6 +330,9 @@ For detailed descriptions of all 446 mods, see the Chinese section below.
 | stay-put | 拦截 `cd dir && …` 链式 Bash/PowerShell，只拒绝并提示单命令写法（不改写命令）；teach/watch/off。除非 off，会在 Bash 与 PowerShell 工具描述追加不要链 cd 的指示。弹跳带显示时 AbovePrompt 不调 next，可覆盖其他 mod 行。 | MIT | [链接](https://github.com/ivanvyd/ground-rules/tree/main/plugins/stay-put) |
 | storage-guard | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
 | test-guard | 拦截弱化/删除测试的 Write/Edit/Bash。备注：可 deny，不改写命令。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/test-guard) |
+| hands-off | 用户标记路径后拒绝 Edit/Write/NotebookEdit。备注：只 deny，不改写。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/hands-off) |
+| query-guard | Bash 中疑似危险/慢 SQL（无 WHERE 的 DELETE/UPDATE、DROP 等）先询问再放行。备注：只 deny，不改写命令。 | MIT | [链接](https://github.com/nu0ma/query-guard/tree/main/plugins/query-guard) |
+| valet-mode | 代客模式：除 Read/Grep/Glob/WebSearch/WebFetch 外一律 deny；锁文件跨窗口。备注：只 deny，不改写。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/valet-mode) |
 
 ### 开发工具 Dev Tools
 
@@ -514,6 +525,8 @@ For detailed descriptions of all 446 mods, see the Chinese section below.
 | session-journal | 每回合把提问/改文件/命令追加到本机 .claude/journal/日期.md；/standup。备注：本机写本地文件。 | MIT | [链接](https://github.com/Alyan-khattak/Claude-Code-Mods/tree/main/session-journal) |
 | sportscaster | 会话实况解说（本地 $.audio.speak，不上传会话）。备注：使用本机 TTS。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/sportscaster) |
 | tmux-status | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
+| clip | /clip 清洗终端装饰后写入本机剪贴板。备注：本机 process（pbcopy/wl-copy/xclip/powershell）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/clip) |
+| pop | /pop 用本机打开器打开 URL/文件。备注：本机 process（open/xdg-open/powershell）。 |  | [链接](https://github.com/DJPalefaceSD/rostech-mods/tree/main/plugins/pop) |
 
 ### 其他工具 Other Tools
 

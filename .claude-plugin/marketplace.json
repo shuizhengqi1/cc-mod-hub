@@ -3436,6 +3436,110 @@
         "source": "git",
         "url": "dgokcin/claude-pokemon-mod"
       }
+    },
+    {
+      "name": "gas-gauge",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/gas-gauge"
+      }
+    },
+    {
+      "name": "odometer",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/odometer"
+      }
+    },
+    {
+      "name": "tach",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/tach"
+      }
+    },
+    {
+      "name": "speedometer",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/speedometer"
+      }
+    },
+    {
+      "name": "oil",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/oil"
+      }
+    },
+    {
+      "name": "bumper-sticker",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/bumper-sticker"
+      }
+    },
+    {
+      "name": "logo",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/logo"
+      }
+    },
+    {
+      "name": "steering-wheel",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/steering-wheel"
+      }
+    },
+    {
+      "name": "hands-off",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/hands-off"
+      }
+    },
+    {
+      "name": "query-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "nu0ma/query-guard",
+        "path": "plugins/query-guard"
+      }
+    },
+    {
+      "name": "valet-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/valet-mode"
+      }
+    },
+    {
+      "name": "clip",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/clip"
+      }
+    },
+    {
+      "name": "pop",
+      "source": {
+        "source": "git-subdir",
+        "url": "DJPalefaceSD/rostech-mods",
+        "path": "plugins/pop"
+      }
     }
   ]
 }
