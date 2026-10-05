@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 480 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 485 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 480 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 485 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 480 mods, see the Chinese section below.
+For detailed descriptions of all 485 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 480 个精选 Claude Code mods，按类别组织：
+以下是本市场的 485 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -304,6 +304,8 @@ For detailed descriptions of all 480 mods, see the Chinese section below.
 | wod-timer | 提交时 3-2-1-GO，每回合计时与白板 split；可选本机语音读出超过一分钟的回合。纯 UI。 | MIT | [链接](https://github.com/yash-gadodia/claude-mods/tree/main/wod-timer) |
 | tetris | 提示框上方俄罗斯方块；仅 UI/命令。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/tetris) |
 | typing-test | 提示框上方打字测速；Claude 工作时可玩，回合结束暂停，记录最佳成绩；零 token。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/typing-test) |
+| tool-snake | Claude 每调用一次工具就往贪吃蛇里掉一颗食物（/snake）；每次提交提示会自动打开窗格，结束时用本机语音朗读成绩；和已有的 snake 都注册 /snake，二选一安装。 | MIT | [链接](https://github.com/Yash1927/claude-code-snake) |
+| gamble-with-claude-code | 用今天烧掉的 token 当筹码玩老虎机、轮盘和二十一点（/casino），不涉及真钱；会在本机 process 运行 python3，读取本机 ~/.claude 下的会话记录统计 token，不外传。 | MIT | [链接](https://github.com/szarkans/gamble-with-claude-code) |
 
 ### 安全防护 Security & Safety
 
@@ -394,6 +396,7 @@ For detailed descriptions of all 480 mods, see the Chinese section below.
 | git-graph | 可折叠 Git 提交图面板（/git-graph）。备注：本机 git。 |  | [链接](https://github.com/nemokoala/claude-mods/tree/main/plugins/git-graph) |
 | vhs | /vhs 回放本会话每次 Edit/Write 的本地录像；可 rewind 写回文件。备注：本机读/写文件。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/vhs) |
 | bg-task-band | 提示框上方后台 Bash/Monitor/Agent 任务条。备注：本机 process（find/tail）；AbovePrompt 显示时可不调 next。 | MIT | [链接](https://github.com/ipartington/claude-mods/tree/main/bg-task-band) |
+| git-diff-timeline | 提示框上方的 git 提交时间线：点提交看 diff、点两个比较，分支标签页比较两个分支（/gitdiff）；只在本机运行 git log、git diff 等只读 git 命令。当默认带状显示时（git 就绪或错误），AbovePrompt 返回自己的条带不调用 next，会覆盖其他 mod 的行。 |  | [链接](https://github.com/liawzishen/git-diff-timeline) |
 
 ### 子代理管理 Subagent Management
 
@@ -456,6 +459,7 @@ For detailed descriptions of all 480 mods, see the Chinese section below.
 | quota-pets | 额度假宠扭蛋：每对话抽猫/狗，限额告急讲鬼故事、用完阵亡；context 当肚子（/petdex 肚子）。备注：本机读 session.messages 估算肚子内容。 |  | [链接](https://github.com/Open01277/claude-mods/tree/main/plugins/quota-pets) |
 | pokemon | 提示框上方像素宝可梦：随回合战斗、升级与组队动画，纯 UI。 |  | [链接](https://github.com/dgokcin/claude-pokemon-mod) |
 | ricky-pixel-mod | 像素猫 Ricky：夜空窗格看板 + 提示框上方猫带；只观察会话事件做动画，不改写工具/提示。 | MIT | [链接](https://github.com/muxia23/ricky-pixel-mod) |
+| ember | 一团小火苗跟着会话：在转圈行写当前步骤，提示框上方显示轮到谁，轮到你时本机播放提示音（/ember mute 静音，/ember pane 打开窗格）。默认 AbovePrompt 行除非 hasSurvey 不调用 next，会覆盖其他 mod 的行；带状还会显示上一条用户提示。 | MIT | [链接](https://github.com/nickdemari/ember) |
 
 ### 图片与媒体 Images & Media
 
@@ -616,6 +620,7 @@ For detailed descriptions of all 480 mods, see the Chinese section below.
 | where-am-i | 提示上方只读回顾：目标/正在做/等你什么（观察工具调用，不改写）。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/where-am-i) |
 | winnow | 精简大型未使用的工具结果。 |  | [链接](https://github.com/GhalebDweikat/winnow) |
 | zsh-safe | 把 bash 写法的 Bash 命令改写成 macOS zsh 可跑。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/zsh-safe) |
+| notes-panel | 每个会话一份 markdown 便签窗格（/note），可追加、勾选、清空和清理旧笔记，只存在本机。 |  | [链接](https://github.com/Sickin/claude-code-notes-panel) |
 
 ---
 
