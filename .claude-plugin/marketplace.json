@@ -5384,6 +5384,262 @@
         "url": "https://github.com/mataku/dotfiles.git",
         "path": "claude/mods/compact-large-idle-context"
       }
+    },
+    {
+      "name": "package-gate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cleverfakealias/agents.git",
+        "path": "mods/package-gate"
+      }
+    },
+    {
+      "name": "repo-lock",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cleverfakealias/agents.git",
+        "path": "mods/repo-lock"
+      }
+    },
+    {
+      "name": "guards",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wmayner/dotfiles.git",
+        "path": "claude/guards"
+      }
+    },
+    {
+      "name": "inline-review",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/elayeek/elayeek-ai.git",
+        "path": "inline-review"
+      }
+    },
+    {
+      "name": "worktrees",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mirakui/dotfiles.git",
+        "path": "claude/mods/worktrees"
+      }
+    },
+    {
+      "name": "review-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
+        "path": "mods/review-watch"
+      }
+    },
+    {
+      "name": "ci-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
+        "path": "ci-watch"
+      }
+    },
+    {
+      "name": "promote-lights",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yonatangross/orchestkit.git",
+        "path": "mods/promote-lights"
+      }
+    },
+    {
+      "name": "cc-daniel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/dsanchezp18/ai-configs-daniel.git",
+        "path": "mods/cc-daniel"
+      }
+    },
+    {
+      "name": "neon-sumi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/danneftw1/neon-sumi.git",
+        "path": "plugins/neon-sumi"
+      }
+    },
+    {
+      "name": "statusline-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zakattack9/agentic-coding.git",
+        "path": "claude-code/plugins/statusline-band"
+      }
+    },
+    {
+      "name": "usage-dash",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/aqua5230/usage.git",
+        "path": "claude_pane/usage-dash"
+      }
+    },
+    {
+      "name": "context-level",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tobihagemann/turbo.git",
+        "path": "claude/skills/context-level"
+      }
+    },
+    {
+      "name": "fleet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/neonelemental/claude-code-board-mods.git",
+        "path": "fleet"
+      }
+    },
+    {
+      "name": "browser-lanes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
+        "path": "mods/browser-lanes"
+      }
+    },
+    {
+      "name": "cuelume",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/danielwh2/cuelume.git",
+        "path": "claude-code"
+      }
+    },
+    {
+      "name": "clawd-buddy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/prabowosd/clawd-buddy.git",
+        "path": "plugins/clawd-buddy"
+      }
+    },
+    {
+      "name": "show-me",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
+        "path": "show-me"
+      }
+    },
+    {
+      "name": "now-playing",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
+        "path": "mods/now-playing"
+      }
+    },
+    {
+      "name": "task-progress-hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/liamkarlmitchell/liams-claude-plugins.git",
+        "path": "plugins/openspec/task-progress-hud"
+      }
+    },
+    {
+      "name": "board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/neonelemental/claude-code-board-mods.git",
+        "path": "board"
+      }
+    },
+    {
+      "name": "orch-session",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/severinlindenmann/orch-core.git",
+        "path": "plugins/orch-session"
+      }
+    },
+    {
+      "name": "moai-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/modu-ai/moai-adk.git",
+        "path": "mods/moai-board"
+      }
+    },
+    {
+      "name": "moai-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/modu-ai/moai-adk.git",
+        "path": "mods/moai-status"
+      }
+    },
+    {
+      "name": "ado-link-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ntaksh42/dotfiles.git",
+        "path": "claude/mods/ado-link-bar"
+      }
+    },
+    {
+      "name": "ado-pr-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ntaksh42/dotfiles.git",
+        "path": "claude/mods/ado-pr-status"
+      }
+    },
+    {
+      "name": "vome-automation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vortitron/home-assistant-mcp.git",
+        "path": "claude-plugin/vome-automation"
+      }
+    },
+    {
+      "name": "vome-dash",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vortitron/home-assistant-mcp.git",
+        "path": "claude-plugin/vome-dash"
+      }
+    },
+    {
+      "name": "vome-esphome",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vortitron/home-assistant-mcp.git",
+        "path": "claude-plugin/vome-esphome"
+      }
+    },
+    {
+      "name": "vome-health",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vortitron/home-assistant-mcp.git",
+        "path": "claude-plugin/vome-health"
+      }
+    },
+    {
+      "name": "remctl",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/viticci/remctl.git",
+        "path": "plugins/claude-code"
+      }
+    },
+    {
+      "name": "hal-grammar-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vinta/hal-9000.git",
+        "path": "plugins/hal-grammar-check"
+      }
     }
   ]
 }

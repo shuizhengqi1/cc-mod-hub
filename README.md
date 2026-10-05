@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 699 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 731 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 699 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 731 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 699 mods, see the Chinese section below.
+For detailed descriptions of all 731 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 699 个精选 Claude Code mods，按类别组织：
+以下是本市场的 731 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -194,6 +194,7 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | rtk-quota | 右下用量条上方叠一行 rtk 统计：已节省 tokens 和保住的额度百分比；可配置订阅档位（pro/5x/20x，默认 20x）。备注：本机运行 `claude auth status` 取订阅类型、运行 `rtk gain` 取数字，需自行安装 rtk；先调 next 再叠加，纯本机 UI。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/rtk-quota) |
 | usage-ring | 提示框上方一排圆环：5 小时与每周额度、上下文、待办进度、本会话 tokens、费用和提示缓存剩余时间，配像素小 Claude 动画（仅终端）。备注：只读用量；tool.call 只读 TaskCreate/TaskUpdate/TaskList/TodoWrite 结果数待办，原样返回；可选 limitsFile（默认关）把额度快照写到本机 ~/.claude/usage-limits.json。 | MIT | [链接](https://github.com/oualid0/claude-mods/tree/main/plugins/usage-ring) |
 | burnrate | 提示框上方一条显示各额度窗口的消耗速度和预计耗尽时间，以及提示缓存未命中次数与估算重写的 tokens；/burnrate 打开面板看最近请求明细。备注：turn.step 只记录 usage、原样透传；纯本机 UI。 | MIT | [链接](https://github.com/nemke82/claude-code-burnrate/tree/main/burnrate) |
+| usage-dash | /usage-dash 面板显示额度、本机各 Claude 会话状态和后台任务（子代理、后台 Bash）。备注：需安装 aqua5230/usage 应用（本机运行 usage CLI）；各钩子只记录状态并原样返回，prompt.submit 只记录不改写；状态写到 ~/.usage/claude-pane/live/ 并清理过期文件，读本机 transcript 取会话标题。 | AGPL-3.0 | [链接](https://github.com/aqua5230/usage/tree/main/claude_pane/usage-dash) |
 
 ### 上下文管理 Context Management
 
@@ -226,6 +227,7 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | context-watch | 上下文到 80%/90% 时弹 toast 提醒；/context-top 打开面板列出本会话占上下文最多的工具结果（按 4 字符≈1 token 估算）。备注：tool.call 只读结果长度，原样返回，不改写。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/context-watch) |
 | token-face | 提示框上方一张随上下文变满越来越诡异的脸，配百分比、近 12 回合迷你柱状图和上回合增量；桌面版可用插件目录 faces/1-4 的自定义图片。备注：只读用量；提示框上方条不调 next，会盖住其他 mod 的同位置内容。 | MIT | [链接](https://github.com/MohamedEmbarak/token-face/tree/main/plugins/token-face) |
 | compact-large-idle-context | 会话空闲 50 分钟且上下文超过 20 万 tokens 时，在 1 小时提示缓存过期前自动压缩一次；你一开新回合或手动/自动压缩就取消。备注：会自动调用 $.session.compact（标准压缩，会消耗一次压缩请求），结果写到日志；不改写消息。 | MIT | [链接](https://github.com/mataku/dotfiles/tree/develop/claude/mods/compact-large-idle-context) |
+| context-level | 给 Claude 一个读取剩余上下文百分比的工具，方便它决定何时收尾或压缩。备注：只在 Claude 调用该工具时返回一个百分比，不注入其他上下文。 | MIT | [链接](https://github.com/tobihagemann/turbo/tree/main/claude/skills/context-level) |
 
 ### UI 与主题 UI & Themes
 
@@ -332,6 +334,8 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | prompt-clock | 在对话里给每条你发出的消息前加发送时间，并在回合耗时行加开始→结束时间；可配置是否显示秒。备注：session.append 只记录时间不改写消息，显示时只改 UI 文本；恢复会话时读本机 transcript 文件取旧时间。 | Apache-2.0 | [链接](https://github.com/vampik33/claude-plugins/tree/main/plugins/prompt-clock) |
 | model-search | /ms 或 /model-search 打开搜索面板，按名称、提供商或 ID 筛选模型，回车选第一个直接切换；/model 原样保留。备注：读本机 settings 的 modelPicker 列表和引擎的模型选项；只在你选择时执行 /model 命令；纯本机 UI。 | MIT | [链接](https://github.com/junjiezhou1122/plugins/tree/main/model-search) |
 | ailang-brand | AILANG 风格：提示行旁显示 λ AILANG 版本号，加载词换成编译器味的 Unifying…、Inferring effects… 等；/ailang 打开带 logo 的面板。备注：本机运行 `ailang --version`；只改 PromptHint、Spinner、TurnDuration 显示文字并调 next。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/ailang-brand) |
+| neon-sumi | 霓虹水墨风驾驶舱：/neon-sumi-cockpit 打开面板，显示额度条、你的 PR/通知、worktree、本机在服务的端口和最近用过的 skills。备注：面板定时运行插件自带、源码可读的 Python 脚本（statusline/cockpit.py，需 python3）；用 gh CLI 只读查询（需已登录 gh），只探测 127.0.0.1 端口，读本机 transcript 统计 skills，缓存写 ~/.cache/neon-sumi。 | MIT | [链接](https://github.com/danneftw1/neon-sumi/tree/main/plugins/neon-sumi) |
+| statusline-band | 把 statusline 脚本移植成 mod：提示框上方两行彩色信息（目录、git、模型、effort、时长、额度、上下文、费用、内存等），主要给桌面版 Code 标签页用，终端默认关闭（可配置）。备注：本机只读运行 git、ps、pgrep；turn.step 只读取 effort 并原样透传。 |  | [链接](https://github.com/zakattack9/agentic-coding/tree/main/claude-code/plugins/statusline-band) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -453,6 +457,9 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | open-file-guard | Claude 要写/改你正打开的 Word、Excel、PowerPoint 文件前，先问你关掉（最多问 3 次），否则拒绝这次调用。备注：tool.call 只放行或 deny，不改参数；只检查本机锁文件，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/open-file-guard) |
 | registro-scritture | 每轮结束在提示框上方列出本轮写到仓库外的操作（MCP 写入、git push、gh 修改、curl POST 等），带结果链接与失败/被拒标记。备注：tool.call 只观察，原样调用 next 并返回结果，不改写；只在本机读工具结果找第一个 https 链接；意大利语界面；不联网。 | MIT | [链接](https://github.com/andreabrugnoli/mods/tree/main/registro-scritture) |
 | dot-guard | 拦截对整个 $HOME 工作树的 git add（如 dot add -A / . / *），避免把整个家目录提交进 dotfiles 仓库；可配置包装命令名（默认 dot）。备注：只 deny，不改写命令。 |  | [链接](https://github.com/theagitist/claude-mods/tree/main/dot-guard) |
+| package-gate | Claude 要安装软件包（npm/pnpm/yarn/pip/uv/npx/winget/brew 等）或往依赖清单里加包前，弹框列出包名和注册表链接问你是否允许；本会话已批准的不再问。备注：只 deny，不改写命令；`claude -p` 等无人可问时一律拒绝。 |  | [链接](https://github.com/cleverfakealias/agents/tree/main/mods/package-gate) |
+| repo-lock | 用错包管理器（按最近的 lockfile 判断）跑依赖命令时拒绝执行，状态行显示 仓库 · 包管理器 · 分支。备注：只 deny，不改写命令；本机只运行 `git rev-parse` 取仓库和分支。 |  | [链接](https://github.com/cleverfakealias/agents/tree/main/mods/repo-lock) |
+| guards | 会丢弃本会话没碰过的改动的 git 命令（reset --hard、checkout --force、clean 等）和会开始 vast.ai 计费的命令先暂停等你确认；拒绝在 .py/.ipynb 里写全局随机种子。备注：只 deny/暂停确认，不改写命令；本机运行 git status。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/guards) |
 
 ### 开发工具 Dev Tools
 
@@ -527,6 +534,12 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | git-diff | 提示框上方显示未提交改动：文件数、增删行数和 GitHub 式色块条，右侧显示分支；/git-diff 或 + 按钮打开面板按列表/树看每个文件。备注：本机只读调用 git diff/ls-files/branch；tool.call 只在 Edit/Write 后刷新统计，原样返回。 |  | [链接](https://github.com/cjmellor/mella-marketplace/tree/main/plugins/git-diff) |
 | ailang-lens | 编辑 .ail 文件后自动打开面板，显示该 AILANG 模块的函数、类型、副作用和类型错误；/ail-lens 可手动分析某个文件。备注：本机运行 `ailang iface` / `ailang check`；tool.call 只在 Edit/Write/Bash 后刷新，原样返回，不把结果加进模型上下文。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/ailang-lens) |
 | prepush-gate | Claude 执行 git push 或 gh pr create/merge 前，先在本机跑 gofmt、make lint、make check-file-sizes（仓库有对应目标才跑），失败就拒绝这次推送并给出输出；启动环境设 AILANG_SKIP_PREPUSH=1 可跳过。备注：只 deny，不改写命令；会执行当前仓库自己的 Makefile 目标。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/prepush-gate) |
+| inline-review | /inline-review <文件> 或 /inline-diff 在面板里显示文件或 diff，可逐行写评论；注册 show_file、list_comments 两个工具让 Claude 打开文件、读取你的评论。备注：本机只读运行 git diff/status；你的评论只在 Claude 调用 list_comments 时作为该工具结果返回，不另外注入上下文。 | MIT | [链接](https://github.com/elayeek/elayeek-ai/tree/main/inline-review) |
+| worktrees | 面板列出本会话涉及的 git worktree（仓库、分支、未提交文件数），会话开始时自动打开并定时刷新；/worktrees 重新打开。备注：从工具调用参数识别路径后本机只读运行 git；tool.call 原样返回。 |  | [链接](https://github.com/mirakui/dotfiles/tree/main/claude/mods/worktrees) |
+| review-watch | 提示框上方为每个进行中的代码审查（Codex `codex review` 或审查类子代理）显示一行：模型、审查对象、用时、最新输出，结束时弹 toast。备注：只观察，tool.call 原样执行；本机读取 Codex 输出和 ~/.codex 配置里的模型名；纯本机 UI。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/review-watch) |
+| ci-watch | Claude 推送、开 PR 或推 tag 后，在提示框上方显示对应 GitHub Actions 运行的进度和通过/失败。备注：本机运行 gh/git 只读查询，需已登录 gh；prompt.submit 只清除已结束的条目，不改写提示；tool.call 原样返回。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/ci-watch) |
+| promote-lights | 有打开中的 promote PR（base 为 main、head 为 dev 或 PROMOTE_HEAD，或带 promote 标签）时在提示框上方显示 CI 状态灯，/lights 查看详情。备注：本机运行 gh 只读查询，需已登录 gh；纯本机 UI。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/promote-lights) |
+| cc-daniel | 状态行显示 git 分支和改动数，提示框上方一排额度/上下文进度条，/graph 打开 git 提交图面板（会话开始时自动打开）。备注：本机只读运行 git；纯本机 UI。 |  | [链接](https://github.com/dsanchezp18/ai-configs-daniel/tree/main/mods/cc-daniel) |
 
 ### 子代理管理 Subagent Management
 
@@ -556,6 +569,8 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | agent-graph | 桌面端窗格，把正在运行的子代理画成从左到右的关系图（模型、步数、费用估计）；/agent-graph 打开，只观察、工具调用原样放行。 |  | [链接](https://github.com/theishandubey/claude-mods/tree/main/plugins/agent-graph) |
 | workflow-watch | 实时显示正在运行的 Workflow 各阶段（模型、effort、token、当前工具），带面板、提示框上方横条与状态行，/workflow-watch 输出文本报告。备注：只读本机 ~/.claude/projects 下本会话的 workflow journal 与子代理 transcript；不联网。 | MIT | [链接](https://github.com/alonbaron/claude-skills/tree/main/mods/workflow-watch) |
 | session-board | 提示框上方一个小卡片，列出本机其他正在运行的 Claude 会话及其状态（运行中/完成/空闲），每 5 秒刷新（仅终端，且有其他会话时才出现）。备注：每 5 秒在本机调用 ListAgents 工具读会话列表；先画自己再调 next 把其他 mod 放下方；纯本机 UI。 | MIT | [链接](https://github.com/oualid0/claude-mods/tree/main/plugins/session-board) |
+| fleet | 面板按 GitHub 看板的 epic/工单分组显示本会话的子代理：工单状态、epic 完成度、各工单下的代理。备注：通过本机 gh api 只读 GET（需已登录 gh，需配置看板）；只在本机从子代理描述/提示开头匹配工单号；tool.call 原样返回。 | MIT | [链接](https://github.com/neonelemental/claude-code-board-mods/tree/main/fleet) |
+| browser-lanes | 显示本会话的 Playwright 浏览器及当前占用者；子代理要用浏览器时排队等前一个用完（等超过 5 分钟则拒绝）；/browser clean 关掉残留浏览器。备注：只等待/deny，不改写工具调用；/browser clean 会结束本会话残留的浏览器进程（你执行才会）。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/browser-lanes) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -589,6 +604,7 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | done-sound | 主会话回合结束时播放 macOS 系统提示音（出错用另一种），/sound on/off/test 开关。备注：本机 process（afplay）；仅 macOS。 |  | [链接](https://github.com/myudav4iik/claude-mods/tree/main/done-sound) |
 | turn-chime | 长回合结束或 Claude 停下来问你时播放提示音并弹 toast，阈值分钟数可配（默认 3）。备注：prompt.submit 只记时间不改写；Windows 上用本机 PowerShell 播放 mod 自带的 wav；不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/turn-chime) |
 | ailang-inbox-band | 提示框上方显示 AILANG 未读消息数和最新标题，新消息到达时弹 toast；/ail-inbox 打开面板可展开阅读和 Ack；可配置监听的收件箱和轮询间隔。备注：本机运行 `ailang messages list/ack`，需装 ailang；消息内容只给人看，不进模型上下文。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/ailang-inbox-band) |
+| cuelume | 两种提示音：长回合结束时播放「就绪」，有权限请求等你处理时播放「注意」；/cuelume 切换音色或关闭。备注：只播放插件自带的 wav 音频，不改权限决定；纯本机。 | MIT | [链接](https://github.com/danielwh2/cuelume/tree/main/claude-code) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -629,6 +645,7 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | pikachu | 在面板里养一只宝可梦（五条进化线可选），随上下文占用进化，带进度条和曲线。备注：只读上下文用量；不改提示或工具，不联网。 | MIT | [链接](https://github.com/ottho-nocode/claude-mod-pokemon) |
 | token-printer | Clawd 在提示框上方开「token 印钞机」，随 Claude 工作强度加速，回复下附 token/费用小票，/brrr 生成梗图，/token-reserve 打开统计面板。备注：Spinner 只改文案后调 next；prompt.edit 只读草稿让 Clawd 眼睛跟光标，原样返回；turn.complete 只在回答下加一行小票；不联网。 | MIT | [链接](https://github.com/BorjaGM1/token-printer) |
 | clawd-gotchi | 左下复古 RPG 小宠物：缓存命中和 git commit 喂养它，跑测试失败的套件变成 Boss，测试全过击败得 XP；可配置名字。备注：tool.call 只读 Bash 输出数失败数，原样返回；状态存本机 $.store；界面文案为法语。 |  | [链接](https://github.com/Lunik/gmz-claude-marketplace/tree/master/clawd-gotchi) |
+| clawd-buddy | 提示框上方一个 Claude 小吉祥物，旁边显示用量、上下文、缓存、目录和 git 状态；Claude 用 SendUserFile 发图片时在面板显示或用系统查看器打开。备注：本机只读运行 git status；图片转换/打开用 macOS 的 sips/open，临时文件在 /tmp/clawd-buddy；tool.call 原样返回。 | MIT | [链接](https://github.com/prabowosd/clawd-buddy/tree/main/plugins/clawd-buddy) |
 
 ### 图片与媒体 Images & Media
 
@@ -658,6 +675,8 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | yt-control | 用本机 cliamp 控制 YouTube 播放。缩略图只按视频 id 从 i.ytimg.com 拉取，不上传会话内容。备注：本机 process（需已装 cliamp/yt-dlp）。 | MIT | [链接](https://github.com/Unayung/cc-mods-youtube/tree/main/plugins/yt-control) |
 | image-thumbs | 在终端显示缩略图，使用本地 process（macOS sips、mktemp、base64 与临时文件清理）。不改写消息。 |  | [链接](https://github.com/ohade/claude-mods/tree/main/image-thumbs) |
 | lofi | 会话配乐：idle/focus/flow 与测试通过/失败提示音；/lofi on。备注：本机音频（插件内 mp3）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-mods/tree/main/plugins/lofi) |
+| show-me | /show-me <问题> 让 Claude 用 mermaid 图回答，并在面板里把回答中的 mermaid 图渲染成图片；不带参数则打开面板。备注：带问题时会以你的身份提交该问题并附加「用 mermaid 图回答」说明（你执行命令才会）；需本机 mmdc 和支持 kitty 图形协议的终端；临时文件在 $TMPDIR/show-me，旧目录会被清理。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/show-me) |
+| now-playing | 提示框上方一行显示 Spotify 正在播放的歌曲、进度和当前歌词，带上一首/暂停/下一首按钮，/music 也能控制（仅 macOS）。备注：本机 osascript 控制 Spotify；经 $.http 向 lrclib.net 查歌词，只发送歌名、歌手等曲目信息，不发送会话内容。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/now-playing) |
 
 ### 任务与项目 Task & Project
 
@@ -699,6 +718,11 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | aichemist-beads-band | 提示框上方显示 beads（bd）中进行中与就绪的任务，/beads-band 显示/隐藏。备注：需本机装 bd（steveyegge/beads）；通过随附的透明脚本 tools/beads-db.sh（不带 --init，不写入）找库，bd 调用均带 --readonly；不联网。 | MIT | [链接](https://github.com/Anras573/AIchemist/tree/main/mods/beads-band) |
 | keel-progress | 提示框上方每个 keel 运行一行进度，/keel-progress 打开面板看各步骤与下一个 issue；可选完成提示音。备注：需本机装 keel CLI；只读调用 keel status/activity --json、git worktree list、gh pr list；tool.call 只观察 Bash 里的 keel 命令，原样返回；不驱动运行。 | Apache-2.0 | [链接](https://github.com/berkayturanci/keel/tree/main/mods/keel-progress) |
 | sprint-status | 状态行显示当前项目 .ailang/state/sprints 下最近更新的进行中 sprint：已通过几个里程碑、下一个是什么。备注：只读本机文件；纯本机 UI。 | MIT | [链接](https://github.com/sunholo-data/ailang_bootstrap/tree/stable/plugins/sprint-status) |
+| task-progress-hud | 提示框上方显示当前 OpenSpec change 的 tasks.md 完成数、百分比和剩余任务，/task-progress 打开面板。备注：只读本机 openspec 文件；tool.call 只在工具执行后刷新，结果原样返回。 | MIT | [链接](https://github.com/liamkarlmitchell/liams-claude-plugins/tree/main/plugins/openspec/task-progress-hud) |
+| board | GitHub Projects v2 看板面板，/board 按 Status 列显示一个或多个看板的卡片。备注：通过本机 gh api 只读 GET（需已登录 gh）；需在插件配置里填 owner 和看板编号。 | MIT | [链接](https://github.com/neonelemental/claude-code-board-mods/tree/main/board) |
+| orch-session | 显示本会话持有的 orch 工单：状态行、提示框上方「轮到谁」一行、/orch 面板和交接 toast。备注：本机只读运行 `orch list --mine` / `orch show`（需安装 orch-core CLI）；tool.call 只在 orch 命令后刷新，原样返回。 | Apache-2.0 | [链接](https://github.com/severinlindenmann/orch-core/tree/main/plugins/orch-session) |
+| moai-board | 只读侧边面板 /moai-board 显示 MoAI 看板队列、工厂 lanes 和 SPEC 文档，可刷新、打开、pick。备注：本机运行 moai CLI 的固定命令（需安装 moai-adk）；pick 前弹框确认。 | Apache-2.0 | [链接](https://github.com/modu-ai/moai-adk/tree/main/mods/moai-board) |
+| moai-status | MoAI 只读状态：提示框上方显示用量/上下文警告条和健康状态行，lane 通知弹 toast。备注：只观察；本机运行 moai 固定只读命令；session.receive 只弹 toast 并原样传递；只改 Spinner 后缀文字。 | Apache-2.0 | [链接](https://github.com/modu-ai/moai-adk/tree/main/mods/moai-status) |
 
 ### 外部集成 External Integrations
 
@@ -726,6 +750,13 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | agent-state-observer | 只观察：把代理状态（working/idle/awaiting_approval/ended）、状态切换历史和限额读数写进一个 JSON 文件，供 Marveen 启动器读取。备注：只有设置了 MARVEEN_AGENT_ID 与 MARVEEN_STATE_OBSERVER_DIR 环境变量才写文件，否则什么都不做；所有钩子原样 next，不拒绝不改写；无界面；不联网。 | MIT | [链接](https://github.com/Szotasz/marveen/tree/develop/plugins/agent-state-observer) |
 | cortex-bar | 提示框上方用分色堆叠条显示 Cortex Hub 工具调用、/cs 会话进度、token 节省与代码检索 hit@k；/cortex-bar 开关，/cortex-calls 看明细。备注：tool.call 只观察 cortex MCP 及 Read/Bash/Edit/Write 调用，原样返回结果；读项目内 cortex 状态标记文件；需配合 Cortex Hub MCP；不联网。 | MIT | [链接](https://github.com/lktiep/cortex-hub/tree/master/mods/cortex-bar) |
 | vast-cost | 输入框下方状态行显示 vast.ai 上正在运行的实例数和每小时费用，还有几台停止中（仍按磁盘计费），每 5 分钟刷新。备注：本机运行 `vastai show instances`，需自行安装并登录 vastai；tool.call 只在 Bash 里出现 vastai 后刷新，原样返回。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/vast-cost) |
+| ado-link-bar | 提示框上方一行列出对话里最近提到的 Azure DevOps PR 和工作项链接（带标题和状态）。备注：session.append 只读取链接并原样传递；本机运行 `az boards work-item show` 取标题（需安装并登录 az）；恢复会话时读本机 transcript 末尾。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-link-bar) |
+| ado-pr-status | 后台获取当前分支对应的 Azure DevOps PR（审批、草稿等）写到 ~/.claude/ado-pr-status/，配合附带的 statusline/pr-line.mjs 在 ccstatusline 里显示。备注：本机运行 git 和 `az repos pr list` 只读查询（需安装并登录 az）；需自行配置 ccstatusline；说明为日文。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-pr-status) |
+| vome-automation | 侧边面板显示 Claude 正在处理的 Home Assistant 自动化：触发器/条件/动作按 HA 编辑器方式嵌套，保存时高亮改动。备注：需先接入 Vome 的 Home Assistant MCP；只通过你已配置的 MCP 只读调用（$.mcp.call），无 $.http；tool.call 原样返回。 | MIT | [链接](https://github.com/vortitron/home-assistant-mcp/tree/main/claude-plugin/vome-automation) |
+| vome-dash | 侧边面板里的可操作 Home Assistant 仪表盘：实时状态、开关/调节控件、摄像头画面。备注：需 Vome Home Assistant MCP；按面板控件会经 $.mcp.call 调用 ha_call_service 直接控制设备（你按才会）；tool.call 原样返回。 | MIT | [链接](https://github.com/vortitron/home-assistant-mcp/tree/main/claude-plugin/vome-dash) |
+| vome-esphome | ESPHome 侧边面板：从设备 YAML 画出板子、总线、实体、引脚等结构，保存时标出改动、构建时显示进度。备注：需 Vome MCP；只读调用 MCP 工具，密码/key 等字段显示时隐藏；tool.call 原样返回。 | MIT | [链接](https://github.com/vortitron/home-assistant-mcp/tree/main/claude-plugin/vome-esphome) |
+| vome-health | 侧边面板显示 Home Assistant 健康评分和检查发现（按严重度并附建议），标出 Claude 正在处理的项。备注：需 Vome MCP；按面板「修复」会以你的身份提交一条修复提示（你按才会）；tool.call 原样返回。 | MIT | [链接](https://github.com/vortitron/home-assistant-mcp/tree/main/claude-plugin/vome-health) |
+| remctl | Apple 提醒事项：RemCTL 的 MCP 工具，加上提示框上方今日任务一行，/reminders 面板可勾选完成。备注：需自行安装 RemCTL 到 ~/bin/remctl（仅 macOS）；面板勾选经 $.mcp.call 完成提醒（你按才会）；tool.call 原样返回。 | MIT | [链接](https://github.com/viticci/remctl/tree/main/plugins/claude-code) |
 
 ### 本地工具 Local Tools
 
@@ -753,6 +784,7 @@ For detailed descriptions of all 699 mods, see the Chinese section below.
 | quickswitch | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
 | shelf | 在提示框上方放命名的文件夹/文件捷径，点一下把路径插到正在输入的位置（不发送）；/shelf add、/shelf remove 管理。备注：路径存在 $.store；不改提示，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/shelf) |
 | pulse | /pulse 打开面板显示 CPU 曲线、内存条和当前仓库的 git 状态与最近提交。备注：会用本机 node 启动仓库里自带的小 sidecar（只读 git、只监听 127.0.0.1），mod 通过 localhost 拉 JSON；不联网，需装 Node。 |  | [链接](https://github.com/gfsaaser24/claude-code-mod-examples/tree/main/pulse) |
+| hal-grammar-check | 你输入提示时在提示框上方实时做语法检查并给出修改建议。备注：草稿（前 500 字）只发给本机 Ollama（localhost:11434），需自行安装 Ollama 和模型；prompt.edit/prompt.submit 只读、原样返回，不改写提示。 | MIT | [链接](https://github.com/vinta/hal-9000/tree/main/plugins/hal-grammar-check) |
 
 ### 其他工具 Other Tools
 
