@@ -4435,6 +4435,14 @@
         "url": "m-mahiro/claude-code-mods",
         "path": "mods/btw-fix"
       }
+    },
+    {
+      "name": "cc-mod-ferro",
+      "source": {
+        "source": "git-subdir",
+        "url": "Vatroslav/cc-mod-ferro",
+        "path": "plugin"
+      }
     }
   ]
 }
