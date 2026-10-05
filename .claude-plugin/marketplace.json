@@ -4581,6 +4581,22 @@
         "url": "JasonWarrenUK/goblin-mode",
         "path": "marketplace/goblin-chrome"
       }
+    },
+    {
+      "name": "agent-aquarium",
+      "source": {
+        "source": "git-subdir",
+        "url": "nogu66/claude-code",
+        "path": "agent-aquarium"
+      }
+    },
+    {
+      "name": "git-ops",
+      "source": {
+        "source": "git-subdir",
+        "url": "nogu66/claude-code",
+        "path": "git-ops"
+      }
     }
   ]
 }
