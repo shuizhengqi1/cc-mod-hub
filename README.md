@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 566 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 568 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 566 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 568 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 566 mods, see the Chinese section below.
+For detailed descriptions of all 568 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 566 个精选 Claude Code mods，按类别组织：
+以下是本市场的 568 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -543,6 +543,7 @@ For detailed descriptions of all 566 mods, see the Chinese section below.
 | jukebox7 | 白话点播音乐（"放点环境音"）：YouTube 音频通过隐藏 VLC 播放，无需浏览器也不抢焦点；窗格带流派按钮（每个是艺人电台）和当值头像的精选。 | MIT | [链接](https://github.com/KTCrisis/flux7-mods/tree/main/jukebox7) |
 | lightbox | 粘贴图片时在提示框上方大预览，并带说明缩略图。 | MIT | [链接](https://github.com/arihantbansal/claude-lightbox) |
 | mathcat | 把公式渲成 PNG 并在窗格展示。备注：依赖本机已安装的 `mathcat` CLI（同仓库 Python 包）。 | Do No Harm | [链接](https://github.com/johndpope/mathcat) |
+| md-preview | `/md-preview` 也会打开同一侧栏预览（斜杠或点击 .md 链接）。点击回复里的 .md 文件链接，在侧栏按文档页样式预览（表格、提示块、代码高亮、mermaid 图），文件改动自动重载。备注：本机 process 调已装的 nvim（tree-sitter 高亮）和 mermaid-ascii；回复显示会改写成可点链接（只改显示，不改原文）；只读本机文件，不外传。 | MIT | [链接](https://github.com/abonckus/claude-code-md-preview) |
 | md-view | 点击回复里的 Markdown 文件渲染预览。 |  | [链接](https://github.com/scoobynko/claude-code-mods/tree/main/plugins/md-view) |
 | music-mod | 通过 osascript 控制 macOS Music.app 播放音乐。 | MIT | [链接](https://github.com/zyx1121/music-mod) |
 | paste-peek | 粘贴图片实时像素预览（⌥←/→ 切换，⌥↑ 放大，⌥↓ 侧栏）；需支持图片的终端。 | MIT | [链接](https://github.com/nokiy/claude-code-mods/tree/main/plugins/paste-peek) |
@@ -699,6 +700,7 @@ For detailed descriptions of all 566 mods, see the Chinese section below.
 | ua-fallback | 用户代理降级。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/ua-fallback) |
 | where-am-i | 提示上方只读回顾：目标/正在做/等你什么（观察工具调用，不改写）。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/where-am-i) |
 | winnow | 精简大型未使用的工具结果。 |  | [链接](https://github.com/GhalebDweikat/winnow) |
+| xhs-count | 小红书字数哨兵：选中文字后在提示框上方实时显示够不够标题（≤20 字）、正文超没超（≤1000 字）。备注：纯本机 UI；提示框上方条显示时不调 next，会盖住其他 mod 的同位置内容。 | MIT | [链接](https://github.com/eddiezhan/xhs-count-mod) |
 | zen-breath | /meditate 侧边冥想呼吸面板（方箱、4-7-8、平静三种节奏），ASCII 佛祖敲木鱼，状态栏显示剩余时间；次数和连续天数存本机 $.store；开会话起每秒 tick（未在冥想时几乎无操作）；结束时会清掉其他 mod 的状态行。 | MIT | [链接](https://github.com/mindthink/zen-breath) |
 | zsh-safe | 把 bash 写法的 Bash 命令改写成 macOS zsh 可跑。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/zsh-safe) |
 | notes-panel | 每个会话一份 markdown 便签窗格（/note），可追加、勾选、清空和清理旧笔记，只存在本机。 |  | [链接](https://github.com/Sickin/claude-code-notes-panel) |
