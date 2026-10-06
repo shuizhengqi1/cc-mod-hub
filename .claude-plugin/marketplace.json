@@ -6488,6 +6488,38 @@
         "repo": "plaxagoras/clawd-tales",
         "sha": "89c7f95b4d4faf480a6ee200e92c3e6df34d1432"
       }
+    },
+    {
+      "name": "usagemeter",
+      "source": {
+        "source": "github",
+        "repo": "Elesiann/usagemeter",
+        "sha": "e515a0f200d804231630e9dc0a77657771f16d76"
+      }
+    },
+    {
+      "name": "clawd-crew",
+      "source": {
+        "source": "github",
+        "repo": "hudcolighting/clawd-crew",
+        "sha": "ad3129ecd25040c1b93a0d825067cecae31e67d9"
+      }
+    },
+    {
+      "name": "focus-cat-companion",
+      "source": {
+        "source": "github",
+        "repo": "b1ueseoyoung/focus-cat-companion",
+        "sha": "b652c0ff194c16378a7467afc747e9ceb0a9d9af"
+      }
+    },
+    {
+      "name": "open-latest",
+      "source": {
+        "source": "github",
+        "repo": "stakiran/open-latest",
+        "sha": "c33898174cc21db17ebc2f8d4698d22d92df30b3"
+      }
     }
   ]
 }
