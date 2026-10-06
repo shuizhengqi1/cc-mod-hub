@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 928 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 932 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 928 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 932 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 928 mods, see the Chinese section below.
+For detailed descriptions of all 932 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 928 个精选 Claude Code mods，按类别组织：
+以下是本市场的 932 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -425,6 +425,7 @@ For detailed descriptions of all 928 mods, see the Chinese section below.
 | quiet-mode | 安静模式：终端里隐藏工具调用行和回合中间的过渡性回复，只留你的提问和 Claude 最新的回复，状态栏显示本回合已隐藏多少个工具调用；/quiet 开关（on/off）。备注：只改显示，模型收到的内容不变；桌面 App 里工具行照常显示（App 自己会折叠）；prompt.submit 只用来清零计数、原样放行；tool.call 只计数、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/robw-raviga/claude-mods/tree/main/quiet-mode) |
 | answer-buttons | Claude 最后一条回答下方加三个小按钮：「✎ Plain English」用白话重讲、「✂ Shorter」压短、「✎✂ Plain & short」白话且只用两三句；也可用 /answer-buttons:shorter、/answer-buttons:plain-short 命令。备注：只有你点按钮时才用 $.prompt.submit 以你的名义发一条固定提示（设置 plain_skill 后两个 Plain 按钮改为运行该技能），会多跑一轮、消耗用量；回合进行中、VS Code 和手机端不显示；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/answer-buttons) |
 | stfu | 去掉 Claude 工作时那行转圈提示里的俏皮动词（如「Sauteing…」），只留用时和 token 数；回合结束那行统一显示为「Worked for 3s」。任务自带的说明文字（如「Running tests」）保持不变。备注：纯显示改动，不联网、不运行外部命令。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/stfu) |
+| turn-band | 提示框上方一行暗色小字，显示上一回合用了多少秒、调用了几次工具。备注：prompt.submit 只用来把计数清零、原样传递，不改写提示；不联网、不运行外部命令。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/turn-band) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -676,6 +677,8 @@ For detailed descriptions of all 928 mods, see the Chinese section below.
 | band-git | 提示框上方一行白话 git 状态（有未提交改动 / 未推送 / 已开 PR / 已上线）并给出一个下一步按钮（提交、推送、拉取、开 PR、合并 PR、切回 main、部署）；另带生产部署闸门：Bash 里的 `vercel … --prod` 只有在你最新一条消息里说了「deploy」时才放行一次，否则拒绝。备注：按钮会直接以提示词发给 Claude（如「Commit the current changes…」），点了就会开一个回合；每 30 秒在本机运行 git 和 gh 读取状态；prompt.submit 只读取你是否说了 deploy、原样放行；部署闸门只拒绝不改写；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/git) |
 | skill-stats | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |
 | cc-file-history-mod | 提示框上方一条带，记录本会话里 Claude 用 Edit、Write 改过或用 Bash `rm` 删掉的每个文件；点 [View] 或用 /file-history 打开侧栏，可看每次改动的 diff，并单独撤销任意一个文件。备注：撤销会直接写回文件（新建的文件会被 `rm` 删除），请确认后再点；看 diff 时会在原文件旁临时写 `.cc-fh-diff-*.before/.after` 两个文件，用本机 `diff -u` 比对后删除；记录只在内存里，/clear、resume、fork 或重载后清空；不改工具调用，不联网。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
+| bash-watch | Bash 命令失败时在状态行显示「failed: 命令前 40 个字符」，下一条命令成功后自动清除。备注：tool.call 先让命令照常执行再看结果，原样返回，不改工具调用；不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/bash-watch) |
+| tool-calls | `/tool-calls` 打开侧栏，实时列出本会话的工具调用（运行中 runs / 已完成 done），保留最近 200 条。备注：tool.call 只记录工具名、原样传递，不改工具调用；记录只在本会话里，不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/tool-calls) |
 
 ### 子代理管理 Subagent Management
 
@@ -972,6 +975,7 @@ For detailed descriptions of all 928 mods, see the Chinese section below.
 | ram-guard | 状态栏显示本机可用内存与正在跑的 Gradle/模拟器/Maven/Metro 进程数，每 15 秒刷新，内存低于 6 GiB 时弹提示；可用内存不足 6 GiB 或有 Gradle 守护进程/模拟器在跑时拒绝启动子代理（Agent/Workflow），不足 4 GiB 时拒绝 gradlew/mvn/emulator 等重型构建命令。备注：**仅 Linux**（读 /proc/meminfo，其他系统上读不到，子代理与 Bash 调用可能直接报错，macOS/Windows 请勿安装）；本机运行 ps 只统计进程；工具门只拒绝不改写；不联网。 |  | [链接](https://github.com/jimisola/claude-plugins/tree/main/plugins/ram-guard) |
 | clean-copy | 终端里选中文本自动复制时，把复制内容清理干净：去掉左侧的引用竖线/面板边框和回复前的 ⏺ 标记，统一去掉缩进，把因终端宽度折断的句子重新接成一行（代码块、列表、标题、表格保持原样）。备注：每 250 毫秒检查一次当前选区，选区稳定且确实需要清理时，用本机 `wl-paste`、`xclip` 或 `pbpaste` 读一次剪贴板确认是 Claude Code 刚复制的内容，再写回清理后的文本；只处理剪贴板，不联网。 | MIT | [链接](https://github.com/kbrianps/claude-clean-copy/tree/main/plugins/clean-copy) |
 | cc-mod-caffeinate | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |
+| copy-markdown | 每条 Claude 回复右上角加一个暗色「⧉ md」小按钮，点一下把整条回复按原始 markdown（表格原样）复制到剪贴板；`/copy-md [n]` 复制倒数第 n 条回复。备注：只读本会话消息，用 $.ui.copy 写剪贴板；不联网、不运行外部命令。 | MIT | [链接](https://github.com/a-bine/claude-mods/tree/main/copy-markdown) |
 
 ### 其他工具 Other Tools
 
