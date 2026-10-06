@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 936 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 944 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 936 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 944 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 936 mods, see the Chinese section below.
+For detailed descriptions of all 944 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 936 个精选 Claude Code mods，按类别组织：
+以下是本市场的 944 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -242,6 +242,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | token-bar | 提示框上方用从绿到红的图形显示上下文窗口和额度用了多少（含每周窗口），每 30 秒和每个主会话回合结束后刷新。备注：数据只来自 $.session.usage()，不联网、不运行外部命令。 | MIT | [链接](https://github.com/santosli/claude-mods/tree/main/token-bar) |
 | tps-meter | 在提示框底部提示行（桌面版在模式标签旁）实时显示模型输出速度（tokens/秒），回合进行中带 ⚡ 标记，结束后按实际输出 token 数校准。备注：turn.step 只计数、原样传递流式内容，不改写；不联网、不运行外部命令。 |  | [链接](https://github.com/xingkaixin/claude-mods/tree/main/mods/tps-meter) |
 | session-recap | 你 /clear 一段对话后自动弹出一张回顾卡片：用时、回合数、工具调用、改动的文件与行数、测试运行次数和费用；`/session-recap` 随时查看当前对话的回顾；桌面端可点 Copy image / Save image 把卡片存成 PNG。备注：统计只在本机；复制/保存图片要按按钮才会用 macOS 自带的 qlmanage、sips、osascript，保存到 ~/Pictures/Session Recaps；不联网。 | MIT | [链接](https://github.com/endless-fr/claude-mods/tree/main/mods/session-recap) |
+| benzina | 提示框上方一条「油量表」：用进度条显示套餐 5 小时和每周额度还剩多少、什么时候恢复，以及对话上下文还剩多少，快用完时给一句建议，用量跨过阈值时弹提示；`/benzina` 显示或隐藏。备注：只读 session.usage 和 session.measure，钩子原样传递；纯本机，不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/benzina) |
 
 ### 上下文管理 Context Management
 
@@ -427,6 +428,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | answer-buttons | Claude 最后一条回答下方加三个小按钮：「✎ Plain English」用白话重讲、「✂ Shorter」压短、「✎✂ Plain & short」白话且只用两三句；也可用 /answer-buttons:shorter、/answer-buttons:plain-short 命令。备注：只有你点按钮时才用 $.prompt.submit 以你的名义发一条固定提示（设置 plain_skill 后两个 Plain 按钮改为运行该技能），会多跑一轮、消耗用量；回合进行中、VS Code 和手机端不显示；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/answer-buttons) |
 | stfu | 去掉 Claude 工作时那行转圈提示里的俏皮动词（如「Sauteing…」），只留用时和 token 数；回合结束那行统一显示为「Worked for 3s」。任务自带的说明文字（如「Running tests」）保持不变。备注：纯显示改动，不联网、不运行外部命令。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/stfu) |
 | turn-band | 提示框上方一行暗色小字，显示上一回合用了多少秒、调用了几次工具。备注：prompt.submit 只用来把计数清零、原样传递，不改写提示；不联网、不运行外部命令。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/turn-band) |
+| host-colors | 按主机名给提示框上方加一条整宽彩色横线并写上主机名，底部模式栏前也加一个同色主机标签，在不同机器上开的会话一眼就能分清；颜色可在源码表里改，没配置的主机自动分配固定颜色。备注：启动时运行一次本机 `hostname`；纯 UI，不联网。 |  | [链接](https://github.com/sshamilton/claude-mods) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -569,6 +571,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | tripwire | 危险命令先问你：rm -rf、强推、git reset --hard、DROP TABLE、curl \| sh、sudo、chmod -R 777、改 .env 等用 Claude 自己的对话框确认，删除受保护分支等不可恢复的直接拒绝；/tripwire 看决定记录。备注：只拒绝不改写；守卫自身出错时默认拒绝（fail-closed）；不联网。 | MIT | [链接](https://github.com/ryx2/slopshopper/tree/main/mods/tripwire) |
 | record-mode | 录屏或直播时用 /record on 打开录制模式：屏幕上的助手回答、你的消息、命令输出、工具调用和结果里的 API 密钥（sk-、ghp_、AKIA、xox、AIza、JWT 等）、KEY/TOKEN/SECRET/PASSWORD 赋值、邮箱、金额和 /Users/用户名 路径都被打码，状态栏显示「● REC」；/record off 关闭，重启后保持上次状态（波兰语提示）。备注：只改屏幕显示（ui.render），**模型收到的仍是原文**，不是脱敏工具；不联网、不运行外部命令。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/record-mode) |
 | band-migrations | 给 Supabase MCP 的 SQL 加一道确认：execute_sql 或 apply_migration 里出现 drop、truncate、delete from、改列类型、alter type 或不带 where 的 update 时，先弹窗问你「Run it / Stop」，选 Stop（或没人回答）就拒绝执行，并让 Claude 不要换个方式重试；普通的新增类 SQL 照常运行，迁移成功后提示一下。备注：按关键词匹配，不是 SQL 解析器，字符串里出现这些词也会问一次；只拒绝不改写；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/migrations) |
+| modo-gravacao | 录屏、直播用的「录制模式」：`/gravar on` 后，屏幕上的你和 Claude 的消息、工具调用和结果、命令输出里的邮箱、令牌、IP、电话、巴西 CPF/CNPJ、金额、用户主目录和 KEY=值 行都会被打码，提示框上方显示红色「正在录制」条；`/gravar off` 关闭；可在插件设置里加自定义打码词或正则。备注：只改屏幕显示，模型读到的内容和保存的会话不变；只能降低风险、不能保证全部遮住；纯本机，不联网；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/modo-gravacao) |
 
 ### 开发工具 Dev Tools
 
@@ -680,6 +683,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | cc-file-history-mod | 提示框上方一条带，记录本会话里 Claude 用 Edit、Write 改过或用 Bash `rm` 删掉的每个文件；点 [View] 或用 /file-history 打开侧栏，可看每次改动的 diff，并单独撤销任意一个文件。备注：撤销会直接写回文件（新建的文件会被 `rm` 删除），请确认后再点；看 diff 时会在原文件旁临时写 `.cc-fh-diff-*.before/.after` 两个文件，用本机 `diff -u` 比对后删除；记录只在内存里，/clear、resume、fork 或重载后清空；不改工具调用，不联网。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
 | bash-watch | Bash 命令失败时在状态行显示「failed: 命令前 40 个字符」，下一条命令成功后自动清除。备注：tool.call 先让命令照常执行再看结果，原样返回，不改工具调用；不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/bash-watch) |
 | tool-calls | `/tool-calls` 打开侧栏，实时列出本会话的工具调用（运行中 runs / 已完成 done），保留最近 200 条。备注：tool.call 只记录工具名、原样传递，不改工具调用；记录只在本会话里，不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/tool-calls) |
+| vero-diff | 每个回合开始和结束时给工作区拍快照，在侧边面板里按回合浏览 Claude 改了什么（带语法高亮的真实 diff）；`/vero-diff` 打开面板，`/vero-diff last [N]` 把某一回合的 diff 贴进对话，`/vero-diff purge` 删除本项目的快照。备注：快照存在项目外的 ~/.cache/verodiff 独立 git 仓库，不碰项目自己的 .git；会把工作区全部文件（含未跟踪文件）写进快照，注意定期 purge；在 git 仓库里会话开始时自动打开面板；运行插件自带、源码可读的 scripts/snapshot.sh；`last` 的 diff 模型也会读到；不联网。 | MIT | [链接](https://github.com/GomelHawk/VeroDiff/tree/main/plugins/vero-diff) |
 
 ### 子代理管理 Subagent Management
 
@@ -811,6 +815,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | terminal-pet | 提示框上方的像素小螃蟹，跟着 Claude 读、写、等待、完成、出错做反应，肚子大小表示对话有多满；/pet 控制。备注：tool.call 只观察、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/terminal-pet) |
 | meatball | 提示框上方一颗像素肉丸跟着 Claude 的状态动：工作时来回滚、编辑文件时咀嚼、跑命令时盯着看、出错时皱眉、等你批准时冒感叹号、回合结束蹦一下、闲置 5 分钟打瞌睡，上下文越满越圆；桌面版画 SVG，终端里是一行彩色表情；/meatball 显示或隐藏，/meatball width 设置宽度。备注：tool.call、tool.check 只观察、原样放行；终端里移动时约每 120 毫秒重绘一次；不联网、不运行外部命令。 | MIT | [链接](https://github.com/jesseorndorff/meatball/tree/main/plugin) |
 | tama | 住在 Claude Code 里的电子宠物：显示在提示框上方和加载提示里，Claude 完成回合时开心，工具出错时闹情绪，按真实时间变饿变困，从蛋长到成年，昏倒后 24 小时没人管就会死；/pet 打开设备窗格（f 喂食、s 睡觉或唤醒、p 玩耍），/feed、/sleep、/wake 随处可用，/pet name 改名。备注：/pet creature <描述> 时调用一次 $.model.complete（Opus）按你的描述画像素造型，只发送描述文字，不含会话内容；长回合结束或需要你时会用 $.audio.speak 说话；tool.call 只看结果、原样放行；不联网。 |  | [链接](https://github.com/bbeygel/claude-code-tama) |
+| hamster | 提示框上方住着一只像素仓鼠，以你的上下文窗口为食，会提醒你该 /compact 还是 /clear；旁边显示用量数字，下方轮播 110 条关于省 token、技能、插件和 MCP 服务器的小贴士，可前后翻或不再显示；界面可在俄语和英语之间切换。备注：只读 session.usage；prompt.submit、tool.call 只记录时间、原样传递；纯本机，不联网；主要为 Claude 桌面版设计，终端里只显示一行。 | MIT | [链接](https://github.com/nickpotet/claude-hamster/tree/main/hamster) |
 
 ### 图片与媒体 Images & Media
 
@@ -846,6 +851,8 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | pixel-player | /music 在会话旁打开一个像素风音乐播放器面板（多款皮肤，/music skins 切换），播放你自己的歌单（YouTube 链接、音频直链或本地文件），可暂停、切歌、调音量，/music add 添加曲目。备注：需本机装 mpv（放 YouTube 还要 yt-dlp），用 $.process.spawn 启动 mpv 播放，用 $.process.run 调 /usr/bin/nc 经本机 Unix socket 控制 mpv，并加载仓库自带的 mpv/progress.lua 回报进度；歌单存在 ~/.claude/pixel-play/playlist.txt；只有面板和命令，不碰提示和工具；联网只限 mpv/yt-dlp 拉取你歌单里的音频。 | MIT | [链接](https://github.com/chrisluo5311/Pixel-Play) |
 | paste-preview | 在提示框粘贴图片（出现 [Image #N]）时，在提示框上方显示缩略图：任意真彩终端用半格字符画，Ghostty、kitty 自动改用终端图像协议显示原图；按钮可用系统看图程序打开原图或收起，发送消息或删掉图片标记后自动收起；/paste-preview now、open、clear、hd、text、auto、off（繁体中文界面）。备注：**仅限 macOS**（用插件自带的 bin/clip.js 经 osascript 读剪贴板）；每 400 毫秒读一次输入框文字，只检测图片标记、不改写；prompt.submit 只清空预览、原样放行；剪贴板原图另存到插件目录 .cache/，超过一天自动删除；不联网。 |  | [链接](https://github.com/craneyu/claude-paste-preview) |
 | shot-preview | Claude 回复里提到截图路径（.png/.jpg）时，在回复下方画一张缩略图，带「↗ open」按钮用系统默认程序打开。备注：只在终端里显示；macOS 上用本机 `sips` 把非 PNG 转成 PNG 缓存到临时目录，其他系统只预览 PNG；打开用 `open`/`xdg-open`/`start`；只读回复文本，不联网。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
+| drop-thumb | 往提示框里拖入或粘贴图片时，在提示框上方为每张图显示一个小标签和预览卡片（缩略图、文件名、大小、原始路径），点标签可固定或收起卡片；在 Ghostty、kitty 里显示真实缩略图，其他终端只显示文字。备注：仅 macOS；每 200 毫秒读一次提示框，只找 [Image #n] 标记；用本机 sips 生成缩略图（存在 Claude 的私有临时目录），用 mdfind 或在下载、桌面、图片、文稿目录里按文件大小查找原始文件；prompt.submit 只清空卡片、原样放行；不联网。 | MIT | [链接](https://github.com/i-noma-ru/claude-drop-thumb) |
+| img-view | 在对话旁的面板里看图片：Claude 读或写的图片文件、AIGUI 画出的图会自动出现，`/img <路径>` 打开任意图片，`/img` 打开面板；在 kitty、Ghostty、iTerm2、WezTerm 里显示真实像素，其他终端用彩色字符块画出来。备注：有新图片时会自动打开面板；本机 process（macOS 用 sips，其他系统用 ImageMagick 的 magick）；tool.call 只看结果、原样传递；不联网。 | MIT | [链接](https://github.com/liliang-cn/aigui/tree/main/mods/img-view) |
 
 ### 任务与项目 Task & Project
 
@@ -980,6 +987,7 @@ For detailed descriptions of all 936 mods, see the Chinese section below.
 | cc-mod-caffeinate | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |
 | copy-markdown | 每条 Claude 回复右上角加一个暗色「⧉ md」小按钮，点一下把整条回复按原始 markdown（表格原样）复制到剪贴板；`/copy-md [n]` 复制倒数第 n 条回复。备注：只读本会话消息，用 $.ui.copy 写剪贴板；不联网、不运行外部命令。 | MIT | [链接](https://github.com/a-bine/claude-mods/tree/main/copy-markdown) |
 | speak-aloud | 用 macOS 自带 `say` 朗读 Claude 的回复：每条回复旁加 🔊 按钮（朗读时变成 ■，点一下停止），`/speak` 朗读最新回复、`/speak-stop` 停止、`/speak-voice` 选声音、`/speak-rate` 调语速。备注：仅 macOS；本机 process（say），只读本会话消息，代码块不读、链接只读文字；不联网。 |  | [链接](https://github.com/tiger3645/claude-tts) |
+| localhost | `/localhost` 打开面板，列出本机正在监听的 localhost 服务（端口、进程、所在目录，当前项目的高亮），每个都有「打开」和「停止」按钮，也可一键停止本项目或全部；Claude 每跑完一个 Bash 命令自动刷新。备注：本机 process（lsof 列端口，按了停止按钮才会 kill 对应进程）；tool.call 只在命令跑完后刷新、原样传递；不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/localhost) |
 
 ### 其他工具 Other Tools
 

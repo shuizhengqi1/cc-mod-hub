@@ -7442,6 +7442,76 @@
         "path": "plugins/vivarium",
         "sha": "d137b782887f39b39137568465524d3d4f347c68"
       }
+    },
+    {
+      "name": "benzina",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cavallinilorenzo/claude-code-mods.git",
+        "path": "mods/benzina",
+        "sha": "284292f8ee2c45d2163ec79af4f38cbf53b9250b"
+      }
+    },
+    {
+      "name": "localhost",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cavallinilorenzo/claude-code-mods.git",
+        "path": "mods/localhost",
+        "sha": "284292f8ee2c45d2163ec79af4f38cbf53b9250b"
+      }
+    },
+    {
+      "name": "host-colors",
+      "source": {
+        "source": "github",
+        "repo": "sshamilton/claude-mods",
+        "sha": "65c4f494ab154b0c868fea1893772b09e3896a20"
+      }
+    },
+    {
+      "name": "drop-thumb",
+      "source": {
+        "source": "github",
+        "repo": "i-noma-ru/claude-drop-thumb",
+        "sha": "7ea9b62694ea556ccaa7d5fbc60406b2ea25bbe5"
+      }
+    },
+    {
+      "name": "vero-diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/GomelHawk/VeroDiff.git",
+        "path": "plugins/vero-diff",
+        "sha": "2c2e4395f03b5986de945b65f3b4a0e9b96662f5"
+      }
+    },
+    {
+      "name": "img-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/liliang-cn/aigui.git",
+        "path": "mods/img-view",
+        "sha": "a35ffba589cec0d0a3e4149f095fe67566617fe3"
+      }
+    },
+    {
+      "name": "hamster",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nickpotet/claude-hamster.git",
+        "path": "hamster",
+        "sha": "af0f98a06a3f61dbf0c929ac27ee9e0743152625"
+      }
+    },
+    {
+      "name": "modo-gravacao",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/inematds/inema-mods.git",
+        "path": "mods/modo-gravacao",
+        "sha": "1114b9d450adb6c024bc97f1b42946feb3601fb7"
+      }
     }
   ]
 }
