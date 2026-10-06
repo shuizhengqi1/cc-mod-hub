@@ -8755,6 +8755,165 @@
         "repo": "NovusEdge/glowup",
         "sha": "8a24ba8cd444391337faa815a9e0dbaa40b398ed"
       }
+    },
+    {
+      "name": "game-achievement",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-achievement",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-answer-memory",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-answer-memory",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-battle-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-battle-log",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-casting",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-casting",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-clear-time",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-clear-time",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-earcons",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-earcons",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-equip",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-equip",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-hedge-mark",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-hedge-mark",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-hint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-hint",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-item-get",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-item-get",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-map",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-minimap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-minimap",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-party",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-party",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "game-stance",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Reasonofmoon/bitgame-mods.git",
+        "path": "plugins/game-stance",
+        "sha": "776c60782de7ccf00a5908a087062d6e42d15c14"
+      }
+    },
+    {
+      "name": "diffspider",
+      "source": {
+        "source": "github",
+        "repo": "Silvertree2010/diffspider",
+        "sha": "12bad8f56ddfe97630bbfc669208503b9be730bb"
+      }
+    },
+    {
+      "name": "quota-band",
+      "source": {
+        "source": "github",
+        "repo": "andras-gyarmati/claude-quota-band",
+        "sha": "24a3bff35da5267932c81fdaa570c04b6ffd3318"
+      }
+    },
+    {
+      "name": "rest-in-pid",
+      "source": {
+        "source": "github",
+        "repo": "jwchang0206/rest-in-pid",
+        "sha": "5fc863bce1d334ec37c45d1d392f6e46ea0cac0c"
+      }
+    },
+    {
+      "name": "cyclops-spark",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/CyclopsEyeTeam/cyclops-spark.git",
+        "path": "plugins/cyclops-spark",
+        "sha": "98248dfec5ce531ebd6c622c9cbe552d3b37d10e"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1086 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1104 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1086 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1104 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1086 mods, see the Chinese section below.
+For detailed descriptions of all 1104 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1086 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1104 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -265,6 +265,9 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | loopline | 提示框上方的状态条：模型与 effort、未提交改动、上下文占用及增长和压缩次数、费用、限额消耗速度、提示缓存计时、本回合计数、后台代理，同一工具连续失败时提醒。备注：`tool.call` 只记录、原样返回；只用本机 `git status/diff` 读改动，不联网。 |  | [链接](https://github.com/nikitaCodeSave/Statusline_Claude-Code) |
 | context-git-band | 提示框上方一行：上下文占用（天气图标，快到自动压缩时出现可点的 compact 链接）、订阅 5 小时与每周额度条、git 状态（分支、未提交、领先/落后）；支持日语/英语界面。备注：额度通过 `$.session.authorize` 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容），带退避；`prompt.submit`、`tool.call` 只刷新 git 状态、原样返回；只跑本机 `git status/remote`；只有你点 compact 链接才压缩；界面语言为日/英以外时用 `$.model.complete`（haiku）把固定界面词条翻译一次并缓存，不带会话内容；在 macOS 上读桌面版 config.json 只取 `locale`。 | MIT | [链接](https://github.com/mlabo-org/context-git-band) |
 | context-gauge | 提示框下方一行：仓库/分支、模型与 effort、上下文进度条与剩余量，订阅用户还显示 5 小时与每周剩余额度及重置倒计时、输出速度（t/s）；`/gauge` 切换为上方按类别着色的上下文明细条。备注：`turn.step`/`tool.call`/`session.measure` 只读取用量、原样返回；只跑本机 `git rev-parse`/`git branch`；不联网。 | MIT | [链接](https://github.com/jakerains/claudemods/tree/main/context-gauge) |
+| game-casting | GAME MODE 套件之一：把加载提示换成「CASTING · 当前在跑的工具 · 本回合第几次行动 · 本回合已花费」一行。备注：`session.append`/`tool.call` 只计数、原样返回；只读 `$.session.usage`；界面文字为韩文，费用默认按韩元（1 USD=1400 KRW）显示，可设 currency=usd；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-casting) |
+| game-clear-time | GAME MODE 套件之一：回合结束的耗时行换成「✦ CLEAR 用时 · 行动数 · 本回合花费 · 比平时快/慢多少」（按本项目最近 20 个回合的中位数）；`/clear-time` 查看本项目平均、最快与最慢。备注：`session.append`/`tool.call` 只计数、原样返回；回合时长存在本机 `$.store`；界面文字为韩文，费用默认按韩元显示；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-clear-time) |
+| quota-band | 提示框上方一行进度条：订阅的 5 小时与每周额度、上下文占用、提示缓存剩余时间（快过期时提醒重建要多少 token），并按缓存读写估算本回合的额度消耗倍数；`/quota-weights` 查看拟合出的权重。备注：只读 `session.measure` 和回合结束时用本机 `head`/`tail` 读本会话 transcript 末尾，不发任何请求；只有本机装了 Claude Profiles Mac 应用时，才把各账号额度读数（含账号 UUID 与邮箱）写到 `~/Library/Application Support/Claude Profiles/mod-readings/`；可选的 close/rename 按钮默认隐藏，只有你在设置里填了文字并点按钮才代你发送那条提示。 | MIT | [链接](https://github.com/andras-gyarmati/claude-quota-band) |
 
 ### 上下文管理 Context Management
 
@@ -480,6 +483,12 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | rich-input | Warp 风格的多行输入编辑器面板（`/rich` 或提示框上方按钮、可绑快捷键），支持 `@` 文件/文件夹补全，点「Send to prompt」把文字放回提示框，由你按 Enter 发送。备注：只用 `$.prompt.fill` 把你自己写的文字放进/移出提示框，不自动提交；补全用本机 `git ls-files` 或目录遍历；不联网。 | MIT | [链接](https://github.com/higorcesarqn/rich-input-editor/tree/main/plugins/rich-input) |
 | spinner-quips | 把加载提示里通用的「Working」换成贴合当前任务（读代码、跑测试、git 等）的俏皮短语；装了 hamster-saga 时会穿插仓鼠故事章节。备注：`prompt.submit`/`tool.call` 只读取文字和工具名来判断任务类别、原样返回不改写；只改加载提示文字；不联网。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/spinner-quips) |
 | glowup | 一整套外观：可切换主题与风格包（glowup/aurora/cyberpunk 等）、自定义加载动画、提示框上方的活动条与像素宠物 Clawd、侧边 cockpit 面板（改动、子代理、上下文图表）和可选状态栏字段；`/glowup` 配置，主题/宠物/风格包可导出分享。备注：首次启动会弹窗询问是否接管状态栏，你同意才改写 `~/.claude/settings.json` 的 statusLine（先备份原命令，写入 `~/.claude/glowup/statusline.sh`，`/glowup statusline off` 还原）；气泡默认用内置模板，设为 `haiku` 时才用 `$.model.complete`（Haiku，计入你的用量）生成台词，只发送心情/姿势/动作类别词，不含命令、路径或会话内容；只有你执行 `/glowup` 的主题/宠物/风格包 add 并给出 https 网址时才下载该 JSON；`prompt.submit` 只拦下你粘贴的 `/glowup` 命令文本并执行它，其余提示原样放行；`tool.call`/`agent.spawn` 只观察；只跑本机 git/date/rm 清理自身状态文件。仓库里的 Go 安装器（installer/）不随插件运行。 | MIT | [链接](https://github.com/NovusEdge/glowup) |
+| game-battle-log | GAME MODE 套件之一：工具调用行画成 8-bit 战斗记录——每回合第一行加 TURN 标题，成功 HIT、改文件 CRIT 并标增删行数、失败 MISS 并显示报错行，连续成功记 COMBO、失败 BREAK，后台运行提示显示 SUMMON；`/battle-log on|off`。备注：`session.append`/`tool.call` 只读取工具调用和结果做标记、原样返回；只改显示；界面文字含韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-battle-log) |
+| game-equip | GAME MODE 套件之一：会话开始和切换模型时在对话里记一行「EQUIP 当前模型」，替换引擎自带的模型提示。备注：只读 `$.session.model`，`classic.PostModelSwitch` 只观察；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-equip) |
+| game-hedge-mark | GAME MODE 套件之一：把 Claude 回复里带猜测语气的句子（韩文/英文 hedge 词）标上 `[?]`，并在末尾显示「? 推测 N 处」，帮你区分已核实的事实和推测。备注：只改回复的显示（`ui.render` AssistantMessage），不改模型收到的内容；代码块不动；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-hedge-mark) |
+| game-hint | GAME MODE 套件之一：提示行末尾按当前状况给两条操作提示（工作中「ESC 后退」、连续失败「先读报错」、上下文偏低「/compact 休息」、装了 game-save-point 时提醒存档）。备注：`tool.call`/`session.append` 只计数、原样返回；只改提示行显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-hint) |
+| game-stance | GAME MODE 套件之一：在提示框底栏右侧用彩色徽章显示当前权限模式（默认/自动批准编辑/计划/自动判定/绕过权限等），跟随 shift+tab 切换。备注：只读 settings 的 defaultMode，`classic.UserPromptSubmit`/`classic.PostToolUse` 只读取 permission_mode、原样放行；只改显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-stance) |
+| diffspider | 每次 Edit/Write 完成后，一只盲文点阵小蜘蛛爬过 diff，把改动的词标成霓虹色，爬完显示增删行数。备注：`tool.call` 只记下调用 id、原样返回；只改终端里工具行的显示；不注册命令、不跑外部程序、不联网。 | MIT | [链接](https://github.com/Silvertree2010/diffspider) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -557,6 +566,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | games | 等 Claude 时玩小游戏：`/2048`、`/mines`、`/dino`、`/gomoku` 各开一个面板。备注：2048/扫雷/恐龙纯本机；只有玩 `/gomoku` 联机时才经 `$.http` 连作者的公共中继 games-relay.musingfox.com（可在 `relay_url` 改成自建），只传棋步、随机玩家 id 和玩家名（默认取系统 `USER`），不含会话内容。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/games) |
 | chess | `/chess` 在侧边面板（全屏布局下停靠在对话旁，否则在提示框上方）和 Claude 下国际象棋：点棋子和格子或输入着法（`e4`、`Nf3`、`O-O`），面板显示 Claude 每步花费的 token 和累计。备注：Claude 的每一步用 `$.model.fork` 在当前会话模型上做一次无工具补全（共享提示缓存，会消耗 token；不写入会话记录、不碰文件和 git）；首轮之前没有会话可分叉时用 `fallbackModel`（默认 haiku）走 `$.model.complete`；只有你在选项里填了 TypeSafe 或 Vercel AI Gateway 的 Jev key 才改由 Jev 下棋，这时只把棋盘局面（FEN）和已走着法经 `$.http` 发给对应 API，不发会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/chess) |
 | hamster-saga | 加载提示偶尔讲一段仓鼠的长篇连载故事，按时间推进章节，可与 spinner-quips 配合；`/hamster-saga:status`、`travel`、`reset`、`debug` 查看与跳转。备注：`prompt.submit` 只检查是否含重置口令、原样返回不改写；`tool.call`/`turn.complete` 只推进进度；数据存在本机 `$.store`；不联网、不跑外部程序。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/hamster-saga) |
+| game-achievement | GAME MODE 套件之一：成就系统——首次存档、无拦截的回合里安全提交 10 次、修好失败命令后逆转通过、连续 10 次成功、上下文降到 10% 前及时 /compact 等，解锁时弹提示；`/achievements` 查看进度。备注：`tool.call`/`session.append` 只读取结果计数、原样返回；进度存在本机 `$.store`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-achievement) |
 
 ### 安全防护 Security & Safety
 
@@ -772,6 +782,9 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | output-folders | `/outputs` 打开一个面板，列出本会话里工具、脚本和代理写入过的所有文件夹（类型、写入次数、最后写入的工具、最新变动），点击或按数字键用系统 `open`/`xdg-open` 打开。备注：`tool.call` 只在调用成功后记录写入位置、原样返回；不联网。 |  | [链接](https://github.com/laszloprekop/claude-code-output-folders) |
 | mermaid-c4-zoom | 侧边面板把 mermaid 图画成彩色字符图，支持 C4 式逐层缩放（点带 ▸ 的框看里面一层）；回复里的 mermaid 代码块也会自动收进面板，`/diagrams` 开关。备注：给模型注册一个 `show_diagram` 工具（会出现在模型的工具列表里）；绘制全在本机，用仓库里 vendored 的 beautiful-mermaid 渲染代码（MIT，可读 JS）；不联网。 | MIT | [链接](https://github.com/testy-cool/mermaid-c4-zoom) |
 | trace-map | 侧边面板实时显示 Claude 在做什么：当前阶段（思考/调用工具/完成）、最后一个工具、本会话碰过的所有文件和扫描过的目录，以及思考流的最后几行；`/trace-map log` 列出带时间的工具调用记录；默认把最后一个工具显示成乌克兰语的家务短语，`/trace-map honest` 切回原始命令。备注：`turn.step`/`tool.call` 只观察、原样返回；只读写自己的 `trace-map.disguise` 设置和 `$.store`；不联网、不跑外部程序。 | MIT | [链接](https://github.com/ivangithubed/claude-mods/tree/main/plugins/trace-map) |
+| game-item-get | GAME MODE 套件之一：Claude 新建文件时显示「✦ ITEM GET! 路径 · 新文件 N 行」横幅和提示；`/inventory` 列出本会话新建和修改过的文件及增删行数。备注：`tool.call` 只读写入结果、原样返回；只改显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-item-get) |
+| game-map | GAME MODE 套件之一：底部状态行显示当前分支（受保护分支 main/master/production/release/* 加 ⚠）、本次游玩时长；`/map` 查看分支、时长和改动文件数。备注：会话开始、每回合结束和每 60 秒在本机只读运行 `git rev-parse`/`git status --porcelain`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-map) |
+| game-minimap | GAME MODE 套件之一：`/minimap` 打开侧边小地图，把项目文件按已编辑/已读/未探索着色，并标出被反复读取的文件。备注：`tool.call` 只记录读写的路径、原样返回；打开面板时在本机只读运行 `git ls-files`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-minimap) |
 
 ### 子代理管理 Subagent Management
 
@@ -823,6 +836,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | subagent-band | 提示框上方一栏列出每个运行中子代理的类型、模型、effort、步数、上下文、advisor 调用和估算花费；另有 `/fleet` 面板、`/subagent-cost`，以及给模型用的 `subagent_vitals` 工具。备注：只观察，不改工具调用；`/steer <id> <消息>` 会把你亲手写的那条消息发给指定子代理。纯本机。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-band) |
 | escritorio-time | 侧边面板里一间像素风办公室，按真实对话和工具调用动画演示任务在各个代理之间的流转（葡萄牙语）。备注：`session.append`/`tool.call` 只读回复文字和改动的文件路径来推断谁在干活，不改写；纯本机。 | MIT | [链接](https://github.com/cas1260/claude-code-escritorio-time/tree/main/escritorio-time) |
 | staff-board | 一条紧凑的会话看板，列出本机所有会话（含桌面版命名会话）及其派生的子代理，按模型着色、按 effort 发光，并显示各自当前在做什么；`/staff` 输出文字版。备注：每个会话把状态卡写到 `~/.claude/staff-board/<会话id>.json` 并读取其他会话的卡，Windows 上读取桌面版本地会话记录以取名字，全部只在本机；`tool.call` 只记录、原样返回。 |  | [链接](https://github.com/Gooner44/ClaudeMods/tree/main/plugins/staff-board) |
+| game-party | GAME MODE 套件之一：把本会话的子代理当成队伍成员，侧边 PARTY 面板显示每个成员的状态（进行中/完成/失败）、任务、工具调用与失败次数、用时；首个子代理启动时自动打开（autoOpen 可关），`/party` 手动打开。备注：`agent.spawn`/`tool.call` 只观察、原样返回；界面文字含韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-party) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -862,6 +876,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | work-alerts | 工作提醒：回合较长（默认 60 秒以上）结束、出错停下、子代理完成或失败、测试/lint/类型检查/构建命令失败（附失败摘要）、上下文用到 60%/85%、5 小时或 7 天用量到 80%/95% 时弹提示并播放提示音，重要的再发一条 macOS 系统通知；/alerts 开关提示、声音、系统通知或调整长回合秒数，/task-alert 快速开关声音。备注：提示文字是韩语；声音用 macOS 的 `afplay` 播放系统音效、系统通知用 `osascript`，其他系统只弹应用内提示；tool.call 只在 Bash 跑完后读取结果、原样放行；不联网。 |  | [链接](https://github.com/parkyountaek/claude-mods/tree/main/work-alerts) |
 | turn-done | 长回合（默认 ≥60 秒）结束时弹 toast 并播放提示音，方便离开屏幕。备注：默认关闭，需在 /config 或 /mods 打开；提示音为 macOS；纯本机。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/turn-done) |
 | clawd-sounds | 长回复（≥30 秒）结束时播放提示音，Claude 等你批准权限时响一声。备注：只在 macOS 读取系统自带声音（Glass/Ping），其他系统静默；仅观察 `turn.complete`/`classic.PermissionRequest`，原样返回。 | MIT | [链接](https://github.com/saxena-aman/clawd-mods/tree/main/plugins/clawd-sounds) |
+| game-earcons | GAME MODE 套件之一：8-bit 提示音——权限请求或提问等你时、长回合（默认 ≥30 秒）结束、守卫拦截、存档、出错时各响一声；`/earcons test|on|off`。备注：默认开启（音量 0.6）；只播放插件自带的 WAV：macOS 走引擎自带播放，Linux 用本机 `paplay`/`aplay`，Windows 用 PowerShell SoundPlayer（WAV 经 stdin 传入），另跑 `uname -s` 判断系统；`session.append`/`tool.call` 只读取结果判断音效、原样返回；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-earcons) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -922,6 +937,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | clawd-usage | 提示框上方用彩色条显示 5 小时与每周用量，旁边的 Clawd 按 Claude 当前在做的事表演（读文件、改代码、跑命令、等批准、压缩、额度重置庆祝等）。备注：`prompt.edit`/`prompt.submit` 只用来判断你是否在输入、原样返回不改写；`tool.call` 只记录、原样返回；只跑本机 `date +%z`；不联网。 | MIT | [链接](https://github.com/saxena-aman/clawd-mods/tree/main/plugins/clawd-usage) |
 | cozy-clawd | 非官方粉丝 mod：提示框上方一条像素风小场景，Clawd 演出 Claude 在思考、写字、调用工具或等你确认，旁边是会话指标场景（上下文、缓存、额度等，8 种场景可选），带一个压缩按钮。备注：`turn.step`/`tool.call`/`telemetry.log` 只观察、原样返回；只有你点按钮才压缩；macOS 上跑 `/usr/bin/defaults read -g AppleLanguages` 取系统语言；不联网。 | MIT | [链接](https://github.com/OrihuelaConde/cozy-clawd) |
 | clawd-pet | 像素 Clawd 在提示框上方散步，按 Claude 当前在做的事（思考、读写、跑命令、等批准、测试通过）做出反应，会饿、会升级学新动作，可点它摸摸；`/clawd-pet help` 查看喂食、改名、尺寸、帽子、音效等（`/pet` 别名仅在没有其他插件占用时注册）。备注：`prompt.submit`/`tool.call` 只用来切换动画、原样返回；读取本机 `~/.claude/stats-cache.json` 统计 token，只跑本机 `date +%H`；音效默认关闭；不联网。Clawd 角色与动画素材归 Anthropic 所有，不在本仓库 MIT 许可范围内（见仓库 NOTICE）；素材帧较多，安装包约 60 MB。 | MIT | [链接](https://github.com/yuyongyan29-dev/claude-pet/tree/main/clawd-pet) |
+| cyclops-spark | Spark：一个程序生成的小生物，只按真实会话事件动——Claude 思考时蜷起、每个工具伸出一条触须、等你批准时等着、每答完一回合在天空点亮一颗星；可放在侧边面板、提示框上方或状态行，kitty/Ghostty 下用真像素；`/spark` 切换 focus/band/主题/调色板/声音等。备注：`prompt.submit` 只记下你的文字用于 focus 模式、原样返回；`tool.call`/`turn.step` 只观察；focus 模式只隐藏对话行的显示；只有你执行 `/spark ask` 时才用 `$.model.fork`（你自己的 Claude、基于本会话）回答一个侧问题；声音、Link 默认关闭，开启 Link 后会在本机起一个 python3 小助手，仅通过 0600 本地文件和同目录的 Cyclops 家族共享粗略状态；不联网。 | MIT | [链接](https://github.com/CyclopsEyeTeam/cyclops-spark/tree/main/plugins/cyclops-spark) |
 
 ### 图片与媒体 Images & Media
 
@@ -1119,6 +1135,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | file-picker | `/files` 打开文件浏览面板：方向键浏览目录，可输入过滤或跳转路径，Enter 把 `@路径` 插入输入框。备注：只读列目录；只把 `@路径` 填进输入框（不自动发送），带引号/控制字符的路径拒绝插入；纯本机。 | MIT | [链接](https://github.com/SeanPeppers/claude-files) |
 | sessions-pane | 侧边面板列出同时运行的各个会话、各自的模型/effort，以及哪个会话在等你（权限弹窗或提问）。备注：只观察 `prompt.submit`/`tool.call`/权限请求，不改写；会在本机写一份本会话状态 JSON 供面板读取。 | MIT | [链接](https://github.com/gav1256/claude-workflow/tree/main/claude/mods/sessions-pane) |
 | seat-resume | 记录交互会话清单，崩溃、重启或关掉终端后用 `/resume-sessions` 列出并重新打开被打断的会话（Windows，PowerShell，WezTerm 或 Windows Terminal）。备注：经典钩子只记录权限模式和会话信息、不改写；`/resume-sessions` 时运行插件自带的 `scripts/resume-sessions.ps1`（明文脚本，用 Start-Process 在 WezTerm/Windows Terminal 里执行 `claude --resume`）；会话清单写在配置目录的 `session-registry/`。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/seat-resume) |
+| rest-in-pid | 像素风墓地面板：列出所有正在运行的 Claude Code 会话、各自所在 worktree、token 用量和它们派生的进程（CPU/内存），找出会话已结束还残留的「僵尸」进程，每个带 Kill 按钮，Kill all 需 4 秒内连按两次确认；有僵尸时提示框上方显示提醒；`/rest-in-pid` 打开。备注：目前只支持 macOS；本机只读运行 `ps`/`lsof`/`sysctl`/`id`，读取 `~/.claude/projects` 下的 transcript 统计 token；只有你点 Kill 时才用 `/bin/kill` 结束进程（同一用户、跳过仍在运行的会话进程、执行前再次核对 pid）；不联网。 | MIT | [链接](https://github.com/jwchang0206/rest-in-pid) |
 
 ### 其他工具 Other Tools
 
@@ -1222,6 +1239,7 @@ For detailed descriptions of all 1086 mods, see the Chinese section below.
 | focus-timer | 提示框上方的专注计时器：`/focus-timer` 开始一段专注，倒计时带暂停、跳过、停止按钮，切换时弹提示，每第四次休息为长休息。备注：纯本机计时显示，不碰提示和工具调用。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/focus-timer) |
 | session-links | 把会话里提到的所有链接浮在提示框上方的小条里：可钉住、忽略、在浏览器打开或在面板里阅读，选择在退出和恢复后保留；`/links` 看全部。备注：`session.append`/`prompt.submit` 只读取文字收集链接、原样返回；只有你点「read」才用 `$.http` GET 该网址本身（不发送会话内容），点「open」才用系统 `open`/`xdg-open` 打开；数据存在本机 `$.store`。 | MIT | [链接](https://github.com/samaphp/session-links) |
 | prompt-queue | Claude 工作时你在提示框发出的消息不再插进当前回合，而是排进队列，等 Claude 完成上一回合后按顺序一条条发出；`/queue` 打开面板可编辑、调整顺序、删除，`/queue pause`/`resume`/`clear`。备注：`prompt.submit` 只拦下回合进行中你自己输入的文字（斜杠命令和带图片的消息照常放行），之后用 `$.prompt.submit`（asUser）把你写的原文原样发出，不改写、不加上下文；你中断或回合出错后队列自动暂停，面板打开时不发送；不联网。 | MIT | [链接](https://github.com/florian-anthony/claude-code-mods/tree/main/plugins/prompt-queue) |
+| game-answer-memory | GAME MODE 套件之一：Claude 再次问到本项目里问过的同一个问题时，在选项对话框里给你上次选的那项标上「★ 上次选择」。备注：只改对话框的显示，选项、顺序和答案都不变；按项目在本机 `$.store` 保存最近 200 个问题的答案；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-answer-memory) |
 
 ---
 
