@@ -8583,6 +8583,48 @@
         "path": "mods/swamp-watch",
         "sha": "9a7ce6c831a0768d6019cd4c479535027164711a"
       }
+    },
+    {
+      "name": "staff-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Gooner44/ClaudeMods.git",
+        "path": "plugins/staff-board",
+        "sha": "0392e8710479d24786800b55fb301fdb1f95dcf2"
+      }
+    },
+    {
+      "name": "progress-bars",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gav1256/claude-workflow.git",
+        "path": "claude/mods/progress-bars",
+        "sha": "80ada0e42891759a1efe95843050c5de08f97f2a"
+      }
+    },
+    {
+      "name": "output-folders",
+      "source": {
+        "source": "github",
+        "repo": "laszloprekop/claude-code-output-folders",
+        "sha": "e15fca042ab7c5140fd9be0fd18c6dfd5f6e9dab"
+      }
+    },
+    {
+      "name": "loopline",
+      "source": {
+        "source": "github",
+        "repo": "nikitaCodeSave/Statusline_Claude-Code",
+        "sha": "2d08409fbc578383febfce5d1efe368179c752a7"
+      }
+    },
+    {
+      "name": "flow",
+      "source": {
+        "source": "github",
+        "repo": "robdmac/flow",
+        "sha": "8dce9eb7d7b18959614ff62f578b6073d3db232a"
+      }
     }
   ]
 }
