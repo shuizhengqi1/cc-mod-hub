@@ -7213,6 +7213,42 @@
         "path": "migrations",
         "sha": "a24475406bba2e3340847f1a1ed222d489647ee7"
       }
+    },
+    {
+      "name": "band-handoff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/barkerjian/prompt-band.git",
+        "path": "handoff",
+        "sha": "0e7a3d831ac390e6e37028bc43c4953ec21aa7f5"
+      }
+    },
+    {
+      "name": "band-next",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/barkerjian/prompt-band.git",
+        "path": "next",
+        "sha": "0e7a3d831ac390e6e37028bc43c4953ec21aa7f5"
+      }
+    },
+    {
+      "name": "plugin-recorder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/juanmhidalgo/claude-plugins.git",
+        "path": "plugin-recorder",
+        "sha": "26ac5b752c9aa51d4fca67b6f6cc9b8b81758c2b"
+      }
+    },
+    {
+      "name": "work-alerts",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/parkyountaek/claude-mods.git",
+        "path": "work-alerts",
+        "sha": "e544d54a160bb0063ba208720cbd3b4346c6097d"
+      }
     }
   ]
 }

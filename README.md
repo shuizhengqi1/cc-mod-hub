@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 910 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 914 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 910 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 914 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 910 mods, see the Chinese section below.
+For detailed descriptions of all 914 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 910 个精选 Claude Code mods，按类别组织：
+以下是本市场的 914 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -276,6 +276,7 @@ For detailed descriptions of all 910 mods, see the Chinese section below.
 | auto-handoff | 上下文快满（默认 85%）或即将压缩前，自动把进度、决定和下一步写成交接文件放到项目的 handoff/ 目录，下个会话可接着做；/autohandoff 查看状态、now、resume、threshold、on/off。备注：自动用 $.model.fork 基于本会话写交接（额外一次模型调用）并写入项目目录；只有你运行 /autohandoff resume 才代你提交一句「读取 handoff 继续」的提示；session.compact 只记录不改写；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/auto-handoff) |
 | context-check | 在提示框上方显示上下文窗口用量条（绿、黄、红），用到 70%、85%、95% 时各弹一次提示建议 /compact 或 /clear；/ctx 展开按类别的上下文占用明细（含自动压缩阈值），也可隐藏用量条。备注：只读 Claude Code 自带的上下文用量，不联网、不运行外部命令。 |  | [链接](https://github.com/itzArtha/claude-mods/tree/main/context-check) |
 | cc-context-bar | 提示框上方用「天气」显示上下文有多满（晴、多云、阵雨、暴风、快该 compact 了），加上已用/窗口 token、最近 12 个回合的迷你曲线、上一回合新增多少、输入/输出 token 和估算花费；/context-bar 打开详细窗格（每回合明细、费用拆分、套餐限额）。备注：费用按内置价格表估算，会话实际花费以 Claude Code 报告的为准；空闲时会把其他 mod 在这一栏的内容保留在下方，Claude 工作时不调用 next，期间会盖住其他 mod 在这一栏的内容；记账存在 mod 自己的存储里；不联网、不运行外部命令。 | MIT | [链接](https://github.com/rendi-febrian/rendifebrian-mods/tree/main/cc-context-bar) |
+| band-handoff | 提示框上方的 Handoff 按钮（上下文到 18 万 token 时高亮，阈值可调）：点一下运行 /handoff，自带的 handoff 技能把当前进展、待办和已做的决定写成交接文档，存到项目的 `.claude/handoffs/`，桌面版还会为下一阶段建一张会话卡片；写好后按钮变成「已交接」提示。备注：是 main 里 handoff-relay 的 prompt-band 版本（同源 chalkery，MIT），两个装一个即可；只有你点按钮、输入 /handoff 或让 Claude 写交接时才运行；交接技能会用本机 python3 跑仓库自带的 `phase.py` 算文件名（没有 python3 时 Claude 按同样规则自己算）；tool.call 只读取 Skill/Write 和桌面会话卡片的结果、原样放行；界面英语或乌克兰语；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/handoff) |
 
 ### UI 与主题 UI & Themes
 
@@ -708,6 +709,7 @@ For detailed descriptions of all 910 mods, see the Chinese section below.
 | serhan-progress | 子代理进度面板：/agents-info 打开侧边窗格，列出运行中、已完成和计划中的子代理，显示模型、思考强度、任务进度、上下文、估算花费和用时，不同档位有不同造型；配合作者的 serhan 技能时提示框上方还有整体进度条（标题、阶段、已验收/计划任务数）。备注：会给 Claude 增加 progress、step 两个只用于汇报进度的工具；提示框上方进度条只在有进度上报或 serhan- 子代理启动后出现，出现时不调 next；进度条要配合同仓库的 serhan 插件（技能和子代理，不在本市场）才有意义，子代理面板对任何子代理都可用；不要和原版 savvy-progress 同时装（都注册 /agents-info）；花费是按内置价格表的估算；不联网、不运行外部命令。界面语言可选 auto/en/ru/tr。 | MIT | [链接](https://github.com/serhandenizhan/serhan-kit/tree/main/plugins/serhan-progress) |
 | agent-chat | 侧边窗格里显示 Claude 和子代理之间的「对话」：每个子代理收到的任务、运行时长、状态和最后交回的报告，按颜色区分，可展开卡片；第一次启动子代理时自动打开（可关），也可用 /agent-chat 打开。备注：只读显示，数据存在 mod 自己的存储里；不联网、不运行外部命令。 |  | [链接](https://github.com/AhmedNazihX/claude-mods/tree/main/agent-chat) |
 | squad-board | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。CTO 会话里绘制提示框上方区域时不调用 next，会盖住其他 mod 在这一栏的内容。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
+| plugin-recorder | 子代理运行时在提示框上方显示一行进度（如「tdd · 12 个子代理完成 · tdd-runner 运行 4 分钟 · 本回合 38 分钟」），子代理调用失败、被拒或启动被拒时立刻弹提示；同时按会话记一份插件运行日志（调用了哪个插件的命令/技能、子代理类型、状态、耗时、token 数）。备注：日志只记元数据，不记提示词、命令参数、工具输入输出、文件内容或完整路径（项目只记目录名），写在 `~/.claude/plugins/data/plugin-recorder-*/sessions/` 的 jsonl 里，可用同仓库的 retro 插件或 jq 查看；只记带插件前缀的命令/技能；tool.call 只计时、原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/juanmhidalgo/claude-plugins/tree/main/plugin-recorder) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -744,6 +746,7 @@ For detailed descriptions of all 910 mods, see the Chinese section below.
 | cuelume | 两种提示音：长回合结束时播放「就绪」，有权限请求等你处理时播放「注意」；/cuelume 切换音色或关闭。备注：只播放插件自带的 wav 音频，不改权限决定；纯本机。 | MIT | [链接](https://github.com/danielwh2/cuelume/tree/main/claude-code) |
 | inbox-band | 提示框上方显示共享收件箱文件里有几条新报告、几条可能需要你处理。备注：需配合 herdr（只读 ~/.config/herdr/inbox.md 与 inbox.read）；纯本机。 | MIT | [链接](https://github.com/soyakaai-studio/claude-herdr-mods/tree/master/mods/inbox-band) |
 | done-chime | Claude 的回复耗时较长（默认 30 秒以上）时，结束时弹一条提示并播放提示音（6 种音效可选，也可只弹提示不出声），方便你走开时知道它做完了；子代理和被中断的回合不提醒。备注：音效是仓库自带的 wav 文件；Linux 和 Windows 终端没有播放器时只弹提示；不联网、不运行外部命令。 |  | [链接](https://github.com/AhmedNazihX/claude-mods/tree/main/done-chime) |
+| work-alerts | 工作提醒：回合较长（默认 60 秒以上）结束、出错停下、子代理完成或失败、测试/lint/类型检查/构建命令失败（附失败摘要）、上下文用到 60%/85%、5 小时或 7 天用量到 80%/95% 时弹提示并播放提示音，重要的再发一条 macOS 系统通知；/alerts 开关提示、声音、系统通知或调整长回合秒数，/task-alert 快速开关声音。备注：提示文字是韩语；声音用 macOS 的 `afplay` 播放系统音效、系统通知用 `osascript`，其他系统只弹应用内提示；tool.call 只在 Bash 跑完后读取结果、原样放行；不联网。 |  | [链接](https://github.com/parkyountaek/claude-mods/tree/main/work-alerts) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -1046,6 +1049,7 @@ For detailed descriptions of all 910 mods, see the Chinese section below.
 | quick-replies | 把 Claude Code 自带的「下一条消息建议」变成提示框上方的按钮，点击或在空提示框里按 1–4 直接发送；/replies 开关、查看状态；英文或德文界面。备注：只在你点按钮或按数字键时以你的身份 $.prompt.submit 发送，从不自动发送；prompt.edit 只在建议按钮显示时吞掉那个数字键，其他输入原样放行；prompt.suggest 只读；可选的 more（默认关闭，/replies more on 开启）开启后每次回答结束都会自动用 $.model.fork 带完整会话上下文再要最多 3 条建议，多花一次简短回答的 token；除 Claude 自身 API 外不联网；GPL-3.0 附加条款要求转载时保留作者署名。 | GPL-3.0 | [链接](https://github.com/FynnXland/fynn-mods/tree/main/mods/quick-replies) |
 | wytlumacz-mi | 给非程序员的「解释一下」：/wytlumacz 用波兰语讲清 Claude 刚做了什么（一句话总结、步骤、原因、2–4 个值得学的术语、下一步），/wytlumacz ostatnio 或回到已有历史的会话时提示框上方按钮可总结整段对话；解释按项目保存，/wytlumacz historia 查看，学过的术语不再重复解释。备注：只在你运行命令或点按钮时用 $.model.fork 带当前会话上下文生成解释，从不自动调用；prompt.submit 只隐藏总结按钮、原样放行；不联网；基于 Explain It（Ruth-Ann Bravo，MIT）改写。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/wytlumacz-mi) |
 | grill | /grill（或 /grill <主题>）让 Claude 针对当前计划或决定提出最多 5 个追问（德文界面），在提示框上方逐题显示：2–4 个选项、Claude 推荐的选项和自由输入框；答完最后一题后把全部回答汇总成一条消息发给 Claude，可随时取消。备注：只在你运行 /grill 时调用一次 $.model.fork（基于当前对话，会多用一些额度，不产生新的对话回合）；没有对话但给了主题时改用 $.model.complete，只发送主题文字；汇总回答以你的名义用 $.prompt.submit 发出；追问只在本会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/grill) |
+| band-next | Claude 回答完后提示框上方出现「What next?」按钮：点一下才问模型，给出最多三个可接着发的提示（可包括本会话已有的斜杠命令），点其中一个就填进输入框，不会自动发送。备注：是 main 里 next-steps 的 prompt-band 版本（Apache-2.0），改成按按钮才问、不再每轮自动问，两个装一个即可；询问用 $.model.fork 在当前会话上分叉一次，会消耗少量用量；短于 80 个字符的回答不出按钮（可调）；界面英语或乌克兰语；属于 prompt-band 套件，可单独安装；不联网、不运行外部命令。 | Apache-2.0 | [链接](https://github.com/barkerjian/prompt-band/tree/main/next) |
 
 ---
 
