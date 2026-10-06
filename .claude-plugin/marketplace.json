@@ -7442,15 +7442,6 @@
         "path": "plugins/vivarium",
         "sha": "d137b782887f39b39137568465524d3d4f347c68"
       }
-    },
-    {
-      "name": "activity-log",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/diegorv/claude-mods-diegorv.git",
-        "path": "plugins/activity-log",
-        "sha": "67840c696ef88405ceb42dc9ec95f3e3a7b90759"
-      }
     }
   ]
 }

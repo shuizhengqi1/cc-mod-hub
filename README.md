@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 937 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 936 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 937 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 936 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 937 mods, see the Chinese section below.
+For detailed descriptions of all 936 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 937 个精选 Claude Code mods，按类别组织：
+以下是本市场的 936 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -680,7 +680,6 @@ For detailed descriptions of all 937 mods, see the Chinese section below.
 | cc-file-history-mod | 提示框上方一条带，记录本会话里 Claude 用 Edit、Write 改过或用 Bash `rm` 删掉的每个文件；点 [View] 或用 /file-history 打开侧栏，可看每次改动的 diff，并单独撤销任意一个文件。备注：撤销会直接写回文件（新建的文件会被 `rm` 删除），请确认后再点；看 diff 时会在原文件旁临时写 `.cc-fh-diff-*.before/.after` 两个文件，用本机 `diff -u` 比对后删除；记录只在内存里，/clear、resume、fork 或重载后清空；不改工具调用，不联网。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
 | bash-watch | Bash 命令失败时在状态行显示「failed: 命令前 40 个字符」，下一条命令成功后自动清除。备注：tool.call 先让命令照常执行再看结果，原样返回，不改工具调用；不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/bash-watch) |
 | tool-calls | `/tool-calls` 打开侧栏，实时列出本会话的工具调用（运行中 runs / 已完成 done），保留最近 200 条。备注：tool.call 只记录工具名、原样传递，不改工具调用；记录只在本会话里，不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/tool-calls) |
-| activity-log | 把本会话的每个事件（提示、工具调用及完整结果、子进程、模型流等）原样追加写入 ~/.claude/activity-log/日期-会话id.jsonl，便于调试和回放。备注：只记录、原样传递，不改任何事件；用 sh -c 'cat >> 文件' 追加（目录 700、文件 600），不联网。日志是明文，可能包含密钥、令牌和其他插件读到的环境变量值，且不自动清理、增长很快（一个空会话约 300KB），注意定期删除。 |  | [链接](https://github.com/diegorv/claude-mods-diegorv/tree/main/plugins/activity-log) |
 
 ### 子代理管理 Subagent Management
 
