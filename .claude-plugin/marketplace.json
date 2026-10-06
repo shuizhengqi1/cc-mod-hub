@@ -7116,6 +7116,32 @@
         "path": "plugins/serhan-progress",
         "sha": "e35ad9a979550c1a188b0b247cfc02e1004f6633"
       }
+    },
+    {
+      "name": "pace-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tsalkin/claude-code-statusline.git",
+        "path": "experiments/statusline-band",
+        "sha": "6dfff897df54a27ac6e1790d63ad469044109e5f"
+      }
+    },
+    {
+      "name": "quiet-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/robw-raviga/claude-mods.git",
+        "path": "quiet-mode",
+        "sha": "9ce09bd924d69bda6e44106b185e5938e2560763"
+      }
+    },
+    {
+      "name": "aeo-audit",
+      "source": {
+        "source": "github",
+        "repo": "jbauman-26/aeo-audit-mod",
+        "sha": "be3b9e7b88afaa356da9df139caa54509c69a05f"
+      }
     }
   ]
 }
