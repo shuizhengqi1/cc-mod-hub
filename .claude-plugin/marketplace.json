@@ -7142,15 +7142,6 @@
         "repo": "jbauman-26/aeo-audit-mod",
         "sha": "be3b9e7b88afaa356da9df139caa54509c69a05f"
       }
-    },
-    {
-      "name": "thread-pulse",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/max06/claude-mods.git",
-        "path": "plugins/thread-pulse",
-        "sha": "2f5747054ed2c551e3ddf5760834bd2d09388503"
-      }
     }
   ]
 }

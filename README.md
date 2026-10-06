@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 903 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 902 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 903 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 902 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 903 mods, see the Chinese section below.
+For detailed descriptions of all 902 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 903 个精选 Claude Code mods，按类别组织：
+以下是本市场的 902 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -662,8 +662,7 @@ For detailed descriptions of all 903 mods, see the Chinese section below.
 | recent-files | 侧边窗格列出本会话最近新建、编辑或删除的 5 个文件：文件名是可点的终端链接，附相对目录、来源（Write、Edit、Bash）、是否子代理和时间；会话开始自动打开，/recent-files 重新打开。备注：tool.call 只在工具执行后记录路径，原样放行；每次 Bash 调用前后会对已知仓库各跑一次本机 git status（--no-optional-locks、禁用 fsmonitor）比较差异，仓库很大时略增开销；列表存进插件 store 以便重载后恢复；不联网；作者在 2.1.290、2.1.291 上测试。 | MIT | [链接](https://github.com/ryoupr/claude-code-recent-files) |
 | lazygit-popup | 按 alt+g 在当前面板上方的 tmux 弹窗里打开 lazygit（在会话目录），按 ESC 或 q 退出 lazygit 弹窗随即关闭。备注：**需要在 tmux 3.2+ 里运行 Claude Code，并已安装 lazygit**；mod 不能自带快捷键，需自己在 `~/.claude/keybindings.json` 的 Global 里加 `"alt+g": "strip:jump4"` 再 /reload-plugins（插件在提示框上方放了一个绑定该动作的隐藏按钮）；会在 lazygit 配置目录写一个只供弹窗用的 claude-popup.yml（quitOnTopLevelReturn: true），不改你自己的 config.yml；只运行本机 lazygit 和 tmux，不联网；作者注明基于 2.1.291 开发。 |  | [链接](https://github.com/PedroLaRosa/claude-code-lazygit-popup) |
 | pr-live-review | /pr-live-review 打开实时 PR 审查窗格：当前检出分支的 PR 相对目标分支的差异、每个文件的摘要和发现的问题，可逐行加评论，把评论发给 Claude 处理或发到 GitHub PR 上。备注：**需要本机 git 和已登录的 gh**，作者要求 Claude Code 2.1.291+；打开时会对每个改动文件调用 $.model.complete（Sonnet）审查，发送的是 PR 差异、该文件全文、调用处片段和仓库里的 CLAUDE.md、AGENTS.md 规则（若装了名为 review-senior-engineer 的技能也会附上），不含会话内容；只有你按 send 才把评论作为你的消息提交给 Claude，只有你保存发布时才通过 gh api 发到 GitHub；不连其他外网。 |  | [链接](https://github.com/afruth/pr-live-review) |
-| aeo-audit | /aeo <网址> 检查一个网页能否被 ChatGPT 搜索、Perplexity、Google AI 概览、Copilot 和 Claude 抓取和读取：robots.txt 对各 AI 爬虫是否放行、防火墙是否拦截 AI 爬虫 UA、noindex/nosnippet、不开 JS 能否看到正文、llms.txt、站点地图等，每项给出 PASS/WARN/FAIL、修复建议和依据来源，在侧边窗格显示并把完整报告存到 `~/output/aeo-audits/`；也给 Claude 增加 audit_site 工具，可直接说「帮我审查某网站」。备注：会用 `$.http` 访问你指定的网址（页面本身、robots.txt、llms.txt、站点地图，并用几种 AI 爬虫 UA 各请求一次页面），不发送会话内容；窗格里的「Fix with Claude」只把修复请求填进输入框，不会自动发送；不运行外部命令。 | MIT | [链接](https://github.com/jbauman-26/aeo-audit-mod) |
-| thread-pulse | 让运行中的工具调用看得见：每条 shell 命令变成本机 Command Watch 网页上的一张卡片（命令、说明、超时、已运行时间、实时输出、退出码，长时间无输出会提醒），所有会话共用一页；运行超过 60 秒的调用显示在状态栏，/pulse 列出正在运行的调用，/command-watch 显示网页地址；会话里有 hearthbot 项目线程工具时，还会在线程清单里加一行「仍在运行」。备注：默认第一个会话会用本机 python3 启动仓库自带的网页服务（只监听 127.0.0.1:8765，无登录鉴权，本机其他程序能读到命令输出），命令和输出保存在 `~/.claude/command-watch/calls/`，可在插件设置里关掉 localWatch/serveWatch；Linux 下会扫描 /proc 匹配后台命令的输出文件；与本市场的 pulse 都注册 /pulse，不要同时装；tool.call 只记录、原样放行；不联网。 | MIT | [链接](https://github.com/max06/claude-mods/tree/main/plugins/thread-pulse) |
+| aeo-audit | /aeo <网址> 检查一个网页能否被 ChatGPT 搜索、Perplexity、Google AI 概览、Copilot 和 Claude 抓取和读取：robots.txt 对各 AI 爬虫是否放行、防火墙是否拦截 AI 爬虫 UA、noindex/nosnippet、不开 JS 能否看到正文、llms.txt、站点地图等，每项给出 PASS/WARN/FAIL、修复建议和依据来源，在侧边窗格显示并把完整报告存到 `~/output/aeo-audits/`；也给 Claude 增加 audit_site 工具，可直接说「帮我审查某网站」。备注：会用 `$.http` 访问你指定的网址（页面本身、robots.txt、llms.txt、站点地图，并用几种 AI 爬虫 UA 各请求一次页面），不发送会话内容；窗格里的「Fix with Claude」只把修复请求填进输入框，不会自动发送；不运行外部命令。会跟随最多 5 次重定向，站点地图地址取自 robots.txt，可能访问其他主机；通过 audit_site 工具调用时网址由 Claude 选定。只发 GET。 | MIT | [链接](https://github.com/jbauman-26/aeo-audit-mod) |
 
 ### 子代理管理 Subagent Management
 
