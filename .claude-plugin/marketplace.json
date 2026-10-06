@@ -6545,6 +6545,40 @@
         "repo": "fj/jxf-agent-plugins-mod-jxf-fancy-details-claude",
         "sha": "248286125a2a0c4a0f7d805167c6f1312ac160c6"
       }
+    },
+    {
+      "name": "colombian-claude",
+      "source": {
+        "source": "github",
+        "repo": "LucasLeguizamo/colombian-claude",
+        "sha": "4379d0bd81df09e71dac069cd34593b3beb285b7"
+      }
+    },
+    {
+      "name": "marvel-8bit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arjkul/claude-code-marvel-8bit.git",
+        "path": "plugins/marvel-8bit",
+        "sha": "f37c557a2570a0157013194cd467c1b523f5d4c5"
+      }
+    },
+    {
+      "name": "desktop-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tohshima115/claude-desktop-pet.git",
+        "path": "mod/desktop-pet",
+        "sha": "2f4a19385ae6061633e2d9d4f6177b89a0a50406"
+      }
+    },
+    {
+      "name": "gitlogue",
+      "source": {
+        "source": "github",
+        "repo": "abyss464/claude-gitlogue",
+        "sha": "eec279190e646d6d3d077a5c1880e6c66844c174"
+      }
     }
   ]
 }

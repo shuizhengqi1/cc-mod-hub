@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 833 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 837 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 833 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 837 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 833 mods, see the Chinese section below.
+For detailed descriptions of all 837 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 833 个精选 Claude Code mods，按类别组织：
+以下是本市场的 837 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -280,8 +280,10 @@ For detailed descriptions of all 833 mods, see the Chinese section below.
 | chat-bubbles | 聊天气泡式界面：你的提示在右、Claude 在左，运行中或失败的工具高亮、已完成的变暗，441 套主题（/bubbles）；只改显示，不改提示或工具，不联网。应用主题后，这些 ui.render 插槽不调用 next 而绘制自己的元素，因此可以覆盖其他 mod 的渲染：完整模式下的 UserMessage 和 AssistantMessage、SessionMode、TurnDuration，以及终端外的 PromptHint 和 Spinner。还会为每个 mod 的 Pane 添加背景色（该插槽调用 next）。默认无主题，因此在执行 /bubbles 前一切都透传。 | MIT | [链接](https://github.com/angeldelbiondo/claude-chat-bubbles/tree/main/chat-bubbles) |
 | clawd-tracker | Domino 式订单进度条（主题 pizza/coffee/rocket/construction）：读本机会话与 $.tool.check 只判断是否会询问许可，不改写工具；prompt.submit 只本地取标题后原样 next；送达可 $.audio.play 自建 WAV。备注：进度显示时 AbovePrompt 不调 next（可点隐藏）。 | MIT | [链接](https://github.com/IKnowJot/clawd-plugins/tree/main/plugins/clawd-tracker) |
 | clawdify | /clawdify 改 spinner、页脚、提示、横幅、状态行和对话行样式，可用自然语言描述（走 $.model.complete，只发当前设置和你的请求）；可按你设的规则改写回答的显示文本（只改显示）、替换 PromptHint/UserMessage、横幅开启时 AbovePrompt 不调 next、可隐藏提示通知；启动时 $.ui.status(undefined)，并扫描本机 ~/.claude/plugins/store 迁移旧设置；读取本地 .git/HEAD 获得分支名。 | MIT | [链接](https://github.com/viik2k/clawdify) |
+| colombian-claude | 把等待时的 spinner 词和回合结束那行（✻ … · 用时）换成哥伦比亚各地口音的西班牙语短语（rolo、paisa、costeño 等 8 种口音，可选 mix 混用），/goal 完成时弹一条庆祝提示。备注：TurnDuration 整行重画、不调 next；只改显示，不碰提示和工具，不联网。 | MIT | [链接](https://github.com/LucasLeguizamo/colombian-claude) |
 | looks | 提示框上方显示配色主题切换菜单，纯 UI。 | MIT | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/looks) |
 | collapse-answers | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
+| marvel-8bit | 把 Claude 工作时的 spinner 标记换成 8-bit 漫威超级英雄像素图，每回合轮换一位；/hero <名字> 固定某位英雄，/hero shuffle 恢复轮换；桌面版运行中的工具行也换成英雄图标。备注：Spinner 和桌面版运行中的 ToolUse 由本 mod 绘制、不调 next；固定的英雄存在插件 store；只改显示，不碰提示和工具，不联网。 | MIT | [链接](https://github.com/arjkul/claude-code-marvel-8bit/tree/main/plugins/marvel-8bit) |
 | meadow | 把助手回复画成像素草地气泡（首块上方天空山丘、末块下方草地）；只改 AssistantMessage 显示，画图时不调 next，可能盖住其他改回复样式的 mod。 |  | [链接](https://github.com/DenisGuiraudet/claude-mods/tree/main/meadow) |
 | message-timestamps | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | commonplace-pane | 侧边窗格展示芝加哥艺术学院公版画，随仓库状态变「天气」。 |  | [链接](https://github.com/sivori/claude-mods/tree/main/plugins/commonplace-pane) |
@@ -551,6 +553,7 @@ For detailed descriptions of all 833 mods, see the Chinese section below.
 | git-sidebar | lazygit 风格侧栏：worktree/分支列表；本机 git（可 git switch，脏树拒绝）与 /cd。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/git-sidebar) |
 | git-widget | 分支、改动数、领先落后与最近提交标题卡片；本机 process 只读跑 git status 和 git log，工具调用原样返回，需配合 widgets。 | MIT | [链接](https://github.com/oMaN-Rod/claude-code-widgets/tree/main/plugins/git-widget) |
 | gitgraph | /branches 打开本机 git 分支提交线图画板，可勾选多条分支对比。备注：本机只读 git status、for-each-ref、log；面板打开时每 15 秒刷新，Claude 跑含 git 的 Bash 后也会刷新；Bash 工具调用只观察原样返回。 |  | [链接](https://github.com/TCcodemaster/claude-mods/tree/main/gitgraph) |
+| gitlogue | gitlogue 风格的回放面板：把 Claude 的文件编辑以打字动画重放，带语法高亮、文件浏览、命令和提交展示，旁边是 LINE 风格的手机聊天视图（默认开启）；/gitlogue 打开，/gitlogue replay 回放之前的会话；中英日界面，17 种主题。备注：面板开着且聊天视图开启时，原生的对话行（用户、助手、工具等）改为隐藏，改在手机视图里显示；prompt.submit 只把文字记进聊天视图、不改写，tool.call 只观察、原样放行；回放日志（含每轮提示前 600 字和编辑内容）写在 ~/.cache/gitlogue/replays；本机 process.run 只跑 mkdir/cp/rm，看图片时调 magick，接了 hypr-screens 录屏 MCP 时调 ffmpeg 解帧；注册一个 refresh 工具；终端宽度 ≥144 列时会话开始自动打开面板；不联网。 | ISC | [链接](https://github.com/abyss464/claude-gitlogue) |
 | glass | 给终端 transcript 换桌面级外观：着色命令、工具树、回合页脚等。 | MIT | [链接](https://github.com/rashedInt32/glass) |
 | i18n-pixel | /i18n-pixel 像素风 i18n 检查窗格：本机只读扫描语系 key 是否齐全、占位参数、未知或动态 key、写死的中日韩文字，并注册只读 i18n_report 工具；Edit/Write 只观察原样返回后重扫。 | MIT | [链接](https://github.com/Ponpon55837/i18n-check-mods/tree/main/plugins/i18n-pixel) |
 | loc-split | 相对 main 的改动行数按代码/注释/测试/文档/生成文件拆分，可展开逐提交表；本机只读 git；条显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/RomanHotsiy/claude-mods/tree/main/loc-split) |
@@ -699,6 +702,7 @@ For detailed descriptions of all 833 mods, see the Chinese section below.
 | code-pet | 像素宠物窗格，随 Claude 活动反应。 |  | [链接](https://github.com/OneWave-AI/claude-code-mods/tree/main/code-pet) |
 | coding-pet | 从蛋里孵出的宠物（/pet 打开窗格），随回合、提交、测试、成就成长，可喂养照顾，有日记和成就页；界面为日语。备注：prompt.submit 原样放行，只检测是否说了「谢谢」，不保存提示文字；tool.call 原样放行，只计数（日记只写固定句子，不记命令或文件）；开启聊天能力后经 $.model.complete（Haiku）只发宠物种类、名字、心情和计数，不发代码、路径、命令或提示；$.store 存档，$.audio 播放自带的 wav 音效；不联网。 | MIT | [链接](https://github.com/ytskmt14/coding-pet/tree/main/plugins/coding-pet) |
 | desk-pet | 提示框上方/侧栏小宠物，随工具与回合反应；仅 UI，不改工具、不外传。 | MIT | [链接](https://github.com/isr431/desk-pet) |
+| desktop-pet | 提示框上方显示角色「ぷに」和对话气泡（日文）：工作中按正在用的工具说一句，回合结束取回答的最后一段当作一句话并换表情；桌面版画 SVG 角色，终端只显示文字。备注：prompt.submit 只更新气泡状态、不改写提示，tool.call 只看工具名、原样放行；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；可用仓库自带工具换角色；不联网。 | MIT | [链接](https://github.com/tohshima115/claude-desktop-pet/tree/main/mod/desktop-pet) |
 | dotpet | 输入框上方的像素宠物（待机、工作、完成、睡觉换图）；/dotpet 开关和改大小。备注：AbovePrompt 会先调 next；只用 $.store；附带浏览器里的画图编辑器；画作另见 LICENSE-ART.md。 | MIT | [链接](https://github.com/i-noma-ru/claude-dotpet) |
 | familiar | 提示框上方像素伙伴，随会话反应并可手绘；可选 Haiku 吐槽。备注：可选 $.model.complete 与 $.model.fork。 | MIT | [链接](https://github.com/lucenity0/claude-familiar) |
 | maomao | 提示框上方 8-bit 毛毛（垂耳兔）随工作状态跑跳；/maomao 收起或叫出。 |  | [链接](https://github.com/jessetsai1024/claude-maomao) |
