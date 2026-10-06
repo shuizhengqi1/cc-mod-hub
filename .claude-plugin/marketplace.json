@@ -6946,6 +6946,75 @@
         "path": "mods/quick-replies",
         "sha": "a60527bb6345708cc237e7bc3a7249c984e6c544"
       }
+    },
+    {
+      "name": "record-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szewowsky/mody-claude-code.git",
+        "path": "record-mode",
+        "sha": "3886a51baffe880b41b8e81368e7146b293b760d"
+      }
+    },
+    {
+      "name": "pasek",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szewowsky/mody-claude-code.git",
+        "path": "pasek",
+        "sha": "3886a51baffe880b41b8e81368e7146b293b760d"
+      }
+    },
+    {
+      "name": "wytlumacz-mi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szewowsky/mody-claude-code.git",
+        "path": "wytlumacz-mi",
+        "sha": "3886a51baffe880b41b8e81368e7146b293b760d"
+      }
+    },
+    {
+      "name": "cooking-puzzles",
+      "source": {
+        "source": "github",
+        "repo": "Tamlica/cooking-puzzles-mod",
+        "sha": "8e2b52cc7756760f773c8d93066f11b9f90cc51e"
+      }
+    },
+    {
+      "name": "prs",
+      "source": {
+        "source": "github",
+        "repo": "ambareeshav/prs",
+        "sha": "1259e0581cd5c54320f3eaf30448ebc5c5d7ec86"
+      }
+    },
+    {
+      "name": "spotify",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ambareeshav/claude-plugins.git",
+        "path": "plugins/spotify",
+        "sha": "95143a71b77db2d839f7638dc420c8fd3ecccd59"
+      }
+    },
+    {
+      "name": "breach-quota",
+      "source": {
+        "source": "github",
+        "repo": "jnk0vc/breach-quota",
+        "sha": "0ea389ae51981fc15de1825b37580485df751671"
+      }
+    },
+    {
+      "name": "cc-footprint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ilwu/cc-footprint.git",
+        "path": "plugin",
+        "sha": "7763d401cea065021012b909645c3b73576d99db"
+      }
     }
   ]
 }
