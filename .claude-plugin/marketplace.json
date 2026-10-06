@@ -6843,6 +6843,57 @@
         "repo": "PeteChu/cc-answer",
         "sha": "703266e2ea21f9d31bbb825d2866dcfbdf3a15d8"
       }
+    },
+    {
+      "name": "usage-slider",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/itzArtha/claude-mods.git",
+        "path": "design-panel",
+        "sha": "2fe9440caeca3ef0cddde6dba50a04fff8256d21"
+      }
+    },
+    {
+      "name": "cache-battery",
+      "source": {
+        "source": "github",
+        "repo": "korengast/cache-battery",
+        "sha": "32351542aa1b8d597d5ee9f1dba4e3792378498c"
+      }
+    },
+    {
+      "name": "context-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/itzArtha/claude-mods.git",
+        "path": "context-check",
+        "sha": "2fe9440caeca3ef0cddde6dba50a04fff8256d21"
+      }
+    },
+    {
+      "name": "sonar-dock",
+      "source": {
+        "source": "github",
+        "repo": "putraridho/sonar-dock",
+        "sha": "368e5ed71a7586796ad72b754bb65d9534a8a3e9"
+      }
+    },
+    {
+      "name": "superset-deck",
+      "source": {
+        "source": "github",
+        "repo": "tomikng/claude-superset-deck",
+        "sha": "baa4d4bedf2172ab8c6b449a718e9e6642c489e9"
+      }
+    },
+    {
+      "name": "wtf",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/orangeJigglypuff/better-btw.git",
+        "path": "wtf",
+        "sha": "d0e8474bb787d4e597bc1f26a7fa19744b28c0f7"
+      }
     }
   ]
 }
