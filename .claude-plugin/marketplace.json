@@ -6696,15 +6696,6 @@
       }
     },
     {
-      "name": "next-steps-desktop",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/bqnhat/claude-local-plugins.git",
-        "path": "plugins/next-steps-desktop",
-        "sha": "b59e017cfe11510403625e6c2178bc29b4d1ded3"
-      }
-    },
-    {
       "name": "sl-mod",
       "source": {
         "source": "github",
@@ -6745,15 +6736,6 @@
         "source": "git-subdir",
         "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
         "path": "plugins/flight-recorder",
-        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
-      }
-    },
-    {
-      "name": "model-router",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
-        "path": "plugins/model-router",
         "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
       }
     },

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 860 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 858 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 860 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 858 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 860 mods, see the Chinese section below.
+For detailed descriptions of all 858 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 860 个精选 Claude Code mods，按类别组织：
+以下是本市场的 858 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -673,7 +673,6 @@ For detailed descriptions of all 860 mods, see the Chinese section below.
 | vnext-session-record | 记录本会话启动的子代理（类型、模型、状态、简短描述）、每次请求的模型和 token 用量，并在 /vnext 面板里显示。备注：所有钩子只观察、原样传递；不保存提示词正文，只存子代理描述前 120 字；写到项目 .vnext/host/<会话id>.jsonl（项目没有 .vnext 时写 ~/.vnext/host/），单文件上限 3 MB；纯本机，不联网；为 vNext workforce 设计，单独用也能看子代理面板。 | MIT | [链接](https://github.com/RazAndAlex/vnext-workforce/tree/main/plugins/vnext-session-record) |
 | clawd-crew | 对话旁的面板里，把每个正在跑的 Claude Code 会话和它们开的子代理都画成一只会动的像素 Clawd（英文界面），下面写着在做什么、用的模型、跑了多久、用了多少 token；顶部显示套餐剩余限额和今天/本周/全部的用量与费用（含已关闭的会话）。/clawds 打开，/clawds hide 关闭，/clawds style pixels 或 svg 切换画法。备注：会在 ~/.claude/clawd-crew/ 下写各会话的状态和用量缓存文件，并读取 ~/.claude/projects 和 sessions 下的对话记录统计用量（macOS/Linux 用 python3、Windows 用 PowerShell 本机执行内置脚本）；当没有任何会话拿到限额数据时，最多每 5 小时自动发一次 1 token 的 haiku 请求（内容固定为 Reply with OK.，不含会话内容）来读取限额，会产生极少量用量；tool.call、agent.spawn 只观察、原样传递；不改提示，不联网（除上述 haiku 请求）。 | MIT | [链接](https://github.com/hudcolighting/clawd-crew) |
 | agents-side | 侧边窗格实时显示主循环和它派生的每个子代理（树状），含状态、最近工具、耗时、token 和回答；状态行显示运行中/已完成数量与 ctx 百分比；/agents-side 开关，/agents-side clear 清掉已完成的，窗格里 1–9 选行。备注：会话开始默认自动打开窗格（openOnStart 可关）；每 2 秒用 $.agent.list 刷新；agent.spawn、tool.call、turn.* 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/agents-side) |
-| model-router | 主对话保持原模型，把子代理的模型请求改派到更便宜的 Sonnet（可选 Haiku），并估算省了多少钱；/router 控制。备注：**装上即默认开启**，会改写子代理每一步 turn.step 的 model 字段（不改提示内容）；不想要就 /router off；tool.call 只记录只读标记；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/model-router) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -995,7 +994,6 @@ For detailed descriptions of all 860 mods, see the Chinese section below.
 | buffer-pane | 转录旁的面板，Claude 干活时先写好下一步要说的话（多块文本），按 [+] 把一块放进提示框，按 [>] 直接提交。备注：只提交你自己写的文本（你按才会）；纯本机。 | MIT | [链接](https://github.com/meganemura/buffer-pane/tree/main/plugin) |
 | output-ladder | 把上一条回答换种方式重讲：ASD-STE100 简明英语、图示、HTML 页面或讲解视频，并给回答的 STE 风格打分。备注：对应命令或按钮会以你的身份提交一条改写请求（你执行才会）；prompt.submit/session.append 只记录回答文本，不改写。 | MIT | [链接](https://github.com/0xGondarxyz/claude-code-mods/tree/main/output-ladder) |
 | enable-todo-tools | 给默认不带待办工具的新模型重新打开 Claude Code 的待办（todo）工具。备注：会话开始时，若你没设 CLAUDE_CODE_ENABLE_TODO_TOOLS 就设为 1；你已设的值（包括 0）不动。 | MIT | [链接](https://github.com/muellerei/enable-todo-tools) |
-| next-steps-desktop | next-steps 的桌面版分支：每轮结束建议最多三个下一步提示，终端里在提示框上方，Claude Code Desktop 里藏在页脚 💡 和 Next steps 窗格；按 1/2/3 填进输入框当草稿。备注：每轮结束自动 $.model.fork 一次（共享提示缓存，额外少量费用）；只填草稿、不代你提交；和 next-steps 二选一，别同时装；不联网。 | MIT | [链接](https://github.com/bqnhat/claude-local-plugins/tree/main/plugins/next-steps-desktop) |
 
 ---
 
