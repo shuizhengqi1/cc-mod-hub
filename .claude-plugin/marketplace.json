@@ -6894,6 +6894,58 @@
         "path": "wtf",
         "sha": "d0e8474bb787d4e597bc1f26a7fa19744b28c0f7"
       }
+    },
+    {
+      "name": "agent-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/quorumless/claude-plugins.git",
+        "path": "plugins/agent-status",
+        "sha": "d01937ca5191ec3b06d3c34e465aadbba9a2ef65"
+      }
+    },
+    {
+      "name": "cc-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/quorumless/claude-plugins.git",
+        "path": "plugins/cc-status",
+        "sha": "d01937ca5191ec3b06d3c34e465aadbba9a2ef65"
+      }
+    },
+    {
+      "name": "recent-files",
+      "source": {
+        "source": "github",
+        "repo": "ryoupr/claude-code-recent-files",
+        "sha": "88b9cd6dc106b8a7c09c545e982f848f8565c4ab"
+      }
+    },
+    {
+      "name": "meatball",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jesseorndorff/meatball.git",
+        "path": "plugin",
+        "sha": "f1390c274aefebacff2e6054553007b25edaa0d2"
+      }
+    },
+    {
+      "name": "paste-preview",
+      "source": {
+        "source": "github",
+        "repo": "craneyu/claude-paste-preview",
+        "sha": "a2586d0b862dcfe0b5174bbaf533e6157177a5dc"
+      }
+    },
+    {
+      "name": "quick-replies",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/FynnXland/fynn-mods.git",
+        "path": "mods/quick-replies",
+        "sha": "a60527bb6345708cc237e7bc3a7249c984e6c544"
+      }
     }
   ]
 }
