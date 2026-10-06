@@ -6614,6 +6614,68 @@
         "path": "plugins/session-map",
         "sha": "d1ecb8c98fe97a0b57a63b8c56b6291f1eccb9c4"
       }
+    },
+    {
+      "name": "tsunu-avatar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Tsun-u/tsunu-pet.git",
+        "path": "mod",
+        "sha": "f3dcca4db8ee72c534c4148847412b44a43edde0"
+      }
+    },
+    {
+      "name": "netdive-quota",
+      "source": {
+        "source": "github",
+        "repo": "jnk0vc/netdive-quota",
+        "sha": "6102da9330f988de9b5a99215f75b28c513709d0"
+      }
+    },
+    {
+      "name": "secret-shield",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ryx2/slopshopper.git",
+        "path": "mods/secret-shield",
+        "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
+      }
+    },
+    {
+      "name": "tripwire",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ryx2/slopshopper.git",
+        "path": "mods/tripwire",
+        "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
+      }
+    },
+    {
+      "name": "slop-detector",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ryx2/slopshopper.git",
+        "path": "mods/slop-detector",
+        "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
+      }
+    },
+    {
+      "name": "burn-rate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ryx2/slopshopper.git",
+        "path": "mods/burn-rate",
+        "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
+      }
+    },
+    {
+      "name": "receipts",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ryx2/slopshopper.git",
+        "path": "mods/receipts",
+        "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
+      }
     }
   ]
 }
