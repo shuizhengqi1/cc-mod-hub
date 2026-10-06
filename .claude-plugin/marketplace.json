@@ -6428,6 +6428,40 @@
         "path": "claude/mods/collapse-work",
         "sha": "db04cd0def7f7d5503525da0783aa521ce9ea73e"
       }
+    },
+    {
+      "name": "work-summary",
+      "source": {
+        "source": "github",
+        "repo": "timinguniq/claude-work-summary",
+        "sha": "cd88e34ce3733abf6d6057181a70809c2a0bc272"
+      }
+    },
+    {
+      "name": "html-shelf",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/HUIHUI59/claude-code-mods.git",
+        "path": "html-shelf",
+        "sha": "81a4e2cdeacdcb349304dcef71432ba791eace3c"
+      }
+    },
+    {
+      "name": "cache-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/danyuchn/claude-mods.git",
+        "path": "cache-panel",
+        "sha": "9e7d228f79538f3ed6f583b7612eaed291dabfe3"
+      }
+    },
+    {
+      "name": "sbs-deck",
+      "source": {
+        "source": "github",
+        "repo": "scottcrosby-securebine/sbs-deck",
+        "sha": "859f41df31efe2aba1fb23989a25c942c24c0427"
+      }
     }
   ]
 }

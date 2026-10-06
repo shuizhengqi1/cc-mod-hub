@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 819 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 823 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 819 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 823 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 819 mods, see the Chinese section below.
+For detailed descriptions of all 823 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 819 个精选 Claude Code mods，按类别组织：
+以下是本市场的 823 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -218,6 +218,7 @@ For detailed descriptions of all 819 mods, see the Chinese section below.
 | usage-hud | 提示框上方的小用量条，点 `details ›` 或 /hud 展开成四张卡片：额度（按本地时区显示重置时间和消耗节奏）、上下文构成、提示缓存、本会话估算花费；/hud calm 关掉动画。备注：只读 $.session.usage 和每轮 usage，钩子原样传递；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/rsvishalsingh93/claude-usage-hud/tree/main/plugins/usage-hud) |
 | quota-reactor | 把侧边面板变成复古科幻「反应堆控制台」（界面为日语+英语）：5 小时/每周额度和上下文窗口画成七段数码倒计时，每次工具调用由三个单元「投票」显示通过/拒绝，出现拒绝时提示框上方亮警告带；/reactor 打开面板。备注：tool.call 只观察结果、原样传递，prompt.submit 只清除警告、不读不改提示；警告带显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/jnk0vc/quota-reactor) |
 | prompt-glance | 提示框上方两行 HUD：模型、路径、git 分支与脏/领先状态、本轮和本会话花费、提示缓存命中率与过期倒计时，以及上下文、5 小时、每周用量条和本会话用到的工具/技能；/cache 打开逐轮缓存表。备注：本机只读 `git status`、读 settings.json 里的 promptCacheTtl 和相关环境变量判断缓存时长；turn.step、tool.call 只计数、原样传递；HUD 显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/audichuang/prompt-glance) |
+| cache-panel | 提示缓存快冷时才提醒：空闲 50 分钟、缓存还热且上下文够大（冷掉的重写成本估算至少约 $0.30、且不少于 30k token）时，提示框上方出现一行「cache cools in …」按钮；点它或 /warm 打开面板，填要离开几小时，比较保温、压缩、什么都不做三种做法的估算花费，再选 Keep warm（每 50 分钟 ping 一次直到时段结束）、Ping once（多保一小时）或 Compact now；/warm off 提前停止。备注：保温用 $.model.fork 对同一会话前缀发一句「Reply with exactly: ok」，只在你点了以后才发，按普通请求计费；Compact now 调内置 /compact；只有在 herdr 里运行时才用 process.run 调 herdr 发提醒音；AbovePrompt 调 next，可与其他 mod 叠加；纯本机，不联网。 | MIT | [链接](https://github.com/danyuchn/claude-mods/tree/main/cache-panel) |
 
 ### 上下文管理 Context Management
 
@@ -380,6 +381,8 @@ For detailed descriptions of all 819 mods, see the Chinese section below.
 | model-cycle | 在输入框下方显示当前模型和推理强度，用 alt+上/下 切模型、alt+左/右 切强度、alt+. 开关 ultracode；/model-cycle setup 把这些快捷键合并进 ~/.claude/keybindings.json。备注：只有你按键选定强度后，turn.step 才把该强度用到请求上，默认不改；setup 只新增未占用的键，已有绑定不动；纯本机，不联网。 |  | [链接](https://github.com/PedroLaRosa/claude-code-model-cycle) |
 | prompt-marks | 给对话记录里你自己发的每条提示加一道彩色竖条和浅色底，方便一眼找到；Option/Ctrl + 上下方向键在各条提示之间跳转。颜色、深浅可在 /config 里调。备注：只改显示，不改写提示内容；纯本机，不联网。 | MIT | [链接](https://github.com/AdamCaviness/prompt-marks) |
 | collapse-work | 像 Codex 一样，回合结束后把这一轮的中间过程（工具调用和过程文字）折叠到一行「Worked for …」下面，只留最终回答；切到详细视图时恢复显示。备注：只在终端生效（非全屏视图下不折叠）；session.append 只读取消息 id 用来分组、原样传递，不改会话内容；纯本机，不联网。 | Unlicense | [链接](https://github.com/FrogAi/Xenopus/tree/master/claude/mods/collapse-work) |
+| html-shelf | 让终端里 Claude 的回复更顺手（中文界面）：每个写完的代码块上方加一行语言名和「复制」按钮，点一下把代码原文（末尾不带换行）复制到剪贴板；回复里真实存在的 .html 路径变成可点链接，点了用默认浏览器打开；/open [N] 打开最近提到或写出的第 N 个 HTML。备注：打开 HTML 用 explorer.exe，路径按 Windows 格式处理，所以链接和 /open 只在 Windows 上可用（复制按钮各平台都能用）；终端里有代码块或 HTML 链接时，回复（AssistantMessage）由它自己画、不调 next，会盖掉其他改回复渲染的 mod；tool.call 只记下写出的 .html 路径、原样传递；纯本机，不联网。 |  | [链接](https://github.com/HUIHUI59/claude-code-mods/tree/main/html-shelf) |
+| sbs-deck | SecureBine 科幻风终端样式：你的每条消息放进金色框，标题为「OPERATOR // UPLINK: 你的 Claude 账号邮箱」；Claude 忙时排队的消息是蓝灰框，被接收后变金色；回复第一块加「CLAUDE // DOWNLINK」标题；工具调用压成一行（▸ 运行中 / ✓ 完成 / ✗ 失败），成功的输出隐藏；关掉安静模式后 Bash/MCP 输出按模式着色；加载动画换成 295 条科幻短语的解码效果，回合用时文字改成「Jacked out」；/sbs on、off、quiet、color 切换。备注：读取本机 ~/.claude.json 里的 oauthAccount.emailAddress 显示在消息框标题上，录屏或共享屏幕时会露出邮箱；prompt.submit 只记录排队的消息用来上色、原样传递，不改提示；安静模式下工具行和工具输出（ToolUse/ToolResult）由它自己画、不调 next，会盖掉其他改工具行的 mod，除失败外看不到工具输出；图标需要 Nerd Font；仓库里的 install.sh 是给手动安装用的（会改 settings.json），从市场安装不会运行；纯本机，不联网。 |  | [链接](https://github.com/scottcrosby-securebine/sbs-deck) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -806,6 +809,7 @@ For detailed descriptions of all 819 mods, see the Chinese section below.
 | todo-calendar | TODO 周历面板（繁体中文）：在面板里看一周任务，注册 add_task/update_task 等工具让 Claude 帮你加和改任务；/todo 打开，/todo auto on/off 设新会话是否自动打开。备注：任务存在本机 ~/.claude 下的固定 JSON 文件；纯本机，不联网。 | MIT | [链接](https://github.com/jaaaackieLai/claude-mods/tree/main/plugins/todo-calendar) |
 | openspec-tracker | 西班牙语 OpenSpec 变更跟踪面板：显示当前变更的阶段、产物、任务进度，并一键把 /opsx:apply、archive、explore 填进提示框（由你决定是否发送）。备注：需要本机装 openspec 命令行，只在本机调用它；prompt.submit 只读取提示里提到的变更名、不改写；不联网。 |  | [链接](https://github.com/Dos2Locos/claude-code-mods/tree/main/plugins/openspec-tracker) |
 | worklog | 按仓库和分支（分支名里有工单号就按工单）统计你和 Claude 实际干活的时间：每次回复加上两次提问之间不超过空闲上限（默认 5 分钟）的停顿；/worklog 看本周时间表，/worklog export 导出 CSV。备注：prompt.submit 只记时间、不读不改提示内容；每个会话写一份 ~/.claude/worklog/（会话 id）.json（只有时间和仓库/分支名），本机读 .git/HEAD 判断分支；不联网。 | MIT | [链接](https://github.com/santtisosa/worklog) |
+| work-summary | 改了文件的回合结束后，在右侧面板（韩语界面）列出这一轮改动的文件，并总结「做了什么」和「值得记住的经验」；保留本会话最近 20 条，会话开始时自动打开面板，/work-summary 手动打开。备注：每个改了文件的回合都会自动多发一次 $.model.fork（同一会话、同一模型，带上文件列表和本轮回答前 3000 字），有额外费用；tool.call 只记录 Edit/Write/NotebookEdit 改了哪些文件、原样传递；不改提示，不联网。 |  | [链接](https://github.com/timinguniq/claude-work-summary) |
 
 ### 外部集成 External Integrations
 
