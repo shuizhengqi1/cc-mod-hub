@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 867 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 873 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 867 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 873 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 867 mods, see the Chinese section below.
+For detailed descriptions of all 873 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 867 个精选 Claude Code mods，按类别组织：
+以下是本市场的 873 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -229,6 +229,8 @@ For detailed descriptions of all 867 mods, see the Chinese section below.
 | apple-tree | 一棵跟着用量长大的苹果树：整棵树代表每周额度，每个 5 小时窗口结一个果子（随用量变大变色，窗口重置时定型），每周重置后旧树收进果园；/tree 打开侧边面板（桌面版插画、终端字符画），状态栏显示 🍎 个数与 5h/周百分比，阶段变化时弹提示；中英文界面。备注：只读 $.session.usage 与 session.measure 的额度数据，存本机 store；不碰提示和工具；不联网。 | MIT | [链接](https://github.com/JoyceGu/apple-tree-mod) |
 | token-weather-cache | 官方 token-weather 的改版：提示框上方保留上下文「天气」与已用/窗口 token，把右侧最近 12 轮柱状图换成提示缓存倒计时（5m/1h 自动判断，剩 5 分钟/1 分钟弹提醒，过期后显示下一条消息要重写多少 token）。备注：改自 anthropics/claude-code-playground 的 token-weather（Apache-2.0），倒计时规则改编自 jmac122/cache-countdown（MIT），已注明出处；turn.step 只读主循环用量、原样返回；和官方 token-weather 画在同一位置，二选一；不联网。 | Apache-2.0 | [链接](https://github.com/youllook/ClaudeMods/tree/main/plugins/token-weather-cache) |
 | usage-feed | 把订阅账号的 5 小时、7 天与 spend_limit 限额窗口合并写进本地 usage.json（会话开始和每回合后更新，多会话同时写也按规则合并不回退），供同仓库的 Windows 11 任务栏小窗 usage_widget.py 画用量条。备注：**仅 Windows**，需在插件设置里填 dataDir（必须是盘符开头的本地绝对路径，拒绝 OneDrive 与网络路径），不填则什么都不做；只读 $.session.usage 与 session.measure，只写 dataDir 下 usage.json 与排障日志两个文件；不碰提示和工具；不联网；任务栏小窗是仓库里另行运行的 Python 脚本，不随插件安装。 |  | [链接](https://github.com/imrooki/claude-usage-bar/tree/main/plugins/usage-feed) |
+| usage-slider | 提示框下方加一个「📊 Usage」按钮，打开侧边窗格用滑杆模拟：5 小时用量涨到多少时，周限额会跟着涨到多少（按本会话观察到的 5 小时与 7 天用量变化比例估算）；/usage-sim 70 直接算到 70%。备注：只读 Claude Code 自带的限额用量，不联网、不运行外部命令；仓库目录名是 design-panel，插件名是 usage-slider。 |  | [链接](https://github.com/itzArtha/claude-mods/tree/main/design-panel) |
+| cache-battery | 在提示框上方用一节会慢慢耗尽的「电池」显示提示缓存还剩多久：区分 5 分钟与 1 小时缓存档，最后一分钟显示秒数，过期后显示雪花，提醒下一条消息会重写整个提示。备注：turn.step 只读每次请求的 usage 来计算缓存时间，不改写；读取 ANTHROPIC_API_KEY、CLAUDE_CODE_USE_BEDROCK 等环境变量只用来判断是否设置（决定默认 5 分钟还是 1 小时档），不记录也不发送其值；可用 CACHE_BATTERY_TTL、CACHE_BATTERY_CELLS、CACHE_BATTERY_NUMBERS 调整；不联网；仓库里另有状态栏命令和 pi 版本，不随本 mod 安装。 | MIT | [链接](https://github.com/korengast/cache-battery) |
 
 ### 上下文管理 Context Management
 
@@ -266,6 +268,7 @@ For detailed descriptions of all 867 mods, see the Chinese section below.
 | cache-keeper | 会话闲置时给提示缓存保温：默认每 50 分钟（可配）用 $.model.fork 对对话前缀发一个极小请求，避免缓存一小时后过期、下次冷启动变贵；提示框上方显示状态，/cache-keeper 查看或开关。备注：保温请求只是一个词的固定提示，不改写你的 prompt、不往对话里注入内容；每次保温会产生少量费用。 | MIT | [链接](https://github.com/davidho27941/cockpit/tree/main/plugins/cache-keeper) |
 | context-board | 提示框上方的紧凑上下文卡片：已用/窗口、压缩阈值、分类堆叠色条和图例，外加一行本会话实际加载的 kit（skills、agents、CLAUDE.md/AGENTS.md、已启用插件、最近用的 skill）；状态行显示 ctx 百分比；/context-board 开关完整明细窗格，/context-board refresh 重新精确计数。备注：AbovePrompt 由本 mod 绘制、不调 next，会盖掉其他 mod 在提示框上方的显示；读 settings 里已启用插件名和 CLAUDE.md/AGENTS.md 文件名；refresh 走 Claude Code 自带的 token 计数（$.session.usage full）；tool.call 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/context-board) |
 | auto-handoff | 上下文快满（默认 85%）或即将压缩前，自动把进度、决定和下一步写成交接文件放到项目的 handoff/ 目录，下个会话可接着做；/autohandoff 查看状态、now、resume、threshold、on/off。备注：自动用 $.model.fork 基于本会话写交接（额外一次模型调用）并写入项目目录；只有你运行 /autohandoff resume 才代你提交一句「读取 handoff 继续」的提示；session.compact 只记录不改写；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/auto-handoff) |
+| context-check | 在提示框上方显示上下文窗口用量条（绿、黄、红），用到 70%、85%、95% 时各弹一次提示建议 /compact 或 /clear；/ctx 展开按类别的上下文占用明细（含自动压缩阈值），也可隐藏用量条。备注：只读 Claude Code 自带的上下文用量，不联网、不运行外部命令。 |  | [链接](https://github.com/itzArtha/claude-mods/tree/main/context-check) |
 
 ### UI 与主题 UI & Themes
 
@@ -402,6 +405,7 @@ For detailed descriptions of all 867 mods, see the Chinese section below.
 | chat-clean | 把对话改成聊天视图：左侧 you/claude 名字列、你的消息右侧显示时间，每轮的工具调用折叠成一行（如「○ 7 steps this turn ›」，可就地展开），工作中显示白话进度，后台任务、子代理、提问回答、API 错误各收成一行；/feed clean、normal、raw 切换视图，/helpers 打开子代理步骤窗格。备注：只读事件来绘制界面，tool.call 只记录不改写；设置保存在插件自己的存储里；只有设置了 CHAT_CLEAN_DEBUG 环境变量才把排障日志写到该文件；不联网；需 Claude Code 2.1.289+。 | MIT | [链接](https://github.com/achammah/claude-chat-clean) |
 | slab-deck | SLAB 深色风格的控制台：提示框上方的工作条显示回合耗时、步数、工具与 token；/deck 打开停靠窗格（概览、上下文、工具时间线、子代理、git、tmux、用量、providers 分页）和弹窗，可在 tmux 里切窗口、分屏、窥看其他窗格；/deck-band 把工作条设为 full、compact 或 off。备注：本机运行只读 git 命令与 tmux 命令（只操作本会话窗格或新开窗口，不关闭别的窗格）；会话开始及之后每 5 分钟运行一次插件设置里的 providersCommand（默认 provider-usage，未安装时只在 providers 页显示错误）并读取其 JSON 输出；把每回合输出 token 写到 ~/.cache/slab-deck/ 供仓库里的 statusline-slab.sh 使用（该脚本不随插件安装）；tool.call 只记录不改写；不联网。 | MIT | [链接](https://github.com/5omeOtherGuy/slab-deck/tree/main/mod/slab-deck) |
 | cc-mod-suggestion-sentence-case | 把提示框里按 Tab 可接受的灰色建议文字改成句子格式：首字母大写、结尾补句号；斜杠命令、已以标点结尾、或以数字/代码/引号开头的保持原样。备注：只改 prompt.suggest 的建议文字（也包括其他插件提出的建议），不改你实际提交的提示；整个模块约 20 行；不联网。 |  | [链接](https://github.com/Vatroslav/cc-mod-suggestion-sentence-case/tree/main/plugin) |
+| sonar-dock | 科幻雷达风格的 HUD：/sonar 打开侧边窗格，显示雷达扫描（每次工具调用一个光点）、威胁等级、用量仪表、每回合工具时间线和活动日志，并给对话套上磷光风格皮肤（消息、工具调用、等待动画、回合耗时）；/sonar light、dark、auto 切换配色，/sonar off 关闭皮肤。备注：tool.call 与 prompt.submit 只记录统计、不改写；Bash 命令命中危险模式时只弹提示并提高威胁等级，不拦截；macOS 上可能运行 defaults read 判断深浅色；动画用了多个高频定时器（约 50–80 毫秒一帧），较耗 CPU；不联网。 |  | [链接](https://github.com/putraridho/sonar-dock) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -887,6 +891,7 @@ For detailed descriptions of all 867 mods, see the Chinese section below.
 | vox | vox 说话或聆听时在提示框上方显示动态波形和字幕；/vox-wave 预览或改颜色。备注：需安装 vox（rtk-ai/vox）；tool.call 只观察 vox 工具和 vox 命令并原样返回；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/rtk-ai/vox/tree/main/plugins/vox) |
 | pedidos | 西班牙语 /pedidos 面板：显示你 Tiendanube 店铺今天的订单和销售额，不花 token。备注：通过你已连接的 Tiendanube 连接器只读调用 list_orders；需要先在 Claude 里连好 Tiendanube，自动模式下要把该工具加进允许列表。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/pedidos) |
 | tablero | 西班牙语 /tablero 面板：把 Tiendanube 销售、Google Analytics 流量和 Meta Ads 投放汇总在一起，算出 MER 和转化率，不花 token。备注：只通过你已连接的对应连接器做只读查询；需要先在 Claude 里连好这些连接器。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/tablero) |
+| superset-deck | 在 Claude Code 里打开 Superset 风格的工作区侧栏：按项目列出本机所有 Superset 工作区和代理终端状态，可查看代理终端实时画面、分支相对分叉点的 diff 与信息，给代理发消息、新建代理和工作树工作区、打开或删除工作区；提示框上方可显示一行 Superset 摘要。备注：**需先自行安装第三方 Superset（superset.sh）的 `superset` 命令行**，未安装时只显示错误；所有操作都是在本机运行 `superset ... --local --json` 和只读 git 命令，发消息、新建、删除（需二次确认）只在你在窗格里操作时执行；仓库 bin/superset-deck 启动脚本不随插件运行；本 mod 自身不联网。 | MIT | [链接](https://github.com/tomikng/claude-superset-deck) |
 
 ### 本地工具 Local Tools
 
@@ -1003,6 +1008,7 @@ For detailed descriptions of all 867 mods, see the Chinese section below.
 | enable-todo-tools | 给默认不带待办工具的新模型重新打开 Claude Code 的待办（todo）工具。备注：会话开始时，若你没设 CLAUDE_CODE_ENABLE_TODO_TOOLS 就设为 1；你已设的值（包括 0）不动。 | MIT | [链接](https://github.com/muellerei/enable-todo-tools) |
 | ask | 侧边提问窗格：/ask 问题 或在窗格里输入，Claude 在后台回答，问题和答案都不进主对话、不占上下文；「Suggest next prompts」给三个下一步提示，点 Use 填进输入框；可复制、删除、重试，保留最近 30 条。备注：每次提问由你触发，用 $.model.fork 基于本会话回答（共享提示缓存，有少量费用；会话还没回复时改用 $.model.complete 调 Sonnet，只发问题和窗格里最近 3 条问答）；Use 只填草稿不代你提交；不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/ask) |
 | answer | /answer 把 Claude 上一条回复里提出的问题抽出来，放进 Claude Code 自带的提问对话框（分页、多选、可自填、带复查页）逐个作答，答完后合成一条回复发出；/answer --debug 查看抽取过程。备注：仅在你运行 /answer 时把上一条助手回复原文发给 $.model.complete（默认 haiku，可在插件设置改模型）来抽取问题，无脱敏；tool.call 只替换它自己打开的占位提问框里的问题，Claude 自己发起的 AskUserQuestion 原样放行；作答完成后以你的身份用 $.prompt.submit 提交答案；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/PeteChu/cc-answer) |
+| wtf | 用鼠标划选对话里的一段文字后运行 /wtf（或 /wtf <文字>），侧边窗格会结合当前对话解释它的意思，可在窗格里追问，问答不写进对话；中文问题用中文界面。备注：仅在你运行 /wtf 或点它的按钮时，用 $.model.fork 带当前会话上下文提问；恢复的会话还没有可 fork 的内容时，改用 $.model.complete 发送最近的对话记录原文（最多约 8 万字符，用当前会话模型），无脱敏；可选的快捷键按钮默认关闭；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/orangeJigglypuff/better-btw/tree/main/wtf) |
 
 ---
 
