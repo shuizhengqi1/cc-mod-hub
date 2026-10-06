@@ -7371,6 +7371,42 @@
         "path": "mods/stfu",
         "sha": "693895757c5dc50ff6a0450dc6c601dc251738a1"
       }
+    },
+    {
+      "name": "copy-markdown",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/a-bine/claude-mods.git",
+        "path": "copy-markdown",
+        "sha": "94d5dec68bee39bdab5c6f9ff724475220c4c795"
+      }
+    },
+    {
+      "name": "bash-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nankris/claude-code-mods.git",
+        "path": "bash-watch",
+        "sha": "390f22ee01bda39c2a7a4ed99bdd53c74183943e"
+      }
+    },
+    {
+      "name": "tool-calls",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nankris/claude-code-mods.git",
+        "path": "tool-calls",
+        "sha": "390f22ee01bda39c2a7a4ed99bdd53c74183943e"
+      }
+    },
+    {
+      "name": "turn-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nankris/claude-code-mods.git",
+        "path": "turn-band",
+        "sha": "390f22ee01bda39c2a7a4ed99bdd53c74183943e"
+      }
     }
   ]
 }
