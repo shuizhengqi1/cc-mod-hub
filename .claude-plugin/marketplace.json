@@ -6520,6 +6520,31 @@
         "repo": "stakiran/open-latest",
         "sha": "c33898174cc21db17ebc2f8d4698d22d92df30b3"
       }
+    },
+    {
+      "name": "pixel-player",
+      "source": {
+        "source": "github",
+        "repo": "chrisluo5311/Pixel-Play",
+        "sha": "bb6c10d7e5f05751ad6941b042b9a7dcefd87f3e"
+      }
+    },
+    {
+      "name": "cost-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mengtienchang/claude-code-plugins.git",
+        "path": "cost-ledger",
+        "sha": "5831e60be31fdd836d55793b84819d9a315e34b5"
+      }
+    },
+    {
+      "name": "mod-jxf-fancy-details",
+      "source": {
+        "source": "github",
+        "repo": "fj/jxf-agent-plugins-mod-jxf-fancy-details-claude",
+        "sha": "248286125a2a0c4a0f7d805167c6f1312ac160c6"
+      }
     }
   ]
 }
