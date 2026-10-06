@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 896 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 899 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 896 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 899 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 896 mods, see the Chinese section below.
+For detailed descriptions of all 899 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 896 个精选 Claude Code mods，按类别组织：
+以下是本市场的 899 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -234,6 +234,7 @@ For detailed descriptions of all 896 mods, see the Chinese section below.
 | pasek | 提示框上方一条状态带：仓库与分支、本会话费用、上下文进度条、5 小时与每周限额及重置倒计时、本会话提示数、上一回合耗时与缓存命中率、提示缓存（按 1 小时计）冷却倒计时，冷却前 5 分钟提醒；上下文超过阈值（默认 40%，/pasek prog 调整）提示交接，带 REC、Handoff、Wytłumacz 按钮（波兰语界面）。备注：每回合跑一次本机 git branch --show-current；prompt.submit 只计数、原样放行；Handoff 按钮或 /pasek handoff 会运行插件自带的 handoff 技能（禁止模型自动调用，只在你点时运行），让 Claude 把交接文档写到当前项目的 .claude/ 目录；REC 和 Wytłumacz 按钮需另装同作者的 record-mode、wytlumacz-mi；不联网。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/pasek) |
 | breach-quota | 赛博朋克风格的侧边 HUD 窗格（/breach 打开，日文界面）：5 小时与每周限额的倒计时块、上下文占用的十六进制记忆矩阵、消耗速率和缓存仪表、本会话工具调用与子代理的「入侵追踪」日志，以及提示框上方的警告带（正在执行的命令、被拒绝的工具、接近限额）。备注：tool.call、agent.spawn 只记录工具名、摘要和结果，原样放行；prompt.submit 只清除警告；上下文明细用本地估算，不额外请求；不联网、不运行外部命令。 | MIT | [链接](https://github.com/jnk0vc/breach-quota) |
 | token-panel | 侧边窗格列出本会话每条提示用掉的 token（输入、输出、缓存读、缓存写）和按标准 API 价目估算的费用，子代理的用量计入发起它的那条提示，底部合计；点某一行会把对话滚到那条消息并让它的边框闪红三秒；/token-panel 打开或关闭，选择跨会话保留。备注：只读取本机的会话记录文件（含子代理记录）来统计；价目表写死在插件里，涨价需等作者更新，不含 fast 模式、美国区 1.1 倍和网页搜索费；classic.UserPromptSubmit、SessionStart、PostToolUse 只用来刷新统计，原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/JSUYA/claude-token-panel-mod) |
+| cache-status | 在状态栏显示提示缓存还热多久：剩余时间进度条（绿、快过期变黄、过期红）、本会话缓存命中率和估算的缓存失效次数，过期后提示下一条消息大约要重新缓存多少 token；缓存时长按 CLAUDE_CODE_PROMPT_CACHE_TTL / FORCE_PROMPT_CACHING_5M 判断是 5 分钟还是 1 小时。备注：**只在桌面 App 等非终端界面显示**，终端里不显示（作者建议终端用自己的 statusline 脚本）；数字由主会话每次回复的用量估算，不是官方缓存数据；turn.step 只读用量、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/alfredwesterveld/claude-cache-status) |
 
 ### 上下文管理 Context Management
 
@@ -696,6 +697,8 @@ For detailed descriptions of all 896 mods, see the Chinese section below.
 | clawd-crew | 对话旁的面板里，把每个正在跑的 Claude Code 会话和它们开的子代理都画成一只会动的像素 Clawd（英文界面），下面写着在做什么、用的模型、跑了多久、用了多少 token；顶部显示套餐剩余限额和今天/本周/全部的用量与费用（含已关闭的会话）。/clawds 打开，/clawds hide 关闭，/clawds style pixels 或 svg 切换画法。备注：会在 ~/.claude/clawd-crew/ 下写各会话的状态和用量缓存文件，并读取 ~/.claude/projects 和 sessions 下的对话记录统计用量（macOS/Linux 用 python3、Windows 用 PowerShell 本机执行内置脚本）；当没有任何会话拿到限额数据时，最多每 5 小时自动发一次 1 token 的 haiku 请求（内容固定为 Reply with OK.，不含会话内容）来读取限额，会产生极少量用量；tool.call、agent.spawn 只观察、原样传递；不改提示，不联网（除上述 haiku 请求）。 | MIT | [链接](https://github.com/hudcolighting/clawd-crew) |
 | agents-side | 侧边窗格实时显示主循环和它派生的每个子代理（树状），含状态、最近工具、耗时、token 和回答；状态行显示运行中/已完成数量与 ctx 百分比；/agents-side 开关，/agents-side clear 清掉已完成的，窗格里 1–9 选行。备注：会话开始默认自动打开窗格（openOnStart 可关）；每 2 秒用 $.agent.list 刷新；agent.spawn、tool.call、turn.* 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/agents-side) |
 | agent-status | 提示框上方列出正在运行的后台代理：状态点、类型、已运行时长、距上次回复多久、最近一次调用的工具和任务名，运行中沉默超过 30 秒变黄、超过 2 分钟变红；/bg-agents 打开窗格查看本会话全部代理（含已结束的）和工具调用次数。备注：agent.spawn、turn.step、tool.call 只记录时间和工具名，原样放行；有代理在运行时每秒重绘一次；不联网、不运行外部命令。 |  | [链接](https://github.com/quorumless/claude-plugins/tree/main/plugins/agent-status) |
+| campfire-hud | RPG 风格会话 HUD：提示框上方用宝石色进度条显示上下文、花费和 5 小时/每周用量限额，以及 git 分支和改动数；会话开始自动打开「Session」侧边窗格，把子代理画成围着篝火的奇幻小队（运行中、完成、失败、正在用的工具），并显示模型、花费、用时和仓库状态；/hud 开关窗格。备注：提示框上方显示时不调 next，可能盖住其他 mod 在同一位置的内容；每 5 秒和每回合结束在本机运行 `git status`、`git diff --shortstat` 读仓库状态；tool.call 只记录子代理正在用的工具、原样放行；花费按 token 估算；不联网。 | MIT | [链接](https://github.com/aryswisnu/campfire-hud) |
+| serhan-progress | 子代理进度面板：/agents-info 打开侧边窗格，列出运行中、已完成和计划中的子代理，显示模型、思考强度、任务进度、上下文、估算花费和用时，不同档位有不同造型；配合作者的 serhan 技能时提示框上方还有整体进度条（标题、阶段、已验收/计划任务数）。备注：会给 Claude 增加 progress、step 两个只用于汇报进度的工具；提示框上方进度条只在有进度上报或 serhan- 子代理启动后出现，出现时不调 next；进度条要配合同仓库的 serhan 插件（技能和子代理，不在本市场）才有意义，子代理面板对任何子代理都可用；不要和原版 savvy-progress 同时装（都注册 /agents-info）；花费是按内置价格表的估算；不联网、不运行外部命令。界面语言可选 auto/en/ru/tr。 | MIT | [链接](https://github.com/serhandenizhan/serhan-kit/tree/main/plugins/serhan-progress) |
 
 ### 通知提醒 Notifications & Alerts
 
