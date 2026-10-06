@@ -6765,6 +6765,41 @@
         "path": "plugins/auto-handoff",
         "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
       }
+    },
+    {
+      "name": "apple-tree",
+      "source": {
+        "source": "github",
+        "repo": "JoyceGu/apple-tree-mod",
+        "sha": "b787eba35145f90977a7399a60cf10473112d728"
+      }
+    },
+    {
+      "name": "ask",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/astrosteveo/claude-plugins.git",
+        "path": "plugins/ask",
+        "sha": "777a2e8edf6b232da8fa25db7ea5a4768b4ee5cc"
+      }
+    },
+    {
+      "name": "token-weather-cache",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/youllook/ClaudeMods.git",
+        "path": "plugins/token-weather-cache",
+        "sha": "b1f126cd62a9514f5220ca1e8357110a1755a352"
+      }
+    },
+    {
+      "name": "clauderipple-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PBJ-2/clauderipple.git",
+        "path": "packages/mod",
+        "sha": "4004a2a35913b312502195da3449ba05849fb380"
+      }
     }
   ]
 }

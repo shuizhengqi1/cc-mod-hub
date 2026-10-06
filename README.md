@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 858 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 862 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 858 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 862 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 858 mods, see the Chinese section below.
+For detailed descriptions of all 862 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 858 个精选 Claude Code mods，按类别组织：
+以下是本市场的 862 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -226,6 +226,8 @@ For detailed descriptions of all 858 mods, see the Chinese section below.
 | burn-rate | 提示框上方的「油表」：上下文占用、输入/输出 token、花费、每小时花费、套餐限额窗口和最近几轮的迷你折线；超过设定百分比（默认 80%）时提醒一次；/burn 打印同样数字。备注：只读 $.session.usage 和 turn.complete 用量并原样返回；不联网。 | MIT | [链接](https://github.com/ryx2/slopshopper/tree/main/mods/burn-rate) |
 | token-band | 提示框上方一行 token 用量条（中文界面）：上下文占用与百分比、本轮输出、平均输出速度、累计输入/输出/缓存读和费用；/tokens 收起或展开。备注：只读 $.session.usage 和 turn.step 用量并原样转发；不联网。 |  | [链接](https://github.com/crebot51/jack-mods/tree/main/plugins/token-band) |
 | sl-mod | 代替 statusLine 命令的轻量状态栏，画在提示框上方：目录、模型与 effort、git 分支状态、项目版本，以及上下文、5 小时、7 天和按模型的周额度条；/sl-settings 选每行显示什么。备注：额度通过 $.session.authorize 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容），429 会退避；跑本机 git status/describe/rev-list；读项目里的 package.json 等取版本号。 |  | [链接](https://github.com/ducban/sl-mod) |
+| apple-tree | 一棵跟着用量长大的苹果树：整棵树代表每周额度，每个 5 小时窗口结一个果子（随用量变大变色，窗口重置时定型），每周重置后旧树收进果园；/tree 打开侧边面板（桌面版插画、终端字符画），状态栏显示 🍎 个数与 5h/周百分比，阶段变化时弹提示；中英文界面。备注：只读 $.session.usage 与 session.measure 的额度数据，存本机 store；不碰提示和工具；不联网。 | MIT | [链接](https://github.com/JoyceGu/apple-tree-mod) |
+| token-weather-cache | 官方 token-weather 的改版：提示框上方保留上下文「天气」与已用/窗口 token，把右侧最近 12 轮柱状图换成提示缓存倒计时（5m/1h 自动判断，剩 5 分钟/1 分钟弹提醒，过期后显示下一条消息要重写多少 token）。备注：改自 anthropics/claude-code-playground 的 token-weather（Apache-2.0），倒计时规则改编自 jmac122/cache-countdown（MIT），已注明出处；turn.step 只读主循环用量、原样返回；和官方 token-weather 画在同一位置，二选一；不联网。 | Apache-2.0 | [链接](https://github.com/youllook/ClaudeMods/tree/main/plugins/token-weather-cache) |
 
 ### 上下文管理 Context Management
 
@@ -881,6 +883,7 @@ For detailed descriptions of all 858 mods, see the Chinese section below.
 | vox | vox 说话或聆听时在提示框上方显示动态波形和字幕；/vox-wave 预览或改颜色。备注：需安装 vox（rtk-ai/vox）；tool.call 只观察 vox 工具和 vox 命令并原样返回；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/rtk-ai/vox/tree/main/plugins/vox) |
 | pedidos | 西班牙语 /pedidos 面板：显示你 Tiendanube 店铺今天的订单和销售额，不花 token。备注：通过你已连接的 Tiendanube 连接器只读调用 list_orders；需要先在 Claude 里连好 Tiendanube，自动模式下要把该工具加进允许列表。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/pedidos) |
 | tablero | 西班牙语 /tablero 面板：把 Tiendanube 销售、Google Analytics 流量和 Meta Ads 投放汇总在一起，算出 MER 和转化率，不花 token。备注：只通过你已连接的对应连接器做只读查询；需要先在 Claude 里连好这些连接器。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/tablero) |
+| clauderipple-status | ClaudeRipple 的配套 mod：提示框上方一行显示本会话最近一次请求被路由到哪个模型/提供方，/ripple-log 打开请求日志窗格（模型、effort、token、缓存、耗时、结果），/ripple-bar 显示或隐藏。备注：**需先另装 ClaudeRipple 路由器**（第三方本机代理，GPL-3.0，把 Claude Code 的请求转给 GPT、DeepSeek 等，是否使用请自行判断）；没装时只显示「router not answering」；每 3 秒 GET 本机 127.0.0.1 管理端口（默认 8792，带本会话 id），不连外网；会改写 ClaudeRipple 自己生成的子代理在 agent.spawn 时的 model 与提示里的标记位置，其他子代理不动。 | GPL-3.0 | [链接](https://github.com/PBJ-2/clauderipple/tree/main/packages/mod) |
 
 ### 本地工具 Local Tools
 
@@ -994,6 +997,7 @@ For detailed descriptions of all 858 mods, see the Chinese section below.
 | buffer-pane | 转录旁的面板，Claude 干活时先写好下一步要说的话（多块文本），按 [+] 把一块放进提示框，按 [>] 直接提交。备注：只提交你自己写的文本（你按才会）；纯本机。 | MIT | [链接](https://github.com/meganemura/buffer-pane/tree/main/plugin) |
 | output-ladder | 把上一条回答换种方式重讲：ASD-STE100 简明英语、图示、HTML 页面或讲解视频，并给回答的 STE 风格打分。备注：对应命令或按钮会以你的身份提交一条改写请求（你执行才会）；prompt.submit/session.append 只记录回答文本，不改写。 | MIT | [链接](https://github.com/0xGondarxyz/claude-code-mods/tree/main/output-ladder) |
 | enable-todo-tools | 给默认不带待办工具的新模型重新打开 Claude Code 的待办（todo）工具。备注：会话开始时，若你没设 CLAUDE_CODE_ENABLE_TODO_TOOLS 就设为 1；你已设的值（包括 0）不动。 | MIT | [链接](https://github.com/muellerei/enable-todo-tools) |
+| ask | 侧边提问窗格：/ask 问题 或在窗格里输入，Claude 在后台回答，问题和答案都不进主对话、不占上下文；「Suggest next prompts」给三个下一步提示，点 Use 填进输入框；可复制、删除、重试，保留最近 30 条。备注：每次提问由你触发，用 $.model.fork 基于本会话回答（共享提示缓存，有少量费用；会话还没回复时改用 $.model.complete 调 Sonnet，只发问题和窗格里最近 3 条问答）；Use 只填草稿不代你提交；不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/ask) |
 
 ---
 
