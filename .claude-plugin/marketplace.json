@@ -7571,6 +7571,130 @@
         "repo": "GeckoKing9/claude-code-copy-button",
         "sha": "8c442f335120bbe5275a9af5eed219c88f7d77e4"
       }
+    },
+    {
+      "name": "pivo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/KMNervanin/pivo.git",
+        "path": "claude/mod/pivo",
+        "sha": "932fbcddfa182c27909836588a6b766c03f00600"
+      }
+    },
+    {
+      "name": "dialup",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Kvadratni/claude-mods.git",
+        "path": "dialup",
+        "sha": "cd2016ffb67d712f590fafe8164ea676861f01cd"
+      }
+    },
+    {
+      "name": "dep-bouncer",
+      "source": {
+        "source": "github",
+        "repo": "PedroLaRosa/claude-code-dep-bouncer",
+        "sha": "69fa6d918866d89e91f20baca0e4fc3f39dc99b9"
+      }
+    },
+    {
+      "name": "status-ko",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/status-ko",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "memo-pad",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/memo-pad",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "ctx-strip",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/ctx-strip",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "streamer-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/streamer-mode",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "blast-radius-ko",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/blast-radius-ko",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "session-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/swchooi/claude-mods.git",
+        "path": "plugins/session-meter",
+        "sha": "751b03c10cf4a162e65f621e8831da07d2d51ed0"
+      }
+    },
+    {
+      "name": "ctx-cache-band",
+      "source": {
+        "source": "github",
+        "repo": "gregpa/ctx-cache-band",
+        "sha": "ab92a075f189ccb7bc679401743fed6490c94cb7"
+      }
+    },
+    {
+      "name": "calm",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kcgbarbosa/agent-workflow.git",
+        "path": "skills/calm",
+        "sha": "84a675132a2603a8b4492fd4185ee044a7629e68"
+      }
+    },
+    {
+      "name": "agent-lyceum-monitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gogogohuang/agent-lyceum.git",
+        "path": "plugins/agent-lyceum-monitor",
+        "sha": "ae1fa3c4dda1790923f3ab3fedd743a43c57e504"
+      }
+    },
+    {
+      "name": "full-tilt",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vdimarco/rouge-warden.git",
+        "path": "mods/full-tilt",
+        "sha": "9b8176594347ad9f6d5251affea78a4ed1866985"
+      }
+    },
+    {
+      "name": "loon-chicks",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vdimarco/rouge-warden.git",
+        "path": "mods/loon-chicks",
+        "sha": "9b8176594347ad9f6d5251affea78a4ed1866985"
+      }
     }
   ]
 }

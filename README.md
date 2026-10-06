@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 951 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 965 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 951 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 965 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 951 mods, see the Chinese section below.
+For detailed descriptions of all 965 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 951 个精选 Claude Code mods，按类别组织：
+以下是本市场的 965 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -244,6 +244,7 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | session-recap | 你 /clear 一段对话后自动弹出一张回顾卡片：用时、回合数、工具调用、改动的文件与行数、测试运行次数和费用；`/session-recap` 随时查看当前对话的回顾；桌面端可点 Copy image / Save image 把卡片存成 PNG。备注：统计只在本机；复制/保存图片要按按钮才会用 macOS 自带的 qlmanage、sips、osascript，保存到 ~/Pictures/Session Recaps；不联网。 | MIT | [链接](https://github.com/endless-fr/claude-mods/tree/main/mods/session-recap) |
 | benzina | 提示框上方一条「油量表」：用进度条显示套餐 5 小时和每周额度还剩多少、什么时候恢复，以及对话上下文还剩多少，快用完时给一句建议，用量跨过阈值时弹提示；`/benzina` 显示或隐藏。备注：只读 session.usage 和 session.measure，钩子原样传递；纯本机，不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/benzina) |
 | usage-live | 提示框下方加一条彩色用量线：上下文占用、套餐 5 小时和每周额度（细进度条从绿到红，附重置倒计时）以及本会话花费。备注：只读 session.usage，钩子原样传递；额度百分比来自本会话最近一次 API 响应，标 ~ 表示约数；纯 UI，不联网。 | MIT | [链接](https://github.com/bodypas/claude-usage-live) |
+| session-meter | 提示框上方一行彩色状态条：上下文已用/窗口大小、距自动压缩还剩多少百分比、5 小时和 7 天限额百分比及重置倒计时、本会话花费；超过 70% 变黄、90% 变红。备注：只读 $.session.usage，钩子原样传递；显示时 AbovePrompt 不调 next（hasSurvey 除外），会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 |  | [链接](https://github.com/swchooi/claude-mods/tree/main/plugins/session-meter) |
 
 ### 上下文管理 Context Management
 
@@ -284,6 +285,8 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | context-check | 在提示框上方显示上下文窗口用量条（绿、黄、红），用到 70%、85%、95% 时各弹一次提示建议 /compact 或 /clear；/ctx 展开按类别的上下文占用明细（含自动压缩阈值），也可隐藏用量条。备注：只读 Claude Code 自带的上下文用量，不联网、不运行外部命令。 |  | [链接](https://github.com/itzArtha/claude-mods/tree/main/context-check) |
 | cc-context-bar | 提示框上方用「天气」显示上下文有多满（晴、多云、阵雨、暴风、快该 compact 了），加上已用/窗口 token、最近 12 个回合的迷你曲线、上一回合新增多少、输入/输出 token 和估算花费；/context-bar 打开详细窗格（每回合明细、费用拆分、套餐限额）。备注：费用按内置价格表估算，会话实际花费以 Claude Code 报告的为准；空闲时会把其他 mod 在这一栏的内容保留在下方，Claude 工作时不调用 next，期间会盖住其他 mod 在这一栏的内容；记账存在 mod 自己的存储里；不联网、不运行外部命令。 | MIT | [链接](https://github.com/rendi-febrian/rendifebrian-mods/tree/main/cc-context-bar) |
 | band-handoff | 提示框上方的 Handoff 按钮（上下文到 18 万 token 时高亮，阈值可调）：点一下运行 /handoff，自带的 handoff 技能把当前进展、待办和已做的决定写成交接文档，存到项目的 `.claude/handoffs/`，桌面版还会为下一阶段建一张会话卡片；写好后按钮变成「已交接」提示。备注：是 main 里 handoff-relay 的 prompt-band 版本（同源 chalkery，MIT），两个装一个即可；只有你点按钮、输入 /handoff 或让 Claude 写交接时才运行；交接技能会用本机 python3 跑仓库自带的 `phase.py` 算文件名（没有 python3 时 Claude 按同样规则自己算）；tool.call 只读取 Skill/Write 和桌面会话卡片的结果、原样放行；界面英语或乌克兰语；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/handoff) |
+| ctx-strip | 输入框下方一条按类别分色的横条，显示上下文被什么占满，子代理运行时多一行显示它们；`/ctx` 在本机生成 HTML 详细报告（含最占上下文的消息）并用 open/xdg-open 打开。界面为韩语。备注：只读 session.usage 与本会话消息；classic.SessionStart/SubagentStart/SubagentStop 只记录、原样传递，不注入上下文；报告和快照写在本机临时目录；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/ctx-strip) |
+| ctx-cache-band | 提示框上方显示上下文已用/上限、提示缓存剩余时间倒计时和命中率，附一个 compact 按钮。备注：默认开启自动压缩，空闲且缓存剩不到 3 分钟、上下文超过 15 万 token 时会自动执行 /compact（userConfig 里 autoCompact 可关）；AbovePrompt 不调 next（hasSurvey 除外）；不联网。 |  | [链接](https://github.com/gregpa/ctx-cache-band) |
 
 ### UI 与主题 UI & Themes
 
@@ -430,6 +433,10 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | stfu | 去掉 Claude 工作时那行转圈提示里的俏皮动词（如「Sauteing…」），只留用时和 token 数；回合结束那行统一显示为「Worked for 3s」。任务自带的说明文字（如「Running tests」）保持不变。备注：纯显示改动，不联网、不运行外部命令。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/stfu) |
 | turn-band | 提示框上方一行暗色小字，显示上一回合用了多少秒、调用了几次工具。备注：prompt.submit 只用来把计数清零、原样传递，不改写提示；不联网、不运行外部命令。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/turn-band) |
 | host-colors | 按主机名给提示框上方加一条整宽彩色横线并写上主机名，底部模式栏前也加一个同色主机标签，在不同机器上开的会话一眼就能分清；颜色可在源码表里改，没配置的主机自动分配固定颜色。备注：启动时运行一次本机 `hostname`；纯 UI，不联网。 |  | [链接](https://github.com/sshamilton/claude-mods) |
+| pivo | `/tool` 在显示全部、只显示重要、全部隐藏之间切换工具调用行（出错的始终显示）；`/accent` 让你自己的消息加粗并用主题强调色；全屏模式下 `/sidebar` 在右侧停靠状态栏（模型、会话时长、上下文、花费、限额、待办、已配置的 MCP 名称、当前目录）。提示文字为俄语。备注：替换 UserMessage 渲染；只读 ~/.claude.json 和设置里的 MCP 服务器名称；tool.call 只记录 TodoWrite 待办、原样传递；不联网。 | MIT | [链接](https://github.com/KMNervanin/pivo/tree/main/claude/mod/pivo) |
+| status-ko | 把工作中的转圈提示词换成韩语的「正在做什么」（思考中、读取中 · 文件名、执行中 · 命令等），回合结束行改成「模型 时长 · 工具数 · 缓存命中率 · 时刻」，中断、出错、拒绝分别标记。备注：tool.call 只计数、原样传递；只改界面文字；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/status-ko) |
+| calm | 安静模式：`/calm` 开关，隐藏内置工具调用行，把转圈提示换成指挥家主题动画并附上下文面板，可用 `/calm scenes` 换场景。备注：只改界面渲染，只读 session.usage；不联网、不运行外部命令。 |  | [链接](https://github.com/kcgbarbosa/agent-workflow/tree/main/skills/calm) |
+| streamer-mode | 直播、共享屏幕或结对编程时，只在屏幕上遮住密钥和令牌、韩国身份证号/卡号/营业执照号、电话、邮箱、IP、家目录用户名和自定义词；`/streamer` 开关，`/streamer status` 看本会话遮了多少项。界面为韩语。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/streamer-mode) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -499,6 +506,8 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | language-learner | LinguaCC：类似 Duolingo 的德语课程面板（A1 到 C1，共 100 课），/learn 打开：关卡地图、单词介绍、选择、拼写等练习、红心、XP、连胜和每日目标，进度存在本机。备注：发音用 $.audio.speak 调本机语音（需要 macOS 和德语语音 Anna，没有就只显示文字）；只有面板和命令，不碰提示和工具；纯本机，不联网。 |  | [链接](https://github.com/pseudometalhead/CCLanguageLearnerMod) |
 | cooking-puzzles | Claude 工作时在侧边窗格玩数独、印尼语填字游戏（TTS）或诺基亚风格贪吃蛇；你发消息后自动打开窗格，回合结束提示 Claude 已完成，进度和最高分跨会话保存；/sudoku、/tts、/snake 直接打开，/puzzle on、off 开关自动打开，/puzzle ai on、off 切换填字题由 Claude 出题或用内置题库。备注：默认每次发消息都会自动打开并聚焦游戏窗格（/puzzle off 关闭）；填字题默认用 $.model.complete 让 Haiku 按随机主题出题，只发送主题和已用过的答案，不含会话内容；prompt.submit 只在消息发出后打开窗格、原样放行；不联网。 |  | [链接](https://github.com/Tamlica/cooking-puzzles-mod) |
 | greve-generale | 恶搞 mod：Claude 的工具会按设定概率（默认 5.8%）随机「罢工」，弹出提示并拒绝这次调用，罢工理由都是很法式的玩笑（面包烤过头、PSG 又输了……），Claude 可以直接重试。备注：只拒绝（deny）不改写，可在插件设置里调概率，设为 0 即关闭；会打断正常工作，图个乐；说明为法语；纯本机，不联网。 |  | [链接](https://github.com/devsomelife/somelife-claude-mods/tree/main/plugins/greve-generale) |
+| full-tilt | `/full-tilt` 在面板里玩弹球台，用真实物理模拟：z 和 m 拍板、l 发球、k 轻发打技巧球，每局三个球，保留最高分。备注：物理和球台是可读 JS（vendor/physics.js、table.js）；纯本机 UI，不联网。来自大仓库 vdimarco/rouge-warden 的 mods/full-tilt 子目录。 |  | [链接](https://github.com/vdimarco/rouge-warden/tree/main/mods/full-tilt) |
+| dialup | Claude 思考或工作时循环播放老式拨号上网的调制解调器握手声，回合结束就挂断；`/modem` 开关，userConfig 可调音量。备注：用 $.audio 播放插件自带的 wav；不联网。 |  | [链接](https://github.com/Kvadratni/claude-mods/tree/main/dialup) |
 
 ### 安全防护 Security & Safety
 
@@ -574,6 +583,8 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | record-mode | 录屏或直播时用 /record on 打开录制模式：屏幕上的助手回答、你的消息、命令输出、工具调用和结果里的 API 密钥（sk-、ghp_、AKIA、xox、AIza、JWT 等）、KEY/TOKEN/SECRET/PASSWORD 赋值、邮箱、金额和 /Users/用户名 路径都被打码，状态栏显示「● REC」；/record off 关闭，重启后保持上次状态（波兰语提示）。备注：只改屏幕显示（ui.render），**模型收到的仍是原文**，不是脱敏工具；不联网、不运行外部命令。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/record-mode) |
 | band-migrations | 给 Supabase MCP 的 SQL 加一道确认：execute_sql 或 apply_migration 里出现 drop、truncate、delete from、改列类型、alter type 或不带 where 的 update 时，先弹窗问你「Run it / Stop」，选 Stop（或没人回答）就拒绝执行，并让 Claude 不要换个方式重试；普通的新增类 SQL 照常运行，迁移成功后提示一下。备注：按关键词匹配，不是 SQL 解析器，字符串里出现这些词也会问一次；只拒绝不改写；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/migrations) |
 | modo-gravacao | 录屏、直播用的「录制模式」：`/gravar on` 后，屏幕上的你和 Claude 的消息、工具调用和结果、命令输出里的邮箱、令牌、IP、电话、巴西 CPF/CNPJ、金额、用户主目录和 KEY=值 行都会被打码，提示框上方显示红色「正在录制」条；`/gravar off` 关闭；可在插件设置里加自定义打码词或正则。备注：只改屏幕显示，模型读到的内容和保存的会话不变；只能降低风险、不能保证全部遮住；纯本机，不联网；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/modo-gravacao) |
+| dep-bouncer | Bash 里执行 npm/pnpm/yarn/bun 安装前先核查包：版本发布不到 72 小时、周下载量低于 300、和热门包只差一个字符（疑似抢注）、新版本新增了安装脚本、或公共源上不存在时，就拒绝执行并提示你自己确认后再装。备注：只拒绝不改写；会把待装的包名发到 registry.npmjs.org 和 api.npmjs.org 查询（只发包名）；查不到源时也会拒绝。 |  | [链接](https://github.com/PedroLaRosa/claude-code-dep-bouncer) |
+| blast-radius-ko | 官方 blast-radius 示例的韩语增强版：rm -rf、git reset --hard、git clean、强推、prisma db push/migrate reset、psql/mysql 的 DROP/TRUNCATE、docker 删卷等危险命令先暂停，在面板里显示影响范围（要删的文件数、会丢的提交等），按「실행」继续、「취소」拒绝。备注：只拒绝不改写；用本机只读的 bash/git 命令估算影响；不联网。基于 Anthropic 的 Apache-2.0 示例，仓库许可证为 MIT。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/blast-radius-ko) |
 
 ### 开发工具 Dev Tools
 
@@ -730,6 +741,7 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | squad-board | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。CTO 会话里绘制提示框上方区域时不调用 next，会盖住其他 mod 在这一栏的内容。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
 | plugin-recorder | 子代理运行时在提示框上方显示一行进度（如「tdd · 12 个子代理完成 · tdd-runner 运行 4 分钟 · 本回合 38 分钟」），子代理调用失败、被拒或启动被拒时立刻弹提示；同时按会话记一份插件运行日志（调用了哪个插件的命令/技能、子代理类型、状态、耗时、token 数）。备注：日志只记元数据，不记提示词、命令参数、工具输入输出、文件内容或完整路径（项目只记目录名），写在 `~/.claude/plugins/data/plugin-recorder-*/sessions/` 的 jsonl 里，可用同仓库的 retro 插件或 jq 查看；只记带插件前缀的命令/技能；tool.call 只计时、原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/juanmhidalgo/claude-plugins/tree/main/plugin-recorder) |
 | vivarium | 提示框上方一条像素 Clawd 小带：每个子代理一只，工作时走动、完成后睡觉、失败时趴倒，大小随模型变化；点一只可看它的类型、任务、用时和最后一个工具；`/vivarium` 显示或隐藏。备注：只观察 agent.spawn、tool.call、turn.complete 并原样传递；不联网、不运行外部命令。 |  | [链接](https://github.com/claytonmgravatt/claude-mods/tree/main/plugins/vivarium) |
+| loon-chicks | 子代理变成潜鸟雏鸟，跟在提示框上方的潜鸟后面游，完成的游进巢里，失败或被停止的被鳗鱼叼走；`/chicks` 列出本会话的子代理。备注：tool.call(Agent)、agent.spawn、classic.SubagentStart/SubagentStop 只记录、原样传递；AbovePrompt 保留其他 mod 的内容；不联网。来自 vdimarco/rouge-warden 的 mods/loon-chicks 子目录。 |  | [链接](https://github.com/vdimarco/rouge-warden/tree/main/mods/loon-chicks) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -915,6 +927,8 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | band-pending | /pending 打开侧边窗格，显示一个 Markdown 待办清单（`- [ ]` 条目，按 ## 标题分组，支持 📅 日期），点条目就在文件里打勾/取消；提示框上方显示待办按钮。备注：清单文件路径要在插件设置里填写；会直接改写这个文件里对应的那一行（改之前先确认该行没被别处改过）；属于 prompt-band 套件，可单独安装；不联网、不运行外部命令。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/pending) |
 | subtask-icons | Claude 最后一条回答下方出现一个「⑂ Subtask」按钮，点开列出回答里的编号项/要点，选一项就把 `/subtask <该项内容>` 填进输入框（不发送，可再补几句再回车；输入框里已有 /subtask 时再选会追加到新一行）；「Pin list」把这份清单钉在提示框上方，用 /subtask 发过的项打 ⑂；/st 打开选择窗格、/st N 直接填第 N 项、/st pin/unpin 钉住或取消。备注：/subtask 是 Claude Code 自带命令，本 mod 只观察它来标记已发项、原样放行；只填输入框、从不自动发送；不联网、不运行外部命令。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/subtask-icons) |
 | wayfinder-maps | `/wayfinder-maps` 打开侧边抽屉，列出项目里所有 wayfinder 地图和规格（Markdown 文件或 GitHub issue），显示工单、状态、进度条和依赖关系图，可筛选只看可开工或未完成的工单。备注：点「Work next」「Work this ticket」按钮时，会以你的名义发出可配置的提示（默认 `/wayfinder {map}`、`/implement {ticket}`），不点按钮不会自动发送；GitHub 部分通过本机 gh 读取 issue；面板打开时每 30 秒刷新；需配合 wayfinder 技能使用；不直接联网。 | MIT | [链接](https://github.com/Yuvalz19500/claude-mods/tree/main/plugins/wayfinder-maps) |
+| memo-pad | Claude 工作时用 `/m` 打开小记事本，记下接下来要让它做的事；每条有「넣기」按钮把内容填进输入框（不自动发送，要你自己回车）和删除按钮；有备忘时输入框下方提示条数；按工作目录分别保存。界面为韩语。备注：只在你按按钮时用 $.prompt.fill 填输入框，不自动提交、不改写已提交的提示；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/memo-pad) |
+| agent-lyceum-monitor | 显示 agent-lyceum 运行状态：状态栏一行、完成或失败时弹提示，`/team-monitor` 打开面板，可同时盯多个项目。备注：需要本机装好 agent-lyceum CLI（没装时只记一条警告）；每 3 秒用 $.process 调本机 `agent-lyceum status --json`；不联网。 | MIT | [链接](https://github.com/gogogohuang/agent-lyceum/tree/main/plugins/agent-lyceum-monitor) |
 
 ### 外部集成 External Integrations
 
