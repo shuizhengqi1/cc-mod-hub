@@ -8,7 +8,7 @@
       "name": "diff",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code.git",
         "path": "mods/diff"
       }
     },
@@ -16,7 +16,7 @@
       "name": "agents-md",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code.git",
         "path": "mods/agents-md"
       }
     },
@@ -24,7 +24,7 @@
       "name": "sec-default",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code.git",
         "path": "mods/sec-default"
       }
     },
@@ -32,7 +32,7 @@
       "name": "telemetry",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code",
+        "url": "https://github.com/anthropics/claude-code.git",
         "path": "mods/telemetry"
       }
     },
@@ -40,7 +40,7 @@
       "name": "token-weather",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code-playground",
+        "url": "https://github.com/anthropics/claude-code-playground.git",
         "path": "claude-code/mods/token-weather"
       }
     },
@@ -48,7 +48,7 @@
       "name": "blast-radius",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code-playground",
+        "url": "https://github.com/anthropics/claude-code-playground.git",
         "path": "claude-code/mods/blast-radius"
       }
     },
@@ -56,7 +56,7 @@
       "name": "replay-theater",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-code-playground",
+        "url": "https://github.com/anthropics/claude-code-playground.git",
         "path": "claude-code/mods/replay-theater"
       }
     },
@@ -70,8 +70,8 @@
     {
       "name": "cache-refresher",
       "source": {
-        "source": "git",
-        "url": "olddonkey/cache-refresher"
+        "source": "github",
+        "repo": "olddonkey/cache-refresher"
       }
     },
     {
@@ -190,7 +190,7 @@
       "name": "usage-band",
       "source": {
         "source": "git-subdir",
-        "url": "JetsonChan/CC-Usage-Band",
+        "url": "https://github.com/JetsonChan/CC-Usage-Band.git",
         "path": "usage-band"
       }
     },
@@ -205,7 +205,7 @@
       "name": "trek-band",
       "source": {
         "source": "git-subdir",
-        "url": "rb17080/trek-band",
+        "url": "https://github.com/rb17080/trek-band.git",
         "path": "plugins/trek-band"
       }
     },
@@ -213,7 +213,7 @@
       "name": "clawd",
       "source": {
         "source": "git-subdir",
-        "url": "raresmun/claude-mods",
+        "url": "https://github.com/raresmun/claude-mods.git",
         "path": "plugins/clawd"
       }
     },
@@ -221,7 +221,7 @@
       "name": "cctop",
       "source": {
         "source": "git-subdir",
-        "url": "tomstagl/cctop",
+        "url": "https://github.com/tomstagl/cctop.git",
         "path": "plugin"
       }
     },
@@ -229,7 +229,7 @@
       "name": "terminal-browser",
       "source": {
         "source": "git-subdir",
-        "url": "zenbu-labs/terminal-browser",
+        "url": "https://github.com/zenbu-labs/terminal-browser.git",
         "path": "claude-code-plugin"
       }
     },
@@ -244,7 +244,7 @@
       "name": "claude-mermaid",
       "source": {
         "source": "git-subdir",
-        "url": "galElmalah/claude-mods",
+        "url": "https://github.com/galElmalah/claude-mods.git",
         "path": "claude-mermaid"
       }
     },
@@ -252,7 +252,7 @@
       "name": "claude-queue",
       "source": {
         "source": "git-subdir",
-        "url": "galElmalah/claude-mods",
+        "url": "https://github.com/galElmalah/claude-mods.git",
         "path": "claude-queue"
       }
     },
@@ -302,7 +302,7 @@
       "name": "editor-context",
       "source": {
         "source": "git-subdir",
-        "url": "talbarina/claude-editor-context",
+        "url": "https://github.com/talbarina/claude-editor-context.git",
         "path": "plugins/editor-context"
       }
     },
@@ -310,7 +310,7 @@
       "name": "prompter",
       "source": {
         "source": "git-subdir",
-        "url": "niijoey/prompter-mod",
+        "url": "https://github.com/niijoey/prompter-mod.git",
         "path": "plugins/prompter"
       }
     },
@@ -318,7 +318,7 @@
       "name": "secret-redactor",
       "source": {
         "source": "git-subdir",
-        "url": "ray-amjad/awesome-claude-code-function-hooks",
+        "url": "https://github.com/ray-amjad/awesome-claude-code-function-hooks.git",
         "path": "plugins/secret-redactor"
       }
     },
@@ -326,7 +326,7 @@
       "name": "vercel-deploy-status",
       "source": {
         "source": "git-subdir",
-        "url": "ray-amjad/awesome-claude-code-function-hooks",
+        "url": "https://github.com/ray-amjad/awesome-claude-code-function-hooks.git",
         "path": "plugins/vercel-deploy-status"
       }
     },
@@ -334,7 +334,7 @@
       "name": "pii-guard",
       "source": {
         "source": "git-subdir",
-        "url": "danyuchn/pii-guard",
+        "url": "https://github.com/danyuchn/pii-guard.git",
         "path": "examples/claude-code-mod"
       }
     },
@@ -342,7 +342,7 @@
       "name": "prompt-rail",
       "source": {
         "source": "git-subdir",
-        "url": "oikon48/prompt-rail",
+        "url": "https://github.com/oikon48/prompt-rail.git",
         "path": "plugins/prompt-rail"
       }
     },
@@ -357,7 +357,7 @@
       "name": "plan-progress",
       "source": {
         "source": "git-subdir",
-        "url": "zycck/claude-mods",
+        "url": "https://github.com/zycck/claude-mods.git",
         "path": "plugins/plan-progress"
       }
     },
@@ -365,7 +365,7 @@
       "name": "context-lens",
       "source": {
         "source": "git-subdir",
-        "url": "Arunjay4213/claude-mods",
+        "url": "https://github.com/Arunjay4213/claude-mods.git",
         "path": "plugins/context-lens"
       }
     },
@@ -373,7 +373,7 @@
       "name": "budget-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Arunjay4213/claude-mods",
+        "url": "https://github.com/Arunjay4213/claude-mods.git",
         "path": "plugins/budget-guard"
       }
     },
@@ -381,7 +381,7 @@
       "name": "quota-meter",
       "source": {
         "source": "git-subdir",
-        "url": "Arunjay4213/claude-mods",
+        "url": "https://github.com/Arunjay4213/claude-mods.git",
         "path": "plugins/quota-meter"
       }
     },
@@ -389,7 +389,7 @@
       "name": "token-ledger",
       "source": {
         "source": "git-subdir",
-        "url": "Arunjay4213/claude-mods",
+        "url": "https://github.com/Arunjay4213/claude-mods.git",
         "path": "plugins/token-ledger"
       }
     },
@@ -397,32 +397,26 @@
       "name": "gh-ci-status",
       "source": {
         "source": "git-subdir",
-        "url": "diegorv/claude-functions-hook",
-        "path": "plugins/gh-ci-status"
+        "url": "https://github.com/diegorv/claude-mods-diegorv.git",
+        "path": "plugins/gh-ci-status",
+        "sha": "e4c7eca744b3c9c9b88b200afe9f716ee7b17db4"
       }
     },
     {
       "name": "time",
       "source": {
         "source": "git-subdir",
-        "url": "diegorv/claude-functions-hook",
-        "path": "plugins/time"
+        "url": "https://github.com/diegorv/claude-mods-diegorv.git",
+        "path": "plugins/time",
+        "sha": "e4c7eca744b3c9c9b88b200afe9f716ee7b17db4"
       }
     },
     {
       "name": "firstmate-calm",
       "source": {
         "source": "git-subdir",
-        "url": "kunchenguid/firstmate",
+        "url": "https://github.com/kunchenguid/firstmate.git",
         "path": ".claude/mods/firstmate-calm"
-      }
-    },
-    {
-      "name": "multi-core",
-      "source": {
-        "source": "git-subdir",
-        "url": "greenpolo/cc-multi-cli-plugin",
-        "path": "plugins/multi-core"
       }
     },
     {
@@ -457,7 +451,7 @@
       "name": "eta",
       "source": {
         "source": "git-subdir",
-        "url": "hamza-siddiq/claude-eta",
+        "url": "https://github.com/hamza-siddiq/claude-eta.git",
         "path": "eta"
       }
     },
@@ -465,7 +459,7 @@
       "name": "md-prompt",
       "source": {
         "source": "git-subdir",
-        "url": "nogu66/md-prompt",
+        "url": "https://github.com/nogu66/md-prompt.git",
         "path": "plugins/md-prompt"
       }
     },
@@ -536,7 +530,7 @@
       "name": "next-steps",
       "source": {
         "source": "git-subdir",
-        "url": "anthropics/claude-plugins-community",
+        "url": "https://github.com/anthropics/claude-plugins-community.git",
         "path": "next-steps"
       }
     },
@@ -558,7 +552,7 @@
       "name": "dev-dash",
       "source": {
         "source": "git-subdir",
-        "url": "RanaRauff/claude-dev-dashboard",
+        "url": "https://github.com/RanaRauff/claude-dev-dashboard.git",
         "path": "plugins/dev-dash"
       }
     },
@@ -566,7 +560,7 @@
       "name": "avatar7",
       "source": {
         "source": "git-subdir",
-        "url": "KTCrisis/flux7-mods",
+        "url": "https://github.com/KTCrisis/flux7-mods.git",
         "path": "avatar7"
       }
     },
@@ -574,7 +568,7 @@
       "name": "usage-bell",
       "source": {
         "source": "git-subdir",
-        "url": "KTCrisis/flux7-mods",
+        "url": "https://github.com/KTCrisis/flux7-mods.git",
         "path": "usage-bell"
       }
     },
@@ -582,7 +576,7 @@
       "name": "mesh7-pane",
       "source": {
         "source": "git-subdir",
-        "url": "KTCrisis/flux7-mods",
+        "url": "https://github.com/KTCrisis/flux7-mods.git",
         "path": "mesh7-pane"
       }
     },
@@ -590,7 +584,7 @@
       "name": "jukebox7",
       "source": {
         "source": "git-subdir",
-        "url": "KTCrisis/flux7-mods",
+        "url": "https://github.com/KTCrisis/flux7-mods.git",
         "path": "jukebox7"
       }
     },
@@ -598,7 +592,7 @@
       "name": "atelier-bell",
       "source": {
         "source": "git-subdir",
-        "url": "KTCrisis/flux7-mods",
+        "url": "https://github.com/KTCrisis/flux7-mods.git",
         "path": "atelier-bell"
       }
     },
@@ -606,7 +600,7 @@
       "name": "fable-pin",
       "source": {
         "source": "git-subdir",
-        "url": "karanb192/claude-code-mods",
+        "url": "https://github.com/karanb192/claude-code-mods.git",
         "path": "plugins/fable-pin"
       }
     },
@@ -614,40 +608,8 @@
       "name": "image-peek",
       "source": {
         "source": "git-subdir",
-        "url": "karanb192/claude-code-mods",
+        "url": "https://github.com/karanb192/claude-code-mods.git",
         "path": "plugins/image-peek"
-      }
-    },
-    {
-      "name": "git-gates",
-      "source": {
-        "source": "git-subdir",
-        "url": "bahaospanov/claude-mods",
-        "path": "git-gates"
-      }
-    },
-    {
-      "name": "lean-comments",
-      "source": {
-        "source": "git-subdir",
-        "url": "bahaospanov/claude-mods",
-        "path": "lean-comments"
-      }
-    },
-    {
-      "name": "lean-docs",
-      "source": {
-        "source": "git-subdir",
-        "url": "bahaospanov/claude-mods",
-        "path": "lean-docs"
-      }
-    },
-    {
-      "name": "lean-scripts",
-      "source": {
-        "source": "git-subdir",
-        "url": "bahaospanov/claude-mods",
-        "path": "lean-scripts"
       }
     },
     {
@@ -668,7 +630,7 @@
       "name": "tw-stock-mod",
       "source": {
         "source": "git-subdir",
-        "url": "darrell-tw/darrelltw-mods",
+        "url": "https://github.com/darrell-tw/darrelltw-mods.git",
         "path": "mods/tw-stock-mod"
       }
     },
@@ -676,7 +638,7 @@
       "name": "agent-router",
       "source": {
         "source": "git-subdir",
-        "url": "alexandernicholson/agent-router",
+        "url": "https://github.com/alexandernicholson/agent-router.git",
         "path": "agent-router"
       }
     },
@@ -691,7 +653,7 @@
       "name": "file-explorer",
       "source": {
         "source": "git-subdir",
-        "url": "tak-kam/claude-mods",
+        "url": "https://github.com/tak-kam/claude-mods.git",
         "path": "file-explorer"
       }
     },
@@ -699,7 +661,7 @@
       "name": "radio",
       "source": {
         "source": "git-subdir",
-        "url": "sivori/claude-mods",
+        "url": "https://github.com/sivori/claude-mods.git",
         "path": "plugins/radio"
       }
     },
@@ -707,7 +669,7 @@
       "name": "spend-meter",
       "source": {
         "source": "git-subdir",
-        "url": "sivori/claude-mods",
+        "url": "https://github.com/sivori/claude-mods.git",
         "path": "plugins/spend-meter"
       }
     },
@@ -715,7 +677,7 @@
       "name": "commit-drift",
       "source": {
         "source": "git-subdir",
-        "url": "sivori/claude-mods",
+        "url": "https://github.com/sivori/claude-mods.git",
         "path": "plugins/commit-drift"
       }
     },
@@ -723,7 +685,7 @@
       "name": "backlog-band",
       "source": {
         "source": "git-subdir",
-        "url": "sivori/claude-mods",
+        "url": "https://github.com/sivori/claude-mods.git",
         "path": "plugins/backlog-band"
       }
     },
@@ -731,7 +693,7 @@
       "name": "commonplace-pane",
       "source": {
         "source": "git-subdir",
-        "url": "sivori/claude-mods",
+        "url": "https://github.com/sivori/claude-mods.git",
         "path": "plugins/commonplace-pane"
       }
     },
@@ -739,7 +701,7 @@
       "name": "mize-coworker",
       "source": {
         "source": "git-subdir",
-        "url": "TheMizeGuy/clawdagotchi",
+        "url": "https://github.com/TheMizeGuy/clawdagotchi.git",
         "path": "plugins/mize-coworker"
       }
     },
@@ -747,7 +709,7 @@
       "name": "usage-meter",
       "source": {
         "source": "git-subdir",
-        "url": "HolyGrail/claude-mods",
+        "url": "https://github.com/HolyGrail/claude-mods.git",
         "path": "plugins/usage-meter"
       }
     },
@@ -755,7 +717,7 @@
       "name": "notice-board",
       "source": {
         "source": "git-subdir",
-        "url": "HolyGrail/claude-mods",
+        "url": "https://github.com/HolyGrail/claude-mods.git",
         "path": "plugins/notice-board"
       }
     },
@@ -763,7 +725,7 @@
       "name": "pr-relay",
       "source": {
         "source": "git-subdir",
-        "url": "HolyGrail/claude-mods",
+        "url": "https://github.com/HolyGrail/claude-mods.git",
         "path": "plugins/pr-relay"
       }
     },
@@ -771,7 +733,7 @@
       "name": "yt-control",
       "source": {
         "source": "git-subdir",
-        "url": "Unayung/cc-mods-youtube",
+        "url": "https://github.com/Unayung/cc-mods-youtube.git",
         "path": "plugins/yt-control"
       }
     },
@@ -779,7 +741,7 @@
       "name": "zsh-safe",
       "source": {
         "source": "git-subdir",
-        "url": "HolyGrail/claude-mods",
+        "url": "https://github.com/HolyGrail/claude-mods.git",
         "path": "plugins/zsh-safe"
       }
     },
@@ -787,7 +749,7 @@
       "name": "compact-tools",
       "source": {
         "source": "git-subdir",
-        "url": "AJclemendor/my-mods",
+        "url": "https://github.com/AJclemendor/my-mods.git",
         "path": "plugins/compact-tools"
       }
     },
@@ -795,7 +757,7 @@
       "name": "live-thinking",
       "source": {
         "source": "git-subdir",
-        "url": "AJclemendor/my-mods",
+        "url": "https://github.com/AJclemendor/my-mods.git",
         "path": "plugins/live-thinking"
       }
     },
@@ -803,7 +765,7 @@
       "name": "sidebar-controls",
       "source": {
         "source": "git-subdir",
-        "url": "AJclemendor/my-mods",
+        "url": "https://github.com/AJclemendor/my-mods.git",
         "path": "plugins/sidebar-controls"
       }
     },
@@ -811,7 +773,7 @@
       "name": "pr-pane",
       "source": {
         "source": "git-subdir",
-        "url": "ASRagab/asragab-claude-marketplace",
+        "url": "https://github.com/ASRagab/asragab-claude-marketplace.git",
         "path": "plugins/pr-pane"
       }
     },
@@ -819,7 +781,7 @@
       "name": "hyday-pet",
       "source": {
         "source": "git-subdir",
-        "url": "mukiwu/muki-ai-plugins",
+        "url": "https://github.com/mukiwu/muki-ai-plugins.git",
         "path": "plugins/hyday-pet"
       }
     },
@@ -827,7 +789,7 @@
       "name": "flash-veille",
       "source": {
         "source": "git-subdir",
-        "url": "camilleroux/flash-veille",
+        "url": "https://github.com/camilleroux/flash-veille.git",
         "path": "plugins/flash-veille"
       }
     },
@@ -835,7 +797,7 @@
       "name": "pulse-cc",
       "source": {
         "source": "git-subdir",
-        "url": "fatwang2/Pulse",
+        "url": "https://github.com/fatwang2/Pulse.git",
         "path": "plugins/claude-code"
       }
     },
@@ -843,7 +805,7 @@
       "name": "action-pin",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/action-pin"
       }
     },
@@ -851,7 +813,7 @@
       "name": "ask-autopick",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/ask-autopick"
       }
     },
@@ -859,22 +821,22 @@
       "name": "bg-tasks",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/bg-tasks"
       }
     },
     {
       "name": "bw-peek",
       "source": {
-        "source": "git",
-        "url": "iautom8things/bw-peek"
+        "source": "github",
+        "repo": "iautom8things/bw-peek"
       }
     },
     {
       "name": "bughunt",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/bughunt"
       }
     },
@@ -882,7 +844,7 @@
       "name": "cache-warm",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/cache-warm"
       }
     },
@@ -890,7 +852,7 @@
       "name": "commit-cadence",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/commit-cadence"
       }
     },
@@ -898,7 +860,7 @@
       "name": "config-parse",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/config-parse"
       }
     },
@@ -906,7 +868,7 @@
       "name": "context-restore",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/context-restore"
       }
     },
@@ -914,7 +876,7 @@
       "name": "contract-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/contract-watch"
       }
     },
@@ -922,7 +884,7 @@
       "name": "council",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/council"
       }
     },
@@ -930,7 +892,7 @@
       "name": "dep-sentinel",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/dep-sentinel"
       }
     },
@@ -938,7 +900,7 @@
       "name": "desk-notify",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/desk-notify"
       }
     },
@@ -946,7 +908,7 @@
       "name": "diagram-render",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/diagram-render"
       }
     },
@@ -954,7 +916,7 @@
       "name": "disk-janitor",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/disk-janitor"
       }
     },
@@ -962,7 +924,7 @@
       "name": "doc-drift-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/doc-drift-watch"
       }
     },
@@ -970,7 +932,7 @@
       "name": "edit-loop",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/edit-loop"
       }
     },
@@ -978,7 +940,7 @@
       "name": "effort-auto",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/effort-auto"
       }
     },
@@ -986,7 +948,7 @@
       "name": "env-sync",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/env-sync"
       }
     },
@@ -994,7 +956,7 @@
       "name": "error-poke",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/error-poke"
       }
     },
@@ -1002,7 +964,7 @@
       "name": "flaky-memory",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/flaky-memory"
       }
     },
@@ -1010,7 +972,7 @@
       "name": "gemini-advisor",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/gemini-advisor"
       }
     },
@@ -1018,7 +980,7 @@
       "name": "gemini-compact",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/gemini-compact"
       }
     },
@@ -1026,7 +988,7 @@
       "name": "gemini-core",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/gemini-core"
       }
     },
@@ -1034,7 +996,7 @@
       "name": "gemini-plan-review",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/gemini-plan-review"
       }
     },
@@ -1042,7 +1004,7 @@
       "name": "gemini-review",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/gemini-review"
       }
     },
@@ -1050,7 +1012,7 @@
       "name": "git-commit",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/git-commit"
       }
     },
@@ -1058,7 +1020,7 @@
       "name": "git-sidebar",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/ui/git-sidebar"
       }
     },
@@ -1066,7 +1028,7 @@
       "name": "i18n-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/i18n-watch"
       }
     },
@@ -1074,7 +1036,7 @@
       "name": "idle-art",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/idle-art"
       }
     },
@@ -1082,7 +1044,7 @@
       "name": "limit-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/limit-watch"
       }
     },
@@ -1090,7 +1052,7 @@
       "name": "lockfile-sync",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/lockfile-sync"
       }
     },
@@ -1098,7 +1060,7 @@
       "name": "mcp-doctor",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/mcp-doctor"
       }
     },
@@ -1106,7 +1068,7 @@
       "name": "memory-save",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/memory-save"
       }
     },
@@ -1114,7 +1076,7 @@
       "name": "mod-doctor",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/mod-doctor"
       }
     },
@@ -1122,7 +1084,7 @@
       "name": "mod-hub",
       "source": {
         "source": "git-subdir",
-        "url": "eshin087/claude-code-mods",
+        "url": "https://github.com/eshin087/claude-code-mods.git",
         "path": "mod-hub"
       }
     },
@@ -1130,7 +1092,7 @@
       "name": "orphan-server",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/orphan-server"
       }
     },
@@ -1138,7 +1100,7 @@
       "name": "output-flood",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/output-flood"
       }
     },
@@ -1146,22 +1108,22 @@
       "name": "pin-note",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/pin-note"
       }
     },
     {
       "name": "pin-message",
       "source": {
-        "source": "git",
-        "url": "GruperTal/claude-pin-message"
+        "source": "github",
+        "repo": "GruperTal/claude-pin-message"
       }
     },
     {
       "name": "probe-runner",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/probe-runner"
       }
     },
@@ -1169,7 +1131,7 @@
       "name": "proc-registry",
       "source": {
         "source": "git-subdir",
-        "url": "Chronosauros/claude-mods",
+        "url": "https://github.com/Chronosauros/claude-mods.git",
         "path": "plugins/proc-registry"
       }
     },
@@ -1177,7 +1139,7 @@
       "name": "prompt-deck",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/prompt-deck"
       }
     },
@@ -1185,7 +1147,7 @@
       "name": "prompt-offload",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/prompt-offload"
       }
     },
@@ -1193,7 +1155,7 @@
       "name": "prompt-time",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/prompt-time"
       }
     },
@@ -1201,7 +1163,7 @@
       "name": "sage-memory",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/sage-memory"
       }
     },
@@ -1209,7 +1171,7 @@
       "name": "self-command",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/self-command"
       }
     },
@@ -1217,7 +1179,7 @@
       "name": "session-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/session-watch"
       }
     },
@@ -1225,7 +1187,7 @@
       "name": "severance-mdr",
       "source": {
         "source": "git-subdir",
-        "url": "magnuswiderberg/claude-code-mods",
+        "url": "https://github.com/magnuswiderberg/claude-code-mods.git",
         "path": "plugins/severance-mdr"
       }
     },
@@ -1233,7 +1195,7 @@
       "name": "shot-inline",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/shot-inline"
       }
     },
@@ -1241,7 +1203,7 @@
       "name": "shot-view",
       "source": {
         "source": "git-subdir",
-        "url": "Bearisbug/cc-mods",
+        "url": "https://github.com/Bearisbug/cc-mods.git",
         "path": "shot-view"
       }
     },
@@ -1249,7 +1211,7 @@
       "name": "sidebar",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/sidebar"
       }
     },
@@ -1257,7 +1219,7 @@
       "name": "slash-chain",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/slash-chain"
       }
     },
@@ -1265,7 +1227,7 @@
       "name": "sql-concat-watch",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/sql-concat-watch"
       }
     },
@@ -1273,7 +1235,7 @@
       "name": "storage-guard",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/storage-guard"
       }
     },
@@ -1281,7 +1243,7 @@
       "name": "subagent-ledger",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/subagent-ledger"
       }
     },
@@ -1289,7 +1251,7 @@
       "name": "task-poke",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/task-poke"
       }
     },
@@ -1297,7 +1259,7 @@
       "name": "task-eta",
       "source": {
         "source": "git-subdir",
-        "url": "Bearisbug/cc-mods",
+        "url": "https://github.com/Bearisbug/cc-mods.git",
         "path": "task-eta"
       }
     },
@@ -1305,7 +1267,7 @@
       "name": "tool-coach",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/tool-coach"
       }
     },
@@ -1313,7 +1275,7 @@
       "name": "ua-fallback",
       "source": {
         "source": "git-subdir",
-        "url": "KilimcininKorOglu/claude-code-mods",
+        "url": "https://github.com/KilimcininKorOglu/claude-code-mods.git",
         "path": "plugins/ua-fallback"
       }
     },
@@ -1328,7 +1290,7 @@
       "name": "cockpit",
       "source": {
         "source": "git-subdir",
-        "url": "Brxerq/claude-cockpit",
+        "url": "https://github.com/Brxerq/claude-cockpit.git",
         "path": "plugins/cockpit"
       }
     },
@@ -1350,7 +1312,7 @@
       "name": "context-tokens",
       "source": {
         "source": "git-subdir",
-        "url": "0xBADC0FFEE/claude-code-mods",
+        "url": "https://github.com/0xBADC0FFEE/claude-code-mods.git",
         "path": "context-tokens"
       }
     },
@@ -1365,7 +1327,7 @@
       "name": "context-weather",
       "source": {
         "source": "git-subdir",
-        "url": "Chronosauros/claude-mods",
+        "url": "https://github.com/Chronosauros/claude-mods.git",
         "path": "plugins/context-weather"
       }
     },
@@ -1401,7 +1363,7 @@
       "name": "burn-meter",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "burn-meter"
       }
     },
@@ -1416,7 +1378,7 @@
       "name": "party",
       "source": {
         "source": "git-subdir",
-        "url": "pourya7/claude-code-mods",
+        "url": "https://github.com/pourya7/claude-code-mods.git",
         "path": "party"
       }
     },
@@ -1431,7 +1393,7 @@
       "name": "typing-speed",
       "source": {
         "source": "git-subdir",
-        "url": "borabiricik/claude-mods",
+        "url": "https://github.com/borabiricik/claude-mods.git",
         "path": "plugins/typing-speed"
       }
     },
@@ -1439,7 +1401,7 @@
       "name": "context-band",
       "source": {
         "source": "git-subdir",
-        "url": "EricJamie/claude-code-mods",
+        "url": "https://github.com/EricJamie/claude-code-mods.git",
         "path": "plugins/context-band"
       }
     },
@@ -1496,7 +1458,7 @@
       "name": "minefield",
       "source": {
         "source": "git-subdir",
-        "url": "reporails/arcade",
+        "url": "https://github.com/reporails/arcade.git",
         "path": "minefield"
       }
     },
@@ -1504,7 +1466,7 @@
       "name": "prayer-times",
       "source": {
         "source": "git-subdir",
-        "url": "mkbuilds4/mods",
+        "url": "https://github.com/mkbuilds4/mods.git",
         "path": "plugins/prayer-times"
       }
     },
@@ -1512,7 +1474,7 @@
       "name": "limit-bars",
       "source": {
         "source": "git-subdir",
-        "url": "LegendSilvia/claude-code-mods",
+        "url": "https://github.com/LegendSilvia/claude-code-mods.git",
         "path": "plugins/limit-bars"
       }
     },
@@ -1520,7 +1482,7 @@
       "name": "transcript-fx",
       "source": {
         "source": "git-subdir",
-        "url": "LegendSilvia/claude-code-mods",
+        "url": "https://github.com/LegendSilvia/claude-code-mods.git",
         "path": "plugins/transcript-fx"
       }
     },
@@ -1528,7 +1490,7 @@
       "name": "reply-highlight",
       "source": {
         "source": "git-subdir",
-        "url": "LegendSilvia/claude-code-mods",
+        "url": "https://github.com/LegendSilvia/claude-code-mods.git",
         "path": "plugins/reply-highlight"
       }
     },
@@ -1536,7 +1498,7 @@
       "name": "backlog-pane",
       "source": {
         "source": "git-subdir",
-        "url": "LegendSilvia/claude-code-mods",
+        "url": "https://github.com/LegendSilvia/claude-code-mods.git",
         "path": "plugins/backlog-pane"
       }
     },
@@ -1544,7 +1506,7 @@
       "name": "pro-hud",
       "source": {
         "source": "git-subdir",
-        "url": "VedantAndhale/claude-pro-kit",
+        "url": "https://github.com/VedantAndhale/claude-pro-kit.git",
         "path": "plugins/pro-hud"
       }
     },
@@ -1552,7 +1514,7 @@
       "name": "cache-clock",
       "source": {
         "source": "git-subdir",
-        "url": "VedantAndhale/claude-pro-kit",
+        "url": "https://github.com/VedantAndhale/claude-pro-kit.git",
         "path": "plugins/cache-clock"
       }
     },
@@ -1560,7 +1522,7 @@
       "name": "context-xray",
       "source": {
         "source": "git-subdir",
-        "url": "VedantAndhale/claude-pro-kit",
+        "url": "https://github.com/VedantAndhale/claude-pro-kit.git",
         "path": "plugins/context-xray"
       }
     },
@@ -1568,7 +1530,7 @@
       "name": "session-receipt",
       "source": {
         "source": "git-subdir",
-        "url": "VedantAndhale/claude-pro-kit",
+        "url": "https://github.com/VedantAndhale/claude-pro-kit.git",
         "path": "plugins/session-receipt"
       }
     },
@@ -1576,7 +1538,7 @@
       "name": "cache-timer",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "cache-timer"
       }
     },
@@ -1584,7 +1546,7 @@
       "name": "turn-timeline",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "turn-timeline"
       }
     },
@@ -1592,7 +1554,7 @@
       "name": "turn-footer",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "turn-footer"
       }
     },
@@ -1600,7 +1562,7 @@
       "name": "change-ledger",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "change-ledger"
       }
     },
@@ -1608,7 +1570,7 @@
       "name": "leftovers",
       "source": {
         "source": "git-subdir",
-        "url": "homieyangg/claude-code-mods",
+        "url": "https://github.com/homieyangg/claude-code-mods.git",
         "path": "leftovers"
       }
     },
@@ -1616,7 +1578,7 @@
       "name": "deadlines",
       "source": {
         "source": "git-subdir",
-        "url": "richardcsuwandi/claude-mods",
+        "url": "https://github.com/richardcsuwandi/claude-mods.git",
         "path": "plugins/deadlines"
       }
     },
@@ -1624,7 +1586,7 @@
       "name": "cc-idle",
       "source": {
         "source": "git-subdir",
-        "url": "RichardAtCT/cc-idle",
+        "url": "https://github.com/RichardAtCT/cc-idle.git",
         "path": "plugins/cc-idle"
       }
     },
@@ -1674,7 +1636,7 @@
       "name": "usage-bars",
       "source": {
         "source": "git-subdir",
-        "url": "AndreasOA/claude-code-mods",
+        "url": "https://github.com/AndreasOA/claude-code-mods.git",
         "path": "plugins/usage-bars"
       }
     },
@@ -1682,7 +1644,7 @@
       "name": "usage-deck",
       "source": {
         "source": "git-subdir",
-        "url": "codeclawd/usage-deck",
+        "url": "https://github.com/codeclawd/usage-deck.git",
         "path": "plugins/usage-deck"
       }
     },
@@ -1690,7 +1652,7 @@
       "name": "agent-watch",
       "source": {
         "source": "git-subdir",
-        "url": "AndreasOA/claude-code-mods",
+        "url": "https://github.com/AndreasOA/claude-code-mods.git",
         "path": "plugins/agent-watch"
       }
     },
@@ -1698,7 +1660,7 @@
       "name": "touch-map",
       "source": {
         "source": "git-subdir",
-        "url": "y-hirakaw/claude-code-mods",
+        "url": "https://github.com/y-hirakaw/claude-code-mods.git",
         "path": "touch-map"
       }
     },
@@ -1713,7 +1675,7 @@
       "name": "chameleon",
       "source": {
         "source": "git-subdir",
-        "url": "aksh1618/claude-mods",
+        "url": "https://github.com/aksh1618/claude-mods.git",
         "path": "chameleon"
       }
     },
@@ -1721,7 +1683,7 @@
       "name": "skill-session-mods",
       "source": {
         "source": "git-subdir",
-        "url": "aksh1618/claude-mods",
+        "url": "https://github.com/aksh1618/claude-mods.git",
         "path": "skill-session-mods"
       }
     },
@@ -1729,7 +1691,7 @@
       "name": "paste-peek",
       "source": {
         "source": "git-subdir",
-        "url": "nokiy/claude-code-mods",
+        "url": "https://github.com/nokiy/claude-code-mods.git",
         "path": "plugins/paste-peek"
       }
     },
@@ -1737,7 +1699,7 @@
       "name": "agent-monitor",
       "source": {
         "source": "git-subdir",
-        "url": "nokiy/claude-code-mods",
+        "url": "https://github.com/nokiy/claude-code-mods.git",
         "path": "plugins/agent-monitor"
       }
     },
@@ -1745,71 +1707,63 @@
       "name": "garde-du-corps",
       "source": {
         "source": "git-subdir",
-        "url": "Para-FR/claude-code-mods-fr",
+        "url": "https://github.com/Para-FR/claude-code-mods-fr.git",
         "path": "garde-du-corps"
       }
     },
     {
       "name": "maomao",
       "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "maomao"
+        "source": "github",
+        "repo": "jessetsai1024/claude-maomao",
+        "sha": "508da642812a13707f0b00da60b646033e8d29c2"
       }
     },
     {
       "name": "ctx-panel",
       "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "ctx-panel"
+        "source": "github",
+        "repo": "jessetsai1024/claude-ctx-panel",
+        "sha": "a22fcc1f98eb2740cf5853f0da81a5d4bea189a3"
       }
     },
     {
       "name": "files",
       "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "files"
+        "source": "github",
+        "repo": "jessetsai1024/claude-files",
+        "sha": "94a42df47f80ca723d0710662c7cb28a757a486d"
       }
     },
     {
       "name": "timeline",
       "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "timeline"
+        "source": "github",
+        "repo": "jessetsai1024/claude-timeline",
+        "sha": "ffd67b676ebd466c05e7daf3c03e28e15f1410dd"
       }
     },
     {
       "name": "tool-timing-badge",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/ui/tool-timing-badge"
       }
     },
     {
       "name": "tokens",
       "source": {
-        "source": "git-subdir",
-        "url": "jessetsai1024/claude-mods",
-        "path": "tokens"
-      }
-    },
-    {
-      "name": "ai-usage-band",
-      "source": {
-        "source": "git-subdir",
-        "url": "arvakme/claude-code-butler",
-        "path": "ai-usage-band"
+        "source": "github",
+        "repo": "jessetsai1024/claude-tokens",
+        "sha": "ca7c0ec4dfd30832e54501683bd788af6cc7474d"
       }
     },
     {
       "name": "no-attribution",
       "source": {
         "source": "git-subdir",
-        "url": "claudemodz/mods",
+        "url": "https://github.com/claudemodz/mods.git",
         "path": "plugins/no-attribution"
       }
     },
@@ -1817,7 +1771,7 @@
       "name": "standup",
       "source": {
         "source": "git-subdir",
-        "url": "claudemodz/mods",
+        "url": "https://github.com/claudemodz/mods.git",
         "path": "plugins/standup"
       }
     },
@@ -1825,22 +1779,22 @@
       "name": "ding",
       "source": {
         "source": "git-subdir",
-        "url": "lucenity0/claude-code-mods",
+        "url": "https://github.com/lucenity0/claude-code-mods.git",
         "path": "ding"
       }
     },
     {
       "name": "script-gate",
       "source": {
-        "source": "git",
-        "url": "ABDUAZIZX/script-gate"
+        "source": "github",
+        "repo": "ABDUAZIZX/script-gate"
       }
     },
     {
       "name": "seatbelt",
       "source": {
         "source": "git-subdir",
-        "url": "lucenity0/claude-code-mods",
+        "url": "https://github.com/lucenity0/claude-code-mods.git",
         "path": "seatbelt"
       }
     },
@@ -1848,7 +1802,7 @@
       "name": "session-dash",
       "source": {
         "source": "git-subdir",
-        "url": "lucenity0/claude-code-mods",
+        "url": "https://github.com/lucenity0/claude-code-mods.git",
         "path": "session-dash"
       }
     },
@@ -1856,7 +1810,7 @@
       "name": "turn-meter",
       "source": {
         "source": "git-subdir",
-        "url": "lucenity0/claude-code-mods",
+        "url": "https://github.com/lucenity0/claude-code-mods.git",
         "path": "turn-meter"
       }
     },
@@ -1864,7 +1818,7 @@
       "name": "collapse-answers",
       "source": {
         "source": "git-subdir",
-        "url": "adriancoman/claude-code-mods",
+        "url": "https://github.com/adriancoman/claude-code-mods.git",
         "path": "collapse-answers"
       }
     },
@@ -1872,7 +1826,7 @@
       "name": "prompt-highlight",
       "source": {
         "source": "git-subdir",
-        "url": "adriancoman/claude-code-mods",
+        "url": "https://github.com/adriancoman/claude-code-mods.git",
         "path": "prompt-highlight"
       }
     },
@@ -1880,7 +1834,7 @@
       "name": "usage-status",
       "source": {
         "source": "git-subdir",
-        "url": "adriancoman/claude-code-mods",
+        "url": "https://github.com/adriancoman/claude-code-mods.git",
         "path": "usage-status"
       }
     },
@@ -1888,7 +1842,7 @@
       "name": "cache-watch",
       "source": {
         "source": "git-subdir",
-        "url": "anthonyhungnguyen/claude-code-mods",
+        "url": "https://github.com/anthonyhungnguyen/claude-code-mods.git",
         "path": "cache-watch"
       }
     },
@@ -1896,7 +1850,7 @@
       "name": "context-guard",
       "source": {
         "source": "git-subdir",
-        "url": "anthonyhungnguyen/claude-code-mods",
+        "url": "https://github.com/anthonyhungnguyen/claude-code-mods.git",
         "path": "context-guard"
       }
     },
@@ -1904,7 +1858,7 @@
       "name": "cost-pane",
       "source": {
         "source": "git-subdir",
-        "url": "anthonyhungnguyen/claude-code-mods",
+        "url": "https://github.com/anthonyhungnguyen/claude-code-mods.git",
         "path": "cost-pane"
       }
     },
@@ -1912,7 +1866,7 @@
       "name": "turn-timer",
       "source": {
         "source": "git-subdir",
-        "url": "anthonyhungnguyen/claude-code-mods",
+        "url": "https://github.com/anthonyhungnguyen/claude-code-mods.git",
         "path": "turn-timer"
       }
     },
@@ -1920,7 +1874,7 @@
       "name": "quiet-spinner",
       "source": {
         "source": "git-subdir",
-        "url": "schreibse/claude-code-mods",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
         "path": "quiet-spinner"
       }
     },
@@ -1928,7 +1882,7 @@
       "name": "mr-banner",
       "source": {
         "source": "git-subdir",
-        "url": "schreibse/claude-code-mods",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
         "path": "mr-banner"
       }
     },
@@ -1936,7 +1890,7 @@
       "name": "reminder-log",
       "source": {
         "source": "git-subdir",
-        "url": "schreibse/claude-code-mods",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
         "path": "reminder-log"
       }
     },
@@ -1944,7 +1898,7 @@
       "name": "quiet-bash",
       "source": {
         "source": "git-subdir",
-        "url": "schreibse/claude-code-mods",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
         "path": "quiet-bash"
       }
     },
@@ -1952,7 +1906,7 @@
       "name": "cache-meter",
       "source": {
         "source": "git-subdir",
-        "url": "DarioFontanel/claude-code-mods",
+        "url": "https://github.com/DarioFontanel/claude-code-mods.git",
         "path": "cache-meter"
       }
     },
@@ -1960,7 +1914,7 @@
       "name": "quick-buttons",
       "source": {
         "source": "git-subdir",
-        "url": "DarioFontanel/claude-code-mods",
+        "url": "https://github.com/DarioFontanel/claude-code-mods.git",
         "path": "quick-buttons"
       }
     },
@@ -1968,7 +1922,7 @@
       "name": "snake",
       "source": {
         "source": "git-subdir",
-        "url": "hamzafer/claude-code-mods",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
         "path": "mods/snake"
       }
     },
@@ -1976,7 +1930,7 @@
       "name": "where-am-i",
       "source": {
         "source": "git-subdir",
-        "url": "hamzafer/claude-code-mods",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
         "path": "mods/where-am-i"
       }
     },
@@ -1984,7 +1938,7 @@
       "name": "agent-radar",
       "source": {
         "source": "git-subdir",
-        "url": "hamzafer/claude-code-mods",
+        "url": "https://github.com/hamzafer/claude-code-mods.git",
         "path": "mods/agent-radar"
       }
     },
@@ -1992,7 +1946,7 @@
       "name": "search-meter",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "search-meter"
       }
     },
@@ -2000,7 +1954,7 @@
       "name": "compact-keeper",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "compact-keeper"
       }
     },
@@ -2008,7 +1962,7 @@
       "name": "guardrails",
       "source": {
         "source": "git-subdir",
-        "url": "arasovic/claude-code-mods",
+        "url": "https://github.com/arasovic/claude-code-mods.git",
         "path": "guardrails"
       }
     },
@@ -2016,7 +1970,7 @@
       "name": "code-pet",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "code-pet"
       }
     },
@@ -2024,7 +1978,7 @@
       "name": "session-wrapped",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "session-wrapped"
       }
     },
@@ -2032,7 +1986,7 @@
       "name": "boss-fight",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "boss-fight"
       }
     },
@@ -2040,7 +1994,7 @@
       "name": "sportscaster",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "sportscaster"
       }
     },
@@ -2048,7 +2002,7 @@
       "name": "swarm",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "swarm"
       }
     },
@@ -2056,22 +2010,22 @@
       "name": "agent-race",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "agent-race"
       }
     },
     {
       "name": "tokencraft",
       "source": {
-        "source": "git",
-        "url": "DanielPodolsky/tokencraft"
+        "source": "github",
+        "repo": "DanielPodolsky/tokencraft"
       }
     },
     {
       "name": "doom",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/doom"
       }
     },
@@ -2079,7 +2033,7 @@
       "name": "pacman",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/pacman"
       }
     },
@@ -2087,7 +2041,7 @@
       "name": "flappy",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/flappy"
       }
     },
@@ -2095,7 +2049,7 @@
       "name": "invaders",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/invaders"
       }
     },
@@ -2103,7 +2057,7 @@
       "name": "minesweeper",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/minesweeper"
       }
     },
@@ -2111,7 +2065,7 @@
       "name": "tool-defense",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/tool-defense"
       }
     },
@@ -2119,7 +2073,7 @@
       "name": "diff-invaders",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/diff-invaders"
       }
     },
@@ -2127,7 +2081,7 @@
       "name": "inner-monologue",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "inner-monologue"
       }
     },
@@ -2135,7 +2089,7 @@
       "name": "launch-codes",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "launch-codes"
       }
     },
@@ -2143,7 +2097,7 @@
       "name": "md-view",
       "source": {
         "source": "git-subdir",
-        "url": "scoobynko/claude-code-mods",
+        "url": "https://github.com/scoobynko/claude-code-mods.git",
         "path": "plugins/md-view"
       }
     },
@@ -2151,7 +2105,7 @@
       "name": "image-preview",
       "source": {
         "source": "git-subdir",
-        "url": "scoobynko/claude-code-mods",
+        "url": "https://github.com/scoobynko/claude-code-mods.git",
         "path": "plugins/image-preview"
       }
     },
@@ -2159,7 +2113,7 @@
       "name": "little-harvest",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/little-harvest"
       }
     },
@@ -2167,7 +2121,7 @@
       "name": "pocket-familiar",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/pocket-familiar"
       }
     },
@@ -2175,7 +2129,7 @@
       "name": "night-feast",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/night-feast"
       }
     },
@@ -2183,23 +2137,15 @@
       "name": "change-journal",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/change-journal"
-      }
-    },
-    {
-      "name": "behavior-map",
-      "source": {
-        "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
-        "path": "plugins/behavior-map"
       }
     },
     {
       "name": "check-ledger",
       "source": {
         "source": "git-subdir",
-        "url": "LeeHigma0201/claude-code-mods",
+        "url": "https://github.com/LeeHigma0201/claude-code-mods.git",
         "path": "mods/check-ledger"
       }
     },
@@ -2207,7 +2153,7 @@
       "name": "collision-guard",
       "source": {
         "source": "git-subdir",
-        "url": "nateherkai/claude-code-mods",
+        "url": "https://github.com/nateherkai/claude-code-mods.git",
         "path": "collision-guard"
       }
     },
@@ -2215,7 +2161,7 @@
       "name": "adhkar",
       "source": {
         "source": "git-subdir",
-        "url": "ashafizullah/claude-code-muslim-mods",
+        "url": "https://github.com/ashafizullah/claude-code-muslim-mods.git",
         "path": "adhkar"
       }
     },
@@ -2223,7 +2169,7 @@
       "name": "daily-ayah",
       "source": {
         "source": "git-subdir",
-        "url": "ashafizullah/claude-code-muslim-mods",
+        "url": "https://github.com/ashafizullah/claude-code-muslim-mods.git",
         "path": "daily-ayah"
       }
     },
@@ -2231,199 +2177,191 @@
       "name": "secret-mask",
       "source": {
         "source": "git-subdir",
-        "url": "homieyangg/claude-code-mods",
+        "url": "https://github.com/homieyangg/claude-code-mods.git",
         "path": "secret-mask"
       }
     },
     {
       "name": "pong",
       "source": {
-        "source": "git",
-        "url": "ambareeshav/claude-pong-mod"
+        "source": "github",
+        "repo": "ambareeshav/claude-pong-mod"
       }
     },
     {
       "name": "fortune-cookie",
       "source": {
-        "source": "git",
-        "url": "tobinsouth/fortune-cookie-mod"
+        "source": "github",
+        "repo": "tobinsouth/fortune-cookie-mod"
       }
     },
     {
       "name": "claude-maru-run",
       "source": {
-        "source": "git",
-        "url": "lemonlatte/claude-maru-run"
+        "source": "github",
+        "repo": "lemonlatte/claude-maru-run"
       }
     },
     {
       "name": "cc-dino",
       "source": {
-        "source": "git",
-        "url": "manfye/cc-dino"
+        "source": "github",
+        "repo": "manfye/cc-dino"
       }
     },
     {
       "name": "cc-pokedex",
       "source": {
-        "source": "git",
-        "url": "deonmenezes/claude-mods-pokedex"
+        "source": "github",
+        "repo": "deonmenezes/claude-mods-pokedex"
       }
     },
     {
       "name": "statusbar",
       "source": {
-        "source": "git",
-        "url": "sgmonda/statusbar"
+        "source": "github",
+        "repo": "sgmonda/statusbar"
       }
     },
     {
       "name": "statusband",
       "source": {
-        "source": "git",
-        "url": "dip497/claude-statusband"
+        "source": "github",
+        "repo": "dip497/claude-statusband"
       }
     },
     {
       "name": "loose-ends",
       "source": {
-        "source": "git",
-        "url": "fernandomoraes/loose-ends"
+        "source": "github",
+        "repo": "fernandomoraes/loose-ends"
       }
     },
     {
       "name": "gamba",
       "source": {
-        "source": "git",
-        "url": "salatmaster/claude-gamba"
+        "source": "github",
+        "repo": "salatmaster/claude-gamba"
       }
     },
     {
       "name": "claude-slots",
       "source": {
-        "source": "git",
-        "url": "WorldInnovationsDepartment/claude_slots"
+        "source": "github",
+        "repo": "WorldInnovationsDepartment/claude_slots"
       }
     },
     {
       "name": "music-mod",
       "source": {
-        "source": "git",
-        "url": "zyx1121/music-mod"
+        "source": "github",
+        "repo": "zyx1121/music-mod"
       }
     },
     {
       "name": "holdtime",
       "source": {
-        "source": "git",
-        "url": "ItsRohith-A/holdtime"
+        "source": "github",
+        "repo": "ItsRohith-A/holdtime"
       }
     },
     {
       "name": "korkmaz-trail",
       "source": {
-        "source": "git",
-        "url": "BersanKayraKorkmaz/korkmaz-trail"
+        "source": "github",
+        "repo": "BersanKayraKorkmaz/korkmaz-trail"
       }
     },
     {
       "name": "clawdgotchi",
       "source": {
-        "source": "git",
-        "url": "arthurseredaa/clawdgotchi"
+        "source": "github",
+        "repo": "arthurseredaa/clawdgotchi"
       }
     },
     {
       "name": "usage-report",
       "source": {
-        "source": "git",
-        "url": "Schweem/usage-report"
+        "source": "github",
+        "repo": "Schweem/usage-report"
       }
     },
     {
       "name": "idle-compact",
       "source": {
-        "source": "git",
-        "url": "davidar/claude-idle-compact"
+        "source": "github",
+        "repo": "davidar/claude-idle-compact"
       }
     },
     {
       "name": "tps-report",
       "source": {
-        "source": "git",
-        "url": "vgnshiyer/tps-report"
+        "source": "github",
+        "repo": "vgnshiyer/tps-report"
       }
     },
     {
       "name": "cache-ttl-timer",
       "source": {
-        "source": "git",
-        "url": "WQGGSEY/cache-ttl-timer"
+        "source": "github",
+        "repo": "WQGGSEY/cache-ttl-timer"
       }
     },
     {
       "name": "wavy-usage",
       "source": {
-        "source": "git",
-        "url": "BatuhanCakmakk/wavy-usage"
+        "source": "github",
+        "repo": "BatuhanCakmakk/wavy-usage"
       }
     },
     {
       "name": "nowloading",
       "source": {
-        "source": "git",
-        "url": "vgnshiyer/nowloading"
+        "source": "github",
+        "repo": "vgnshiyer/nowloading"
       }
     },
     {
       "name": "essential-conversation",
       "source": {
-        "source": "git",
-        "url": "SuzumiyaAoba/claude-essential-conversation-mod"
+        "source": "github",
+        "repo": "SuzumiyaAoba/claude-essential-conversation-mod"
       }
     },
     {
       "name": "repo-pulse",
       "source": {
-        "source": "git",
-        "url": "5d0tal1gat0r/repo-pulse"
+        "source": "github",
+        "repo": "5d0tal1gat0r/repo-pulse"
       }
     },
     {
       "name": "stepscope",
       "source": {
-        "source": "git",
-        "url": "5d0tal1gat0r/stepscope"
+        "source": "github",
+        "repo": "5d0tal1gat0r/stepscope"
       }
     },
     {
       "name": "sticky-todos",
       "source": {
         "source": "git-subdir",
-        "url": "paweechinagarn/claude-code-mods",
+        "url": "https://github.com/paweechinagarn/claude-code-mods.git",
         "path": "sticky-todos"
       }
     },
     {
       "name": "drift",
       "source": {
-        "source": "git",
-        "url": "azkhh/drift"
-      }
-    },
-    {
-      "name": "oneform-line",
-      "source": {
-        "source": "git-subdir",
-        "url": "hamzafer/claude-code-mods",
-        "path": "mods/oneform-line"
+        "source": "github",
+        "repo": "azkhh/drift"
       }
     },
     {
       "name": "inbox-pane",
       "source": {
         "source": "git-subdir",
-        "url": "jordanbyron/claude-inbox",
+        "url": "https://github.com/jordanbyron/claude-inbox.git",
         "path": "mod"
       }
     },
@@ -2431,7 +2369,7 @@
       "name": "context-bar",
       "source": {
         "source": "git-subdir",
-        "url": "k-wolfe99/claude-context-bar",
+        "url": "https://github.com/k-wolfe99/claude-context-bar.git",
         "path": "mod"
       }
     },
@@ -2439,7 +2377,7 @@
       "name": "ruview-live",
       "source": {
         "source": "git-subdir",
-        "url": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView.git",
         "path": "harness/ruview/mod"
       }
     },
@@ -2447,7 +2385,7 @@
       "name": "on-me",
       "source": {
         "source": "git-subdir",
-        "url": "abhibansal60/claude-mods",
+        "url": "https://github.com/abhibansal60/claude-mods.git",
         "path": "on-me"
       }
     },
@@ -2455,50 +2393,43 @@
       "name": "browser-guard",
       "source": {
         "source": "git-subdir",
-        "url": "abhibansal60/claude-mods",
+        "url": "https://github.com/abhibansal60/claude-mods.git",
         "path": "browser-guard"
       }
     },
     {
       "name": "cc-subway",
       "source": {
-        "source": "git",
-        "url": "lucastononro/cc-subway"
+        "source": "github",
+        "repo": "lucastononro/cc-subway"
       }
     },
     {
       "name": "claude-mine",
       "source": {
-        "source": "git",
-        "url": "swan4er/claude-mine"
+        "source": "github",
+        "repo": "swan4er/claude-mine"
       }
     },
     {
       "name": "claude-dino",
       "source": {
-        "source": "git",
-        "url": "swan4er/claude-dino"
+        "source": "github",
+        "repo": "swan4er/claude-dino"
       }
     },
     {
       "name": "adlib-lyrics",
       "source": {
-        "source": "git",
-        "url": "bixxter/adlib-lyrics"
-      }
-    },
-    {
-      "name": "sudus",
-      "source": {
-        "source": "git",
-        "url": "eas4ai/sudus"
+        "source": "github",
+        "repo": "bixxter/adlib-lyrics"
       }
     },
     {
       "name": "shunt",
       "source": {
         "source": "git-subdir",
-        "url": "pleaseai/shunt",
+        "url": "https://github.com/pleaseai/shunt.git",
         "path": "plugins/shunt"
       }
     },
@@ -2506,7 +2437,7 @@
       "name": "secrets-veil",
       "source": {
         "source": "git-subdir",
-        "url": "yonatangross/orchestkit",
+        "url": "https://github.com/yonatangross/orchestkit.git",
         "path": "mods/secrets-veil"
       }
     },
@@ -2514,7 +2445,7 @@
       "name": "2048",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/2048"
       }
     },
@@ -2522,7 +2453,7 @@
       "name": "tetris",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/tetris"
       }
     },
@@ -2530,7 +2461,7 @@
       "name": "cost-bar",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/cost-bar"
       }
     },
@@ -2538,7 +2469,7 @@
       "name": "notify-on-finish",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/notify-on-finish"
       }
     },
@@ -2546,7 +2477,7 @@
       "name": "spinner-stats",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/spinner-stats"
       }
     },
@@ -2554,7 +2485,7 @@
       "name": "powerline-bar",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/powerline-bar"
       }
     },
@@ -2562,7 +2493,7 @@
       "name": "auto-checkpoint",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/auto-checkpoint"
       }
     },
@@ -2570,7 +2501,7 @@
       "name": "branch-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/branch-guard"
       }
     },
@@ -2578,7 +2509,7 @@
       "name": "branch-status",
       "source": {
         "source": "git-subdir",
-        "url": "Spardutti/claude-mods",
+        "url": "https://github.com/Spardutti/claude-mods.git",
         "path": "plugins/branch-status"
       }
     },
@@ -2586,7 +2517,7 @@
       "name": "path-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/path-guard"
       }
     },
@@ -2594,7 +2525,7 @@
       "name": "secret-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/secret-guard"
       }
     },
@@ -2602,7 +2533,7 @@
       "name": "sensitive-file-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/sensitive-file-guard"
       }
     },
@@ -2610,22 +2541,22 @@
       "name": "test-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Justmalhar/awesome-claude-mods",
+        "url": "https://github.com/Justmalhar/awesome-claude-mods.git",
         "path": "mods/test-guard"
       }
     },
     {
       "name": "status-band",
       "source": {
-        "source": "git",
-        "url": "dukechain2333/cc-status-band"
+        "source": "github",
+        "repo": "dukechain2333/cc-status-band"
       }
     },
     {
       "name": "status-bar",
       "source": {
         "source": "git-subdir",
-        "url": "tylergraydev/cc-mods",
+        "url": "https://github.com/tylergraydev/cc-mods.git",
         "path": "status-bar"
       }
     },
@@ -2633,7 +2564,7 @@
       "name": "status-hud",
       "source": {
         "source": "git-subdir",
-        "url": "hymleong/claude-mods",
+        "url": "https://github.com/hymleong/claude-mods.git",
         "path": "plugins/status-hud"
       }
     },
@@ -2641,7 +2572,7 @@
       "name": "omp-quota",
       "source": {
         "source": "git-subdir",
-        "url": "musingfox/cc-plugins",
+        "url": "https://github.com/musingfox/cc-plugins.git",
         "path": "omp-quota"
       }
     },
@@ -2649,37 +2580,37 @@
       "name": "calendar",
       "source": {
         "source": "git-subdir",
-        "url": "musingfox/cc-plugins",
+        "url": "https://github.com/musingfox/cc-plugins.git",
         "path": "calendar"
       }
     },
     {
       "name": "mathcat",
       "source": {
-        "source": "git",
-        "url": "johndpope/mathcat"
+        "source": "github",
+        "repo": "johndpope/mathcat"
       }
     },
     {
       "name": "redact",
       "source": {
         "source": "git-subdir",
-        "url": "thkt/dotclaude",
+        "url": "https://github.com/thkt/dotclaude.git",
         "path": "mods/redact"
       }
     },
     {
       "name": "figures",
       "source": {
-        "source": "git",
-        "url": "natsukium/claude-code-figures-plugin"
+        "source": "github",
+        "repo": "natsukium/claude-code-figures-plugin"
       }
     },
     {
       "name": "starfleet-panel",
       "source": {
         "source": "git-subdir",
-        "url": "dukechain2333/starfleet-panel",
+        "url": "https://github.com/dukechain2333/starfleet-panel.git",
         "path": "plugin"
       }
     },
@@ -2687,7 +2618,7 @@
       "name": "message-timestamps",
       "source": {
         "source": "git-subdir",
-        "url": "benjaminmodayil/live-recap",
+        "url": "https://github.com/benjaminmodayil/live-recap.git",
         "path": "plugins/message-timestamps"
       }
     },
@@ -2695,7 +2626,7 @@
       "name": "cost-meter",
       "source": {
         "source": "git-subdir",
-        "url": "zaferayan/claude-cost-meter",
+        "url": "https://github.com/zaferayan/claude-cost-meter.git",
         "path": "cost-meter"
       }
     },
@@ -2703,22 +2634,22 @@
       "name": "cost-info",
       "source": {
         "source": "git-subdir",
-        "url": "falconsw/cost-info",
+        "url": "https://github.com/falconsw/cost-info.git",
         "path": "cost-info"
       }
     },
     {
       "name": "cs-radio",
       "source": {
-        "source": "git",
-        "url": "ben-rogerson/claude-counter-strike"
+        "source": "github",
+        "repo": "ben-rogerson/claude-counter-strike"
       }
     },
     {
       "name": "spell-bar",
       "source": {
         "source": "git-subdir",
-        "url": "powerofjinbo/claude-code-spell-bar",
+        "url": "https://github.com/powerofjinbo/claude-code-spell-bar.git",
         "path": "plugins/spell-bar"
       }
     },
@@ -2726,7 +2657,7 @@
       "name": "copy-band",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "copy-band"
       }
     },
@@ -2734,7 +2665,7 @@
       "name": "done-blink",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "done-blink"
       }
     },
@@ -2742,7 +2673,7 @@
       "name": "merge-gate",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "merge-gate"
       }
     },
@@ -2750,7 +2681,7 @@
       "name": "wod-band",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "wod-band"
       }
     },
@@ -2758,7 +2689,7 @@
       "name": "wod-timer",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "wod-timer"
       }
     },
@@ -2766,37 +2697,37 @@
       "name": "diff-review",
       "source": {
         "source": "git-subdir",
-        "url": "yash-gadodia/claude-mods",
+        "url": "https://github.com/yash-gadodia/claude-mods.git",
         "path": "diff-review"
       }
     },
     {
       "name": "at-work",
       "source": {
-        "source": "git",
-        "url": "zhuoxingzhang/pixel-at-work"
+        "source": "github",
+        "repo": "zhuoxingzhang/pixel-at-work"
       }
     },
     {
       "name": "mermaid-inline",
       "source": {
         "source": "git-subdir",
-        "url": "Conte777/mermaid-inline",
+        "url": "https://github.com/Conte777/mermaid-inline.git",
         "path": "mermaid-inline"
       }
     },
     {
       "name": "whats-agent-doing",
       "source": {
-        "source": "git",
-        "url": "tzafrir/whats-agent-doing"
+        "source": "github",
+        "repo": "tzafrir/whats-agent-doing"
       }
     },
     {
       "name": "turn-progress",
       "source": {
         "source": "git-subdir",
-        "url": "tsumugilabo/turn-progress",
+        "url": "https://github.com/tsumugilabo/turn-progress.git",
         "path": "plugins/turn-progress"
       }
     },
@@ -2804,7 +2735,7 @@
       "name": "ccoverhead",
       "source": {
         "source": "git-subdir",
-        "url": "shengyy/ccoverhead",
+        "url": "https://github.com/shengyy/ccoverhead.git",
         "path": "plugin"
       }
     },
@@ -2812,7 +2743,7 @@
       "name": "usage-mod",
       "source": {
         "source": "git-subdir",
-        "url": "qingyashizi/claude-usage-mod",
+        "url": "https://github.com/qingyashizi/claude-usage-mod.git",
         "path": "plugins/usage-mod"
       }
     },
@@ -2820,7 +2751,7 @@
       "name": "usage-log",
       "source": {
         "source": "git-subdir",
-        "url": "tanuu5/usage-log",
+        "url": "https://github.com/tanuu5/usage-log.git",
         "path": "plugins/usage-log"
       }
     },
@@ -2828,7 +2759,7 @@
       "name": "usage-limits",
       "source": {
         "source": "git-subdir",
-        "url": "Chronosauros/claude-mods",
+        "url": "https://github.com/Chronosauros/claude-mods.git",
         "path": "plugins/usage-limits"
       }
     },
@@ -2836,22 +2767,22 @@
       "name": "usage-tracker",
       "source": {
         "source": "git-subdir",
-        "url": "tylergraydev/cc-mods",
+        "url": "https://github.com/tylergraydev/cc-mods.git",
         "path": "usage-tracker"
       }
     },
     {
       "name": "tasknotes-preview",
       "source": {
-        "source": "git",
-        "url": "cbruyndoncx/claude-tasknotes-renderer-mod"
+        "source": "github",
+        "repo": "cbruyndoncx/claude-tasknotes-renderer-mod"
       }
     },
     {
       "name": "push",
       "source": {
         "source": "git-subdir",
-        "url": "robertgregorywest/claude-mods",
+        "url": "https://github.com/robertgregorywest/claude-mods.git",
         "path": "mods/push"
       }
     },
@@ -2859,7 +2790,7 @@
       "name": "agents-view",
       "source": {
         "source": "git-subdir",
-        "url": "ushironoko/dotfiles",
+        "url": "https://github.com/ushironoko/dotfiles.git",
         "path": "claude/.claude/skills/agents-view"
       }
     },
@@ -2867,80 +2798,72 @@
       "name": "file-view",
       "source": {
         "source": "git-subdir",
-        "url": "ushironoko/dotfiles",
+        "url": "https://github.com/ushironoko/dotfiles.git",
         "path": "claude/.claude/skills/file-view"
       }
     },
     {
       "name": "muse-pet",
       "source": {
-        "source": "git",
-        "url": "Soyn/mububu-pet"
+        "source": "github",
+        "repo": "Soyn/mububu-pet"
       }
     },
     {
       "name": "orange-prompt",
       "source": {
-        "source": "git",
-        "url": "philsimon/orange-prompt"
+        "source": "github",
+        "repo": "philsimon/orange-prompt"
       }
     },
     {
       "name": "quota-pets",
       "source": {
         "source": "git-subdir",
-        "url": "Open01277/claude-mods",
+        "url": "https://github.com/Open01277/claude-mods.git",
         "path": "plugins/quota-pets"
       }
     },
     {
       "name": "secret-sentry",
       "source": {
-        "source": "git",
-        "url": "ccdwyer/secret-sentry"
+        "source": "github",
+        "repo": "ccdwyer/secret-sentry"
       }
     },
     {
       "name": "shell-highlight",
       "source": {
-        "source": "git",
-        "url": "Turbo-Thorschten/shell-highlight"
-      }
-    },
-    {
-      "name": "shell-flow",
-      "source": {
-        "source": "git-subdir",
-        "url": "apolenkov/claude-mods",
-        "path": "mods/shell-flow"
+        "source": "github",
+        "repo": "Turbo-Thorschten/shell-highlight"
       }
     },
     {
       "name": "tmux-status",
       "source": {
-        "source": "git",
-        "url": "XavierYounan/claude-code-tmux-status"
+        "source": "github",
+        "repo": "XavierYounan/claude-code-tmux-status"
       }
     },
     {
       "name": "hide-diffs",
       "source": {
-        "source": "git",
-        "url": "gixxy22/hide-diffs"
+        "source": "github",
+        "repo": "gixxy22/hide-diffs"
       }
     },
     {
       "name": "sea",
       "source": {
-        "source": "git",
-        "url": "himazintom/claude-code-sea"
+        "source": "github",
+        "repo": "himazintom/claude-code-sea"
       }
     },
     {
       "name": "block-destructive-commands",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/security/block-destructive-commands"
       }
     },
@@ -2948,7 +2871,7 @@
       "name": "large-edit-confirmation",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/security/large-edit-confirmation"
       }
     },
@@ -2956,7 +2879,7 @@
       "name": "protected-paths-guard",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/security/protected-paths-guard"
       }
     },
@@ -2964,7 +2887,7 @@
       "name": "admin-capability-lockdown",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/enterprise/admin-capability-lockdown"
       }
     },
@@ -2972,7 +2895,7 @@
       "name": "prompt-cache-control",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/observability/prompt-cache-control"
       }
     },
@@ -2980,7 +2903,7 @@
       "name": "universal-audit-log",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/observability/universal-audit-log"
       }
     },
@@ -2988,22 +2911,22 @@
       "name": "typing-test",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/games/typing-test"
       }
     },
     {
       "name": "familiar",
       "source": {
-        "source": "git",
-        "url": "lucenity0/claude-familiar"
+        "source": "github",
+        "repo": "lucenity0/claude-familiar"
       }
     },
     {
       "name": "statusline",
       "source": {
         "source": "git-subdir",
-        "url": "david-crespo/dotfiles",
+        "url": "https://github.com/david-crespo/dotfiles.git",
         "path": "claude/mods/statusline"
       }
     },
@@ -3011,109 +2934,109 @@
       "name": "classifier-telemetry",
       "source": {
         "source": "git-subdir",
-        "url": "bendrucker/claude",
+        "url": "https://github.com/bendrucker/claude.git",
         "path": "plugins/classifier-telemetry"
       }
     },
     {
       "name": "diff-seismograph",
       "source": {
-        "source": "git",
-        "url": "ccdwyer/diff-seismograph"
+        "source": "github",
+        "repo": "ccdwyer/diff-seismograph"
       }
     },
     {
       "name": "crosstalk",
       "source": {
-        "source": "git",
-        "url": "kbrdn1/claude-crosstalk"
+        "source": "github",
+        "repo": "kbrdn1/claude-crosstalk"
       }
     },
     {
       "name": "todos",
       "source": {
         "source": "git-subdir",
-        "url": "bengous/claude-code-plugins",
+        "url": "https://github.com/bengous/claude-code-plugins.git",
         "path": "todos"
       }
     },
     {
       "name": "command-buttons",
       "source": {
-        "source": "git",
-        "url": "faridmurzone/command-buttons-claude-code"
+        "source": "github",
+        "repo": "faridmurzone/command-buttons-claude-code"
       }
     },
     {
       "name": "anchorwatch-mod",
       "source": {
         "source": "git-subdir",
-        "url": "anchorwatch-dev/anchorwatch",
+        "url": "https://github.com/anchorwatch-dev/anchorwatch.git",
         "path": "plugins/anchorwatch-mod"
       }
     },
     {
       "name": "roll-credits",
       "source": {
-        "source": "git",
-        "url": "smukh/roll-credits"
+        "source": "github",
+        "repo": "smukh/roll-credits"
       }
     },
     {
       "name": "cc-range",
       "source": {
-        "source": "git",
-        "url": "germanfndez/cc-range"
+        "source": "github",
+        "repo": "germanfndez/cc-range"
       }
     },
     {
       "name": "claude-chef",
       "source": {
-        "source": "git",
-        "url": "schalkneethling/claude-chef"
+        "source": "github",
+        "repo": "schalkneethling/claude-chef"
       }
     },
     {
       "name": "flashmodel",
       "source": {
-        "source": "git",
-        "url": "Rafael-CRL/FlashModel"
+        "source": "github",
+        "repo": "Rafael-CRL/FlashModel"
       }
     },
     {
       "name": "agent-narrator",
       "source": {
         "source": "git-subdir",
-        "url": "OneWave-AI/claude-code-mods",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "agent-narrator"
       }
     },
     {
       "name": "thinking-band",
       "source": {
-        "source": "git",
-        "url": "orfevre-34/thinking-band"
+        "source": "github",
+        "repo": "orfevre-34/thinking-band"
       }
     },
     {
       "name": "clawd-hud",
       "source": {
-        "source": "git",
-        "url": "segfaultlab/clawd-hud"
+        "source": "github",
+        "repo": "segfaultlab/clawd-hud"
       }
     },
     {
       "name": "tokenrun",
       "source": {
-        "source": "git",
-        "url": "NipunBinjola/tokenrun"
+        "source": "github",
+        "repo": "NipunBinjola/tokenrun"
       }
     },
     {
       "name": "clawd-park",
       "source": {
         "source": "git-subdir",
-        "url": "falkoro/clawd-park",
+        "url": "https://github.com/falkoro/clawd-park.git",
         "path": "plugins/clawd-park"
       }
     },
@@ -3121,36 +3044,37 @@
       "name": "mod-ferro",
       "source": {
         "source": "git-subdir",
-        "url": "Vatroslav/mod-ferro",
-        "path": "plugin"
+        "url": "https://github.com/Vatroslav/cc-mod-ferro.git",
+        "path": "plugin",
+        "sha": "ff4aa179df219c920ff85c007662eed8fde4dc14"
       }
     },
     {
       "name": "ricky-pixel-mod",
       "source": {
-        "source": "git",
-        "url": "muxia23/ricky-pixel-mod"
+        "source": "github",
+        "repo": "muxia23/ricky-pixel-mod"
       }
     },
     {
       "name": "native-hud",
       "source": {
-        "source": "git",
-        "url": "Luban-Labs/native-hud"
+        "source": "github",
+        "repo": "Luban-Labs/native-hud"
       }
     },
     {
       "name": "cache-countdown",
       "source": {
-        "source": "git",
-        "url": "iamomiid/cache-countdown"
+        "source": "github",
+        "repo": "iamomiid/cache-countdown"
       }
     },
     {
       "name": "herdr",
       "source": {
         "source": "git-subdir",
-        "url": "bendrucker/claude",
+        "url": "https://github.com/bendrucker/claude.git",
         "path": "plugins/herdr"
       }
     },
@@ -3158,7 +3082,7 @@
       "name": "linear-tickets",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/integrations/linear-tickets"
       }
     },
@@ -3166,51 +3090,51 @@
       "name": "vercel-deploys",
       "source": {
         "source": "git-subdir",
-        "url": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates.git",
         "path": "cli-tool/components/mods/integrations/vercel-deploys"
       }
     },
     {
       "name": "assertion-guardian",
       "source": {
-        "source": "git",
-        "url": "ccdwyer/assertion-guardian"
+        "source": "github",
+        "repo": "ccdwyer/assertion-guardian"
       }
     },
     {
       "name": "blackjack",
       "source": {
-        "source": "git",
-        "url": "michaeldavodovski/claude-code-blackjack"
+        "source": "github",
+        "repo": "michaeldavodovski/claude-code-blackjack"
       }
     },
     {
       "name": "burn",
       "source": {
-        "source": "git",
-        "url": "PickleBoxer/burn"
+        "source": "github",
+        "repo": "PickleBoxer/burn"
       }
     },
     {
       "name": "clawd-band",
       "source": {
         "source": "git-subdir",
-        "url": "tomada1114/clawd-band",
+        "url": "https://github.com/tomada1114/clawd-band.git",
         "path": "plugins/clawd-band"
       }
     },
     {
       "name": "desk-pet",
       "source": {
-        "source": "git",
-        "url": "isr431/desk-pet"
+        "source": "github",
+        "repo": "isr431/desk-pet"
       }
     },
     {
       "name": "changed-files",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/changed-files"
       }
     },
@@ -3218,7 +3142,7 @@
       "name": "codebase-atlas",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/codebase-atlas"
       }
     },
@@ -3226,23 +3150,15 @@
       "name": "config-snapshots",
       "source": {
         "source": "git-subdir",
-        "url": "MichaelP17/claude-mods",
+        "url": "https://github.com/MichaelP17/claude-mods.git",
         "path": "config-snapshots"
-      }
-    },
-    {
-      "name": "context-gauge",
-      "source": {
-        "source": "git-subdir",
-        "url": "tommy5dollar/claude-mods",
-        "path": "context-gauge"
       }
     },
     {
       "name": "crew",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/crew"
       }
     },
@@ -3250,7 +3166,7 @@
       "name": "delete-guard",
       "source": {
         "source": "git-subdir",
-        "url": "Tihi321/claude-mods",
+        "url": "https://github.com/Tihi321/claude-mods.git",
         "path": "plugins/delete-guard"
       }
     },
@@ -3258,7 +3174,7 @@
       "name": "diff-minimap",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/diff-minimap"
       }
     },
@@ -3266,7 +3182,7 @@
       "name": "lava-lamp",
       "source": {
         "source": "git-subdir",
-        "url": "CtrlAltFocus/claude-mods",
+        "url": "https://github.com/CtrlAltFocus/claude-mods.git",
         "path": "plugins/lava-lamp"
       }
     },
@@ -3274,7 +3190,7 @@
       "name": "machine-guard",
       "source": {
         "source": "git-subdir",
-        "url": "MichaelP17/claude-mods",
+        "url": "https://github.com/MichaelP17/claude-mods.git",
         "path": "machine-guard"
       }
     },
@@ -3282,7 +3198,7 @@
       "name": "mission-control",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/mission-control"
       }
     },
@@ -3290,7 +3206,7 @@
       "name": "pr-links",
       "source": {
         "source": "git-subdir",
-        "url": "AydinHassan/claude-mods",
+        "url": "https://github.com/AydinHassan/claude-mods.git",
         "path": "plugins/pr-links"
       }
     },
@@ -3298,7 +3214,7 @@
       "name": "service-radar",
       "source": {
         "source": "git-subdir",
-        "url": "MichaelP17/claude-mods",
+        "url": "https://github.com/MichaelP17/claude-mods.git",
         "path": "service-radar"
       }
     },
@@ -3306,7 +3222,7 @@
       "name": "usage-forecast",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/usage-forecast"
       }
     },
@@ -3314,7 +3230,7 @@
       "name": "workbench",
       "source": {
         "source": "git-subdir",
-        "url": "harshitmywork17/claude-mods",
+        "url": "https://github.com/harshitmywork17/claude-mods.git",
         "path": "plugins/workbench"
       }
     },
@@ -3322,7 +3238,7 @@
       "name": "kiko",
       "source": {
         "source": "git-subdir",
-        "url": "kikostefanov-lab/claude-code-mods",
+        "url": "https://github.com/kikostefanov-lab/claude-code-mods.git",
         "path": "kiko"
       }
     },
@@ -3330,7 +3246,7 @@
       "name": "files-seen",
       "source": {
         "source": "git-subdir",
-        "url": "Alyan-khattak/Claude-Code-Mods",
+        "url": "https://github.com/Alyan-khattak/Claude-Code-Mods.git",
         "path": "files-seen"
       }
     },
@@ -3338,7 +3254,7 @@
       "name": "limit-meter",
       "source": {
         "source": "git-subdir",
-        "url": "Alyan-khattak/Claude-Code-Mods",
+        "url": "https://github.com/Alyan-khattak/Claude-Code-Mods.git",
         "path": "limit-meter"
       }
     },
@@ -3346,7 +3262,7 @@
       "name": "session-journal",
       "source": {
         "source": "git-subdir",
-        "url": "Alyan-khattak/Claude-Code-Mods",
+        "url": "https://github.com/Alyan-khattak/Claude-Code-Mods.git",
         "path": "session-journal"
       }
     },
@@ -3354,7 +3270,7 @@
       "name": "slick-bar",
       "source": {
         "source": "git-subdir",
-        "url": "mustafa89/my-claude-code-mods",
+        "url": "https://github.com/mustafa89/my-claude-code-mods.git",
         "path": "slick-bar"
       }
     },
@@ -3362,7 +3278,7 @@
       "name": "tool-cards",
       "source": {
         "source": "git-subdir",
-        "url": "mustafa89/my-claude-code-mods",
+        "url": "https://github.com/mustafa89/my-claude-code-mods.git",
         "path": "tool-cards"
       }
     },
@@ -3370,7 +3286,7 @@
       "name": "session-activity",
       "source": {
         "source": "git-subdir",
-        "url": "bennewton999/claude-code-mods",
+        "url": "https://github.com/bennewton999/claude-code-mods.git",
         "path": "session-activity"
       }
     },
@@ -3378,7 +3294,7 @@
       "name": "lights-out",
       "source": {
         "source": "git-subdir",
-        "url": "ivanvyd/ground-rules",
+        "url": "https://github.com/ivanvyd/ground-rules.git",
         "path": "plugins/lights-out"
       }
     },
@@ -3386,7 +3302,7 @@
       "name": "stay-put",
       "source": {
         "source": "git-subdir",
-        "url": "ivanvyd/ground-rules",
+        "url": "https://github.com/ivanvyd/ground-rules.git",
         "path": "plugins/stay-put"
       }
     },
@@ -3394,7 +3310,7 @@
       "name": "token-meter",
       "source": {
         "source": "git-subdir",
-        "url": "tunglt1810/claude-gadgets",
+        "url": "https://github.com/tunglt1810/claude-gadgets.git",
         "path": "mods/token-meter"
       }
     },
@@ -3402,7 +3318,7 @@
       "name": "weektoken",
       "source": {
         "source": "git-subdir",
-        "url": "3dnow/claude-mods",
+        "url": "https://github.com/3dnow/claude-mods.git",
         "path": "weektoken"
       }
     },
@@ -3410,7 +3326,7 @@
       "name": "looks",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/looks"
       }
     },
@@ -3418,7 +3334,7 @@
       "name": "samurai-dojo",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/samurai-dojo"
       }
     },
@@ -3426,22 +3342,22 @@
       "name": "slayer-corps",
       "source": {
         "source": "git-subdir",
-        "url": "theonly1me/claude-code-mods",
+        "url": "https://github.com/theonly1me/claude-code-mods.git",
         "path": "plugins/slayer-corps"
       }
     },
     {
       "name": "pokemon",
       "source": {
-        "source": "git",
-        "url": "dgokcin/claude-pokemon-mod"
+        "source": "github",
+        "repo": "dgokcin/claude-pokemon-mod"
       }
     },
     {
       "name": "gas-gauge",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/gas-gauge"
       }
     },
@@ -3449,7 +3365,7 @@
       "name": "odometer",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/odometer"
       }
     },
@@ -3457,7 +3373,7 @@
       "name": "tach",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/tach"
       }
     },
@@ -3465,7 +3381,7 @@
       "name": "speedometer",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/speedometer"
       }
     },
@@ -3473,7 +3389,7 @@
       "name": "oil",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/oil"
       }
     },
@@ -3481,7 +3397,7 @@
       "name": "bumper-sticker",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/bumper-sticker"
       }
     },
@@ -3489,7 +3405,7 @@
       "name": "logo",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/logo"
       }
     },
@@ -3497,7 +3413,7 @@
       "name": "steering-wheel",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/steering-wheel"
       }
     },
@@ -3505,7 +3421,7 @@
       "name": "hands-off",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/hands-off"
       }
     },
@@ -3513,7 +3429,7 @@
       "name": "query-guard",
       "source": {
         "source": "git-subdir",
-        "url": "nu0ma/query-guard",
+        "url": "https://github.com/nu0ma/query-guard.git",
         "path": "plugins/query-guard"
       }
     },
@@ -3521,7 +3437,7 @@
       "name": "valet-mode",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/valet-mode"
       }
     },
@@ -3529,7 +3445,7 @@
       "name": "clip",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/clip"
       }
     },
@@ -3537,29 +3453,29 @@
       "name": "pop",
       "source": {
         "source": "git-subdir",
-        "url": "DJPalefaceSD/rostech-mods",
+        "url": "https://github.com/DJPalefaceSD/rostech-mods.git",
         "path": "plugins/pop"
       }
     },
     {
       "name": "claude-code-usage-quota",
       "source": {
-        "source": "git",
-        "url": "anantraghunath/claude-code-usage-quota-mod"
+        "source": "github",
+        "repo": "anantraghunath/claude-code-usage-quota-mod"
       }
     },
     {
       "name": "usage-reporter",
       "source": {
-        "source": "git",
-        "url": "tksunw/usage-reporter"
+        "source": "github",
+        "repo": "tksunw/usage-reporter"
       }
     },
     {
       "name": "context-card",
       "source": {
         "source": "git-subdir",
-        "url": "Nongfsq/frank-claude-cockpit",
+        "url": "https://github.com/Nongfsq/frank-claude-cockpit.git",
         "path": "context-card"
       }
     },
@@ -3567,37 +3483,37 @@
       "name": "progress-bar",
       "source": {
         "source": "git-subdir",
-        "url": "kshitiz-swim/claude-plugins",
+        "url": "https://github.com/kshitiz-swim/claude-plugins.git",
         "path": "plugins/progress-bar"
       }
     },
     {
       "name": "task-line",
       "source": {
-        "source": "git",
-        "url": "muellerei/task-line"
+        "source": "github",
+        "repo": "muellerei/task-line"
       }
     },
     {
       "name": "git-graph",
       "source": {
         "source": "git-subdir",
-        "url": "nemokoala/claude-mods",
+        "url": "https://github.com/nemokoala/claude-mods.git",
         "path": "plugins/git-graph"
       }
     },
     {
       "name": "agent-shell-watch",
       "source": {
-        "source": "git",
-        "url": "apolenkov/agent-shell-watch"
+        "source": "github",
+        "repo": "apolenkov/agent-shell-watch"
       }
     },
     {
       "name": "cache-band",
       "source": {
         "source": "git-subdir",
-        "url": "MohabYasser2/claude-code-mods",
+        "url": "https://github.com/MohabYasser2/claude-code-mods.git",
         "path": "cache-band"
       }
     },
@@ -3605,7 +3521,7 @@
       "name": "image-thumbs",
       "source": {
         "source": "git-subdir",
-        "url": "ohade/claude-mods",
+        "url": "https://github.com/ohade/claude-mods.git",
         "path": "image-thumbs"
       }
     },
@@ -3613,7 +3529,7 @@
       "name": "qa-guide",
       "source": {
         "source": "git-subdir",
-        "url": "aieo-product/claude_qamods",
+        "url": "https://github.com/aieo-product/claude_qamods.git",
         "path": "plugins/qa-guide"
       }
     },
@@ -3621,54 +3537,54 @@
       "name": "pixelbar",
       "source": {
         "source": "git-subdir",
-        "url": "elkinaguas/claude-mods",
+        "url": "https://github.com/elkinaguas/claude-mods.git",
         "path": "pixelbar"
       }
     },
     {
       "name": "runway",
       "source": {
-        "source": "git",
-        "url": "Jovan1666/claude-code-runway"
+        "source": "github",
+        "repo": "Jovan1666/claude-code-runway"
       }
     },
     {
       "name": "otto-hud",
       "source": {
         "source": "git-subdir",
-        "url": "manuacl/claude-mods",
+        "url": "https://github.com/manuacl/claude-mods.git",
         "path": "plugins/otto-hud"
       }
     },
     {
       "name": "teach-me",
       "source": {
-        "source": "git-subdir",
-        "url": "saksham10arora-dotcom/claude-mods",
-        "path": "plugins/teach-me"
+        "source": "github",
+        "repo": "saksham10arora-dotcom/claude-teach-me",
+        "sha": "a7d2059c37d18f6dbc3ce74c1f958d213bc6a82e"
       }
     },
     {
       "name": "lofi",
       "source": {
-        "source": "git-subdir",
-        "url": "saksham10arora-dotcom/claude-mods",
-        "path": "plugins/lofi"
+        "source": "github",
+        "repo": "saksham10arora-dotcom/claude-lofi",
+        "sha": "96e7eeaf3a878abe0d0b5050647aac9d552292bf"
       }
     },
     {
       "name": "vhs",
       "source": {
-        "source": "git-subdir",
-        "url": "saksham10arora-dotcom/claude-mods",
-        "path": "plugins/vhs"
+        "source": "github",
+        "repo": "saksham10arora-dotcom/claude-vhs",
+        "sha": "76654d55fade052555f417c47bf0c9c978b08f78"
       }
     },
     {
       "name": "bg-task-band",
       "source": {
         "source": "git-subdir",
-        "url": "ipartington/claude-mods",
+        "url": "https://github.com/ipartington/claude-mods.git",
         "path": "bg-task-band"
       }
     },
@@ -3676,7 +3592,7 @@
       "name": "tts-lite",
       "source": {
         "source": "git-subdir",
-        "url": "ipartington/claude-mods",
+        "url": "https://github.com/ipartington/claude-mods.git",
         "path": "tts-lite"
       }
     },
@@ -3684,7 +3600,7 @@
       "name": "chai-meter",
       "source": {
         "source": "git-subdir",
-        "url": "ShriD5/claude-mods",
+        "url": "https://github.com/ShriD5/claude-mods.git",
         "path": "chai-meter"
       }
     },
@@ -3692,7 +3608,7 @@
       "name": "main-guard",
       "source": {
         "source": "git-subdir",
-        "url": "ShriD5/claude-mods",
+        "url": "https://github.com/ShriD5/claude-mods.git",
         "path": "main-guard"
       }
     },
@@ -3700,106 +3616,106 @@
       "name": "whoopgate",
       "source": {
         "source": "git-subdir",
-        "url": "ShriD5/claude-mods",
+        "url": "https://github.com/ShriD5/claude-mods.git",
         "path": "whoopgate"
       }
     },
     {
       "name": "tool-snake",
       "source": {
-        "source": "git",
-        "url": "Yash1927/claude-code-snake"
+        "source": "github",
+        "repo": "Yash1927/claude-code-snake"
       }
     },
     {
       "name": "gamble-with-claude-code",
       "source": {
-        "source": "git",
-        "url": "szarkans/gamble-with-claude-code"
+        "source": "github",
+        "repo": "szarkans/gamble-with-claude-code"
       }
     },
     {
       "name": "ember",
       "source": {
-        "source": "git",
-        "url": "nickdemari/ember"
+        "source": "github",
+        "repo": "nickdemari/ember"
       }
     },
     {
       "name": "git-diff-timeline",
       "source": {
-        "source": "git",
-        "url": "liawzishen/git-diff-timeline"
+        "source": "github",
+        "repo": "liawzishen/git-diff-timeline"
       }
     },
     {
       "name": "notes-panel",
       "source": {
-        "source": "git",
-        "url": "Sickin/claude-code-notes-panel"
+        "source": "github",
+        "repo": "Sickin/claude-code-notes-panel"
       }
     },
     {
       "name": "reply-frame",
       "source": {
-        "source": "git",
-        "url": "takosasi-dev/reply-frame"
+        "source": "github",
+        "repo": "takosasi-dev/reply-frame"
       }
     },
     {
       "name": "cache-buster",
       "source": {
-        "source": "git",
-        "url": "dblanken-yale/cache-buster"
+        "source": "github",
+        "repo": "dblanken-yale/cache-buster"
       }
     },
     {
       "name": "cc-usage",
       "source": {
-        "source": "git",
-        "url": "leonardokidd/cc-usage"
+        "source": "github",
+        "repo": "leonardokidd/cc-usage"
       }
     },
     {
       "name": "quickswitch",
       "source": {
-        "source": "git",
-        "url": "Rocha101/claude-code-quickswitch"
+        "source": "github",
+        "repo": "Rocha101/claude-code-quickswitch"
       }
     },
     {
       "name": "explain-permission",
       "source": {
-        "source": "git",
-        "url": "petershk/explain-permission"
+        "source": "github",
+        "repo": "petershk/explain-permission"
       }
     },
     {
       "name": "ambient",
       "source": {
-        "source": "git",
-        "url": "barisdemirhan/claude-ambient"
+        "source": "github",
+        "repo": "barisdemirhan/claude-ambient"
       }
     },
     {
       "name": "sidequest",
       "source": {
-        "source": "git",
-        "url": "farhad-aman/claude-sidequest"
+        "source": "github",
+        "repo": "farhad-aman/claude-sidequest"
       }
     },
     {
       "name": "cc-cli-rail",
       "source": {
-        "source": "git",
-        "url": "afu-it/cc-cli-rail"
+        "source": "github",
+        "repo": "afu-it/cc-cli-rail"
       }
     },
     {
       "name": "gopher-spinner",
       "source": {
         "source": "git-subdir",
-        "url": "ripta/coding_agent_standards",
+        "url": "https://github.com/ripta/coding_agent_standards.git",
         "path": "mods/gopher-spinner"
       }
     },
@@ -3807,7 +3723,7 @@
       "name": "mogger-status",
       "source": {
         "source": "git-subdir",
-        "url": "yonitesser/claude-mogger",
+        "url": "https://github.com/yonitesser/claude-mogger.git",
         "path": "mods/mogger-status"
       }
     },
@@ -3815,7 +3731,7 @@
       "name": "maestro-lanes",
       "source": {
         "source": "git-subdir",
-        "url": "ricardosuman/maestro",
+        "url": "https://github.com/ricardosuman/maestro.git",
         "path": "mods/lanes"
       }
     },
@@ -3823,7 +3739,7 @@
       "name": "ssi-cockpit",
       "source": {
         "source": "git-subdir",
-        "url": "ssime-git/ssi-ai-skill",
+        "url": "https://github.com/ssime-git/ssi-ai-skill.git",
         "path": "mods/ssi-cockpit"
       }
     },
@@ -3831,7 +3747,7 @@
       "name": "bus-band",
       "source": {
         "source": "git-subdir",
-        "url": "mariomosca/agent-team-os",
+        "url": "https://github.com/mariomosca/agent-team-os.git",
         "path": "mods/bus-band"
       }
     },
@@ -3839,7 +3755,7 @@
       "name": "workflow-band",
       "source": {
         "source": "git-subdir",
-        "url": "berlysia/dotfiles",
+        "url": "https://github.com/berlysia/dotfiles.git",
         "path": "mods/workflow-band"
       }
     },
@@ -3847,7 +3763,7 @@
       "name": "telescreen",
       "source": {
         "source": "git-subdir",
-        "url": "arazvan-ec/xmarks",
+        "url": "https://github.com/arazvan-ec/xmarks.git",
         "path": "mods/telescreen"
       }
     },
@@ -3855,7 +3771,7 @@
       "name": "ration-book",
       "source": {
         "source": "git-subdir",
-        "url": "arazvan-ec/xmarks",
+        "url": "https://github.com/arazvan-ec/xmarks.git",
         "path": "mods/ration-book"
       }
     },
@@ -3863,85 +3779,85 @@
       "name": "reins-status",
       "source": {
         "source": "git-subdir",
-        "url": "manishkumar/reins",
+        "url": "https://github.com/manishkumar/reins.git",
         "path": "mods/reins-status"
       }
     },
     {
       "name": "review-pane",
       "source": {
-        "source": "git",
-        "url": "r3al1tym/claude-review"
+        "source": "github",
+        "repo": "r3al1tym/claude-review"
       }
     },
     {
       "name": "skill-audit",
       "source": {
-        "source": "git",
-        "url": "DepickereSven/skill-audit"
+        "source": "github",
+        "repo": "DepickereSven/skill-audit"
       }
     },
     {
       "name": "agentpane",
       "source": {
-        "source": "git",
-        "url": "xuanji86/claude-agentpane"
+        "source": "github",
+        "repo": "xuanji86/claude-agentpane"
       }
     },
     {
       "name": "clawdify",
       "source": {
-        "source": "git",
-        "url": "viik2k/clawdify"
+        "source": "github",
+        "repo": "viik2k/clawdify"
       }
     },
     {
       "name": "capi",
       "source": {
-        "source": "git",
-        "url": "danieldeusing/capi-cc-mod"
+        "source": "github",
+        "repo": "danieldeusing/capi-cc-mod"
       }
     },
     {
       "name": "taskrail",
       "source": {
-        "source": "git",
-        "url": "drolosoft/taskrail"
+        "source": "github",
+        "repo": "drolosoft/taskrail"
       }
     },
     {
       "name": "goodfriend",
       "source": {
-        "source": "git",
-        "url": "nicodunks/goodfriend"
+        "source": "github",
+        "repo": "nicodunks/goodfriend"
       }
     },
     {
       "name": "mod-usage",
       "source": {
-        "source": "git",
-        "url": "jack21/claude-mod-usage"
+        "source": "github",
+        "repo": "jack21/claude-mod-usage"
       }
     },
     {
       "name": "glance",
       "source": {
-        "source": "git",
-        "url": "VibeMage/claude-mod-glance"
+        "source": "github",
+        "repo": "VibeMage/claude-mod-glance"
       }
     },
     {
       "name": "test-progress",
       "source": {
-        "source": "git",
-        "url": "fabiopbarbieri/claude-test-progress"
+        "source": "github",
+        "repo": "fabiopbarbieri/claude-test-progress"
       }
     },
     {
       "name": "kit-sink",
       "source": {
         "source": "git-subdir",
-        "url": "eduardocruz/cc-kit",
+        "url": "https://github.com/eduardocruz/cc-kit.git",
         "path": "mods/kit-sink"
       }
     },
@@ -3949,51 +3865,51 @@
       "name": "clawd-tracker",
       "source": {
         "source": "git-subdir",
-        "url": "IKnowJot/clawd-plugins",
+        "url": "https://github.com/IKnowJot/clawd-plugins.git",
         "path": "plugins/clawd-tracker"
       }
     },
     {
       "name": "cc-math-renderer",
       "source": {
-        "source": "git",
-        "url": "andrewroxby/cc-math-renderer"
+        "source": "github",
+        "repo": "andrewroxby/cc-math-renderer"
       }
     },
     {
       "name": "cache-warmer",
       "source": {
-        "source": "git",
-        "url": "paulbkim-dev/claude-code-cache-warmer"
+        "source": "github",
+        "repo": "paulbkim-dev/claude-code-cache-warmer"
       }
     },
     {
       "name": "multirepo-diff-mod",
       "source": {
-        "source": "git",
-        "url": "nvsravank/multirepo-diff-mod"
+        "source": "github",
+        "repo": "nvsravank/multirepo-diff-mod"
       }
     },
     {
       "name": "smooth-stream",
       "source": {
         "source": "git-subdir",
-        "url": "kyongsik-yoon/claude-mods",
+        "url": "https://github.com/kyongsik-yoon/claude-mods.git",
         "path": "smooth-stream"
       }
     },
     {
       "name": "hint-mod",
       "source": {
-        "source": "git",
-        "url": "zyx1121/hint-mod"
+        "source": "github",
+        "repo": "zyx1121/hint-mod"
       }
     },
     {
       "name": "context-meter",
       "source": {
         "source": "git-subdir",
-        "url": "Vibe-Commit/claude-context-mods",
+        "url": "https://github.com/Vibe-Commit/claude-context-mods.git",
         "path": "plugins/context-meter"
       }
     },
@@ -4001,7 +3917,7 @@
       "name": "baton-notify",
       "source": {
         "source": "git-subdir",
-        "url": "Humpens/claude-mods",
+        "url": "https://github.com/Humpens/claude-mods.git",
         "path": "baton-notify"
       }
     },
@@ -4009,7 +3925,7 @@
       "name": "today",
       "source": {
         "source": "git-subdir",
-        "url": "Humpens/claude-mods",
+        "url": "https://github.com/Humpens/claude-mods.git",
         "path": "today"
       }
     },
@@ -4017,87 +3933,79 @@
       "name": "u",
       "source": {
         "source": "git-subdir",
-        "url": "Humpens/claude-mods",
+        "url": "https://github.com/Humpens/claude-mods.git",
         "path": "u"
       }
     },
     {
       "name": "cc-mod-park",
       "source": {
-        "source": "git",
-        "url": "GGGODLIN/cc-mod-park"
+        "source": "github",
+        "repo": "GGGODLIN/cc-mod-park"
       }
     },
     {
       "name": "chat-bubbles",
       "source": {
         "source": "git-subdir",
-        "url": "angeldelbiondo/claude-chat-bubbles",
+        "url": "https://github.com/angeldelbiondo/claude-chat-bubbles.git",
         "path": "chat-bubbles"
       }
     },
     {
       "name": "clawd-actor",
       "source": {
-        "source": "git",
-        "url": "BrianHuang813/clawd-actor"
-      }
-    },
-    {
-      "name": "clawd-factory",
-      "source": {
-        "source": "git-subdir",
-        "url": "HayatoKonya/clawd-factory",
-        "path": "plugins/clawd-factory"
+        "source": "github",
+        "repo": "BrianHuang813/clawd-actor"
       }
     },
     {
       "name": "barra-usage-model",
       "source": {
-        "source": "git",
-        "url": "sidneyfrancois/barra-usage-model"
+        "source": "github",
+        "repo": "sidneyfrancois/barra-usage-model"
       }
     },
     {
       "name": "tool-meter",
       "source": {
-        "source": "git",
-        "url": "VerbodhDev/tool-meter"
+        "source": "github",
+        "repo": "VerbodhDev/tool-meter"
       }
     },
     {
       "name": "recap-plus",
       "source": {
-        "source": "git",
-        "url": "skanehira/claude-recap-plus"
+        "source": "github",
+        "repo": "skanehira/claude-recap-plus"
       }
     },
     {
       "name": "prompt-posse",
       "source": {
-        "source": "git",
-        "url": "RyanEmslie/prompt-posse"
+        "source": "github",
+        "repo": "RyanEmslie/prompt-posse"
       }
     },
     {
       "name": "pixel-buddy",
       "source": {
-        "source": "git",
-        "url": "monowu/claude-mod-pixel-buddy"
+        "source": "github",
+        "repo": "monowu/claude-mod-pixel-buddy"
       }
     },
     {
       "name": "ix-flow",
       "source": {
-        "source": "git",
-        "url": "agent-ix/ix-flow"
+        "source": "github",
+        "repo": "agent-ix/ix-flow"
       }
     },
     {
       "name": "widgets",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/widgets"
       }
     },
@@ -4105,7 +4013,7 @@
       "name": "context-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/context-widget"
       }
     },
@@ -4113,7 +4021,7 @@
       "name": "usage-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/usage-widget"
       }
     },
@@ -4121,7 +4029,7 @@
       "name": "git-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/git-widget"
       }
     },
@@ -4129,7 +4037,7 @@
       "name": "tasks-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/tasks-widget"
       }
     },
@@ -4137,7 +4045,7 @@
       "name": "pet-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/pet-widget"
       }
     },
@@ -4145,7 +4053,7 @@
       "name": "tetris-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/tetris-widget"
       }
     },
@@ -4153,7 +4061,7 @@
       "name": "snake-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/snake-widget"
       }
     },
@@ -4161,7 +4069,7 @@
       "name": "pomodoro-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/pomodoro-widget"
       }
     },
@@ -4169,7 +4077,7 @@
       "name": "clocks-widget",
       "source": {
         "source": "git-subdir",
-        "url": "oMaN-Rod/claude-code-widgets",
+        "url": "https://github.com/oMaN-Rod/claude-code-widgets.git",
         "path": "plugins/clocks-widget"
       }
     },
@@ -4177,7 +4085,7 @@
       "name": "prompt-bubbles",
       "source": {
         "source": "git-subdir",
-        "url": "akilin/claude-plugins",
+        "url": "https://github.com/akilin/claude-plugins.git",
         "path": "plugins/prompt-bubbles"
       }
     },
@@ -4185,7 +4093,7 @@
       "name": "better-tool-rows",
       "source": {
         "source": "git-subdir",
-        "url": "akilin/claude-plugins",
+        "url": "https://github.com/akilin/claude-plugins.git",
         "path": "plugins/better-tool-rows"
       }
     },
@@ -4193,22 +4101,22 @@
       "name": "shiplog",
       "source": {
         "source": "git-subdir",
-        "url": "codywilliamson/claude-mods",
+        "url": "https://github.com/codywilliamson/claude-mods.git",
         "path": "shiplog"
       }
     },
     {
       "name": "usage-pace",
       "source": {
-        "source": "git",
-        "url": "diazgonza17/usage-pace"
+        "source": "github",
+        "repo": "diazgonza17/usage-pace"
       }
     },
     {
       "name": "subagents-monitor",
       "source": {
         "source": "git-subdir",
-        "url": "Fazzani/claude-mods",
+        "url": "https://github.com/Fazzani/claude-mods.git",
         "path": "plugins/subagents-monitor"
       }
     },
@@ -4216,7 +4124,7 @@
       "name": "tools-usage",
       "source": {
         "source": "git-subdir",
-        "url": "Fazzani/claude-mods",
+        "url": "https://github.com/Fazzani/claude-mods.git",
         "path": "plugins/tools-usage"
       }
     },
@@ -4224,22 +4132,22 @@
       "name": "daily-grind",
       "source": {
         "source": "git-subdir",
-        "url": "sreshtalluri/claude-mods",
+        "url": "https://github.com/sreshtalluri/claude-mods.git",
         "path": "plugins/daily-grind"
       }
     },
     {
       "name": "sidebot",
       "source": {
-        "source": "git",
-        "url": "monowu/claude-mod-sidebot"
+        "source": "github",
+        "repo": "monowu/claude-mod-sidebot"
       }
     },
     {
       "name": "gitgraph",
       "source": {
         "source": "git-subdir",
-        "url": "TCcodemaster/claude-mods",
+        "url": "https://github.com/TCcodemaster/claude-mods.git",
         "path": "gitgraph"
       }
     },
@@ -4247,7 +4155,7 @@
       "name": "cache-bar",
       "source": {
         "source": "git-subdir",
-        "url": "TheTsungYing/claude-cache-bar",
+        "url": "https://github.com/TheTsungYing/claude-cache-bar.git",
         "path": "plugins/cache-bar"
       }
     },
@@ -4255,7 +4163,7 @@
       "name": "streak",
       "source": {
         "source": "git-subdir",
-        "url": "vincentlauriat/ModsTools",
+        "url": "https://github.com/vincentlauriat/ModsTools.git",
         "path": "mods/streak"
       }
     },
@@ -4263,7 +4171,7 @@
       "name": "agent-tracker",
       "source": {
         "source": "git-subdir",
-        "url": "vincentlauriat/ModsTools",
+        "url": "https://github.com/vincentlauriat/ModsTools.git",
         "path": "mods/agent-tracker"
       }
     },
@@ -4271,37 +4179,37 @@
       "name": "tool-heatmap",
       "source": {
         "source": "git-subdir",
-        "url": "vincentlauriat/ModsTools",
+        "url": "https://github.com/vincentlauriat/ModsTools.git",
         "path": "mods/tool-heatmap"
       }
     },
     {
       "name": "zen-breath",
       "source": {
-        "source": "git",
-        "url": "mindthink/zen-breath"
+        "source": "github",
+        "repo": "mindthink/zen-breath"
       }
     },
     {
       "name": "i18n-pixel",
       "source": {
         "source": "git-subdir",
-        "url": "Ponpon55837/i18n-check-mods",
+        "url": "https://github.com/Ponpon55837/i18n-check-mods.git",
         "path": "plugins/i18n-pixel"
       }
     },
     {
       "name": "task-progress-mod",
       "source": {
-        "source": "git",
-        "url": "hahahahahahahahah6/task-progress-mod"
+        "source": "github",
+        "repo": "hahahahahahahahah6/task-progress-mod"
       }
     },
     {
       "name": "guard",
       "source": {
         "source": "git-subdir",
-        "url": "StanislavKozachenko/claude-mods",
+        "url": "https://github.com/StanislavKozachenko/claude-mods.git",
         "path": "plugins/guard"
       }
     },
@@ -4309,7 +4217,7 @@
       "name": "shared-file-guard",
       "source": {
         "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
+        "url": "https://github.com/mutlumehmet/claude-plugins.git",
         "path": "plugins/shared-file-guard"
       }
     },
@@ -4317,61 +4225,29 @@
       "name": "dash-guard",
       "source": {
         "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
+        "url": "https://github.com/mutlumehmet/claude-plugins.git",
         "path": "plugins/dash-guard"
-      }
-    },
-    {
-      "name": "dragon-lair",
-      "source": {
-        "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
-        "path": "plugins/dragon-lair"
-      }
-    },
-    {
-      "name": "tama",
-      "source": {
-        "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
-        "path": "plugins/tama"
-      }
-    },
-    {
-      "name": "jackpot",
-      "source": {
-        "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
-        "path": "plugins/jackpot"
-      }
-    },
-    {
-      "name": "outlaw",
-      "source": {
-        "source": "git-subdir",
-        "url": "mutlumehmet/claude-plugins",
-        "path": "plugins/outlaw"
       }
     },
     {
       "name": "md-preview",
       "source": {
-        "source": "git",
-        "url": "abonckus/claude-code-md-preview"
+        "source": "github",
+        "repo": "abonckus/claude-code-md-preview"
       }
     },
     {
       "name": "xhs-count",
       "source": {
-        "source": "git",
-        "url": "eddiezhan/xhs-count-mod"
+        "source": "github",
+        "repo": "eddiezhan/xhs-count-mod"
       }
     },
     {
       "name": "vitrin",
       "source": {
         "source": "git-subdir",
-        "url": "yasinozmeen/claude-code-mods",
+        "url": "https://github.com/yasinozmeen/claude-code-mods.git",
         "path": "vitrin"
       }
     },
@@ -4379,7 +4255,7 @@
       "name": "vurgu",
       "source": {
         "source": "git-subdir",
-        "url": "yasinozmeen/claude-code-mods",
+        "url": "https://github.com/yasinozmeen/claude-code-mods.git",
         "path": "vurgu"
       }
     },
@@ -4387,44 +4263,44 @@
       "name": "lavish-pages",
       "source": {
         "source": "git-subdir",
-        "url": "FoCDoT/lavish-pages",
+        "url": "https://github.com/FoCDoT/lavish-pages.git",
         "path": "lavish-pages"
       }
     },
     {
       "name": "pixipet",
       "source": {
-        "source": "git",
-        "url": "VibeMage/claude-mod-pet"
+        "source": "github",
+        "repo": "VibeMage/claude-mod-pet"
       }
     },
     {
       "name": "token-usage",
       "source": {
-        "source": "git",
-        "url": "monowu/claude-mod-token-usage"
+        "source": "github",
+        "repo": "monowu/claude-mod-token-usage"
       }
     },
     {
       "name": "loc-split",
       "source": {
         "source": "git-subdir",
-        "url": "RomanHotsiy/claude-mods",
+        "url": "https://github.com/RomanHotsiy/claude-mods.git",
         "path": "loc-split"
       }
     },
     {
       "name": "vn-stockmarket-heatmap",
       "source": {
-        "source": "git",
-        "url": "NgoTuong12345/claude-mod-vn-stock-watch"
+        "source": "github",
+        "repo": "NgoTuong12345/claude-mod-vn-stock-watch"
       }
     },
     {
       "name": "cc-notify-mod",
       "source": {
         "source": "git-subdir",
-        "url": "kukaka/cc-mods",
+        "url": "https://github.com/kukaka/cc-mods.git",
         "path": "cc-notify-mod"
       }
     },
@@ -4432,7 +4308,7 @@
       "name": "btw-fix",
       "source": {
         "source": "git-subdir",
-        "url": "m-mahiro/claude-code-mods",
+        "url": "https://github.com/m-mahiro/claude-code-mods.git",
         "path": "mods/btw-fix"
       }
     },
@@ -4440,7 +4316,7 @@
       "name": "cc-mod-ferro",
       "source": {
         "source": "git-subdir",
-        "url": "Vatroslav/cc-mod-ferro",
+        "url": "https://github.com/Vatroslav/cc-mod-ferro.git",
         "path": "plugin"
       }
     },
@@ -4448,7 +4324,7 @@
       "name": "handover-report",
       "source": {
         "source": "git-subdir",
-        "url": "bzatrok/claudemods",
+        "url": "https://github.com/bzatrok/claudemods.git",
         "path": "handover-report"
       }
     },
@@ -4456,36 +4332,36 @@
       "name": "tldr",
       "source": {
         "source": "git-subdir",
-        "url": "bzatrok/claudemods",
+        "url": "https://github.com/bzatrok/claudemods.git",
         "path": "tldr"
       }
     },
     {
       "name": "status-line",
       "source": {
-        "source": "git",
-        "url": "mikljohansson/claude-code-status-line"
+        "source": "github",
+        "repo": "mikljohansson/claude-code-status-line"
       }
     },
     {
       "name": "al-syntax",
       "source": {
-        "source": "git",
-        "url": "abonckus/claude-code-al-syntax"
+        "source": "github",
+        "repo": "abonckus/claude-code-al-syntax"
       }
     },
     {
       "name": "file-preview",
       "source": {
-        "source": "git",
-        "url": "abonckus/claude-code-file-preview"
+        "source": "github",
+        "repo": "abonckus/claude-code-file-preview"
       }
     },
     {
       "name": "desktop-statusline",
       "source": {
         "source": "git-subdir",
-        "url": "centminmod/claude-plugins",
+        "url": "https://github.com/centminmod/claude-plugins.git",
         "path": "plugins/desktop-statusline"
       }
     },
@@ -4493,22 +4369,22 @@
       "name": "pixel-pet",
       "source": {
         "source": "git-subdir",
-        "url": "Namenomeaning/pixel-pet",
+        "url": "https://github.com/Namenomeaning/pixel-pet.git",
         "path": "plugins/pixel-pet"
       }
     },
     {
       "name": "bubble-contesto",
       "source": {
-        "source": "git",
-        "url": "maxturazzini/bubble-contesto"
+        "source": "github",
+        "repo": "maxturazzini/bubble-contesto"
       }
     },
     {
       "name": "done-sound",
       "source": {
         "source": "git-subdir",
-        "url": "myudav4iik/claude-mods",
+        "url": "https://github.com/myudav4iik/claude-mods.git",
         "path": "done-sound"
       }
     },
@@ -4516,7 +4392,7 @@
       "name": "clawd-dance",
       "source": {
         "source": "git-subdir",
-        "url": "tanuu5/clawd-dance",
+        "url": "https://github.com/tanuu5/clawd-dance.git",
         "path": "plugins/clawd-dance"
       }
     },
@@ -4524,7 +4400,7 @@
       "name": "usage-dollars",
       "source": {
         "source": "git-subdir",
-        "url": "hyvanmielenpelit/claudecodemods",
+        "url": "https://github.com/hyvanmielenpelit/claudecodemods.git",
         "path": "usage-dollars"
       }
     },
@@ -4532,7 +4408,7 @@
       "name": "code-quest",
       "source": {
         "source": "git-subdir",
-        "url": "vardhankirti/claude-code-mods",
+        "url": "https://github.com/vardhankirti/claude-code-mods.git",
         "path": "code-quest"
       }
     },
@@ -4540,37 +4416,37 @@
       "name": "agent-party",
       "source": {
         "source": "git-subdir",
-        "url": "ytruong11201/claude-code-mods",
+        "url": "https://github.com/ytruong11201/claude-code-mods.git",
         "path": "plugins/agent-party"
       }
     },
     {
       "name": "blaze",
       "source": {
-        "source": "git",
-        "url": "mashiro-no-rabo/blaze-mod"
+        "source": "github",
+        "repo": "mashiro-no-rabo/blaze-mod"
       }
     },
     {
       "name": "barometer",
       "source": {
         "source": "git-subdir",
-        "url": "Alchez/claude-mods",
+        "url": "https://github.com/Alchez/claude-mods.git",
         "path": "barometer"
       }
     },
     {
       "name": "session-panel",
       "source": {
-        "source": "git",
-        "url": "arsenii-cmd/Claude-mod"
+        "source": "github",
+        "repo": "arsenii-cmd/Claude-mod"
       }
     },
     {
       "name": "message-banniere",
       "source": {
         "source": "git-subdir",
-        "url": "177cubicube-star/claude-code-mods",
+        "url": "https://github.com/177cubicube-star/claude-code-mods.git",
         "path": "message-banniere"
       }
     },
@@ -4578,7 +4454,7 @@
       "name": "goblin-chrome",
       "source": {
         "source": "git-subdir",
-        "url": "JasonWarrenUK/goblin-mode",
+        "url": "https://github.com/JasonWarrenUK/goblin-mode.git",
         "path": "marketplace/goblin-chrome"
       }
     },
@@ -4586,7 +4462,7 @@
       "name": "agent-aquarium",
       "source": {
         "source": "git-subdir",
-        "url": "nogu66/claude-code",
+        "url": "https://github.com/nogu66/claude-code.git",
         "path": "agent-aquarium"
       }
     },
@@ -4594,15 +4470,15 @@
       "name": "git-ops",
       "source": {
         "source": "git-subdir",
-        "url": "nogu66/claude-code",
+        "url": "https://github.com/nogu66/claude-code.git",
         "path": "git-ops"
       }
     },
     {
       "name": "crypto-band",
       "source": {
-        "source": "git",
-        "url": "thewhitewizard/crypto-band"
+        "source": "github",
+        "repo": "thewhitewizard/crypto-band"
       }
     },
     {
