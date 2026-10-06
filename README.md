@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 830 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 833 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 830 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 833 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 830 mods, see the Chinese section below.
+For detailed descriptions of all 833 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 830 个精选 Claude Code mods，按类别组织：
+以下是本市场的 833 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -220,6 +220,8 @@ For detailed descriptions of all 830 mods, see the Chinese section below.
 | prompt-glance | 提示框上方两行 HUD：模型、路径、git 分支与脏/领先状态、本轮和本会话花费、提示缓存命中率与过期倒计时，以及上下文、5 小时、每周用量条和本会话用到的工具/技能；/cache 打开逐轮缓存表。备注：本机只读 `git status`、读 settings.json 里的 promptCacheTtl 和相关环境变量判断缓存时长；turn.step、tool.call 只计数、原样传递；HUD 显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/audichuang/prompt-glance) |
 | cache-panel | 提示缓存快冷时才提醒：空闲 50 分钟、缓存还热且上下文够大（冷掉的重写成本估算至少约 $0.30、且不少于 30k token）时，提示框上方出现一行「cache cools in …」按钮；点它或 /warm 打开面板，填要离开几小时，比较保温、压缩、什么都不做三种做法的估算花费，再选 Keep warm（每 50 分钟 ping 一次直到时段结束）、Ping once（多保一小时）或 Compact now；/warm off 提前停止。备注：保温用 $.model.fork 对同一会话前缀发一句「Reply with exactly: ok」，只在你点了以后才发，按普通请求计费；Compact now 调内置 /compact；只有在 herdr 里运行时才用 process.run 调 herdr 发提醒音；AbovePrompt 调 next，可与其他 mod 叠加；纯本机，不联网。 | MIT | [链接](https://github.com/danyuchn/claude-mods/tree/main/cache-panel) |
 | usagemeter | /usagemeter 打开一个面板（英文界面），汇总 Claude Code、Codex、OpenCode、Antigravity 的花费和 token（按今天/7 天/30 天/90 天等范围、按模型或项目分组），另一页显示各账号的套餐限额。备注：用 $.process.run 调本机 node 跑仓库自带的 helper（helper/dist/usagemeter-helper.mjs，由 helper/src 打包、CI 校验与源码一致，需 Node ≥22.5），只读本机各工具的对话记录算用量，缓存写在 ~/.cache/usagemeter；每天从 GitHub raw 下载一次 LiteLLM 公开价目表（不带任何你的数据）；限额页只有在你配置了 CLIProxyAPI hub 地址和管理 key 后才会通过 hub 查询 Anthropic/OpenAI/Google 的用量接口，打开 openCodeGo 选项（默认关）时会读 OpenCode 的 auth.json 里的 key 去查 opencode.ai 用量；不改提示，不上传会话内容。 | MIT | [链接](https://github.com/Elesiann/usagemeter) |
+| cost-ledger | 逐笔记下每次模型请求的花费结构（主对话和子代理、四种 token、单价与各项金额、首字延迟和输出速度），提示框上方常驻一行总额和比例条，点它或 /ledger 打开面板，/ledger pr <编号> 汇总某个 PR 跨会话、跨子代理的花费；另注册一个 ledger 工具，Claude 可查账并输出能贴进 PR 的 markdown（繁体中文界面）。备注：金额按 API 定价换算，不是账单；记录写在 ~/.claude/cost-ledger/日期/会话.jsonl；turn.step 流式原样转发、只读用量，tool.call(Bash) 与 agent.spawn 只观察、结果原样返回（从 Bash 输出里识别 PR 证据）；本机调 git branch 取分支，查 PR 时调本机 gh pr view 只查分支名；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；不改提示，不上传会话内容。 |  | [链接](https://github.com/mengtienchang/claude-code-plugins/tree/main/cost-ledger) |
+| mod-jxf-fancy-details | 每条提示和工具调用旁显示计时，每条回复前加用量前缀（token 与花费），底部模式行右侧显示本会话和今日累计、订阅 5 小时/7 天限额条和上下文占用；8 个选项可调（放在模式行旁或提示框上方、是否拆分缓存 token 等）。备注：prompt.submit 只记录时间和文本用于对齐显示，不改写；turn.step 流式原样转发；tool.call 只计时、结果原样返回，每次后本机跑 git branch --show-current；会把工具组强制展开显示；替换底部 SessionMode 行（不调 next），选放在提示框上方时 AbovePrompt 也不调 next；每日累计写在 ~/.local/state/mod-jxf-fancy-details/days；限额读自 Claude 响应头；纯本机，不联网。该仓库是 fj/agent-plugins 的只写发布镜像。 |  | [链接](https://github.com/fj/jxf-agent-plugins-mod-jxf-fancy-details-claude) |
 
 ### 上下文管理 Context Management
 
@@ -762,6 +764,7 @@ For detailed descriptions of all 830 mods, see the Chinese section below.
 | show-me | /show-me <问题> 让 Claude 用 mermaid 图回答，并在面板里把回答中的 mermaid 图渲染成图片；不带参数则打开面板。备注：带问题时会以你的身份提交该问题并附加「用 mermaid 图回答」说明（你执行命令才会）；需本机 mmdc 和支持 kitty 图形协议的终端；临时文件在 $TMPDIR/show-me，旧目录会被清理。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/show-me) |
 | now-playing | 提示框上方一行显示 Spotify 正在播放的歌曲、进度和当前歌词，带上一首/暂停/下一首按钮，/music 也能控制（仅 macOS）。备注：本机 osascript 控制 Spotify；经 $.http 向 lrclib.net 查歌词，只发送歌名、歌手等曲目信息，不发送会话内容。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/now-playing) |
 | clauisc | 提示框上方的 Apple Music 正在播放条：像素封面、歌名、歌手和跟着节拍晃动的 Claude 玩偶。备注：仅 macOS；每 2 秒用本机 osascript 只读查询正在播放信息（首次会弹 macOS 授权）；其它系统只显示无法读取。 | MIT | [链接](https://github.com/mireabot/Clauisc/tree/main/plugins/clauisc) |
+| pixel-player | /music 在会话旁打开一个像素风音乐播放器面板（多款皮肤，/music skins 切换），播放你自己的歌单（YouTube 链接、音频直链或本地文件），可暂停、切歌、调音量，/music add 添加曲目。备注：需本机装 mpv（放 YouTube 还要 yt-dlp），用 $.process.spawn 启动 mpv 播放，用 $.process.run 调 /usr/bin/nc 经本机 Unix socket 控制 mpv，并加载仓库自带的 mpv/progress.lua 回报进度；歌单存在 ~/.claude/pixel-play/playlist.txt；只有面板和命令，不碰提示和工具；联网只限 mpv/yt-dlp 拉取你歌单里的音频。 | MIT | [链接](https://github.com/chrisluo5311/Pixel-Play) |
 
 ### 任务与项目 Task & Project
 
