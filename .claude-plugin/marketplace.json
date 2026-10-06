@@ -8160,6 +8160,138 @@
         "repo": "augbastos/dictate-cli",
         "sha": "ad102977579409d24899947a1c97b029cf2a231b"
       }
+    },
+    {
+      "name": "adaflow-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Adalink-ai/ada-mods.git",
+        "path": "adaflow-guard",
+        "sha": "7cf5bdb00a3f2169703fa0fdb434e4fdb9e21107"
+      }
+    },
+    {
+      "name": "token-speed",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Zulut30/claude-mode.git",
+        "path": "en/token-speed",
+        "sha": "1f19920aef2bf97048a74ee030aea22b86030b26"
+      }
+    },
+    {
+      "name": "context-inspector",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Zulut30/claude-mode.git",
+        "path": "en/context-inspector",
+        "sha": "1f19920aef2bf97048a74ee030aea22b86030b26"
+      }
+    },
+    {
+      "name": "command-brake",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sysmaker-kr/mods.git",
+        "path": "plugins/command-brake",
+        "sha": "035cfebdb93e925ec2800526f2b6c0237ad23b26"
+      }
+    },
+    {
+      "name": "limit-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sysmaker-kr/mods.git",
+        "path": "plugins/limit-board",
+        "sha": "035cfebdb93e925ec2800526f2b6c0237ad23b26"
+      }
+    },
+    {
+      "name": "slonk-card",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/romandots/claude-mods.git",
+        "path": "plugins/slonk-card",
+        "sha": "6fe66a5ad924575a69ae4b09452c52c0829a40ae"
+      }
+    },
+    {
+      "name": "trame",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Andarius/trame.git",
+        "path": "claude-mod",
+        "sha": "d1dbbc0e53bff5fffe970f0cb853a5165d7586b3"
+      }
+    },
+    {
+      "name": "am-context-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/romnycristopher/claude-am-mods.git",
+        "path": "mods/am-context-bar",
+        "sha": "64b35cc507b7a7516fb9687d9f36115c38712172"
+      }
+    },
+    {
+      "name": "sanduhr-meters",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/estevanhernandez-stack-ed/Sanduhr_f-r_Claude.git",
+        "path": "mac/integrations/mods/sanduhr-meters",
+        "sha": "28955790aab61f6d1bf2839ae3be487d4302b1eb"
+      }
+    },
+    {
+      "name": "file-picker",
+      "source": {
+        "source": "github",
+        "repo": "SeanPeppers/claude-files",
+        "sha": "599cd05f4aec5104b18182c9008a87558b1c3497"
+      }
+    },
+    {
+      "name": "limits-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Talap-creator/burnrate.git",
+        "path": "plugins/limits-band",
+        "sha": "c2814b15bd1bcdf72b374ed50d2d99d5a7b30d65"
+      }
+    },
+    {
+      "name": "usage-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/natsume-777/claude-mods.git",
+        "path": "plugins/usage-ledger",
+        "sha": "22fcc3fe17f5fd7ed3f72a9f50408ec11cceddcb"
+      }
+    },
+    {
+      "name": "clawd-ballet",
+      "source": {
+        "source": "github",
+        "repo": "Minithena/Claude-Code-Ballet",
+        "sha": "fafb21a6f4acfac3d51aaf0477af49f7a9e24b85"
+      }
+    },
+    {
+      "name": "idlereps",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/boringops-dan/idlereps.git",
+        "path": "plugins/idlereps",
+        "sha": "4e9dfbf3e1b25295b6717a7cb7c217c03e5e78a0"
+      }
+    },
+    {
+      "name": "dl",
+      "source": {
+        "source": "github",
+        "repo": "sharshi/daily-learning-plugin",
+        "sha": "641de2d82c41f816eca57b77b2c143ee511aa8fb"
+      }
     }
   ]
 }
