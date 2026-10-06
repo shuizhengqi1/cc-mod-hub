@@ -7006,6 +7006,38 @@
         "repo": "jnk0vc/breach-quota",
         "sha": "0ea389ae51981fc15de1825b37580485df751671"
       }
+    },
+    {
+      "name": "token-panel",
+      "source": {
+        "source": "github",
+        "repo": "JSUYA/claude-token-panel-mod",
+        "sha": "dc9ec31de85b2e9db0577916b6a8f409eb91b216"
+      }
+    },
+    {
+      "name": "lazygit-popup",
+      "source": {
+        "source": "github",
+        "repo": "PedroLaRosa/claude-code-lazygit-popup",
+        "sha": "3beed7245d67eaf1fa6d31ab23fc933c8df47c12"
+      }
+    },
+    {
+      "name": "tama",
+      "source": {
+        "source": "github",
+        "repo": "bbeygel/claude-code-tama",
+        "sha": "295b2bcd538a229aae9d3680b2f1abdbb773556a"
+      }
+    },
+    {
+      "name": "pr-live-review",
+      "source": {
+        "source": "github",
+        "repo": "afruth/pr-live-review",
+        "sha": "7cc41e2b0adf8eb8c69166a64a9531e90bf0df3b"
+      }
     }
   ]
 }

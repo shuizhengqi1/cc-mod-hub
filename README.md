@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 886 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 890 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 886 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 890 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 886 mods, see the Chinese section below.
+For detailed descriptions of all 890 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 886 个精选 Claude Code mods，按类别组织：
+以下是本市场的 890 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -233,6 +233,7 @@ For detailed descriptions of all 886 mods, see the Chinese section below.
 | cache-battery | 在提示框上方用一节会慢慢耗尽的「电池」显示提示缓存还剩多久：区分 5 分钟与 1 小时缓存档，最后一分钟显示秒数，过期后显示雪花，提醒下一条消息会重写整个提示。备注：turn.step 只读每次请求的 usage 来计算缓存时间，不改写；读取 ANTHROPIC_API_KEY、CLAUDE_CODE_USE_BEDROCK 等环境变量只用来判断是否设置（决定默认 5 分钟还是 1 小时档），不记录也不发送其值；可用 CACHE_BATTERY_TTL、CACHE_BATTERY_CELLS、CACHE_BATTERY_NUMBERS 调整；不联网；仓库里另有状态栏命令和 pi 版本，不随本 mod 安装。 | MIT | [链接](https://github.com/korengast/cache-battery) |
 | pasek | 提示框上方一条状态带：仓库与分支、本会话费用、上下文进度条、5 小时与每周限额及重置倒计时、本会话提示数、上一回合耗时与缓存命中率、提示缓存（按 1 小时计）冷却倒计时，冷却前 5 分钟提醒；上下文超过阈值（默认 40%，/pasek prog 调整）提示交接，带 REC、Handoff、Wytłumacz 按钮（波兰语界面）。备注：每回合跑一次本机 git branch --show-current；prompt.submit 只计数、原样放行；Handoff 按钮或 /pasek handoff 会运行插件自带的 handoff 技能（禁止模型自动调用，只在你点时运行），让 Claude 把交接文档写到当前项目的 .claude/ 目录；REC 和 Wytłumacz 按钮需另装同作者的 record-mode、wytlumacz-mi；不联网。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/pasek) |
 | breach-quota | 赛博朋克风格的侧边 HUD 窗格（/breach 打开，日文界面）：5 小时与每周限额的倒计时块、上下文占用的十六进制记忆矩阵、消耗速率和缓存仪表、本会话工具调用与子代理的「入侵追踪」日志，以及提示框上方的警告带（正在执行的命令、被拒绝的工具、接近限额）。备注：tool.call、agent.spawn 只记录工具名、摘要和结果，原样放行；prompt.submit 只清除警告；上下文明细用本地估算，不额外请求；不联网、不运行外部命令。 | MIT | [链接](https://github.com/jnk0vc/breach-quota) |
+| token-panel | 侧边窗格列出本会话每条提示用掉的 token（输入、输出、缓存读、缓存写）和按标准 API 价目估算的费用，子代理的用量计入发起它的那条提示，底部合计；点某一行会把对话滚到那条消息并让它的边框闪红三秒；/token-panel 打开或关闭，选择跨会话保留。备注：只读取本机的会话记录文件（含子代理记录）来统计；价目表写死在插件里，涨价需等作者更新，不含 fast 模式、美国区 1.1 倍和网页搜索费；classic.UserPromptSubmit、SessionStart、PostToolUse 只用来刷新统计，原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/JSUYA/claude-token-panel-mod) |
 
 ### 上下文管理 Context Management
 
@@ -653,6 +654,8 @@ For detailed descriptions of all 886 mods, see the Chinese section below.
 | output-tray | 侧边面板收集本会话新建的文件，可打开、在 Finder 中显示、复制路径；/tray。备注：Bash 前后用本机 git status/find 对比新文件；打开和显示用 macOS 的 open 命令，只在你点按钮时运行；注册一个自己的工具供 Claude 打开面板；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/output-tray) |
 | changes-receipt | 每轮结束给一张白话收据：新建、修改、删除了哪些文件，经工具还是 shell，失败的尝试单独列出；/receipt 查看。备注：用本机 git status/hash-object/ls-tree/diff 比对；tool.call 先放行再记录；/receipt 与已有 session-receipt 的命令同名，别同时装；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/changes-receipt) |
 | recent-files | 侧边窗格列出本会话最近新建、编辑或删除的 5 个文件：文件名是可点的终端链接，附相对目录、来源（Write、Edit、Bash）、是否子代理和时间；会话开始自动打开，/recent-files 重新打开。备注：tool.call 只在工具执行后记录路径，原样放行；每次 Bash 调用前后会对已知仓库各跑一次本机 git status（--no-optional-locks、禁用 fsmonitor）比较差异，仓库很大时略增开销；列表存进插件 store 以便重载后恢复；不联网；作者在 2.1.290、2.1.291 上测试。 | MIT | [链接](https://github.com/ryoupr/claude-code-recent-files) |
+| lazygit-popup | 按 alt+g 在当前面板上方的 tmux 弹窗里打开 lazygit（在会话目录），按 ESC 或 q 退出 lazygit 弹窗随即关闭。备注：**需要在 tmux 3.2+ 里运行 Claude Code，并已安装 lazygit**；mod 不能自带快捷键，需自己在 `~/.claude/keybindings.json` 的 Global 里加 `"alt+g": "strip:jump4"` 再 /reload-plugins（插件在提示框上方放了一个绑定该动作的隐藏按钮）；会在 lazygit 配置目录写一个只供弹窗用的 claude-popup.yml（quitOnTopLevelReturn: true），不改你自己的 config.yml；只运行本机 lazygit 和 tmux，不联网；作者注明基于 2.1.291 开发。 |  | [链接](https://github.com/PedroLaRosa/claude-code-lazygit-popup) |
+| pr-live-review | /pr-live-review 打开实时 PR 审查窗格：当前检出分支的 PR 相对目标分支的差异、每个文件的摘要和发现的问题，可逐行加评论，把评论发给 Claude 处理或发到 GitHub PR 上。备注：**需要本机 git 和已登录的 gh**，作者要求 Claude Code 2.1.291+；打开时会对每个改动文件调用 $.model.complete（Sonnet）审查，发送的是 PR 差异、该文件全文、调用处片段和仓库里的 CLAUDE.md、AGENTS.md 规则（若装了名为 review-senior-engineer 的技能也会附上），不含会话内容；只有你按 send 才把评论作为你的消息提交给 Claude，只有你保存发布时才通过 gh api 发到 GitHub；不连其他外网。 |  | [链接](https://github.com/afruth/pr-live-review) |
 
 ### 子代理管理 Subagent Management
 
@@ -775,6 +778,7 @@ For detailed descriptions of all 886 mods, see the Chinese section below.
 | tsunu-avatar | 侧边窗格里的角色立绘（阿宇）跟着会话状态换表情：待机、思考中、工作中、等你回复、出错了、完成了（中文界面）；kitty/Ghostty 显示 PNG，其他终端用预先转好的字符画。备注：每次状态变化把会话 ID、工作目录、状态和工具名 POST 到本机 127.0.0.1:47321（同仓库的桌面小窗口），没开就静默失败、不影响会话；不连外网；所有 hook 只观察、原样放行。 | MIT | [链接](https://github.com/Tsun-u/tsunu-pet/tree/main/mod) |
 | terminal-pet | 提示框上方的像素小螃蟹，跟着 Claude 读、写、等待、完成、出错做反应，肚子大小表示对话有多满；/pet 控制。备注：tool.call 只观察、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/terminal-pet) |
 | meatball | 提示框上方一颗像素肉丸跟着 Claude 的状态动：工作时来回滚、编辑文件时咀嚼、跑命令时盯着看、出错时皱眉、等你批准时冒感叹号、回合结束蹦一下、闲置 5 分钟打瞌睡，上下文越满越圆；桌面版画 SVG，终端里是一行彩色表情；/meatball 显示或隐藏，/meatball width 设置宽度。备注：tool.call、tool.check 只观察、原样放行；终端里移动时约每 120 毫秒重绘一次；不联网、不运行外部命令。 | MIT | [链接](https://github.com/jesseorndorff/meatball/tree/main/plugin) |
+| tama | 住在 Claude Code 里的电子宠物：显示在提示框上方和加载提示里，Claude 完成回合时开心，工具出错时闹情绪，按真实时间变饿变困，从蛋长到成年，昏倒后 24 小时没人管就会死；/pet 打开设备窗格（f 喂食、s 睡觉或唤醒、p 玩耍），/feed、/sleep、/wake 随处可用，/pet name 改名。备注：/pet creature <描述> 时调用一次 $.model.complete（Opus）按你的描述画像素造型，只发送描述文字，不含会话内容；长回合结束或需要你时会用 $.audio.speak 说话；tool.call 只看结果、原样放行；不联网。 |  | [链接](https://github.com/bbeygel/claude-code-tama) |
 
 ### 图片与媒体 Images & Media
 
