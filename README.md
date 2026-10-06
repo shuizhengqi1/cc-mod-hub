@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 944 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 950 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 944 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 950 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 944 mods, see the Chinese section below.
+For detailed descriptions of all 950 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 944 个精选 Claude Code mods，按类别组织：
+以下是本市场的 950 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -243,6 +243,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | tps-meter | 在提示框底部提示行（桌面版在模式标签旁）实时显示模型输出速度（tokens/秒），回合进行中带 ⚡ 标记，结束后按实际输出 token 数校准。备注：turn.step 只计数、原样传递流式内容，不改写；不联网、不运行外部命令。 |  | [链接](https://github.com/xingkaixin/claude-mods/tree/main/mods/tps-meter) |
 | session-recap | 你 /clear 一段对话后自动弹出一张回顾卡片：用时、回合数、工具调用、改动的文件与行数、测试运行次数和费用；`/session-recap` 随时查看当前对话的回顾；桌面端可点 Copy image / Save image 把卡片存成 PNG。备注：统计只在本机；复制/保存图片要按按钮才会用 macOS 自带的 qlmanage、sips、osascript，保存到 ~/Pictures/Session Recaps；不联网。 | MIT | [链接](https://github.com/endless-fr/claude-mods/tree/main/mods/session-recap) |
 | benzina | 提示框上方一条「油量表」：用进度条显示套餐 5 小时和每周额度还剩多少、什么时候恢复，以及对话上下文还剩多少，快用完时给一句建议，用量跨过阈值时弹提示；`/benzina` 显示或隐藏。备注：只读 session.usage 和 session.measure，钩子原样传递；纯本机，不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/benzina) |
+| usage-live | 提示框下方加一条彩色用量线：上下文占用、套餐 5 小时和每周额度（细进度条从绿到红，附重置倒计时）以及本会话花费。备注：只读 session.usage，钩子原样传递；额度百分比来自本会话最近一次 API 响应，标 ~ 表示约数；纯 UI，不联网。 | MIT | [链接](https://github.com/bodypas/claude-usage-live) |
 
 ### 上下文管理 Context Management
 
@@ -497,6 +498,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | battle-band | 挂机 RPG：Claude 干活时提示框上方一个像素骑士和怪物战斗，休息时在篝火边睡觉，5 小时/每周额度画成他要走的路；桌面版和终端都能显示。备注：只读回合开始/结束和 $.session.usage，钩子原样传递；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；仓库里的 install.sh 是给桌面版手动安装用的，从市场安装不会运行；纯本机，不联网。 | MIT | [链接](https://github.com/gianggenius/battle-band/tree/main/plugin) |
 | language-learner | LinguaCC：类似 Duolingo 的德语课程面板（A1 到 C1，共 100 课），/learn 打开：关卡地图、单词介绍、选择、拼写等练习、红心、XP、连胜和每日目标，进度存在本机。备注：发音用 $.audio.speak 调本机语音（需要 macOS 和德语语音 Anna，没有就只显示文字）；只有面板和命令，不碰提示和工具；纯本机，不联网。 |  | [链接](https://github.com/pseudometalhead/CCLanguageLearnerMod) |
 | cooking-puzzles | Claude 工作时在侧边窗格玩数独、印尼语填字游戏（TTS）或诺基亚风格贪吃蛇；你发消息后自动打开窗格，回合结束提示 Claude 已完成，进度和最高分跨会话保存；/sudoku、/tts、/snake 直接打开，/puzzle on、off 开关自动打开，/puzzle ai on、off 切换填字题由 Claude 出题或用内置题库。备注：默认每次发消息都会自动打开并聚焦游戏窗格（/puzzle off 关闭）；填字题默认用 $.model.complete 让 Haiku 按随机主题出题，只发送主题和已用过的答案，不含会话内容；prompt.submit 只在消息发出后打开窗格、原样放行；不联网。 |  | [链接](https://github.com/Tamlica/cooking-puzzles-mod) |
+| greve-generale | 恶搞 mod：Claude 的工具会按设定概率（默认 5.8%）随机「罢工」，弹出提示并拒绝这次调用，罢工理由都是很法式的玩笑（面包烤过头、PSG 又输了……），Claude 可以直接重试。备注：只拒绝（deny）不改写，可在插件设置里调概率，设为 0 即关闭；会打断正常工作，图个乐；说明为法语；纯本机，不联网。 |  | [链接](https://github.com/devsomelife/somelife-claude-mods/tree/main/plugins/greve-generale) |
 
 ### 安全防护 Security & Safety
 
@@ -684,6 +686,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | bash-watch | Bash 命令失败时在状态行显示「failed: 命令前 40 个字符」，下一条命令成功后自动清除。备注：tool.call 先让命令照常执行再看结果，原样返回，不改工具调用；不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/bash-watch) |
 | tool-calls | `/tool-calls` 打开侧栏，实时列出本会话的工具调用（运行中 runs / 已完成 done），保留最近 200 条。备注：tool.call 只记录工具名、原样传递，不改工具调用；记录只在本会话里，不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/tool-calls) |
 | vero-diff | 每个回合开始和结束时给工作区拍快照，在侧边面板里按回合浏览 Claude 改了什么（带语法高亮的真实 diff）；`/vero-diff` 打开面板，`/vero-diff last [N]` 把某一回合的 diff 贴进对话，`/vero-diff purge` 删除本项目的快照。备注：快照存在项目外的 ~/.cache/verodiff 独立 git 仓库，不碰项目自己的 .git；会把工作区全部文件（含未跟踪文件）写进快照，注意定期 purge；在 git 仓库里会话开始时自动打开面板；运行插件自带、源码可读的 scripts/snapshot.sh；`last` 的 diff 模型也会读到；不联网。 | MIT | [链接](https://github.com/GomelHawk/VeroDiff/tree/main/plugins/vero-diff) |
+| tool-tape | 把当前回合的每次工具调用画成提示框上方的一格彩色色块（读、运行、编辑、网络、子代理、其他分色，失败标红），附调用次数、耗时和分类统计；等待动画后面显示这是第几次调用和最近用的工具；界面英文或日文自动跟随系统语言。备注：prompt.submit 只记开始时间、tool.call 只看结果，都原样传递；纯 UI，不联网。 | MIT | [链接](https://github.com/DonMecha/tool-tape) |
 
 ### 子代理管理 Subagent Management
 
@@ -853,6 +856,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | shot-preview | Claude 回复里提到截图路径（.png/.jpg）时，在回复下方画一张缩略图，带「↗ open」按钮用系统默认程序打开。备注：只在终端里显示；macOS 上用本机 `sips` 把非 PNG 转成 PNG 缓存到临时目录，其他系统只预览 PNG；打开用 `open`/`xdg-open`/`start`；只读回复文本，不联网。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
 | drop-thumb | 往提示框里拖入或粘贴图片时，在提示框上方为每张图显示一个小标签和预览卡片（缩略图、文件名、大小、原始路径），点标签可固定或收起卡片；在 Ghostty、kitty 里显示真实缩略图，其他终端只显示文字。备注：仅 macOS；每 200 毫秒读一次提示框，只找 [Image #n] 标记；用本机 sips 生成缩略图（存在 Claude 的私有临时目录），用 mdfind 或在下载、桌面、图片、文稿目录里按文件大小查找原始文件；prompt.submit 只清空卡片、原样放行；不联网。 | MIT | [链接](https://github.com/i-noma-ru/claude-drop-thumb) |
 | img-view | 在对话旁的面板里看图片：Claude 读或写的图片文件、AIGUI 画出的图会自动出现，`/img <路径>` 打开任意图片，`/img` 打开面板；在 kitty、Ghostty、iTerm2、WezTerm 里显示真实像素，其他终端用彩色字符块画出来。备注：有新图片时会自动打开面板；本机 process（macOS 用 sips，其他系统用 ImageMagick 的 magick）；tool.call 只看结果、原样传递；不联网。 | MIT | [链接](https://github.com/liliang-cn/aigui/tree/main/mods/img-view) |
+| image-mod | 在终端里看到你粘贴的图片：草稿里有图片时，提示框上方显示缩略图；发出的每条消息下面显示对应的图片。备注：需要支持 kitty 图形协议的终端（Ghostty、kitty）；仅 macOS（用本机 sips 转格式、取尺寸）；每 0.7 秒扫描 Claude 存放本会话粘贴图片的临时目录，PNG 副本放在系统临时目录；prompt.edit 只读草稿里的 [Image #n]，prompt.submit 只清空预览、原样放行；不联网。 | MIT | [链接](https://github.com/zyx1121/image-mod) |
 
 ### 任务与项目 Task & Project
 
@@ -910,6 +914,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | todo-list | /todo 打开侧边窗格的任务清单（德文界面）：Claude 干活时也能往里排任务而不打断它，/todo <文字> 直接加一条；点 ▶ 把一条任务作为提示发给 Claude，回答完自动打勾，可编辑、手动勾选，已完成的留在下方；打开 Auto 后每完成一条就自动发下一条（比如放着过夜跑）。备注：任务就是你自己写的文字，原样作为你的消息发出，插件不改写也不添加内容；Auto 默认关闭，开关跨会话保留，连续自动跑 25 条会安全停止并关掉 Auto，回合被中断或出错时不会继续；任务清单跨会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/todo-list) |
 | band-pending | /pending 打开侧边窗格，显示一个 Markdown 待办清单（`- [ ]` 条目，按 ## 标题分组，支持 📅 日期），点条目就在文件里打勾/取消；提示框上方显示待办按钮。备注：清单文件路径要在插件设置里填写；会直接改写这个文件里对应的那一行（改之前先确认该行没被别处改过）；属于 prompt-band 套件，可单独安装；不联网、不运行外部命令。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/pending) |
 | subtask-icons | Claude 最后一条回答下方出现一个「⑂ Subtask」按钮，点开列出回答里的编号项/要点，选一项就把 `/subtask <该项内容>` 填进输入框（不发送，可再补几句再回车；输入框里已有 /subtask 时再选会追加到新一行）；「Pin list」把这份清单钉在提示框上方，用 /subtask 发过的项打 ⑂；/st 打开选择窗格、/st N 直接填第 N 项、/st pin/unpin 钉住或取消。备注：/subtask 是 Claude Code 自带命令，本 mod 只观察它来标记已发项、原样放行；只填输入框、从不自动发送；不联网、不运行外部命令。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/subtask-icons) |
+| wayfinder-maps | `/wayfinder-maps` 打开侧边抽屉，列出项目里所有 wayfinder 地图和规格（Markdown 文件或 GitHub issue），显示工单、状态、进度条和依赖关系图，可筛选只看可开工或未完成的工单。备注：点「Work next」「Work this ticket」按钮时，会以你的名义发出可配置的提示（默认 `/wayfinder {map}`、`/implement {ticket}`），不点按钮不会自动发送；GitHub 部分通过本机 gh 读取 issue；面板打开时每 30 秒刷新；需配合 wayfinder 技能使用；不直接联网。 | MIT | [链接](https://github.com/Yuvalz19500/claude-mods/tree/main/plugins/wayfinder-maps) |
 
 ### 外部集成 External Integrations
 
@@ -953,6 +958,7 @@ For detailed descriptions of all 944 mods, see the Chinese section below.
 | github-issues | /issues 打开侧边窗格，把仓库的 GitHub issue 显示成卡片：Open、Assigned、Created、Closed 四个标签页，搜索框和标签筛选，卡片显示标题、编号、指派人、更新时间、评论数、关联 PR 和彩色标签，可展开正文；/issues owner/name 或 /issues . 指定仓库，不带参数时列出你最近推送过的仓库供选择；窗格打开时有新指派给你的 issue 会弹提示。备注：**需要本机已登录的 gh**（gh auth login），只运行 `gh api graphql` 查询（不做修改）和 `gh issue view`，除 GitHub 外不连其他外网；窗格打开时每 2 分钟和每回合结束后刷新，关闭时不发请求；只有你点「Work on it」才用 $.prompt.submit 以你的名义发一条固定提示，让 Claude 读该 issue 并动手实现。 | MIT | [链接](https://github.com/MarcoCarnevali/claude-code-mods/tree/main/github-issues) |
 | vault-jot | 在任意会话里把想法、待读链接、学到的东西、踩坑等随手记进 Obsidian 仓库的 inbox/：/jot idea: 文本 直接存成一条笔记，/jot 不带内容时让模型从当前对话起草一条填进输入框（回车才保存）；inbox 积压到一定数量或天数时提示框上方出现「Ingest」按钮；/incubate 打开侧边窗格浏览 wiki/ideas 和 wiki/reading 里的笔记，按钮可让 Claude 扩写想法、记录决定、标记阅读状态或导出为项目设计文档。备注：需先在 /config 设置 vaultPath（仓库须已有 inbox/ 目录）；笔记里会记下当前目录、仓库远程地址、git 分支和会话 id（分支用本机 `git rev-parse` 取）；/jot 起草用 $.model.fork 分叉一次、消耗少量用量；Ingest 按钮只把一条请求填进输入框（需另装 claude-obsidian 的 wiki-ingest），/incubate 窗格里的按钮是你点了才用 $.prompt.submit 以你的名义发出固定提示；本 mod 不直接改 wiki/ 下的笔记；不联网。 |  | [链接](https://github.com/Hsiang-LinC/vault-jot) |
 | stock-ticker | 提示框上方的台股报价带（默认 加權指數、2330、0050），交易时段每 5 秒刷新，红涨绿跌可切换，单日涨跌超过阈值（默认 3%）弹一次提示；`/stock add 2330` 添加、`/stock rm 2330` 删除、`/stock list` 列出、`/stock on`/`off` 显示或隐藏（最多 10 档）。备注：$.http 只请求台湾证交所公开行情接口 mis.twse.com.tw，只发送股票代码，不发送会话内容；只在会话显示在屏幕上时轮询。 | MIT | [链接](https://github.com/twjackysu/claude-code-stock-ticker/tree/main/plugins/stock-ticker) |
+| trail | 会话侧边栏（`/trail`）：把本会话创建、改动或提到的 Jira 工单、PR、GitHub Actions 运行、事故和文档列成可点链接（用 TeamCity 的话也列构建），并加一行状态（模型、分支、上下文、额度、可恢复的会话 ID）；有新建或合并时可选提示音。备注：只在本机从你的提示和 Claude 的回复里提取链接，prompt.submit 和 session.append 只读不改；用本机 gh、jira、teamcity 命令行查标题和状态（需你已登录这些工具），用 git status 取分支，点链接用 open 或 xdg-open 打开；mod 本身不直接联网。 | MIT | [链接](https://github.com/thnk2wn/trail) |
 
 ### 本地工具 Local Tools
 

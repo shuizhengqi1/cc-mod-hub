@@ -7512,6 +7512,56 @@
         "path": "mods/modo-gravacao",
         "sha": "1114b9d450adb6c024bc97f1b42946feb3601fb7"
       }
+    },
+    {
+      "name": "usage-live",
+      "source": {
+        "source": "github",
+        "repo": "bodypas/claude-usage-live",
+        "sha": "f0193c9a82845225d6606b323f299c19bf0f8c9e"
+      }
+    },
+    {
+      "name": "tool-tape",
+      "source": {
+        "source": "github",
+        "repo": "DonMecha/tool-tape",
+        "sha": "51d2cfbbc0876c2567ba30849f0e96f5302dee27"
+      }
+    },
+    {
+      "name": "image-mod",
+      "source": {
+        "source": "github",
+        "repo": "zyx1121/image-mod",
+        "sha": "3447e1cd27c802cbb691eed06b080edf50e1da03"
+      }
+    },
+    {
+      "name": "trail",
+      "source": {
+        "source": "github",
+        "repo": "thnk2wn/trail",
+        "sha": "ccac8bd6d66fde81f760b7bb6e4f8362bd5adac5"
+      }
+    },
+    {
+      "name": "wayfinder-maps",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Yuvalz19500/claude-mods.git",
+        "path": "plugins/wayfinder-maps",
+        "sha": "bc0e3733a0c4917f12ec6dbc31bcc6723b11ceef"
+      }
+    },
+    {
+      "name": "greve-generale",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devsomelife/somelife-claude-mods.git",
+        "path": "plugins/greve-generale",
+        "sha": "513f9bd72c8061b7d1c9f5f55ddb5f80f8a3748c"
+      }
     }
   ]
 }
