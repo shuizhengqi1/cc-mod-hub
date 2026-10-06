@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 922 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 928 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 922 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 928 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 922 mods, see the Chinese section below.
+For detailed descriptions of all 928 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 922 个精选 Claude Code mods，按类别组织：
+以下是本市场的 928 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -238,6 +238,9 @@ For detailed descriptions of all 922 mods, see the Chinese section below.
 | pace-band | /pace 打开面板：5 小时和每周用量限额各画一条进度条，同时标出窗口时间已过多少，按最近一小时速度预测会不会在重置前用完、何时用完，并按类别显示上下文占用（本机估算）；提示框上方只在需要处理时出现：上下文超过 80% 时给一个 compact 按钮，或某个限额会在重置前用完时给出警告，× 可本会话隐藏。界面语言可选 en/ru/auto。备注：「上一回合花费」要配合同仓库的 pace-statusline 状态栏脚本（不在本市场）才显示，mod 只把这行文字写到临时目录的 `pace-band-turn-<会话>.txt`；限额读数存在 mod 自己的存储里，本机所有会话共用；compact 按钮调用 Claude Code 自带的压缩；不联网、不运行外部命令。 | MIT | [链接](https://github.com/tsalkin/claude-code-statusline/tree/main/experiments/statusline-band) |
 | barre-conso | 提示框上方一条法语用量栏：5 小时和 7 天限额的小进度条、百分比和距重置时间，本会话累计输入/输出 token，上下文已用/窗口大小，以及本会话花费。备注：只读本机用量数据；绘制提示框上方区域时不调用 next，会替换掉其他 mod 在这一栏的内容（有调查问卷时让出）；不联网、不运行外部命令。 |  | [链接](https://github.com/contactflowclient-blip/mods-claude) |
 | neonmeter | 提示框上方一条霓虹风格的用量条：5 小时窗口、每周窗口（套餐有按模型的周额度时轮流显示）、可选的花费上限和本会话上下文占用，按占用程度分六档颜色，数值变化时闪几下；终端和桌面版 Code 标签页都能用，跟随 Claude Code 主题，可选布局、颜色、刷新间隔等 21 项设置。备注：额度通过 $.session.authorize 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（与内置 /usage 同一接口，凭据不经过 mod，不发会话内容），默认 60 秒一次，429 会退避，用 API key 登录时不显示额度；为跟随系统深浅色会运行本机 `defaults`（macOS）、`gsettings`（GNOME）或 `reg query`（Windows）并读取桌面版的 config.json；仓库另带可读的 install.sh/install.ps1 安装脚本，从本市场安装用不到。 | MIT | [链接](https://github.com/IvanPavlak/NeonMeter) |
+| uso-sessao | 提示框上方一行葡萄牙语用量条：上下文占用（ctx 已用/窗口和百分比）、本会话花费（美元）、5 小时和 7 天窗口的剩余百分比与距重置时间，按当前消耗速度预测到窗口结束是否会超额并用绿/黄/红着色。备注：数据只来自 $.session.usage()，不联网、不运行外部命令。 |  | [链接](https://github.com/diogosarti/my-claude-code/tree/main/plugins/uso-sessao) |
+| token-bar | 提示框上方用从绿到红的图形显示上下文窗口和额度用了多少（含每周窗口），每 30 秒和每个主会话回合结束后刷新。备注：数据只来自 $.session.usage()，不联网、不运行外部命令。 | MIT | [链接](https://github.com/santosli/claude-mods/tree/main/token-bar) |
+| tps-meter | 在提示框底部提示行（桌面版在模式标签旁）实时显示模型输出速度（tokens/秒），回合进行中带 ⚡ 标记，结束后按实际输出 token 数校准。备注：turn.step 只计数、原样传递流式内容，不改写；不联网、不运行外部命令。 |  | [链接](https://github.com/xingkaixin/claude-mods/tree/main/mods/tps-meter) |
 
 ### 上下文管理 Context Management
 
@@ -421,6 +424,7 @@ For detailed descriptions of all 922 mods, see the Chinese section below.
 | gauravs-panel | 在提示框底部模式标签右侧加一个「◆ Gaurav's Tools」按钮，点开是两排按钮：模型（Haiku、Sonnet、Opus、Fable）和思考强度（Low 到 Max），一键切换，不用再打 /model、/effort；/panel 也可开关；有侧边窗格打开时卡片移到窗格底部显示。备注：按钮只是替你运行 Claude Code 自带的 /model、/effort 命令，并把命令返回的提示弹出来；模型列表写死在插件里，新模型需等作者更新；当前强度从模型请求里读取，turn.step 原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/gauravlahoti/claude-mods/tree/main/plugins/gauravs-panel) |
 | quiet-mode | 安静模式：终端里隐藏工具调用行和回合中间的过渡性回复，只留你的提问和 Claude 最新的回复，状态栏显示本回合已隐藏多少个工具调用；/quiet 开关（on/off）。备注：只改显示，模型收到的内容不变；桌面 App 里工具行照常显示（App 自己会折叠）；prompt.submit 只用来清零计数、原样放行；tool.call 只计数、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/robw-raviga/claude-mods/tree/main/quiet-mode) |
 | answer-buttons | Claude 最后一条回答下方加三个小按钮：「✎ Plain English」用白话重讲、「✂ Shorter」压短、「✎✂ Plain & short」白话且只用两三句；也可用 /answer-buttons:shorter、/answer-buttons:plain-short 命令。备注：只有你点按钮时才用 $.prompt.submit 以你的名义发一条固定提示（设置 plain_skill 后两个 Plain 按钮改为运行该技能），会多跑一轮、消耗用量；回合进行中、VS Code 和手机端不显示；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/answer-buttons) |
+| stfu | 去掉 Claude 工作时那行转圈提示里的俏皮动词（如「Sauteing…」），只留用时和 token 数；回合结束那行统一显示为「Worked for 3s」。任务自带的说明文字（如「Running tests」）保持不变。备注：纯显示改动，不联网、不运行外部命令。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/stfu) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -671,6 +675,7 @@ For detailed descriptions of all 922 mods, see the Chinese section below.
 | aeo-audit | /aeo <网址> 检查一个网页能否被 ChatGPT 搜索、Perplexity、Google AI 概览、Copilot 和 Claude 抓取和读取：robots.txt 对各 AI 爬虫是否放行、防火墙是否拦截 AI 爬虫 UA、noindex/nosnippet、不开 JS 能否看到正文、llms.txt、站点地图等，每项给出 PASS/WARN/FAIL、修复建议和依据来源，在侧边窗格显示并把完整报告存到 `~/output/aeo-audits/`；也给 Claude 增加 audit_site 工具，可直接说「帮我审查某网站」。备注：会用 `$.http` 访问你指定的网址（页面本身、robots.txt、llms.txt、站点地图，并用几种 AI 爬虫 UA 各请求一次页面），不发送会话内容；窗格里的「Fix with Claude」只把修复请求填进输入框，不会自动发送；不运行外部命令。会跟随最多 5 次重定向，站点地图地址取自 robots.txt，可能访问其他主机；通过 audit_site 工具调用时网址由 Claude 选定。只发 GET。 | MIT | [链接](https://github.com/jbauman-26/aeo-audit-mod) |
 | band-git | 提示框上方一行白话 git 状态（有未提交改动 / 未推送 / 已开 PR / 已上线）并给出一个下一步按钮（提交、推送、拉取、开 PR、合并 PR、切回 main、部署）；另带生产部署闸门：Bash 里的 `vercel … --prod` 只有在你最新一条消息里说了「deploy」时才放行一次，否则拒绝。备注：按钮会直接以提示词发给 Claude（如「Commit the current changes…」），点了就会开一个回合；每 30 秒在本机运行 git 和 gh 读取状态；prompt.submit 只读取你是否说了 deploy、原样放行；部署闸门只拒绝不改写；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/git) |
 | skill-stats | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |
+| cc-file-history-mod | 提示框上方一条带，记录本会话里 Claude 用 Edit、Write 改过或用 Bash `rm` 删掉的每个文件；点 [View] 或用 /file-history 打开侧栏，可看每次改动的 diff，并单独撤销任意一个文件。备注：撤销会直接写回文件（新建的文件会被 `rm` 删除），请确认后再点；看 diff 时会在原文件旁临时写 `.cc-fh-diff-*.before/.after` 两个文件，用本机 `diff -u` 比对后删除；记录只在内存里，/clear、resume、fork 或重载后清空；不改工具调用，不联网。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
 
 ### 子代理管理 Subagent Management
 
@@ -835,6 +840,7 @@ For detailed descriptions of all 922 mods, see the Chinese section below.
 | clauisc | 提示框上方的 Apple Music 正在播放条：像素封面、歌名、歌手和跟着节拍晃动的 Claude 玩偶。备注：仅 macOS；每 2 秒用本机 osascript 只读查询正在播放信息（首次会弹 macOS 授权）；其它系统只显示无法读取。 | MIT | [链接](https://github.com/mireabot/Clauisc/tree/main/plugins/clauisc) |
 | pixel-player | /music 在会话旁打开一个像素风音乐播放器面板（多款皮肤，/music skins 切换），播放你自己的歌单（YouTube 链接、音频直链或本地文件），可暂停、切歌、调音量，/music add 添加曲目。备注：需本机装 mpv（放 YouTube 还要 yt-dlp），用 $.process.spawn 启动 mpv 播放，用 $.process.run 调 /usr/bin/nc 经本机 Unix socket 控制 mpv，并加载仓库自带的 mpv/progress.lua 回报进度；歌单存在 ~/.claude/pixel-play/playlist.txt；只有面板和命令，不碰提示和工具；联网只限 mpv/yt-dlp 拉取你歌单里的音频。 | MIT | [链接](https://github.com/chrisluo5311/Pixel-Play) |
 | paste-preview | 在提示框粘贴图片（出现 [Image #N]）时，在提示框上方显示缩略图：任意真彩终端用半格字符画，Ghostty、kitty 自动改用终端图像协议显示原图；按钮可用系统看图程序打开原图或收起，发送消息或删掉图片标记后自动收起；/paste-preview now、open、clear、hd、text、auto、off（繁体中文界面）。备注：**仅限 macOS**（用插件自带的 bin/clip.js 经 osascript 读剪贴板）；每 400 毫秒读一次输入框文字，只检测图片标记、不改写；prompt.submit 只清空预览、原样放行；剪贴板原图另存到插件目录 .cache/，超过一天自动删除；不联网。 |  | [链接](https://github.com/craneyu/claude-paste-preview) |
+| shot-preview | Claude 回复里提到截图路径（.png/.jpg）时，在回复下方画一张缩略图，带「↗ open」按钮用系统默认程序打开。备注：只在终端里显示；macOS 上用本机 `sips` 把非 PNG 转成 PNG 缓存到临时目录，其他系统只预览 PNG；打开用 `open`/`xdg-open`/`start`；只读回复文本，不联网。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
 
 ### 任务与项目 Task & Project
 

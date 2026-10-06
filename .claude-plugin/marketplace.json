@@ -7318,6 +7318,59 @@
         "path": "plugins/subtask-icons",
         "sha": "828596c54d7af01215a3bb585716b07a48e9ed6c"
       }
+    },
+    {
+      "name": "uso-sessao",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/diogosarti/my-claude-code.git",
+        "path": "plugins/uso-sessao",
+        "sha": "c4bcbacecc7f27036a6c751b503adf7aaef1549f"
+      }
+    },
+    {
+      "name": "shot-preview",
+      "source": {
+        "source": "github",
+        "repo": "mikhin/claude-shot-preview",
+        "sha": "fd9b6bd19f782b9fed192254511fdcf8de714822"
+      }
+    },
+    {
+      "name": "token-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/santosli/claude-mods.git",
+        "path": "token-bar",
+        "sha": "7fb19c90c8080186365f5bf08b1e39e5ff09ef6c"
+      }
+    },
+    {
+      "name": "tps-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/xingkaixin/claude-mods.git",
+        "path": "mods/tps-meter",
+        "sha": "21b27143aeee992df86f07dd962a01d54ef44f7a"
+      }
+    },
+    {
+      "name": "cc-file-history-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kukaka/cc-mods.git",
+        "path": "cc-file-history-mod",
+        "sha": "25cc665b948eae266a60e9c2a21887292b81bee6"
+      }
+    },
+    {
+      "name": "stfu",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/thefuga/claude-x.git",
+        "path": "mods/stfu",
+        "sha": "693895757c5dc50ff6a0450dc6c601dc251738a1"
+      }
     }
   ]
 }
