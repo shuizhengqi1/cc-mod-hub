@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 862 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 861 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 862 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 861 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 862 mods, see the Chinese section below.
+For detailed descriptions of all 861 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 862 个精选 Claude Code mods，按类别组织：
+以下是本市场的 861 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -883,7 +883,6 @@ For detailed descriptions of all 862 mods, see the Chinese section below.
 | vox | vox 说话或聆听时在提示框上方显示动态波形和字幕；/vox-wave 预览或改颜色。备注：需安装 vox（rtk-ai/vox）；tool.call 只观察 vox 工具和 vox 命令并原样返回；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/rtk-ai/vox/tree/main/plugins/vox) |
 | pedidos | 西班牙语 /pedidos 面板：显示你 Tiendanube 店铺今天的订单和销售额，不花 token。备注：通过你已连接的 Tiendanube 连接器只读调用 list_orders；需要先在 Claude 里连好 Tiendanube，自动模式下要把该工具加进允许列表。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/pedidos) |
 | tablero | 西班牙语 /tablero 面板：把 Tiendanube 销售、Google Analytics 流量和 Meta Ads 投放汇总在一起，算出 MER 和转化率，不花 token。备注：只通过你已连接的对应连接器做只读查询；需要先在 Claude 里连好这些连接器。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/tablero) |
-| clauderipple-status | ClaudeRipple 的配套 mod：提示框上方一行显示本会话最近一次请求被路由到哪个模型/提供方，/ripple-log 打开请求日志窗格（模型、effort、token、缓存、耗时、结果），/ripple-bar 显示或隐藏。备注：**需先另装 ClaudeRipple 路由器**（第三方本机代理，GPL-3.0，把 Claude Code 的请求转给 GPT、DeepSeek 等，是否使用请自行判断）；没装时只显示「router not answering」；每 3 秒 GET 本机 127.0.0.1 管理端口（默认 8792，带本会话 id），不连外网；会改写 ClaudeRipple 自己生成的子代理在 agent.spawn 时的 model 与提示里的标记位置，其他子代理不动。 | GPL-3.0 | [链接](https://github.com/PBJ-2/clauderipple/tree/main/packages/mod) |
 
 ### 本地工具 Local Tools
 
