@@ -8693,6 +8693,68 @@
         "repo": "OrihuelaConde/cozy-clawd",
         "sha": "19653481df1494d35650d85688c8c6b581186b96"
       }
+    },
+    {
+      "name": "hamster-saga",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Li-Technologies/claude-mods.git",
+        "path": "plugins/hamster-saga",
+        "sha": "38329764599570d7d013f45cc2792ea6360f2a72"
+      }
+    },
+    {
+      "name": "spinner-quips",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Li-Technologies/claude-mods.git",
+        "path": "plugins/spinner-quips",
+        "sha": "38329764599570d7d013f45cc2792ea6360f2a72"
+      }
+    },
+    {
+      "name": "trace-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ivangithubed/claude-mods.git",
+        "path": "plugins/trace-map",
+        "sha": "9258bcef09c891a7e1c057d8ae55053648764918"
+      }
+    },
+    {
+      "name": "context-gauge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jakerains/claudemods.git",
+        "path": "context-gauge",
+        "sha": "d1f0b3acb5451a350808a8392794a6b599d026f9"
+      }
+    },
+    {
+      "name": "clawd-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yuyongyan29-dev/claude-pet.git",
+        "path": "clawd-pet",
+        "sha": "f1c82e5e5fab36b084e9cdbd63f55909caef80c0"
+      }
+    },
+    {
+      "name": "prompt-queue",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/florian-anthony/claude-code-mods.git",
+        "path": "plugins/prompt-queue",
+        "sha": "7b1a997a713f6db66356fa0c0d382ffe53ec0883"
+      }
+    },
+    {
+      "name": "glowup",
+      "source": {
+        "source": "github",
+        "repo": "NovusEdge/glowup",
+        "sha": "8a24ba8cd444391337faa815a9e0dbaa40b398ed"
+      }
     }
   ]
 }

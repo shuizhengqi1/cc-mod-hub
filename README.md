@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1079 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1086 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1079 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1086 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1079 mods, see the Chinese section below.
+For detailed descriptions of all 1086 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1079 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1086 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -264,6 +264,7 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | client-clock | 按客户（按仓库/文件夹归属）记录你的时间、Claude 的时间和 5 小时/每周用量占比，`/client` 设预算和时薪，`/ledger` 看账和工时表，方便给客户计费。备注：`prompt.submit` 只记一条时间戳和来源，不记提示原文、不改写；账本写在 `~/.claude/client-clock/ledger/`，会读 `git config user.email` 识别身份；纯本机。 | MIT | [链接](https://github.com/JustinASmith/client-clock) |
 | loopline | 提示框上方的状态条：模型与 effort、未提交改动、上下文占用及增长和压缩次数、费用、限额消耗速度、提示缓存计时、本回合计数、后台代理，同一工具连续失败时提醒。备注：`tool.call` 只记录、原样返回；只用本机 `git status/diff` 读改动，不联网。 |  | [链接](https://github.com/nikitaCodeSave/Statusline_Claude-Code) |
 | context-git-band | 提示框上方一行：上下文占用（天气图标，快到自动压缩时出现可点的 compact 链接）、订阅 5 小时与每周额度条、git 状态（分支、未提交、领先/落后）；支持日语/英语界面。备注：额度通过 `$.session.authorize` 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容），带退避；`prompt.submit`、`tool.call` 只刷新 git 状态、原样返回；只跑本机 `git status/remote`；只有你点 compact 链接才压缩；界面语言为日/英以外时用 `$.model.complete`（haiku）把固定界面词条翻译一次并缓存，不带会话内容；在 macOS 上读桌面版 config.json 只取 `locale`。 | MIT | [链接](https://github.com/mlabo-org/context-git-band) |
+| context-gauge | 提示框下方一行：仓库/分支、模型与 effort、上下文进度条与剩余量，订阅用户还显示 5 小时与每周剩余额度及重置倒计时、输出速度（t/s）；`/gauge` 切换为上方按类别着色的上下文明细条。备注：`turn.step`/`tool.call`/`session.measure` 只读取用量、原样返回；只跑本机 `git rev-parse`/`git branch`；不联网。 | MIT | [链接](https://github.com/jakerains/claudemods/tree/main/context-gauge) |
 
 ### 上下文管理 Context Management
 
@@ -477,6 +478,8 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | flow | 提示框上方随代理工作节奏变化的动画场景（火焰、星际跃迁、气泡、冲浪、滑雪、火箭、热气球等，分昼夜），`/flow` 控制。备注：纯本机绘制；`tool.call` 只计数、原样返回；声音默认关闭，开启后仅 macOS 用 `$.audio.play` 播放仓库自带的 m4a 片段。 | MIT | [链接](https://github.com/robdmac/flow) |
 | fold-edits | 把 Edit/Write/NotebookEdit 以及 Bash 改文件产生的 diff 折成一行（文件名 +增 -删），旁边一个绿色按钮展开/收起代码。备注：只改界面显示，模型看到的内容不变；不联网、不跑外部程序。 |  | [链接](https://github.com/Tatendaz/T-mods/tree/main/fold-edits) |
 | rich-input | Warp 风格的多行输入编辑器面板（`/rich` 或提示框上方按钮、可绑快捷键），支持 `@` 文件/文件夹补全，点「Send to prompt」把文字放回提示框，由你按 Enter 发送。备注：只用 `$.prompt.fill` 把你自己写的文字放进/移出提示框，不自动提交；补全用本机 `git ls-files` 或目录遍历；不联网。 | MIT | [链接](https://github.com/higorcesarqn/rich-input-editor/tree/main/plugins/rich-input) |
+| spinner-quips | 把加载提示里通用的「Working」换成贴合当前任务（读代码、跑测试、git 等）的俏皮短语；装了 hamster-saga 时会穿插仓鼠故事章节。备注：`prompt.submit`/`tool.call` 只读取文字和工具名来判断任务类别、原样返回不改写；只改加载提示文字；不联网。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/spinner-quips) |
+| glowup | 一整套外观：可切换主题与风格包（glowup/aurora/cyberpunk 等）、自定义加载动画、提示框上方的活动条与像素宠物 Clawd、侧边 cockpit 面板（改动、子代理、上下文图表）和可选状态栏字段；`/glowup` 配置，主题/宠物/风格包可导出分享。备注：首次启动会弹窗询问是否接管状态栏，你同意才改写 `~/.claude/settings.json` 的 statusLine（先备份原命令，写入 `~/.claude/glowup/statusline.sh`，`/glowup statusline off` 还原）；气泡默认用内置模板，设为 `haiku` 时才用 `$.model.complete`（Haiku，计入你的用量）生成台词，只发送心情/姿势/动作类别词，不含命令、路径或会话内容；只有你执行 `/glowup` 的主题/宠物/风格包 add 并给出 https 网址时才下载该 JSON；`prompt.submit` 只拦下你粘贴的 `/glowup` 命令文本并执行它，其余提示原样放行；`tool.call`/`agent.spawn` 只观察；只跑本机 git/date/rm 清理自身状态文件。仓库里的 Go 安装器（installer/）不随插件运行。 | MIT | [链接](https://github.com/NovusEdge/glowup) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -553,6 +556,7 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | mi-terminal | 西班牙语"游戏化终端"：XP/成就/连击、Doge 模式 spinner、贪吃蛇面板、梗图与音效、顶部状态条。备注：仅 Windows（用 PowerShell 播放音效、发系统通知、读时区）；状态条经 `$.http` 只请求 wttr.in 天气（不含会话内容）；`/tiktok` 会用 Edge 打开 TikTok 窗口；只观察工具调用、不改写提示。 | MIT | [链接](https://github.com/Juan-Gpu/mis-mods/tree/main/mi-terminal) |
 | games | 等 Claude 时玩小游戏：`/2048`、`/mines`、`/dino`、`/gomoku` 各开一个面板。备注：2048/扫雷/恐龙纯本机；只有玩 `/gomoku` 联机时才经 `$.http` 连作者的公共中继 games-relay.musingfox.com（可在 `relay_url` 改成自建），只传棋步、随机玩家 id 和玩家名（默认取系统 `USER`），不含会话内容。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/games) |
 | chess | `/chess` 在侧边面板（全屏布局下停靠在对话旁，否则在提示框上方）和 Claude 下国际象棋：点棋子和格子或输入着法（`e4`、`Nf3`、`O-O`），面板显示 Claude 每步花费的 token 和累计。备注：Claude 的每一步用 `$.model.fork` 在当前会话模型上做一次无工具补全（共享提示缓存，会消耗 token；不写入会话记录、不碰文件和 git）；首轮之前没有会话可分叉时用 `fallbackModel`（默认 haiku）走 `$.model.complete`；只有你在选项里填了 TypeSafe 或 Vercel AI Gateway 的 Jev key 才改由 Jev 下棋，这时只把棋盘局面（FEN）和已走着法经 `$.http` 发给对应 API，不发会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/chess) |
+| hamster-saga | 加载提示偶尔讲一段仓鼠的长篇连载故事，按时间推进章节，可与 spinner-quips 配合；`/hamster-saga:status`、`travel`、`reset`、`debug` 查看与跳转。备注：`prompt.submit` 只检查是否含重置口令、原样返回不改写；`tool.call`/`turn.complete` 只推进进度；数据存在本机 `$.store`；不联网、不跑外部程序。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/hamster-saga) |
 
 ### 安全防护 Security & Safety
 
@@ -767,6 +771,7 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | swamp-watch | 当前仓库 swamp 工作流运行的状态行、面板和提示，Claude 跑了 swamp 命令后自动刷新。备注：在本机运行 `swamp workflow run search`（路径可配置）；`tool.call` 只在 Bash 调用完成后观察；面板“诊断”按钮按下时才用 `$.prompt.submit` 发出诊断这次运行的提示。 |  | [链接](https://github.com/jpisgeek/claude-mods/tree/main/mods/swamp-watch) |
 | output-folders | `/outputs` 打开一个面板，列出本会话里工具、脚本和代理写入过的所有文件夹（类型、写入次数、最后写入的工具、最新变动），点击或按数字键用系统 `open`/`xdg-open` 打开。备注：`tool.call` 只在调用成功后记录写入位置、原样返回；不联网。 |  | [链接](https://github.com/laszloprekop/claude-code-output-folders) |
 | mermaid-c4-zoom | 侧边面板把 mermaid 图画成彩色字符图，支持 C4 式逐层缩放（点带 ▸ 的框看里面一层）；回复里的 mermaid 代码块也会自动收进面板，`/diagrams` 开关。备注：给模型注册一个 `show_diagram` 工具（会出现在模型的工具列表里）；绘制全在本机，用仓库里 vendored 的 beautiful-mermaid 渲染代码（MIT，可读 JS）；不联网。 | MIT | [链接](https://github.com/testy-cool/mermaid-c4-zoom) |
+| trace-map | 侧边面板实时显示 Claude 在做什么：当前阶段（思考/调用工具/完成）、最后一个工具、本会话碰过的所有文件和扫描过的目录，以及思考流的最后几行；`/trace-map log` 列出带时间的工具调用记录；默认把最后一个工具显示成乌克兰语的家务短语，`/trace-map honest` 切回原始命令。备注：`turn.step`/`tool.call` 只观察、原样返回；只读写自己的 `trace-map.disguise` 设置和 `$.store`；不联网、不跑外部程序。 | MIT | [链接](https://github.com/ivangithubed/claude-mods/tree/main/plugins/trace-map) |
 
 ### 子代理管理 Subagent Management
 
@@ -916,6 +921,7 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | garden | 提示框上方一株植物，每次工具调用和完成回合都会长大，工具失败时会枯萎，跨会话持续生长，`/garden` 开关。备注：`tool.call` 只观察结果，不改写；纯本机。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/garden) |
 | clawd-usage | 提示框上方用彩色条显示 5 小时与每周用量，旁边的 Clawd 按 Claude 当前在做的事表演（读文件、改代码、跑命令、等批准、压缩、额度重置庆祝等）。备注：`prompt.edit`/`prompt.submit` 只用来判断你是否在输入、原样返回不改写；`tool.call` 只记录、原样返回；只跑本机 `date +%z`；不联网。 | MIT | [链接](https://github.com/saxena-aman/clawd-mods/tree/main/plugins/clawd-usage) |
 | cozy-clawd | 非官方粉丝 mod：提示框上方一条像素风小场景，Clawd 演出 Claude 在思考、写字、调用工具或等你确认，旁边是会话指标场景（上下文、缓存、额度等，8 种场景可选），带一个压缩按钮。备注：`turn.step`/`tool.call`/`telemetry.log` 只观察、原样返回；只有你点按钮才压缩；macOS 上跑 `/usr/bin/defaults read -g AppleLanguages` 取系统语言；不联网。 | MIT | [链接](https://github.com/OrihuelaConde/cozy-clawd) |
+| clawd-pet | 像素 Clawd 在提示框上方散步，按 Claude 当前在做的事（思考、读写、跑命令、等批准、测试通过）做出反应，会饿、会升级学新动作，可点它摸摸；`/clawd-pet help` 查看喂食、改名、尺寸、帽子、音效等（`/pet` 别名仅在没有其他插件占用时注册）。备注：`prompt.submit`/`tool.call` 只用来切换动画、原样返回；读取本机 `~/.claude/stats-cache.json` 统计 token，只跑本机 `date +%H`；音效默认关闭；不联网。Clawd 角色与动画素材归 Anthropic 所有，不在本仓库 MIT 许可范围内（见仓库 NOTICE）；素材帧较多，安装包约 60 MB。 | MIT | [链接](https://github.com/yuyongyan29-dev/claude-pet/tree/main/clawd-pet) |
 
 ### 图片与媒体 Images & Media
 
@@ -1215,6 +1221,7 @@ For detailed descriptions of all 1079 mods, see the Chinese section below.
 | mods-help | `/mods` 列出当前加载的 mod 提供的斜杠命令及说明（俄语输出），没有命令的 mod 也列出来。备注：只读 `CLAUDE_CODE_PLUGIN_DIRS` 里各插件的 plugin.json 和引擎的命令列表，纯本机。 | MIT | [链接](https://github.com/DimaTimoschenko02/claude-code-kit/tree/main/mods/mods-help) |
 | focus-timer | 提示框上方的专注计时器：`/focus-timer` 开始一段专注，倒计时带暂停、跳过、停止按钮，切换时弹提示，每第四次休息为长休息。备注：纯本机计时显示，不碰提示和工具调用。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/focus-timer) |
 | session-links | 把会话里提到的所有链接浮在提示框上方的小条里：可钉住、忽略、在浏览器打开或在面板里阅读，选择在退出和恢复后保留；`/links` 看全部。备注：`session.append`/`prompt.submit` 只读取文字收集链接、原样返回；只有你点「read」才用 `$.http` GET 该网址本身（不发送会话内容），点「open」才用系统 `open`/`xdg-open` 打开；数据存在本机 `$.store`。 | MIT | [链接](https://github.com/samaphp/session-links) |
+| prompt-queue | Claude 工作时你在提示框发出的消息不再插进当前回合，而是排进队列，等 Claude 完成上一回合后按顺序一条条发出；`/queue` 打开面板可编辑、调整顺序、删除，`/queue pause`/`resume`/`clear`。备注：`prompt.submit` 只拦下回合进行中你自己输入的文字（斜杠命令和带图片的消息照常放行），之后用 `$.prompt.submit`（asUser）把你写的原文原样发出，不改写、不加上下文；你中断或回合出错后队列自动暂停，面板打开时不发送；不联网。 | MIT | [链接](https://github.com/florian-anthony/claude-code-mods/tree/main/plugins/prompt-queue) |
 
 ---
 
