@@ -8625,6 +8625,74 @@
         "repo": "robdmac/flow",
         "sha": "8dce9eb7d7b18959614ff62f578b6073d3db232a"
       }
+    },
+    {
+      "name": "fold-edits",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Tatendaz/T-mods.git",
+        "path": "fold-edits",
+        "sha": "0eeba677108b4b5d96d3a4ae42242ab670a29130"
+      }
+    },
+    {
+      "name": "mermaid-c4-zoom",
+      "source": {
+        "source": "github",
+        "repo": "testy-cool/mermaid-c4-zoom",
+        "sha": "aab9abbbccdfd843cd036a072f265b87476693d9"
+      }
+    },
+    {
+      "name": "rich-input",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/higorcesarqn/rich-input-editor.git",
+        "path": "plugins/rich-input",
+        "sha": "5cd1ec1d7b58ac3c418ab06d8e6fd34c8abdcb20"
+      }
+    },
+    {
+      "name": "context-git-band",
+      "source": {
+        "source": "github",
+        "repo": "mlabo-org/context-git-band",
+        "sha": "327457f2d07978cc5438a302068f0a5662e59de1"
+      }
+    },
+    {
+      "name": "session-links",
+      "source": {
+        "source": "github",
+        "repo": "samaphp/session-links",
+        "sha": "565ea145c254fd31a24c70c6e697ffa42628ef74"
+      }
+    },
+    {
+      "name": "clawd-sounds",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/saxena-aman/clawd-mods.git",
+        "path": "plugins/clawd-sounds",
+        "sha": "a729376d6d0e6f01a8d35b87d8c671748328e842"
+      }
+    },
+    {
+      "name": "clawd-usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/saxena-aman/clawd-mods.git",
+        "path": "plugins/clawd-usage",
+        "sha": "a729376d6d0e6f01a8d35b87d8c671748328e842"
+      }
+    },
+    {
+      "name": "cozy-clawd",
+      "source": {
+        "source": "github",
+        "repo": "OrihuelaConde/cozy-clawd",
+        "sha": "19653481df1494d35650d85688c8c6b581186b96"
+      }
     }
   ]
 }
