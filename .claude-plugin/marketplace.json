@@ -6573,14 +6573,6 @@
       }
     },
     {
-      "name": "cc-changelog",
-      "source": {
-        "source": "github",
-        "repo": "AnExiledDev/cc-changelog-plugin",
-        "sha": "40e6c33f3fd3d7bef6e4e17c56fea50a6b869051"
-      }
-    },
-    {
       "name": "gitlogue",
       "source": {
         "source": "github",

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 838 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 837 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 838 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 837 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 838 mods, see the Chinese section below.
+For detailed descriptions of all 837 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 838 个精选 Claude Code mods，按类别组织：
+以下是本市场的 837 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -829,7 +829,6 @@ For detailed descriptions of all 838 mods, see the Chinese section below.
 | 名称 Name | 功能 Description | 许可证 License | 来源 Source |
 |-----------|------------------|----------------|-------------|
 | calendar | AbovePrompt 显示即将到来的 Google Calendar 事件（/cal）。备注：通过用户已配置的「claude.ai Google Calendar」MCP 读取。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/calendar) |
-| cc-changelog | /whatsnew 打开非官方 Claude Code 更新日志面板（版本列表、搜索、条目全文，可把关于某条变更的提问填进输入框），有新版本时弹提示；另注册 15 个工具，让 Claude 查更新日志、文档、mods API 等。备注：联网 GET 第三方站点 changelogs.core-directive.com（每 30 分钟轮询一次版本列表，结果缓存在插件 store）；Claude 调用它的搜索等工具时，模型写的查询词会作为 URL 参数发到该站，工具返回的是该站内容；不上传会话内容；prompt.fill 只填入输入框，不自动发送；站点可用 baseUrl 配置改掉。 | MIT | [链接](https://github.com/AnExiledDev/cc-changelog-plugin) |
 | ci-status | /ci 打开面板显示当前仓库最近的 GitHub Actions 运行，打开时每 30 秒刷新，跑完弹提示。备注：需要本机 gh，只调用 gh run list；不改提示或工具。 |  | [链接](https://github.com/shissncg/claude-mods/tree/main/mods/ci-status) |
 | crypto-band | 提示框上方横幅显示 RLC、ETH、BTC 价格和 24 小时涨跌（/crypto on、off、status，可隐藏）。备注：每 2 分钟向 CoinGecko 公共 API 发 GET 拉固定币种行情，不发送会话、提示或文件内容；横幅显示时 AbovePrompt 不调 next。 |  | [链接](https://github.com/thewhitewizard/crypto-band) |
 | gh-ci-status | 提示框上方钉住 GitHub Actions 状态。 |  | [链接](https://github.com/diegorv/claude-mods-diegorv/tree/main/plugins/gh-ci-status) |
