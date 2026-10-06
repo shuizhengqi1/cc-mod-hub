@@ -6579,6 +6579,41 @@
         "repo": "abyss464/claude-gitlogue",
         "sha": "eec279190e646d6d3d077a5c1880e6c66844c174"
       }
+    },
+    {
+      "name": "linkify",
+      "source": {
+        "source": "github",
+        "repo": "babarot/claude-linkify",
+        "sha": "87e99cd81a93b1c21f8ee072715eedc0116ac850"
+      }
+    },
+    {
+      "name": "context-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yogeshvar/mod-claude.git",
+        "path": "plugins/context-board",
+        "sha": "d1ecb8c98fe97a0b57a63b8c56b6291f1eccb9c4"
+      }
+    },
+    {
+      "name": "agents-side",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yogeshvar/mod-claude.git",
+        "path": "plugins/agents-side",
+        "sha": "d1ecb8c98fe97a0b57a63b8c56b6291f1eccb9c4"
+      }
+    },
+    {
+      "name": "session-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yogeshvar/mod-claude.git",
+        "path": "plugins/session-map",
+        "sha": "d1ecb8c98fe97a0b57a63b8c56b6291f1eccb9c4"
+      }
     }
   ]
 }
