@@ -8362,6 +8362,137 @@
         "repo": "romtaugranot/issue-map",
         "sha": "cd4ad8012f46a2e5b66c694f1609600ae492c842"
       }
+    },
+    {
+      "name": "model-allowlist",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/erikdarlingdata/claude-plugins.git",
+        "path": "plugins/model-allowlist",
+        "sha": "bab4c7dc92e86f9e6f9c078a017cc533d550d512"
+      }
+    },
+    {
+      "name": "usage-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Liberty-Technical-Solutions/claude-workflow-mods.git",
+        "path": "plugins/usage-guard",
+        "sha": "30d9203dfab94085cfbe2f7ebce167121d352ef6"
+      }
+    },
+    {
+      "name": "subagent-fence",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/erikdarlingdata/claude-plugins.git",
+        "path": "plugins/subagent-fence",
+        "sha": "bab4c7dc92e86f9e6f9c078a017cc533d550d512"
+      }
+    },
+    {
+      "name": "subagent-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/erikdarlingdata/claude-plugins.git",
+        "path": "plugins/subagent-band",
+        "sha": "bab4c7dc92e86f9e6f9c078a017cc533d550d512"
+      }
+    },
+    {
+      "name": "seat-resume",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/erikdarlingdata/claude-plugins.git",
+        "path": "plugins/seat-resume",
+        "sha": "bab4c7dc92e86f9e6f9c078a017cc533d550d512"
+      }
+    },
+    {
+      "name": "pro-limits",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rodbegbie/rod-claude-mods.git",
+        "path": "plugins/pro-limits",
+        "sha": "858c3f38830f6a6ec1b4f6fdfa9e21e0fea32686"
+      }
+    },
+    {
+      "name": "token-monitor",
+      "source": {
+        "source": "github",
+        "repo": "raphalupi/token-monitor",
+        "sha": "b3ee90b791e9e584d0e3367fd19615420928e3d0"
+      }
+    },
+    {
+      "name": "timekeeper",
+      "source": {
+        "source": "github",
+        "repo": "laszloprekop/claude-code-timekeeper",
+        "sha": "f051e9ac240413815bfe1408c8e88e72c83d1d95"
+      }
+    },
+    {
+      "name": "pit-wall",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rhealaloo45/pit-lane-claude-mods.git",
+        "path": "pit-wall",
+        "sha": "d03cd8d2158ff68ad296c22ae2c488bfa4b060bb"
+      }
+    },
+    {
+      "name": "client-clock",
+      "source": {
+        "source": "github",
+        "repo": "JustinASmith/client-clock",
+        "sha": "94c1a77c1291b34efdfca7a635efe4a4da32e775"
+      }
+    },
+    {
+      "name": "sessions-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gav1256/claude-workflow.git",
+        "path": "claude/mods/sessions-pane",
+        "sha": "cc6b2e6e01bcb84a9dfc671f910ce153bbdb3401"
+      }
+    },
+    {
+      "name": "usage-buddy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rhealaloo45/pit-lane-claude-mods.git",
+        "path": "usage-buddy",
+        "sha": "d03cd8d2158ff68ad296c22ae2c488bfa4b060bb"
+      }
+    },
+    {
+      "name": "docker-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SKFabric/docker-panel.git",
+        "path": "plugins/docker-panel",
+        "sha": "8ddb66fdbf8af2d0b8b6454f2480623731374add"
+      }
+    },
+    {
+      "name": "altshift",
+      "source": {
+        "source": "github",
+        "repo": "YossiAbutbul/altshift",
+        "sha": "ca6ad1f6480406b48034f76c1a4d5298b471601a"
+      }
+    },
+    {
+      "name": "agentbar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/michalstrnadel/AgentBar.git",
+        "path": "Scripts/mods/claude",
+        "sha": "ef5703de88612716bb9abc4c5ec9e7351f3f4e2b"
+      }
     }
   ]
 }
