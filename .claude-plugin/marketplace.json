@@ -6462,6 +6462,32 @@
         "repo": "scottcrosby-securebine/sbs-deck",
         "sha": "859f41df31efe2aba1fb23989a25c942c24c0427"
       }
+    },
+    {
+      "name": "repo-ledger",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mangow314/mango-mods.git",
+        "path": "repo-ledger",
+        "sha": "9f78ac7e344ae6593b45e3702cade7da72229d35"
+      }
+    },
+    {
+      "name": "away-receipt",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mangow314/mango-mods.git",
+        "path": "away-receipt",
+        "sha": "9f78ac7e344ae6593b45e3702cade7da72229d35"
+      }
+    },
+    {
+      "name": "clawd-tales",
+      "source": {
+        "source": "github",
+        "repo": "plaxagoras/clawd-tales",
+        "sha": "89c7f95b4d4faf480a6ee200e92c3e6df34d1432"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 823 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 826 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 823 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 826 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 823 mods, see the Chinese section below.
+For detailed descriptions of all 826 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 823 个精选 Claude Code mods，按类别组织：
+以下是本市场的 826 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -612,6 +612,7 @@ For detailed descriptions of all 823 mods, see the Chinese section below.
 | test-pulse | 测试健康度：Claude 每次跑测试，结果都显示在状态栏（如 🧪 ✅ 44/44 passing · 2m ago），由绿变红或恢复时弹提示，/tests 看历史、通过率走势和疑似不稳定的测试。备注：tool.call 只读取测试输出、原样传递；纯本机，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/awareness/test-pulse) |
 | coverage-band | Claude 每次跑完测试后显示测试覆盖率：带阈值标记的进度条、相比上次的涨跌、低于阈值的模块；/coverage 打开每个模块的覆盖率面板；默认挂在提示框下方提示行，可改为信息带或状态栏。备注：tool.call 只在 Bash 测试命令跑完后观察、原样传递；本机用 `find` 找 lcov/cobertura 报告并读取，历史存在插件 store；选 band 时 AbovePrompt 不调 next；不联网。 | MIT | [链接](https://github.com/santtisosa/coverage-band) |
 | ci-line | 提示框上方一行显示当前分支这次提交的 CI 状态：每个 workflow 一个检查点，全绿时一行，运行中或失败的 workflow 展开到各个 job；git push 或 gh pr/run 后自动加快刷新，/ci 手动刷新并切换展开。备注：需要本机已登录的 gh 命令行，只用 `gh api`/`gh run view` 读取本仓库的 workflow runs、check runs 和 status（只读 GET，不发会话内容）；tool.call 只观察 Bash 命令、原样传递；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容。 |  | [链接](https://github.com/Halvanhelv/claude-ci-line) |
+| repo-ledger | 提示框上方一行列出本会话动过、还没收尾的 git 仓库（繁体中文界面）：每个仓库显示「名称(分支)」和未 commit 文件数（含未跟踪文件），干净的打勾，↑N 是未 push 的 commit 数，⎇N 是另开的 worktree 数，末尾「本輪 N 檔」是本轮 Edit/Write 改过的仓库内文件数（超过 5 个变橙色）；没有未 commit 文件、本轮也没改文件时整行不显示。备注：只跟踪 Edit/Write/NotebookEdit 改到的文件所在仓库，以及 Bash 命令里 cd/pushd/git -C 后面的字面路径；每轮结束和跑过 git 命令后，在这些仓库里自动执行本机只读 git（rev-parse、status、worktree list），status 带 -c core.fsmonitor=false，但仓库自己 .git/config 里的其他设置（如 filter）仍可能被执行，只在信任的仓库里用；tool.call 只观察、原样传递；AbovePrompt 调 next，可与其他 mod 叠加；图标需要 Nerd Font；不改提示，不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/repo-ledger) |
 
 ### 子代理管理 Subagent Management
 
@@ -725,6 +726,7 @@ For detailed descriptions of all 823 mods, see the Chinese section below.
 | bichinho | 提示框上方的 ASCII 小宠物，会「吃掉」Claude 读、改、新建的文件（/bichinho on 或 off）。备注：只观察 Read/Edit/Write 结果；说明为葡萄牙语。 |  | [链接](https://github.com/inematds/inema-mods/tree/main/mods/bichinho) |
 | tamaclaude | 提示框上方的像素宠物：会随会话长大，写文件时蹦跳、测试通过时跳舞、被拒绝或测试失败时生闷气、久不操作就睡觉，上下文快满或额度快用完时会提醒；/tamaclaude 查看、喂食、改名或重置。备注：prompt.submit 只读取提示里有没有夸奖来触发跳舞，原样传递不改写；tool.call 只观察结果；宠物状态存在插件本地 store；可在插件配置里调大小、安静模式和入睡时间。 | MIT | [链接](https://github.com/settivishal/tamaclaude/tree/main/tamaclaude) |
 | buddy | 住在提示框上方的 ASCII 小宠物，会对 Claude 的每个动作做反应（工具被拦时紧张、失败时吓一跳、提交和测试通过时开心），随你的工作升级；/buddy 改名、换物种、隐藏。备注：tool.call 只观察结果、原样传递；经验和统计存在插件本地 store；纯本机，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/fun/buddy) |
+| clawd-tales | 提示框上方的像素 Clawd 把 Claude 正在做的事演出来（英文字幕）：每次工具调用换一个动作和一行字幕（Read 看书、Edit 挖土、Grep 潜行、Bash 奔跑等），子代理按模型颜色走进来当帮手，等你批准权限或回答问题时跳起并显示红色「!」，测试失败掉下虫子、通过后吃掉，上下文越满天气越差（50% 多云、70% 下雨、85% 打雷），另显示上下文和套餐限额百分比、待办进度、连击数；/tales on、off、calm、lively、demo、hat、face、scarf 开关和换装。备注：字幕用模板生成，不调用模型、不额外计费；classic.SessionStart/UserPromptSubmit/PermissionRequest 和 prompt.submit、tool.call、agent.spawn 都只观察、原样传递，不改提示、不注入上下文、不改权限；只用 $.store 记住开关、装扮和成长进度；会占用提示框上方多行，空间不够时自动缩成一行；AbovePrompt 调 next，可与其他 mod 叠加；部分像素素材来自 Claude Fables（MIT，见 NOTICE）；纯本机，不联网。 | MIT | [链接](https://github.com/plaxagoras/clawd-tales) |
 
 ### 图片与媒体 Images & Media
 
@@ -810,6 +812,7 @@ For detailed descriptions of all 823 mods, see the Chinese section below.
 | openspec-tracker | 西班牙语 OpenSpec 变更跟踪面板：显示当前变更的阶段、产物、任务进度，并一键把 /opsx:apply、archive、explore 填进提示框（由你决定是否发送）。备注：需要本机装 openspec 命令行，只在本机调用它；prompt.submit 只读取提示里提到的变更名、不改写；不联网。 |  | [链接](https://github.com/Dos2Locos/claude-code-mods/tree/main/plugins/openspec-tracker) |
 | worklog | 按仓库和分支（分支名里有工单号就按工单）统计你和 Claude 实际干活的时间：每次回复加上两次提问之间不超过空闲上限（默认 5 分钟）的停顿；/worklog 看本周时间表，/worklog export 导出 CSV。备注：prompt.submit 只记时间、不读不改提示内容；每个会话写一份 ~/.claude/worklog/（会话 id）.json（只有时间和仓库/分支名），本机读 .git/HEAD 判断分支；不联网。 | MIT | [链接](https://github.com/santtisosa/worklog) |
 | work-summary | 改了文件的回合结束后，在右侧面板（韩语界面）列出这一轮改动的文件，并总结「做了什么」和「值得记住的经验」；保留本会话最近 20 条，会话开始时自动打开面板，/work-summary 手动打开。备注：每个改了文件的回合都会自动多发一次 $.model.fork（同一会话、同一模型，带上文件列表和本轮回答前 3000 字），有额外费用；tool.call 只记录 Edit/Write/NotebookEdit 改了哪些文件、原样传递；不改提示，不联网。 |  | [链接](https://github.com/timinguniq/claude-work-summary) |
+| away-receipt | 放着让 Claude 跑、离开一阵子回来时，在对话旁的面板列出离开期间发生了什么（繁体中文界面）：离开多久、主对话跑了几轮、花了多少钱；每个动过的仓库的新 commit、未 commit 文件、分支和其他 worktree；跑过的测试命令和 exit code（失败标红）；完成或失败的子代理和后台命令。距你上次发消息超过 20 分钟、回来在提示框打第一个字时自动打开（不抢焦点），/receipt 随时打开，q 关闭。备注：prompt.submit 只记录你发消息的时间和后台任务通知、原样传递，不改提示；prompt.edit 只看草稿是否从空变成有字；在面板里点失败测试的 ✗（或按数字键）时，用 prompt.fill 把「该命令失败（exit N），帮我找出原因并修好。」这句话填进提示框（已有草稿就接在下一行），只预填不发送，要你自己按 Enter；在动过的仓库里跑本机只读 git（rev-parse、status、log、worktree list，带 -c core.fsmonitor=false）；tool.call 只观察、原样传递；/receipt 与已上架的 session-receipt 同名，两个都装时后注册的那个 /receipt 会失败；图标需要 Nerd Font；不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/away-receipt) |
 
 ### 外部集成 External Integrations
 
