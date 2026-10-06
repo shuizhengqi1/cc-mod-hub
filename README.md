@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1038 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1041 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1038 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1041 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1038 mods, see the Chinese section below.
+For detailed descriptions of all 1041 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1038 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1041 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -537,6 +537,7 @@ For detailed descriptions of all 1038 mods, see the Chinese section below.
 | orbit | `/orbit` 在终端或桌面面板里玩单键森林小游戏 ORBIT，带音乐音效和本机最高分。备注：钩子原样传递，只用 $.store 存最高分和偏好；不联网。 |  | [链接](https://github.com/timgrossmann/orbit-claude-mod) |
 | mi-terminal | 西班牙语"游戏化终端"：XP/成就/连击、Doge 模式 spinner、贪吃蛇面板、梗图与音效、顶部状态条。备注：仅 Windows（用 PowerShell 播放音效、发系统通知、读时区）；状态条经 `$.http` 只请求 wttr.in 天气（不含会话内容）；`/tiktok` 会用 Edge 打开 TikTok 窗口；只观察工具调用、不改写提示。 | MIT | [链接](https://github.com/Juan-Gpu/mis-mods/tree/main/mi-terminal) |
 | games | 等 Claude 时玩小游戏：`/2048`、`/mines`、`/dino`、`/gomoku` 各开一个面板。备注：2048/扫雷/恐龙纯本机；只有玩 `/gomoku` 联机时才经 `$.http` 连作者的公共中继 games-relay.musingfox.com（可在 `relay_url` 改成自建），只传棋步、随机玩家 id 和玩家名（默认取系统 `USER`），不含会话内容。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/games) |
+| chess | `/chess` 在侧边面板（全屏布局下停靠在对话旁，否则在提示框上方）和 Claude 下国际象棋：点棋子和格子或输入着法（`e4`、`Nf3`、`O-O`），面板显示 Claude 每步花费的 token 和累计。备注：Claude 的每一步用 `$.model.fork` 在当前会话模型上做一次无工具补全（共享提示缓存，会消耗 token；不写入会话记录、不碰文件和 git）；首轮之前没有会话可分叉时用 `fallbackModel`（默认 haiku）走 `$.model.complete`；只有你在选项里填了 TypeSafe 或 Vercel AI Gateway 的 Jev key 才改由 Jev 下棋，这时只把棋盘局面（FEN）和已走着法经 `$.http` 发给对应 API，不发会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/chess) |
 
 ### 安全防护 Security & Safety
 
@@ -743,6 +744,7 @@ For detailed descriptions of all 1038 mods, see the Chinese section below.
 | git-branches | `/branches` 打开 Git 分支面板：本地/远程分支、开放 PR、最近提交，git 项目里会自动打开。备注：只读 git 与 `gh pr list`；只有你点"Fetch"或输入 `/branches fetch` 时才 `git fetch --all --prune`；不切换分支、不改写。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/git-branches) |
 | pr-preview | 拦住 `gh pr create`/`gh pr edit`/`glab mr create`/`glab mr update`，在提示框上方预览标题和描述并标出不符合规范的地方，可选 Proceed、Fix、Cancel。备注：只拦下或拒绝、不改写命令（Fix/Cancel 都是 deny）；10 秒内不选会自动放行；会读 `--body-file` 指定的文件和运行 `git branch --show-current`；纯本机。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/pr-preview) |
 | review-panel | `/review-panel` 打开只读面板：工作区 diff、当前分支的 PR/MR、CI 任务和已有评论，每 30 秒刷新。备注：只读；运行 `git`、`gh pr view`/`gh api`、`glab api` 读取，需要本机已登录 gh/glab；不写任何东西。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/review-panel) |
+| session-time-machine | `/timemachine` 打开会话时间线（每条提示、工具调用和回合结束，读自本会话的记录文件），选一个点并给出新指令，就把截到该点的会话副本写成新会话，给出 `claude --resume` 命令接着走另一条路，原会话不动。备注：`prompt.submit` 只拍快照、原样放行，不改写；`tool.call` 只在调用完成后观察；默认（`snapshots` 选项，可关）每次提示、每次写类工具调用和回合结束都用单独的临时 index 跑 `git add -A` + `commit-tree`，写到 `refs/time-machine/<会话id>/` 引用下（不动 HEAD、分支和暂存区，但会在仓库里留下快照对象与引用）；分叉时会在 `~/.claude/projects/` 写新会话 jsonl，有快照时用 `git worktree add -b` 建新分支和工作树，默认把 resume 命令复制到剪贴板，macOS 上默认用 osascript 开新 Terminal 窗口。纯本机。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/productivity/session-time-machine) |
 
 ### 子代理管理 Subagent Management
 
@@ -989,6 +991,7 @@ For detailed descriptions of all 1038 mods, see the Chinese section below.
 | roadmap | `/roadmap` 面板把当前任务画成路线图：TodoWrite/TaskCreate 计划、读/改/跑等步骤和每轮耗时。备注：prompt.submit 只记录任务标题不改写；只观察工具调用；纯本机。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/roadmap) |
 | slonk-card | 显示当前会话正在处理的 slonk（基于 Plane 的看板）卡片和所在列，列变化时弹提示；`/slonk-card [KEY\|off\|hide\|show]`（俄语界面）。备注：从 slonk MCP 工具的结果里识别卡片；跟踪卡片时每 60 秒经你已连接的 slonk MCP 服务器调用 `get_issue` 刷新（只读）；不改写工具调用。 | | [链接](https://github.com/romandots/claude-mods/tree/main/plugins/slonk-card) |
 | trame | 提示框上方显示 Trame 应用里与当前会话关联的卡片，按钮可在浏览器打开。备注：需要本机运行 Trame 应用；每 15 秒用 `$.http` 只请求 127.0.0.1 上 Trame 的本地端口（URL 带会话 id），不访问外网；打开链接用 xdg-open/open。 | | [链接](https://github.com/Andarius/trame/tree/master/claude-mod) |
+| issue-map | 把当前仓库所在项目（GitHub/GitLab）的 open issue 按 Tracker 记录的关联画成"地图"：提示框下方固定一行本项目状态，`/issue-map` 不走模型直接显示地图、分组、下一个可做的 issue、单个 issue 卡片等视图，也可让 Claude 给你指派 issue 或建议关联。备注：需要 Node.js ≥ 22.18 和本机已登录的 `gh`/`glab`（只经它们读写 Tracker，另有不带凭据的匿名 HTTPS 探测）；会在后台起常驻刷新进程每 90 秒更新快照；附带一个 MessageDisplay 经典钩子，只把 Claude 回复里的 `⟦issue-map …⟧` 标记行在显示时换成地图原样输出（不改提示、不改工具）；附带的 map 技能预先放行自家 `issue-map …` 只读/建议类命令，真正写入（给自己指派 issue、确认关联）都要你在 AskUserQuestion 里点确认；发布 claude.ai Artifact 也要你逐次同意。 | MIT | [链接](https://github.com/romtaugranot/issue-map) |
 
 ### 外部集成 External Integrations
 

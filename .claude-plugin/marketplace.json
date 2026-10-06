@@ -8336,6 +8336,32 @@
         "repo": "vvklive/masterskaya",
         "sha": "f95599d96ab8380b7e3afc22106e51381a470e06"
       }
+    },
+    {
+      "name": "chess",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davila7/claude-code-templates.git",
+        "path": "cli-tool/components/mods/games/chess",
+        "sha": "66bbccef8af5a27f22f350c8ff301e317d3cec52"
+      }
+    },
+    {
+      "name": "session-time-machine",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davila7/claude-code-templates.git",
+        "path": "cli-tool/components/mods/productivity/session-time-machine",
+        "sha": "66bbccef8af5a27f22f350c8ff301e317d3cec52"
+      }
+    },
+    {
+      "name": "issue-map",
+      "source": {
+        "source": "github",
+        "repo": "romtaugranot/issue-map",
+        "sha": "cd4ad8012f46a2e5b66c694f1609600ae492c842"
+      }
     }
   ]
 }
