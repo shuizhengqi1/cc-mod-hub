@@ -6278,6 +6278,65 @@
         "repo": "pepperonas/taskline",
         "sha": "2dced15843a373947238624b636a34ef0734a9b1"
       }
+    },
+    {
+      "name": "prompt-marks",
+      "source": {
+        "source": "github",
+        "repo": "AdamCaviness/prompt-marks",
+        "sha": "3c5fa061580bfc783037064b5aa1dc425ad0e503"
+      }
+    },
+    {
+      "name": "hud-band",
+      "source": {
+        "source": "github",
+        "repo": "minsubb13/claude-hud-mod",
+        "sha": "8fc67eeb4f4e071835f4029e6d168d9f5f34745f"
+      }
+    },
+    {
+      "name": "ccburn",
+      "source": {
+        "source": "github",
+        "repo": "JuanjoFuchs/ccburn-mod",
+        "sha": "f03b79527d1857c0cd47fed2525f1b8291b2e080"
+      }
+    },
+    {
+      "name": "taxi-meter",
+      "source": {
+        "source": "github",
+        "repo": "gxcsoccer/claude-taxi-meter",
+        "sha": "344aa451b9dadd46544a9b5324cba0a8a3af2fd3"
+      }
+    },
+    {
+      "name": "usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jaaaackieLai/claude-mods.git",
+        "path": "plugins/usage",
+        "sha": "9c31b3169a0da2fdc7bc104392327bede3947b34"
+      }
+    },
+    {
+      "name": "todo-calendar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jaaaackieLai/claude-mods.git",
+        "path": "plugins/todo-calendar",
+        "sha": "9c31b3169a0da2fdc7bc104392327bede3947b34"
+      }
+    },
+    {
+      "name": "openspec-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Dos2Locos/claude-code-mods.git",
+        "path": "plugins/openspec-tracker",
+        "sha": "0066483b23d7f4a3cc9c6ad96a8176c83801c1dd"
+      }
     }
   ]
 }

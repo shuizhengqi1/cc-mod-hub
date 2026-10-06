@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 801 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 808 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 801 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 808 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 801 mods, see the Chinese section below.
+For detailed descriptions of all 808 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 801 个精选 Claude Code mods，按类别组织：
+以下是本市场的 808 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -209,6 +209,10 @@ For detailed descriptions of all 801 mods, see the Chinese section below.
 | cache-keepalive | 保持 1 小时提示缓存不冷：主线程空闲约 55 分钟后用 $.model.fork 发一句「Reply with exactly: ok」重读缓存前缀，免得下一轮整段重写缓存；默认连续最多 6 次（约 5.5 小时），机器睡眠后过期就跳过，未命中缓存即停到下一轮；/cache-keepalive status/on/off/now 控制，状态栏显示是否已武装。备注：每次 ping 按一次缓存读加短输出计费；fork 只发往会话本身所用的模型，回复丢弃、不写回会话、不联网到第三方；可设 idleMinutes（1–58）与 maxPings（0 为不限）。 | MIT | [链接](https://github.com/krika2810/keep-cache-warm) |
 | tablero-consumo | 西班牙语用量面板（面向 Pro/Max 套餐）：/consumo 打开，实时显示上一次请求和本会话 token、各项套餐限额的用量与重置时间、上下文占用、工具调用次数和会话时长。备注：只读 session.usage 和每步返回的 usage，所有钩子原样传递；纯本机，不联网。 | MIT | [链接](https://github.com/kit-para-devs/mods/tree/main/plugins/tablero-consumo) |
 | time-spent | 每个回合一张实时卡片：时间和花费分别耗在 Claude 思考和哪类工具上（Bash、读写、子代理、后台任务等），支持时间线、条形、紧凑等视图；/time-spent 切换视图、看本会话汇总。备注：tool.call、turn.step、session.append 都只计时观察、原样传递，不改写内容；纯本机，不联网。 | MIT | [链接](https://github.com/leviyehonatan/claude-time-spent) |
+| hud-band | 把 claude-hud 的会话面板画成提示框上方的一条信息带：模型、推理强度、目录、上下文占比、5 小时/7 天额度和重置时间，以及正在跑的子代理和待办进度。备注：tool.call 只观察 Agent/TodoWrite/Task 结果、原样传递；信息带显示时不调用 next，会替换其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/minsubb13/claude-hud-mod) |
+| ccburn | 在面板里画 5 小时和每周额度的燃尽图（burn-up），/ccburn 打开，加 weekly 看 7 天窗口。备注：如果本机装了 ccburn 命令行，会每分钟调用 `ccburn history` 读取历史并用 `ccburn collect` 写入额度百分比（只有百分比和重置时间）；没装就只用本会话数据；不联网。 | MIT | [链接](https://github.com/JuanjoFuchs/ccburn-mod) |
+| taxi-meter | 出租车计价器：状态栏里会话费用随 token 实时跳表，单轮花费超过阈值弹提示，累计到里程碑时播放自带的 kaching.wav 音效；/taxi 看小票、开面板、设预算、切美元/人民币、设订阅月费看回本倍数，/taxi share 复制分享卡到剪贴板。备注：小票里会截取每轮提示的开头作为行程名，只存本机；纯本机，不联网。 | MIT | [链接](https://github.com/gxcsoccer/claude-taxi-meter) |
+| usage | 提示框上方的用量条（繁体中文）：模型、推理强度、目录、git 分支、上下文、5 小时和 7 天额度；/limits 看额度和重置倒数，/ctx 开上下文明细面板。备注：本机只读 git 查分支；额度百分比会写到 ~/.claude/usage-state.json 方便其他脚本读取；不联网。 | MIT | [链接](https://github.com/jaaaackieLai/claude-mods/tree/main/plugins/usage) |
 
 ### 上下文管理 Context Management
 
@@ -369,6 +373,7 @@ For detailed descriptions of all 801 mods, see the Chinese section below.
 | clean-view | 西班牙语「简洁视图」：隐藏工具调用和结果行，在提示框上方显示步骤清单、进度条和结束时的一句话总结（改了哪些文件、跑了几条命令、几个错误）；/clean-view 或按 0 开关。备注：tool.call 只观察结果、原样传递；turn.complete 只把回合结束提示文字换成本地总结；不改 prompt，纯本机，不联网。 |  | [链接](https://github.com/Dos2Locos/claude-code-mods/tree/main/plugins/clean-view) |
 | spinner-packs | 主题化的加载词：工作时显示「Plundering…」、结束时「Plundered for 1m 3s」这类词，内置海盗、莎士比亚、巫师、厨师、太空等 10 套，也可以填自己的词；/spinner 切换。备注：只改 Spinner 和 TurnDuration 的显示文字，压缩/重试等状态文字保持原样；纯本机，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/fun/spinner-packs) |
 | model-cycle | 在输入框下方显示当前模型和推理强度，用 alt+上/下 切模型、alt+左/右 切强度、alt+. 开关 ultracode；/model-cycle setup 把这些快捷键合并进 ~/.claude/keybindings.json。备注：只有你按键选定强度后，turn.step 才把该强度用到请求上，默认不改；setup 只新增未占用的键，已有绑定不动；纯本机，不联网。 |  | [链接](https://github.com/PedroLaRosa/claude-code-model-cycle) |
+| prompt-marks | 给对话记录里你自己发的每条提示加一道彩色竖条和浅色底，方便一眼找到；Option/Ctrl + 上下方向键在各条提示之间跳转。颜色、深浅可在 /config 里调。备注：只改显示，不改写提示内容；纯本机，不联网。 | MIT | [链接](https://github.com/AdamCaviness/prompt-marks) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -788,6 +793,8 @@ For detailed descriptions of all 801 mods, see the Chinese section below.
 | todo-pane | 停靠的待办面板：在输入框里加条目、点一下划掉；/todo <文字> 直接添加；注册 todo 工具让 Claude 把计划步骤写进列表并实时勾选。备注：todo 工具只读写本插件自己的待办列表（存在插件本地 store），不碰别的工具调用；纯本机，不联网。 | MIT | [链接](https://github.com/NewSoulOnTheBlock/personal-agentic-core/tree/main/plugins/todo-pane) |
 | task-progress | 给任何长任务在提示框上方画进度条：任务只要写 ~/.local/state/agent-progress/<id>.json（自带 bin/progress 脚本）就会显示；另有 /clip 把剪贴板截图存到 ~/.local/state/clipboard-shots/ 让 Claude 读。备注：prompt.submit 只记录回合开始、不改写；/clip 用 macOS 的 osascript；纯本机，不联网。 | MIT | [链接](https://github.com/andras-gyarmati/claude-task-progress) |
 | taskline | 在提示框上方实时显示每个长任务的进度：进度条、速度、预计剩余时间，以及卡住和崩溃检测；任务通过单文件 JSON 协议上报（附 Python 助手和命令行工具），或从它的文件和日志里读取。备注：只读写本插件自己的状态目录，清理也只删自己目录里的文件；仓库里的 install.sh 只用于可选的命令行工具，装 mod 不需要；纯本机，不联网。 | MIT | [链接](https://github.com/pepperonas/taskline) |
+| todo-calendar | TODO 周历面板（繁体中文）：在面板里看一周任务，注册 add_task/update_task 等工具让 Claude 帮你加和改任务；/todo 打开，/todo auto on/off 设新会话是否自动打开。备注：任务存在本机 ~/.claude 下的固定 JSON 文件；纯本机，不联网。 | MIT | [链接](https://github.com/jaaaackieLai/claude-mods/tree/main/plugins/todo-calendar) |
+| openspec-tracker | 西班牙语 OpenSpec 变更跟踪面板：显示当前变更的阶段、产物、任务进度，并一键把 /opsx:apply、archive、explore 填进提示框（由你决定是否发送）。备注：需要本机装 openspec 命令行，只在本机调用它；prompt.submit 只读取提示里提到的变更名、不改写；不联网。 |  | [链接](https://github.com/Dos2Locos/claude-code-mods/tree/main/plugins/openspec-tracker) |
 
 ### 外部集成 External Integrations
 
