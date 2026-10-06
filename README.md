@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 826 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 830 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 826 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 830 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 826 mods, see the Chinese section below.
+For detailed descriptions of all 830 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 826 个精选 Claude Code mods，按类别组织：
+以下是本市场的 830 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -219,6 +219,7 @@ For detailed descriptions of all 826 mods, see the Chinese section below.
 | quota-reactor | 把侧边面板变成复古科幻「反应堆控制台」（界面为日语+英语）：5 小时/每周额度和上下文窗口画成七段数码倒计时，每次工具调用由三个单元「投票」显示通过/拒绝，出现拒绝时提示框上方亮警告带；/reactor 打开面板。备注：tool.call 只观察结果、原样传递，prompt.submit 只清除警告、不读不改提示；警告带显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/jnk0vc/quota-reactor) |
 | prompt-glance | 提示框上方两行 HUD：模型、路径、git 分支与脏/领先状态、本轮和本会话花费、提示缓存命中率与过期倒计时，以及上下文、5 小时、每周用量条和本会话用到的工具/技能；/cache 打开逐轮缓存表。备注：本机只读 `git status`、读 settings.json 里的 promptCacheTtl 和相关环境变量判断缓存时长；turn.step、tool.call 只计数、原样传递；HUD 显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容；纯本机，不联网。 | MIT | [链接](https://github.com/audichuang/prompt-glance) |
 | cache-panel | 提示缓存快冷时才提醒：空闲 50 分钟、缓存还热且上下文够大（冷掉的重写成本估算至少约 $0.30、且不少于 30k token）时，提示框上方出现一行「cache cools in …」按钮；点它或 /warm 打开面板，填要离开几小时，比较保温、压缩、什么都不做三种做法的估算花费，再选 Keep warm（每 50 分钟 ping 一次直到时段结束）、Ping once（多保一小时）或 Compact now；/warm off 提前停止。备注：保温用 $.model.fork 对同一会话前缀发一句「Reply with exactly: ok」，只在你点了以后才发，按普通请求计费；Compact now 调内置 /compact；只有在 herdr 里运行时才用 process.run 调 herdr 发提醒音；AbovePrompt 调 next，可与其他 mod 叠加；纯本机，不联网。 | MIT | [链接](https://github.com/danyuchn/claude-mods/tree/main/cache-panel) |
+| usagemeter | /usagemeter 打开一个面板（英文界面），汇总 Claude Code、Codex、OpenCode、Antigravity 的花费和 token（按今天/7 天/30 天/90 天等范围、按模型或项目分组），另一页显示各账号的套餐限额。备注：用 $.process.run 调本机 node 跑仓库自带的 helper（helper/dist/usagemeter-helper.mjs，由 helper/src 打包、CI 校验与源码一致，需 Node ≥22.5），只读本机各工具的对话记录算用量，缓存写在 ~/.cache/usagemeter；每天从 GitHub raw 下载一次 LiteLLM 公开价目表（不带任何你的数据）；限额页只有在你配置了 CLIProxyAPI hub 地址和管理 key 后才会通过 hub 查询 Anthropic/OpenAI/Google 的用量接口，打开 openCodeGo 选项（默认关）时会读 OpenCode 的 auth.json 里的 key 去查 opencode.ai 用量；不改提示，不上传会话内容。 | MIT | [链接](https://github.com/Elesiann/usagemeter) |
 
 ### 上下文管理 Context Management
 
@@ -647,6 +648,7 @@ For detailed descriptions of all 826 mods, see the Chinese section below.
 | activity | 实时面板显示 Claude 正在做什么：运行中的工具（真实命令和计时）、等你批准的调用、子代理和当前待办计划；/activity 打开。备注：tool.call 原样返回，只用 $.tool.check 读取是否需要批准；纯本机 UI。 | MIT | [链接](https://github.com/mishgoldenberg/claude-mods/tree/main/plugins/activity) |
 | agents-panel | /agents-panel 打开侧栏，列出本项目、用户和插件定义的子代理（描述、模型、token），每个带 ▶ run 按钮。备注：读本机 .claude/agents/*.md；只有你点 ▶ run 才会用 $.agent.spawn 启动该子代理。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/agents-panel) |
 | vnext-session-record | 记录本会话启动的子代理（类型、模型、状态、简短描述）、每次请求的模型和 token 用量，并在 /vnext 面板里显示。备注：所有钩子只观察、原样传递；不保存提示词正文，只存子代理描述前 120 字；写到项目 .vnext/host/<会话id>.jsonl（项目没有 .vnext 时写 ~/.vnext/host/），单文件上限 3 MB；纯本机，不联网；为 vNext workforce 设计，单独用也能看子代理面板。 | MIT | [链接](https://github.com/RazAndAlex/vnext-workforce/tree/main/plugins/vnext-session-record) |
+| clawd-crew | 对话旁的面板里，把每个正在跑的 Claude Code 会话和它们开的子代理都画成一只会动的像素 Clawd（英文界面），下面写着在做什么、用的模型、跑了多久、用了多少 token；顶部显示套餐剩余限额和今天/本周/全部的用量与费用（含已关闭的会话）。/clawds 打开，/clawds hide 关闭，/clawds style pixels 或 svg 切换画法。备注：会在 ~/.claude/clawd-crew/ 下写各会话的状态和用量缓存文件，并读取 ~/.claude/projects 和 sessions 下的对话记录统计用量（macOS/Linux 用 python3、Windows 用 PowerShell 本机执行内置脚本）；当没有任何会话拿到限额数据时，最多每 5 小时自动发一次 1 token 的 haiku 请求（内容固定为 Reply with OK.，不含会话内容）来读取限额，会产生极少量用量；tool.call、agent.spawn 只观察、原样传递；不改提示，不联网（除上述 haiku 请求）。 | MIT | [链接](https://github.com/hudcolighting/clawd-crew) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -727,6 +729,7 @@ For detailed descriptions of all 826 mods, see the Chinese section below.
 | tamaclaude | 提示框上方的像素宠物：会随会话长大，写文件时蹦跳、测试通过时跳舞、被拒绝或测试失败时生闷气、久不操作就睡觉，上下文快满或额度快用完时会提醒；/tamaclaude 查看、喂食、改名或重置。备注：prompt.submit 只读取提示里有没有夸奖来触发跳舞，原样传递不改写；tool.call 只观察结果；宠物状态存在插件本地 store；可在插件配置里调大小、安静模式和入睡时间。 | MIT | [链接](https://github.com/settivishal/tamaclaude/tree/main/tamaclaude) |
 | buddy | 住在提示框上方的 ASCII 小宠物，会对 Claude 的每个动作做反应（工具被拦时紧张、失败时吓一跳、提交和测试通过时开心），随你的工作升级；/buddy 改名、换物种、隐藏。备注：tool.call 只观察结果、原样传递；经验和统计存在插件本地 store；纯本机，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/fun/buddy) |
 | clawd-tales | 提示框上方的像素 Clawd 把 Claude 正在做的事演出来（英文字幕）：每次工具调用换一个动作和一行字幕（Read 看书、Edit 挖土、Grep 潜行、Bash 奔跑等），子代理按模型颜色走进来当帮手，等你批准权限或回答问题时跳起并显示红色「!」，测试失败掉下虫子、通过后吃掉，上下文越满天气越差（50% 多云、70% 下雨、85% 打雷），另显示上下文和套餐限额百分比、待办进度、连击数；/tales on、off、calm、lively、demo、hat、face、scarf 开关和换装。备注：字幕用模板生成，不调用模型、不额外计费；classic.SessionStart/UserPromptSubmit/PermissionRequest 和 prompt.submit、tool.call、agent.spawn 都只观察、原样传递，不改提示、不注入上下文、不改权限；只用 $.store 记住开关、装扮和成长进度；会占用提示框上方多行，空间不够时自动缩成一行；AbovePrompt 调 next，可与其他 mod 叠加；部分像素素材来自 Claude Fables（MIT，见 NOTICE）；纯本机，不联网。 | MIT | [链接](https://github.com/plaxagoras/clawd-tales) |
+| focus-cat-companion | 提示框上方 4 行高的 8×8 像素小猫加本地番茄钟（韩语界面）：Claude 回答时小猫来回走，等你批准权限时停下，正常答完跳一段 8 帧小舞；番茄钟默认 25/5/15 分钟、每 4 个专注一次长休息，/focus-cat start、pause、reset、next、show、hide、character a 或 b、motion on 或 off 控制。备注：只在终端版显示；其他 mod 已经在提示框上方画了内容时自动让位不显示；tool.call 和 classic 权限事件只观察、原样传递；只用 $.store/$.state 存计时和偏好；纯本机，不联网。 | MIT | [链接](https://github.com/b1ueseoyoung/focus-cat-companion) |
 
 ### 图片与媒体 Images & Media
 
@@ -878,6 +881,7 @@ For detailed descriptions of all 826 mods, see the Chinese section below.
 | shelf | 在提示框上方放命名的文件夹/文件捷径，点一下把路径插到正在输入的位置（不发送）；/shelf add、/shelf remove 管理。备注：路径存在 $.store；不改提示，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/shelf) |
 | pulse | /pulse 打开面板显示 CPU 曲线、内存条和当前仓库的 git 状态与最近提交。备注：会用本机 node 启动仓库里自带的小 sidecar（只读 git、只监听 127.0.0.1），mod 通过 localhost 拉 JSON；不联网，需装 Node。 |  | [链接](https://github.com/gfsaaser24/claude-code-mod-examples/tree/main/pulse) |
 | hal-grammar-check | 你输入提示时在提示框上方实时做语法检查并给出修改建议。备注：草稿（前 500 字）只发给本机 Ollama（localhost:11434），需自行安装 Ollama 和模型；prompt.edit/prompt.submit 只读、原样返回，不改写提示。 | MIT | [链接](https://github.com/vinta/hal-9000/tree/main/plugins/hal-grammar-check) |
+| open-latest | 每轮结束把 Claude 的最终回答覆盖写到 `%USERPROFILE%\.claude\latest.md`（子代理、被中断和空回答不写），提示框上方出现「エディタで開く」（用编辑器打开）按钮，点一下用 .md 关联的程序打开，长回答可以在熟悉的编辑器里看（日语界面）。备注：仅支持 Windows（用 rundll32 打开文件，路径写死 USERPROFILE，macOS/Linux 别装）；每轮都会覆盖这个文件；AbovePrompt 调 next，可与其他 mod 叠加；不改提示，不联网。 |  | [链接](https://github.com/stakiran/open-latest) |
 
 ### 其他工具 Other Tools
 
