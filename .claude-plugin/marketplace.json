@@ -7006,15 +7006,6 @@
         "repo": "jnk0vc/breach-quota",
         "sha": "0ea389ae51981fc15de1825b37580485df751671"
       }
-    },
-    {
-      "name": "cc-footprint",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/ilwu/cc-footprint.git",
-        "path": "plugin",
-        "sha": "7763d401cea065021012b909645c3b73576d99db"
-      }
     }
   ]
 }

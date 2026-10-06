@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 887 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 886 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 887 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 886 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 887 mods, see the Chinese section below.
+For detailed descriptions of all 886 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 887 个精选 Claude Code mods，按类别组织：
+以下是本市场的 886 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -271,7 +271,6 @@ For detailed descriptions of all 887 mods, see the Chinese section below.
 | context-board | 提示框上方的紧凑上下文卡片：已用/窗口、压缩阈值、分类堆叠色条和图例，外加一行本会话实际加载的 kit（skills、agents、CLAUDE.md/AGENTS.md、已启用插件、最近用的 skill）；状态行显示 ctx 百分比；/context-board 开关完整明细窗格，/context-board refresh 重新精确计数。备注：AbovePrompt 由本 mod 绘制、不调 next，会盖掉其他 mod 在提示框上方的显示；读 settings 里已启用插件名和 CLAUDE.md/AGENTS.md 文件名；refresh 走 Claude Code 自带的 token 计数（$.session.usage full）；tool.call 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/context-board) |
 | auto-handoff | 上下文快满（默认 85%）或即将压缩前，自动把进度、决定和下一步写成交接文件放到项目的 handoff/ 目录，下个会话可接着做；/autohandoff 查看状态、now、resume、threshold、on/off。备注：自动用 $.model.fork 基于本会话写交接（额外一次模型调用）并写入项目目录；只有你运行 /autohandoff resume 才代你提交一句「读取 handoff 继续」的提示；session.compact 只记录不改写；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/auto-handoff) |
 | context-check | 在提示框上方显示上下文窗口用量条（绿、黄、红），用到 70%、85%、95% 时各弹一次提示建议 /compact 或 /clear；/ctx 展开按类别的上下文占用明细（含自动压缩阈值），也可隐藏用量条。备注：只读 Claude Code 自带的上下文用量，不联网、不运行外部命令。 |  | [链接](https://github.com/itzArtha/claude-mods/tree/main/context-check) |
-| cc-footprint | 某一回合让上下文暴涨或快到自动压缩时弹提示，压缩后显示前后 token 数；/footprint 打开窗格，显示上下文占用、限额，以及（配合作者的托盘程序）上下文按来源（文件读取、命令输出、MCP 等）的构成和各会话占用的内存。备注：**完整功能需另装作者仓库里的本机托盘监控程序**（仓库根目录 install.sh 会装 systemd/launchd 开机服务并改 statusLine，另列出可选的全局规则和 browser 子代理，不自动写入），本市场只收录插件部分；插件只向本机 127.0.0.1:19823 请求数据，没装托盘程序时只显示 Claude Code 自带的上下文和限额；prompt.submit 只记录本回合起点、原样放行；不连外网。 | MIT | [链接](https://github.com/ilwu/cc-footprint/tree/main/plugin) |
 
 ### UI 与主题 UI & Themes
 
@@ -903,7 +902,7 @@ For detailed descriptions of all 887 mods, see the Chinese section below.
 | tablero | 西班牙语 /tablero 面板：把 Tiendanube 销售、Google Analytics 流量和 Meta Ads 投放汇总在一起，算出 MER 和转化率，不花 token。备注：只通过你已连接的对应连接器做只读查询；需要先在 Claude 里连好这些连接器。 | MIT | [链接](https://github.com/matecocidocontortafritas/growth-lab-mods/tree/main/plugins/tablero) |
 | superset-deck | 在 Claude Code 里打开 Superset 风格的工作区侧栏：按项目列出本机所有 Superset 工作区和代理终端状态，可查看代理终端实时画面、分支相对分叉点的 diff 与信息，给代理发消息、新建代理和工作树工作区、打开或删除工作区；提示框上方可显示一行 Superset 摘要。备注：**需先自行安装第三方 Superset（superset.sh）的 `superset` 命令行**，未安装时只显示错误；所有操作都是在本机运行 `superset ... --local --json` 和只读 git 命令，发消息、新建、删除（需二次确认）只在你在窗格里操作时执行；仓库 bin/superset-deck 启动脚本不随插件运行；本 mod 自身不联网。 | MIT | [链接](https://github.com/tomikng/claude-superset-deck) |
 | prs | /prs 在侧边窗格查看当前分支的拉取请求：差异、文件树、提交列表，没有时列出所有打开的 PR，涵盖 /add-dir 加入的所有仓库；支持 Azure DevOps 和 GitHub。备注：只读；Azure DevOps 用本机 az CLI 取访问令牌（缓存在插件 store，默认 45 分钟）并只调用 dev.azure.com 读接口，GitHub 走本机 gh 命令；差异来自本机 git，会对你的仓库执行 git fetch origin；不发送会话内容。 | MIT | [链接](https://github.com/ambareeshav/prs) |
-| spotify | 提示框上方只有图标的 Spotify 控制条（上一首、播放暂停、下一首、静音），侧边窗格可搜索、浏览并播放你的歌单和已点赞歌曲，带专辑封面；/spotify 打开。备注：**仅限 macOS**，控制条用 osascript 控制本机 Spotify 应用、无需登录；浏览功能需用你自己免费的 Spotify 开发者应用 Client ID（/spotify config），登录走 PKCE，会临时在 127.0.0.1:8907 起一个 python3 回调服务；封面用 curl 下载到 /tmp；只访问 Spotify 官方接口，不发送会话内容。 | MIT | [链接](https://github.com/ambareeshav/claude-plugins/tree/main/plugins/spotify) |
+| spotify | 提示框上方只有图标的 Spotify 控制条（上一首、播放暂停、下一首、静音），侧边窗格可搜索、浏览并播放你的歌单和已点赞歌曲，带专辑封面；/spotify 打开。备注：**仅限 macOS**，控制条用 osascript 控制本机 Spotify 应用、无需登录；浏览功能需用你自己免费的 Spotify 开发者应用 Client ID（/spotify config），登录走 PKCE，会临时在 127.0.0.1:8907 起一个 python3 回调服务；封面用 curl 下载到 /tmp；只访问 Spotify 官方接口，不发送会话内容。登录前会用 pkill 结束自己残留的回调服务进程（只匹配 spotify-mod-server-）。 | MIT | [链接](https://github.com/ambareeshav/claude-plugins/tree/main/plugins/spotify) |
 
 ### 本地工具 Local Tools
 
