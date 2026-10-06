@@ -7249,6 +7249,75 @@
         "path": "work-alerts",
         "sha": "e544d54a160bb0063ba208720cbd3b4346c6097d"
       }
+    },
+    {
+      "name": "neonmeter",
+      "source": {
+        "source": "github",
+        "repo": "IvanPavlak/NeonMeter",
+        "sha": "5187a52030a6560cdf7d76d5cb397797e0de546d"
+      }
+    },
+    {
+      "name": "vault-jot",
+      "source": {
+        "source": "github",
+        "repo": "Hsiang-LinC/vault-jot",
+        "sha": "0ec5edef62a8ddcb2b3c9fbc96e540387b7c8f55"
+      }
+    },
+    {
+      "name": "sessions",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cmbaldwin/claude-usage-band.git",
+        "path": "sessions",
+        "sha": "3a1475f5c536128caeab2671b70b78f0f3eb2c2f"
+      }
+    },
+    {
+      "name": "clean-copy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kbrianps/claude-clean-copy.git",
+        "path": "plugins/clean-copy",
+        "sha": "4b893f6acbca04bf14a21e2eb8f8e48a0a60dc6c"
+      }
+    },
+    {
+      "name": "cc-mod-caffeinate",
+      "source": {
+        "source": "github",
+        "repo": "williamchong/cc-mod-caffeinate",
+        "sha": "9f4edce95c22c08926a74cb21d82ec7a28a8438f"
+      }
+    },
+    {
+      "name": "answer-buttons",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mutlumehmet/claude-plugins.git",
+        "path": "plugins/answer-buttons",
+        "sha": "828596c54d7af01215a3bb585716b07a48e9ed6c"
+      }
+    },
+    {
+      "name": "skill-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mutlumehmet/claude-plugins.git",
+        "path": "plugins/skill-stats",
+        "sha": "828596c54d7af01215a3bb585716b07a48e9ed6c"
+      }
+    },
+    {
+      "name": "subtask-icons",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mutlumehmet/claude-plugins.git",
+        "path": "plugins/subtask-icons",
+        "sha": "828596c54d7af01215a3bb585716b07a48e9ed6c"
+      }
     }
   ]
 }
