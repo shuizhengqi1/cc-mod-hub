@@ -7407,6 +7407,50 @@
         "path": "turn-band",
         "sha": "390f22ee01bda39c2a7a4ed99bdd53c74183943e"
       }
+    },
+    {
+      "name": "stock-ticker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/twjackysu/claude-code-stock-ticker.git",
+        "path": "plugins/stock-ticker",
+        "sha": "4a8c0bff4d3e043a9b8ca7b49b12c8067d2dcbfd"
+      }
+    },
+    {
+      "name": "speak-aloud",
+      "source": {
+        "source": "github",
+        "repo": "tiger3645/claude-tts",
+        "sha": "bf0232980f3795168e49eb9400e755031662996e"
+      }
+    },
+    {
+      "name": "session-recap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/endless-fr/claude-mods.git",
+        "path": "mods/session-recap",
+        "sha": "ac1266bc8c1c192afde38de76217fa65f9db3255"
+      }
+    },
+    {
+      "name": "vivarium",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/claytonmgravatt/claude-mods.git",
+        "path": "plugins/vivarium",
+        "sha": "d137b782887f39b39137568465524d3d4f347c68"
+      }
+    },
+    {
+      "name": "activity-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/diegorv/claude-mods-diegorv.git",
+        "path": "plugins/activity-log",
+        "sha": "67840c696ef88405ceb42dc9ec95f3e3a7b90759"
+      }
     }
   ]
 }

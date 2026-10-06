@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 932 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 937 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 932 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 937 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 932 mods, see the Chinese section below.
+For detailed descriptions of all 937 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 932 个精选 Claude Code mods，按类别组织：
+以下是本市场的 937 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -241,6 +241,7 @@ For detailed descriptions of all 932 mods, see the Chinese section below.
 | uso-sessao | 提示框上方一行葡萄牙语用量条：上下文占用（ctx 已用/窗口和百分比）、本会话花费（美元）、5 小时和 7 天窗口的剩余百分比与距重置时间，按当前消耗速度预测到窗口结束是否会超额并用绿/黄/红着色。备注：数据只来自 $.session.usage()，不联网、不运行外部命令。 |  | [链接](https://github.com/diogosarti/my-claude-code/tree/main/plugins/uso-sessao) |
 | token-bar | 提示框上方用从绿到红的图形显示上下文窗口和额度用了多少（含每周窗口），每 30 秒和每个主会话回合结束后刷新。备注：数据只来自 $.session.usage()，不联网、不运行外部命令。 | MIT | [链接](https://github.com/santosli/claude-mods/tree/main/token-bar) |
 | tps-meter | 在提示框底部提示行（桌面版在模式标签旁）实时显示模型输出速度（tokens/秒），回合进行中带 ⚡ 标记，结束后按实际输出 token 数校准。备注：turn.step 只计数、原样传递流式内容，不改写；不联网、不运行外部命令。 |  | [链接](https://github.com/xingkaixin/claude-mods/tree/main/mods/tps-meter) |
+| session-recap | 你 /clear 一段对话后自动弹出一张回顾卡片：用时、回合数、工具调用、改动的文件与行数、测试运行次数和费用；`/session-recap` 随时查看当前对话的回顾；桌面端可点 Copy image / Save image 把卡片存成 PNG。备注：统计只在本机；复制/保存图片要按按钮才会用 macOS 自带的 qlmanage、sips、osascript，保存到 ~/Pictures/Session Recaps；不联网。 | MIT | [链接](https://github.com/endless-fr/claude-mods/tree/main/mods/session-recap) |
 
 ### 上下文管理 Context Management
 
@@ -679,6 +680,7 @@ For detailed descriptions of all 932 mods, see the Chinese section below.
 | cc-file-history-mod | 提示框上方一条带，记录本会话里 Claude 用 Edit、Write 改过或用 Bash `rm` 删掉的每个文件；点 [View] 或用 /file-history 打开侧栏，可看每次改动的 diff，并单独撤销任意一个文件。备注：撤销会直接写回文件（新建的文件会被 `rm` 删除），请确认后再点；看 diff 时会在原文件旁临时写 `.cc-fh-diff-*.before/.after` 两个文件，用本机 `diff -u` 比对后删除；记录只在内存里，/clear、resume、fork 或重载后清空；不改工具调用，不联网。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
 | bash-watch | Bash 命令失败时在状态行显示「failed: 命令前 40 个字符」，下一条命令成功后自动清除。备注：tool.call 先让命令照常执行再看结果，原样返回，不改工具调用；不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/bash-watch) |
 | tool-calls | `/tool-calls` 打开侧栏，实时列出本会话的工具调用（运行中 runs / 已完成 done），保留最近 200 条。备注：tool.call 只记录工具名、原样传递，不改工具调用；记录只在本会话里，不联网。 | MIT | [链接](https://github.com/nankris/claude-code-mods/tree/main/tool-calls) |
+| activity-log | 把本会话的每个事件（提示、工具调用及完整结果、子进程、模型流等）原样追加写入 ~/.claude/activity-log/日期-会话id.jsonl，便于调试和回放。备注：只记录、原样传递，不改任何事件；用 sh -c 'cat >> 文件' 追加（目录 700、文件 600），不联网。日志是明文，可能包含密钥、令牌和其他插件读到的环境变量值，且不自动清理、增长很快（一个空会话约 300KB），注意定期删除。 |  | [链接](https://github.com/diegorv/claude-mods-diegorv/tree/main/plugins/activity-log) |
 
 ### 子代理管理 Subagent Management
 
@@ -721,6 +723,7 @@ For detailed descriptions of all 932 mods, see the Chinese section below.
 | agent-chat | 侧边窗格里显示 Claude 和子代理之间的「对话」：每个子代理收到的任务、运行时长、状态和最后交回的报告，按颜色区分，可展开卡片；第一次启动子代理时自动打开（可关），也可用 /agent-chat 打开。备注：只读显示，数据存在 mod 自己的存储里；不联网、不运行外部命令。 |  | [链接](https://github.com/AhmedNazihX/claude-mods/tree/main/agent-chat) |
 | squad-board | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。CTO 会话里绘制提示框上方区域时不调用 next，会盖住其他 mod 在这一栏的内容。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
 | plugin-recorder | 子代理运行时在提示框上方显示一行进度（如「tdd · 12 个子代理完成 · tdd-runner 运行 4 分钟 · 本回合 38 分钟」），子代理调用失败、被拒或启动被拒时立刻弹提示；同时按会话记一份插件运行日志（调用了哪个插件的命令/技能、子代理类型、状态、耗时、token 数）。备注：日志只记元数据，不记提示词、命令参数、工具输入输出、文件内容或完整路径（项目只记目录名），写在 `~/.claude/plugins/data/plugin-recorder-*/sessions/` 的 jsonl 里，可用同仓库的 retro 插件或 jq 查看；只记带插件前缀的命令/技能；tool.call 只计时、原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/juanmhidalgo/claude-plugins/tree/main/plugin-recorder) |
+| vivarium | 提示框上方一条像素 Clawd 小带：每个子代理一只，工作时走动、完成后睡觉、失败时趴倒，大小随模型变化；点一只可看它的类型、任务、用时和最后一个工具；`/vivarium` 显示或隐藏。备注：只观察 agent.spawn、tool.call、turn.complete 并原样传递；不联网、不运行外部命令。 |  | [链接](https://github.com/claytonmgravatt/claude-mods/tree/main/plugins/vivarium) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -943,6 +946,7 @@ For detailed descriptions of all 932 mods, see the Chinese section below.
 | spotify | 提示框上方只有图标的 Spotify 控制条（上一首、播放暂停、下一首、静音），侧边窗格可搜索、浏览并播放你的歌单和已点赞歌曲，带专辑封面；/spotify 打开。备注：**仅限 macOS**，控制条用 osascript 控制本机 Spotify 应用、无需登录；浏览功能需用你自己免费的 Spotify 开发者应用 Client ID（/spotify config），登录走 PKCE，会临时在 127.0.0.1:8907 起一个 python3 回调服务；封面用 curl 下载到 /tmp；只访问 Spotify 官方接口，不发送会话内容。登录前会用 pkill 结束自己残留的回调服务进程（只匹配 spotify-mod-server-）。 | MIT | [链接](https://github.com/ambareeshav/claude-plugins/tree/main/plugins/spotify) |
 | github-issues | /issues 打开侧边窗格，把仓库的 GitHub issue 显示成卡片：Open、Assigned、Created、Closed 四个标签页，搜索框和标签筛选，卡片显示标题、编号、指派人、更新时间、评论数、关联 PR 和彩色标签，可展开正文；/issues owner/name 或 /issues . 指定仓库，不带参数时列出你最近推送过的仓库供选择；窗格打开时有新指派给你的 issue 会弹提示。备注：**需要本机已登录的 gh**（gh auth login），只运行 `gh api graphql` 查询（不做修改）和 `gh issue view`，除 GitHub 外不连其他外网；窗格打开时每 2 分钟和每回合结束后刷新，关闭时不发请求；只有你点「Work on it」才用 $.prompt.submit 以你的名义发一条固定提示，让 Claude 读该 issue 并动手实现。 | MIT | [链接](https://github.com/MarcoCarnevali/claude-code-mods/tree/main/github-issues) |
 | vault-jot | 在任意会话里把想法、待读链接、学到的东西、踩坑等随手记进 Obsidian 仓库的 inbox/：/jot idea: 文本 直接存成一条笔记，/jot 不带内容时让模型从当前对话起草一条填进输入框（回车才保存）；inbox 积压到一定数量或天数时提示框上方出现「Ingest」按钮；/incubate 打开侧边窗格浏览 wiki/ideas 和 wiki/reading 里的笔记，按钮可让 Claude 扩写想法、记录决定、标记阅读状态或导出为项目设计文档。备注：需先在 /config 设置 vaultPath（仓库须已有 inbox/ 目录）；笔记里会记下当前目录、仓库远程地址、git 分支和会话 id（分支用本机 `git rev-parse` 取）；/jot 起草用 $.model.fork 分叉一次、消耗少量用量；Ingest 按钮只把一条请求填进输入框（需另装 claude-obsidian 的 wiki-ingest），/incubate 窗格里的按钮是你点了才用 $.prompt.submit 以你的名义发出固定提示；本 mod 不直接改 wiki/ 下的笔记；不联网。 |  | [链接](https://github.com/Hsiang-LinC/vault-jot) |
+| stock-ticker | 提示框上方的台股报价带（默认 加權指數、2330、0050），交易时段每 5 秒刷新，红涨绿跌可切换，单日涨跌超过阈值（默认 3%）弹一次提示；`/stock add 2330` 添加、`/stock rm 2330` 删除、`/stock list` 列出、`/stock on`/`off` 显示或隐藏（最多 10 档）。备注：$.http 只请求台湾证交所公开行情接口 mis.twse.com.tw，只发送股票代码，不发送会话内容；只在会话显示在屏幕上时轮询。 | MIT | [链接](https://github.com/twjackysu/claude-code-stock-ticker/tree/main/plugins/stock-ticker) |
 
 ### 本地工具 Local Tools
 
@@ -976,6 +980,7 @@ For detailed descriptions of all 932 mods, see the Chinese section below.
 | clean-copy | 终端里选中文本自动复制时，把复制内容清理干净：去掉左侧的引用竖线/面板边框和回复前的 ⏺ 标记，统一去掉缩进，把因终端宽度折断的句子重新接成一行（代码块、列表、标题、表格保持原样）。备注：每 250 毫秒检查一次当前选区，选区稳定且确实需要清理时，用本机 `wl-paste`、`xclip` 或 `pbpaste` 读一次剪贴板确认是 Claude Code 刚复制的内容，再写回清理后的文本；只处理剪贴板，不联网。 | MIT | [链接](https://github.com/kbrianps/claude-clean-copy/tree/main/plugins/clean-copy) |
 | cc-mod-caffeinate | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |
 | copy-markdown | 每条 Claude 回复右上角加一个暗色「⧉ md」小按钮，点一下把整条回复按原始 markdown（表格原样）复制到剪贴板；`/copy-md [n]` 复制倒数第 n 条回复。备注：只读本会话消息，用 $.ui.copy 写剪贴板；不联网、不运行外部命令。 | MIT | [链接](https://github.com/a-bine/claude-mods/tree/main/copy-markdown) |
+| speak-aloud | 用 macOS 自带 `say` 朗读 Claude 的回复：每条回复旁加 🔊 按钮（朗读时变成 ■，点一下停止），`/speak` 朗读最新回复、`/speak-stop` 停止、`/speak-voice` 选声音、`/speak-rate` 调语速。备注：仅 macOS；本机 process（say），只读本会话消息，代码块不读、链接只读文字；不联网。 |  | [链接](https://github.com/tiger3645/claude-tts) |
 
 ### 其他工具 Other Tools
 
