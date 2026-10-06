@@ -8493,6 +8493,96 @@
         "path": "Scripts/mods/claude",
         "sha": "ef5703de88612716bb9abc4c5ec9e7351f3f4e2b"
       }
+    },
+    {
+      "name": "ci",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Hula-Hoop-AI/supermods.git",
+        "path": "plugins/ci",
+        "sha": "cd9dc51268856b801c956e88221cfb4e1b66e609"
+      }
+    },
+    {
+      "name": "focus-timer",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Hula-Hoop-AI/supermods.git",
+        "path": "plugins/focus-timer",
+        "sha": "cd9dc51268856b801c956e88221cfb4e1b66e609"
+      }
+    },
+    {
+      "name": "garden",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Hula-Hoop-AI/supermods.git",
+        "path": "plugins/garden",
+        "sha": "cd9dc51268856b801c956e88221cfb4e1b66e609"
+      }
+    },
+    {
+      "name": "tide",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Hula-Hoop-AI/supermods.git",
+        "path": "plugins/tide",
+        "sha": "cd9dc51268856b801c956e88221cfb4e1b66e609"
+      }
+    },
+    {
+      "name": "trace",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Hula-Hoop-AI/supermods.git",
+        "path": "plugins/trace",
+        "sha": "cd9dc51268856b801c956e88221cfb4e1b66e609"
+      }
+    },
+    {
+      "name": "nightrun-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bajzaa975/claude-alapcsomag.git",
+        "path": "nightrun-pane",
+        "sha": "bd2e01df6019ea5e386af55741e52edc06dd2aaf"
+      }
+    },
+    {
+      "name": "aidv-autos",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PedroGiudice/opc-plugins.git",
+        "path": "plugins/aidv-autos",
+        "sha": "6ef478c40cd772c317f0d31db2f9c3f727e12a08"
+      }
+    },
+    {
+      "name": "aidv-contexto",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PedroGiudice/opc-plugins.git",
+        "path": "plugins/aidv-contexto",
+        "sha": "6ef478c40cd772c317f0d31db2f9c3f727e12a08"
+      }
+    },
+    {
+      "name": "escritorio-time",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cas1260/claude-code-escritorio-time.git",
+        "path": "escritorio-time",
+        "sha": "55f8d5b796a6bf86e66c144b257a3ef4350dc57d"
+      }
+    },
+    {
+      "name": "swamp-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jpisgeek/claude-mods.git",
+        "path": "mods/swamp-watch",
+        "sha": "9a7ce6c831a0768d6019cd4c479535027164711a"
+      }
     }
   ]
 }
