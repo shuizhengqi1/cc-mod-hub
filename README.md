@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 861 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 863 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 861 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 863 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 861 mods, see the Chinese section below.
+For detailed descriptions of all 863 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 861 个精选 Claude Code mods，按类别组织：
+以下是本市场的 863 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -228,6 +228,7 @@ For detailed descriptions of all 861 mods, see the Chinese section below.
 | sl-mod | 代替 statusLine 命令的轻量状态栏，画在提示框上方：目录、模型与 effort、git 分支状态、项目版本，以及上下文、5 小时、7 天和按模型的周额度条；/sl-settings 选每行显示什么。备注：额度通过 $.session.authorize 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容），429 会退避；跑本机 git status/describe/rev-list；读项目里的 package.json 等取版本号。 |  | [链接](https://github.com/ducban/sl-mod) |
 | apple-tree | 一棵跟着用量长大的苹果树：整棵树代表每周额度，每个 5 小时窗口结一个果子（随用量变大变色，窗口重置时定型），每周重置后旧树收进果园；/tree 打开侧边面板（桌面版插画、终端字符画），状态栏显示 🍎 个数与 5h/周百分比，阶段变化时弹提示；中英文界面。备注：只读 $.session.usage 与 session.measure 的额度数据，存本机 store；不碰提示和工具；不联网。 | MIT | [链接](https://github.com/JoyceGu/apple-tree-mod) |
 | token-weather-cache | 官方 token-weather 的改版：提示框上方保留上下文「天气」与已用/窗口 token，把右侧最近 12 轮柱状图换成提示缓存倒计时（5m/1h 自动判断，剩 5 分钟/1 分钟弹提醒，过期后显示下一条消息要重写多少 token）。备注：改自 anthropics/claude-code-playground 的 token-weather（Apache-2.0），倒计时规则改编自 jmac122/cache-countdown（MIT），已注明出处；turn.step 只读主循环用量、原样返回；和官方 token-weather 画在同一位置，二选一；不联网。 | Apache-2.0 | [链接](https://github.com/youllook/ClaudeMods/tree/main/plugins/token-weather-cache) |
+| usage-feed | 把订阅账号的 5 小时、7 天与 spend_limit 限额窗口合并写进本地 usage.json（会话开始和每回合后更新，多会话同时写也按规则合并不回退），供同仓库的 Windows 11 任务栏小窗 usage_widget.py 画用量条。备注：**仅 Windows**，需在插件设置里填 dataDir（必须是盘符开头的本地绝对路径，拒绝 OneDrive 与网络路径），不填则什么都不做；只读 $.session.usage 与 session.measure，只写 dataDir 下 usage.json 与排障日志两个文件；不碰提示和工具；不联网；任务栏小窗是仓库里另行运行的 Python 脚本，不随插件安装。 |  | [链接](https://github.com/imrooki/claude-usage-bar/tree/main/plugins/usage-feed) |
 
 ### 上下文管理 Context Management
 
@@ -912,6 +913,7 @@ For detailed descriptions of all 861 mods, see the Chinese section below.
 | pulse | /pulse 打开面板显示 CPU 曲线、内存条和当前仓库的 git 状态与最近提交。备注：会用本机 node 启动仓库里自带的小 sidecar（只读 git、只监听 127.0.0.1），mod 通过 localhost 拉 JSON；不联网，需装 Node。 |  | [链接](https://github.com/gfsaaser24/claude-code-mod-examples/tree/main/pulse) |
 | hal-grammar-check | 你输入提示时在提示框上方实时做语法检查并给出修改建议。备注：草稿（前 500 字）只发给本机 Ollama（localhost:11434），需自行安装 Ollama 和模型；prompt.edit/prompt.submit 只读、原样返回，不改写提示。 | MIT | [链接](https://github.com/vinta/hal-9000/tree/main/plugins/hal-grammar-check) |
 | open-latest | 每轮结束把 Claude 的最终回答覆盖写到 `%USERPROFILE%\.claude\latest.md`（子代理、被中断和空回答不写），提示框上方出现「エディタで開く」（用编辑器打开）按钮，点一下用 .md 关联的程序打开，长回答可以在熟悉的编辑器里看（日语界面）。备注：仅支持 Windows（用 rundll32 打开文件，路径写死 USERPROFILE，macOS/Linux 别装）；每轮都会覆盖这个文件；AbovePrompt 调 next，可与其他 mod 叠加；不改提示，不联网。 |  | [链接](https://github.com/stakiran/open-latest) |
+| ram-guard | 状态栏显示本机可用内存与正在跑的 Gradle/模拟器/Maven/Metro 进程数，每 15 秒刷新，内存低于 6 GiB 时弹提示；可用内存不足 6 GiB 或有 Gradle 守护进程/模拟器在跑时拒绝启动子代理（Agent/Workflow），不足 4 GiB 时拒绝 gradlew/mvn/emulator 等重型构建命令。备注：**仅 Linux**（读 /proc/meminfo，其他系统上读不到，子代理与 Bash 调用可能直接报错，macOS/Windows 请勿安装）；本机运行 ps 只统计进程；工具门只拒绝不改写；不联网。 |  | [链接](https://github.com/jimisola/claude-plugins/tree/main/plugins/ram-guard) |
 
 ### 其他工具 Other Tools
 
