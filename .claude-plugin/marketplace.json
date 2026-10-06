@@ -7695,6 +7695,164 @@
         "path": "mods/loon-chicks",
         "sha": "9b8176594347ad9f6d5251affea78a4ed1866985"
       }
+    },
+    {
+      "name": "viernes-sin-deploy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/alexyslozada/claude-mods.git",
+        "path": "plugins/viernes-sin-deploy",
+        "sha": "f221a8d95c82e37dd033d8aa62c4771f37e04f58"
+      }
+    },
+    {
+      "name": "cronometro",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/alexyslozada/claude-mods.git",
+        "path": "plugins/cronometro",
+        "sha": "f221a8d95c82e37dd033d8aa62c4771f37e04f58"
+      }
+    },
+    {
+      "name": "cost-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vuhpquang/vuha-claude-plugin.git",
+        "path": "mods/cost-guard",
+        "sha": "73e3d1fa5ea1f7021b595dc99f60abafb6b76aed"
+      }
+    },
+    {
+      "name": "jira-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vuhpquang/vuha-claude-plugin.git",
+        "path": "mods/jira-band",
+        "sha": "73e3d1fa5ea1f7021b595dc99f60abafb6b76aed"
+      }
+    },
+    {
+      "name": "mr-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vuhpquang/vuha-claude-plugin.git",
+        "path": "mods/mr-panel",
+        "sha": "73e3d1fa5ea1f7021b595dc99f60abafb6b76aed"
+      }
+    },
+    {
+      "name": "context-report",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/darkroomengineering/cc-settings.git",
+        "path": "plugins/context-report",
+        "sha": "0ab05523d9df3655d4537bd179bed9e2aa777ae6"
+      }
+    },
+    {
+      "name": "pins",
+      "source": {
+        "source": "github",
+        "repo": "RamSen-IT/claude-code-pins",
+        "sha": "c472b3cb061363485ebbc0b49984e8ec79cd45ff"
+      }
+    },
+    {
+      "name": "cinderdeck",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RyanCardin15/Cinderdeck.git",
+        "path": "mods/claude-code/cinderdeck",
+        "sha": "7c7ac91f8a38d3f86999a844d4cce3d1d657dabe"
+      }
+    },
+    {
+      "name": "droid-reviews",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AuthorOfTheSurf/droid-review-skill.git",
+        "path": "skills/droid-reviews",
+        "sha": "1de53a58bde06b1359c7bf4eef07fe56a5de1637"
+      }
+    },
+    {
+      "name": "clawd-arcade",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/IKnowJot/clawd-plugins.git",
+        "path": "plugins/clawd-arcade",
+        "sha": "aa0afdf7c48556c43ae056e973dc6ce722c3eb47"
+      }
+    },
+    {
+      "name": "gsd-pilot",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davesienkowski/gsd-cc-mods.git",
+        "path": "mods/gsd-pilot",
+        "sha": "dd7f1eaa39b9c6c2be38bd9956004bd08ab244c2"
+      }
+    },
+    {
+      "name": "orbit",
+      "source": {
+        "source": "github",
+        "repo": "timgrossmann/orbit-claude-mod",
+        "sha": "024ca885f798d546519b5950ec7f94450cc5ffb2"
+      }
+    },
+    {
+      "name": "agent-dash",
+      "source": {
+        "source": "github",
+        "repo": "rasa-mrankovic/agent-dash",
+        "sha": "43c9b58a584855e6e1689a9d8f9b14ea0176f2aa"
+      }
+    },
+    {
+      "name": "specnaut-cockpit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/specnaut/specnaut-cli.git",
+        "path": "mods/specnaut-cockpit",
+        "sha": "14d8e4228ff0b30db638822cd2277302622ec1ee"
+      }
+    },
+    {
+      "name": "team",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yskills/claude-setup.git",
+        "path": "mods/team",
+        "sha": "5ee3b9579eb807795d4f5894090ce3327ac050e8"
+      }
+    },
+    {
+      "name": "hebrew-rtl",
+      "source": {
+        "source": "github",
+        "repo": "hemichaeli/hebrew-rtl",
+        "sha": "a5f11fa6eb84674d43522e01fe290bd96efdcc43"
+      }
+    },
+    {
+      "name": "spinner",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SeongGwangJu/k-mods.git",
+        "path": "mods/spinner",
+        "sha": "41f05e265839287433143c014966b84e47264590"
+      }
+    },
+    {
+      "name": "dev-up",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/chanlito/claude-mods.git",
+        "path": "dev-up",
+        "sha": "83f636b0a4ecd0f52c68bc43b155613ef090e766"
+      }
     }
   ]
 }
