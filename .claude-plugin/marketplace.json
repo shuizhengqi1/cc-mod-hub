@@ -398,7 +398,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/diegorv/claude-mods-diegorv.git",
-        "path": "plugins/gh-ci-status"
+        "path": "plugins/gh-ci-status",
+        "sha": "e4c7eca744b3c9c9b88b200afe9f716ee7b17db4"
       }
     },
     {
@@ -406,7 +407,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/diegorv/claude-mods-diegorv.git",
-        "path": "plugins/time"
+        "path": "plugins/time",
+        "sha": "e4c7eca744b3c9c9b88b200afe9f716ee7b17db4"
       }
     },
     {
@@ -415,13 +417,6 @@
         "source": "git-subdir",
         "url": "https://github.com/kunchenguid/firstmate.git",
         "path": ".claude/mods/firstmate-calm"
-      }
-    },
-    {
-      "name": "multi-core",
-      "source": {
-        "source": "github",
-        "repo": "greenpolo/cc-multi-cli-plugin"
       }
     },
     {
@@ -615,38 +610,6 @@
         "source": "git-subdir",
         "url": "https://github.com/karanb192/claude-code-mods.git",
         "path": "plugins/image-peek"
-      }
-    },
-    {
-      "name": "git-gates",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/bahaospanov/skills.git",
-        "path": "git-gates"
-      }
-    },
-    {
-      "name": "lean-comments",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/bahaospanov/skills.git",
-        "path": "lean-comments"
-      }
-    },
-    {
-      "name": "lean-docs",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/bahaospanov/skills.git",
-        "path": "lean-docs"
-      }
-    },
-    {
-      "name": "lean-scripts",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/bahaospanov/skills.git",
-        "path": "lean-scripts"
       }
     },
     {
@@ -1752,28 +1715,32 @@
       "name": "maomao",
       "source": {
         "source": "github",
-        "repo": "jessetsai1024/claude-maomao"
+        "repo": "jessetsai1024/claude-maomao",
+        "sha": "508da642812a13707f0b00da60b646033e8d29c2"
       }
     },
     {
       "name": "ctx-panel",
       "source": {
         "source": "github",
-        "repo": "jessetsai1024/claude-ctx-panel"
+        "repo": "jessetsai1024/claude-ctx-panel",
+        "sha": "a22fcc1f98eb2740cf5853f0da81a5d4bea189a3"
       }
     },
     {
       "name": "files",
       "source": {
         "source": "github",
-        "repo": "jessetsai1024/claude-files"
+        "repo": "jessetsai1024/claude-files",
+        "sha": "94a42df47f80ca723d0710662c7cb28a757a486d"
       }
     },
     {
       "name": "timeline",
       "source": {
         "source": "github",
-        "repo": "jessetsai1024/claude-timeline"
+        "repo": "jessetsai1024/claude-timeline",
+        "sha": "ffd67b676ebd466c05e7daf3c03e28e15f1410dd"
       }
     },
     {
@@ -1788,7 +1755,8 @@
       "name": "tokens",
       "source": {
         "source": "github",
-        "repo": "jessetsai1024/claude-tokens"
+        "repo": "jessetsai1024/claude-tokens",
+        "sha": "ca7c0ec4dfd30832e54501683bd788af6cc7474d"
       }
     },
     {
@@ -2458,13 +2426,6 @@
       }
     },
     {
-      "name": "sudus",
-      "source": {
-        "source": "github",
-        "repo": "eas4ai/sudus"
-      }
-    },
-    {
       "name": "shunt",
       "source": {
         "source": "git-subdir",
@@ -3084,7 +3045,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/Vatroslav/cc-mod-ferro.git",
-        "path": "plugin"
+        "path": "plugin",
+        "sha": "ff4aa179df219c920ff85c007662eed8fde4dc14"
       }
     },
     {
@@ -3598,21 +3560,24 @@
       "name": "teach-me",
       "source": {
         "source": "github",
-        "repo": "saksham10arora-dotcom/claude-teach-me"
+        "repo": "saksham10arora-dotcom/claude-teach-me",
+        "sha": "a7d2059c37d18f6dbc3ce74c1f958d213bc6a82e"
       }
     },
     {
       "name": "lofi",
       "source": {
         "source": "github",
-        "repo": "saksham10arora-dotcom/claude-lofi"
+        "repo": "saksham10arora-dotcom/claude-lofi",
+        "sha": "96e7eeaf3a878abe0d0b5050647aac9d552292bf"
       }
     },
     {
       "name": "vhs",
       "source": {
         "source": "github",
-        "repo": "saksham10arora-dotcom/claude-vhs"
+        "repo": "saksham10arora-dotcom/claude-vhs",
+        "sha": "76654d55fade052555f417c47bf0c9c978b08f78"
       }
     },
     {
@@ -3992,14 +3957,6 @@
       "source": {
         "source": "github",
         "repo": "BrianHuang813/clawd-actor"
-      }
-    },
-    {
-      "name": "clawd-factory",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/jnk0vc/clawd-factory.git",
-        "path": "plugins/clawd-factory"
       }
     },
     {
