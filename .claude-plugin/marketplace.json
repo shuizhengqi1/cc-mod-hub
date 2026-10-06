@@ -7142,6 +7142,95 @@
         "repo": "jbauman-26/aeo-audit-mod",
         "sha": "be3b9e7b88afaa356da9df139caa54509c69a05f"
       }
+    },
+    {
+      "name": "agent-chat",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AhmedNazihX/claude-mods.git",
+        "path": "agent-chat",
+        "sha": "a5d86f060a7a553324d708291824ad3ceb7262a4"
+      }
+    },
+    {
+      "name": "done-chime",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AhmedNazihX/claude-mods.git",
+        "path": "done-chime",
+        "sha": "a5d86f060a7a553324d708291824ad3ceb7262a4"
+      }
+    },
+    {
+      "name": "tokenmunim",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PiyushSinha-9/tokenmunim.git",
+        "path": "plugin",
+        "sha": "e3c330a8dbbbc72d73e932ecb4760a214d2cafd7"
+      }
+    },
+    {
+      "name": "barre-conso",
+      "source": {
+        "source": "github",
+        "repo": "contactflowclient-blip/mods-claude",
+        "sha": "670bd6b1f730257276d20b6a8fda627014683354"
+      }
+    },
+    {
+      "name": "cc-context-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rendi-febrian/rendifebrian-mods.git",
+        "path": "cc-context-bar",
+        "sha": "3943d5277f1f8147561ab23b7d6757bb9d6c3505"
+      }
+    },
+    {
+      "name": "squad-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gzurl/agent-squad.git",
+        "path": "mods/squad-board",
+        "sha": "a2be1680abd60374778c8dab75bb4d84d4952816"
+      }
+    },
+    {
+      "name": "band-git",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/barkerjian/prompt-band.git",
+        "path": "git",
+        "sha": "a24475406bba2e3340847f1a1ed222d489647ee7"
+      }
+    },
+    {
+      "name": "band-pending",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/barkerjian/prompt-band.git",
+        "path": "pending",
+        "sha": "a24475406bba2e3340847f1a1ed222d489647ee7"
+      }
+    },
+    {
+      "name": "band-migrations",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/barkerjian/prompt-band.git",
+        "path": "migrations",
+        "sha": "a24475406bba2e3340847f1a1ed222d489647ee7"
+      }
+    },
+    {
+      "name": "ccstatus",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sushant-kum/ccstatus.git",
+        "path": "plugin",
+        "sha": "4809266935feae61b67f7c798771074d799bedd1"
+      }
     }
   ]
 }
