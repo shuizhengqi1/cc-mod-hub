@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 914 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 922 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 914 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 922 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 914 mods, see the Chinese section below.
+For detailed descriptions of all 922 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 914 个精选 Claude Code mods，按类别组织：
+以下是本市场的 922 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -237,6 +237,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | cache-status | 在状态栏显示提示缓存还热多久：剩余时间进度条（绿、快过期变黄、过期红）、本会话缓存命中率和估算的缓存失效次数，过期后提示下一条消息大约要重新缓存多少 token；缓存时长按 CLAUDE_CODE_PROMPT_CACHE_TTL / FORCE_PROMPT_CACHING_5M 判断是 5 分钟还是 1 小时。备注：**只在桌面 App 等非终端界面显示**，终端里不显示（作者建议终端用自己的 statusline 脚本）；数字由主会话每次回复的用量估算，不是官方缓存数据；turn.step 只读用量、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/alfredwesterveld/claude-cache-status) |
 | pace-band | /pace 打开面板：5 小时和每周用量限额各画一条进度条，同时标出窗口时间已过多少，按最近一小时速度预测会不会在重置前用完、何时用完，并按类别显示上下文占用（本机估算）；提示框上方只在需要处理时出现：上下文超过 80% 时给一个 compact 按钮，或某个限额会在重置前用完时给出警告，× 可本会话隐藏。界面语言可选 en/ru/auto。备注：「上一回合花费」要配合同仓库的 pace-statusline 状态栏脚本（不在本市场）才显示，mod 只把这行文字写到临时目录的 `pace-band-turn-<会话>.txt`；限额读数存在 mod 自己的存储里，本机所有会话共用；compact 按钮调用 Claude Code 自带的压缩；不联网、不运行外部命令。 | MIT | [链接](https://github.com/tsalkin/claude-code-statusline/tree/main/experiments/statusline-band) |
 | barre-conso | 提示框上方一条法语用量栏：5 小时和 7 天限额的小进度条、百分比和距重置时间，本会话累计输入/输出 token，上下文已用/窗口大小，以及本会话花费。备注：只读本机用量数据；绘制提示框上方区域时不调用 next，会替换掉其他 mod 在这一栏的内容（有调查问卷时让出）；不联网、不运行外部命令。 |  | [链接](https://github.com/contactflowclient-blip/mods-claude) |
+| neonmeter | 提示框上方一条霓虹风格的用量条：5 小时窗口、每周窗口（套餐有按模型的周额度时轮流显示）、可选的花费上限和本会话上下文占用，按占用程度分六档颜色，数值变化时闪几下；终端和桌面版 Code 标签页都能用，跟随 Claude Code 主题，可选布局、颜色、刷新间隔等 21 项设置。备注：额度通过 $.session.authorize 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（与内置 /usage 同一接口，凭据不经过 mod，不发会话内容），默认 60 秒一次，429 会退避，用 API key 登录时不显示额度；为跟随系统深浅色会运行本机 `defaults`（macOS）、`gsettings`（GNOME）或 `reg query`（Windows）并读取桌面版的 config.json；仓库另带可读的 install.sh/install.ps1 安装脚本，从本市场安装用不到。 | MIT | [链接](https://github.com/IvanPavlak/NeonMeter) |
 
 ### 上下文管理 Context Management
 
@@ -419,6 +420,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | pitch-black | 仿 VS Code「Pitch Black」主题：你的消息变成黑底圆角框加蓝色 ❯，Claude 回复黑底，工具调用和工具组加边框（运行中蓝、出错红），加载提示前加蓝色 ◆，提示框上方加一条蓝色 VS Code 风格状态栏（git 分支、文件夹名、Working/Ready、上一回合秒数和工具调用次数）；/pitch-black on、off 或不带参数切换，选择跨会话保留。备注：会话开始和每回合结束时在本机运行一次 `git rev-parse --abbrev-ref HEAD` 读分支；tool.call 只计数、原样放行；不联网。 |  | [链接](https://github.com/Shahrozjd/shahroz-plugins/tree/main/plugins/pitch-black) |
 | gauravs-panel | 在提示框底部模式标签右侧加一个「◆ Gaurav's Tools」按钮，点开是两排按钮：模型（Haiku、Sonnet、Opus、Fable）和思考强度（Low 到 Max），一键切换，不用再打 /model、/effort；/panel 也可开关；有侧边窗格打开时卡片移到窗格底部显示。备注：按钮只是替你运行 Claude Code 自带的 /model、/effort 命令，并把命令返回的提示弹出来；模型列表写死在插件里，新模型需等作者更新；当前强度从模型请求里读取，turn.step 原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/gauravlahoti/claude-mods/tree/main/plugins/gauravs-panel) |
 | quiet-mode | 安静模式：终端里隐藏工具调用行和回合中间的过渡性回复，只留你的提问和 Claude 最新的回复，状态栏显示本回合已隐藏多少个工具调用；/quiet 开关（on/off）。备注：只改显示，模型收到的内容不变；桌面 App 里工具行照常显示（App 自己会折叠）；prompt.submit 只用来清零计数、原样放行；tool.call 只计数、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/robw-raviga/claude-mods/tree/main/quiet-mode) |
+| answer-buttons | Claude 最后一条回答下方加三个小按钮：「✎ Plain English」用白话重讲、「✂ Shorter」压短、「✎✂ Plain & short」白话且只用两三句；也可用 /answer-buttons:shorter、/answer-buttons:plain-short 命令。备注：只有你点按钮时才用 $.prompt.submit 以你的名义发一条固定提示（设置 plain_skill 后两个 Plain 按钮改为运行该技能），会多跑一轮、消耗用量；回合进行中、VS Code 和手机端不显示；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/answer-buttons) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -668,6 +670,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | pr-live-review | /pr-live-review 打开实时 PR 审查窗格：当前检出分支的 PR 相对目标分支的差异、每个文件的摘要和发现的问题，可逐行加评论，把评论发给 Claude 处理或发到 GitHub PR 上。备注：**需要本机 git 和已登录的 gh**，作者要求 Claude Code 2.1.291+；打开时会对每个改动文件调用 $.model.complete（Sonnet）审查，发送的是 PR 差异、该文件全文、调用处片段和仓库里的 CLAUDE.md、AGENTS.md 规则（若装了名为 review-senior-engineer 的技能也会附上），不含会话内容；只有你按 send 才把评论作为你的消息提交给 Claude，只有你保存发布时才通过 gh api 发到 GitHub；不连其他外网。 |  | [链接](https://github.com/afruth/pr-live-review) |
 | aeo-audit | /aeo <网址> 检查一个网页能否被 ChatGPT 搜索、Perplexity、Google AI 概览、Copilot 和 Claude 抓取和读取：robots.txt 对各 AI 爬虫是否放行、防火墙是否拦截 AI 爬虫 UA、noindex/nosnippet、不开 JS 能否看到正文、llms.txt、站点地图等，每项给出 PASS/WARN/FAIL、修复建议和依据来源，在侧边窗格显示并把完整报告存到 `~/output/aeo-audits/`；也给 Claude 增加 audit_site 工具，可直接说「帮我审查某网站」。备注：会用 `$.http` 访问你指定的网址（页面本身、robots.txt、llms.txt、站点地图，并用几种 AI 爬虫 UA 各请求一次页面），不发送会话内容；窗格里的「Fix with Claude」只把修复请求填进输入框，不会自动发送；不运行外部命令。会跟随最多 5 次重定向，站点地图地址取自 robots.txt，可能访问其他主机；通过 audit_site 工具调用时网址由 Claude 选定。只发 GET。 | MIT | [链接](https://github.com/jbauman-26/aeo-audit-mod) |
 | band-git | 提示框上方一行白话 git 状态（有未提交改动 / 未推送 / 已开 PR / 已上线）并给出一个下一步按钮（提交、推送、拉取、开 PR、合并 PR、切回 main、部署）；另带生产部署闸门：Bash 里的 `vercel … --prod` 只有在你最新一条消息里说了「deploy」时才放行一次，否则拒绝。备注：按钮会直接以提示词发给 Claude（如「Commit the current changes…」），点了就会开一个回合；每 30 秒在本机运行 git 和 gh 读取状态；prompt.submit 只读取你是否说了 deploy、原样放行；部署闸门只拒绝不改写；属于 prompt-band 套件，可单独安装；不联网。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/git) |
+| skill-stats | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |
 
 ### 子代理管理 Subagent Management
 
@@ -888,6 +891,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | away-receipt | 放着让 Claude 跑、离开一阵子回来时，在对话旁的面板列出离开期间发生了什么（繁体中文界面）：离开多久、主对话跑了几轮、花了多少钱；每个动过的仓库的新 commit、未 commit 文件、分支和其他 worktree；跑过的测试命令和 exit code（失败标红）；完成或失败的子代理和后台命令。距你上次发消息超过 20 分钟、回来在提示框打第一个字时自动打开（不抢焦点），/receipt 随时打开，q 关闭。备注：prompt.submit 只记录你发消息的时间和后台任务通知、原样传递，不改提示；prompt.edit 只看草稿是否从空变成有字；在面板里点失败测试的 ✗（或按数字键）时，用 prompt.fill 把「该命令失败（exit N），帮我找出原因并修好。」这句话填进提示框（已有草稿就接在下一行），只预填不发送，要你自己按 Enter；在动过的仓库里跑本机只读 git（rev-parse、status、log、worktree list，带 -c core.fsmonitor=false）；tool.call 只观察、原样传递；/receipt 与已上架的 session-receipt 同名，两个都装时后注册的那个 /receipt 会失败；图标需要 Nerd Font；不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/away-receipt) |
 | todo-list | /todo 打开侧边窗格的任务清单（德文界面）：Claude 干活时也能往里排任务而不打断它，/todo <文字> 直接加一条；点 ▶ 把一条任务作为提示发给 Claude，回答完自动打勾，可编辑、手动勾选，已完成的留在下方；打开 Auto 后每完成一条就自动发下一条（比如放着过夜跑）。备注：任务就是你自己写的文字，原样作为你的消息发出，插件不改写也不添加内容；Auto 默认关闭，开关跨会话保留，连续自动跑 25 条会安全停止并关掉 Auto，回合被中断或出错时不会继续；任务清单跨会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/todo-list) |
 | band-pending | /pending 打开侧边窗格，显示一个 Markdown 待办清单（`- [ ]` 条目，按 ## 标题分组，支持 📅 日期），点条目就在文件里打勾/取消；提示框上方显示待办按钮。备注：清单文件路径要在插件设置里填写；会直接改写这个文件里对应的那一行（改之前先确认该行没被别处改过）；属于 prompt-band 套件，可单独安装；不联网、不运行外部命令。 | MIT | [链接](https://github.com/barkerjian/prompt-band/tree/main/pending) |
+| subtask-icons | Claude 最后一条回答下方出现一个「⑂ Subtask」按钮，点开列出回答里的编号项/要点，选一项就把 `/subtask <该项内容>` 填进输入框（不发送，可再补几句再回车；输入框里已有 /subtask 时再选会追加到新一行）；「Pin list」把这份清单钉在提示框上方，用 /subtask 发过的项打 ⑂；/st 打开选择窗格、/st N 直接填第 N 项、/st pin/unpin 钉住或取消。备注：/subtask 是 Claude Code 自带命令，本 mod 只观察它来标记已发项、原样放行；只填输入框、从不自动发送；不联网、不运行外部命令。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/subtask-icons) |
 
 ### 外部集成 External Integrations
 
@@ -929,6 +933,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | prs | /prs 在侧边窗格查看当前分支的拉取请求：差异、文件树、提交列表，没有时列出所有打开的 PR，涵盖 /add-dir 加入的所有仓库；支持 Azure DevOps 和 GitHub。备注：只读；Azure DevOps 用本机 az CLI 取访问令牌（缓存在插件 store，默认 45 分钟）并只调用 dev.azure.com 读接口，GitHub 走本机 gh 命令；差异来自本机 git，会对你的仓库执行 git fetch origin；不发送会话内容。 | MIT | [链接](https://github.com/ambareeshav/prs) |
 | spotify | 提示框上方只有图标的 Spotify 控制条（上一首、播放暂停、下一首、静音），侧边窗格可搜索、浏览并播放你的歌单和已点赞歌曲，带专辑封面；/spotify 打开。备注：**仅限 macOS**，控制条用 osascript 控制本机 Spotify 应用、无需登录；浏览功能需用你自己免费的 Spotify 开发者应用 Client ID（/spotify config），登录走 PKCE，会临时在 127.0.0.1:8907 起一个 python3 回调服务；封面用 curl 下载到 /tmp；只访问 Spotify 官方接口，不发送会话内容。登录前会用 pkill 结束自己残留的回调服务进程（只匹配 spotify-mod-server-）。 | MIT | [链接](https://github.com/ambareeshav/claude-plugins/tree/main/plugins/spotify) |
 | github-issues | /issues 打开侧边窗格，把仓库的 GitHub issue 显示成卡片：Open、Assigned、Created、Closed 四个标签页，搜索框和标签筛选，卡片显示标题、编号、指派人、更新时间、评论数、关联 PR 和彩色标签，可展开正文；/issues owner/name 或 /issues . 指定仓库，不带参数时列出你最近推送过的仓库供选择；窗格打开时有新指派给你的 issue 会弹提示。备注：**需要本机已登录的 gh**（gh auth login），只运行 `gh api graphql` 查询（不做修改）和 `gh issue view`，除 GitHub 外不连其他外网；窗格打开时每 2 分钟和每回合结束后刷新，关闭时不发请求；只有你点「Work on it」才用 $.prompt.submit 以你的名义发一条固定提示，让 Claude 读该 issue 并动手实现。 | MIT | [链接](https://github.com/MarcoCarnevali/claude-code-mods/tree/main/github-issues) |
+| vault-jot | 在任意会话里把想法、待读链接、学到的东西、踩坑等随手记进 Obsidian 仓库的 inbox/：/jot idea: 文本 直接存成一条笔记，/jot 不带内容时让模型从当前对话起草一条填进输入框（回车才保存）；inbox 积压到一定数量或天数时提示框上方出现「Ingest」按钮；/incubate 打开侧边窗格浏览 wiki/ideas 和 wiki/reading 里的笔记，按钮可让 Claude 扩写想法、记录决定、标记阅读状态或导出为项目设计文档。备注：需先在 /config 设置 vaultPath（仓库须已有 inbox/ 目录）；笔记里会记下当前目录、仓库远程地址、git 分支和会话 id（分支用本机 `git rev-parse` 取）；/jot 起草用 $.model.fork 分叉一次、消耗少量用量；Ingest 按钮只把一条请求填进输入框（需另装 claude-obsidian 的 wiki-ingest），/incubate 窗格里的按钮是你点了才用 $.prompt.submit 以你的名义发出固定提示；本 mod 不直接改 wiki/ 下的笔记；不联网。 |  | [链接](https://github.com/Hsiang-LinC/vault-jot) |
 
 ### 本地工具 Local Tools
 
@@ -959,6 +964,8 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | hal-grammar-check | 你输入提示时在提示框上方实时做语法检查并给出修改建议。备注：草稿（前 500 字）只发给本机 Ollama（localhost:11434），需自行安装 Ollama 和模型；prompt.edit/prompt.submit 只读、原样返回，不改写提示。 | MIT | [链接](https://github.com/vinta/hal-9000/tree/main/plugins/hal-grammar-check) |
 | open-latest | 每轮结束把 Claude 的最终回答覆盖写到 `%USERPROFILE%\.claude\latest.md`（子代理、被中断和空回答不写），提示框上方出现「エディタで開く」（用编辑器打开）按钮，点一下用 .md 关联的程序打开，长回答可以在熟悉的编辑器里看（日语界面）。备注：仅支持 Windows（用 rundll32 打开文件，路径写死 USERPROFILE，macOS/Linux 别装）；每轮都会覆盖这个文件；AbovePrompt 调 next，可与其他 mod 叠加；不改提示，不联网。 |  | [链接](https://github.com/stakiran/open-latest) |
 | ram-guard | 状态栏显示本机可用内存与正在跑的 Gradle/模拟器/Maven/Metro 进程数，每 15 秒刷新，内存低于 6 GiB 时弹提示；可用内存不足 6 GiB 或有 Gradle 守护进程/模拟器在跑时拒绝启动子代理（Agent/Workflow），不足 4 GiB 时拒绝 gradlew/mvn/emulator 等重型构建命令。备注：**仅 Linux**（读 /proc/meminfo，其他系统上读不到，子代理与 Bash 调用可能直接报错，macOS/Windows 请勿安装）；本机运行 ps 只统计进程；工具门只拒绝不改写；不联网。 |  | [链接](https://github.com/jimisola/claude-plugins/tree/main/plugins/ram-guard) |
+| clean-copy | 终端里选中文本自动复制时，把复制内容清理干净：去掉左侧的引用竖线/面板边框和回复前的 ⏺ 标记，统一去掉缩进，把因终端宽度折断的句子重新接成一行（代码块、列表、标题、表格保持原样）。备注：每 250 毫秒检查一次当前选区，选区稳定且确实需要清理时，用本机 `wl-paste`、`xclip` 或 `pbpaste` 读一次剪贴板确认是 Claude Code 刚复制的内容，再写回清理后的文本；只处理剪贴板，不联网。 | MIT | [链接](https://github.com/kbrianps/claude-clean-copy/tree/main/plugins/clean-copy) |
+| cc-mod-caffeinate | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |
 
 ### 其他工具 Other Tools
 
@@ -1050,6 +1057,7 @@ For detailed descriptions of all 914 mods, see the Chinese section below.
 | wytlumacz-mi | 给非程序员的「解释一下」：/wytlumacz 用波兰语讲清 Claude 刚做了什么（一句话总结、步骤、原因、2–4 个值得学的术语、下一步），/wytlumacz ostatnio 或回到已有历史的会话时提示框上方按钮可总结整段对话；解释按项目保存，/wytlumacz historia 查看，学过的术语不再重复解释。备注：只在你运行命令或点按钮时用 $.model.fork 带当前会话上下文生成解释，从不自动调用；prompt.submit 只隐藏总结按钮、原样放行；不联网；基于 Explain It（Ruth-Ann Bravo，MIT）改写。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/wytlumacz-mi) |
 | grill | /grill（或 /grill <主题>）让 Claude 针对当前计划或决定提出最多 5 个追问（德文界面），在提示框上方逐题显示：2–4 个选项、Claude 推荐的选项和自由输入框；答完最后一题后把全部回答汇总成一条消息发给 Claude，可随时取消。备注：只在你运行 /grill 时调用一次 $.model.fork（基于当前对话，会多用一些额度，不产生新的对话回合）；没有对话但给了主题时改用 $.model.complete，只发送主题文字；汇总回答以你的名义用 $.prompt.submit 发出；追问只在本会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/grill) |
 | band-next | Claude 回答完后提示框上方出现「What next?」按钮：点一下才问模型，给出最多三个可接着发的提示（可包括本会话已有的斜杠命令），点其中一个就填进输入框，不会自动发送。备注：是 main 里 next-steps 的 prompt-band 版本（Apache-2.0），改成按按钮才问、不再每轮自动问，两个装一个即可；询问用 $.model.fork 在当前会话上分叉一次，会消耗少量用量；短于 80 个字符的回答不出按钮（可调）；界面英语或乌克兰语；属于 prompt-band 套件，可单独安装；不联网、不运行外部命令。 | Apache-2.0 | [链接](https://github.com/barkerjian/prompt-band/tree/main/next) |
+| sessions | /sessions 打开侧边窗格，列出当前项目最近 20 个历史会话：会话 id 前 8 位、多久以前、提示数和第一条提示，可用 `claude --resume <id>` 接着用。备注：只读取本机 `~/.claude/history.jsonl`（或 CLAUDE_CONFIG_DIR 下的同名文件）里当前目录的记录；不联网、不运行外部命令。 | MIT | [链接](https://github.com/cmbaldwin/claude-usage-band/tree/main/sessions) |
 
 ---
 
