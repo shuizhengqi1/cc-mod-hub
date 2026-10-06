@@ -3307,11 +3307,12 @@
       }
     },
     {
-      "name": "token-meter",
+      "name": "flight-deck",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/tunglt1810/claude-gadgets.git",
-        "path": "mods/token-meter"
+        "path": "mods/flight-deck",
+        "sha": "0cf45eb4afdb139b1c0b55750a277428ddaa6623"
       }
     },
     {

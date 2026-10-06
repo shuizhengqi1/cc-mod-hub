@@ -137,7 +137,7 @@ For detailed descriptions of all 951 mods, see the Chinese section below.
 | status-hud | 提示框上方活动阶段与 5h/周限额/上下文窗口状态条。纯 UI。 | MIT | [链接](https://github.com/hymleong/claude-mods/tree/main/plugins/status-hud) |
 | token-ledger | 会话成本与上轮 tokens；面板查看近期回合。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/token-ledger) |
 | token-limit | 在提示框底栏用彩色小条显示上下文占用和 5 小时/7 天等限额（含 5 小时重置时间），以及当前模型和推理强度。只读用量，turn.step 原样转发；SessionMode 插槽不调用 next 而自绘（保留模式名）。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/token-limit) |
-| token-meter | 提示框上方会话 token/工具次数/工作时长与缓存倒计时带。不只是纯 UI：除非调查显示时，AbovePrompt 带不调 next，可覆盖其他 mod 行。 |  | [链接](https://github.com/tunglt1810/claude-gadgets/tree/main/mods/token-meter) |
+| flight-deck | 提示框上方会话 token/工具次数/工作时长与缓存倒计时带。不只是纯 UI：除非调查显示时，AbovePrompt 带不调 next，可覆盖其他 mod 行。 | MIT | [链接](https://github.com/tunglt1810/claude-gadgets/tree/main/mods/flight-deck) |
 | token-usage | 窗格与提示上方条显示上下文、限额窗口和费用；只读 $.session.usage；条显示时 AbovePrompt 不调 next；/usage-band 命令可能与已有 usage-band 冲突。 | MIT | [链接](https://github.com/monowu/claude-mod-token-usage) |
 | tokens | 侧栏 token 往来：每次请求送出/等待/收到与合计。 |  | [链接](https://github.com/jessetsai1024/claude-tokens) |
 | trek-band | 提示框上方星际迷航风格用量环与像素动画场景。 | MIT | [链接](https://github.com/rb17080/trek-band/tree/main/plugins/trek-band) |
