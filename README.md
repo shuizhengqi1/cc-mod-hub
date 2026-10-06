@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 950 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 951 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 950 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 951 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 950 mods, see the Chinese section below.
+For detailed descriptions of all 951 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 950 个精选 Claude Code mods，按类别组织：
+以下是本市场的 951 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -994,6 +994,7 @@ For detailed descriptions of all 950 mods, see the Chinese section below.
 | copy-markdown | 每条 Claude 回复右上角加一个暗色「⧉ md」小按钮，点一下把整条回复按原始 markdown（表格原样）复制到剪贴板；`/copy-md [n]` 复制倒数第 n 条回复。备注：只读本会话消息，用 $.ui.copy 写剪贴板；不联网、不运行外部命令。 | MIT | [链接](https://github.com/a-bine/claude-mods/tree/main/copy-markdown) |
 | speak-aloud | 用 macOS 自带 `say` 朗读 Claude 的回复：每条回复旁加 🔊 按钮（朗读时变成 ■，点一下停止），`/speak` 朗读最新回复、`/speak-stop` 停止、`/speak-voice` 选声音、`/speak-rate` 调语速。备注：仅 macOS；本机 process（say），只读本会话消息，代码块不读、链接只读文字；不联网。 |  | [链接](https://github.com/tiger3645/claude-tts) |
 | localhost | `/localhost` 打开面板，列出本机正在监听的 localhost 服务（端口、进程、所在目录，当前项目的高亮），每个都有「打开」和「停止」按钮，也可一键停止本项目或全部；Claude 每跑完一个 Bash 命令自动刷新。备注：本机 process（lsof 列端口，按了停止按钮才会 kill 对应进程）；tool.call 只在命令跑完后刷新、原样传递；不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/localhost) |
+| copy-button | 给 Claude 回复里的每个代码块加一个「⧉ copy」小链接，Ctrl+点击就把这块代码原样复制到 Windows 剪贴板（不带缩进、折行和边框字符）；全屏渲染下普通点击也行。备注：只适用于 WSL + Windows Terminal，其他系统照常显示不生效；首次运行会在 `%LOCALAPPDATA%\claude-copy` 放一个 12 行的 `copy.vbs`，并在 HKCU 注册 `.ccopy` 文件类型（三个注册表键，无需管理员，仓库附 `windows/uninstall.reg` 可撤销）；回复里的代码块会存成本地文件，会话两天不用后自动删除；只运行 cmd.exe、wslpath、reg.exe、rm 等本机命令，不联网。 | MIT | [链接](https://github.com/GeckoKing9/claude-code-copy-button) |
 
 ### 其他工具 Other Tools
 

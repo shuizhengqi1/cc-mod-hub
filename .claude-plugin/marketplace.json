@@ -7562,6 +7562,14 @@
         "path": "plugins/greve-generale",
         "sha": "513f9bd72c8061b7d1c9f5f55ddb5f80f8a3748c"
       }
+    },
+    {
+      "name": "copy-button",
+      "source": {
+        "source": "github",
+        "repo": "GeckoKing9/claude-code-copy-button",
+        "sha": "8c442f335120bbe5275a9af5eed219c88f7d77e4"
+      }
     }
   ]
 }
