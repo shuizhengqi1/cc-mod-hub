@@ -6809,6 +6809,40 @@
         "path": "plugins/ram-guard",
         "sha": "78e6ec5b472d1ef8b0566a43e8348466721f4c62"
       }
+    },
+    {
+      "name": "chat-clean",
+      "source": {
+        "source": "github",
+        "repo": "achammah/claude-chat-clean",
+        "sha": "590d7f7da171a181a75fe41b22a8b62c8fdba859"
+      }
+    },
+    {
+      "name": "slab-deck",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/5omeOtherGuy/slab-deck.git",
+        "path": "mod/slab-deck",
+        "sha": "8bd388c136c5e8579158db26be899a97978af4b7"
+      }
+    },
+    {
+      "name": "cc-mod-suggestion-sentence-case",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Vatroslav/cc-mod-suggestion-sentence-case.git",
+        "path": "plugin",
+        "sha": "736fdb071184094de1da6d28c83234e20f956c44"
+      }
+    },
+    {
+      "name": "answer",
+      "source": {
+        "source": "github",
+        "repo": "PeteChu/cc-answer",
+        "sha": "703266e2ea21f9d31bbb825d2866dcfbdf3a15d8"
+      }
     }
   ]
 }

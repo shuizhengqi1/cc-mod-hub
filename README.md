@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 863 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 867 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 863 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 867 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 863 mods, see the Chinese section below.
+For detailed descriptions of all 867 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 863 个精选 Claude Code mods，按类别组织：
+以下是本市场的 867 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -399,6 +399,9 @@ For detailed descriptions of all 863 mods, see the Chinese section below.
 | sbs-deck | SecureBine 科幻风终端样式：你的每条消息放进金色框，标题为「OPERATOR // UPLINK: 你的 Claude 账号邮箱」；Claude 忙时排队的消息是蓝灰框，被接收后变金色；回复第一块加「CLAUDE // DOWNLINK」标题；工具调用压成一行（▸ 运行中 / ✓ 完成 / ✗ 失败），成功的输出隐藏；关掉安静模式后 Bash/MCP 输出按模式着色；加载动画换成 295 条科幻短语的解码效果，回合用时文字改成「Jacked out」；/sbs on、off、quiet、color 切换。备注：读取本机 ~/.claude.json 里的 oauthAccount.emailAddress 显示在消息框标题上，录屏或共享屏幕时会露出邮箱；prompt.submit 只记录排队的消息用来上色、原样传递，不改提示；安静模式下工具行和工具输出（ToolUse/ToolResult）由它自己画、不调 next，会盖掉其他改工具行的 mod，除失败外看不到工具输出；图标需要 Nerd Font；仓库里的 install.sh 是给手动安装用的（会改 settings.json），从市场安装不会运行；纯本机，不联网。 |  | [链接](https://github.com/scottcrosby-securebine/sbs-deck) |
 | linkify | 把 Claude 回复里的裸 URL 和 GitHub 引用（#123、owner/repo#123）显示成可点击链接；#123 指向当前仓库（读 git remote 判断 GitHub 仓库），代码块、行内代码和已有链接不动。备注：ui.render AssistantMessage 只改显示用的文字再调 next，存下来的消息和模型读到的内容不变；不联网。 | MIT | [链接](https://github.com/babarot/claude-linkify) |
 | coral-skin | 珊瑚/墨/奶油配色重新绘制消息和工具行，读取、编辑、命令、危险操作用不同颜色标签区分；/skin 开关。备注：tool.call 只计数、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/coral-skin) |
+| chat-clean | 把对话改成聊天视图：左侧 you/claude 名字列、你的消息右侧显示时间，每轮的工具调用折叠成一行（如「○ 7 steps this turn ›」，可就地展开），工作中显示白话进度，后台任务、子代理、提问回答、API 错误各收成一行；/feed clean、normal、raw 切换视图，/helpers 打开子代理步骤窗格。备注：只读事件来绘制界面，tool.call 只记录不改写；设置保存在插件自己的存储里；只有设置了 CHAT_CLEAN_DEBUG 环境变量才把排障日志写到该文件；不联网；需 Claude Code 2.1.289+。 | MIT | [链接](https://github.com/achammah/claude-chat-clean) |
+| slab-deck | SLAB 深色风格的控制台：提示框上方的工作条显示回合耗时、步数、工具与 token；/deck 打开停靠窗格（概览、上下文、工具时间线、子代理、git、tmux、用量、providers 分页）和弹窗，可在 tmux 里切窗口、分屏、窥看其他窗格；/deck-band 把工作条设为 full、compact 或 off。备注：本机运行只读 git 命令与 tmux 命令（只操作本会话窗格或新开窗口，不关闭别的窗格）；会话开始及之后每 5 分钟运行一次插件设置里的 providersCommand（默认 provider-usage，未安装时只在 providers 页显示错误）并读取其 JSON 输出；把每回合输出 token 写到 ~/.cache/slab-deck/ 供仓库里的 statusline-slab.sh 使用（该脚本不随插件安装）；tool.call 只记录不改写；不联网。 | MIT | [链接](https://github.com/5omeOtherGuy/slab-deck/tree/main/mod/slab-deck) |
+| cc-mod-suggestion-sentence-case | 把提示框里按 Tab 可接受的灰色建议文字改成句子格式：首字母大写、结尾补句号；斜杠命令、已以标点结尾、或以数字/代码/引号开头的保持原样。备注：只改 prompt.suggest 的建议文字（也包括其他插件提出的建议），不改你实际提交的提示；整个模块约 20 行；不联网。 |  | [链接](https://github.com/Vatroslav/cc-mod-suggestion-sentence-case/tree/main/plugin) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -999,6 +1002,7 @@ For detailed descriptions of all 863 mods, see the Chinese section below.
 | output-ladder | 把上一条回答换种方式重讲：ASD-STE100 简明英语、图示、HTML 页面或讲解视频，并给回答的 STE 风格打分。备注：对应命令或按钮会以你的身份提交一条改写请求（你执行才会）；prompt.submit/session.append 只记录回答文本，不改写。 | MIT | [链接](https://github.com/0xGondarxyz/claude-code-mods/tree/main/output-ladder) |
 | enable-todo-tools | 给默认不带待办工具的新模型重新打开 Claude Code 的待办（todo）工具。备注：会话开始时，若你没设 CLAUDE_CODE_ENABLE_TODO_TOOLS 就设为 1；你已设的值（包括 0）不动。 | MIT | [链接](https://github.com/muellerei/enable-todo-tools) |
 | ask | 侧边提问窗格：/ask 问题 或在窗格里输入，Claude 在后台回答，问题和答案都不进主对话、不占上下文；「Suggest next prompts」给三个下一步提示，点 Use 填进输入框；可复制、删除、重试，保留最近 30 条。备注：每次提问由你触发，用 $.model.fork 基于本会话回答（共享提示缓存，有少量费用；会话还没回复时改用 $.model.complete 调 Sonnet，只发问题和窗格里最近 3 条问答）；Use 只填草稿不代你提交；不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/ask) |
+| answer | /answer 把 Claude 上一条回复里提出的问题抽出来，放进 Claude Code 自带的提问对话框（分页、多选、可自填、带复查页）逐个作答，答完后合成一条回复发出；/answer --debug 查看抽取过程。备注：仅在你运行 /answer 时把上一条助手回复原文发给 $.model.complete（默认 haiku，可在插件设置改模型）来抽取问题，无脱敏；tool.call 只替换它自己打开的占位提问框里的问题，Claude 自己发起的 AskUserQuestion 原样放行；作答完成后以你的身份用 $.prompt.submit 提交答案；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/PeteChu/cc-answer) |
 
 ---
 
