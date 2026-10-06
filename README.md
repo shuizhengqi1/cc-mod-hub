@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1066 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1071 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1066 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1071 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1066 mods, see the Chinese section below.
+For detailed descriptions of all 1071 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1066 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1071 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -262,6 +262,7 @@ For detailed descriptions of all 1066 mods, see the Chinese section below.
 | token-monitor | 提示框上方实时显示上下文窗口占用，下方固定一行本会话花费、上一回合花费、token 数和缓存命中率。备注：只读会话用量，纯本机显示。 | MIT | [链接](https://github.com/raphalupi/token-monitor) |
 | usage-buddy | 带吉祥物的实时用量表（上下文、5 小时、7 天），并按你这条提示的长短和当前用量压力建议换 Opus/Sonnet/Haiku（只显示 `/model …` 建议，不自动切换）。备注：`prompt.submit` 只在本机读提示文字算建议、原样放行，不改写、不外发。 |  | [链接](https://github.com/rhealaloo45/pit-lane-claude-mods/tree/main/usage-buddy) |
 | client-clock | 按客户（按仓库/文件夹归属）记录你的时间、Claude 的时间和 5 小时/每周用量占比，`/client` 设预算和时薪，`/ledger` 看账和工时表，方便给客户计费。备注：`prompt.submit` 只记一条时间戳和来源，不记提示原文、不改写；账本写在 `~/.claude/client-clock/ledger/`，会读 `git config user.email` 识别身份；纯本机。 | MIT | [链接](https://github.com/JustinASmith/client-clock) |
+| loopline | 提示框上方的状态条：模型与 effort、未提交改动、上下文占用及增长和压缩次数、费用、限额消耗速度、提示缓存计时、本回合计数、后台代理，同一工具连续失败时提醒。备注：`tool.call` 只记录、原样返回；只用本机 `git status/diff` 读改动，不联网。 |  | [链接](https://github.com/nikitaCodeSave/Statusline_Claude-Code) |
 
 ### 上下文管理 Context Management
 
@@ -471,6 +472,8 @@ For detailed descriptions of all 1066 mods, see the Chinese section below.
 | jump-list | `/jumps` 跳转列表：本会话每条提示一行，标出改过文件或命令失败的轮次，点一下跳过去。备注：读取本机 transcript 文件建列表，session.append 只记录不改写；纯本机。 | MIT | [链接](https://github.com/GururOzatmaca/claude-mods/tree/master/jump-list) |
 | timekeeper | 给每条消息标上时钟时间，长时间运行的工具调用显示实时计时条，长回合结束时弹提示。备注：`session.append`/`tool.call` 只观察记时间，不改内容；纯本机。 |  | [链接](https://github.com/laszloprekop/claude-code-timekeeper) |
 | altshift | 提示框上方一个按钮，把打错键盘布局的文字（英文↔希伯来文）一键转换，并把希伯来文对话从右到左显示。备注：只有你点按钮时才用 `$.prompt.fill` 替换输入框草稿（不会自动提交、不碰已提交的提示）；从右到左只改显示。纯本机。 | MIT | [链接](https://github.com/YossiAbutbul/altshift) |
+| progress-bars | 把工具调用和结果折成一行进度条、收起回复里的代码块，提示框上方显示本回合进度条，`/bars` 开关。备注：只改界面显示，模型看到的内容不变；`tool.call` 只计数、原样返回。 | MIT | [链接](https://github.com/gav1256/claude-workflow/tree/main/claude/mods/progress-bars) |
+| flow | 提示框上方随代理工作节奏变化的动画场景（火焰、星际跃迁、气泡、冲浪、滑雪、火箭、热气球等，分昼夜），`/flow` 控制。备注：纯本机绘制；`tool.call` 只计数、原样返回；声音默认关闭，开启后仅 macOS 用 `$.audio.play` 播放仓库自带的 m4a 片段。 | MIT | [链接](https://github.com/robdmac/flow) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -759,6 +762,7 @@ For detailed descriptions of all 1066 mods, see the Chinese section below.
 | ci | 在提示框下方提示行显示当前分支最新一次 GitHub Actions 运行状态，定时刷新、每回合后刷新，运行结束时弹提示。备注：在本机运行 `git branch --show-current` 和 `gh run list`（需已登录的 `gh`），不改工具调用。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/ci) |
 | trace | `/trace` 面板两个标签页：本会话加载过的技能（何时、来源、谁调用、多大），以及 Claude 抓取过或在搜索结果里看到的网页，可一键作为引用插入输入框。备注：`tool.call`/`skill.prompt` 只观察记录、原样返回；插入引用只在你按按钮时用 `$.prompt.fill` 插到草稿，不自动提交；纯本机。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/trace) |
 | swamp-watch | 当前仓库 swamp 工作流运行的状态行、面板和提示，Claude 跑了 swamp 命令后自动刷新。备注：在本机运行 `swamp workflow run search`（路径可配置）；`tool.call` 只在 Bash 调用完成后观察；面板“诊断”按钮按下时才用 `$.prompt.submit` 发出诊断这次运行的提示。 |  | [链接](https://github.com/jpisgeek/claude-mods/tree/main/mods/swamp-watch) |
+| output-folders | `/outputs` 打开一个面板，列出本会话里工具、脚本和代理写入过的所有文件夹（类型、写入次数、最后写入的工具、最新变动），点击或按数字键用系统 `open`/`xdg-open` 打开。备注：`tool.call` 只在调用成功后记录写入位置、原样返回；不联网。 |  | [链接](https://github.com/laszloprekop/claude-code-output-folders) |
 
 ### 子代理管理 Subagent Management
 
@@ -809,6 +813,7 @@ For detailed descriptions of all 1066 mods, see the Chinese section below.
 | model-allowlist | 子代理指名固定模型 ID（而非 opus/sonnet/haiku 这类别名）时拒绝启动，并可按你写的规则限制某类代理用哪个模型（比如最强模型只在任务说明里写了理由时才允许）。备注：只对 `agent.spawn` 做拒绝，不改写；检查本身出错时放行。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/model-allowlist) |
 | subagent-band | 提示框上方一栏列出每个运行中子代理的类型、模型、effort、步数、上下文、advisor 调用和估算花费；另有 `/fleet` 面板、`/subagent-cost`，以及给模型用的 `subagent_vitals` 工具。备注：只观察，不改工具调用；`/steer <id> <消息>` 会把你亲手写的那条消息发给指定子代理。纯本机。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-band) |
 | escritorio-time | 侧边面板里一间像素风办公室，按真实对话和工具调用动画演示任务在各个代理之间的流转（葡萄牙语）。备注：`session.append`/`tool.call` 只读回复文字和改动的文件路径来推断谁在干活，不改写；纯本机。 | MIT | [链接](https://github.com/cas1260/claude-code-escritorio-time/tree/main/escritorio-time) |
+| staff-board | 一条紧凑的会话看板，列出本机所有会话（含桌面版命名会话）及其派生的子代理，按模型着色、按 effort 发光，并显示各自当前在做什么；`/staff` 输出文字版。备注：每个会话把状态卡写到 `~/.claude/staff-board/<会话id>.json` 并读取其他会话的卡，Windows 上读取桌面版本地会话记录以取名字，全部只在本机；`tool.call` 只记录、原样返回。 |  | [链接](https://github.com/Gooner44/ClaudeMods/tree/main/plugins/staff-board) |
 
 ### 通知提醒 Notifications & Alerts
 
