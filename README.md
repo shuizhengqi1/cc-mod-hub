@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1033 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1038 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1033 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1038 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1033 mods, see the Chinese section below.
+For detailed descriptions of all 1038 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1033 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1038 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -303,6 +303,7 @@ For detailed descriptions of all 1033 mods, see the Chinese section below.
 | pins | `/pin` 把 Claude 的最近一条回复钉起来，`/pins` 打开面板查看，每条可像剧透一样折叠，提示框上方可显示钉住条。备注：只读本会话消息，钉的内容存本机；不联网。 | MIT | [链接](https://github.com/RamSen-IT/claude-code-pins) |
 | am-context-bar | `/am-context-bar` 切换提示框上方的上下文卡片：分段上下文条（系统提示/MCP/工具/记忆/技能/消息）、会话与每周限额、模型、thinking 档位、压缩次数、git 分支。备注：只读；会运行 `git rev-parse`/`git status` 读分支；默认隐藏，要手动打开；纯本机。 | MIT | [链接](https://github.com/romnycristopher/claude-am-mods/tree/main/mods/am-context-bar) |
 | context-inspector | 上下文检查面板（会话开始自动打开，`/inspector` 可重开）：上下文被什么占满、哪些 MCP 服务器/技能/记忆文件占得最多、可以释放什么。备注：只读本机的上下文估算（不调 API），纯本机渲染。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/context-inspector) |
+| token-weather-v2 | 提示框上方的"上下文天气预报"：用天气图标和词显示上下文占用百分比、已用/窗口 token、历史迷你曲线和本轮变化，并列出占用最多的几个类别。备注：每轮结束只读 `$.session.usage`（本机估算，不调 API），纯本机渲染。 | | [链接](https://github.com/alessiomercurio/claude-mods/tree/main/plugins/token-weather-v2) |
 
 ### UI 与主题 UI & Themes
 
@@ -740,6 +741,8 @@ For detailed descriptions of all 1033 mods, see the Chinese section below.
 | live-diff | 记录 Claude 每次 Edit/Write 的差异，提示框上方显示计数，`/diff` 打开带文件导航的差异面板。备注：默认关闭；只观察 Edit/Write 结果并本机读文件，不改写工具调用、不联网。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/live-diff) |
 | pr-band | 提示框上方一条 PR/MR 状态带：自动识别会话里 `gh pr`/`glab mr` 打开的 PR，显示 CI、审查和合并状态，`/pr-band` 刷新/折叠/清空。备注：只读会话消息找 PR 链接，用本机 `gh`/`glab` 查询状态；只观察 Bash 结果、不改写。 | MIT | [链接](https://github.com/danmana/claude-plugins/tree/main/plugins/pr-band) |
 | git-branches | `/branches` 打开 Git 分支面板：本地/远程分支、开放 PR、最近提交，git 项目里会自动打开。备注：只读 git 与 `gh pr list`；只有你点"Fetch"或输入 `/branches fetch` 时才 `git fetch --all --prune`；不切换分支、不改写。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/git-branches) |
+| pr-preview | 拦住 `gh pr create`/`gh pr edit`/`glab mr create`/`glab mr update`，在提示框上方预览标题和描述并标出不符合规范的地方，可选 Proceed、Fix、Cancel。备注：只拦下或拒绝、不改写命令（Fix/Cancel 都是 deny）；10 秒内不选会自动放行；会读 `--body-file` 指定的文件和运行 `git branch --show-current`；纯本机。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/pr-preview) |
+| review-panel | `/review-panel` 打开只读面板：工作区 diff、当前分支的 PR/MR、CI 任务和已有评论，每 30 秒刷新。备注：只读；运行 `git`、`gh pr view`/`gh api`、`glab api` 读取，需要本机已登录 gh/glab；不写任何东西。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/review-panel) |
 
 ### 子代理管理 Subagent Management
 
@@ -880,6 +883,7 @@ For detailed descriptions of all 1033 mods, see the Chinese section below.
 | spinner | Claude 工作时在输入框上方播放 Nyan Cat、Clawd 等像素场景，养一只每轮都会长大的宠物。界面为韩语，基于 hoobnn 原版（MIT）。备注：钩子原样传递；仅选 audio 主题时在 macOS 上用 swiftc 本机编译 audio-tap.swift 读取系统音频电平；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/spinner) |
 | crab-buddy | 提示框上方的像素 Claude 螃蟹随会话工作、思考、欢呼和睡觉，每个子代理有一只自己颜色的小螃蟹。备注：只观察事件，纯渲染，不联网。 | MIT | [链接](https://github.com/ziedgithub/claude-code-mods/tree/main/crab-buddy) |
 | clawd-ballet | Claude 工作时，穿粉色芭蕾舞裙的 Clawd 在提示框上方的小舞台上跳芭蕾（多支舞码，`/ballet` 选曲）。备注：`prompt.edit` 只给 `/ballet` 命令做 Tab 补全；`prompt.submit`/`tool.call` 只观察、不改写；纯本机渲染。 | MIT | [链接](https://github.com/Minithena/Claude-Code-Ballet) |
+| masterskaya | 俄语"工作室"：提示框上方住着一队像素 Clawd，主 Claude 当工头，每次工具调用叫来对应工种的工人，子代理也加入队列，干完活大家休息。备注：`turn.step` 只观察、原样透传；`prompt.submit` 只更新动画状态、不改写；首次会显示一次求 GitHub 星标的问候（只是链接）；纯本机渲染。 | MIT | [链接](https://github.com/vvklive/masterskaya) |
 
 ### 图片与媒体 Images & Media
 
@@ -1169,6 +1173,7 @@ For detailed descriptions of all 1033 mods, see the Chinese section below.
 | speckit-companion | SpecKit 规格驱动开发伴侣：提示框上方的进度带、规格面板（文档、任务进度、决策）和 `/speckit-tracker`。备注：只读工作区 spec 文件，不提交提示；唯一会运行的命令是你点击时用编辑器打开文件。 | MIT | [链接](https://github.com/alfredoperez/speckit-companion-claude-mod) |
 | idlereps | 等 agent 干活时的健身教练：按你的器械生成训练计划，一次给一组动作并记录进度（`/workout`）。备注：`/workout plan <描述>` 会把你输入的描述发给模型（`$.model.complete`）生成计划，不带会话内容；只有你主动 `/workout feedback` 或回答一次性满意度问卷时，才把反馈文字/选项和随机安装 id POST 到 idlereps.app；匿名统计在代码里已关闭（设置默认也是关）；`tool.call` 只观察不改写。 | Apache-2.0 | [链接](https://github.com/boringops-dan/idlereps/tree/main/plugins/idlereps) |
 | dl | 每日犹太经典学习：Chitas（Chumash+Rashi、Tehillim、Tanya）、Rambam、Hayom Yom、Daf Yomi 一行显示在提示框上方，侧栏看希伯来文全文（`/dl`、`/dl-toggle`）。备注：联网请求 hebcal.com 和 sefaria.org 的公开日历/经文（不带会话内容）；用 `python3` 运行仓库里的 `scripts/dl.py`；默认每次会话开始都运行 `scripts/install-font.sh`，把自带的希伯来字体装进用户字体目录，若有 Ghostty 配置还会写入一行 Hebrew `font-codepoint-map`（字体设为 System 可撤销）。 | MIT | [链接](https://github.com/sharshi/daily-learning-plugin) |
+| mods-help | `/mods` 列出当前加载的 mod 提供的斜杠命令及说明（俄语输出），没有命令的 mod 也列出来。备注：只读 `CLAUDE_CODE_PLUGIN_DIRS` 里各插件的 plugin.json 和引擎的命令列表，纯本机。 | MIT | [链接](https://github.com/DimaTimoschenko02/claude-code-kit/tree/main/mods/mods-help) |
 
 ---
 

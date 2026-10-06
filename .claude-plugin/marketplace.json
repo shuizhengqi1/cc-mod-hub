@@ -8292,6 +8292,50 @@
         "repo": "sharshi/daily-learning-plugin",
         "sha": "641de2d82c41f816eca57b77b2c143ee511aa8fb"
       }
+    },
+    {
+      "name": "token-weather-v2",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/alessiomercurio/claude-mods.git",
+        "path": "plugins/token-weather-v2",
+        "sha": "8e8beca826d9a17875723facb646d9e04acd2af2"
+      }
+    },
+    {
+      "name": "mods-help",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DimaTimoschenko02/claude-code-kit.git",
+        "path": "mods/mods-help",
+        "sha": "dcf55801a28ffac412548c9600ddc4c44cebc036"
+      }
+    },
+    {
+      "name": "pr-preview",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anderson-spider/spider-marketplace.git",
+        "path": "plugins/pr-preview",
+        "sha": "82d25ea7e447e36a602dae7dac2625d0c492b11a"
+      }
+    },
+    {
+      "name": "review-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anderson-spider/spider-marketplace.git",
+        "path": "plugins/review-panel",
+        "sha": "82d25ea7e447e36a602dae7dac2625d0c492b11a"
+      }
+    },
+    {
+      "name": "masterskaya",
+      "source": {
+        "source": "github",
+        "repo": "vvklive/masterskaya",
+        "sha": "f95599d96ab8380b7e3afc22106e51381a470e06"
+      }
     }
   ]
 }
