@@ -6811,15 +6811,6 @@
       }
     },
     {
-      "name": "ClauDiscombobulating",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/Niedvin/ClauDiscombobulating.git",
-        "path": "plugin",
-        "sha": "a8436a4639c5c04f5b7217a0570d44a3685acf42"
-      }
-    },
-    {
       "name": "chat-clean",
       "source": {
         "source": "github",
