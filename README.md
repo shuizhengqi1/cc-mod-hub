@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1041 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1056 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1041 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1056 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1041 mods, see the Chinese section below.
+For detailed descriptions of all 1056 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1041 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1056 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -257,6 +257,11 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | limits-band | 提示框上方的限额条：5h/7d 限额与重置倒计时、上下文占用、缓存命中率，可展开看上下文按类别的构成。备注：这是 Talap-creator/burnrate 的"仅显示"构建（`FEATURES.guard=false`，文件里的提示追加和拒绝代码不会生效）；只读用量数据，纯本机渲染；部分界面为俄语。 | MIT | [链接](https://github.com/Talap-creator/burnrate/tree/main/plugins/limits-band) |
 | usage-ledger | 日语 token 账本面板：按主线程/子代理/模型/工具统计 token 去向、缓存过期重写的损失，并估算何时开新会话更省；`[引き継ぐ…]` 生成交接草稿，`[書き出す]` 导出统计。备注：`turn.step` 只观察；`prompt.submit` 只读交接标记、不改写；按钮只把交接草稿/导出路径填进输入框（不自动发送）；导出写到 `.claude/usage-ledger/` 下的 .md/.jsonl（只有数字、模型名、工具名，没有对话正文）；会读已结束子代理的 transcript；附带一个读导出文件的 skill。 | MIT | [链接](https://github.com/natsume-777/claude-mods/tree/main/plugins/usage-ledger) |
 | sanduhr-meters | 把 Sanduhr（桌面用量小组件）的会话/每周限额进度条、节奏标记和重置倒计时显示在提示框上方，快用满或已重置时弹提示。备注：需要另装 Sanduhr 应用（macOS/Windows）；只读本机 Sanduhr 的 snapshot.json，不联网。 | MIT | [链接](https://github.com/estevanhernandez-stack-ed/Sanduhr_f-r_Claude/tree/main/mac/integrations/mods/sanduhr-meters) |
+| usage-guard | 底栏显示 5 小时/7 天用量圆点和重置时间；用量 ≥85% 时启动子代理会弹提示，≥97% 时拒绝启动新子代理（免得任务做到一半撞上限）。备注：只读 `$.session.usage()`，对 `agent.spawn` 只拒绝不改写；纯本机。 |  | [链接](https://github.com/Liberty-Technical-Solutions/claude-workflow-mods/tree/main/plugins/usage-guard) |
+| pro-limits | 在提示框上方用两个仪表显示 5 小时和每周用量上限，`/pro-limits` 开关。备注：只读 `$.session.usage()`，纯本机显示。 |  | [链接](https://github.com/rodbegbie/rod-claude-mods/tree/main/plugins/pro-limits) |
+| token-monitor | 提示框上方实时显示上下文窗口占用，下方固定一行本会话花费、上一回合花费、token 数和缓存命中率。备注：只读会话用量，纯本机显示。 | MIT | [链接](https://github.com/raphalupi/token-monitor) |
+| usage-buddy | 带吉祥物的实时用量表（上下文、5 小时、7 天），并按你这条提示的长短和当前用量压力建议换 Opus/Sonnet/Haiku（只显示 `/model …` 建议，不自动切换）。备注：`prompt.submit` 只在本机读提示文字算建议、原样放行，不改写、不外发。 |  | [链接](https://github.com/rhealaloo45/pit-lane-claude-mods/tree/main/usage-buddy) |
+| client-clock | 按客户（按仓库/文件夹归属）记录你的时间、Claude 的时间和 5 小时/每周用量占比，`/client` 设预算和时薪，`/ledger` 看账和工时表，方便给客户计费。备注：`prompt.submit` 只记一条时间戳和来源，不记提示原文、不改写；账本写在 `~/.claude/client-clock/ledger/`，会读 `git config user.email` 识别身份；纯本机。 | MIT | [链接](https://github.com/JustinASmith/client-clock) |
 
 ### 上下文管理 Context Management
 
@@ -462,6 +467,8 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | said | `/said` 打开面板列出本会话你发过的每条消息，点一下滚动到原位置。备注：session.append 只记录你的消息不改写；纯本机。 | MIT | [链接](https://github.com/hfknight/claude-mod-said) |
 | transcript-bookmarks | 给对话里的消息或鼠标选中的文字加书签，`/bookmarks` 侧边面板一键跳回。备注：书签存在本机插件存储（按会话保留）；选中文字书签需全屏终端；纯本机。 | WTFPL | [链接](https://github.com/arcadeJHS/claude-code-mods/tree/main/transcript-bookmarks) |
 | jump-list | `/jumps` 跳转列表：本会话每条提示一行，标出改过文件或命令失败的轮次，点一下跳过去。备注：读取本机 transcript 文件建列表，session.append 只记录不改写；纯本机。 | MIT | [链接](https://github.com/GururOzatmaca/claude-mods/tree/master/jump-list) |
+| timekeeper | 给每条消息标上时钟时间，长时间运行的工具调用显示实时计时条，长回合结束时弹提示。备注：`session.append`/`tool.call` 只观察记时间，不改内容；纯本机。 |  | [链接](https://github.com/laszloprekop/claude-code-timekeeper) |
+| altshift | 提示框上方一个按钮，把打错键盘布局的文字（英文↔希伯来文）一键转换，并把希伯来文对话从右到左显示。备注：只有你点按钮时才用 `$.prompt.fill` 替换输入框草稿（不会自动提交、不碰已提交的提示）；从右到左只改显示。纯本机。 | MIT | [链接](https://github.com/YossiAbutbul/altshift) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -620,6 +627,7 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | guardian | 在 Claude 运行 `rm -rf`、`git push --force`、`git reset --hard` 前弹出按钮确认，取消或无人应答时拒绝执行（西班牙语界面）。备注：只拒绝不改写（deny），纯本机。 | MIT | [链接](https://github.com/Juan-Gpu/mis-mods/tree/main/guardian) |
 | adaflow-guard | Adaflow 集成应用的 app token 守卫：Write/Edit 引入带 `NEXT_PUBLIC_`/`VITE_` 等公开前缀的 token 变量、`"use client"` 文件里引用 x-ada-token 或直连网关、源码写死 token，或 Bash 命令会把 token 打印进记录时拦下（葡萄牙语提示）。备注：只拒绝不改写（deny；`mode=warn` 时只提示）；只读要改的文件做比对，纯本机；仅对 Adaflow 项目有用。 | | [链接](https://github.com/Adalink-ai/ada-mods/tree/main/adaflow-guard) |
 | command-brake | 韩语"危险命令刹车"：`rm -r`、删除 .env/.git/数据库文件、`git reset --hard`、`git push --force`、`git clean -f`、`DROP TABLE`、`dd`、`mkfs` 等执行前弹窗，用韩语说明删什么、为什么、能否撤销，再选执行或拒绝；build/dist/tmp 等临时目录清理不问。备注：只拒绝不改写（deny，模块出错时也拒绝）；非交互（`claude -p`）不拦，交给原有权限规则；纯本机。 | | [链接](https://github.com/sysmaker-kr/mods/tree/main/plugins/command-brake) |
+| subagent-fence | 拒绝 force-push、推送受保护分支、`--no-verify` 和按进程名杀进程；可选封禁指定路径、禁止子代理改共享检出、禁止子代理整文件读大文件。备注：只对 `tool.call` 做拒绝（deny），不改写命令；检查出错时放行。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-fence) |
 
 ### 开发工具 Dev Tools
 
@@ -745,6 +753,7 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | pr-preview | 拦住 `gh pr create`/`gh pr edit`/`glab mr create`/`glab mr update`，在提示框上方预览标题和描述并标出不符合规范的地方，可选 Proceed、Fix、Cancel。备注：只拦下或拒绝、不改写命令（Fix/Cancel 都是 deny）；10 秒内不选会自动放行；会读 `--body-file` 指定的文件和运行 `git branch --show-current`；纯本机。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/pr-preview) |
 | review-panel | `/review-panel` 打开只读面板：工作区 diff、当前分支的 PR/MR、CI 任务和已有评论，每 30 秒刷新。备注：只读；运行 `git`、`gh pr view`/`gh api`、`glab api` 读取，需要本机已登录 gh/glab；不写任何东西。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/review-panel) |
 | session-time-machine | `/timemachine` 打开会话时间线（每条提示、工具调用和回合结束，读自本会话的记录文件），选一个点并给出新指令，就把截到该点的会话副本写成新会话，给出 `claude --resume` 命令接着走另一条路，原会话不动。备注：`prompt.submit` 只拍快照、原样放行，不改写；`tool.call` 只在调用完成后观察；默认（`snapshots` 选项，可关）每次提示、每次写类工具调用和回合结束都用单独的临时 index 跑 `git add -A` + `commit-tree`，写到 `refs/time-machine/<会话id>/` 引用下（不动 HEAD、分支和暂存区，但会在仓库里留下快照对象与引用）；分叉时会在 `~/.claude/projects/` 写新会话 jsonl，有快照时用 `git worktree add -b` 建新分支和工作树，默认把 resume 命令复制到剪贴板，macOS 上默认用 osascript 开新 Terminal 窗口。纯本机。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/productivity/session-time-machine) |
+| docker-panel | 提示框上方显示 Docker Compose 服务健康、端口、崩溃和配置过期提示，带一键操作（重启、看日志等）。备注：会在本机运行 `docker`/`docker compose`（操作只在你按按钮时执行）；“问 Claude”按钮只用 `$.prompt.fill` 把问题追加到输入框，由你决定是否发送；Claude 改了 compose 文件或 Dockerfile 后只触发刷新。 | MIT | [链接](https://github.com/SKFabric/docker-panel/tree/main/plugins/docker-panel) |
 
 ### 子代理管理 Subagent Management
 
@@ -792,6 +801,8 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | agent-dash | `/dash` 在终端面板里集中看本机所有会话、子代理和 agent team 的状态、分支、改动和用量，可停止会话、给别的会话发消息或用 `claude --bg` 新开会话。备注：快照经 $.store 在本机会话间共享；classic.Subagent*/Task*/TeammateIdle 只记录、原样传递；发消息、停止、新开都只在你按按钮时执行；调用本机 git 与 claude CLI；不联网。 |  | [链接](https://github.com/rasa-mrankovic/agent-dash) |
 | team | 把子代理按角色（程序员、审查、安全、法务、设计、QA、规划）显示在提示框上方，`/team` 面板列出每个角色的任务、本机 dev server 的 Watch 链接和每轮花费。备注：prompt.submit、agent.spawn、tool.call 只记录、原样传递；不联网。 |  | [链接](https://github.com/yskills/claude-setup/tree/main/mods/team) |
 | droid-reviews | 提示框上方每个正在跑的 droid review 一行：进度、droid 在做什么、结果。备注：配合同仓库的 droid-review 技能使用；只读当前仓库 `.droid-reviews/` 目录，用 `kill -0` 判断进程是否还活着；不联网。 | MIT | [链接](https://github.com/AuthorOfTheSurf/droid-review-skill/tree/master/skills/droid-reviews) |
+| model-allowlist | 子代理指名固定模型 ID（而非 opus/sonnet/haiku 这类别名）时拒绝启动，并可按你写的规则限制某类代理用哪个模型（比如最强模型只在任务说明里写了理由时才允许）。备注：只对 `agent.spawn` 做拒绝，不改写；检查本身出错时放行。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/model-allowlist) |
+| subagent-band | 提示框上方一栏列出每个运行中子代理的类型、模型、effort、步数、上下文、advisor 调用和估算花费；另有 `/fleet` 面板、`/subagent-cost`，以及给模型用的 `subagent_vitals` 工具。备注：只观察，不改工具调用；`/steer <id> <消息>` 会把你亲手写的那条消息发给指定子代理。纯本机。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-band) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -992,6 +1003,7 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | slonk-card | 显示当前会话正在处理的 slonk（基于 Plane 的看板）卡片和所在列，列变化时弹提示；`/slonk-card [KEY\|off\|hide\|show]`（俄语界面）。备注：从 slonk MCP 工具的结果里识别卡片；跟踪卡片时每 60 秒经你已连接的 slonk MCP 服务器调用 `get_issue` 刷新（只读）；不改写工具调用。 | | [链接](https://github.com/romandots/claude-mods/tree/main/plugins/slonk-card) |
 | trame | 提示框上方显示 Trame 应用里与当前会话关联的卡片，按钮可在浏览器打开。备注：需要本机运行 Trame 应用；每 15 秒用 `$.http` 只请求 127.0.0.1 上 Trame 的本地端口（URL 带会话 id），不访问外网；打开链接用 xdg-open/open。 | | [链接](https://github.com/Andarius/trame/tree/master/claude-mod) |
 | issue-map | 把当前仓库所在项目（GitHub/GitLab）的 open issue 按 Tracker 记录的关联画成"地图"：提示框下方固定一行本项目状态，`/issue-map` 不走模型直接显示地图、分组、下一个可做的 issue、单个 issue 卡片等视图，也可让 Claude 给你指派 issue 或建议关联。备注：需要 Node.js ≥ 22.18 和本机已登录的 `gh`/`glab`（只经它们读写 Tracker，另有不带凭据的匿名 HTTPS 探测）；会在后台起常驻刷新进程每 90 秒更新快照；附带一个 MessageDisplay 经典钩子，只把 Claude 回复里的 `⟦issue-map …⟧` 标记行在显示时换成地图原样输出（不改提示、不改工具）；附带的 map 技能预先放行自家 `issue-map …` 只读/建议类命令，真正写入（给自己指派 issue、确认关联）都要你在 AskUserQuestion 里点确认；发布 claude.ai Artifact 也要你逐次同意。 | MIT | [链接](https://github.com/romtaugranot/issue-map) |
+| pit-wall | F1 风格的维修墙面板：`/pit` 从 PLAN.md（或 `~/.claude/plans/` 里最新计划）导入阶段和任务跟踪进度，并记录 Claude 的 `git push`。备注：用本机 `sh`/`cat` 找和读计划文件，`tool.call` 只在 Bash 调用完成后观察 push；纯本机。 |  | [链接](https://github.com/rhealaloo45/pit-lane-claude-mods/tree/main/pit-wall) |
 
 ### 外部集成 External Integrations
 
@@ -1040,6 +1052,7 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | mr-panel | `/mr-panel` 面板列出你在 GitLab 上打开的 MR 和等你审查的 MR，每 5 分钟刷新。备注：需设置 GITLAB_API_URL 和 GITLAB_PERSONAL_ACCESS_TOKEN；只经 $.http 访问你自己的 GitLab API，不发会话内容；点“Review”按钮时用 $.prompt.submit 以你的名义发出“审查这个 MR”的提示（仅按钮触发）。 |  | [链接](https://github.com/vuhpquang/vuha-claude-plugin/tree/main/mods/mr-panel) |
 | cinderdeck | 在 Claude Code 里看 Cinderdeck 工作区的实时服务状态，控制服务、查看日志。备注：需本机已装 Cinderdeck 及其 CLI；只调用本机 `cinderdeck` 命令；不联网。 | BSD-3-Clause | [链接](https://github.com/RyanCardin15/Cinderdeck/tree/main/mods/claude-code/cinderdeck) |
 | sn | ServiceNow CLI 配套插件：技能 + 窗格，列出本会话 Bash 里的 `sn` 表调用及结果，可在浏览器打开记录。备注：需本机已装 sn CLI；mod 只观察 Bash 调用不改写；"打开"按钮运行 `sn open`。 | MIT | [链接](https://github.com/tehubersheezy/servicenow-cli) |
+| agentbar | AgentBar 桌面应用的配套 mod：把 Claude Code 未经询问自行决定的操作，以及上下文、用量上限、运行中子代理等指标写到 `~/.agentbar/mods.d/` 给 AgentBar 应用和 CLI 读；可选在别的会话等你时在提示框上方显示一行。备注：只观察（`tool.check`/`tool.call` 原样返回结果，从不批准或拒绝）；点那行时在 macOS 用 `/usr/bin/open agentbar://…` 唤起应用；不联网。 | MIT | [链接](https://github.com/michalstrnadel/AgentBar/tree/main/Scripts/mods/claude) |
 
 ### 本地工具 Local Tools
 
@@ -1077,6 +1090,8 @@ For detailed descriptions of all 1041 mods, see the Chinese section below.
 | localhost | `/localhost` 打开面板，列出本机正在监听的 localhost 服务（端口、进程、所在目录，当前项目的高亮），每个都有「打开」和「停止」按钮，也可一键停止本项目或全部；Claude 每跑完一个 Bash 命令自动刷新。备注：本机 process（lsof 列端口，按了停止按钮才会 kill 对应进程）；tool.call 只在命令跑完后刷新、原样传递；不联网；说明为意大利语。 | MIT | [链接](https://github.com/cavallinilorenzo/claude-code-mods/tree/main/mods/localhost) |
 | copy-button | 给 Claude 回复里的每个代码块加一个「⧉ copy」小链接，Ctrl+点击就把这块代码原样复制到 Windows 剪贴板（不带缩进、折行和边框字符）；全屏渲染下普通点击也行。备注：只适用于 WSL + Windows Terminal，其他系统照常显示不生效；首次运行会在 `%LOCALAPPDATA%\claude-copy` 放一个 12 行的 `copy.vbs`，并在 HKCU 注册 `.ccopy` 文件类型（三个注册表键，无需管理员，仓库附 `windows/uninstall.reg` 可撤销）；回复里的代码块会存成本地文件，会话两天不用后自动删除；只运行 cmd.exe、wslpath、reg.exe、rm 等本机命令，不联网。 | MIT | [链接](https://github.com/GeckoKing9/claude-code-copy-button) |
 | file-picker | `/files` 打开文件浏览面板：方向键浏览目录，可输入过滤或跳转路径，Enter 把 `@路径` 插入输入框。备注：只读列目录；只把 `@路径` 填进输入框（不自动发送），带引号/控制字符的路径拒绝插入；纯本机。 | MIT | [链接](https://github.com/SeanPeppers/claude-files) |
+| sessions-pane | 侧边面板列出同时运行的各个会话、各自的模型/effort，以及哪个会话在等你（权限弹窗或提问）。备注：只观察 `prompt.submit`/`tool.call`/权限请求，不改写；会在本机写一份本会话状态 JSON 供面板读取。 | MIT | [链接](https://github.com/gav1256/claude-workflow/tree/main/claude/mods/sessions-pane) |
+| seat-resume | 记录交互会话清单，崩溃、重启或关掉终端后用 `/resume-sessions` 列出并重新打开被打断的会话（Windows，PowerShell，WezTerm 或 Windows Terminal）。备注：经典钩子只记录权限模式和会话信息、不改写；`/resume-sessions` 时运行插件自带的 `scripts/resume-sessions.ps1`（明文脚本，用 Start-Process 在 WezTerm/Windows Terminal 里执行 `claude --resume`）；会话清单写在配置目录的 `session-registry/`。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/seat-resume) |
 
 ### 其他工具 Other Tools
 
