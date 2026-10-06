@@ -7853,6 +7853,130 @@
         "path": "dev-up",
         "sha": "83f636b0a4ecd0f52c68bc43b155613ef090e766"
       }
+    },
+    {
+      "name": "spindle",
+      "source": {
+        "source": "github",
+        "repo": "IzhanAli/Spindle-for-CC",
+        "sha": "058aead86823e041586e6ea4a6ce9384c1b10623"
+      }
+    },
+    {
+      "name": "message-times",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/betoescobar46/pituto.git",
+        "path": "plugins/message-times",
+        "sha": "4dbf5cc0cd0f2ae1e6f82c7b91f6f9e2e11bb2d7"
+      }
+    },
+    {
+      "name": "quiet-lines",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/betoescobar46/pituto.git",
+        "path": "plugins/quiet-lines",
+        "sha": "4dbf5cc0cd0f2ae1e6f82c7b91f6f9e2e11bb2d7"
+      }
+    },
+    {
+      "name": "grid-tables",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/betoescobar46/pituto.git",
+        "path": "plugins/grid-tables",
+        "sha": "4dbf5cc0cd0f2ae1e6f82c7b91f6f9e2e11bb2d7"
+      }
+    },
+    {
+      "name": "screen-cloak",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/JJenglert1/claude-mods.git",
+        "path": "plugins/screen-cloak",
+        "sha": "8b638814dd3f85d99d2c36a526eb4ab4f261a03b"
+      }
+    },
+    {
+      "name": "time-machine",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/JJenglert1/claude-mods.git",
+        "path": "plugins/time-machine",
+        "sha": "8b638814dd3f85d99d2c36a526eb4ab4f261a03b"
+      }
+    },
+    {
+      "name": "usage-radar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/JJenglert1/claude-mods.git",
+        "path": "plugins/usage-radar",
+        "sha": "8b638814dd3f85d99d2c36a526eb4ab4f261a03b"
+      }
+    },
+    {
+      "name": "cost-visibility",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/patitow/claude-mod-cost-visibility.git",
+        "path": "plugins/cost-visibility",
+        "sha": "78916c18aee5aa18953962e22e660167be812286"
+      }
+    },
+    {
+      "name": "workload",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devsomelife/somelife-claude-mods.git",
+        "path": "plugins/workload",
+        "sha": "f548f882140f8d855138da40ac785a017e9aa422"
+      }
+    },
+    {
+      "name": "toolbox",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/schmas/claude-plugins.git",
+        "path": "plugins/toolbox",
+        "sha": "6263104e2fd7410f3319733d74e93d27d32912a2"
+      }
+    },
+    {
+      "name": "changes-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vuhpquang/vuha-claude-plugin.git",
+        "path": "mods/changes-panel",
+        "sha": "05feec9bc49f6ccd21360b444523ade2464b3b45"
+      }
+    },
+    {
+      "name": "sn",
+      "source": {
+        "source": "github",
+        "repo": "tehubersheezy/servicenow-cli",
+        "sha": "133b2e087c248895fdb974ddc8c9fc82b48990f0"
+      }
+    },
+    {
+      "name": "reply-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Yrzhe/claude-skills.git",
+        "path": "plugins/reply-view",
+        "sha": "ee307c22b4b8275b6a9f4e57d9640af337a8c5d6"
+      }
+    },
+    {
+      "name": "crab-buddy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ziedgithub/claude-code-mods.git",
+        "path": "crab-buddy",
+        "sha": "4033c742294c482e5d2429e37b4e0f2680b9ece6"
+      }
     }
   ]
 }
