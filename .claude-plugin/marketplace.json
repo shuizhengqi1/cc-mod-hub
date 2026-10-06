@@ -7977,6 +7977,189 @@
         "path": "crab-buddy",
         "sha": "4033c742294c482e5d2429e37b4e0f2680b9ece6"
       }
+    },
+    {
+      "name": "guardian",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Juan-Gpu/mis-mods.git",
+        "path": "guardian",
+        "sha": "fed74b80eb703d7872d0652493d99d2d280f13c7"
+      }
+    },
+    {
+      "name": "mi-terminal",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Juan-Gpu/mis-mods.git",
+        "path": "mi-terminal",
+        "sha": "fed74b80eb703d7872d0652493d99d2d280f13c7"
+      }
+    },
+    {
+      "name": "turn-done",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/turn-done",
+        "sha": "051c148470cee83a94a167f5a42c4c909a0dc1dc"
+      }
+    },
+    {
+      "name": "codex-loop",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/codex-loop",
+        "sha": "051c148470cee83a94a167f5a42c4c909a0dc1dc"
+      }
+    },
+    {
+      "name": "aws-profile",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/aws-profile",
+        "sha": "051c148470cee83a94a167f5a42c4c909a0dc1dc"
+      }
+    },
+    {
+      "name": "promote-branch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/promote-branch",
+        "sha": "051c148470cee83a94a167f5a42c4c909a0dc1dc"
+      }
+    },
+    {
+      "name": "live-diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/live-diff",
+        "sha": "051c148470cee83a94a167f5a42c4c909a0dc1dc"
+      }
+    },
+    {
+      "name": "said",
+      "source": {
+        "source": "github",
+        "repo": "hfknight/claude-mod-said",
+        "sha": "72542bffb589b097f9146c34e887dd356752968f"
+      }
+    },
+    {
+      "name": "token-weather-usage",
+      "source": {
+        "source": "github",
+        "repo": "PedroLaRosa/token-weather-usage",
+        "sha": "44f665e88d23154bfd5dd536b92d62d4608cb227"
+      }
+    },
+    {
+      "name": "peek",
+      "source": {
+        "source": "github",
+        "repo": "PickleBoxer/peek",
+        "sha": "f97134d4d758522144374e483e728467982229c4"
+      }
+    },
+    {
+      "name": "pr-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/danmana/claude-plugins.git",
+        "path": "plugins/pr-band",
+        "sha": "e6e12d974c15b900c66938bb0c2ada17b14a6cd3"
+      }
+    },
+    {
+      "name": "firecrawl-credits",
+      "source": {
+        "source": "github",
+        "repo": "RichardBray/firecrawl-credits-mod",
+        "sha": "1b0d86f7966c91b06e1b0dc28908eb86a7e227f4"
+      }
+    },
+    {
+      "name": "transcript-bookmarks",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arcadeJHS/claude-code-mods.git",
+        "path": "transcript-bookmarks",
+        "sha": "4c322ffccc367d0f8bb605cf97812404010022d1"
+      }
+    },
+    {
+      "name": "speckit-companion",
+      "source": {
+        "source": "github",
+        "repo": "alfredoperez/speckit-companion-claude-mod",
+        "sha": "69363cd48e48e6fd7aed7298c17a3f7932345f62"
+      }
+    },
+    {
+      "name": "goblin-util",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/JasonWarrenUK/goblin-mode.git",
+        "path": "marketplace/goblin-util",
+        "sha": "dcd0c993b6492b00e3c30fec89b7aefb606b54f2"
+      }
+    },
+    {
+      "name": "jump-list",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/GururOzatmaca/claude-mods.git",
+        "path": "jump-list",
+        "sha": "b7a4ac44dafa71eef8e8dda61f4ecbb58757fb10"
+      }
+    },
+    {
+      "name": "git-branches",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Zulut30/claude-mode.git",
+        "path": "en/git-branches",
+        "sha": "643808588a1d22217c94c5de4aa4c75c76e8514b"
+      }
+    },
+    {
+      "name": "roadmap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Zulut30/claude-mode.git",
+        "path": "en/roadmap",
+        "sha": "643808588a1d22217c94c5de4aa4c75c76e8514b"
+      }
+    },
+    {
+      "name": "games",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/musingfox/cc-plugins.git",
+        "path": "games",
+        "sha": "f6797fdb7c61e97d95863039f47483e4394965ca"
+      }
+    },
+    {
+      "name": "dictation-music",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/yash-coded/claude-code-mods.git",
+        "path": "mods/dictation-music",
+        "sha": "e29cfd129d30775a9573bd300bbb4eddba2a5dbc"
+      }
+    },
+    {
+      "name": "dictate-cli",
+      "source": {
+        "source": "github",
+        "repo": "augbastos/dictate-cli",
+        "sha": "ad102977579409d24899947a1c97b029cf2a231b"
+      }
     }
   ]
 }
