@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 890 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 896 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 890 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 896 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 890 mods, see the Chinese section below.
+For detailed descriptions of all 896 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 890 个精选 Claude Code mods，按类别组织：
+以下是本市场的 896 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -410,6 +410,9 @@ For detailed descriptions of all 890 mods, see the Chinese section below.
 | cc-mod-suggestion-sentence-case | 把提示框里按 Tab 可接受的灰色建议文字改成句子格式：首字母大写、结尾补句号；斜杠命令、已以标点结尾、或以数字/代码/引号开头的保持原样。备注：只改 prompt.suggest 的建议文字（也包括其他插件提出的建议），不改你实际提交的提示；整个模块约 20 行；不联网。 |  | [链接](https://github.com/Vatroslav/cc-mod-suggestion-sentence-case/tree/main/plugin) |
 | sonar-dock | 科幻雷达风格的 HUD：/sonar 打开侧边窗格，显示雷达扫描（每次工具调用一个光点）、威胁等级、用量仪表、每回合工具时间线和活动日志，并给对话套上磷光风格皮肤（消息、工具调用、等待动画、回合耗时）；/sonar light、dark、auto 切换配色，/sonar off 关闭皮肤。备注：tool.call 与 prompt.submit 只记录统计、不改写；Bash 命令命中危险模式时只弹提示并提高威胁等级，不拦截；macOS 上可能运行 defaults read 判断深浅色；动画用了多个高频定时器（约 50–80 毫秒一帧），较耗 CPU；不联网。 |  | [链接](https://github.com/putraridho/sonar-dock) |
 | cc-status | 提示框上方一行状态：当前模型简称、上下文用量圆圈（低于 50% 绿、低于 75% 黄、以上红）与窗口大小，以及 secret-guard 锁状态。备注：锁状态读取同作者 quorumless/claude-plugins 里 secret-guard mod 写入的状态，**本市场未收录该 secret-guard（与已有同名条目重名）**，没装它时会一直显示红色「🔓 !」；另会读取 ~/.claude/.ponytail-active 显示 ptl 标记；只读，不联网、不运行外部命令。 |  | [链接](https://github.com/quorumless/claude-plugins/tree/main/plugins/cc-status) |
+| dopagaki | 把 Claude Code 画面变成彩虹色（日文说明）：加载提示的圆弧符号旋转变色、提示文字彩虹流动，括号里显示已用时间、估算输出 token 数（彩虹粗体并左右轻晃）和思考状态；回合结束行的符号换成彩虹 ✔，你的提示行开头的 > 变彩虹，提示框下方模式显示变彩虹，工作中提示框上方流动彩虹条；/dopagaki on、off 或不带参数切换，选择跨会话保留。备注：只在回合进行中每 100ms 重绘，空闲不重绘；遵守 NO_COLOR；回合结束行原有的完成时刻、后台任务等附加信息不再显示；turn.step 只统计字数、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/000ts/dopagaki-claude-code) |
+| pitch-black | 仿 VS Code「Pitch Black」主题：你的消息变成黑底圆角框加蓝色 ❯，Claude 回复黑底，工具调用和工具组加边框（运行中蓝、出错红），加载提示前加蓝色 ◆，提示框上方加一条蓝色 VS Code 风格状态栏（git 分支、文件夹名、Working/Ready、上一回合秒数和工具调用次数）；/pitch-black on、off 或不带参数切换，选择跨会话保留。备注：会话开始和每回合结束时在本机运行一次 `git rev-parse --abbrev-ref HEAD` 读分支；tool.call 只计数、原样放行；不联网。 |  | [链接](https://github.com/Shahrozjd/shahroz-plugins/tree/main/plugins/pitch-black) |
+| gauravs-panel | 在提示框底部模式标签右侧加一个「◆ Gaurav's Tools」按钮，点开是两排按钮：模型（Haiku、Sonnet、Opus、Fable）和思考强度（Low 到 Max），一键切换，不用再打 /model、/effort；/panel 也可开关；有侧边窗格打开时卡片移到窗格底部显示。备注：按钮只是替你运行 Claude Code 自带的 /model、/effort 命令，并把命令返回的提示弹出来；模型列表写死在插件里，新模型需等作者更新；当前强度从模型请求里读取，turn.step 原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/gauravlahoti/claude-mods/tree/main/plugins/gauravs-panel) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -867,6 +870,7 @@ For detailed descriptions of all 890 mods, see the Chinese section below.
 | worklog | 按仓库和分支（分支名里有工单号就按工单）统计你和 Claude 实际干活的时间：每次回复加上两次提问之间不超过空闲上限（默认 5 分钟）的停顿；/worklog 看本周时间表，/worklog export 导出 CSV。备注：prompt.submit 只记时间、不读不改提示内容；每个会话写一份 ~/.claude/worklog/（会话 id）.json（只有时间和仓库/分支名），本机读 .git/HEAD 判断分支；不联网。 | MIT | [链接](https://github.com/santtisosa/worklog) |
 | work-summary | 改了文件的回合结束后，在右侧面板（韩语界面）列出这一轮改动的文件，并总结「做了什么」和「值得记住的经验」；保留本会话最近 20 条，会话开始时自动打开面板，/work-summary 手动打开。备注：每个改了文件的回合都会自动多发一次 $.model.fork（同一会话、同一模型，带上文件列表和本轮回答前 3000 字），有额外费用；tool.call 只记录 Edit/Write/NotebookEdit 改了哪些文件、原样传递；不改提示，不联网。 |  | [链接](https://github.com/timinguniq/claude-work-summary) |
 | away-receipt | 放着让 Claude 跑、离开一阵子回来时，在对话旁的面板列出离开期间发生了什么（繁体中文界面）：离开多久、主对话跑了几轮、花了多少钱；每个动过的仓库的新 commit、未 commit 文件、分支和其他 worktree；跑过的测试命令和 exit code（失败标红）；完成或失败的子代理和后台命令。距你上次发消息超过 20 分钟、回来在提示框打第一个字时自动打开（不抢焦点），/receipt 随时打开，q 关闭。备注：prompt.submit 只记录你发消息的时间和后台任务通知、原样传递，不改提示；prompt.edit 只看草稿是否从空变成有字；在面板里点失败测试的 ✗（或按数字键）时，用 prompt.fill 把「该命令失败（exit N），帮我找出原因并修好。」这句话填进提示框（已有草稿就接在下一行），只预填不发送，要你自己按 Enter；在动过的仓库里跑本机只读 git（rev-parse、status、log、worktree list，带 -c core.fsmonitor=false）；tool.call 只观察、原样传递；/receipt 与已上架的 session-receipt 同名，两个都装时后注册的那个 /receipt 会失败；图标需要 Nerd Font；不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/away-receipt) |
+| todo-list | /todo 打开侧边窗格的任务清单（德文界面）：Claude 干活时也能往里排任务而不打断它，/todo <文字> 直接加一条；点 ▶ 把一条任务作为提示发给 Claude，回答完自动打勾，可编辑、手动勾选，已完成的留在下方；打开 Auto 后每完成一条就自动发下一条（比如放着过夜跑）。备注：任务就是你自己写的文字，原样作为你的消息发出，插件不改写也不添加内容；Auto 默认关闭，开关跨会话保留，连续自动跑 25 条会安全停止并关掉 Auto，回合被中断或出错时不会继续；任务清单跨会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/todo-list) |
 
 ### 外部集成 External Integrations
 
@@ -907,6 +911,7 @@ For detailed descriptions of all 890 mods, see the Chinese section below.
 | superset-deck | 在 Claude Code 里打开 Superset 风格的工作区侧栏：按项目列出本机所有 Superset 工作区和代理终端状态，可查看代理终端实时画面、分支相对分叉点的 diff 与信息，给代理发消息、新建代理和工作树工作区、打开或删除工作区；提示框上方可显示一行 Superset 摘要。备注：**需先自行安装第三方 Superset（superset.sh）的 `superset` 命令行**，未安装时只显示错误；所有操作都是在本机运行 `superset ... --local --json` 和只读 git 命令，发消息、新建、删除（需二次确认）只在你在窗格里操作时执行；仓库 bin/superset-deck 启动脚本不随插件运行；本 mod 自身不联网。 | MIT | [链接](https://github.com/tomikng/claude-superset-deck) |
 | prs | /prs 在侧边窗格查看当前分支的拉取请求：差异、文件树、提交列表，没有时列出所有打开的 PR，涵盖 /add-dir 加入的所有仓库；支持 Azure DevOps 和 GitHub。备注：只读；Azure DevOps 用本机 az CLI 取访问令牌（缓存在插件 store，默认 45 分钟）并只调用 dev.azure.com 读接口，GitHub 走本机 gh 命令；差异来自本机 git，会对你的仓库执行 git fetch origin；不发送会话内容。 | MIT | [链接](https://github.com/ambareeshav/prs) |
 | spotify | 提示框上方只有图标的 Spotify 控制条（上一首、播放暂停、下一首、静音），侧边窗格可搜索、浏览并播放你的歌单和已点赞歌曲，带专辑封面；/spotify 打开。备注：**仅限 macOS**，控制条用 osascript 控制本机 Spotify 应用、无需登录；浏览功能需用你自己免费的 Spotify 开发者应用 Client ID（/spotify config），登录走 PKCE，会临时在 127.0.0.1:8907 起一个 python3 回调服务；封面用 curl 下载到 /tmp；只访问 Spotify 官方接口，不发送会话内容。登录前会用 pkill 结束自己残留的回调服务进程（只匹配 spotify-mod-server-）。 | MIT | [链接](https://github.com/ambareeshav/claude-plugins/tree/main/plugins/spotify) |
+| github-issues | /issues 打开侧边窗格，把仓库的 GitHub issue 显示成卡片：Open、Assigned、Created、Closed 四个标签页，搜索框和标签筛选，卡片显示标题、编号、指派人、更新时间、评论数、关联 PR 和彩色标签，可展开正文；/issues owner/name 或 /issues . 指定仓库，不带参数时列出你最近推送过的仓库供选择；窗格打开时有新指派给你的 issue 会弹提示。备注：**需要本机已登录的 gh**（gh auth login），只运行 `gh api graphql` 查询（不做修改）和 `gh issue view`，除 GitHub 外不连其他外网；窗格打开时每 2 分钟和每回合结束后刷新，关闭时不发请求；只有你点「Work on it」才用 $.prompt.submit 以你的名义发一条固定提示，让 Claude 读该 issue 并动手实现。 | MIT | [链接](https://github.com/MarcoCarnevali/claude-code-mods/tree/main/github-issues) |
 
 ### 本地工具 Local Tools
 
@@ -1026,6 +1031,7 @@ For detailed descriptions of all 890 mods, see the Chinese section below.
 | wtf | 用鼠标划选对话里的一段文字后运行 /wtf（或 /wtf <文字>），侧边窗格会结合当前对话解释它的意思，可在窗格里追问，问答不写进对话；中文问题用中文界面。备注：仅在你运行 /wtf 或点它的按钮时，用 $.model.fork 带当前会话上下文提问；恢复的会话还没有可 fork 的内容时，改用 $.model.complete 发送最近的对话记录原文（最多约 8 万字符，用当前会话模型），无脱敏；可选的快捷键按钮默认关闭；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/orangeJigglypuff/better-btw/tree/main/wtf) |
 | quick-replies | 把 Claude Code 自带的「下一条消息建议」变成提示框上方的按钮，点击或在空提示框里按 1–4 直接发送；/replies 开关、查看状态；英文或德文界面。备注：只在你点按钮或按数字键时以你的身份 $.prompt.submit 发送，从不自动发送；prompt.edit 只在建议按钮显示时吞掉那个数字键，其他输入原样放行；prompt.suggest 只读；可选的 more（默认关闭，/replies more on 开启）开启后每次回答结束都会自动用 $.model.fork 带完整会话上下文再要最多 3 条建议，多花一次简短回答的 token；除 Claude 自身 API 外不联网；GPL-3.0 附加条款要求转载时保留作者署名。 | GPL-3.0 | [链接](https://github.com/FynnXland/fynn-mods/tree/main/mods/quick-replies) |
 | wytlumacz-mi | 给非程序员的「解释一下」：/wytlumacz 用波兰语讲清 Claude 刚做了什么（一句话总结、步骤、原因、2–4 个值得学的术语、下一步），/wytlumacz ostatnio 或回到已有历史的会话时提示框上方按钮可总结整段对话；解释按项目保存，/wytlumacz historia 查看，学过的术语不再重复解释。备注：只在你运行命令或点按钮时用 $.model.fork 带当前会话上下文生成解释，从不自动调用；prompt.submit 只隐藏总结按钮、原样放行；不联网；基于 Explain It（Ruth-Ann Bravo，MIT）改写。 | MIT | [链接](https://github.com/Szewowsky/mody-claude-code/tree/main/wytlumacz-mi) |
+| grill | /grill（或 /grill <主题>）让 Claude 针对当前计划或决定提出最多 5 个追问（德文界面），在提示框上方逐题显示：2–4 个选项、Claude 推荐的选项和自由输入框；答完最后一题后把全部回答汇总成一条消息发给 Claude，可随时取消。备注：只在你运行 /grill 时调用一次 $.model.fork（基于当前对话，会多用一些额度，不产生新的对话回合）；没有对话但给了主题时改用 $.model.complete，只发送主题文字；汇总回答以你的名义用 $.prompt.submit 发出；追问只在本会话保存；不联网、不运行外部命令。 | MIT | [链接](https://github.com/broening/claude-mods/tree/main/grill) |
 
 ---
 

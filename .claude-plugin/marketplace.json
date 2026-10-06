@@ -7038,6 +7038,59 @@
         "repo": "afruth/pr-live-review",
         "sha": "7cc41e2b0adf8eb8c69166a64a9531e90bf0df3b"
       }
+    },
+    {
+      "name": "dopagaki",
+      "source": {
+        "source": "github",
+        "repo": "000ts/dopagaki-claude-code",
+        "sha": "6c58f56ea8294598e023cc92aa92ef0d259f8843"
+      }
+    },
+    {
+      "name": "pitch-black",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Shahrozjd/shahroz-plugins.git",
+        "path": "plugins/pitch-black",
+        "sha": "b38965240884cdf51373b492ba41ea00643ec473"
+      }
+    },
+    {
+      "name": "gauravs-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gauravlahoti/claude-mods.git",
+        "path": "plugins/gauravs-panel",
+        "sha": "6a9ea8bdafa325ab8af6bb649d930b2d892a37fd"
+      }
+    },
+    {
+      "name": "github-issues",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MarcoCarnevali/claude-code-mods.git",
+        "path": "github-issues",
+        "sha": "c56f32aa5849bb724d68d5b5ed7dc3d57aaa2b61"
+      }
+    },
+    {
+      "name": "todo-list",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/broening/claude-mods.git",
+        "path": "todo-list",
+        "sha": "8f748a261ce598a37716769411dc50f9e869ac74"
+      }
+    },
+    {
+      "name": "grill",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/broening/claude-mods.git",
+        "path": "grill",
+        "sha": "8f748a261ce598a37716769411dc50f9e869ac74"
+      }
     }
   ]
 }
