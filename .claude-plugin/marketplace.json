@@ -7091,6 +7091,31 @@
         "path": "grill",
         "sha": "8f748a261ce598a37716769411dc50f9e869ac74"
       }
+    },
+    {
+      "name": "cache-status",
+      "source": {
+        "source": "github",
+        "repo": "alfredwesterveld/claude-cache-status",
+        "sha": "e6191b179c6153ce4417b0db406b2d4fe827547c"
+      }
+    },
+    {
+      "name": "campfire-hud",
+      "source": {
+        "source": "github",
+        "repo": "aryswisnu/campfire-hud",
+        "sha": "09927a05a84797200e6bddf2c9043fa63e944451"
+      }
+    },
+    {
+      "name": "serhan-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/serhandenizhan/serhan-kit.git",
+        "path": "plugins/serhan-progress",
+        "sha": "e35ad9a979550c1a188b0b247cfc02e1004f6633"
+      }
     }
   ]
 }
