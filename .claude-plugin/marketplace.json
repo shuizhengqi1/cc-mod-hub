@@ -6165,6 +6165,119 @@
         "path": "plugins/tablero-consumo",
         "sha": "3c2b106646e87f7bc435d771905bb73a9939fce8"
       }
+    },
+    {
+      "name": "snippets",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/productivity/snippets",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "wrapped",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/fun/wrapped",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "files-touched",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/awareness/files-touched",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "test-pulse",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/awareness/test-pulse",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "net-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/safety/net-guard",
+        "sha": "d8751bbc643a432f0754896a29fcf902527ca579"
+      }
+    },
+    {
+      "name": "model-cycle",
+      "source": {
+        "source": "github",
+        "repo": "PedroLaRosa/claude-code-model-cycle",
+        "sha": "88a998bbad8d7000f2b1258dfe6f53ae2f50a785"
+      }
+    },
+    {
+      "name": "task-progress",
+      "source": {
+        "source": "github",
+        "repo": "andras-gyarmati/claude-task-progress",
+        "sha": "9d8cd361fda550afcc36b877c6dd519a962d2557"
+      }
+    },
+    {
+      "name": "cache-keeper",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davidho27941/cockpit.git",
+        "path": "plugins/cache-keeper",
+        "sha": "f056844fcbb2aa4b21e7c1d132a36194ae926aba"
+      }
+    },
+    {
+      "name": "gcloud-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davidho27941/cockpit.git",
+        "path": "plugins/gcloud-guard",
+        "sha": "f056844fcbb2aa4b21e7c1d132a36194ae926aba"
+      }
+    },
+    {
+      "name": "time-spent",
+      "source": {
+        "source": "github",
+        "repo": "leviyehonatan/claude-time-spent",
+        "sha": "5a101e09e58f06f6edbf03c73dc301f8b00bae38"
+      }
+    },
+    {
+      "name": "pedidos",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matecocidocontortafritas/growth-lab-mods.git",
+        "path": "plugins/pedidos",
+        "sha": "c247038450fc7a6292f6dcf5746d6796cb3ec2fc"
+      }
+    },
+    {
+      "name": "tablero",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matecocidocontortafritas/growth-lab-mods.git",
+        "path": "plugins/tablero",
+        "sha": "c247038450fc7a6292f6dcf5746d6796cb3ec2fc"
+      }
+    },
+    {
+      "name": "taskline",
+      "source": {
+        "source": "github",
+        "repo": "pepperonas/taskline",
+        "sha": "2dced15843a373947238624b636a34ef0734a9b1"
+      }
     }
   ]
 }
