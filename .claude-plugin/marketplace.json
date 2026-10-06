@@ -6337,6 +6337,97 @@
         "path": "plugins/openspec-tracker",
         "sha": "0066483b23d7f4a3cc9c6ad96a8176c83801c1dd"
       }
+    },
+    {
+      "name": "claude-band",
+      "source": {
+        "source": "github",
+        "repo": "ButterFuture/ClaudeBand",
+        "sha": "d056d64ccb4bf62ad5caf9abb328c7c3eb89c1e8"
+      }
+    },
+    {
+      "name": "battle-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gianggenius/battle-band.git",
+        "path": "plugin",
+        "sha": "3d42ff7220fd1ff204fd8a4d5a714b02d0c795de"
+      }
+    },
+    {
+      "name": "plan-limits",
+      "source": {
+        "source": "github",
+        "repo": "santtisosa/plan-limits",
+        "sha": "ed4ce8d528c95d65f73bc2ef1656f211a247eab1"
+      }
+    },
+    {
+      "name": "coverage-band",
+      "source": {
+        "source": "github",
+        "repo": "santtisosa/coverage-band",
+        "sha": "20f41f4f3acc75fd347cb41d873fc748e77e2b88"
+      }
+    },
+    {
+      "name": "worklog",
+      "source": {
+        "source": "github",
+        "repo": "santtisosa/worklog",
+        "sha": "7a21d6b1d33d0785e63025dae4aa3088132afb73"
+      }
+    },
+    {
+      "name": "usage-hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rsvishalsingh93/claude-usage-hud.git",
+        "path": "plugins/usage-hud",
+        "sha": "226cec6e5d40201eeb8f541a7862521d68791f78"
+      }
+    },
+    {
+      "name": "ci-line",
+      "source": {
+        "source": "github",
+        "repo": "Halvanhelv/claude-ci-line",
+        "sha": "ea73d243de3e95055146f5944e7773a286759e8a"
+      }
+    },
+    {
+      "name": "language-learner",
+      "source": {
+        "source": "github",
+        "repo": "pseudometalhead/CCLanguageLearnerMod",
+        "sha": "6c16b53b7929d653b8ce660b75c0fd0015abfc1e"
+      }
+    },
+    {
+      "name": "quota-reactor",
+      "source": {
+        "source": "github",
+        "repo": "jnk0vc/quota-reactor",
+        "sha": "fb71ef27bd09a5774edc01eaf839640b7b0c5634"
+      }
+    },
+    {
+      "name": "prompt-glance",
+      "source": {
+        "source": "github",
+        "repo": "audichuang/prompt-glance",
+        "sha": "08d1e9c66c6460de616e914505d80beb86ee9b75"
+      }
+    },
+    {
+      "name": "collapse-work",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/FrogAi/Xenopus.git",
+        "path": "claude/mods/collapse-work",
+        "sha": "db04cd0def7f7d5503525da0783aa521ce9ea73e"
+      }
     }
   ]
 }
