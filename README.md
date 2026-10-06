@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 873 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 879 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 873 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 879 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 873 mods, see the Chinese section below.
+For detailed descriptions of all 879 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 873 个精选 Claude Code mods，按类别组织：
+以下是本市场的 879 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -406,6 +406,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | slab-deck | SLAB 深色风格的控制台：提示框上方的工作条显示回合耗时、步数、工具与 token；/deck 打开停靠窗格（概览、上下文、工具时间线、子代理、git、tmux、用量、providers 分页）和弹窗，可在 tmux 里切窗口、分屏、窥看其他窗格；/deck-band 把工作条设为 full、compact 或 off。备注：本机运行只读 git 命令与 tmux 命令（只操作本会话窗格或新开窗口，不关闭别的窗格）；会话开始及之后每 5 分钟运行一次插件设置里的 providersCommand（默认 provider-usage，未安装时只在 providers 页显示错误）并读取其 JSON 输出；把每回合输出 token 写到 ~/.cache/slab-deck/ 供仓库里的 statusline-slab.sh 使用（该脚本不随插件安装）；tool.call 只记录不改写；不联网。 | MIT | [链接](https://github.com/5omeOtherGuy/slab-deck/tree/main/mod/slab-deck) |
 | cc-mod-suggestion-sentence-case | 把提示框里按 Tab 可接受的灰色建议文字改成句子格式：首字母大写、结尾补句号；斜杠命令、已以标点结尾、或以数字/代码/引号开头的保持原样。备注：只改 prompt.suggest 的建议文字（也包括其他插件提出的建议），不改你实际提交的提示；整个模块约 20 行；不联网。 |  | [链接](https://github.com/Vatroslav/cc-mod-suggestion-sentence-case/tree/main/plugin) |
 | sonar-dock | 科幻雷达风格的 HUD：/sonar 打开侧边窗格，显示雷达扫描（每次工具调用一个光点）、威胁等级、用量仪表、每回合工具时间线和活动日志，并给对话套上磷光风格皮肤（消息、工具调用、等待动画、回合耗时）；/sonar light、dark、auto 切换配色，/sonar off 关闭皮肤。备注：tool.call 与 prompt.submit 只记录统计、不改写；Bash 命令命中危险模式时只弹提示并提高威胁等级，不拦截；macOS 上可能运行 defaults read 判断深浅色；动画用了多个高频定时器（约 50–80 毫秒一帧），较耗 CPU；不联网。 |  | [链接](https://github.com/putraridho/sonar-dock) |
+| cc-status | 提示框上方一行状态：当前模型简称、上下文用量圆圈（低于 50% 绿、低于 75% 黄、以上红）与窗口大小，以及 secret-guard 锁状态。备注：锁状态读取同作者 quorumless/claude-plugins 里 secret-guard mod 写入的状态，**本市场未收录该 secret-guard（与已有同名条目重名）**，没装它时会一直显示红色「🔓 !」；另会读取 ~/.claude/.ponytail-active 显示 ptl 标记；只读，不联网、不运行外部命令。 |  | [链接](https://github.com/quorumless/claude-plugins/tree/main/plugins/cc-status) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -647,6 +648,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | repo-heatmap | 当前项目的文件树状图，面积按文件大小，颜色随 Claude 读取、搜索、编辑和失败操作变化；/heatmap open。备注：跑本机 git ls-files/ls-tree 和 wc 统计文件；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/repo-heatmap) |
 | output-tray | 侧边面板收集本会话新建的文件，可打开、在 Finder 中显示、复制路径；/tray。备注：Bash 前后用本机 git status/find 对比新文件；打开和显示用 macOS 的 open 命令，只在你点按钮时运行；注册一个自己的工具供 Claude 打开面板；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/output-tray) |
 | changes-receipt | 每轮结束给一张白话收据：新建、修改、删除了哪些文件，经工具还是 shell，失败的尝试单独列出；/receipt 查看。备注：用本机 git status/hash-object/ls-tree/diff 比对；tool.call 先放行再记录；/receipt 与已有 session-receipt 的命令同名，别同时装；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/changes-receipt) |
+| recent-files | 侧边窗格列出本会话最近新建、编辑或删除的 5 个文件：文件名是可点的终端链接，附相对目录、来源（Write、Edit、Bash）、是否子代理和时间；会话开始自动打开，/recent-files 重新打开。备注：tool.call 只在工具执行后记录路径，原样放行；每次 Bash 调用前后会对已知仓库各跑一次本机 git status（--no-optional-locks、禁用 fsmonitor）比较差异，仓库很大时略增开销；列表存进插件 store 以便重载后恢复；不联网；作者在 2.1.290、2.1.291 上测试。 | MIT | [链接](https://github.com/ryoupr/claude-code-recent-files) |
 
 ### 子代理管理 Subagent Management
 
@@ -683,6 +685,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | vnext-session-record | 记录本会话启动的子代理（类型、模型、状态、简短描述）、每次请求的模型和 token 用量，并在 /vnext 面板里显示。备注：所有钩子只观察、原样传递；不保存提示词正文，只存子代理描述前 120 字；写到项目 .vnext/host/<会话id>.jsonl（项目没有 .vnext 时写 ~/.vnext/host/），单文件上限 3 MB；纯本机，不联网；为 vNext workforce 设计，单独用也能看子代理面板。 | MIT | [链接](https://github.com/RazAndAlex/vnext-workforce/tree/main/plugins/vnext-session-record) |
 | clawd-crew | 对话旁的面板里，把每个正在跑的 Claude Code 会话和它们开的子代理都画成一只会动的像素 Clawd（英文界面），下面写着在做什么、用的模型、跑了多久、用了多少 token；顶部显示套餐剩余限额和今天/本周/全部的用量与费用（含已关闭的会话）。/clawds 打开，/clawds hide 关闭，/clawds style pixels 或 svg 切换画法。备注：会在 ~/.claude/clawd-crew/ 下写各会话的状态和用量缓存文件，并读取 ~/.claude/projects 和 sessions 下的对话记录统计用量（macOS/Linux 用 python3、Windows 用 PowerShell 本机执行内置脚本）；当没有任何会话拿到限额数据时，最多每 5 小时自动发一次 1 token 的 haiku 请求（内容固定为 Reply with OK.，不含会话内容）来读取限额，会产生极少量用量；tool.call、agent.spawn 只观察、原样传递；不改提示，不联网（除上述 haiku 请求）。 | MIT | [链接](https://github.com/hudcolighting/clawd-crew) |
 | agents-side | 侧边窗格实时显示主循环和它派生的每个子代理（树状），含状态、最近工具、耗时、token 和回答；状态行显示运行中/已完成数量与 ctx 百分比；/agents-side 开关，/agents-side clear 清掉已完成的，窗格里 1–9 选行。备注：会话开始默认自动打开窗格（openOnStart 可关）；每 2 秒用 $.agent.list 刷新；agent.spawn、tool.call、turn.* 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/agents-side) |
+| agent-status | 提示框上方列出正在运行的后台代理：状态点、类型、已运行时长、距上次回复多久、最近一次调用的工具和任务名，运行中沉默超过 30 秒变黄、超过 2 分钟变红；/bg-agents 打开窗格查看本会话全部代理（含已结束的）和工具调用次数。备注：agent.spawn、turn.step、tool.call 只记录时间和工具名，原样放行；有代理在运行时每秒重绘一次；不联网、不运行外部命令。 |  | [链接](https://github.com/quorumless/claude-plugins/tree/main/plugins/agent-status) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -767,6 +770,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | focus-cat-companion | 提示框上方 4 行高的 8×8 像素小猫加本地番茄钟（韩语界面）：Claude 回答时小猫来回走，等你批准权限时停下，正常答完跳一段 8 帧小舞；番茄钟默认 25/5/15 分钟、每 4 个专注一次长休息，/focus-cat start、pause、reset、next、show、hide、character a 或 b、motion on 或 off 控制。备注：只在终端版显示；其他 mod 已经在提示框上方画了内容时自动让位不显示；tool.call 和 classic 权限事件只观察、原样传递；只用 $.store/$.state 存计时和偏好；纯本机，不联网。 | MIT | [链接](https://github.com/b1ueseoyoung/focus-cat-companion) |
 | tsunu-avatar | 侧边窗格里的角色立绘（阿宇）跟着会话状态换表情：待机、思考中、工作中、等你回复、出错了、完成了（中文界面）；kitty/Ghostty 显示 PNG，其他终端用预先转好的字符画。备注：每次状态变化把会话 ID、工作目录、状态和工具名 POST 到本机 127.0.0.1:47321（同仓库的桌面小窗口），没开就静默失败、不影响会话；不连外网；所有 hook 只观察、原样放行。 | MIT | [链接](https://github.com/Tsun-u/tsunu-pet/tree/main/mod) |
 | terminal-pet | 提示框上方的像素小螃蟹，跟着 Claude 读、写、等待、完成、出错做反应，肚子大小表示对话有多满；/pet 控制。备注：tool.call 只观察、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/terminal-pet) |
+| meatball | 提示框上方一颗像素肉丸跟着 Claude 的状态动：工作时来回滚、编辑文件时咀嚼、跑命令时盯着看、出错时皱眉、等你批准时冒感叹号、回合结束蹦一下、闲置 5 分钟打瞌睡，上下文越满越圆；桌面版画 SVG，终端里是一行彩色表情；/meatball 显示或隐藏，/meatball width 设置宽度。备注：tool.call、tool.check 只观察、原样放行；终端里移动时约每 120 毫秒重绘一次；不联网、不运行外部命令。 | MIT | [链接](https://github.com/jesseorndorff/meatball/tree/main/plugin) |
 
 ### 图片与媒体 Images & Media
 
@@ -800,6 +804,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | now-playing | 提示框上方一行显示 Spotify 正在播放的歌曲、进度和当前歌词，带上一首/暂停/下一首按钮，/music 也能控制（仅 macOS）。备注：本机 osascript 控制 Spotify；经 $.http 向 lrclib.net 查歌词，只发送歌名、歌手等曲目信息，不发送会话内容。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/now-playing) |
 | clauisc | 提示框上方的 Apple Music 正在播放条：像素封面、歌名、歌手和跟着节拍晃动的 Claude 玩偶。备注：仅 macOS；每 2 秒用本机 osascript 只读查询正在播放信息（首次会弹 macOS 授权）；其它系统只显示无法读取。 | MIT | [链接](https://github.com/mireabot/Clauisc/tree/main/plugins/clauisc) |
 | pixel-player | /music 在会话旁打开一个像素风音乐播放器面板（多款皮肤，/music skins 切换），播放你自己的歌单（YouTube 链接、音频直链或本地文件），可暂停、切歌、调音量，/music add 添加曲目。备注：需本机装 mpv（放 YouTube 还要 yt-dlp），用 $.process.spawn 启动 mpv 播放，用 $.process.run 调 /usr/bin/nc 经本机 Unix socket 控制 mpv，并加载仓库自带的 mpv/progress.lua 回报进度；歌单存在 ~/.claude/pixel-play/playlist.txt；只有面板和命令，不碰提示和工具；联网只限 mpv/yt-dlp 拉取你歌单里的音频。 | MIT | [链接](https://github.com/chrisluo5311/Pixel-Play) |
+| paste-preview | 在提示框粘贴图片（出现 [Image #N]）时，在提示框上方显示缩略图：任意真彩终端用半格字符画，Ghostty、kitty 自动改用终端图像协议显示原图；按钮可用系统看图程序打开原图或收起，发送消息或删掉图片标记后自动收起；/paste-preview now、open、clear、hd、text、auto、off（繁体中文界面）。备注：**仅限 macOS**（用插件自带的 bin/clip.js 经 osascript 读剪贴板）；每 400 毫秒读一次输入框文字，只检测图片标记、不改写；prompt.submit 只清空预览、原样放行；剪贴板原图另存到插件目录 .cache/，超过一天自动删除；不联网。 |  | [链接](https://github.com/craneyu/claude-paste-preview) |
 
 ### 任务与项目 Task & Project
 
@@ -1009,6 +1014,7 @@ For detailed descriptions of all 873 mods, see the Chinese section below.
 | ask | 侧边提问窗格：/ask 问题 或在窗格里输入，Claude 在后台回答，问题和答案都不进主对话、不占上下文；「Suggest next prompts」给三个下一步提示，点 Use 填进输入框；可复制、删除、重试，保留最近 30 条。备注：每次提问由你触发，用 $.model.fork 基于本会话回答（共享提示缓存，有少量费用；会话还没回复时改用 $.model.complete 调 Sonnet，只发问题和窗格里最近 3 条问答）；Use 只填草稿不代你提交；不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/ask) |
 | answer | /answer 把 Claude 上一条回复里提出的问题抽出来，放进 Claude Code 自带的提问对话框（分页、多选、可自填、带复查页）逐个作答，答完后合成一条回复发出；/answer --debug 查看抽取过程。备注：仅在你运行 /answer 时把上一条助手回复原文发给 $.model.complete（默认 haiku，可在插件设置改模型）来抽取问题，无脱敏；tool.call 只替换它自己打开的占位提问框里的问题，Claude 自己发起的 AskUserQuestion 原样放行；作答完成后以你的身份用 $.prompt.submit 提交答案；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/PeteChu/cc-answer) |
 | wtf | 用鼠标划选对话里的一段文字后运行 /wtf（或 /wtf <文字>），侧边窗格会结合当前对话解释它的意思，可在窗格里追问，问答不写进对话；中文问题用中文界面。备注：仅在你运行 /wtf 或点它的按钮时，用 $.model.fork 带当前会话上下文提问；恢复的会话还没有可 fork 的内容时，改用 $.model.complete 发送最近的对话记录原文（最多约 8 万字符，用当前会话模型），无脱敏；可选的快捷键按钮默认关闭；除 Claude 自身 API 外不联网。 | MIT | [链接](https://github.com/orangeJigglypuff/better-btw/tree/main/wtf) |
+| quick-replies | 把 Claude Code 自带的「下一条消息建议」变成提示框上方的按钮，点击或在空提示框里按 1–4 直接发送；/replies 开关、查看状态；英文或德文界面。备注：只在你点按钮或按数字键时以你的身份 $.prompt.submit 发送，从不自动发送；prompt.edit 只在建议按钮显示时吞掉那个数字键，其他输入原样放行；prompt.suggest 只读；可选的 more（默认关闭，/replies more on 开启）开启后每次回答结束都会自动用 $.model.fork 带完整会话上下文再要最多 3 条建议，多花一次简短回答的 token；除 Claude 自身 API 外不联网；GPL-3.0 附加条款要求转载时保留作者署名。 | GPL-3.0 | [链接](https://github.com/FynnXland/fynn-mods/tree/main/mods/quick-replies) |
 
 ---
 
