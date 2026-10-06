@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 848 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 858 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 848 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 858 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 848 mods, see the Chinese section below.
+For detailed descriptions of all 858 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 848 个精选 Claude Code mods，按类别组织：
+以下是本市场的 858 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -224,6 +224,8 @@ For detailed descriptions of all 848 mods, see the Chinese section below.
 | mod-jxf-fancy-details | 每条提示和工具调用旁显示计时，每条回复前加用量前缀（token 与花费），底部模式行右侧显示本会话和今日累计、订阅 5 小时/7 天限额条和上下文占用；8 个选项可调（放在模式行旁或提示框上方、是否拆分缓存 token 等）。备注：prompt.submit 只记录时间和文本用于对齐显示，不改写；turn.step 流式原样转发；tool.call 只计时、结果原样返回，每次后本机跑 git branch --show-current；会把工具组强制展开显示；替换底部 SessionMode 行（不调 next），选放在提示框上方时 AbovePrompt 也不调 next；每日累计写在 ~/.local/state/mod-jxf-fancy-details/days；限额读自 Claude 响应头；纯本机，不联网。该仓库是 fj/agent-plugins 的只写发布镜像。 |  | [链接](https://github.com/fj/jxf-agent-plugins-mod-jxf-fancy-details-claude) |
 | netdive-quota | 磷光绿「电脑潜入」风格侧边窗格（日文界面）：5 小时/每周额度环形倒计时、花费与缓存、上下文内存分布、工具与子代理执行轨迹；提示框上方显示正在跑的 Bash 和被拦下的工具；/netdive 打开。备注：prompt.submit 只清除警告、原样放行；tool.call、agent.spawn、turn.complete 只观察；AbovePrompt 有内容时由本 mod 绘制、不调 next；不联网。 | MIT | [链接](https://github.com/jnk0vc/netdive-quota) |
 | burn-rate | 提示框上方的「油表」：上下文占用、输入/输出 token、花费、每小时花费、套餐限额窗口和最近几轮的迷你折线；超过设定百分比（默认 80%）时提醒一次；/burn 打印同样数字。备注：只读 $.session.usage 和 turn.complete 用量并原样返回；不联网。 | MIT | [链接](https://github.com/ryx2/slopshopper/tree/main/mods/burn-rate) |
+| token-band | 提示框上方一行 token 用量条（中文界面）：上下文占用与百分比、本轮输出、平均输出速度、累计输入/输出/缓存读和费用；/tokens 收起或展开。备注：只读 $.session.usage 和 turn.step 用量并原样转发；不联网。 |  | [链接](https://github.com/crebot51/jack-mods/tree/main/plugins/token-band) |
+| sl-mod | 代替 statusLine 命令的轻量状态栏，画在提示框上方：目录、模型与 effort、git 分支状态、项目版本，以及上下文、5 小时、7 天和按模型的周额度条；/sl-settings 选每行显示什么。备注：额度通过 $.session.authorize 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容），429 会退避；跑本机 git status/describe/rev-list；读项目里的 package.json 等取版本号。 |  | [链接](https://github.com/ducban/sl-mod) |
 
 ### 上下文管理 Context Management
 
@@ -260,6 +262,7 @@ For detailed descriptions of all 848 mods, see the Chinese section below.
 | handoff-relay | 提示框上方的 Handoff 按钮：点击运行 /handoff，上下文到 18 万 token 时亮起；可与 cache-meter、next-steps 合成一条。备注：只有你点按钮才运行 /handoff；纯本机；界面英语或乌克兰语。 | MIT | [链接](https://github.com/drdickgraysonjr/chalkery/tree/main/plugins/handoff-relay) |
 | cache-keeper | 会话闲置时给提示缓存保温：默认每 50 分钟（可配）用 $.model.fork 对对话前缀发一个极小请求，避免缓存一小时后过期、下次冷启动变贵；提示框上方显示状态，/cache-keeper 查看或开关。备注：保温请求只是一个词的固定提示，不改写你的 prompt、不往对话里注入内容；每次保温会产生少量费用。 | MIT | [链接](https://github.com/davidho27941/cockpit/tree/main/plugins/cache-keeper) |
 | context-board | 提示框上方的紧凑上下文卡片：已用/窗口、压缩阈值、分类堆叠色条和图例，外加一行本会话实际加载的 kit（skills、agents、CLAUDE.md/AGENTS.md、已启用插件、最近用的 skill）；状态行显示 ctx 百分比；/context-board 开关完整明细窗格，/context-board refresh 重新精确计数。备注：AbovePrompt 由本 mod 绘制、不调 next，会盖掉其他 mod 在提示框上方的显示；读 settings 里已启用插件名和 CLAUDE.md/AGENTS.md 文件名；refresh 走 Claude Code 自带的 token 计数（$.session.usage full）；tool.call 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/context-board) |
+| auto-handoff | 上下文快满（默认 85%）或即将压缩前，自动把进度、决定和下一步写成交接文件放到项目的 handoff/ 目录，下个会话可接着做；/autohandoff 查看状态、now、resume、threshold、on/off。备注：自动用 $.model.fork 基于本会话写交接（额外一次模型调用）并写入项目目录；只有你运行 /autohandoff resume 才代你提交一句「读取 handoff 继续」的提示；session.compact 只记录不改写；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/auto-handoff) |
 
 ### UI 与主题 UI & Themes
 
@@ -392,6 +395,7 @@ For detailed descriptions of all 848 mods, see the Chinese section below.
 | html-shelf | 让终端里 Claude 的回复更顺手（中文界面）：每个写完的代码块上方加一行语言名和「复制」按钮，点一下把代码原文（末尾不带换行）复制到剪贴板；回复里真实存在的 .html 路径变成可点链接，点了用默认浏览器打开；/open [N] 打开最近提到或写出的第 N 个 HTML。备注：打开 HTML 用 explorer.exe，路径按 Windows 格式处理，所以链接和 /open 只在 Windows 上可用（复制按钮各平台都能用）；终端里有代码块或 HTML 链接时，回复（AssistantMessage）由它自己画、不调 next，会盖掉其他改回复渲染的 mod；tool.call 只记下写出的 .html 路径、原样传递；纯本机，不联网。 |  | [链接](https://github.com/HUIHUI59/claude-code-mods/tree/main/html-shelf) |
 | sbs-deck | SecureBine 科幻风终端样式：你的每条消息放进金色框，标题为「OPERATOR // UPLINK: 你的 Claude 账号邮箱」；Claude 忙时排队的消息是蓝灰框，被接收后变金色；回复第一块加「CLAUDE // DOWNLINK」标题；工具调用压成一行（▸ 运行中 / ✓ 完成 / ✗ 失败），成功的输出隐藏；关掉安静模式后 Bash/MCP 输出按模式着色；加载动画换成 295 条科幻短语的解码效果，回合用时文字改成「Jacked out」；/sbs on、off、quiet、color 切换。备注：读取本机 ~/.claude.json 里的 oauthAccount.emailAddress 显示在消息框标题上，录屏或共享屏幕时会露出邮箱；prompt.submit 只记录排队的消息用来上色、原样传递，不改提示；安静模式下工具行和工具输出（ToolUse/ToolResult）由它自己画、不调 next，会盖掉其他改工具行的 mod，除失败外看不到工具输出；图标需要 Nerd Font；仓库里的 install.sh 是给手动安装用的（会改 settings.json），从市场安装不会运行；纯本机，不联网。 |  | [链接](https://github.com/scottcrosby-securebine/sbs-deck) |
 | linkify | 把 Claude 回复里的裸 URL 和 GitHub 引用（#123、owner/repo#123）显示成可点击链接；#123 指向当前仓库（读 git remote 判断 GitHub 仓库），代码块、行内代码和已有链接不动。备注：ui.render AssistantMessage 只改显示用的文字再调 next，存下来的消息和模型读到的内容不变；不联网。 | MIT | [链接](https://github.com/babarot/claude-linkify) |
+| coral-skin | 珊瑚/墨/奶油配色重新绘制消息和工具行，读取、编辑、命令、危险操作用不同颜色标签区分；/skin 开关。备注：tool.call 只计数、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/coral-skin) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -628,6 +632,11 @@ For detailed descriptions of all 848 mods, see the Chinese section below.
 | session-map | 实时窗格列出本会话 Claude 读过、编辑过、写过的文件（以及 Glob 模式），按 monorepo 的 apps/* 分组；/session-map 开关，/session-map clear 清空。备注：tool.call 只观察 Read/Edit/Write/Glob 的路径、原样放行，列表只存在内存里；窗格默认不自动打开；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/session-map) |
 | slop-detector | 拦下把代码换成「... rest of the code」之类占位注释的 Write/Edit，并在提示框上方和 /slop 窗格记录 TODO 桩、未实现异常、调试打印、@ts-ignore 等残留（strict 模式也拒绝占位桩）。备注：tool.call 只拒绝不改写；回合结束在回答下方加一行发现数量（不改回答本身）；不联网。 | MIT | [链接](https://github.com/ryx2/slopshopper/tree/main/mods/slop-detector) |
 | receipts | 本会话 Claude 动过什么的清单：新建/编辑的文件、跑过的命令及是否失败、每轮后的 git diffstat；spinner 上显示计数，/receipts 打开窗格、打印 Markdown 或复制到剪贴板。备注：tool.call 先放行再记录、不改写；回合结束跑本机 `git diff --shortstat`；/receipts 与已有的 /receipt 不同名；不联网。 | MIT | [链接](https://github.com/ryx2/slopshopper/tree/main/mods/receipts) |
+| plugin-kit | 给其他 mod 用的共享小部件库：往每个 mod 的 $ 上加 $.kit，统一画进度条、分段、列表等（可选 unicode/ascii、条宽、列表长度）。备注：库 mod，单独安装没有可见效果，只在声明依赖它的 mod 里起作用；只处理自己生成的按钮；不联网。 |  | [链接](https://github.com/aeriondyseti/hook-kit/tree/main/plugin) |
+| flight-recorder | 回合内部的实时甘特时间线：模型请求、工具调用和子代理分泳道显示，附每道的 token 和费用；/timeline 打开。备注：prompt.submit 只读来源、原样放行；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/flight-recorder) |
+| repo-heatmap | 当前项目的文件树状图，面积按文件大小，颜色随 Claude 读取、搜索、编辑和失败操作变化；/heatmap open。备注：跑本机 git ls-files/ls-tree 和 wc 统计文件；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/repo-heatmap) |
+| output-tray | 侧边面板收集本会话新建的文件，可打开、在 Finder 中显示、复制路径；/tray。备注：Bash 前后用本机 git status/find 对比新文件；打开和显示用 macOS 的 open 命令，只在你点按钮时运行；注册一个自己的工具供 Claude 打开面板；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/output-tray) |
+| changes-receipt | 每轮结束给一张白话收据：新建、修改、删除了哪些文件，经工具还是 shell，失败的尝试单独列出；/receipt 查看。备注：用本机 git status/hash-object/ls-tree/diff 比对；tool.call 先放行再记录；/receipt 与已有 session-receipt 的命令同名，别同时装；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/changes-receipt) |
 
 ### 子代理管理 Subagent Management
 
@@ -747,6 +756,7 @@ For detailed descriptions of all 848 mods, see the Chinese section below.
 | clawd-tales | 提示框上方的像素 Clawd 把 Claude 正在做的事演出来（英文字幕）：每次工具调用换一个动作和一行字幕（Read 看书、Edit 挖土、Grep 潜行、Bash 奔跑等），子代理按模型颜色走进来当帮手，等你批准权限或回答问题时跳起并显示红色「!」，测试失败掉下虫子、通过后吃掉，上下文越满天气越差（50% 多云、70% 下雨、85% 打雷），另显示上下文和套餐限额百分比、待办进度、连击数；/tales on、off、calm、lively、demo、hat、face、scarf 开关和换装。备注：字幕用模板生成，不调用模型、不额外计费；classic.SessionStart/UserPromptSubmit/PermissionRequest 和 prompt.submit、tool.call、agent.spawn 都只观察、原样传递，不改提示、不注入上下文、不改权限；只用 $.store 记住开关、装扮和成长进度；会占用提示框上方多行，空间不够时自动缩成一行；AbovePrompt 调 next，可与其他 mod 叠加；部分像素素材来自 Claude Fables（MIT，见 NOTICE）；纯本机，不联网。 | MIT | [链接](https://github.com/plaxagoras/clawd-tales) |
 | focus-cat-companion | 提示框上方 4 行高的 8×8 像素小猫加本地番茄钟（韩语界面）：Claude 回答时小猫来回走，等你批准权限时停下，正常答完跳一段 8 帧小舞；番茄钟默认 25/5/15 分钟、每 4 个专注一次长休息，/focus-cat start、pause、reset、next、show、hide、character a 或 b、motion on 或 off 控制。备注：只在终端版显示；其他 mod 已经在提示框上方画了内容时自动让位不显示；tool.call 和 classic 权限事件只观察、原样传递；只用 $.store/$.state 存计时和偏好；纯本机，不联网。 | MIT | [链接](https://github.com/b1ueseoyoung/focus-cat-companion) |
 | tsunu-avatar | 侧边窗格里的角色立绘（阿宇）跟着会话状态换表情：待机、思考中、工作中、等你回复、出错了、完成了（中文界面）；kitty/Ghostty 显示 PNG，其他终端用预先转好的字符画。备注：每次状态变化把会话 ID、工作目录、状态和工具名 POST 到本机 127.0.0.1:47321（同仓库的桌面小窗口），没开就静默失败、不影响会话；不连外网；所有 hook 只观察、原样放行。 | MIT | [链接](https://github.com/Tsun-u/tsunu-pet/tree/main/mod) |
+| terminal-pet | 提示框上方的像素小螃蟹，跟着 Claude 读、写、等待、完成、出错做反应，肚子大小表示对话有多满；/pet 控制。备注：tool.call 只观察、原样放行；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/terminal-pet) |
 
 ### 图片与媒体 Images & Media
 

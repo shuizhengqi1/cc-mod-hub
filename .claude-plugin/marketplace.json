@@ -6676,6 +6676,95 @@
         "path": "mods/receipts",
         "sha": "98723a436eca88a43c2586d0971c5cd9ace05ad6"
       }
+    },
+    {
+      "name": "token-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/crebot51/jack-mods.git",
+        "path": "plugins/token-band",
+        "sha": "d0122206e9c09e9260c7dbed253948033a66bd48"
+      }
+    },
+    {
+      "name": "plugin-kit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/aeriondyseti/hook-kit.git",
+        "path": "plugin",
+        "sha": "b3c3beec6562d25f0e4c1f624f58301320f528b3"
+      }
+    },
+    {
+      "name": "sl-mod",
+      "source": {
+        "source": "github",
+        "repo": "ducban/sl-mod",
+        "sha": "0cdca02b8b95c29d486cb50fc295aadc1abf8679"
+      }
+    },
+    {
+      "name": "terminal-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/terminal-pet",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "coral-skin",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/coral-skin",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "repo-heatmap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/repo-heatmap",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "flight-recorder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/flight-recorder",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "output-tray",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/output-tray",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "changes-receipt",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/changes-receipt",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
+    },
+    {
+      "name": "auto-handoff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/promptadvisers/claude-mods-starter-kit.git",
+        "path": "plugins/auto-handoff",
+        "sha": "36f76db2eaace816c651a0c1ad3e6cb46f770432"
+      }
     }
   ]
 }
