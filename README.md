@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 837 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 841 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 837 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 841 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 837 mods, see the Chinese section below.
+For detailed descriptions of all 841 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 837 个精选 Claude Code mods，按类别组织：
+以下是本市场的 841 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -257,6 +257,7 @@ For detailed descriptions of all 837 mods, see the Chinese section below.
 | dashboard | 状态行显示上下文已用/总量和百分比，以及主循环输出 tok/s。备注：turn.step 只计时并原样转发；纯本机 UI。 |  | [链接](https://github.com/Cohey0727/CodingAgentTools/tree/main/claude/mods/dashboard) |
 | handoff-relay | 提示框上方的 Handoff 按钮：点击运行 /handoff，上下文到 18 万 token 时亮起；可与 cache-meter、next-steps 合成一条。备注：只有你点按钮才运行 /handoff；纯本机；界面英语或乌克兰语。 | MIT | [链接](https://github.com/drdickgraysonjr/chalkery/tree/main/plugins/handoff-relay) |
 | cache-keeper | 会话闲置时给提示缓存保温：默认每 50 分钟（可配）用 $.model.fork 对对话前缀发一个极小请求，避免缓存一小时后过期、下次冷启动变贵；提示框上方显示状态，/cache-keeper 查看或开关。备注：保温请求只是一个词的固定提示，不改写你的 prompt、不往对话里注入内容；每次保温会产生少量费用。 | MIT | [链接](https://github.com/davidho27941/cockpit/tree/main/plugins/cache-keeper) |
+| context-board | 提示框上方的紧凑上下文卡片：已用/窗口、压缩阈值、分类堆叠色条和图例，外加一行本会话实际加载的 kit（skills、agents、CLAUDE.md/AGENTS.md、已启用插件、最近用的 skill）；状态行显示 ctx 百分比；/context-board 开关完整明细窗格，/context-board refresh 重新精确计数。备注：AbovePrompt 由本 mod 绘制、不调 next，会盖掉其他 mod 在提示框上方的显示；读 settings 里已启用插件名和 CLAUDE.md/AGENTS.md 文件名；refresh 走 Claude Code 自带的 token 计数（$.session.usage full）；tool.call 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/context-board) |
 
 ### UI 与主题 UI & Themes
 
@@ -388,6 +389,7 @@ For detailed descriptions of all 837 mods, see the Chinese section below.
 | collapse-work | 像 Codex 一样，回合结束后把这一轮的中间过程（工具调用和过程文字）折叠到一行「Worked for …」下面，只留最终回答；切到详细视图时恢复显示。备注：只在终端生效（非全屏视图下不折叠）；session.append 只读取消息 id 用来分组、原样传递，不改会话内容；纯本机，不联网。 | Unlicense | [链接](https://github.com/FrogAi/Xenopus/tree/master/claude/mods/collapse-work) |
 | html-shelf | 让终端里 Claude 的回复更顺手（中文界面）：每个写完的代码块上方加一行语言名和「复制」按钮，点一下把代码原文（末尾不带换行）复制到剪贴板；回复里真实存在的 .html 路径变成可点链接，点了用默认浏览器打开；/open [N] 打开最近提到或写出的第 N 个 HTML。备注：打开 HTML 用 explorer.exe，路径按 Windows 格式处理，所以链接和 /open 只在 Windows 上可用（复制按钮各平台都能用）；终端里有代码块或 HTML 链接时，回复（AssistantMessage）由它自己画、不调 next，会盖掉其他改回复渲染的 mod；tool.call 只记下写出的 .html 路径、原样传递；纯本机，不联网。 |  | [链接](https://github.com/HUIHUI59/claude-code-mods/tree/main/html-shelf) |
 | sbs-deck | SecureBine 科幻风终端样式：你的每条消息放进金色框，标题为「OPERATOR // UPLINK: 你的 Claude 账号邮箱」；Claude 忙时排队的消息是蓝灰框，被接收后变金色；回复第一块加「CLAUDE // DOWNLINK」标题；工具调用压成一行（▸ 运行中 / ✓ 完成 / ✗ 失败），成功的输出隐藏；关掉安静模式后 Bash/MCP 输出按模式着色；加载动画换成 295 条科幻短语的解码效果，回合用时文字改成「Jacked out」；/sbs on、off、quiet、color 切换。备注：读取本机 ~/.claude.json 里的 oauthAccount.emailAddress 显示在消息框标题上，录屏或共享屏幕时会露出邮箱；prompt.submit 只记录排队的消息用来上色、原样传递，不改提示；安静模式下工具行和工具输出（ToolUse/ToolResult）由它自己画、不调 next，会盖掉其他改工具行的 mod，除失败外看不到工具输出；图标需要 Nerd Font；仓库里的 install.sh 是给手动安装用的（会改 settings.json），从市场安装不会运行；纯本机，不联网。 |  | [链接](https://github.com/scottcrosby-securebine/sbs-deck) |
+| linkify | 把 Claude 回复里的裸 URL 和 GitHub 引用（#123、owner/repo#123）显示成可点击链接；#123 指向当前仓库（读 git remote 判断 GitHub 仓库），代码块、行内代码和已有链接不动。备注：ui.render AssistantMessage 只改显示用的文字再调 next，存下来的消息和模型读到的内容不变；不联网。 | MIT | [链接](https://github.com/babarot/claude-linkify) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -619,6 +621,7 @@ For detailed descriptions of all 837 mods, see the Chinese section below.
 | coverage-band | Claude 每次跑完测试后显示测试覆盖率：带阈值标记的进度条、相比上次的涨跌、低于阈值的模块；/coverage 打开每个模块的覆盖率面板；默认挂在提示框下方提示行，可改为信息带或状态栏。备注：tool.call 只在 Bash 测试命令跑完后观察、原样传递；本机用 `find` 找 lcov/cobertura 报告并读取，历史存在插件 store；选 band 时 AbovePrompt 不调 next；不联网。 | MIT | [链接](https://github.com/santtisosa/coverage-band) |
 | ci-line | 提示框上方一行显示当前分支这次提交的 CI 状态：每个 workflow 一个检查点，全绿时一行，运行中或失败的 workflow 展开到各个 job；git push 或 gh pr/run 后自动加快刷新，/ci 手动刷新并切换展开。备注：需要本机已登录的 gh 命令行，只用 `gh api`/`gh run view` 读取本仓库的 workflow runs、check runs 和 status（只读 GET，不发会话内容）；tool.call 只观察 Bash 命令、原样传递；显示时 AbovePrompt 不调 next，会盖掉其他 mod 的提示框上方内容。 |  | [链接](https://github.com/Halvanhelv/claude-ci-line) |
 | repo-ledger | 提示框上方一行列出本会话动过、还没收尾的 git 仓库（繁体中文界面）：每个仓库显示「名称(分支)」和未 commit 文件数（含未跟踪文件），干净的打勾，↑N 是未 push 的 commit 数，⎇N 是另开的 worktree 数，末尾「本輪 N 檔」是本轮 Edit/Write 改过的仓库内文件数（超过 5 个变橙色）；没有未 commit 文件、本轮也没改文件时整行不显示。备注：只跟踪 Edit/Write/NotebookEdit 改到的文件所在仓库，以及 Bash 命令里 cd/pushd/git -C 后面的字面路径；每轮结束和跑过 git 命令后，在这些仓库里自动执行本机只读 git（rev-parse、status、worktree list），status 带 -c core.fsmonitor=false，但仓库自己 .git/config 里的其他设置（如 filter）仍可能被执行，只在信任的仓库里用；tool.call 只观察、原样传递；AbovePrompt 调 next，可与其他 mod 叠加；图标需要 Nerd Font；不改提示，不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/repo-ledger) |
+| session-map | 实时窗格列出本会话 Claude 读过、编辑过、写过的文件（以及 Glob 模式），按 monorepo 的 apps/* 分组；/session-map 开关，/session-map clear 清空。备注：tool.call 只观察 Read/Edit/Write/Glob 的路径、原样放行，列表只存在内存里；窗格默认不自动打开；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/session-map) |
 
 ### 子代理管理 Subagent Management
 
@@ -654,6 +657,7 @@ For detailed descriptions of all 837 mods, see the Chinese section below.
 | agents-panel | /agents-panel 打开侧栏，列出本项目、用户和插件定义的子代理（描述、模型、token），每个带 ▶ run 按钮。备注：读本机 .claude/agents/*.md；只有你点 ▶ run 才会用 $.agent.spawn 启动该子代理。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/agents-panel) |
 | vnext-session-record | 记录本会话启动的子代理（类型、模型、状态、简短描述）、每次请求的模型和 token 用量，并在 /vnext 面板里显示。备注：所有钩子只观察、原样传递；不保存提示词正文，只存子代理描述前 120 字；写到项目 .vnext/host/<会话id>.jsonl（项目没有 .vnext 时写 ~/.vnext/host/），单文件上限 3 MB；纯本机，不联网；为 vNext workforce 设计，单独用也能看子代理面板。 | MIT | [链接](https://github.com/RazAndAlex/vnext-workforce/tree/main/plugins/vnext-session-record) |
 | clawd-crew | 对话旁的面板里，把每个正在跑的 Claude Code 会话和它们开的子代理都画成一只会动的像素 Clawd（英文界面），下面写着在做什么、用的模型、跑了多久、用了多少 token；顶部显示套餐剩余限额和今天/本周/全部的用量与费用（含已关闭的会话）。/clawds 打开，/clawds hide 关闭，/clawds style pixels 或 svg 切换画法。备注：会在 ~/.claude/clawd-crew/ 下写各会话的状态和用量缓存文件，并读取 ~/.claude/projects 和 sessions 下的对话记录统计用量（macOS/Linux 用 python3、Windows 用 PowerShell 本机执行内置脚本）；当没有任何会话拿到限额数据时，最多每 5 小时自动发一次 1 token 的 haiku 请求（内容固定为 Reply with OK.，不含会话内容）来读取限额，会产生极少量用量；tool.call、agent.spawn 只观察、原样传递；不改提示，不联网（除上述 haiku 请求）。 | MIT | [链接](https://github.com/hudcolighting/clawd-crew) |
+| agents-side | 侧边窗格实时显示主循环和它派生的每个子代理（树状），含状态、最近工具、耗时、token 和回答；状态行显示运行中/已完成数量与 ctx 百分比；/agents-side 开关，/agents-side clear 清掉已完成的，窗格里 1–9 选行。备注：会话开始默认自动打开窗格（openOnStart 可关）；每 2 秒用 $.agent.list 刷新；agent.spawn、tool.call、turn.* 只观察、原样放行；不联网。 |  | [链接](https://github.com/yogeshvar/mod-claude/tree/main/plugins/agents-side) |
 
 ### 通知提醒 Notifications & Alerts
 
