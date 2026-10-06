@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 912 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 910 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 912 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 910 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 912 mods, see the Chinese section below.
+For detailed descriptions of all 910 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 912 个精选 Claude Code mods，按类别组织：
+以下是本市场的 910 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -236,7 +236,6 @@ For detailed descriptions of all 912 mods, see the Chinese section below.
 | token-panel | 侧边窗格列出本会话每条提示用掉的 token（输入、输出、缓存读、缓存写）和按标准 API 价目估算的费用，子代理的用量计入发起它的那条提示，底部合计；点某一行会把对话滚到那条消息并让它的边框闪红三秒；/token-panel 打开或关闭，选择跨会话保留。备注：只读取本机的会话记录文件（含子代理记录）来统计；价目表写死在插件里，涨价需等作者更新，不含 fast 模式、美国区 1.1 倍和网页搜索费；classic.UserPromptSubmit、SessionStart、PostToolUse 只用来刷新统计，原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/JSUYA/claude-token-panel-mod) |
 | cache-status | 在状态栏显示提示缓存还热多久：剩余时间进度条（绿、快过期变黄、过期红）、本会话缓存命中率和估算的缓存失效次数，过期后提示下一条消息大约要重新缓存多少 token；缓存时长按 CLAUDE_CODE_PROMPT_CACHE_TTL / FORCE_PROMPT_CACHING_5M 判断是 5 分钟还是 1 小时。备注：**只在桌面 App 等非终端界面显示**，终端里不显示（作者建议终端用自己的 statusline 脚本）；数字由主会话每次回复的用量估算，不是官方缓存数据；turn.step 只读用量、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/alfredwesterveld/claude-cache-status) |
 | pace-band | /pace 打开面板：5 小时和每周用量限额各画一条进度条，同时标出窗口时间已过多少，按最近一小时速度预测会不会在重置前用完、何时用完，并按类别显示上下文占用（本机估算）；提示框上方只在需要处理时出现：上下文超过 80% 时给一个 compact 按钮，或某个限额会在重置前用完时给出警告，× 可本会话隐藏。界面语言可选 en/ru/auto。备注：「上一回合花费」要配合同仓库的 pace-statusline 状态栏脚本（不在本市场）才显示，mod 只把这行文字写到临时目录的 `pace-band-turn-<会话>.txt`；限额读数存在 mod 自己的存储里，本机所有会话共用；compact 按钮调用 Claude Code 自带的压缩；不联网、不运行外部命令。 | MIT | [链接](https://github.com/tsalkin/claude-code-statusline/tree/main/experiments/statusline-band) |
-| tokenmunim | 给 Claude 的花费上「保险丝」：按任务记账（Claude 可调用它自带的 start_task/end_task 工具，或你用 /munim task <名称> 开始一个任务），实时记录每一步的花费、token 和工具调用；单个任务超预算（默认 1 美元）就停掉该任务，同一个失败操作连续失败 3 次就拦下，烧钱速度超过每分钟 2 美元暂停一次并警告，整个会话花到 20 美元后拦下所有工具调用；/munim 打开仪表盘（概览、任务、活动、警报、子代理），/munim statement 或 ledger 导出账单。备注：拦截一律是拒绝（deny）工具调用并说明原因，不改写其他调用；唯一的例外是 Claude 用 `echo munim:task …` / `echo munim:end` 标记任务时，这条 Bash 不真正运行，mod 直接回同样的文字；默认的会话 20 美元上限会在花到后拦下所有工具调用，可在插件设置里调整；账单写到项目目录 `.tokenmunim/`（自动加 .gitignore），查看账单时用 `open` 打开文件（macOS）；不联网。 | MIT | [链接](https://github.com/PiyushSinha-9/tokenmunim/tree/main/plugin) |
 | barre-conso | 提示框上方一条法语用量栏：5 小时和 7 天限额的小进度条、百分比和距重置时间，本会话累计输入/输出 token，上下文已用/窗口大小，以及本会话花费。备注：只读本机用量数据；绘制提示框上方区域时不调用 next，会替换掉其他 mod 在这一栏的内容（有调查问卷时让出）；不联网、不运行外部命令。 |  | [链接](https://github.com/contactflowclient-blip/mods-claude) |
 
 ### 上下文管理 Context Management
@@ -419,7 +418,6 @@ For detailed descriptions of all 912 mods, see the Chinese section below.
 | pitch-black | 仿 VS Code「Pitch Black」主题：你的消息变成黑底圆角框加蓝色 ❯，Claude 回复黑底，工具调用和工具组加边框（运行中蓝、出错红），加载提示前加蓝色 ◆，提示框上方加一条蓝色 VS Code 风格状态栏（git 分支、文件夹名、Working/Ready、上一回合秒数和工具调用次数）；/pitch-black on、off 或不带参数切换，选择跨会话保留。备注：会话开始和每回合结束时在本机运行一次 `git rev-parse --abbrev-ref HEAD` 读分支；tool.call 只计数、原样放行；不联网。 |  | [链接](https://github.com/Shahrozjd/shahroz-plugins/tree/main/plugins/pitch-black) |
 | gauravs-panel | 在提示框底部模式标签右侧加一个「◆ Gaurav's Tools」按钮，点开是两排按钮：模型（Haiku、Sonnet、Opus、Fable）和思考强度（Low 到 Max），一键切换，不用再打 /model、/effort；/panel 也可开关；有侧边窗格打开时卡片移到窗格底部显示。备注：按钮只是替你运行 Claude Code 自带的 /model、/effort 命令，并把命令返回的提示弹出来；模型列表写死在插件里，新模型需等作者更新；当前强度从模型请求里读取，turn.step 原样放行；不联网、不运行外部命令。 | MIT | [链接](https://github.com/gauravlahoti/claude-mods/tree/main/plugins/gauravs-panel) |
 | quiet-mode | 安静模式：终端里隐藏工具调用行和回合中间的过渡性回复，只留你的提问和 Claude 最新的回复，状态栏显示本回合已隐藏多少个工具调用；/quiet 开关（on/off）。备注：只改显示，模型收到的内容不变；桌面 App 里工具行照常显示（App 自己会折叠）；prompt.submit 只用来清零计数、原样放行；tool.call 只计数、原样放行；不联网、不运行外部命令。 |  | [链接](https://github.com/robw-raviga/claude-mods/tree/main/quiet-mode) |
-| ccstatus | 可配置的状态栏：一份配置同时驱动提示框上方的一栏、原生状态行、可打开的窗格和超阈值提醒，可显示模型、git 分支/改动、上下文、用量限额、花费等；/ccstatus 开关这一栏，/ccstatus pane、reload、theme <名称> 切换窗格、重载和主题。备注：配置文件在 `~/.config/ccstatus/config.json`（改主题时会先备份为 .bak，用 `mv` 原子替换），git 信息通过本机 `sh -c` 运行 git 读取；hooks 里的 `core.js` 是仓库 packages/core 打包出的可读 JS；`/ccstatus edit` 提示的 `npx ccstatus` 编辑器作者尚未发布到 npm（目前 npm 上没有这个包），不要运行，以免装到别人抢注的同名包，可直接手改配置文件；tool.call 只读取、原样放行；不联网。 | MIT | [链接](https://github.com/sushant-kum/ccstatus/tree/main/plugin) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -709,7 +707,7 @@ For detailed descriptions of all 912 mods, see the Chinese section below.
 | campfire-hud | RPG 风格会话 HUD：提示框上方用宝石色进度条显示上下文、花费和 5 小时/每周用量限额，以及 git 分支和改动数；会话开始自动打开「Session」侧边窗格，把子代理画成围着篝火的奇幻小队（运行中、完成、失败、正在用的工具），并显示模型、花费、用时和仓库状态；/hud 开关窗格。备注：提示框上方显示时不调 next，可能盖住其他 mod 在同一位置的内容；每 5 秒和每回合结束在本机运行 `git status`、`git diff --shortstat` 读仓库状态；tool.call 只记录子代理正在用的工具、原样放行；花费按 token 估算；不联网。 | MIT | [链接](https://github.com/aryswisnu/campfire-hud) |
 | serhan-progress | 子代理进度面板：/agents-info 打开侧边窗格，列出运行中、已完成和计划中的子代理，显示模型、思考强度、任务进度、上下文、估算花费和用时，不同档位有不同造型；配合作者的 serhan 技能时提示框上方还有整体进度条（标题、阶段、已验收/计划任务数）。备注：会给 Claude 增加 progress、step 两个只用于汇报进度的工具；提示框上方进度条只在有进度上报或 serhan- 子代理启动后出现，出现时不调 next；进度条要配合同仓库的 serhan 插件（技能和子代理，不在本市场）才有意义，子代理面板对任何子代理都可用；不要和原版 savvy-progress 同时装（都注册 /agents-info）；花费是按内置价格表的估算；不联网、不运行外部命令。界面语言可选 auto/en/ru/tr。 | MIT | [链接](https://github.com/serhandenizhan/serhan-kit/tree/main/plugins/serhan-progress) |
 | agent-chat | 侧边窗格里显示 Claude 和子代理之间的「对话」：每个子代理收到的任务、运行时长、状态和最后交回的报告，按颜色区分，可展开卡片；第一次启动子代理时自动打开（可关），也可用 /agent-chat 打开。备注：只读显示，数据存在 mod 自己的存储里；不联网、不运行外部命令。 |  | [链接](https://github.com/AhmedNazihX/claude-mods/tree/main/agent-chat) |
-| squad-board | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
+| squad-board | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。CTO 会话里绘制提示框上方区域时不调用 next，会盖住其他 mod 在这一栏的内容。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
 
 ### 通知提醒 Notifications & Alerts
 

@@ -7162,15 +7162,6 @@
       }
     },
     {
-      "name": "tokenmunim",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/PiyushSinha-9/tokenmunim.git",
-        "path": "plugin",
-        "sha": "e3c330a8dbbbc72d73e932ecb4760a214d2cafd7"
-      }
-    },
-    {
       "name": "barre-conso",
       "source": {
         "source": "github",
@@ -7221,15 +7212,6 @@
         "url": "https://github.com/barkerjian/prompt-band.git",
         "path": "migrations",
         "sha": "a24475406bba2e3340847f1a1ed222d489647ee7"
-      }
-    },
-    {
-      "name": "ccstatus",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/sushant-kum/ccstatus.git",
-        "path": "plugin",
-        "sha": "4809266935feae61b67f7c798771074d799bedd1"
       }
     }
   ]
