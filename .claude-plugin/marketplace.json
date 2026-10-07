@@ -10724,6 +10724,258 @@
         "path": "omnigraph-viz",
         "sha": "6d1d2bed03ac87c92f044b112cfb5f9b256cf21f"
       }
+    },
+    {
+      "name": "edit-limit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/edit-limit",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "watch-mode-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/watch-mode-guard",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "venv-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/venv-guard",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "docker-prune-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/docker-prune-guard",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "cloud-cost-warn",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/cloud-cost-warn",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "no-upload",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/no-upload",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "tracker-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/tracker-guard",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "seed-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/seed-guard",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "url-allowlist",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/url-allowlist",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "subagent-cap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/subagent-cap",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "soundpack",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/soundpack",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "shortcut-tips",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/shortcut-tips",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "command-coach",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/command-coach",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "skill-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/skill-tracker",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "mod-profiles",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/mod-profiles",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "slow-test-flag",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/slow-test-flag",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "bundle-size-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/bundle-size-watch",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "migration-namer",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/migration-namer",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "curl-to-code",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/curl-to-code",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "benchmark-compare",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/benchmark-compare",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "mock-server",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/mock-server",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "mod-maker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/mod-maker",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "django-migrate-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/django-migrate-watch",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "openapi-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/openapi-sync",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "storybook-nudge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/storybook-nudge",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "log-tail",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/log-tail",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "profile-run",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/profile-run",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
+    },
+    {
+      "name": "cheatsheet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/cheatsheet",
+        "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
+      }
     }
   ]
 }
