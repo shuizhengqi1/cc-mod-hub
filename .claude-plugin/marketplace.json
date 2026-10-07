@@ -10586,6 +10586,144 @@
         "repo": "Mxhlix/psst",
         "sha": "c5b81e5c72c0f66de816020453000bd66cdfa2c0"
       }
+    },
+    {
+      "name": "markdown-pane",
+      "source": {
+        "source": "github",
+        "repo": "JorgeRomero123/claude-markdown-pane",
+        "sha": "a3c19977ec94bf9d09ac18f93a257620ff595cc2"
+      }
+    },
+    {
+      "name": "usage-left",
+      "source": {
+        "source": "github",
+        "repo": "JorgeRomero123/claude-usage-left",
+        "sha": "1602fb1eed3022f7733e03bc56628b140003479a"
+      }
+    },
+    {
+      "name": "context-handoff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Naoray/skills.git",
+        "path": "plugins/context-handoff",
+        "sha": "b88be2ce60d9789473a6c017ca5775949ae023c9"
+      }
+    },
+    {
+      "name": "ceo-dashboard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/luba-hub/claude-mods.git",
+        "path": "ceo-dashboard",
+        "sha": "c412fd5a15ed3f65c3b81d995e4ef7230747226c"
+      }
+    },
+    {
+      "name": "day-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/luba-hub/claude-mods.git",
+        "path": "day-log",
+        "sha": "c412fd5a15ed3f65c3b81d995e4ef7230747226c"
+      }
+    },
+    {
+      "name": "ok-to-send",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/luba-hub/claude-mods.git",
+        "path": "ok-to-send",
+        "sha": "c412fd5a15ed3f65c3b81d995e4ef7230747226c"
+      }
+    },
+    {
+      "name": "skill-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vuon9/cc-mods.git",
+        "path": "plugins/skill-map",
+        "sha": "87779e1aa298b2bcc5641b8986a2f41e2a25abbe"
+      }
+    },
+    {
+      "name": "selection-comment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nicoabarca/claude-mods.git",
+        "path": "selection-comment",
+        "sha": "af9d541e9445bd71390c9b72bd22f9171403e433"
+      }
+    },
+    {
+      "name": "contexto-costo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Vincitorecode/mods-equipo.git",
+        "path": "plugins/contexto-costo",
+        "sha": "856da8b7daf51e6a724f3d3316684ca208f5f6b6"
+      }
+    },
+    {
+      "name": "detector-secretos",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Vincitorecode/mods-equipo.git",
+        "path": "plugins/detector-secretos",
+        "sha": "856da8b7daf51e6a724f3d3316684ca208f5f6b6"
+      }
+    },
+    {
+      "name": "guardia-produccion",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Vincitorecode/mods-equipo.git",
+        "path": "plugins/guardia-produccion",
+        "sha": "856da8b7daf51e6a724f3d3316684ca208f5f6b6"
+      }
+    },
+    {
+      "name": "flappy-clawd",
+      "source": {
+        "source": "github",
+        "repo": "gaelbenoit/flappy-clawd",
+        "sha": "550c435cc876e4b9ef913ff4bf4d0f4748811149"
+      }
+    },
+    {
+      "name": "dnz",
+      "source": {
+        "source": "github",
+        "repo": "madnz8/dnz",
+        "sha": "6631d48d61963ff4d5822b10adcb4225c9e19245"
+      }
+    },
+    {
+      "name": "slime-subagent-dashboard",
+      "source": {
+        "source": "github",
+        "repo": "egan-wu/slime-subagent-dashboard-claude-code-mod",
+        "sha": "fff3bfd9e0c1df1281a9b11f86c6700a2f232c25"
+      }
+    },
+    {
+      "name": "openspec-status",
+      "source": {
+        "source": "github",
+        "repo": "pierreboissinot/openspec-status",
+        "sha": "943cfbde454893d55250fd9f20735587352e768e"
+      }
+    },
+    {
+      "name": "omnigraph-viz",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pronskiy/omnigraph-claude-mod.git",
+        "path": "omnigraph-viz",
+        "sha": "6d1d2bed03ac87c92f044b112cfb5f9b256cf21f"
+      }
     }
   ]
 }
