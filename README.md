@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1137 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1140 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1137 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1140 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1137 mods, see the Chinese section below.
+For detailed descriptions of all 1140 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1137 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1140 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -274,6 +274,7 @@ For detailed descriptions of all 1137 mods, see the Chinese section below.
 | turn-stats | 在每个回合结尾的 `Worked for …` 行下面加一行本回合摘要：工具调用总数与用得最多的几个工具（默认前 3 个，如 `14 tools (Bash 6, Edit 5, Read 3)`）、失败次数、改动的文件数和本回合花费；可在插件设置里关掉费用或调整列出的工具数。备注：费用是会话费用的差值，按 API 价格换算，不是账单；最近 200 条摘要存在插件存储里，恢复会话后仍能显示；`session.append` 只读取回合耗时那一行的编号、原样写入，`tool.call` 只计数、原样放行；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/StanislavKozachenko/claude-mods/tree/main/plugins/turn-stats) |
 | compact-usage-meter | 在提示框下方提示行（如 `⏵⏵ auto mode on …`）的下面加一行：上下文占用、5 小时会话额度和每周额度三条进度条与百分比，额度附重置倒计时；终端窄时自动简化；额度到 80%、95% 时各提示一次。备注：只读 Claude Code 自带的用量数据；不注册命令、不运行外部程序、不联网；仓库没有 LICENSE 文件。 |  | [链接](https://github.com/dkoh0207/compact-usage-meter) |
 | better-statusline | 提示框上方五行高的状态带：用点阵圆环显示上下文占用、提示缓存剩余时间和 5 小时/每周额度，另有模型与 effort、各回合花费与 token、git 分支与改动、运行中的子代理；macOS 上旁边是 Spotify/Apple Music 的音乐卡片（封面、进度，可点按播放/暂停、切歌、拖动、音量、随机、循环）；`/fold` 在一行和五行之间切换。备注：音乐部分仅 macOS，常驻一个 `osascript` JXA 进程（仓库里的 bridge/now-playing.js）读取播放器状态，只有你点卡片按钮时才控制播放器；Spotify 封面用 `curl` 从播放器给的封面地址下载到 TMPDIR 下的会话临时目录（会话结束删除）；用 `python3` 运行仓库里的 bridge/measure.py 测终端字符格大小；每 60 秒跑一次 `git status`；`classic.*` 钩子只读取事件、原样放行；不把会话内容发出去；费用按 API 价格换算。 | MIT | [链接](https://github.com/Autumn1337/better-statusline) |
+| usage-pane | `/usage-pane` 打开右侧停靠的用量面板（会话开始时也会自动打开）：当前模型、上下文占用百分比与进度条（按 70%/90% 分成 NORMAL/WARNING/CRITICAL 三档颜色）、已用 token 与上下文窗口大小、5 小时和 7 天额度的已用/剩余百分比与重置倒计时（附重置时刻），以及本会话累计的输入/输出 token；每 30 秒刷新一次。备注：停靠在右侧需要全屏版面（`/config` → fullscreen）且终端至少 110 列，否则面板显示在行内；只读 Claude Code 自带的用量数据，`/clear` 后累计数重新计算；不运行外部程序、不联网。 | MIT | [链接](https://github.com/tyda/claude-code-usage-pane/tree/main/plugins/usage-pane) |
 
 ### 上下文管理 Context Management
 
@@ -959,6 +960,7 @@ For detailed descriptions of all 1137 mods, see the Chinese section below.
 | cyclops-spark | Spark：一个程序生成的小生物，只按真实会话事件动——Claude 思考时蜷起、每个工具伸出一条触须、等你批准时等着、每答完一回合在天空点亮一颗星；可放在侧边面板、提示框上方或状态行，kitty/Ghostty 下用真像素；`/spark` 切换 focus/band/主题/调色板/声音等。备注：`prompt.submit` 只记下你的文字用于 focus 模式、原样返回；`tool.call`/`turn.step` 只观察；focus 模式只隐藏对话行的显示；只有你执行 `/spark ask` 时才用 `$.model.fork`（你自己的 Claude、基于本会话）回答一个侧问题；声音、Link 默认关闭，开启 Link 后会在本机起一个 python3 小助手，仅通过 0600 本地文件和同目录的 Cyclops 家族共享粗略状态；不联网。 | MIT | [链接](https://github.com/CyclopsEyeTeam/cyclops-spark/tree/main/plugins/cyclops-spark) |
 | clawd-wander | Claude 工作时，像素 Clawd 在提示框上方的带子里来回溜达；每启动一个子代理就多一个颜色和种类不同的伙伴，偶尔排成一列跟着走；编辑类工具时拿锤子、查找类工具时拿放大镜，工具失败会吓一跳，子代理结束后渐渐消失。备注：`agent.spawn`/`tool.call` 只观察、原样返回；只读 `$.agent.list()`；只在支持 Raster 的终端里绘制；不注册命令、不联网；代码注释为日文。 |  | [链接](https://github.com/takiguchi-yu/claude-modes/tree/main/clawd-wander) |
 | muse-avatar | 在 Claude 桌面版右侧停靠一个 Muse 风格的动画头像面板（名字 Po）：按空闲/思考/运行工具/回合完成切换动画，下面四个标签页列出最近会话、MCP 连接器状态、定时任务（routines）和角色文件（全局与项目 CLAUDE.md、记忆文件，可点开编辑），底部显示上下文、5 小时与每周用量条和本会话费用；面板关闭时提示框上方显示迷你头像按钮；`/avatar` 重新打开。备注：目前仅支持 Windows + Claude 桌面版（终端里只显示名字和状态文字，其他系统上各项读取会失败并提示）；仓库不带头像素材，没有素材时画一个纯色圆标，可用仓库里的 `scripts/build-frames.sh`（需 ffmpeg）把你自己的视频转成帧文件；用 PowerShell 读取 `~/.claude/projects` 下会话文件里的标题，运行 `claude mcp list`（会让 Claude Code 检查你配置的各个 MCP 服务器）；读 `~/.claude/scheduled-tasks`、CLAUDE.md 与记忆目录；点迷你头像会用 PowerShell 向前台窗口发送 Ctrl+B（切换桌面版左侧栏），文件按钮用 VS Code（没有则记事本）打开；`prompt.submit`/`tool.call` 只切换动画、原样放行；不联网。 | MIT | [链接](https://github.com/arjkul/claude-code-muse-avatar/tree/main/plugins/muse-avatar) |
+| digi-pet | 提示框上方住着一只数码宝贝 V-Pet：它以本会话的提示缓存为食，缓存快过期前会饿并提醒你（默认按 60 分钟缓存计，可改成 5 分钟），午休和夜间（默认 12:00–14:00、18:00–08:00）睡觉、不会饿；Claude 工作时它在带子里战斗，子代理运行时作为队友上场；按 Digital Monster Color 的进化规则，根据你的回合、测试通过与失败、提交和照料情况从蛋一路进化；`/digi` 查看状态、日志、休息（`sleep`/`wake`/`break`）、副业会话（`side`，不会饿）和预览任意物种（`sim`）。备注：宠物饿了时默认用 macOS `osascript` 发系统通知（可在插件设置里关掉，其他系统只显示应用内提示）；开会话时运行 `date +%z` 取本地时区；读取本会话的子代理列表；`prompt.submit`、`prompt.edit` 只计数和检测、原样放行，`tool.call` 只根据结果计分、原样放行；进度存在插件存储里；不联网；数码宝贝的名称和像素图版权归 Bandai/Toei Animation，不在 MIT 许可范围内（见仓库 NOTICE.md），本项目是非官方同人作品。 | MIT | [链接](https://github.com/trongtaiz/digi-pet/tree/main/plugin) |
 
 ### 图片与媒体 Images & Media
 
@@ -1002,6 +1004,7 @@ For detailed descriptions of all 1137 mods, see the Chinese section below.
 | dictation-music | 语音输入时自动暂停正在播放的音乐，发送后再恢复。备注：仅 macOS；需 `brew install media-control`；会话开始时用本机 `/usr/bin/swiftc` 从仓库里的 Swift 源码编译一个监听小助手（存 `~/.claude/dictation-music`）；prompt.submit/turn.step 只用来恢复播放，不改写。 | MIT | [链接](https://github.com/yash-coded/claude-code-mods/tree/main/mods/dictation-music) |
 | dictate-cli | 提示框上方的麦克风按钮（可绑快捷键）驱动 Claude Code 自带的语音输入，暂存你已打的草稿，听写完自动发送后再还原草稿。备注：仅 Windows；转写由 Claude Code 自带语音完成，mod 不联网；会以你的身份把听写文字 `$.prompt.submit` 发出（不改写内容）；`/dictate setup` 才运行仓库内 install.ps1：用本机 csc 编译 helper/dictate-key.cs，并修改 ~/.claude/settings.json 与 keybindings.json（有备份，`/dictate remove` 还原）。 | MIT | [链接](https://github.com/augbastos/dictate-cli) |
 | image-mirror | Claude 用 Read 读取 PNG 图片时，直接把图片画在终端对话里那一行 Read 下面（按终端宽度保持比例，最大 100×30 格，PNG 不超过 2 MiB）；连续多次读取被折叠时，含 PNG 的那组会自动展开。备注：需支持 kitty 图形协议的终端（kitty、Ghostty），其他终端只显示替代文字；只改终端画面，不改工具结果；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/image-mirror) |
+| mods-image-preview | 粘贴图片后，在提示框上方为每个 `[Image #N]` 显示一张缩略图：kitty、Ghostty（不在 tmux/screen/SSH 里时）显示真实像素，其他终端用彩色半格字符画出同样的版面，终端宣告支持覆盖层（`CLAUDE_MODS_IMAGE_OVERLAY=1`）时改画标记格让终端自己把图盖上去；删掉图片标记或发送提示后自动清空；插件设置里可选渲染方式和缩略图大小（小/中/大）。备注：每 300 毫秒读一次提示框草稿找图片标记，从 Claude Code 写在会话临时目录里的 images/ 读取图片；非 PNG 或超过 4 MiB 的图片用 macOS `sips` 转成小 PNG（写在同一临时目录下，其他系统上这类图片显示 unsupported）；覆盖层模式会在 `~/.claude/claude-mods-image-preview/` 里用 `mkdir`、`ln` 建指向原图的符号链接，开会话时用 `find` 删除一天前的链接，tmux 里还会运行 `tmux show-environment` 检查该变量；`prompt.submit` 只用来清空缩略图、原样放行；不注册命令、不联网。 | MIT | [链接](https://github.com/hahmjuntae/claude-mods-image-preview) |
 
 ### 任务与项目 Task & Project
 

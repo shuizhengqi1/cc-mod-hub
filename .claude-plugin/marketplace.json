@@ -9203,6 +9203,32 @@
         "repo": "Autumn1337/better-statusline",
         "sha": "98f332f9050aa0056247a6be3f87828ea383a692"
       }
+    },
+    {
+      "name": "mods-image-preview",
+      "source": {
+        "source": "github",
+        "repo": "hahmjuntae/claude-mods-image-preview",
+        "sha": "a3104c339cc1391cc8015af90326fadd2ce9393a"
+      }
+    },
+    {
+      "name": "usage-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tyda/claude-code-usage-pane.git",
+        "path": "plugins/usage-pane",
+        "sha": "18d15ebe06d7f9e0eb516ec9a048ef720dd5e2d6"
+      }
+    },
+    {
+      "name": "digi-pet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trongtaiz/digi-pet.git",
+        "path": "plugin",
+        "sha": "479a95243645e922fcd53bcd6f542233d387789c"
+      }
     }
   ]
 }
