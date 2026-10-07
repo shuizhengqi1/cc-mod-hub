@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1219 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1226 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1219 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1226 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1219 mods, see the Chinese section below.
+For detailed descriptions of all 1226 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1219 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1226 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -286,6 +286,8 @@ For detailed descriptions of all 1219 mods, see the Chinese section below.
 | usage-inspector | 提示框上方显示上下文、限额与花费，并画每回合 token 增量的小柱状图；`/context-detail` 打开上下文明细面板；中英文说明。备注：prompt.submit 只记录本回合开始时的上下文 token 数并原样放行，不改写（register.tsx 216–221）；只读 `$.session.usage()` 与 session.measure；不运行外部程序、不联网。 | | [链接](https://github.com/purplecofe/usage-inspector) |
 | cc-dash-kit | 侧边仪表盘：额度、会话卡片，可选 GPU（nvidia-smi）、磁盘（df）、本机服务 HTTP 探测和暂停标记卡片；`/cc-dash` 打开；英 / 繁中。备注：卡片配置读插件目录里的 `dash.config.json`（register.tsx 24），不读项目文件；探测只跑固定命令 `df`、`nvidia-smi`、`curl` 到你配置的地址（sources/disk.ts 16、gpu.ts 15、http-probe.ts 17）；prompt.submit 只用来自动打开面板并原样放行（register.tsx 129–132）；不发送会话内容。 | MIT | [链接](https://github.com/coolthor/cc-dash-kit) |
 | rate-limits | 提示框上方显示 5 小时与每周限额的实时进度条和重置倒计时，用到 80%、95% 时各弹一次提醒；多个会话共享最近一次读数。备注：只读 `$.session.usage()` 与 session.measure 的限额数据（register.tsx 195–221），提醒用 `$.ui.toast`（169–192）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/Heuwzen/claude-code-rate-limits) |
+| barra-de-uso | 提示框上方的用量条：上下文占用百分比与 token 数、5 小时和每周限额进度及重置倒计时，上下文过半时提示“该压缩了”；葡萄牙语界面。备注：只读 `$.session.usage()`（register.tsx 46–67）；按按钮才调用 `$.session.compact` 并附保留进度的压缩说明（79–86）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/sistema-dkx/mods-dkx/tree/main/barra-de-uso) |
+| usage-header | 提示框上方一条彩色上下文分类条（系统提示、工具、消息等各占多少）加 5 小时与每周限额进度；`/hasznalat` 开关；匈牙利语或英语。备注：只读 `$.session.usage({ breakdown: 'summary' })` 本地估算与限额（register.tsx 152–157、194–199），不调 API；不运行外部程序、不联网。 | | [链接](https://github.com/Szotasz/claude-mods/tree/main/plugins/usage-header) |
 
 ### 上下文管理 Context Management
 
@@ -612,6 +614,8 @@ For detailed descriptions of all 1219 mods, see the Chinese section below.
 | wait-jump | Claude 工作时在提示框上方的框里玩一个小恐龙式跳跃游戏（Claude Jump）：空格/↑/回车/w/k 或点击跳跃，回合结束后显示本局分数与最高分约 10 秒，被权限询问等打断后可接着玩；`/wait-jump` 开关。备注：提示文字为日文；最高分与开关存在插件自己的存储里；不改提示或工具、不运行外部程序、不联网。 | MIT | [链接](https://github.com/kawase1295/wait-jump) |
 | connect-four | `/connect-four` 打开窗格和电脑下四子棋：按 1–7 或点列下方的 ↓ 落子，电脑思考时显示进度条，连成四子的棋子高亮；`n` 开新局（保留比分），`q`/Esc 关闭；界面按 Claude Code 的 language 设置或系统语言显示德语或英语。备注：电脑走棋由插件自带的本地算法计算，不调用模型；只读 Claude Code 设置里的 language 和 LC_ALL/LC_MESSAGES/LANG 环境变量；不运行外部程序、不联网。 | MIT | [链接](https://github.com/nachtgold/claude-code-connect-four) |
 | match-3 | `/match3` 打开窗格玩三消：5 种颜色、5 关，消除 4 个以上会生成火箭、炸弹、棱镜，可连锁组合；过关后记录每关最高分和星级并进入下一关，`/match3 new` 从第 1 关重新开始；界面按插件设置 language（auto/en/de）、Claude Code 的 language 设置或系统语言显示英语或德语。备注：进度存在插件存储里；只读 Claude Code 设置里的 language 和 LC_ALL/LC_MESSAGES/LANG；不调用模型、不运行外部程序、不联网；与已上架 connect-four 同一作者。 | MIT | [链接](https://github.com/nachtgold/claude-code-match-3) |
+| snake-pane | Claude 干活时在侧边面板玩贪吃蛇：发送提示时打开、回合结束暂停，记录最高分；`/jatek be\|ki` 开关；匈牙利语或英语。备注：prompt.submit 先原样放行，只在之后打开游戏面板，不改写提示（register.tsx 114–120）；可在插件设置里关掉自动打开；不运行外部程序、不联网。 | | [链接](https://github.com/Szotasz/claude-mods/tree/main/plugins/snake-pane) |
+| agent-hero | 提示框上方一个勇者按你消耗的 token 自动刷地牢，`/agent-hero` 打开升级、技能、装备和地图面板。**备注**：turn.step 原样执行，只累计 token 用量（register.tsx 451–458）；存档写在插件安装目录旁的 `agent-hero` 数据文件夹（99–101、168–245）；定期用 `$.http.fetch` 读取作者仓库 main 分支的 plugin.json 只为提示有新版本，不自动更新、不发送会话内容（110–133）；不运行外部程序。 | MIT | [链接](https://github.com/ATworks-np/agent-hero-claude-plugin) |
 
 ### 安全防护 Security & Safety
 
@@ -701,6 +705,7 @@ For detailed descriptions of all 1219 mods, see the Chinese section below.
 | secret-sentinel | Claude 用 Write、Edit 或 Bash（echo/cat/tee/printf 重定向、heredoc）写文件时，发现 AWS/GitHub/Slack/Google/Stripe/OpenAI 风格密钥、私钥块、Bearer token、URL 里的账号密码或带引号的 password/api_key 等硬编码值就拒绝，并且只说明是哪类、不复述值；`.env*`、`.mcp.json`、`wp-config.php`、`id_rsa`、`id_ed25519`、`.netrc`、`credentials.json` 这些文件一律不让 Claude 写。备注：只拒绝（`deny`）或原样放行，不改写（register.ts 87–105）；占位值（your-api-key、xxx、${VAR} 等）不拦；不注册命令、不运行外部程序、不联网；作者为 LightSpeedWP 团队写的规则，但匹配本身通用。 |  | [链接](https://github.com/ZaredRogers/mods/tree/master/mods/secret-sentinel) |
 | garde-prod | 生产环境守卫：标出碰到生产主机（你配置的主机名 / IP）或有风险的 Bash 命令（force push、密钥、rm -rf 等），在生产库写入前检查最近有没有数据库备份，被拒的命令留在 `/prod` 面板里方便你自己用 `!` 运行；法 / 英双语。备注：tool.call 只分类、记录、弹 toast，原样执行（register.tsx 60–95）；只在你开了 requireBackup 且没有新备份时拒绝（deny，70–74），不改写命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/garde-prod) |
 | command-guard | 危险命令安全网：Claude 要跑 rm -r、git push --force、reset --hard、clean -f、branch -D、stash drop 等（Bash 和 PowerShell）之前，先显示会丢掉什么，再让你选运行或取消；`/guard on` / `/guard off` 开关。备注：tool.call 只放行或拒绝（deny），不改写命令（register.tsx 64–74、80–96）；预览只跑只读 git 命令（log、status、diff --shortstat、clean -n、stash list，986–1064）；只拦 Claude 自己的调用；不联网。与 main 里的 context-inspector、git-branches、roadmap 同属 claude-mode 套件。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/command-guard) |
+| public-repo-guard | 推送到公开 GitHub 仓库（或把仓库改成公开）前，扫描将要推出去的提交里的 Supabase 项目 ID、密钥、token、邮箱、本机路径等，发现就弹窗让你选拒绝、照推或记住放行；`/pushor` 开关；匈牙利语或英语。**备注**：只拦 Bash 里的 `git push` 和改可见性命令，结果只有拒绝或原样放行，不改写命令（register.tsx 233–270）；扫描时在本机运行只读的 `git log`/`git grep`/`git ls-tree` 等（139–176），并用你本机的 `gh repo view`/`gh repo list` 查仓库是否公开（103、114）。 | | [链接](https://github.com/Szotasz/claude-mods/tree/main/plugins/public-repo-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -855,6 +860,7 @@ For detailed descriptions of all 1219 mods, see the Chinese section below.
 | ou-on-en-est | 各仓库进度面板：每个仓库的分支、未提交和未推送的改动、PR 与 CI；可选查看服务器上部署的提交相对 main 的位置和现场改动，以及你的页面是否能访问；`/ou-on-en-est` 打开，可给仓库加备注；法 / 英双语。**备注**：每 10 分钟自动对本地仓库 `git fetch --prune`（register.tsx 69、182）、跑 `gh pr view`（86）；配置了服务器才用 `ssh` 执行只读 git 查询（113），配置了地址才 `curl` 看状态码（137）；不发送会话内容。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/ou-on-en-est) |
 | y-change | 侧边面板列出本会话里 Claude 改过的每段代码 diff，回合结束后附上「改了什么、为什么改、给不懂这门语言的人的语法说明」；`/y-change` 开关；韩文界面。**备注**：每回合结束自动用 `$.model.fork` 基于本会话生成说明（register.tsx 90–109），会额外花 token，不写回主对话；tool.call 只读 Edit/Write 结果（76–87）；不运行外部程序、不联网。 | | [链接](https://github.com/nalpari/claude-mods/tree/main/y-change) |
 | annotate | 在对话记录里选中一段文字、写批注，攒好后一键把全部批注作为你的消息发给 Claude，或复制成 Markdown；`/annotate-mod` 打开面板。**备注**：只在你按「发送」时才用 `$.prompt.submit` 把你写的批注作为你的消息发出（register.tsx 174–179），不自动发送、不改写你的提示；读 `$.ui.selection()`（107）；不运行外部程序、不联网。 | | [链接](https://github.com/sagarr/claude-code-annotate-mod) |
+| script-logs | 侧边面板实时显示 Claude 跑的后台 shell 命令和 monitor 的输出、状态与耗时，可折叠、可按按钮停止；`/logs` 打开、`/logs-clear` 清掉已结束的。**备注**：tool.call 先原样执行，只记录后台任务（register.tsx 89–119）；session.append 原样放行，只读取后台任务通知（283–297）；按“停止”才用 `$.tool.call` 调 TaskStop（160–172）；会话开始时自动打开面板；不运行外部程序、不联网。 | MIT | [链接](https://github.com/naughty00shortie/script-logs) |
 
 ### 子代理管理 Subagent Management
 
@@ -1141,6 +1147,7 @@ For detailed descriptions of all 1219 mods, see the Chinese section below.
 | todo-bar | 提示框上方显示任务清单进度：完成数和进度条、正在做的任务及用时（超过插件设置 slowMinutes 分钟变黄），第二行暗色显示接下来的一两项，每个还在运行的子代理单列一行（任务、当前工具、用时）；数据来自 TodoWrite、TaskCreate、TaskUpdate 工具调用本身，不额外调用工具、不发提示、不耗 token；`/todos [off|on]` 显示或隐藏；界面语言可选。备注：`tool.call`、`agent.spawn` 都在调用完成后才读取，结果原样返回；回合结束用 `$.agent.list` 去掉已结束的子代理；`prompt.edit`、`prompt.submit` 只用来在 `/`、`@` 选择器打开时让开，原样放行；每会话的清单存在插件存储里（只保留最近若干会话）；`/todos` 会写本插件自己的 `todo-bar.visible` 设置；不运行外部程序、不联网。 | MIT | [链接](https://github.com/hoobnn/hoobnn-agent-mods/tree/main/claude-code/todo-bar) |
 | project-activity | 会话开始时打开两个窗格：「專案活動」显示项目类型、关键文件、Claude 最近读写最多的文件和最近的工具调用，可在 `.claude/project-activity.json` 里列出需要检查是否存在的文件；「Git 狀態」显示分支、暂存 / 未暂存改动、最近 30 个提交和 stash 数；另有测试结果状态栏和回合摘要 band；`/project-activity`、`/git-status` 打开或开关窗格。界面为繁体中文。备注：用 `$.process.run` 只跑只读 git 命令，并用 `-c core.fsmonitor=false` 等命令行设置关掉仓库自带的外部程序钩子；仓库本地配置了 filter 或根目录有 git.exe 等文件时不跑 git（register.tsx 75–156）；prompt.submit 只重置回合统计、原样放行（224–227）；tool.call 只记录、原样返回；不联网。 |  | [链接](https://github.com/hn83320589/claude-mods/tree/main/project-activity) |
 | restack-view | ReStack（基于 Residuality Theory 的架构设计技能套件）的旅程视图：提示框上方一行显示当前进度，`/restack-view` 打开面板看未决问题、假设、决策和矩阵，`/restack-view band on\|off` 显隐。备注：只读 ReStack 写在项目里的旅程文件，自身不写文件、不运行外部程序、不联网；面板按钮只用 `$.prompt.fill` 把下一步命令放进空输入框、不发送，有草稿时只弹 toast（register.tsx 244–258）；需另装 ReStack 技能套件（未审）才有内容。 | MIT | [链接](https://github.com/pmelander/restack/tree/main/mods/restack-view) |
+| astrolabe | 在状态栏显示 Spec Kit 当前的功能、阶段和任务进度，随你编辑 spec/tasks 文件和调用技能实时更新。备注：只用 `$.fs` 读取项目里的 Spec Kit 文件和 `.git/HEAD`（register.tsx 11–17，io/git-branch.ts），通过 `$.ui.status` 显示；tool.call 先原样执行再刷新（72–97）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/jonyfs/astrolabe) |
 
 ### 外部集成 External Integrations
 
