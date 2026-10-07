@@ -9529,6 +9529,176 @@
         "path": "project-activity",
         "sha": "9a71378497aedd3b137156bd36160697ccac1b01"
       }
+    },
+    {
+      "name": "ambient-spanish-hover",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Exdenta/ambient-spanish.git",
+        "path": "mods/ambient-spanish-hover",
+        "sha": "4a28596dfee047c6fc66c143365073a5cc6d1260"
+      }
+    },
+    {
+      "name": "prompt-polaroid",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Roberdinho/claude-mods.git",
+        "path": "plugins/prompt-polaroid",
+        "sha": "a0f2657172864df504981232332acc1d13cea158"
+      }
+    },
+    {
+      "name": "model-picker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Vic-Chen-160/claude-code-CLI-Mods.git",
+        "path": "model-picker",
+        "sha": "26ad3b1bae92dd10ec2bdfbb967a4a7b347c312f"
+      }
+    },
+    {
+      "name": "chebu-ui",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/abrose/claude-plugins.git",
+        "path": "plugins/chebu-ui",
+        "sha": "ec5bef16574af43e1f99c87cf56a8162d89f5b1a"
+      }
+    },
+    {
+      "name": "burnbar",
+      "source": {
+        "source": "github",
+        "repo": "akaaff/burnbar",
+        "sha": "74b7b4f1d1b14122a4e94281d75c1f67ed27aeeb"
+      }
+    },
+    {
+      "name": "tmux-zipper",
+      "source": {
+        "source": "github",
+        "repo": "cocodedk/tmux-zipper",
+        "sha": "d42e92a6ff2e19fc747be2004622b7fea664fd1c"
+      }
+    },
+    {
+      "name": "no-command-output",
+      "source": {
+        "source": "github",
+        "repo": "marcoscano/no-command-output",
+        "sha": "e3e9243cd58ef63b89c74a535d93cf392159beba"
+      }
+    },
+    {
+      "name": "row-polish",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mwpark-aa/claude-terminal-mods.git",
+        "path": "mods/row-polish",
+        "sha": "078407bcc4a80a136ec90645442768e161289e69"
+      }
+    },
+    {
+      "name": "status-dash",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mwpark-aa/claude-terminal-mods.git",
+        "path": "mods/status-dash",
+        "sha": "078407bcc4a80a136ec90645442768e161289e69"
+      }
+    },
+    {
+      "name": "runboard",
+      "source": {
+        "source": "github",
+        "repo": "Dbravi/runboard",
+        "sha": "2fcb495e1f5c00c4950fa80bf5c0aede935c5f48"
+      }
+    },
+    {
+      "name": "model-effort-shortcuts",
+      "source": {
+        "source": "github",
+        "repo": "richkuo/claude-code-model-effort-shortcuts",
+        "sha": "6c1d03e068ebe9ada43bb182857c425605cccee1"
+      }
+    },
+    {
+      "name": "pumpfun-utilities",
+      "source": {
+        "source": "github",
+        "repo": "KamiFin/pumpfun-utilities",
+        "sha": "bb22df267f68a8ff14ae097ab56facc64c716102"
+      }
+    },
+    {
+      "name": "tool-trim-compaction",
+      "source": {
+        "source": "github",
+        "repo": "okamyuji/tool-trim-compaction",
+        "sha": "c2cf3d808da1ea6e968974c2aed39079dfe4ee95"
+      }
+    },
+    {
+      "name": "file-dock",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Changroro/plugins.git",
+        "path": "plugins/file-dock",
+        "sha": "d65b0e38cf926fafd8233c846dd37e1670a0b8e2"
+      }
+    },
+    {
+      "name": "model-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Recokioshi/claude-kit.git",
+        "path": "mods/model-guard",
+        "sha": "a80262e10be6e042b5dca537347bbd68a02c11b5"
+      }
+    },
+    {
+      "name": "dense",
+      "source": {
+        "source": "github",
+        "repo": "jinhuang712/claude-code-dense",
+        "sha": "9d4e1319c39f68e95db9f9334d83b2fe41a5eecb"
+      }
+    },
+    {
+      "name": "shell-monitor",
+      "source": {
+        "source": "github",
+        "repo": "isaac-pathlab/claude-shell-monitor",
+        "sha": "46d6419774b7de2102d54f759cb1d0056bed8b60"
+      }
+    },
+    {
+      "name": "restack-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pmelander/restack.git",
+        "path": "mods/restack-view",
+        "sha": "2bf7b24629cb6d08023d8455b55c34a55ab550e3"
+      }
+    },
+    {
+      "name": "tw-ticker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/starryAmy/amy-mods.git",
+        "path": "plugins/tw-ticker",
+        "sha": "027991a1b31e3755ba49b2e90e99f7afb339891b"
+      }
+    },
+    {
+      "name": "cold-cache-guard",
+      "source": {
+        "source": "github",
+        "repo": "mediavee/cold-cache-guard",
+        "sha": "2c4388cbecf115dc6209fcec1a10446123fc8ae5"
+      }
     }
   ]
 }
