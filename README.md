@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1114 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1118 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1114 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1118 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1114 mods, see the Chinese section below.
+For detailed descriptions of all 1118 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1114 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1118 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -791,6 +791,7 @@ For detailed descriptions of all 1114 mods, see the Chinese section below.
 | game-item-get | GAME MODE 套件之一：Claude 新建文件时显示「✦ ITEM GET! 路径 · 新文件 N 行」横幅和提示；`/inventory` 列出本会话新建和修改过的文件及增删行数。备注：`tool.call` 只读写入结果、原样返回；只改显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-item-get) |
 | game-map | GAME MODE 套件之一：底部状态行显示当前分支（受保护分支 main/master/production/release/* 加 ⚠）、本次游玩时长；`/map` 查看分支、时长和改动文件数。备注：会话开始、每回合结束和每 60 秒在本机只读运行 `git rev-parse`/`git status --porcelain`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-map) |
 | game-minimap | GAME MODE 套件之一：`/minimap` 打开侧边小地图，把项目文件按已编辑/已读/未探索着色，并标出被反复读取的文件。备注：`tool.call` 只记录读写的路径、原样返回；打开面板时在本机只读运行 `git ls-files`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-minimap) |
+| repo-band | 提示框上方一行显示当前仓库的 Git 状态：仓库名与分支、与远端是否一致（待推送/待拉取提交数）、未提交改动数与增删行数，以及当前分支 PR 的 draft/检查（CI）通过·失败·进行中/审查结论；当前分支没有 PR 时显示仓库打开的 PR 数；不在 Git 仓库里时改列本会话 Claude 新建/编辑过的文件。备注：界面为韩文；每 30 秒（编辑或跑 Bash 后立即）跑本机只读 `git status/rev-parse/diff --shortstat`，每 2 分钟（CI 进行中时 10 秒）跑 `gh pr view`/`gh pr list`（用你本机 gh 的登录访问 GitHub，没装或未登录 gh 时只少 PR 栏）；`tool.call` 只记录编辑过的文件、原样放行；不改提示、不写文件、不注册命令；可与同作者的 task-band 侧栏配合（task-band 本身未收录）。 | MIT | [链接](https://github.com/LDH1103/claude-mods/tree/main/repo-band) |
 
 ### 子代理管理 Subagent Management
 
@@ -884,6 +885,7 @@ For detailed descriptions of all 1114 mods, see the Chinese section below.
 | turn-done | 长回合（默认 ≥60 秒）结束时弹 toast 并播放提示音，方便离开屏幕。备注：默认关闭，需在 /config 或 /mods 打开；提示音为 macOS；纯本机。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/turn-done) |
 | clawd-sounds | 长回复（≥30 秒）结束时播放提示音，Claude 等你批准权限时响一声。备注：只在 macOS 读取系统自带声音（Glass/Ping），其他系统静默；仅观察 `turn.complete`/`classic.PermissionRequest`，原样返回。 | MIT | [链接](https://github.com/saxena-aman/clawd-mods/tree/main/plugins/clawd-sounds) |
 | game-earcons | GAME MODE 套件之一：8-bit 提示音——权限请求或提问等你时、长回合（默认 ≥30 秒）结束、守卫拦截、存档、出错时各响一声；`/earcons test|on|off`。备注：默认开启（音量 0.6）；只播放插件自带的 WAV：macOS 走引擎自带播放，Linux 用本机 `paplay`/`aplay`，Windows 用 PowerShell SoundPlayer（WAV 经 stdin 传入），另跑 `uname -s` 判断系统；`session.append`/`tool.call` 只读取结果判断音效、原样返回；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-earcons) |
+| ding-dong | 回合跑超过 1 分钟才结束时发一条可爱的 macOS 系统通知叫你回来：按耗时（1–3 分钟、3–10 分钟、10 分钟以上、出错）随机抽一句文案并配不同系统音效，副标题显示项目文件夹、耗时与工具调用次数；你自己中断的回合、子代理回合不通知；`/ding` 轮流预览四种通知。备注：文案为繁体中文；通知用 macOS 自带 `osascript` 发出，若你手动运行过插件里的 `notifier/build.sh`（本机用 osacompile 编译、自签一个 DingDong.app）则改用它并写入同目录 message.txt；非 macOS 时退回 Claude Code 内 toast；不改提示或工具、不联网。 | MIT | [链接](https://github.com/builtbyjia/claude-code-mods/tree/main/ding-dong) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -1054,6 +1056,7 @@ For detailed descriptions of all 1114 mods, see the Chinese section below.
 | issue-map | 把当前仓库所在项目（GitHub/GitLab）的 open issue 按 Tracker 记录的关联画成"地图"：提示框下方固定一行本项目状态，`/issue-map` 不走模型直接显示地图、分组、下一个可做的 issue、单个 issue 卡片等视图，也可让 Claude 给你指派 issue 或建议关联。备注：需要 Node.js ≥ 22.18 和本机已登录的 `gh`/`glab`（只经它们读写 Tracker，另有不带凭据的匿名 HTTPS 探测）；会在后台起常驻刷新进程每 90 秒更新快照；附带一个 MessageDisplay 经典钩子，只把 Claude 回复里的 `⟦issue-map …⟧` 标记行在显示时换成地图原样输出（不改提示、不改工具）；附带的 map 技能预先放行自家 `issue-map …` 只读/建议类命令，真正写入（给自己指派 issue、确认关联）都要你在 AskUserQuestion 里点确认；发布 claude.ai Artifact 也要你逐次同意。 | MIT | [链接](https://github.com/romtaugranot/issue-map) |
 | pit-wall | F1 风格的维修墙面板：`/pit` 从 PLAN.md（或 `~/.claude/plans/` 里最新计划）导入阶段和任务跟踪进度，并记录 Claude 的 `git push`。备注：用本机 `sh`/`cat` 找和读计划文件，`tool.call` 只在 Bash 调用完成后观察 push；纯本机。 |  | [链接](https://github.com/rhealaloo45/pit-lane-claude-mods/tree/main/pit-wall) |
 | nightrun-pane | `/nightrun` 面板显示 claude-orchestrator 最新一次夜间运行的各冲刺状态和日志末尾。备注：只用 `$.fs` 读取当前项目 `runtime/nightrun/` 和 `runtime/handoff/` 下的文件；纯本机只读。 |  | [链接](https://github.com/bajzaa975/claude-alapcsomag/tree/main/nightrun-pane) |
+| project-tabs | 在 Claude Desktop（macOS）Code 标签页的提示框上方把固定的项目显示成横向标签：项目图标（项目自己的 favicon、emoji、自选图片或彩色字母）、各项目会话数与状态色点（等你回应/完成未读/运行中），点标签打开该项目最近的会话，悬停列出最近 5 个会话；`/tabs` 或 ⋯ 打开设置窗格（固定/排序项目、选图标、快捷键）；终端 `claude` 里显示简化的文字标签。备注：只读本机 `~/Library/Application Support/Claude/claude-code-sessions`、`~/.claude/sessions` 与 Claude Desktop 的语言设置，用 `ps` 判断会话进程是否存活，用 `open claude://…` 跳转；选图标会弹 macOS 文件对话框（osascript）并用 sips 缩放，图标存在插件自己的存储里；⌃1…⌃9/⌘1…⌘9 快捷键默认关闭，开启后会用 swiftc 把插件自带的 Swift 源码编译成 `~/.claude/project-tabs/tabs-hotkeys` 并用 `launchctl submit` 作为后台常驻程序运行到注销（开着时每次会话启动会重新提交，需 Xcode 命令行工具；只在 Claude Desktop 在前台时注册 Carbon 热键，不需要辅助功能权限），并写 `~/.claude/project-tabs/hotkeys.json`；不改提示或工具、不联网。 | Apache-2.0 | [链接](https://github.com/tripolskiydigital/claude-tabs) |
 
 ### 外部集成 External Integrations
 
@@ -1104,6 +1107,7 @@ For detailed descriptions of all 1114 mods, see the Chinese section below.
 | sn | ServiceNow CLI 配套插件：技能 + 窗格，列出本会话 Bash 里的 `sn` 表调用及结果，可在浏览器打开记录。备注：需本机已装 sn CLI；mod 只观察 Bash 调用不改写；"打开"按钮运行 `sn open`。 | MIT | [链接](https://github.com/tehubersheezy/servicenow-cli) |
 | agentbar | AgentBar 桌面应用的配套 mod：把 Claude Code 未经询问自行决定的操作，以及上下文、用量上限、运行中子代理等指标写到 `~/.agentbar/mods.d/` 给 AgentBar 应用和 CLI 读；可选在别的会话等你时在提示框上方显示一行。备注：只观察（`tool.check`/`tool.call` 原样返回结果，从不批准或拒绝）；点那行时在 macOS 用 `/usr/bin/open agentbar://…` 唤起应用；不联网。 | MIT | [链接](https://github.com/michalstrnadel/AgentBar/tree/main/Scripts/mods/claude) |
 | aidv-autos | 把案件知识库（case-knowledge）检索工具的调用在对话里渲染成一行折叠摘要，并在侧边面板列出找到的文书（巴西法律场景，葡萄牙语）。备注：只改显示；`tool.call` 只记录检索词和结果、原样返回；面板“请 Claude 处理”按钮按下时才用 `$.prompt.submit` 发提示；需配合对应的 case-knowledge 工具使用。 |  | [链接](https://github.com/PedroGiudice/opc-plugins/tree/main/plugins/aidv-autos) |
+| world-news | 把 Google 新闻台湾版的大事钉在提示框下方：每次发消息时若过了冷却时间（默认 30 分钟）就在后台读取你选的分类（国际、科技、财经、台湾、军事、科学、健康、体育，以及美国、中国、日韩、欧洲、俄乌、中东、东南亚等地区）的 RSS，把最新一条没看过的标题显示在状态栏；`/world-news` 选分类、改冷却、立即检查、开关，侧栏列出最新标题并可点开原文。备注：界面为繁体中文；`prompt.submit` 只触发后台检查、提示原样放行，不往模型上下文加任何东西；只经 `$.http` 请求 news.google.com 的固定分类 RSS 地址（不带任何会话内容）；简体标题用内置 OpenCC 词表转繁体；设置与已读记录存在插件存储里；仓库没有 LICENSE 文件（plugin.json 写 MIT）。 |  | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/master/plugins/world-news) |
 
 ### 本地工具 Local Tools
 
