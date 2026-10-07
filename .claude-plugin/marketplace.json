@@ -11325,6 +11325,240 @@
         "path": "plugins/subagent-tree",
         "sha": "4e28f704c25a679f40ef444987db26787be8550b"
       }
+    },
+    {
+      "name": "kamehameha",
+      "source": {
+        "source": "github",
+        "repo": "Aurumdev952/claude-code-kamehameha",
+        "sha": "fd282bc77d057c15791ea4cc2b41014f3631b7ba"
+      }
+    },
+    {
+      "name": "tasbih",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ashafizullah/claude-code-muslim-mods.git",
+        "path": "tasbih",
+        "sha": "a18e30960c60f58f99426809724c9133991d1542"
+      }
+    },
+    {
+      "name": "burn-baby-burn",
+      "source": {
+        "source": "github",
+        "repo": "eel-brah/burn-baby-burn",
+        "sha": "c669ce3a7395044c439edb160447427fbe50a392"
+      }
+    },
+    {
+      "name": "usage-meters",
+      "source": {
+        "source": "github",
+        "repo": "drewster99/claude-usage-meters",
+        "sha": "0f7a3ccd517333aeca146ae584b938eae0dac070"
+      }
+    },
+    {
+      "name": "round-changes",
+      "source": {
+        "source": "github",
+        "repo": "joaofatoretto/round-changes",
+        "sha": "585bfa58acb93c45290b27ea782d9f684f213633"
+      }
+    },
+    {
+      "name": "diff-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/diff-pane",
+        "sha": "a3ffc4afc6c68c7c717ff443c3264f263a4e39d9"
+      }
+    },
+    {
+      "name": "tool-timeline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/tool-timeline",
+        "sha": "a3ffc4afc6c68c7c717ff443c3264f263a4e39d9"
+      }
+    },
+    {
+      "name": "mods-hub",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/mods-hub",
+        "sha": "a3ffc4afc6c68c7c717ff443c3264f263a4e39d9"
+      }
+    },
+    {
+      "name": "corgi-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Andriiklymiuk/corgi.git",
+        "path": "plugins/corgi-band",
+        "sha": "3bd273527ea5440e63f95fdf819913cf01508c6f"
+      }
+    },
+    {
+      "name": "last-push",
+      "source": {
+        "source": "github",
+        "repo": "pepperonas/last-push",
+        "sha": "46501a82853beacb4f1dc924cc781916feab2457"
+      }
+    },
+    {
+      "name": "sand-falling",
+      "source": {
+        "source": "github",
+        "repo": "caiocinel/claude-code-sandgame-mod",
+        "sha": "099231d593e385f0b9cf87d1bbdd50483c31b28c"
+      }
+    },
+    {
+      "name": "workitems",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/niksavis/handily.git",
+        "path": "mods/workitems",
+        "sha": "ed264c5d3fb16b02e1c28ca597975d4620c82041"
+      }
+    },
+    {
+      "name": "quiet-items",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/niksavis/handily.git",
+        "path": "mods/quiet-items",
+        "sha": "ed264c5d3fb16b02e1c28ca597975d4620c82041"
+      }
+    },
+    {
+      "name": "inline-images",
+      "source": {
+        "source": "github",
+        "repo": "samuelpatro/claude-code-inline-images",
+        "sha": "0894a0c2ec8ec3d73dcccb5e53434b1e4f05128e"
+      }
+    },
+    {
+      "name": "job-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/joeldg/claude-mods.git",
+        "path": "job-watch",
+        "sha": "1254f9498b1a5c5ec3ac989cabf2ac67408168a2"
+      }
+    },
+    {
+      "name": "pr-pilot",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tartinerlabs/claude-code-mods.git",
+        "path": "plugins/pr-pilot",
+        "sha": "7a62f8f8f7d40d0fefbba05d632d345fc04c9f2c"
+      }
+    },
+    {
+      "name": "routine-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanyyoo/claude-code-mods.git",
+        "path": "plugins/routine-watch",
+        "sha": "61e953719796728ad28a64d79ee4a3f8dcad9b64"
+      }
+    },
+    {
+      "name": "tui-preview-mod",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andrew54068/claude-plugins.git",
+        "path": "tui-preview-mod",
+        "sha": "b9f819dc0511fb39183f1a4d4db9326e1f26feb1"
+      }
+    },
+    {
+      "name": "cache-line",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/twikus/claude-configuration.git",
+        "path": "agents-config/claude-config/mods/cache-line",
+        "sha": "1ba50d0885e625740a8c6b6faf27b133950a617f"
+      }
+    },
+    {
+      "name": "pii-shield",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mrjk05/modemon.git",
+        "path": "mods/pii-shield",
+        "sha": "977cb8e719d0c7ed990890fd14fa1e3eeb28bc13"
+      }
+    },
+    {
+      "name": "agent-deck",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mrjk05/modemon.git",
+        "path": "mods/agent-deck",
+        "sha": "977cb8e719d0c7ed990890fd14fa1e3eeb28bc13"
+      }
+    },
+    {
+      "name": "progress-buddy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/karrot0/claude-buddy.git",
+        "path": "plugins/progress-buddy",
+        "sha": "db2829624808075a8f606b6b1b44a949479c23e1"
+      }
+    },
+    {
+      "name": "ship-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/panyuti-ai/ship-check-mods.git",
+        "path": "plugins/ship-check",
+        "sha": "639fa253fa4c209c4f278df89d8d675710ac2506"
+      }
+    },
+    {
+      "name": "devbar",
+      "source": {
+        "source": "github",
+        "repo": "Mateus-Fagundes/claude-devbar",
+        "sha": "982104fb0178fe0bcba917552f30da71297bdee5"
+      }
+    },
+    {
+      "name": "laravel-tooling",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tomshaw/claude-code-plugins.git",
+        "path": "mods/laravel-tooling",
+        "sha": "47dccc09f5dea43e5eb4f6349b1bf70f1eef5c41"
+      }
+    },
+    {
+      "name": "codex-pet",
+      "source": {
+        "source": "github",
+        "repo": "steven-panxd/codex-pet-in-claude",
+        "sha": "79508c56179fa2fd09a7870f8a46852e8ce00825"
+      }
+    },
+    {
+      "name": "hud-desktop",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Guccbai/claude-hud.git",
+        "path": "desktop",
+        "sha": "e760a2b3d65317a4e29991bb70e8f02645b1c02a"
+      }
     }
   ]
 }
