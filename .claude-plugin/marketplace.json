@@ -8957,6 +8957,51 @@
         "path": "clawd-wander",
         "sha": "9b0066aec27a10ec650a9dbd3fc55e14bf8e5df4"
       }
+    },
+    {
+      "name": "prompt-history",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/felipeam86/claude-session-explorer.git",
+        "path": "plugins/prompt-history",
+        "sha": "911772ad7041dc8984b5aa35c98b0d035bc79c36"
+      }
+    },
+    {
+      "name": "blast-shield",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "mods/blast-shield",
+        "sha": "d51e8df1ed46d464024c407b5448869f12306601"
+      }
+    },
+    {
+      "name": "handoff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OrenSegal/sous.git",
+        "path": "mods/handoff",
+        "sha": "d51e8df1ed46d464024c407b5448869f12306601"
+      }
+    },
+    {
+      "name": "glassbox",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/damilola-elegbede-org/claude-config.git",
+        "path": "system-configs/.claude/mods/glassbox",
+        "sha": "f0414affd55ce52c8d61dd1016566936d37a6c02"
+      }
+    },
+    {
+      "name": "aiblueprint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Melvynx/aiblueprint.git",
+        "path": "agents-config/claude-config/mods/aiblueprint",
+        "sha": "513b390493b5a3dd1f42b492c4619ed7b2fdbc3b"
+      }
     }
   ]
 }
