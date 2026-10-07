@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1195 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1211 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1195 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1211 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1195 mods, see the Chinese section below.
+For detailed descriptions of all 1211 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1195 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1211 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -280,6 +280,11 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | burnbar | 侧边面板用渐变进度条显示 5 小时、每周（以及花费上限）用量各用了多少和多久后重置，提示框上方也有一行紧凑版；`/burnbar` 打开面板；跟随浅色 / 深色主题变色，每分钟刷新倒计时。备注：只读 `$.session.usage()` 和 session.measure 里 Claude Code 自己报告的限额（register.tsx 76–113）；config.set 只观察主题并原样放行；不运行外部程序、不联网。 | MIT | [链接](https://github.com/akaaff/burnbar) |
 | status-dash | 提示框上方的韩文仪表条：模型、文件夹、最近用过的技能，以及上下文、5 小时、每周限额的渐变刻度和重置剩余时间；回合结束、权限请求等通知和上下文快满时弹 toast；`/status-dash` 开关。备注：只读 `$.session.model/cwd/usage()`（register.tsx 39–42）；skill.prompt 只记下技能名并原样放行（160–164），classic.Notification 只弹 toast（175–181）；不运行外部程序、不联网；与同仓 row-polish 是一对。 | MIT | [链接](https://github.com/mwpark-aa/claude-terminal-mods/tree/main/mods/status-dash) |
 | cold-cache-guard | 提示缓存已经过期时先问你再重建：恢复（resume）一个缓存大概率已失效的长会话时，或空闲超过缓存寿命（默认 60 分钟）后打第一条提示、且上下文超过阈值（默认 3 万 token）时，弹窗让你选照常发送、先 compact 再发、/clear 后再发或取消；英 / 法双语。备注：prompt.submit 不改写内容，只在你选择后原样放行，或丢弃这次发送并把同一段文字放回输入框（register.ts 139–176，`$.prompt.fill` 不发送）；compact 和 /clear 只在你选了才执行（75–84、90–100）；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/mediavee/cold-cache-guard) |
+| suivi-conso | 提示框上方显示 5 小时与每周额度剩余、上下文、本会话花费和用完时间预测，`/conso` 打开面板（7 天历史、省 token 建议、按工具 / MCP 服务器统计的花费），`/theme-mods` 设置同仓 mod 共用的配色；法 / 英双语。备注：只读 `$.session.usage()` 与 session.measure（register.tsx 176–218）；tool.call 先原样执行再按结果长度估算 token（221–233）；`/theme-mods` 会写 `~/.claude/mods-theme`（164）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/suivi-conso) |
+| token-watch | 提示框上方显示本机各会话的 token 用量、套餐限额和提示缓存还热不热，`/token-watch` 打开分页面板（按模型、子代理、小时、缓存写入原因细分）。备注：turn.step 只读每次请求的 usage、结果原样返回（register.ts 252–283）；限额来自 session.measure（297–303）；数据存在 `$.store`；不运行外部程序、不联网。 | MIT | [链接](https://github.com/arviaja/token-watch) |
+| usageboard | 提示框上方一行：模型、上下文百分比、5 小时 / 7 天限额（配天气 emoji）和今天本机累计的 token 用量与花费；中英文说明。备注：今日用量由插件自带的 `statusline.js --today` 读本机 `~/.claude/projects` 记录算出（register.tsx 32；statusline.js 只用 fs/os/path，71–118）；其余只读 session.measure；不联网。 | MIT | [链接](https://github.com/illustra9527/claude-usage-statusline) |
+| usage-inspector | 提示框上方显示上下文、限额与花费，并画每回合 token 增量的小柱状图；`/context-detail` 打开上下文明细面板；中英文说明。备注：prompt.submit 只记录本回合开始时的上下文 token 数并原样放行，不改写（register.tsx 216–221）；只读 `$.session.usage()` 与 session.measure；不运行外部程序、不联网。 | | [链接](https://github.com/purplecofe/usage-inspector) |
+| cc-dash-kit | 侧边仪表盘：额度、会话卡片，可选 GPU（nvidia-smi）、磁盘（df）、本机服务 HTTP 探测和暂停标记卡片；`/cc-dash` 打开；英 / 繁中。备注：卡片配置读插件目录里的 `dash.config.json`（register.tsx 24），不读项目文件；探测只跑固定命令 `df`、`nvidia-smi`、`curl` 到你配置的地址（sources/disk.ts 16、gpu.ts 15、http-probe.ts 17）；prompt.submit 只用来自动打开面板并原样放行（register.tsx 129–132）；不发送会话内容。 | MIT | [链接](https://github.com/coolthor/cc-dash-kit) |
 
 ### 上下文管理 Context Management
 
@@ -519,6 +524,9 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | no-command-output | 在对话记录里把已完成且没出错的工具输出折叠成一行「output hidden (N lines)」，点一下展开、再点收起；出错的输出照常显示；`/no-command-output` 切换，默认隐藏（插件设置 hiddenByDefault 可改）。备注：只改显示（ToolUse / ToolResult 渲染，register.tsx 150–245），模型拿到的工具结果不变；不运行外部程序、不联网。 | MIT | [链接](https://github.com/marcoscano/no-command-output) |
 | row-polish | 把 spinner、回合结束行和后台提示换成韩文措辞；Bash 行显示状态、说明、耗时和高亮后的命令，Read / Edit / Write / 删除行按操作上色，回答里的 `/compact`、`claude …` 和 shell 命令加强调；`/row-polish` 开关。备注：只改显示；tool.call 只计时并原样放行（register.tsx 137–144）；不运行外部程序、不联网；与同仓 status-dash 是一对。 | MIT | [链接](https://github.com/mwpark-aa/claude-terminal-mods/tree/main/mods/row-polish) |
 | dense | 每个回合结束后把这一回合的工具调用折叠成一行摘要（含失败数），可选连中间的过程文字也收起、只留最终回答；点开可看原样。备注：session.append 和 tool.call 只记录行 id 与是否失败、原样放行（register.tsx 130–147），折叠只影响显示；插件设置可选失败回合是否折叠、是否隐藏中间文字；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/jinhuang712/claude-code-dense) |
+| clean-bar | 把隐藏工具行和上下文条合在一个框里：开启时隐藏对话里的技术性工具行（ctrl+o 仍可看全部），提示框上方显示当前任务及进度和上下文窗口用量，进度和上下文两块可折叠；`/clean-bar` 开关；西班牙文界面。备注：只改显示（register.tsx 276–283）；tool.call 先原样执行，只记录步骤和改动的文件（228–260）；不运行外部程序、不联网。 | | [链接](https://github.com/Dos2Locos/claude-code-mods/tree/main/plugins/clean-bar) |
+| clear-view | 侧边实时面板：Claude 正在做什么、每回合用时、工具调用统计、碰过的文件、错误和 token 用量；`/clearview` 打开。备注：tool.call 原样执行，只计时、记录结果状态和文件路径（register.tsx 151–179）；不运行外部程序、不联网。 | | [链接](https://github.com/mintyantralabs-hub/claude_mods/tree/a64eb839f4e33a0d0d5bb128bc7ea9fe9ffc567d/clear-view) |
+| ws-quiet-notes | 配合 agent-workspaces 的工作区笔记使用：对话里隐藏写入 `.ws/`、`.cs/` 笔记的 diff，在提示框上方计数，`/notes` 打开面板读回本会话写的笔记。备注：只改 ToolResult 显示（register.tsx 120–146）；tool.call 先原样执行再从结果里摘出笔记路径（100–118）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/djock/agent-workspaces/tree/main/plugins/ws-quiet-notes) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -687,6 +695,8 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | scritture-esterne | 每回合结束在提示框上方列出这一回合写到仓库之外的操作：MCP 写入类工具（Notion、Gmail、Slack、GitHub、Linear 等，按工具名里的动词判断）以及 Bash 里的 `git push`、`gh pr/issue/release/repo` 的创建/合并/关闭/评论/编辑/删除、`curl -X POST/PUT/PATCH/DELETE`、带 `--apply`/`--delete` 的脚本；每条标 ✓ 或 ✗（被拒或出错），结果里有 https 链接时附「apri」链接；`/scritture [on|off]` 开关，插件设置「servizi」可给 id 不透明的连接器起名。界面为意大利语。备注：`tool.call` 先 `await next(e)` 再记录，结果原样返回，不拒绝不改写；只记主会话；不运行外部程序、不联网。 | MIT | [链接](https://github.com/andreabrugnoli/mods/tree/main/scritture-esterne) |
 | cm-block-dangerous-commands | Claude 运行 Bash 前检查命令，命中 `rm -rf /`/`~`/`.`/`*`、强推 main/master、`git clean -fdx`、SQL DROP/TRUNCATE、`chmod -R 777 /`、mkfs、`dd of=/dev/…`、重定向到磁盘设备、`curl`/`wget` 下载后直接交给 shell 执行、fork 炸弹就拒绝并告诉 Claude 原因；`git reset --hard` 可选开启；可在 /config 加自定义拒绝 / 放行正则，或改成只提醒的 warn 模式。备注：只拒绝（`deny`）或原样放行，不改写命令（register.ts 15–30）；检查本身出错时也拒绝；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/rotbit/claudemods-marketplace/tree/main/cm-block-dangerous-commands) |
 | secret-sentinel | Claude 用 Write、Edit 或 Bash（echo/cat/tee/printf 重定向、heredoc）写文件时，发现 AWS/GitHub/Slack/Google/Stripe/OpenAI 风格密钥、私钥块、Bearer token、URL 里的账号密码或带引号的 password/api_key 等硬编码值就拒绝，并且只说明是哪类、不复述值；`.env*`、`.mcp.json`、`wp-config.php`、`id_rsa`、`id_ed25519`、`.netrc`、`credentials.json` 这些文件一律不让 Claude 写。备注：只拒绝（`deny`）或原样放行，不改写（register.ts 87–105）；占位值（your-api-key、xxx、${VAR} 等）不拦；不注册命令、不运行外部程序、不联网；作者为 LightSpeedWP 团队写的规则，但匹配本身通用。 |  | [链接](https://github.com/ZaredRogers/mods/tree/master/mods/secret-sentinel) |
+| garde-prod | 生产环境守卫：标出碰到生产主机（你配置的主机名 / IP）或有风险的 Bash 命令（force push、密钥、rm -rf 等），在生产库写入前检查最近有没有数据库备份，被拒的命令留在 `/prod` 面板里方便你自己用 `!` 运行；法 / 英双语。备注：tool.call 只分类、记录、弹 toast，原样执行（register.tsx 60–95）；只在你开了 requireBackup 且没有新备份时拒绝（deny，70–74），不改写命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/garde-prod) |
+| command-guard | 危险命令安全网：Claude 要跑 rm -r、git push --force、reset --hard、clean -f、branch -D、stash drop 等（Bash 和 PowerShell）之前，先显示会丢掉什么，再让你选运行或取消；`/guard on` / `/guard off` 开关。备注：tool.call 只放行或拒绝（deny），不改写命令（register.tsx 64–74、80–96）；预览只跑只读 git 命令（log、status、diff --shortstat、clean -n、stash list，986–1064）；只拦 Claude 自己的调用；不联网。与 main 里的 context-inspector、git-branches、roadmap 同属 claude-mode 套件。 | | [链接](https://github.com/Zulut30/claude-mode/tree/main/en/command-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -837,6 +847,10 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | branch-diff | `/branch-diff` 打开窗格，像 PR 的「Files changed」一样列出当前分支相对基准分支（origin/HEAD，否则 main、master）的所有改动文件和 diff，含未提交改动（标 ● uncommitted）；`f` 切换整文件 / 只看改动部分，`r` 刷新，点文件名跳转；窗格开着时 Claude 编辑文件或跑命令后自动刷新。备注：用 `$.process.run` 只跑 `git symbolic-ref`、`rev-parse`、`merge-base`、`diff --no-ext-diff --no-textconv`（git.js 8–92）；tool.call 跑完后才刷新、原样返回；不联网。 |  | [链接](https://github.com/DiegoHeer/claude-mods/tree/main/branch-diff) |
 | runboard | Claude 用 Bash 跑 Playwright 测试（`playwright test` 或调用它的 npm 脚本）时，提示框上方出现实时面板：进度、通过 / 失败 / flaky 计数、每个测试一个方块、预计剩余时间、Stop run 按钮、失败详情与 Trace 按钮，结束后可 Open report。备注：tool.call 原样放行，只读后台任务输出文件（register.tsx 262–295）；按钮才运行 `npx playwright show-report` / `show-trace`（159、447）或对 playwright 进程组发 SIGINT（167–174，失败再用 TaskStop）；插件还带一个 runboard skill（教 Claude 后台运行、不要传 --reporter）。 | MIT | [链接](https://github.com/Dbravi/runboard) |
 | shell-monitor | Claude 放到后台的 shell（run_in_background 或中途转后台）在最多 3 个叠放窗格里实时显示输出，其余排队；`/shells-list` 列出、`/shell [n]` 打开、`/shell-close <n\|done\|all>` 关闭、`/shell-clear` 清掉已结束的。备注：tool.call 原样放行、只记下后台任务 id（register.tsx 189–239）；session.append 只读任务完成通知、原样放行（242–264）；只读 Claude Code 自己的 tasks/*.output 文件；不运行外部程序、不联网。 | MIT | [链接](https://github.com/isaac-pathlab/claude-shell-monitor) |
+| apk-fraicheur | React Native / Expo / Gradle 项目的 Android APK 新鲜度：APK 是否跟得上代码、构建是否在跑及耗时、失败和内存不足立刻提示、包大小；`/apk` 查看，`/apk copy` 复制到你设定的文件夹；法 / 英双语。备注：tool.call 只识别构建命令并原样执行（register.tsx 196–209）；只跑本机 `git log/rev-parse/status` 和 `pgrep`（98–101、155），复制用 `cp`（223）；不联网。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/apk-fraicheur) |
+| ou-on-en-est | 各仓库进度面板：每个仓库的分支、未提交和未推送的改动、PR 与 CI；可选查看服务器上部署的提交相对 main 的位置和现场改动，以及你的页面是否能访问；`/ou-on-en-est` 打开，可给仓库加备注；法 / 英双语。**备注**：每 10 分钟自动对本地仓库 `git fetch --prune`（register.tsx 69、182）、跑 `gh pr view`（86）；配置了服务器才用 `ssh` 执行只读 git 查询（113），配置了地址才 `curl` 看状态码（137）；不发送会话内容。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/ou-on-en-est) |
+| y-change | 侧边面板列出本会话里 Claude 改过的每段代码 diff，回合结束后附上「改了什么、为什么改、给不懂这门语言的人的语法说明」；`/y-change` 开关；韩文界面。**备注**：每回合结束自动用 `$.model.fork` 基于本会话生成说明（register.tsx 90–109），会额外花 token，不写回主对话；tool.call 只读 Edit/Write 结果（76–87）；不运行外部程序、不联网。 | | [链接](https://github.com/nalpari/claude-mods/tree/main/y-change) |
+| annotate | 在对话记录里选中一段文字、写批注，攒好后一键把全部批注作为你的消息发给 Claude，或复制成 Markdown；`/annotate-mod` 打开面板。**备注**：只在你按「发送」时才用 `$.prompt.submit` 把你写的批注作为你的消息发出（register.tsx 174–179），不自动发送、不改写你的提示；读 `$.ui.selection()`（107）；不运行外部程序、不联网。 | | [链接](https://github.com/sagarr/claude-code-annotate-mod) |
 
 ### 子代理管理 Subagent Management
 
@@ -892,6 +906,7 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | glassbox | 看 Claude 干活：提示框上方一条带显示清单进度条、当前步骤、在跑的子代理和用时；`/glassbox` 打开侧栏窗格，列出 TodoWrite/任务清单、可以点进去看的子代理，以及活动流（工具调用、Claude 的旁白和可见的思考内容）。备注：所有钩子只观察、原样放行（`session.append` 只读取模型回复用于活动流）；终端够宽（约 144 列以上）时，出现清单或子代理会自动打开侧栏；只读 `$.agent.list()`；`claude -p` 等无界面会话里不记录；不联网、不写文件；出自作者的个人 Claude 配置仓库。 | MIT | [链接](https://github.com/damilola-elegbede-org/claude-config/tree/main/system-configs/.claude/mods/glassbox) |
 | agent-cast | 子代理和队友运行时，把每一个画成一个角色：提示框上方的框里每个代理一行（按类型不同的表情脸、类型、任务、当前工具、已运行秒数），转圈行开头也排出它们的脸；结束后标成完成或中断，稍后自动消失。备注：界面为日语或英语（跟随 settings 的 language 或你输入的文字）；`prompt.submit` 只用来判断语言、`agent.spawn`/`tool.call` 只观察、都原样放行；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/agent-cast) |
 | model-guard | 规定本会话能用哪些模型：`/models` 勾选 Opus、Sonnet、Haiku、Fable 等，可按仓库保存或设为默认；子代理或 Workflow 要用被关掉的模型时默认拒绝（可切成换成 fallback），子代理在被关模型上的请求换到 fallback，`/model` 切到被关模型时拒绝；面板显示拦截记录。备注：agent.spawn 默认 deny，swap 模式才改子代理 model（register.tsx 184–216）；turn.step 只对子代理把被关模型换成 fallback（218–237）；classic.PreModelSwitch 只返回 deny（265–279）；设置存在插件存储；不运行外部程序、不联网。 | | [链接](https://github.com/Recokioshi/claude-kit/tree/master/mods/model-guard) |
+| agent-tree | 侧边面板画出本会话子代理的实时关系树，显示谁派生了谁、各自正在用的工具、耗时和工具调用数；有子代理启动时自动打开；`/agent-tree` 打开。备注：tool.call 原样执行，只记录活动（register.tsx 176–205）；classic.SubagentStart/Stop 只刷新显示（153–174）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/VanillaFairy/agent-tree) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -1001,6 +1016,7 @@ For detailed descriptions of all 1195 mods, see the Chinese section below.
 | afk-cat | 住在 Claude Code 里的放置类电子宠物猫：`/cat` 打开窗格照顾猫（喂食、抚摸、睡觉、换猫、领养、远征、每日任务、商店、换世界等），你闲着和 Claude 干活时都会赚金币，连续签到有奖励；默认还会把 spinner 文字、回合用时行、提示框下方提示和工具行换成猫风格，Claude 工作时提示框上方有一只奔跑的猫（插件设置 skin 可选 light/off）；`/cat weather <城市>` 让院子跟随当地天气；按 `p` 在浏览器里玩街机小游戏。备注：`tool.call`、`turn.start`、`turn.complete` 只用来计分和触发猫的反应，结果原样放行；金币按回合时长和 Claude Code 报告的本会话费用（美元）在本机计算，不读消息内容；天气只经 `$.http` 请求 open-meteo（你输入的城市名，或保留两位小数的经纬度），设了位置后每 15 分钟刷新一次（失败 5 分钟重试），`/cat weather off` 关闭；只有打开街机、大图或定位页时才用 `node` 在 127.0.0.1 随机端口启动插件自带的 server/arcade.mjs（带一次性令牌），并用 `open`/`xdg-open`（Windows 为 `rundll32`）打开浏览器；server/public/arcade.js 是 web/arcade.ts 的压缩打包产物（已在本机用 esbuild 0.25 重新打包核对，只差变量名）；Windows 上用 PowerShell `Media.SoundPlayer` 播放插件自带音效，macOS 用 `$.audio.play`；`/cat theme <flavor>` 会把 Claude Code 主题设为对应 Catppuccin 主题；`/cat export`、`/cat import` 读写 `~/.claude-kitten/backups/` 下的备份；进度存在插件存储里。 | MIT | [链接](https://github.com/CooLguNxDD/Claude-Idle-Cat) |
 | spinner-cat | 把 Claude 工作时的状态行（✻ Cooking…）换成按状态动起来的 ASCII 小猫，后面显示正在用的工具、已用时间和「esc 중단」；空闲时小猫在提示框上方揣手（식빵 굽기），3 分钟没动静就睡着（变暗）。界面为韩语。备注：`tool.call` 只记下工具名，调用原样放行；为避免输入时光标闪烁会读取输入框是否为空（`$.prompt.read`），不改动输入；只在终端界面生效；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/wdtjr2653-cpu/claude-spinner-cat) |
 | omok-explorer | 会话开始时在侧边打开文件浏览窗格：目录树可展开 / 折叠，点文件就在输入框插入 `@路径`，可调窗格宽度和滚动；窗格底部住着像素小人 crawl，会随 Claude 的动作切换思考、读文件、编辑、跑命令、搜索、调子代理、出错、完成、休息等动画；`/explorer` 重新打开窗格，`/crawl` 加动作名固定动画、加 auto 恢复跟随。界面为韩语。备注：只用 `$.fs.list` 读项目目录（隐藏 .git、node_modules 等）；点文件时用 `$.prompt.fill` 插入路径、不自动发送；tool.call 只切换动画、原样返回；不运行外部程序、不联网。 |  | [链接](https://github.com/ksthink/claude_mod_crawl) |
+| clawd-walk | 一群 Clawd 在提示框上方来回走，边缘、速度随机，还有稀有款；`/clawd` 开关，`/clawd rainbow`、`color`、`wide`、`parade` 召唤一只；日文提示。备注：只画 AbovePrompt（register.tsx 43 起）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/takenokohal/clawd-walk) |
 
 ### 图片与媒体 Images & Media
 
