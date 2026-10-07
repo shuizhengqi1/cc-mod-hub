@@ -10010,6 +10010,74 @@
         "path": "plugins/crossloom-env",
         "sha": "5d91ceb2bfc1c650f94d1028e5606c60a6e94d13"
       }
+    },
+    {
+      "name": "booster-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tylergraydev/cc-mods.git",
+        "path": "booster-pane",
+        "sha": "94a5cb88c7a5432cf44da51902a049d3064349bc"
+      }
+    },
+    {
+      "name": "sound-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tylergraydev/cc-mods.git",
+        "path": "sound-board",
+        "sha": "94a5cb88c7a5432cf44da51902a049d3064349bc"
+      }
+    },
+    {
+      "name": "rail-runner",
+      "source": {
+        "source": "github",
+        "repo": "tylergraydev/rail-runner",
+        "sha": "05d0977f95b5008cc4fcb491be90176e78e8b0f8"
+      }
+    },
+    {
+      "name": "terminal-desk",
+      "source": {
+        "source": "github",
+        "repo": "Doonminus2/claude-code-TerminalDesk-Plugin",
+        "sha": "aa1797ccf47e467c956423cea53fec14958f25b4"
+      }
+    },
+    {
+      "name": "session-tasks",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Roberdinho/claude-mods.git",
+        "path": "plugins/session-tasks",
+        "sha": "0a29b115316247563265cb1712deb2877315251a"
+      }
+    },
+    {
+      "name": "pr-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/heidiks/agent-kit.git",
+        "path": "plugins/pr-watch",
+        "sha": "a813452b964f72a5450a615f47e0bb1f84592f42"
+      }
+    },
+    {
+      "name": "pocket",
+      "source": {
+        "source": "github",
+        "repo": "romanlucian/claude-pocket",
+        "sha": "621c1ddbc52986ec77dddae6d78e8d9d6c103652"
+      }
+    },
+    {
+      "name": "mermaid-render",
+      "source": {
+        "source": "github",
+        "repo": "ejklock/claude-mermaid-render",
+        "sha": "5749d0a5097b005fd2054330b389390631a07ea9"
+      }
     }
   ]
 }
