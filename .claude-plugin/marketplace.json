@@ -10078,6 +10078,130 @@
         "repo": "ejklock/claude-mermaid-render",
         "sha": "5749d0a5097b005fd2054330b389390631a07ea9"
       }
+    },
+    {
+      "name": "total-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/glglekdy/claude-mods.git",
+        "path": "total-stats",
+        "sha": "cf9cc87f5e19c53537895d88485e574dc9d2b1dc"
+      }
+    },
+    {
+      "name": "throttle",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hereshecodes/claude-mods.git",
+        "path": "throttle",
+        "sha": "177bfb7eee6b4477b2becc41206589323d42a706"
+      }
+    },
+    {
+      "name": "destructive-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/maximemarc/Claude-mods.git",
+        "path": "destructive-guard",
+        "sha": "bb7c986e698244e3f239d2cf835520e6dbacd1e8"
+      }
+    },
+    {
+      "name": "usage-gauges",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/maximemarc/Claude-mods.git",
+        "path": "usage-gauges",
+        "sha": "bb7c986e698244e3f239d2cf835520e6dbacd1e8"
+      }
+    },
+    {
+      "name": "CommitNudge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Heuwzen/claude-runway.git",
+        "path": "commit-nudge",
+        "sha": "1497bbda179e26564e79cc4e565efb5143a3721a"
+      }
+    },
+    {
+      "name": "MacLoad",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Heuwzen/claude-runway.git",
+        "path": "mac-load",
+        "sha": "1497bbda179e26564e79cc4e565efb5143a3721a"
+      }
+    },
+    {
+      "name": "UsageBreakdown",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Heuwzen/claude-runway.git",
+        "path": "usage-breakdown",
+        "sha": "1497bbda179e26564e79cc4e565efb5143a3721a"
+      }
+    },
+    {
+      "name": "office",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/adamentwistle/claude-code-mods.git",
+        "path": "plugins/office",
+        "sha": "ce56f8100a94b7f978e9605a633e59edb56d8908"
+      }
+    },
+    {
+      "name": "viewfinder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/adamentwistle/claude-code-mods.git",
+        "path": "plugins/viewfinder",
+        "sha": "ce56f8100a94b7f978e9605a633e59edb56d8908"
+      }
+    },
+    {
+      "name": "clawd-gains",
+      "source": {
+        "source": "github",
+        "repo": "asanjinez/clawd-gains",
+        "sha": "a6332e62fa793979e7ed348e3e74ecbc5b963d5e"
+      }
+    },
+    {
+      "name": "poker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/LyInfi/claude-code-mods.git",
+        "path": "mods/poker",
+        "sha": "0cdac71947f4c6b1335c9d678cc2dc03c9c0fcff"
+      }
+    },
+    {
+      "name": "gh-review",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/debba/claude-mods.git",
+        "path": "plugins/gh-review",
+        "sha": "0978bfe6ebb04a345a7682f3dadb3ee6b9db1280"
+      }
+    },
+    {
+      "name": "progresso-tarefas",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rodrigofaerman/claude-mods.git",
+        "path": "plugins/progresso-tarefas",
+        "sha": "1cd63a1960f8e1cea2ea440cc012193c995a8b02"
+      }
+    },
+    {
+      "name": "waiter",
+      "source": {
+        "source": "github",
+        "repo": "yarivzip/waiter",
+        "sha": "85cf6ed604303b6093fea65e4ae0cf998760159a"
+      }
     }
   ]
 }
