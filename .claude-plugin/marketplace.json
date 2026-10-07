@@ -9320,6 +9320,109 @@
         "repo": "thisismairaj/ayat-of-the-day",
         "sha": "16ce4df74629de8333dd0bcbc66d1ab26d8015c4"
       }
+    },
+    {
+      "name": "doro-context",
+      "source": {
+        "source": "github",
+        "repo": "GelzoneCC/doro-context",
+        "sha": "10e8e69ac2c57802beea2f80600c786b8e1f0fea"
+      }
+    },
+    {
+      "name": "context-bars",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nalpari/claude-mods.git",
+        "path": "context-bars",
+        "sha": "985a5f7f950d75aad55a3eb6f8daf92d2323e616"
+      }
+    },
+    {
+      "name": "spinner-cat",
+      "source": {
+        "source": "github",
+        "repo": "wdtjr2653-cpu/claude-spinner-cat",
+        "sha": "7143a14fd4f4fe89b85f98861012516238e2add9"
+      }
+    },
+    {
+      "name": "hebrew-rtl-ubuntu",
+      "source": {
+        "source": "github",
+        "repo": "divonr/hebrew-rtl-ubuntu",
+        "sha": "0ad2730d896a1d74b7ba92a21749bb7814d66454"
+      }
+    },
+    {
+      "name": "match-3",
+      "source": {
+        "source": "github",
+        "repo": "nachtgold/claude-code-match-3",
+        "sha": "0e452f170aeb3fb2239d86f8f2e2236dd8b2f081"
+      }
+    },
+    {
+      "name": "scritture-esterne",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "scritture-esterne",
+        "sha": "550a607e192ec3045ce002b952433bb62a8193cc"
+      }
+    },
+    {
+      "name": "conferma-proposte",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "conferma-proposte",
+        "sha": "550a607e192ec3045ce002b952433bb62a8193cc"
+      }
+    },
+    {
+      "name": "correggi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/andreabrugnoli/mods.git",
+        "path": "correggi",
+        "sha": "550a607e192ec3045ce002b952433bb62a8193cc"
+      }
+    },
+    {
+      "name": "hitokoto",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hoobnn/hoobnn-agent-mods.git",
+        "path": "claude-code/hitokoto",
+        "sha": "95bda90b517f798620129a1c5bc8ccaaa8293ec6"
+      }
+    },
+    {
+      "name": "todo-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hoobnn/hoobnn-agent-mods.git",
+        "path": "claude-code/todo-bar",
+        "sha": "95bda90b517f798620129a1c5bc8ccaaa8293ec6"
+      }
+    },
+    {
+      "name": "ts-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hoobnn/hoobnn-agent-mods.git",
+        "path": "claude-code/ts-band",
+        "sha": "95bda90b517f798620129a1c5bc8ccaaa8293ec6"
+      }
+    },
+    {
+      "name": "shellcast",
+      "source": {
+        "source": "github",
+        "repo": "jeffarese/shellcast",
+        "sha": "004d218c713f4ef287348e329325d2314326a4cc"
+      }
     }
   ]
 }
