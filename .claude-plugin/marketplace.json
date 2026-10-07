@@ -8914,6 +8914,49 @@
         "path": "plugins/cyclops-spark",
         "sha": "98248dfec5ce531ebd6c622c9cbe552d3b37d10e"
       }
+    },
+    {
+      "name": "thai-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MankhongGarden/claude-code-mods-field-notes.git",
+        "path": "mods/thai-mode",
+        "sha": "b45e2433e42986684f3153474ddabccd430fc5d3"
+      }
+    },
+    {
+      "name": "fuel-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MankhongGarden/claude-code-mods-field-notes.git",
+        "path": "mods/fuel-bar",
+        "sha": "b45e2433e42986684f3153474ddabccd430fc5d3"
+      }
+    },
+    {
+      "name": "copyas",
+      "source": {
+        "source": "github",
+        "repo": "gdalyy/copyas",
+        "sha": "ad2339eb8ee1381002346a72a6eecd8398e35f16"
+      }
+    },
+    {
+      "name": "token-usage-line",
+      "source": {
+        "source": "github",
+        "repo": "mkiselyow/claude-code-token-usage",
+        "sha": "8c75e48646010dd763af22dcc8d4208754d85705"
+      }
+    },
+    {
+      "name": "clawd-wander",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/takiguchi-yu/claude-modes.git",
+        "path": "clawd-wander",
+        "sha": "9b0066aec27a10ec650a9dbd3fc55e14bf8e5df4"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1104 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1109 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1104 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1109 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1104 mods, see the Chinese section below.
+For detailed descriptions of all 1109 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1104 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1109 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -268,6 +268,8 @@ For detailed descriptions of all 1104 mods, see the Chinese section below.
 | game-casting | GAME MODE 套件之一：把加载提示换成「CASTING · 当前在跑的工具 · 本回合第几次行动 · 本回合已花费」一行。备注：`session.append`/`tool.call` 只计数、原样返回；只读 `$.session.usage`；界面文字为韩文，费用默认按韩元（1 USD=1400 KRW）显示，可设 currency=usd；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-casting) |
 | game-clear-time | GAME MODE 套件之一：回合结束的耗时行换成「✦ CLEAR 用时 · 行动数 · 本回合花费 · 比平时快/慢多少」（按本项目最近 20 个回合的中位数）；`/clear-time` 查看本项目平均、最快与最慢。备注：`session.append`/`tool.call` 只计数、原样返回；回合时长存在本机 `$.store`；界面文字为韩文，费用默认按韩元显示；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-clear-time) |
 | quota-band | 提示框上方一行进度条：订阅的 5 小时与每周额度、上下文占用、提示缓存剩余时间（快过期时提醒重建要多少 token），并按缓存读写估算本回合的额度消耗倍数；`/quota-weights` 查看拟合出的权重。备注：只读 `session.measure` 和回合结束时用本机 `head`/`tail` 读本会话 transcript 末尾，不发任何请求；只有本机装了 Claude Profiles Mac 应用时，才把各账号额度读数（含账号 UUID 与邮箱）写到 `~/Library/Application Support/Claude Profiles/mod-readings/`；可选的 close/rename 按钮默认隐藏，只有你在设置里填了文字并点按钮才代你发送那条提示。 | MIT | [链接](https://github.com/andras-gyarmati/claude-quota-band) |
+| fuel-bar | 提示框下方两行页脚：第一行是回合数 · 模型 · effort · 到自动压缩点（而非原始窗口）的上下文进度条 · 5 小时/7 天额度与重置倒计时；第二行是项目名 · 当地天气 · 本次已工作时长，并把各 mod 的提示消息收到行尾显示 8 秒；`/fuel-debug` 查看原始数值。备注：依赖同仓的 thai-mode（安装时自动一并装上，用来读取它的开关翻译提示文字）；界面部分为泰文，配色按浅奶油色背景挑选；天气每 30 分钟经 `$.http` 请求 ipwho.is（会把你的 IP 发给它做粗略定位）和 api.open-meteo.com，不含任何会话内容；会拦下所有 mod 的 `ui.toast`（不再弹出，改在页脚显示）；`classic.UserPromptSubmit`/`classic.Stop` 只读取 permission_mode、原样放行。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/fuel-bar) |
+| token-usage-line | 提示框上方一行：上一条回复（含期间子代理）与本会话累计的输入/输出 token、缓存命中百分比、估算花费和上下文占用。备注：`turn.complete` 只读取 usage、原样返回；只读 `$.session.usage()`；不联网、不写文件、不注册命令。 | MIT | [链接](https://github.com/mkiselyow/claude-code-token-usage) |
 
 ### 上下文管理 Context Management
 
@@ -489,6 +491,7 @@ For detailed descriptions of all 1104 mods, see the Chinese section below.
 | game-hint | GAME MODE 套件之一：提示行末尾按当前状况给两条操作提示（工作中「ESC 后退」、连续失败「先读报错」、上下文偏低「/compact 休息」、装了 game-save-point 时提醒存档）。备注：`tool.call`/`session.append` 只计数、原样返回；只改提示行显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-hint) |
 | game-stance | GAME MODE 套件之一：在提示框底栏右侧用彩色徽章显示当前权限模式（默认/自动批准编辑/计划/自动判定/绕过权限等），跟随 shift+tab 切换。备注：只读 settings 的 defaultMode，`classic.UserPromptSubmit`/`classic.PostToolUse` 只读取 permission_mode、原样放行；只改显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-stance) |
 | diffspider | 每次 Edit/Write 完成后，一只盲文点阵小蜘蛛爬过 diff，把改动的词标成霓虹色，爬完显示增删行数。备注：`tool.call` 只记下调用 id、原样返回；只改终端里工具行的显示；不注册命令、不跑外部程序、不联网。 | MIT | [链接](https://github.com/Silvertree2010/diffspider) |
+| thai-mode | 把 Claude Code 的界面换成泰文：工具行（Read→อ่านไฟล์、Bash→รันคำสั่ง，MCP 工具显示为「服务 · 泰文动词」）、工具结果摘要、折叠的工具组、按真实阶段变化的加载词、回合耗时和进度提示；`/thai` 开关（记在本机 `$.store`）。备注：内置词典翻译，不调模型；只改显示（`ui.render`），不改模型收到的内容；配色按浅色背景挑选；不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/thai-mode) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -938,6 +941,7 @@ For detailed descriptions of all 1104 mods, see the Chinese section below.
 | cozy-clawd | 非官方粉丝 mod：提示框上方一条像素风小场景，Clawd 演出 Claude 在思考、写字、调用工具或等你确认，旁边是会话指标场景（上下文、缓存、额度等，8 种场景可选），带一个压缩按钮。备注：`turn.step`/`tool.call`/`telemetry.log` 只观察、原样返回；只有你点按钮才压缩；macOS 上跑 `/usr/bin/defaults read -g AppleLanguages` 取系统语言；不联网。 | MIT | [链接](https://github.com/OrihuelaConde/cozy-clawd) |
 | clawd-pet | 像素 Clawd 在提示框上方散步，按 Claude 当前在做的事（思考、读写、跑命令、等批准、测试通过）做出反应，会饿、会升级学新动作，可点它摸摸；`/clawd-pet help` 查看喂食、改名、尺寸、帽子、音效等（`/pet` 别名仅在没有其他插件占用时注册）。备注：`prompt.submit`/`tool.call` 只用来切换动画、原样返回；读取本机 `~/.claude/stats-cache.json` 统计 token，只跑本机 `date +%H`；音效默认关闭；不联网。Clawd 角色与动画素材归 Anthropic 所有，不在本仓库 MIT 许可范围内（见仓库 NOTICE）；素材帧较多，安装包约 60 MB。 | MIT | [链接](https://github.com/yuyongyan29-dev/claude-pet/tree/main/clawd-pet) |
 | cyclops-spark | Spark：一个程序生成的小生物，只按真实会话事件动——Claude 思考时蜷起、每个工具伸出一条触须、等你批准时等着、每答完一回合在天空点亮一颗星；可放在侧边面板、提示框上方或状态行，kitty/Ghostty 下用真像素；`/spark` 切换 focus/band/主题/调色板/声音等。备注：`prompt.submit` 只记下你的文字用于 focus 模式、原样返回；`tool.call`/`turn.step` 只观察；focus 模式只隐藏对话行的显示；只有你执行 `/spark ask` 时才用 `$.model.fork`（你自己的 Claude、基于本会话）回答一个侧问题；声音、Link 默认关闭，开启 Link 后会在本机起一个 python3 小助手，仅通过 0600 本地文件和同目录的 Cyclops 家族共享粗略状态；不联网。 | MIT | [链接](https://github.com/CyclopsEyeTeam/cyclops-spark/tree/main/plugins/cyclops-spark) |
+| clawd-wander | Claude 工作时，像素 Clawd 在提示框上方的带子里来回溜达；每启动一个子代理就多一个颜色和种类不同的伙伴，偶尔排成一列跟着走；编辑类工具时拿锤子、查找类工具时拿放大镜，工具失败会吓一跳，子代理结束后渐渐消失。备注：`agent.spawn`/`tool.call` 只观察、原样返回；只读 `$.agent.list()`；只在支持 Raster 的终端里绘制；不注册命令、不联网；代码注释为日文。 |  | [链接](https://github.com/takiguchi-yu/claude-modes/tree/main/clawd-wander) |
 
 ### 图片与媒体 Images & Media
 
@@ -1136,6 +1140,7 @@ For detailed descriptions of all 1104 mods, see the Chinese section below.
 | sessions-pane | 侧边面板列出同时运行的各个会话、各自的模型/effort，以及哪个会话在等你（权限弹窗或提问）。备注：只观察 `prompt.submit`/`tool.call`/权限请求，不改写；会在本机写一份本会话状态 JSON 供面板读取。 | MIT | [链接](https://github.com/gav1256/claude-workflow/tree/main/claude/mods/sessions-pane) |
 | seat-resume | 记录交互会话清单，崩溃、重启或关掉终端后用 `/resume-sessions` 列出并重新打开被打断的会话（Windows，PowerShell，WezTerm 或 Windows Terminal）。备注：经典钩子只记录权限模式和会话信息、不改写；`/resume-sessions` 时运行插件自带的 `scripts/resume-sessions.ps1`（明文脚本，用 Start-Process 在 WezTerm/Windows Terminal 里执行 `claude --resume`）；会话清单写在配置目录的 `session-registry/`。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/seat-resume) |
 | rest-in-pid | 像素风墓地面板：列出所有正在运行的 Claude Code 会话、各自所在 worktree、token 用量和它们派生的进程（CPU/内存），找出会话已结束还残留的「僵尸」进程，每个带 Kill 按钮，Kill all 需 4 秒内连按两次确认；有僵尸时提示框上方显示提醒；`/rest-in-pid` 打开。备注：目前只支持 macOS；本机只读运行 `ps`/`lsof`/`sysctl`/`id`，读取 `~/.claude/projects` 下的 transcript 统计 token；只有你点 Kill 时才用 `/bin/kill` 结束进程（同一用户、跳过仍在运行的会话进程、执行前再次核对 pid）；不联网。 | MIT | [链接](https://github.com/jwchang0206/rest-in-pid) |
+| copyas | `/copyas [目标] [N] [turn] [text]` 把 Claude 最近一条（或倒数第 N 条、或整回合的）回复转换成 Slack、Teams、Discord、WhatsApp、Telegram、Jira、邮件/文档富文本、Markdown、纯文本或 HTML 后复制到剪贴板，去掉终端排版残留。备注：只读本会话消息；富文本剪贴板经本机工具写入（macOS osascript、Windows/WSL 用 PowerShell 跑插件自带的 clip.ps1、Linux 用 GTK4 python3 或 wl-copy/xclip），否则用 `$.ui.copy`；默认把转换结果另存到 `~/.claude/copyas/last.*`（可关）；不联网。 | MIT | [链接](https://github.com/gdalyy/copyas) |
 
 ### 其他工具 Other Tools
 
