@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1140 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1146 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1140 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1146 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1140 mods, see the Chinese section below.
+For detailed descriptions of all 1146 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1140 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1146 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -275,6 +275,7 @@ For detailed descriptions of all 1140 mods, see the Chinese section below.
 | compact-usage-meter | 在提示框下方提示行（如 `⏵⏵ auto mode on …`）的下面加一行：上下文占用、5 小时会话额度和每周额度三条进度条与百分比，额度附重置倒计时；终端窄时自动简化；额度到 80%、95% 时各提示一次。备注：只读 Claude Code 自带的用量数据；不注册命令、不运行外部程序、不联网；仓库没有 LICENSE 文件。 |  | [链接](https://github.com/dkoh0207/compact-usage-meter) |
 | better-statusline | 提示框上方五行高的状态带：用点阵圆环显示上下文占用、提示缓存剩余时间和 5 小时/每周额度，另有模型与 effort、各回合花费与 token、git 分支与改动、运行中的子代理；macOS 上旁边是 Spotify/Apple Music 的音乐卡片（封面、进度，可点按播放/暂停、切歌、拖动、音量、随机、循环）；`/fold` 在一行和五行之间切换。备注：音乐部分仅 macOS，常驻一个 `osascript` JXA 进程（仓库里的 bridge/now-playing.js）读取播放器状态，只有你点卡片按钮时才控制播放器；Spotify 封面用 `curl` 从播放器给的封面地址下载到 TMPDIR 下的会话临时目录（会话结束删除）；用 `python3` 运行仓库里的 bridge/measure.py 测终端字符格大小；每 60 秒跑一次 `git status`；`classic.*` 钩子只读取事件、原样放行；不把会话内容发出去；费用按 API 价格换算。 | MIT | [链接](https://github.com/Autumn1337/better-statusline) |
 | usage-pane | `/usage-pane` 打开右侧停靠的用量面板（会话开始时也会自动打开）：当前模型、上下文占用百分比与进度条（按 70%/90% 分成 NORMAL/WARNING/CRITICAL 三档颜色）、已用 token 与上下文窗口大小、5 小时和 7 天额度的已用/剩余百分比与重置倒计时（附重置时刻），以及本会话累计的输入/输出 token；每 30 秒刷新一次。备注：停靠在右侧需要全屏版面（`/config` → fullscreen）且终端至少 110 列，否则面板显示在行内；只读 Claude Code 自带的用量数据，`/clear` 后累计数重新计算；不运行外部程序、不联网。 | MIT | [链接](https://github.com/tyda/claude-code-usage-pane/tree/main/plugins/usage-pane) |
+| wills-status | 提示框上方两行「黑客风」HUD：第一行显示模型和 effort、git 分支（领先/落后的提交数、改动文件数，干净时显示 ✓）、当前文件夹，以及 Claude 正在运行的工具和参数（带动画，空闲时显示上一个工具和本会话工具调用次数）；第二行是上下文、5 小时、7 天用量条，会话费用和运行时长；用量或上下文越过 80%、95% 时各弹一次提示并让标签闪红；五种配色（matrix、cyber、native、amber、synthwave）可在插件设置里选，终端太窄时自动省略次要段落。备注：会在会话目录里运行本机 `git status --porcelain=v1 --branch`（开会话、每回合结束、Claude 运行 Bash 或改文件后，以及每 30 秒一次，两次至少间隔 2 秒）；`prompt.submit`、`tool.call`、`turn.step` 只用来更新显示、原样放行；不注册命令、不联网。 |  | [链接](https://github.com/William-Long-II/claude-wills-status) |
 
 ### 上下文管理 Context Management
 
@@ -325,6 +326,8 @@ For detailed descriptions of all 1140 mods, see the Chinese section below.
 | tide | 提示框上方用“潮水”显示上下文窗口占用：填充条、每回合涨幅、最近几回合的迷你走势图，以及离自动压缩还剩几回合；接近上限时弹提示，`/tide` 开关。备注：只读 `session.measure`，纯本机显示。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/tide) |
 | aidv-contexto | 提示框上方用葡萄牙语显示上下文占用（按类别拆分，单独统计法律检索工具带进来的量）和用量上限，并给出“该开新会话了”之类建议。备注：`tool.call` 只在本机估算工具结果的 token 数，原样返回；纯本机显示。 |  | [链接](https://github.com/PedroGiudice/opc-plugins/tree/main/plugins/aidv-contexto) |
 | handoff | 每个改动了工作区的回合结束后，在项目的 `.claude/handoff/` 里写 LATEST.md（分支、提交、模型、本回合 Edit/Write 过的文件、git diff --stat 与 status、接手步骤）和 LATEST.patch（git diff HEAD，超过 30 万字符时按文件/hunk 截断并注明），方便下一个会话或同事接手。备注：会自动在项目里写文件（同时写一个内容为 `*` 的 .gitignore，不会被提交）；补丁排除 .env、*.pem、*.key、名字含 secret/credential 的文件等；`prompt.submit` 只清空本回合的文件列表、原样放行；只跑本机 git 只读命令；不联网、不注册命令。 | MIT | [链接](https://github.com/OrenSegal/sous/tree/main/mods/handoff) |
+| context-tracker | 提示框上方的上下文卡片：已用 token、窗口大小、何时开始自动压缩、上一回合增加了多少（如 `+7.4k`），并按类别（工具、技能、消息、系统提示、MCP、记忆文件、子代理、空闲）分色显示；点类别旁的箭头可列出具体项目（每次 10 个，可翻页），整张卡片可折叠，折叠后数字移到提示框下方的模式栏旁；`/context-tracker` 显示或隐藏（也可 `on`/`off`），设置跨会话保存。备注：只读 Claude Code 在本机估算的上下文分类数据（`$.session.usage`，不调 API）；`tool.call`、`turn.complete`、`session.compact` 只用来刷新、原样返回；会响应同作者 mod-panel（不在本市场）发来的开关；不运行外部程序、不联网。 |  | [链接](https://github.com/le0u0/mods/tree/main/mods/context-tracker) |
+| wrap-buttons | Claude 的回复里出现收尾交接卡时（默认标记文字 `Session Handoff Card`，下一步那行默认含 `Next Up`，两者都可在插件设置里改），提示框上方出现一排按钮：1 清空会话并把交接卡和下一步作为新会话的第一条消息发出；2 清空后只把它们填进输入框，由你修改再发；3 只清空；4 留在当前会话（收起按钮）；可点击，也可在空输入框里按数字键 1–4。备注：只有你按 1 时才以你的身份用 `$.prompt.submit` 发出交接内容，按 1–3 都会运行内置 `/clear`；`turn.complete` 只读回复文字找标记、原样放行；需要你自己的收尾技能或提示让 Claude 输出这种交接卡；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/lisim/wrap-buttons) |
 
 ### UI 与主题 UI & Themes
 
@@ -802,6 +805,7 @@ For detailed descriptions of all 1140 mods, see the Chinese section below.
 | github-actions | 提示框上方一条显示当前分支的 GitHub Actions 与 PR：只跟踪本会话里 `git push` 过的提交，列出每个 workflow 与 job 的通过/失败/运行中/等待状态（运行中或失败时显示当前步骤），以及该分支 PR 的编号、标题、draft、审查结论与检查计数；点击可在浏览器打开对应页面；跑完 `git push` 或 `gh pr/run/workflow` 后自动刷新，有运行中的任务时每 15 秒刷新。备注：界面为葡萄牙语；用本机 `git` 与已登录的 `gh`（`gh pr view`、`gh run list/view`、`gh api rate_limit`，只读）访问 GitHub，没装 gh 时整条隐藏、未登录或限流时显示提示；`tool.call` 只观察 Bash 命令、原样放行；推送过的提交记录（sha 与分支，最多 5 个/会话、保留 30 个会话）存在插件存储里；打开链接用 xdg-open/open/start；不注册命令；来自 Hangar 仓库，但单独可用，不需要装 Hangar。 | MIT | [链接](https://github.com/jeffer1312/hangar/tree/main/plugins/github-actions) |
 | session-dashboard | `/dashboard` 打开或关闭会话总览面板：需要处理的事项（PR 的 CI 失败、未解决的审查讨论、未完成的验收条件），ship-session/acceptance-progress 的进度（装了才显示），当前分支 PR 的状态、检查计数、审查结论和请你审查的 PR 数，以及本会话启动后新出现的监听端口和 Docker 容器（回合结束时若还在运行会提示一次）；还会拦下 `pkill -f`、`killall`、`docker stop $(docker ps -q)` 这类会误杀其他会话进程的一次性全停命令。备注：界面为日语或英语（跟随 settings 的 language 或你输入的文字）；用本机已登录的 `gh`（`gh pr view`、`gh api graphql`、`gh api search/issues`，只读）；每 30 秒运行 `lsof -iTCP -sTCP:LISTEN` 和 `docker ps`；拦截只拒绝不改写命令；`prompt.submit` 只用来判断界面语言、原样放行；面板开着时下次会话自动重开；不联网（除 gh 外）。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/session-dashboard) |
 | yomiyasu-gate | Bash 执行 `gh pr`/`gh issue` 的 create、edit、comment 和 `git commit` 之前，把其中的日文正文（`--body`、`-b`、`--body-file`、`-F`、`-m` 等）交给 yomiyasu 文风检查器；得分低于 80 或命中必拒规则（默认表情符号、行尾冒号）时拒绝这条命令并列出问题行，让 Claude 改写后重试；同类命令连续拒绝 2 次后第 3 次放行并提示。备注：检查器 `yomiyasu_lint.py` 不在本插件里，需另装 nanaism/yomiyasu 插件（本市场未审查它），没装时全部放行；用 `python3` 运行该检查器；只检查含假名/汉字的正文，英文不查；会读取 `--body-file` 指定的文件；只拒绝不改写命令，出错时放行；`prompt.submit` 只用来判断提示语言、原样放行；不联网。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/yomiyasu-gate) |
+| redpen | `/redpen` 打开逐行审查窗格：列出 Claude 上一回合用 Edit/Write/NotebookEdit 改过的文件，以及 Claude 的最后一条回答；打开后按 diff（或全文）显示，可对单行或一段行写评论并选标签（预设标签可在项目或用户目录的 `.claude/redpen.json` 里自定义），最后按 `s` 把全部评论连同所在位置和原文摘录合成一条提示发给 Claude；`/redpen <路径>` 直接打开某个文件。备注：界面、预设标签和所发提示的固定开头（「请按以下审查意见全部修改，评论没提到的地方不要动」）都是韩语；只有你按 `s`（或点「전송」按钮）时才以你的身份用 `$.prompt.submit` 发出评论，Claude 正在工作时会等这一回合结束；`tool.call` 只记录改动前的文件内容、原样返回；读本会话消息取最后一条回答；不运行外部程序、不联网。 |  | [链接](https://github.com/joonhyukyim/redpen) |
 
 ### 子代理管理 Subagent Management
 
@@ -1126,6 +1130,7 @@ For detailed descriptions of all 1140 mods, see the Chinese section below.
 | aidv-autos | 把案件知识库（case-knowledge）检索工具的调用在对话里渲染成一行折叠摘要，并在侧边面板列出找到的文书（巴西法律场景，葡萄牙语）。备注：只改显示；`tool.call` 只记录检索词和结果、原样返回；面板“请 Claude 处理”按钮按下时才用 `$.prompt.submit` 发提示；需配合对应的 case-knowledge 工具使用。 |  | [链接](https://github.com/PedroGiudice/opc-plugins/tree/main/plugins/aidv-autos) |
 | world-news | 把 Google 新闻台湾版的大事钉在提示框下方：每次发消息时若过了冷却时间（默认 30 分钟）就在后台读取你选的分类（国际、科技、财经、台湾、军事、科学、健康、体育，以及美国、中国、日韩、欧洲、俄乌、中东、东南亚等地区）的 RSS，把最新一条没看过的标题显示在状态栏；`/world-news` 选分类、改冷却、立即检查、开关，侧栏列出最新标题并可点开原文。备注：界面为繁体中文；`prompt.submit` 只触发后台检查、提示原样放行，不往模型上下文加任何东西；只经 `$.http` 请求 news.google.com 的固定分类 RSS 地址（不带任何会话内容）；简体标题用内置 OpenCC 词表转繁体；设置与已读记录存在插件存储里；仓库没有 LICENSE 文件（plugin.json 写 MIT）。 |  | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/master/plugins/world-news) |
 | cw-chart | `/cw-chart <widget.json>` 把一个 CloudWatch 指标小部件（metric widget JSON）在侧边面板里画成图表：1h/6h/24h 范围、左右平移、刷新，未固定时间窗时每 60 秒自动重取；点图下方的时间条会把 `[图表标题 @ 时间]` 插入到输入框（只填入，不发送）。备注：图片由本机 `aws cloudwatch get-metric-widget-image` 用你的默认 AWS 凭据获取（需要 `cloudwatch:GetMetricWidgetImage` 权限）；图表需支持 kitty 图形协议的终端（kitty、Ghostty）；只读你指定的 JSON 文件；不改提示或工具、mod 本身不发网络请求。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/cw-chart) |
+| review-inbox | 提示框上方一行显示有多少 GitHub PR 在等你审查、最久的已等了几天（3 天起变黄、14 天起变红）；`/review-inbox` 或点「열기」打开抽屉，每个 PR 一张卡：一句话摘要、为什么有这个 PR、影响到哪些地方（数据库结构变更、部署顺序等风险项标 ⚠️）、大小、作者和等待时长；「리뷰하기」把这个 PR 的审查请求连同摘要和警告填进输入框，「숨기기」隐藏到这个 PR 有新提交为止，再次请求你审查的 PR 会附上你上次审查以来的变化摘要；工作中来了新的审查请求会弹提示；可在插件设置里用 `org:`/`repo:` 限定范围、指定 gh 账号。备注：需要本机已安装并登录 GitHub CLI（`gh`）；开会话后约 1–5 秒自动开始，之后每 10 分钟（失败时每分钟）用 `gh api graphql` 搜索等你审查的 PR，用 `gh api` 比较你上次审查后的提交；每个 PR 的每个新提交都会自动调用一次 `$.model.complete`（sonnet，计入你的用量）生成摘要，发送的是仓库名、标题、大小、改动文件列表（最多 80 个）和 PR 描述（最多 12000 字），变化摘要发送提交说明和文件名，都不含会话内容；指定了 gh 账号时用 `gh auth token -u` 取该账号的令牌，只传给 gh 子进程；缓存写在插件数据目录，多个会话共用；「리뷰하기」只往输入框追加文字，不自动发送；界面和摘要都是韩语。 | MIT | [链接](https://github.com/SummerRiversound/review-inbox) |
 
 ### 本地工具 Local Tools
 
@@ -1276,6 +1281,7 @@ For detailed descriptions of all 1140 mods, see the Chinese section below.
 | what-did-i-say | Claude 答完、等你输入时，在提示框上方用深色方框显示你刚才那条请求和发出时间（最多 5 行、400 字）；`/wdis [N]` 列出本会话最近 N 条请求（默认 1，最多 10，带时间和"几分钟前"）。备注：界面为韩语，方框里的时间固定按韩国时间（KST，UTC+9）显示；只记录你亲手输入的请求，`prompt.submit` 只记录、原样放行；`/wdis` 靠一个经典 `UserPromptExpansion` 命令钩子（`node` 运行仓库里的 scripts/wdis.mjs，需 Node.js 18.17+）读取本会话的 `~/.claude/projects/…/<会话>.jsonl`，直接把结果作为拦截提示显示给你，不发给模型、不加上下文；只有这个钩子没生效时，`/wdis` 才退回成普通斜杠命令，把列表放进这条提示交给 Claude 原样显示；不联网；plugin.json 写 MIT，但仓库没有 LICENSE 文件。 |  | [链接](https://github.com/token-keeper/what-did-i-say) |
 | article-meter | `/article [路径]` 打开草稿面板：统计 Markdown 草稿按编号章节（`## N.`）的字数、重点章节（默认第 3 节）占全文比例的进度条（默认目标 50%），以及还剩多少占位标记（默认 `⟨` 和 `TODO`，HTML 注释里的不算）；Claude 每次编辑或写入这份草稿后自动刷新。备注：默认读取项目里最新的 `docs/*-draft.md`，可在插件设置里改路径、标记和目标；只读文件；不运行外部程序、不联网。 | MIT | [链接](https://github.com/vumichien/claude-code-mods-kit/tree/main/plugins/article-meter) |
 | copy-blocks | Claude 回复完后，在提示框上方为这条回复里的每个引用块和代码块（最多 9 个）各放一个按钮，点一下就复制该块全文（显示 `✓ copied`）；放不下的折成 `+N`，点开面板看全部；发下一条提示时自动清空。备注：用 Claude Code 自带的复制接口；`prompt.submit` 只用来清空按钮、原样放行；只看主代理的回复；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/y-hirakaw/claude-code-mods/tree/main/copy-blocks) |
+| prompt-drafts | 把提示先存成本会话的草稿：在提示末尾加 `;;` 再回车就只保存、不发送（或用 `/draft <文字>`）；`/drafts` 打开草稿侧栏（终端够宽时；点草稿放回输入框、× 删除、可把输入框当前内容存为草稿、可撤销删除），终端较窄时改用 Claude Code 自带的选择对话框；`/drafts <n>` 放回第 n 条，`/drafts rm <n>` 删除，`/drafts undo` 撤销删除；界面可选英语或韩语。备注：`prompt.submit` 只拦下（drop）你在输入框里输入、以 `;;` 结尾的提示并把它存起来，不改写、不加上下文，其他提示原样放行；放回草稿时，输入框里已有的其他文字会先另存为草稿再被替换（`$.prompt.fill`），不会自动发送；草稿列表显示时，在空输入框按数字键 1–9 选草稿、0 关闭；草稿存在插件存储里，每个会话最多 50 条，闲置 30 天的会话的草稿会自动清除；不运行外部程序、不联网。 | MIT | [链接](https://github.com/vynnlee/mods/tree/main/prompt-drafts) |
 
 ---
 
