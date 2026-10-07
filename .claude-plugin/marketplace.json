@@ -10976,6 +10976,161 @@
         "path": "mods/cheatsheet",
         "sha": "fc185d81908e81f5b783899aa47fc2256096840a"
       }
+    },
+    {
+      "name": "effort-keys",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wkentaro/dotfiles.git",
+        "path": "claude/mods/effort-keys",
+        "sha": "5ee20bdfd3a4818409c112847230f383d1517fa1"
+      }
+    },
+    {
+      "name": "stack-down",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
+        "path": "stack-down",
+        "sha": "19b393884d575d93174acba9c088ae9fcdf0ab7a"
+      }
+    },
+    {
+      "name": "usage-percent",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
+        "path": "usage-percent",
+        "sha": "19b393884d575d93174acba9c088ae9fcdf0ab7a"
+      }
+    },
+    {
+      "name": "coderabbit-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/schreibse/claude-code-mods.git",
+        "path": "coderabbit-band",
+        "sha": "19b393884d575d93174acba9c088ae9fcdf0ab7a"
+      }
+    },
+    {
+      "name": "model-spinners",
+      "source": {
+        "source": "github",
+        "repo": "CharlesSS07/claude-model-spinners",
+        "sha": "f8153ed5cfdf719ffcb7b3bd4697bff70bc2817f"
+      }
+    },
+    {
+      "name": "thai-vibes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Naratip-Prasert/ModofClaude.git",
+        "path": "thai-vibes",
+        "sha": "1eeac049e999a2b0f4e07a8bcf2306902ac7639e"
+      }
+    },
+    {
+      "name": "gloss",
+      "source": {
+        "source": "github",
+        "repo": "Caleb-Boddington/gloss",
+        "sha": "5eda1f229d8735e01bbad0f820752d93bc198987"
+      }
+    },
+    {
+      "name": "cc-side-context",
+      "source": {
+        "source": "github",
+        "repo": "bcanozgur/cc-side-context",
+        "sha": "de0b6f222890d8c7d3d930bbeb7588cc6b614eba"
+      }
+    },
+    {
+      "name": "claude-usage",
+      "source": {
+        "source": "github",
+        "repo": "alecspopa/ClaudeUsageMod",
+        "sha": "6a5caa51ae08b4b35aeacfe21f9e21d5a31d42bb"
+      }
+    },
+    {
+      "name": "credits-bar",
+      "source": {
+        "source": "github",
+        "repo": "jbug0x/credits-bar",
+        "sha": "9702b4c9d8cbb31f4fadaed3bbed7399035b3171"
+      }
+    },
+    {
+      "name": "pasek-sesji",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gawlik81/claude-mody.git",
+        "path": "plugins/pasek-sesji",
+        "sha": "f2e6d82249ca3d0ae7f1e0892f5a26f6b16840ed"
+      }
+    },
+    {
+      "name": "quota-sentry",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/amiralimardani-art/token-guardrails.git",
+        "path": "quota-sentry",
+        "sha": "493697739044ac9f757ce3871188ea002f44c303"
+      }
+    },
+    {
+      "name": "effort-router",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/amiralimardani-art/token-guardrails.git",
+        "path": "effort-router",
+        "sha": "493697739044ac9f757ce3871188ea002f44c303"
+      }
+    },
+    {
+      "name": "artifact-mod",
+      "source": {
+        "source": "github",
+        "repo": "netgfx/claude-artifact-mod",
+        "sha": "d80f7280e5802ba58f4fe13d2f5f70cb7983ade1"
+      }
+    },
+    {
+      "name": "ship-state",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tyree88/tempered_plugins.git",
+        "path": "ship-state",
+        "sha": "a93ef4454f77ff9ee689fa9a24a31f50e1a4f502"
+      }
+    },
+    {
+      "name": "praft",
+      "source": {
+        "source": "github",
+        "repo": "yarcod/praft",
+        "sha": "4fe4a1ec2327b123def2a912a81f4de9a7d36914"
+      }
+    },
+    {
+      "name": "session-nametag",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lperezmo/session-nametag.git",
+        "path": "plugins/session-nametag",
+        "sha": "654d05f198ecddfab2c917e87ca148b3b61acbf4"
+      }
+    },
+    {
+      "name": "clawdmeter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/weltern/Clawdmeter.git",
+        "path": "claude-code/clawdmeter",
+        "sha": "1d4a1cc8b7d4a54126c1aee85783fbccf57b76bf"
+      }
     }
   ]
 }
