@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1231 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1239 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1231 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1239 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1231 mods, see the Chinese section below.
+For detailed descriptions of all 1239 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1231 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1239 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -616,6 +616,9 @@ For detailed descriptions of all 1231 mods, see the Chinese section below.
 | match-3 | `/match3` 打开窗格玩三消：5 种颜色、5 关，消除 4 个以上会生成火箭、炸弹、棱镜，可连锁组合；过关后记录每关最高分和星级并进入下一关，`/match3 new` 从第 1 关重新开始；界面按插件设置 language（auto/en/de）、Claude Code 的 language 设置或系统语言显示英语或德语。备注：进度存在插件存储里；只读 Claude Code 设置里的 language 和 LC_ALL/LC_MESSAGES/LANG；不调用模型、不运行外部程序、不联网；与已上架 connect-four 同一作者。 | MIT | [链接](https://github.com/nachtgold/claude-code-match-3) |
 | snake-pane | Claude 干活时在侧边面板玩贪吃蛇：发送提示时打开、回合结束暂停，记录最高分；`/jatek be\|ki` 开关；匈牙利语或英语。备注：prompt.submit 先原样放行，只在之后打开游戏面板，不改写提示（register.tsx 114–120）；可在插件设置里关掉自动打开；不运行外部程序、不联网。 | | [链接](https://github.com/Szotasz/claude-mods/tree/main/plugins/snake-pane) |
 | agent-hero | 提示框上方一个勇者按你消耗的 token 自动刷地牢，`/agent-hero` 打开升级、技能、装备和地图面板。**备注**：turn.step 原样执行，只累计 token 用量（register.tsx 451–458）；存档写在插件安装目录旁的 `agent-hero` 数据文件夹（99–101、168–245）；定期用 `$.http.fetch` 读取作者仓库 main 分支的 plugin.json 只为提示有新版本，不自动更新、不发送会话内容（110–133）；不运行外部程序。 | MIT | [链接](https://github.com/ATworks-np/agent-hero-claude-plugin) |
+| booster-pane | `/booster` 在侧边面板里按系列拆宝可梦卡牌（Pokémon TCG）补充包玩：终端里显示卡面图，有收藏册和抽卡统计。备注：只从公开卡牌目录 api.tcgdex.net / api.pokemontcg.io 拉系列和卡牌清单（hooks/api.ts 16–38，register.tsx 96–113），不发送会话内容，pokemontcg.io 的 API key 可选；卡面图由本机 Python 脚本 `scripts/card_cells.py` 下载并转成字符（只允许这两家的图片地址，card_cells.py 20；需 Pillow），缓存写在插件目录（register.tsx 198、255、311）；不挂任何 prompt 或工具事件（766–800）。 | | [链接](https://github.com/tylergraydev/cc-mods/tree/main/booster-pane) |
+| rail-runner | `/rail-runner` 打开侧边面板里的 ASCII 无尽跑酷小游戏，Claude 干活时可以玩。备注：prompt.submit 只用来打开面板，提示原样放行、不改写（register.tsx 179–182）；不运行其他程序、不联网。 | | [链接](https://github.com/tylergraydev/rail-runner) |
+| pocket | `/pocket <游戏文件.gb>` 在面板里运行一个小型 Game Boy（DMG）模拟器，玩你自己的游戏文件（不附带任何游戏）；Claude 回合结束时自动暂停。备注：模拟器是仓库里可读的 JS（core/cpu.mjs、machine.mjs），由本机 node 运行 `runner/pocket.mjs`（register.tsx 128），按键和暂停只走本机临时目录里的 Unix socket（58，runner/pocket.mjs 100–124）；不联网；需要本机有 Node.js。 | MIT | [链接](https://github.com/romanlucian/claude-pocket) |
 
 ### 安全防护 Security & Safety
 
@@ -962,6 +965,7 @@ For detailed descriptions of all 1231 mods, see the Chinese section below.
 | game-earcons | GAME MODE 套件之一：8-bit 提示音——权限请求或提问等你时、长回合（默认 ≥30 秒）结束、守卫拦截、存档、出错时各响一声；`/earcons test|on|off`。备注：默认开启（音量 0.6）；只播放插件自带的 WAV：macOS 走引擎自带播放，Linux 用本机 `paplay`/`aplay`，Windows 用 PowerShell SoundPlayer（WAV 经 stdin 传入），另跑 `uname -s` 判断系统；`session.append`/`tool.call` 只读取结果判断音效、原样返回；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-earcons) |
 | ding-dong | 回合跑超过 1 分钟才结束时发一条可爱的 macOS 系统通知叫你回来：按耗时（1–3 分钟、3–10 分钟、10 分钟以上、出错）随机抽一句文案并配不同系统音效，副标题显示项目文件夹、耗时与工具调用次数；你自己中断的回合、子代理回合不通知；`/ding` 轮流预览四种通知。备注：文案为繁体中文；通知用 macOS 自带 `osascript` 发出，若你手动运行过插件里的 `notifier/build.sh`（本机用 osacompile 编译、自签一个 DingDong.app）则改用它并写入同目录 message.txt；非 macOS 时退回 Claude Code 内 toast；不改提示或工具、不联网。 | MIT | [链接](https://github.com/builtbyjia/claude-code-mods/tree/main/ding-dong) |
 | cm-done-toast | 较长的回合（默认 30 秒以上）结束时弹出「Done in 2m 14s」提示并播放一声短提示音（提示音仅 macOS），可选同时发系统通知，可选在提示里带上回答前 80 个字（默认关）。备注：提示音是插件自带的 sounds/done.wav（`$.audio.play`）；开启系统通知时才用 `$.process.run` 跑 `uname -s` 和 `osascript`（macOS）或 `notify-send`（Linux）（register.ts 27–37、format.ts 67–72）；不注册命令、不联网。 | MIT | [链接](https://github.com/rotbit/claudemods-marketplace/tree/main/cm-done-toast) |
+| sound-board | 给不同事件配不同提示音：子代理启动/完成/失败、权限请求、auto 模式拒绝、回合结束、自动压缩、长时间运行的命令等；`/sounds` 可试听、换音效、静音。备注：所有钩子都先原样执行再只播放提示音（register.tsx 313–391，含 classic.PermissionRequest/PermissionDenied 与 tool.check，只观察不改判定）；非 Windows 用引擎自带 $.audio 播放（87–95），Windows 用固定的 PowerShell 播放脚本、文件路径只经环境变量传入（104、118，board.ts 341–350）；可读 `~/.claude/sounds` 里你自己的音效（224–231）；不联网。 | | [链接](https://github.com/tylergraydev/cc-mods/tree/main/sound-board) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -1076,6 +1080,7 @@ For detailed descriptions of all 1231 mods, see the Chinese section below.
 | image-mirror | Claude 用 Read 读取 PNG 图片时，直接把图片画在终端对话里那一行 Read 下面（按终端宽度保持比例，最大 100×30 格，PNG 不超过 2 MiB）；连续多次读取被折叠时，含 PNG 的那组会自动展开。备注：需支持 kitty 图形协议的终端（kitty、Ghostty），其他终端只显示替代文字；只改终端画面，不改工具结果；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/image-mirror) |
 | mods-image-preview | 粘贴图片后，在提示框上方为每个 `[Image #N]` 显示一张缩略图：kitty、Ghostty（不在 tmux/screen/SSH 里时）显示真实像素，其他终端用彩色半格字符画出同样的版面，终端宣告支持覆盖层（`CLAUDE_MODS_IMAGE_OVERLAY=1`）时改画标记格让终端自己把图盖上去；删掉图片标记或发送提示后自动清空；插件设置里可选渲染方式和缩略图大小（小/中/大）。备注：每 300 毫秒读一次提示框草稿找图片标记，从 Claude Code 写在会话临时目录里的 images/ 读取图片；非 PNG 或超过 4 MiB 的图片用 macOS `sips` 转成小 PNG（写在同一临时目录下，其他系统上这类图片显示 unsupported）；覆盖层模式会在 `~/.claude/claude-mods-image-preview/` 里用 `mkdir`、`ln` 建指向原图的符号链接，开会话时用 `find` 删除一天前的链接，tmux 里还会运行 `tmux show-environment` 检查该变量；`prompt.submit` 只用来清空缩略图、原样放行；不注册命令、不联网。 | MIT | [链接](https://github.com/hahmjuntae/claude-mods-image-preview) |
 | prompt-polaroid | `/polaroid [last\|first\|n\|"文字"]` 把你的某条提示做成 CodeSnap 风格的拍立得卡片（日期、项目、模型、署名），面板里可翻背景、保存 SVG/PNG、复制图片、打开文件夹。备注：默认先遮掉提示里的密钥再成像（polaroid.ts 45）；保存时用本机 Chrome/Edge/Chromium 无头截图（register.tsx 83–108，host.ts 38–55 带 --disable-background-networking），复制 / 打开文件夹按按钮才调用 osascript/xclip/PowerShell、open/xdg-open/explorer（130–139）；默认存到 ~/Pictures/Claude Polaroids；不联网。 | MIT | [链接](https://github.com/Roberdinho/claude-mods/tree/main/plugins/prompt-polaroid) |
+| mermaid-render | 把 Claude 写出或读到的 Mermaid 图渲染成卡片：任何终端里都是彩色 Unicode 字符画，桌面端是真正的 SVG。备注：只挂 ui.render，只改显示（register.tsx 39–110），会把含图的工具组自动展开；SVG 由本机 `node renderer/svg.mjs` 生成（70），终端图片模式可选用 rsvg-convert 在 TMPDIR 转 PNG（85–96）；hooks/vendor/mermaid.js 和 renderer/svg.mjs 是 npm 包 beautiful-mermaid 1.1.3 的 esbuild 打包产物，已在本机按仓库 lockfile 重建并逐字节一致；不联网。 | MIT | [链接](https://github.com/ejklock/claude-mermaid-render) |
 
 ### 任务与项目 Task & Project
 
@@ -1151,6 +1156,8 @@ For detailed descriptions of all 1231 mods, see the Chinese section below.
 | restack-view | ReStack（基于 Residuality Theory 的架构设计技能套件）的旅程视图：提示框上方一行显示当前进度，`/restack-view` 打开面板看未决问题、假设、决策和矩阵，`/restack-view band on\|off` 显隐。备注：只读 ReStack 写在项目里的旅程文件，自身不写文件、不运行外部程序、不联网；面板按钮只用 `$.prompt.fill` 把下一步命令放进空输入框、不发送，有草稿时只弹 toast（register.tsx 244–258）；需另装 ReStack 技能套件（未审）才有内容。 | MIT | [链接](https://github.com/pmelander/restack/tree/main/mods/restack-view) |
 | astrolabe | 在状态栏显示 Spec Kit 当前的功能、阶段和任务进度，随你编辑 spec/tasks 文件和调用技能实时更新。备注：只用 `$.fs` 读取项目里的 Spec Kit 文件和 `.git/HEAD`（register.tsx 11–17，io/git-branch.ts），通过 `$.ui.status` 显示；tool.call 先原样执行再刷新（72–97）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/jonyfs/astrolabe) |
 | watch-tower | 会话开始自动打开的侧边面板，一眼看全：各子代理在做什么、上下文、费用、限额、提示缓存倒计时，可选 ASCII 小伙伴；`/watch-tower plan <路径>` 挂上一个计划文件后显示进度。备注：prompt.submit 只记录、原样放行（register.tsx 231–239）；挂了计划后会按提交记录自动勾选计划文件里的复选框并写回该文件（82–89）；改计划外的文件时弹窗问你允许一次、允许该文件或拒绝，只拒绝不改写（149–171、261–263）；读本会话 transcript 末尾估算缓存（48–66），只跑本机只读 git 命令；不联网。 | | [链接](https://github.com/BastienTeissier/watch-tower/tree/main/mods/watch-tower) |
+| terminal-desk | 侧边“桌面”面板：Claude 说过没做完的事、写进文件的 TODO/FIXME、未完成的待办，加上上下文去向、费用和提示缓存是否还热；`/desk` 开关，`/desk-clear` 清空。备注：回合结束读本会话 Claude 的回答，匹配“没做/未测试”之类说法（register.tsx 127–137、284–322）；tool.call 先原样执行 Write/Edit，只记录新出现的 TODO 标记（332–380）；classic.Stop 只用 `tail` 读本会话 transcript 末尾判断缓存时长（387–399）；按钮只把 `/clear`、`/compact` 或“请完成这些”填进输入框，需你自己按回车（429–430、477–488、616）；仓库里的 install.sh 可选，不需要；不联网。 | | [链接](https://github.com/Doonminus2/claude-code-TerminalDesk-Plugin) |
+| session-tasks | `/alltasks` 打开侧边面板，列出所有会话里正在跑的后台任务（shell、子代理、监控、工作流），即使会话已标记完成也能看到。备注：只在本机读 `~/.claude/sessions` 和各会话 transcript，用 sh/awk 只挑任务相关行（register.tsx 22–37、98–125），用 `ps -A` 判断会话是否还活着（72–73）；“Open”按钮用 xdg-open/open 打开该会话链接（174–181）；不联网。 | MIT | [链接](https://github.com/Roberdinho/claude-mods/tree/main/plugins/session-tasks) |
 
 ### 外部集成 External Integrations
 
@@ -1210,6 +1217,7 @@ For detailed descriptions of all 1231 mods, see the Chinese section below.
 | tw-ticker | 提示框上方显示台股跑马灯（加权指数和自选股，默认 2330、0050，盘中每分钟更新），Claude 工作时可开 PTT 股票板当日闲聊串的推文弹幕；`/twstock` 设定自选股、弹幕、屏蔽词等；繁体中文。备注：只经 `$.http` 请求固定的 mis.twse.com.tw 报价接口和 www.ptt.cc Stock 板（带 over18 cookie，register.js 7–9、151、185、235），不发会话内容；弹幕是 PTT 网友推文原文。 | | [链接](https://github.com/starryAmy/amy-mods/tree/main/plugins/tw-ticker) |
 | deploy-watch | 盯 AWS CodeBuild 项目：提示框上方显示最近一次构建，推送到部署分支却没触发构建时警告，`/deploys` 打开构建列表面板，可在终端看日志、按按钮启动构建。备注：定期在本机运行 `aws codebuild list-builds-for-project`/`batch-get-builds`（register.tsx 79–84）；“Start build”按钮先弹窗确认（名字像 prod 时额外提示）才运行 `start-build`（141–167）；日志通过终端工具打开（169–175）；tool.call 先原样执行 Bash，只记下推送时间（200–210）；需要你本机已配置 aws CLI。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/deploy-watch) |
 | crossloom-env | 在提示框下方显示当前 CrossLoom 环境（`cl env show`），环境变了弹提示，`/cl-env` 查看；在你设为受保护的环境上运行 crossloom 写操作前弹窗确认。备注：定期在本机运行 `cl env show`（register.tsx 50）；tool.call 只在受保护环境的写操作时弹窗，取消则拒绝，不改写（98–110）；需要本机装有 CrossLoom 的 `cl` 命令；不联网。 | | [链接](https://github.com/hanuele/crossloom-marketplace/tree/main/plugins/crossloom-env) |
+| pr-watch | 提示框上方一条 PR 状态带，盯 GitHub 与 Azure DevOps 的 PR：门禁检查、评审、合并后的流水线；`/pr-watch <编号/链接/owner/repo#N>` 添加。备注：定期在本机运行只读的 `gh pr view`/`gh api`（GET）与 `az repos pr show`/`policy list`/流水线查询（providers.ts 81–231）；tool.call 先原样执行，只在看到 `gh pr create`/`az repos pr create` 的输出时自动加入新 PR（register.tsx 266–304）；“investigate”按钮会用 $.prompt.submit 发一条“调查这个失败检查、只提出修复不动手”的提示，只在你按按钮时发送（326–328，view.tsx 183–185）；需要本机已登录 gh 或 az CLI。 | | [链接](https://github.com/heidiks/agent-kit/tree/main/plugins/pr-watch) |
 
 ### 本地工具 Local Tools
 
