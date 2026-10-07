@@ -9836,6 +9836,75 @@
         "repo": "sagarr/claude-code-annotate-mod",
         "sha": "127e6f27a01dee830b17dbaba11ac7650bf1e904"
       }
+    },
+    {
+      "name": "rate-limits",
+      "source": {
+        "source": "github",
+        "repo": "Heuwzen/claude-code-rate-limits",
+        "sha": "4b545f688ea5e4f16019249bbeca2cb1c0739e4d"
+      }
+    },
+    {
+      "name": "nyan-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/IvanLutsenko/awac-ai-agent-plugins.git",
+        "path": "plugins/nyan-progress",
+        "sha": "ca73899f58f222e2394a664712b2ebca935b6e61"
+      }
+    },
+    {
+      "name": "task-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MankhongGarden/claude-code-mods-field-notes.git",
+        "path": "mods/task-band",
+        "sha": "d64e31f49b9c3c12318274357e2424515a2e3300"
+      }
+    },
+    {
+      "name": "adhd-reader",
+      "source": {
+        "source": "github",
+        "repo": "UBRN/adhd-reader",
+        "sha": "17e53edc7957f5a5400b4dfa58fd6b67d2821f55"
+      }
+    },
+    {
+      "name": "copy-command",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cedrus-8864/claude-mods.git",
+        "path": "copy-command",
+        "sha": "5e55fab5c0853a0cf1425b2b505583c5930f3e2d"
+      }
+    },
+    {
+      "name": "agent-quick-menu",
+      "source": {
+        "source": "github",
+        "repo": "agentic-workbench/agent-quick-menu",
+        "sha": "5ab16cfb2329e23a68673a8037bd0f1d5673a737"
+      }
+    },
+    {
+      "name": "color-chooser",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tiger42/claude-mods.git",
+        "path": "color-chooser",
+        "sha": "d97e96d4f01f677a9baa43ce12bf45fc5ae3c535"
+      }
+    },
+    {
+      "name": "palette",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vampik33/claude-plugins.git",
+        "path": "plugins/palette",
+        "sha": "65db49d91d0becc7ac22fb4b0f0da4af8439a8d7"
+      }
     }
   ]
 }
