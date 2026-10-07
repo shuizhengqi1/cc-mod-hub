@@ -9905,6 +9905,66 @@
         "path": "plugins/palette",
         "sha": "65db49d91d0becc7ac22fb4b0f0da4af8439a8d7"
       }
+    },
+    {
+      "name": "barra-de-uso",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sistema-dkx/mods-dkx.git",
+        "path": "barra-de-uso",
+        "sha": "4dc09f6881cd619e0bbc1a8c562748211db9408b"
+      }
+    },
+    {
+      "name": "astrolabe",
+      "source": {
+        "source": "github",
+        "repo": "jonyfs/astrolabe",
+        "sha": "d20027cd9a4e023c194bc0f4efc7da4c8aa6824f"
+      }
+    },
+    {
+      "name": "usage-header",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szotasz/claude-mods.git",
+        "path": "plugins/usage-header",
+        "sha": "c190a07feff63ff499bc9f7c345b86bcd7943761"
+      }
+    },
+    {
+      "name": "snake-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szotasz/claude-mods.git",
+        "path": "plugins/snake-pane",
+        "sha": "c190a07feff63ff499bc9f7c345b86bcd7943761"
+      }
+    },
+    {
+      "name": "public-repo-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Szotasz/claude-mods.git",
+        "path": "plugins/public-repo-guard",
+        "sha": "c190a07feff63ff499bc9f7c345b86bcd7943761"
+      }
+    },
+    {
+      "name": "script-logs",
+      "source": {
+        "source": "github",
+        "repo": "naughty00shortie/script-logs",
+        "sha": "d4e0529dcd639af86c5a0263aa6c7f92c3e74280"
+      }
+    },
+    {
+      "name": "agent-hero",
+      "source": {
+        "source": "github",
+        "repo": "ATworks-np/agent-hero-claude-plugin",
+        "sha": "cf97d2046dd6011829b763684829a01b07ba85ae"
+      }
     }
   ]
 }
