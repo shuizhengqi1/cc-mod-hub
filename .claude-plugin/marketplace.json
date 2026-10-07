@@ -9099,6 +9099,110 @@
         "path": "plugins/muse-avatar",
         "sha": "acfaeffc0b82c48061e93172baf863bb7a75b1ed"
       }
+    },
+    {
+      "name": "what-did-i-say",
+      "source": {
+        "source": "github",
+        "repo": "token-keeper/what-did-i-say",
+        "sha": "dbdf82e817636fe848f0150ead201c0169ab582b"
+      }
+    },
+    {
+      "name": "agent-cast",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/insession-space/claude-ship.git",
+        "path": "plugins/agent-cast",
+        "sha": "67a88c257f0c518fba4318ce72bab26925b7b694"
+      }
+    },
+    {
+      "name": "acceptance-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/insession-space/claude-ship.git",
+        "path": "plugins/acceptance-progress",
+        "sha": "67a88c257f0c518fba4318ce72bab26925b7b694"
+      }
+    },
+    {
+      "name": "session-dashboard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/insession-space/claude-ship.git",
+        "path": "plugins/session-dashboard",
+        "sha": "67a88c257f0c518fba4318ce72bab26925b7b694"
+      }
+    },
+    {
+      "name": "yomiyasu-gate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/insession-space/claude-ship.git",
+        "path": "plugins/yomiyasu-gate",
+        "sha": "67a88c257f0c518fba4318ce72bab26925b7b694"
+      }
+    },
+    {
+      "name": "progress-band",
+      "source": {
+        "source": "github",
+        "repo": "hyunn12/progress-band",
+        "sha": "dde7e28efcfcd5fda74feee0d62c39b0c9491b4e"
+      }
+    },
+    {
+      "name": "turn-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/StanislavKozachenko/claude-mods.git",
+        "path": "plugins/turn-stats",
+        "sha": "4895296ceca5a43a4a8c7d39db236f7c1cc3b7bc"
+      }
+    },
+    {
+      "name": "article-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vumichien/claude-code-mods-kit.git",
+        "path": "plugins/article-meter",
+        "sha": "f2badb40fdfbd4ce569e04f6f62d47696047aebb"
+      }
+    },
+    {
+      "name": "copy-blocks",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/y-hirakaw/claude-code-mods.git",
+        "path": "copy-blocks",
+        "sha": "64101f6d7cf815bf707a875f678a5a1f70b5b6e8"
+      }
+    },
+    {
+      "name": "compact-usage-meter",
+      "source": {
+        "source": "github",
+        "repo": "dkoh0207/compact-usage-meter",
+        "sha": "84f2f12e197d0407f45757c583047d7505a45c30"
+      }
+    },
+    {
+      "name": "desktop-look",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/KyongSik-Yoon/claude-mods.git",
+        "path": "desktop-look",
+        "sha": "233c1dcb926faab2a423d904f25818c7315e3594"
+      }
+    },
+    {
+      "name": "better-statusline",
+      "source": {
+        "source": "github",
+        "repo": "Autumn1337/better-statusline",
+        "sha": "98f332f9050aa0056247a6be3f87828ea383a692"
+      }
     }
   ]
 }
