@@ -9699,6 +9699,143 @@
         "repo": "mediavee/cold-cache-guard",
         "sha": "2c4388cbecf115dc6209fcec1a10446123fc8ae5"
       }
+    },
+    {
+      "name": "garde-prod",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DarkSawOktay/claude-mods.git",
+        "path": "garde-prod",
+        "sha": "3e89b71e2873772cb5d7a2ba2b3754c12950b8c4"
+      }
+    },
+    {
+      "name": "apk-fraicheur",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DarkSawOktay/claude-mods.git",
+        "path": "apk-fraicheur",
+        "sha": "3e89b71e2873772cb5d7a2ba2b3754c12950b8c4"
+      }
+    },
+    {
+      "name": "ou-on-en-est",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DarkSawOktay/claude-mods.git",
+        "path": "ou-on-en-est",
+        "sha": "3e89b71e2873772cb5d7a2ba2b3754c12950b8c4"
+      }
+    },
+    {
+      "name": "suivi-conso",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DarkSawOktay/claude-mods.git",
+        "path": "suivi-conso",
+        "sha": "3e89b71e2873772cb5d7a2ba2b3754c12950b8c4"
+      }
+    },
+    {
+      "name": "clean-bar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Dos2Locos/claude-code-mods.git",
+        "path": "plugins/clean-bar",
+        "sha": "ca1aef326a86868afd408864bd1a326ca5f3b3cc"
+      }
+    },
+    {
+      "name": "agent-tree",
+      "source": {
+        "source": "github",
+        "repo": "VanillaFairy/agent-tree",
+        "sha": "13beddc754417ea2226d7db638acfce9518519a1"
+      }
+    },
+    {
+      "name": "token-watch",
+      "source": {
+        "source": "github",
+        "repo": "arviaja/token-watch",
+        "sha": "124890c810bdece3a2bb20cac7fe3d8794f1e842"
+      }
+    },
+    {
+      "name": "ws-quiet-notes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/djock/agent-workspaces.git",
+        "path": "plugins/ws-quiet-notes",
+        "sha": "13e04421f2da3cc4974e540537ef44ec72ca2ac8"
+      }
+    },
+    {
+      "name": "usageboard",
+      "source": {
+        "source": "github",
+        "repo": "illustra9527/claude-usage-statusline",
+        "sha": "b7ea7e899cedf8558a3e2642b88b02063fb0817b"
+      }
+    },
+    {
+      "name": "clear-view",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mintyantralabs-hub/claude_mods.git",
+        "path": "clear-view",
+        "sha": "a64eb839f4e33a0d0d5bb128bc7ea9fe9ffc567d"
+      }
+    },
+    {
+      "name": "clawd-walk",
+      "source": {
+        "source": "github",
+        "repo": "takenokohal/clawd-walk",
+        "sha": "d77d95ffa7d4a0c561d9be31e31ba1deca27f98c"
+      }
+    },
+    {
+      "name": "command-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Zulut30/claude-mode.git",
+        "path": "en/command-guard",
+        "sha": "5d7e58a1aef64a253d088c60e1302c8b23bb072d"
+      }
+    },
+    {
+      "name": "cc-dash-kit",
+      "source": {
+        "source": "github",
+        "repo": "coolthor/cc-dash-kit",
+        "sha": "ed65ca334c0038a3ac8db8e26c67dd80d526c181"
+      }
+    },
+    {
+      "name": "y-change",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nalpari/claude-mods.git",
+        "path": "y-change",
+        "sha": "cc6924d5d420274496b8a6dfb164f8bda676c748"
+      }
+    },
+    {
+      "name": "usage-inspector",
+      "source": {
+        "source": "github",
+        "repo": "purplecofe/usage-inspector",
+        "sha": "688693a0d3306883f2a06fc08842478bc419c97b"
+      }
+    },
+    {
+      "name": "annotate",
+      "source": {
+        "source": "github",
+        "repo": "sagarr/claude-code-annotate-mod",
+        "sha": "127e6f27a01dee830b17dbaba11ac7650bf1e904"
+      }
     }
   ]
 }
