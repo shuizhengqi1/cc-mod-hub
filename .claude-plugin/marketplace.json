@@ -9423,6 +9423,112 @@
         "repo": "jeffarese/shellcast",
         "sha": "004d218c713f4ef287348e329325d2314326a4cc"
       }
+    },
+    {
+      "name": "cm-block-dangerous-commands",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rotbit/claudemods-marketplace.git",
+        "path": "cm-block-dangerous-commands",
+        "sha": "7a6da12745b318182e466b8475b9b767bb3faa15"
+      }
+    },
+    {
+      "name": "cm-context-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rotbit/claudemods-marketplace.git",
+        "path": "cm-context-meter",
+        "sha": "7a6da12745b318182e466b8475b9b767bb3faa15"
+      }
+    },
+    {
+      "name": "cm-done-toast",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rotbit/claudemods-marketplace.git",
+        "path": "cm-done-toast",
+        "sha": "7a6da12745b318182e466b8475b9b767bb3faa15"
+      }
+    },
+    {
+      "name": "cm-git-branch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rotbit/claudemods-marketplace.git",
+        "path": "cm-git-branch",
+        "sha": "7a6da12745b318182e466b8475b9b767bb3faa15"
+      }
+    },
+    {
+      "name": "cm-tool-call-counter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rotbit/claudemods-marketplace.git",
+        "path": "cm-tool-call-counter",
+        "sha": "7a6da12745b318182e466b8475b9b767bb3faa15"
+      }
+    },
+    {
+      "name": "browser-arbiter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ZaredRogers/mods.git",
+        "path": "mods/browser-arbiter",
+        "sha": "9a9e3585e070d935dea7c8bfb58ba9ceb25f1aaf"
+      }
+    },
+    {
+      "name": "secret-sentinel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ZaredRogers/mods.git",
+        "path": "mods/secret-sentinel",
+        "sha": "9a9e3585e070d935dea7c8bfb58ba9ceb25f1aaf"
+      }
+    },
+    {
+      "name": "verify-gate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ZaredRogers/mods.git",
+        "path": "mods/verify-gate",
+        "sha": "9a9e3585e070d935dea7c8bfb58ba9ceb25f1aaf"
+      }
+    },
+    {
+      "name": "branch-diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DiegoHeer/claude-mods.git",
+        "path": "branch-diff",
+        "sha": "d309306c870e40b167aaa127f8602bbb03675e0b"
+      }
+    },
+    {
+      "name": "quiet-token-bar",
+      "source": {
+        "source": "github",
+        "repo": "arthurglaizal/quiet-token-bar",
+        "sha": "30c29eea68c399258fc9c4f4693bd23cdd27d9da"
+      }
+    },
+    {
+      "name": "omok-explorer",
+      "source": {
+        "source": "github",
+        "repo": "ksthink/claude_mod_crawl",
+        "sha": "e2e1b518113e7fc991582742946aad2b9b2d6f3b"
+      }
+    },
+    {
+      "name": "project-activity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hn83320589/claude-mods.git",
+        "path": "project-activity",
+        "sha": "9a71378497aedd3b137156bd36160697ccac1b01"
+      }
     }
   ]
 }
