@@ -10202,6 +10202,390 @@
         "repo": "yarivzip/waiter",
         "sha": "85cf6ed604303b6093fea65e4ae0cf998760159a"
       }
+    },
+    {
+      "name": "bash-history",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/bash-history",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "big-read-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/big-read-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "break-reminder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/break-reminder",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "cache-hit-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/cache-hit-meter",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "celebrate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/celebrate",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "codeowners-hint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/codeowners-hint",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "compact-coach",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/compact-coach",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "copy-last",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/copy-last",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "curl-pipe-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/curl-pipe-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "desktop-notify",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/desktop-notify",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "env-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/env-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "error-buzz",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/error-buzz",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "error-feed",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/error-feed",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "git-status-line",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/git-status-line",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "gitignore-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/gitignore-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "idle-nudge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/idle-nudge",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "lockfile-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/lockfile-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "long-run-alert",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/long-run-alert",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "main-branch-warn",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/main-branch-warn",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "migration-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/migration-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "no-skip-tests",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/no-skip-tests",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "path-jail",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/path-jail",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "permission-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/permission-log",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "permission-ping",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/permission-ping",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "prompt-lint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/prompt-lint",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "quote-selection",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/quote-selection",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "readme-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/readme-sync",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "resume-brief",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/resume-brief",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "rm-rf-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/rm-rf-guard",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "snippet-vault",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/snippet-vault",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "subagent-monitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/subagent-monitor",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "todo-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/todo-tracker",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "token-sparkline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Plagemes/claude-mods.git",
+        "path": "mods/token-sparkline",
+        "sha": "e17ba57e2c0ebe28d98f844216e6b5f813f10bf5"
+      }
+    },
+    {
+      "name": "spend-line",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ganbaroff/ai-guardrails-kit.git",
+        "path": "mods/spend-line",
+        "sha": "162867b6f3439244c30b514f5c83e1ce7c5f7cee"
+      }
+    },
+    {
+      "name": "skill-counter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ganbaroff/ai-guardrails-kit.git",
+        "path": "mods/skill-counter",
+        "sha": "162867b6f3439244c30b514f5c83e1ce7c5f7cee"
+      }
+    },
+    {
+      "name": "cure-image-viewer",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Cure-Consulting-Group/ProductEngineeringSkills.git",
+        "path": "mods/cure-image-viewer",
+        "sha": "fe5c9fb0379f5a3a513f1e984738602801e348cd"
+      }
+    },
+    {
+      "name": "test-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matthewtoghill/claude-plugins.git",
+        "path": "test-watch",
+        "sha": "5e026c068c64a0f3d585b5d153e6c3b2f886676b"
+      }
+    },
+    {
+      "name": "what-would-it-cost",
+      "source": {
+        "source": "github",
+        "repo": "Faouzielbakri/what-would-it-cost",
+        "sha": "50b1bda6a457066e7bcd46b66b3e1b60e29cd299"
+      }
+    },
+    {
+      "name": "session-usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/shumatsumonobu/claude-mods-bench.git",
+        "path": "mods/session-usage",
+        "sha": "b738e0b818bc14ea23a4c83980f3ef38e8a1a50a"
+      }
+    },
+    {
+      "name": "mod-permissions",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/shumatsumonobu/claude-mods-bench.git",
+        "path": "mods/mod-permissions",
+        "sha": "b738e0b818bc14ea23a4c83980f3ef38e8a1a50a"
+      }
+    },
+    {
+      "name": "limits-forecast",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/danylo-konovalenko-brainsport/limits-forecast.git",
+        "path": "plugins/limits-forecast",
+        "sha": "13ae3f69166b3afc096b954fb4b73769edd36540"
+      }
+    },
+    {
+      "name": "charts",
+      "source": {
+        "source": "github",
+        "repo": "JorgeRomero123/claude-charts",
+        "sha": "29522afb762e1b07d14055253adb591a28223c9e"
+      }
+    },
+    {
+      "name": "psst",
+      "source": {
+        "source": "github",
+        "repo": "Mxhlix/psst",
+        "sha": "c5b81e5c72c0f66de816020453000bd66cdfa2c0"
+      }
     }
   ]
 }
