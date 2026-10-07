@@ -9002,6 +9002,41 @@
         "path": "agents-config/claude-config/mods/aiblueprint",
         "sha": "513b390493b5a3dd1f42b492c4619ed7b2fdbc3b"
       }
+    },
+    {
+      "name": "repo-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/LDH1103/claude-mods.git",
+        "path": "repo-band",
+        "sha": "8b7c00c67ebe23b56a8a657332ef08a346ac55b3"
+      }
+    },
+    {
+      "name": "ding-dong",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/builtbyjia/claude-code-mods.git",
+        "path": "ding-dong",
+        "sha": "2f6517bc90a36bc4eb6d690506788cc23c188977"
+      }
+    },
+    {
+      "name": "project-tabs",
+      "source": {
+        "source": "github",
+        "repo": "tripolskiydigital/claude-tabs",
+        "sha": "4c8b8d63befed14860daf70f338365798a137556"
+      }
+    },
+    {
+      "name": "world-news",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mukiwu/muki-ai-plugins.git",
+        "path": "plugins/world-news",
+        "sha": "ada851eb722e93376c6a66543b2ac9654cb53ec9"
+      }
     }
   ]
 }
