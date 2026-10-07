@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1146 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1151 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1146 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1151 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1146 mods, see the Chinese section below.
+For detailed descriptions of all 1151 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1146 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1151 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -582,6 +582,7 @@ For detailed descriptions of all 1146 mods, see the Chinese section below.
 | hamster-saga | 加载提示偶尔讲一段仓鼠的长篇连载故事，按时间推进章节，可与 spinner-quips 配合；`/hamster-saga:status`、`travel`、`reset`、`debug` 查看与跳转。备注：`prompt.submit` 只检查是否含重置口令、原样返回不改写；`tool.call`/`turn.complete` 只推进进度；数据存在本机 `$.store`；不联网、不跑外部程序。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/hamster-saga) |
 | game-achievement | GAME MODE 套件之一：成就系统——首次存档、无拦截的回合里安全提交 10 次、修好失败命令后逆转通过、连续 10 次成功、上下文降到 10% 前及时 /compact 等，解锁时弹提示；`/achievements` 查看进度。备注：`tool.call`/`session.append` 只读取结果计数、原样返回；进度存在本机 `$.store`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-achievement) |
 | wait-jump | Claude 工作时在提示框上方的框里玩一个小恐龙式跳跃游戏（Claude Jump）：空格/↑/回车/w/k 或点击跳跃，回合结束后显示本局分数与最高分约 10 秒，被权限询问等打断后可接着玩；`/wait-jump` 开关。备注：提示文字为日文；最高分与开关存在插件自己的存储里；不改提示或工具、不运行外部程序、不联网。 | MIT | [链接](https://github.com/kawase1295/wait-jump) |
+| connect-four | `/connect-four` 打开窗格和电脑下四子棋：按 1–7 或点列下方的 ↓ 落子，电脑思考时显示进度条，连成四子的棋子高亮；`n` 开新局（保留比分），`q`/Esc 关闭；界面按 Claude Code 的 language 设置或系统语言显示德语或英语。备注：电脑走棋由插件自带的本地算法计算，不调用模型；只读 Claude Code 设置里的 language 和 LC_ALL/LC_MESSAGES/LANG 环境变量；不运行外部程序、不联网。 | MIT | [链接](https://github.com/nachtgold/claude-code-connect-four) |
 
 ### 安全防护 Security & Safety
 
@@ -806,6 +807,7 @@ For detailed descriptions of all 1146 mods, see the Chinese section below.
 | session-dashboard | `/dashboard` 打开或关闭会话总览面板：需要处理的事项（PR 的 CI 失败、未解决的审查讨论、未完成的验收条件），ship-session/acceptance-progress 的进度（装了才显示），当前分支 PR 的状态、检查计数、审查结论和请你审查的 PR 数，以及本会话启动后新出现的监听端口和 Docker 容器（回合结束时若还在运行会提示一次）；还会拦下 `pkill -f`、`killall`、`docker stop $(docker ps -q)` 这类会误杀其他会话进程的一次性全停命令。备注：界面为日语或英语（跟随 settings 的 language 或你输入的文字）；用本机已登录的 `gh`（`gh pr view`、`gh api graphql`、`gh api search/issues`，只读）；每 30 秒运行 `lsof -iTCP -sTCP:LISTEN` 和 `docker ps`；拦截只拒绝不改写命令；`prompt.submit` 只用来判断界面语言、原样放行；面板开着时下次会话自动重开；不联网（除 gh 外）。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/session-dashboard) |
 | yomiyasu-gate | Bash 执行 `gh pr`/`gh issue` 的 create、edit、comment 和 `git commit` 之前，把其中的日文正文（`--body`、`-b`、`--body-file`、`-F`、`-m` 等）交给 yomiyasu 文风检查器；得分低于 80 或命中必拒规则（默认表情符号、行尾冒号）时拒绝这条命令并列出问题行，让 Claude 改写后重试；同类命令连续拒绝 2 次后第 3 次放行并提示。备注：检查器 `yomiyasu_lint.py` 不在本插件里，需另装 nanaism/yomiyasu 插件（本市场未审查它），没装时全部放行；用 `python3` 运行该检查器；只检查含假名/汉字的正文，英文不查；会读取 `--body-file` 指定的文件；只拒绝不改写命令，出错时放行；`prompt.submit` 只用来判断提示语言、原样放行；不联网。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/yomiyasu-gate) |
 | redpen | `/redpen` 打开逐行审查窗格：列出 Claude 上一回合用 Edit/Write/NotebookEdit 改过的文件，以及 Claude 的最后一条回答；打开后按 diff（或全文）显示，可对单行或一段行写评论并选标签（预设标签可在项目或用户目录的 `.claude/redpen.json` 里自定义），最后按 `s` 把全部评论连同所在位置和原文摘录合成一条提示发给 Claude；`/redpen <路径>` 直接打开某个文件。备注：界面、预设标签和所发提示的固定开头（「请按以下审查意见全部修改，评论没提到的地方不要动」）都是韩语；只有你按 `s`（或点「전송」按钮）时才以你的身份用 `$.prompt.submit` 发出评论，Claude 正在工作时会等这一回合结束；`tool.call` 只记录改动前的文件内容、原样返回；读本会话消息取最后一条回答；不运行外部程序、不联网。 |  | [链接](https://github.com/joonhyukyim/redpen) |
+| jevlight | 你在 settings.json 里配置的命令钩子（作者称为 Jev）每次真正起作用时——拦下或询问工具调用、改写工具输入、裁剪工具输出、给提示或工具结果追加说明、拦住停止或结束会话——在对话记录里那次工具调用的结果行（或「Read 3 files」这类分组行）下方加一行天蓝色 `⚡ Jev …` 标记；没有对应工具行的动作（如对你的提示的附注）写成一行普通记录；标记按会话保存，恢复会话后重新显示。备注：只观察：所有 classic.* 钩子都先 `await next(e)` 再把结果原样返回，不拒绝、不改写、不加上下文；分不清是哪个 settings 钩子起的作用，所以其他钩子起作用也会标成 Jev；标记存在插件存储里（最多保留 20 个会话、每会话 200 次调用）；不注册命令、不运行外部程序、不联网；出自作者的个人 Claude 配置仓库。 | MIT | [链接](https://github.com/damilola-elegbede-org/claude-config/tree/main/system-configs/.claude/mods/jevlight) |
 
 ### 子代理管理 Subagent Management
 
@@ -965,6 +967,7 @@ For detailed descriptions of all 1146 mods, see the Chinese section below.
 | clawd-wander | Claude 工作时，像素 Clawd 在提示框上方的带子里来回溜达；每启动一个子代理就多一个颜色和种类不同的伙伴，偶尔排成一列跟着走；编辑类工具时拿锤子、查找类工具时拿放大镜，工具失败会吓一跳，子代理结束后渐渐消失。备注：`agent.spawn`/`tool.call` 只观察、原样返回；只读 `$.agent.list()`；只在支持 Raster 的终端里绘制；不注册命令、不联网；代码注释为日文。 |  | [链接](https://github.com/takiguchi-yu/claude-modes/tree/main/clawd-wander) |
 | muse-avatar | 在 Claude 桌面版右侧停靠一个 Muse 风格的动画头像面板（名字 Po）：按空闲/思考/运行工具/回合完成切换动画，下面四个标签页列出最近会话、MCP 连接器状态、定时任务（routines）和角色文件（全局与项目 CLAUDE.md、记忆文件，可点开编辑），底部显示上下文、5 小时与每周用量条和本会话费用；面板关闭时提示框上方显示迷你头像按钮；`/avatar` 重新打开。备注：目前仅支持 Windows + Claude 桌面版（终端里只显示名字和状态文字，其他系统上各项读取会失败并提示）；仓库不带头像素材，没有素材时画一个纯色圆标，可用仓库里的 `scripts/build-frames.sh`（需 ffmpeg）把你自己的视频转成帧文件；用 PowerShell 读取 `~/.claude/projects` 下会话文件里的标题，运行 `claude mcp list`（会让 Claude Code 检查你配置的各个 MCP 服务器）；读 `~/.claude/scheduled-tasks`、CLAUDE.md 与记忆目录；点迷你头像会用 PowerShell 向前台窗口发送 Ctrl+B（切换桌面版左侧栏），文件按钮用 VS Code（没有则记事本）打开；`prompt.submit`/`tool.call` 只切换动画、原样放行；不联网。 | MIT | [链接](https://github.com/arjkul/claude-code-muse-avatar/tree/main/plugins/muse-avatar) |
 | digi-pet | 提示框上方住着一只数码宝贝 V-Pet：它以本会话的提示缓存为食，缓存快过期前会饿并提醒你（默认按 60 分钟缓存计，可改成 5 分钟），午休和夜间（默认 12:00–14:00、18:00–08:00）睡觉、不会饿；Claude 工作时它在带子里战斗，子代理运行时作为队友上场；按 Digital Monster Color 的进化规则，根据你的回合、测试通过与失败、提交和照料情况从蛋一路进化；`/digi` 查看状态、日志、休息（`sleep`/`wake`/`break`）、副业会话（`side`，不会饿）和预览任意物种（`sim`）。备注：宠物饿了时默认用 macOS `osascript` 发系统通知（可在插件设置里关掉，其他系统只显示应用内提示）；开会话时运行 `date +%z` 取本地时区；读取本会话的子代理列表；`prompt.submit`、`prompt.edit` 只计数和检测、原样放行，`tool.call` 只根据结果计分、原样放行；进度存在插件存储里；不联网；数码宝贝的名称和像素图版权归 Bandai/Toei Animation，不在 MIT 许可范围内（见仓库 NOTICE.md），本项目是非官方同人作品。 | MIT | [链接](https://github.com/trongtaiz/digi-pet/tree/main/plugin) |
+| afk-cat | 住在 Claude Code 里的放置类电子宠物猫：`/cat` 打开窗格照顾猫（喂食、抚摸、睡觉、换猫、领养、远征、每日任务、商店、换世界等），你闲着和 Claude 干活时都会赚金币，连续签到有奖励；默认还会把 spinner 文字、回合用时行、提示框下方提示和工具行换成猫风格，Claude 工作时提示框上方有一只奔跑的猫（插件设置 skin 可选 light/off）；`/cat weather <城市>` 让院子跟随当地天气；按 `p` 在浏览器里玩街机小游戏。备注：`tool.call`、`turn.start`、`turn.complete` 只用来计分和触发猫的反应，结果原样放行；金币按回合时长和 Claude Code 报告的本会话费用（美元）在本机计算，不读消息内容；天气只经 `$.http` 请求 open-meteo（你输入的城市名，或保留两位小数的经纬度），设了位置后每 15 分钟刷新一次（失败 5 分钟重试），`/cat weather off` 关闭；只有打开街机、大图或定位页时才用 `node` 在 127.0.0.1 随机端口启动插件自带的 server/arcade.mjs（带一次性令牌），并用 `open`/`xdg-open`（Windows 为 `rundll32`）打开浏览器；server/public/arcade.js 是 web/arcade.ts 的压缩打包产物（已在本机用 esbuild 0.25 重新打包核对，只差变量名）；Windows 上用 PowerShell `Media.SoundPlayer` 播放插件自带音效，macOS 用 `$.audio.play`；`/cat theme <flavor>` 会把 Claude Code 主题设为对应 Catppuccin 主题；`/cat export`、`/cat import` 读写 `~/.claude-kitten/backups/` 下的备份；进度存在插件存储里。 | MIT | [链接](https://github.com/CooLguNxDD/Claude-Idle-Cat) |
 
 ### 图片与媒体 Images & Media
 
@@ -1078,6 +1081,7 @@ For detailed descriptions of all 1146 mods, see the Chinese section below.
 | project-tabs | 在 Claude Desktop（macOS）Code 标签页的提示框上方把固定的项目显示成横向标签：项目图标（项目自己的 favicon、emoji、自选图片或彩色字母）、各项目会话数与状态色点（等你回应/完成未读/运行中），点标签打开该项目最近的会话，悬停列出最近 5 个会话；`/tabs` 或 ⋯ 打开设置窗格（固定/排序项目、选图标、快捷键）；终端 `claude` 里显示简化的文字标签。备注：只读本机 `~/Library/Application Support/Claude/claude-code-sessions`、`~/.claude/sessions` 与 Claude Desktop 的语言设置，用 `ps` 判断会话进程是否存活，用 `open claude://…` 跳转；选图标会弹 macOS 文件对话框（osascript）并用 sips 缩放，图标存在插件自己的存储里；⌃1…⌃9/⌘1…⌘9 快捷键默认关闭，开启后会用 swiftc 把插件自带的 Swift 源码编译成 `~/.claude/project-tabs/tabs-hotkeys` 并用 `launchctl submit` 作为后台常驻程序运行到注销（开着时每次会话启动会重新提交，需 Xcode 命令行工具；只在 Claude Desktop 在前台时注册 Carbon 热键，不需要辅助功能权限），并写 `~/.claude/project-tabs/hotkeys.json`；不改提示或工具、不联网。 | Apache-2.0 | [链接](https://github.com/tripolskiydigital/claude-tabs) |
 | acceptance-progress | 主代理用 `gh` 查看、编辑或创建 GitHub Issue 后，自动重新读取该 Issue 正文里的勾选清单，在提示框上方显示验收条件完成数（进度条与 `done/total`）和最多 3 条未完成项，其他清单分组汇总一行；`/acceptance` 后接编号、`owner/repo#N` 或 URL 可手动指定 Issue，接 `off`/`on` 隐藏或显示。备注：界面为日语或英语；用本机已登录的 `gh issue view --json` 只读查询；`tool.call` 只观察 Bash 命令、原样放行，子代理的调用不切换；`prompt.submit` 只用来判断语言、原样放行；不联网（除 gh 外）。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/acceptance-progress) |
 | progress-band | 提示框上方一行显示当前多步任务的步骤条：已完成 ✓、进行中 ●（附已用分钟数）、未开始 ○、受阻 !，以及 `完成数/总数`；终端窄时把已完成的折成计数；步骤受阻时弹出提示。备注：注册一个 `progress` 工具，工具说明请 Claude 在 3 步以上的任务开始和每步变化时调用它并传入完整步骤列表（任务结束传空列表），步骤条完全由这个工具更新；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/hyunn12/progress-band) |
+| work-panel | 面向跨多个会话的大功能的任务面板：和 Claude 讨论完设计后 `/work create <名字>`，Claude 按插件自带的 roadmap 技能写 PLAN.md、拆成带依赖的任务并先给你预览，你确认后才写入仓库（`WORK.md`、`backlog/tasks/` 下 Backlog.md 格式的 Markdown 文件）；`/work` 在右侧打开或隐藏面板，列出各路线图和任务状态（就绪、等待、进行中、阻塞、完成），只允许开始前置任务都已完成的任务，其他活跃会话正在做的任务会被锁住；选中任务按 Start 发出第一条消息开工，按两次「Clear and start」则先清空会话再开工，同一路线图内还会先写交接说明。备注：只有你按 Start/Clear and start 或运行 `/work create` 时才以你的身份用 `$.prompt.submit` 发消息；同一路线图「Clear and start」时先用 `$.model.fork`（本会话模型、无工具，会消耗 token）写交接说明，附上 `git rev-parse`/`git status --short` 结果，追加到旧任务文件，然后运行内置 `/clear`；`prompt.submit` 只记下回合开始、原样放行，`tool.call` 只从 Bash 命令和文件路径里找 backlog 任务编号、结果原样返回；开会话、每回合结束和每分钟用 `python3` 运行插件自带的 tracker/roadmap.py（仅当项目有 `WORK.md`），若项目里有 `scripts/work_tracker.py`（插件设置 treeCommand 可改）则改为运行项目里的这个脚本（会执行项目代码）；每分钟写 `~/.claude/work-panel/live/<会话 id>.json` 心跳，并删除一天前的旧心跳文件；需要 Python 3.10+；不联网。 | MIT | [链接](https://github.com/ilikeeatingrice/claude-code-work-panel) |
 
 ### 外部集成 External Integrations
 
@@ -1131,6 +1135,7 @@ For detailed descriptions of all 1146 mods, see the Chinese section below.
 | world-news | 把 Google 新闻台湾版的大事钉在提示框下方：每次发消息时若过了冷却时间（默认 30 分钟）就在后台读取你选的分类（国际、科技、财经、台湾、军事、科学、健康、体育，以及美国、中国、日韩、欧洲、俄乌、中东、东南亚等地区）的 RSS，把最新一条没看过的标题显示在状态栏；`/world-news` 选分类、改冷却、立即检查、开关，侧栏列出最新标题并可点开原文。备注：界面为繁体中文；`prompt.submit` 只触发后台检查、提示原样放行，不往模型上下文加任何东西；只经 `$.http` 请求 news.google.com 的固定分类 RSS 地址（不带任何会话内容）；简体标题用内置 OpenCC 词表转繁体；设置与已读记录存在插件存储里；仓库没有 LICENSE 文件（plugin.json 写 MIT）。 |  | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/master/plugins/world-news) |
 | cw-chart | `/cw-chart <widget.json>` 把一个 CloudWatch 指标小部件（metric widget JSON）在侧边面板里画成图表：1h/6h/24h 范围、左右平移、刷新，未固定时间窗时每 60 秒自动重取；点图下方的时间条会把 `[图表标题 @ 时间]` 插入到输入框（只填入，不发送）。备注：图片由本机 `aws cloudwatch get-metric-widget-image` 用你的默认 AWS 凭据获取（需要 `cloudwatch:GetMetricWidgetImage` 权限）；图表需支持 kitty 图形协议的终端（kitty、Ghostty）；只读你指定的 JSON 文件；不改提示或工具、mod 本身不发网络请求。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/cw-chart) |
 | review-inbox | 提示框上方一行显示有多少 GitHub PR 在等你审查、最久的已等了几天（3 天起变黄、14 天起变红）；`/review-inbox` 或点「열기」打开抽屉，每个 PR 一张卡：一句话摘要、为什么有这个 PR、影响到哪些地方（数据库结构变更、部署顺序等风险项标 ⚠️）、大小、作者和等待时长；「리뷰하기」把这个 PR 的审查请求连同摘要和警告填进输入框，「숨기기」隐藏到这个 PR 有新提交为止，再次请求你审查的 PR 会附上你上次审查以来的变化摘要；工作中来了新的审查请求会弹提示；可在插件设置里用 `org:`/`repo:` 限定范围、指定 gh 账号。备注：需要本机已安装并登录 GitHub CLI（`gh`）；开会话后约 1–5 秒自动开始，之后每 10 分钟（失败时每分钟）用 `gh api graphql` 搜索等你审查的 PR，用 `gh api` 比较你上次审查后的提交；每个 PR 的每个新提交都会自动调用一次 `$.model.complete`（sonnet，计入你的用量）生成摘要，发送的是仓库名、标题、大小、改动文件列表（最多 80 个）和 PR 描述（最多 12000 字），变化摘要发送提交说明和文件名，都不含会话内容；指定了 gh 账号时用 `gh auth token -u` 取该账号的令牌，只传给 gh 子进程；缓存写在插件数据目录，多个会话共用；「리뷰하기」只往输入框追加文字，不自动发送；界面和摘要都是韩语。 | MIT | [链接](https://github.com/SummerRiversound/review-inbox) |
+| ayat-of-the-day | 每天在状态栏显示一节古兰经经文（Saheeh International 英译），同一天所有人看到同一节；`/ayat` 显示当天经文全文。备注：开会话和运行 `/ayat` 时若当天还没有缓存，就经 `$.http` 请求 api.alquran.cloud 的固定地址（只带按日期算出的经文编号，不带任何会话内容），联网失败时显示上次的缓存；缓存在插件存储里；不运行外部程序。 | MIT | [链接](https://github.com/thisismairaj/ayat-of-the-day) |
 
 ### 本地工具 Local Tools
 

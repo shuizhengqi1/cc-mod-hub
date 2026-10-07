@@ -9279,6 +9279,47 @@
         "repo": "SummerRiversound/review-inbox",
         "sha": "618aa88ae2e423454d42b2950db6a4234c1d2add"
       }
+    },
+    {
+      "name": "afk-cat",
+      "source": {
+        "source": "github",
+        "repo": "CooLguNxDD/Claude-Idle-Cat",
+        "sha": "51ae31fef212ba80bbd21a2c34a7cba31a1dd6b4"
+      }
+    },
+    {
+      "name": "jevlight",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/damilola-elegbede-org/claude-config.git",
+        "path": "system-configs/.claude/mods/jevlight",
+        "sha": "2c84f8ffd0edb9e7ff5369fe9be0d03a4bb5b29e"
+      }
+    },
+    {
+      "name": "work-panel",
+      "source": {
+        "source": "github",
+        "repo": "ilikeeatingrice/claude-code-work-panel",
+        "sha": "c929c929a6fa34695c4f5d9df805d070e3d8c56f"
+      }
+    },
+    {
+      "name": "connect-four",
+      "source": {
+        "source": "github",
+        "repo": "nachtgold/claude-code-connect-four",
+        "sha": "69c7786afe5934c4ec5bca2bed2a845fcfabc0d5"
+      }
+    },
+    {
+      "name": "ayat-of-the-day",
+      "source": {
+        "source": "github",
+        "repo": "thisismairaj/ayat-of-the-day",
+        "sha": "16ce4df74629de8333dd0bcbc66d1ab26d8015c4"
+      }
     }
   ]
 }
