@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1312 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1340 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1312 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1340 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1312 mods, see the Chinese section below.
+For detailed descriptions of all 1340 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1312 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1340 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -744,6 +744,15 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | ok-to-send | 发邮件、发帖、git push、发布、部署等对外动作先拦下，等你在提示里写 "ok to send" 才放行（只对当轮有效）。备注：prompt.submit 只读你是否写了放行词、提示原样放行（hooks/register.ts 30–34）；只拒绝不改写（36–46）。 |  | [链接](https://github.com/luba-hub/claude-mods/tree/main/ok-to-send) |
 | detector-secretos | 写文件和 git commit 前扫描 API key、token、私钥、密码，发现就问你或直接拦下，`/secretos` 查看记录（西班牙语界面）。备注：只放行或拒绝、不改写（hooks/register.tsx 57–101）；commit 时只读 `git diff`/`git ls-files`（280）；记录里的密钥已打码；不联网。 |  | [链接](https://github.com/Vincitorecode/mods-equipo/tree/main/plugins/detector-secretos) |
 | guardia-produccion | 部署、迁移、删库、force push、对生产集群的 kubectl 等高风险命令先弹窗确认，`/guardia` 查看（西班牙语界面）。备注：只放行或拒绝、不改写，无人确认时默认拒绝（hooks/register.tsx 72–119）；只读 `kubectl config current-context`（220）；不联网。 |  | [链接](https://github.com/Vincitorecode/mods-equipo/tree/main/plugins/guardia-produccion) |
+| edit-limit | 一轮里 Claude 改的文件数超过上限（默认 15）就拦下，让它先说明计划再问你；提示里写 EDITS-OK 或 `/edit-limit <n>` 放行。备注：只拒绝不改写（hooks/register.ts 64–85）；prompt.submit 只读你是否写了放行词、提示原样放行（54–57）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/edit-limit) |
+| watch-mode-guard | 拦下前台运行的 watch 模式和不会结束的命令（如 `npm run dev`、`jest --watch`），免得卡住这一轮。备注：只拒绝不改写（hooks/register.ts 27–34）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/watch-mode-guard) |
+| venv-guard | 没激活虚拟环境时拦下 `pip install`，避免装进系统 Python。备注：只拒绝不改写（hooks/register.ts 40–55）；只列出项目目录查找 venv（19）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/venv-guard) |
+| docker-prune-guard | 拦下 `docker system prune -a --volumes`、删卷等会清掉本地数据库的命令，提示里写 PRUNE-OK 放行。备注：只拒绝不改写（hooks/register.ts 29–45）；prompt.submit 只记下你最近一条提示用来查放行词、提示原样放行（18–27）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/docker-prune-guard) |
+| cloud-cost-warn | 创建 GPU 实例、大型数据库等昂贵云资源的命令先拦下并给出更便宜的选项，提示里写 COST-OK 放行。备注：只拒绝不改写（hooks/register.ts 39–47）；prompt.submit 只记下你最近一条提示用来查放行词、提示原样放行（28–37）；价格是内置的固定估算；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/cloud-cost-warn) |
+| no-upload | 拦下把文件传到 pastebin、网盘等外部服务的命令，可设白名单主机，提示里写放行词当轮放行。备注：只拒绝不改写（hooks/register.ts 41–47）；prompt.submit 只读放行词、提示原样放行（34–39）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/no-upload) |
+| tracker-guard | 拦下安装或写入未批准的统计/埋点 SDK（安装命令和文件编辑都查），可设批准列表和放行词。备注：只拒绝不改写（hooks/register.ts 68–82）；编辑前只读目标文件做对比（47）；prompt.submit 只读放行词、提示原样放行（63–66）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/tracker-guard) |
+| seed-guard | DATABASE_URL 不指向本机时拦下数据库 seed、reset、drop 命令。备注：只拒绝不改写（hooks/register.ts 70–84）；只读项目里的 .env 类文件找 DATABASE_URL（26）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/seed-guard) |
+| url-allowlist | WebFetch（可选也查 Bash 里的网址）只允许你设定的域名，`/allow-host` 当次会话放行某个主机（只能你自己输入）。备注：只拒绝不改写（hooks/register.ts 80–99）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/url-allowlist) |
 
 ### 开发工具 Dev Tools
 
@@ -917,6 +926,18 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | openspec-status | 提示框下方显示当前项目的 OpenSpec 变更进度和健康状态，`/openspec` 查看。备注：需本机已装 openspec 命令行，只跑 `openspec list --json`/`openspec doctor --json` 和 `git branch --show-current`（hooks/register.tsx 243–286）；tool.call 先原样执行再刷新（360–384）；classic.SessionStart/CwdChanged 只刷新状态（391–403）。 | MIT | [链接](https://github.com/pierreboissinot/openspec-status) |
 | omnigraph-viz | 实时可视化 Omnigraph 图数据库操作，`/og` 开关面板、回放录制的会话。备注：需本机已装 omnigraph 命令行；tool.call 只观察 Bash、原样放行（hooks/register.tsx 534–549）；只读地跑 omnigraph schema/export/commit 查询来补图（216–254）；操作记录写到项目下 `.omnigraph-viz/` 并自动放一个忽略全部的 .gitignore（134–140）。 | MIT | [链接](https://github.com/pronskiy/omnigraph-claude-mod/tree/main/omnigraph-viz) |
 | dnz | 提示框上方一张卡片，显示模型、上下文、用量上限、分支、费用和提示缓存还剩多久过期；另附 7 个收尾技能（squash、merge、release、审计等，意大利语）。备注：mod 部分只观察（hooks/register.tsx 74–122），每 30 秒读一次 `git branch --show-current`（65、82）；附带的 squash/merge/release 技能会改 git 历史，只在你手动调用时运行；不联网。 |  | [链接](https://github.com/madnz8/dnz) |
+| slow-test-flag | 每次跑测试后指出最慢的几个测试，`/slow-tests` 查看上次结果。备注：tool.call 先原样执行再解析测试输出（hooks/register.ts 103–109）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/slow-test-flag) |
+| bundle-size-watch | 每次构建后对比打包体积，增长超过阈值时提醒。备注：tool.call 先原样执行再测量输出目录（hooks/register.ts 109–115）；可选用 `gzip -c` 算压缩体积（58）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/bundle-size-watch) |
+| migration-namer | 新建迁移文件时检查命名，不规范就拦下并给出统一的带时间戳描述性名字，`/migration-name` 生成名字。备注：只拒绝不改写（hooks/register.ts 126–130）；只读迁移目录（37、68、91）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/migration-namer) |
+| curl-to-code | `/curl2code` 把 curl 命令转成 fetch、axios、Python requests 或 Go 代码。备注：只在你运行命令时转换文本，读 package.json 判断是否用 axios（hooks/register.ts 19–31、76）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/curl-to-code) |
+| benchmark-compare | `/bench` 在改动前后跑基准测试并对比数字，侧栏显示结果。备注：会运行项目自己的基准命令（你配置的或自动识别的，如 `npx vitest bench`，hooks/register.tsx 121–125、bench.ts 255），只在你运行 `/bench` 时执行；git 只读（rev-parse，54–67）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/benchmark-compare) |
+| mock-server | `/mock` 按 OpenAPI 规范在本机 127.0.0.1 起一个假 API 服务，先做前端不用等后端。备注：默认用内置 node 服务（hooks/register.tsx 154–163）；若设 engine=prism 且项目没装 prism，会用 `npx --yes @stoplight/prism-cli` 从 npm 下载（144）；只监听 127.0.0.1（11）；会话结束时停掉。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mock-server) |
+| mod-maker | `/new-mod` 生成一个新的 Claude Code mod 骨架（manifest、hooks、测试、README）。备注：只在你运行命令时往当前目录写文件（hooks/register.ts 125–151）；git 只读 user.name 和 remote（52）；会跑 `claude plugin validate`/`claude plugin test` 检查生成结果（86、104）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mod-maker) |
+| django-migrate-watch | Django 模型改动后检查有没有漏建迁移，提示框上方提醒并可一键让 Claude 创建。备注：改了 models/迁移文件后会自动跑项目的 `python manage.py makemigrations --check --dry-run`（会加载你的 Django 项目代码，hooks/register.tsx 68）；只在你点 Create migrations 按钮时才 prompt.submit 发请求（118–130、181）；tool.call 先原样执行（141–158）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/django-migrate-watch) |
+| openapi-sync | API 路由改了但 openapi.yaml 没跟着改时，提示框上方提醒，可一键让 Claude 更新规范。备注：tool.call 先原样执行再对比路由（hooks/register.tsx 95–109）；只在你点按钮时才 prompt.submit 发请求（80–83、136）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/openapi-sync) |
+| storybook-nudge | Claude 新建组件却没写 story 时提醒，可一键让 Claude 补上。备注：tool.call 先原样执行（hooks/register.tsx 75–92）；只在你点按钮时才 prompt.submit 发请求（108–111、120）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/storybook-nudge) |
+| log-tail | `/tail` 在侧栏实时跟踪日志文件或 docker/compose 容器输出，可只看错误、过滤，选中几行发给 Claude 分析。备注：会按你的命令启动 tail 或 `docker logs` 进程（hooks/register.tsx 216）；只在你点 Send to Claude 时 prompt.submit（255–276、423）；会话结束时停掉；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/log-tail) |
+| profile-run | `/profile <命令>` 用 node --cpu-prof、cProfile 或 go pprof 跑你的命令并显示最耗时的函数，可一键让 Claude 优化前三个。备注：会运行你给的命令（hooks/register.tsx 129）；只在你点按钮时 prompt.submit（194–199、299）；profile 文件写到项目下 `.claude/profiles/`（25）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/profile-run) |
 
 ### 子代理管理 Subagent Management
 
@@ -976,6 +997,7 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | task-band | 提示框上方带边框的任务带：正在运行的子代理、工作流、后台 shell 和 monitor 各一行，配进度条（按同类子代理历史耗时估算），可翻页。**备注**：prompt.submit 只解析后台任务完成通知来更新状态并原样放行，不改写（register.tsx 148–156）；tool.call 与 agent.spawn 先原样执行，只记录结果（76–125）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/task-band) |
 | mod-hud | `/mod-hud` 打开侧边 HUD：会话信息、需要你处理的提醒、git 状态、上下文与提示缓存条、限额、费用、待办进度，以及每个子代理的类型、模型、状态、耗时、工具调用和结果，下面还有一群可以用鼠标抓起来扔的 Claude 小吉祥物动画；可选状态栏文字。备注：agent.spawn、tool.call、tool.check、turn.step 都先原样执行，只记录（register.tsx 1289–1410、1472–1520）；只读本机 git（581）；读 `ANTHROPIC_API_KEY` 等环境变量只为判断是否设置以推断提示缓存时长，不使用其值（652–680）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/DaiZiQiao/clawd-hud-zq/tree/main/mod-hud) |
 | subagent-monitor | 实时查看正在跑的子代理：类型、状态、耗时和最近活动，`/agents-live` 打开。备注：读 $.agent.list（hooks/register.tsx 135）；agent.spawn/tool.call 只观察、原样放行（201–241）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/subagent-monitor) |
+| subagent-cap | 限制同时运行的子代理数量（默认上限可在设置里改），超出时拦下并让 Claude 等待或自己做。备注：只拒绝不改写（hooks/register.ts 46–60）；agent.spawn 只观察、原样放行（62–67）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/subagent-cap) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -1026,6 +1048,8 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | idle-nudge | 闲置一段时间后，若有未提交的改动就提醒你。备注：只读 `git status --porcelain`（hooks/register.ts 12）；prompt.submit 只重置计时、提示原样放行（66–71）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/idle-nudge) |
 | long-run-alert | 单条命令跑太久时提醒你。备注：只用计时器弹提示（hooks/register.ts 18–35）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/long-run-alert) |
 | permission-ping | Claude 在等你批准时响一声并弹提示。备注：classic.PermissionRequest/Notification 只观察（hooks/register.ts 39–54）；只播放自带的 assets/ping.wav（已核为 RIFF/WAVE）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/permission-ping) |
+| soundpack | 给回合结束、出错、等待授权、测试转绿等事件配提示音，三套音效（minimal、retro、nature），`/soundpack` 试听。备注：只在 macOS 有声音（用 afplay），其他系统静音，启动时跑 `uname -s` 判断（hooks/register.ts 53–60）；tool.call 先原样执行再判断是否播放（125–135）；音频随插件附带的 wav；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/soundpack) |
+| shortcut-tips | 每天一条 Claude Code 快捷键/功能小贴士，`/tip` 再看一条。备注：只在 session.start 弹提示（hooks/register.ts 33–37）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/shortcut-tips) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -1334,6 +1358,7 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | ts-band | 提示框上方显示 Tailscale 各节点在线/离线状态，节点上线或下线时弹出提示；插件设置可指定显示哪些节点及别名、隐藏离线节点、刷新间隔；`/ts [off|on]` 显示或隐藏。备注：需要已安装 Tailscale：用 `$.process.run` 运行 `tailscale status --json`（依次找 PATH、/usr/local/bin、/opt/homebrew/bin、macOS 应用；插件设置 tailscalePath 可指定），每 intervalSeconds 秒（默认 60、最少 10）、每次发提示时、以及 Claude 在 Bash 里运行 `tailscale up/down/set/switch/login/logout` 之后各读一次（`tool.call` 只看命令文本，调用原样放行），连续失败时逐步延长间隔；只在交互会话里运行；`prompt.edit`、`prompt.submit` 只用于让开选择器和触发刷新，原样放行；`/ts off`/`on` 会写本插件自己的 `ts-band.visible` 设置；插件本身不联网。 | MIT | [链接](https://github.com/hoobnn/hoobnn-agent-mods/tree/main/claude-code/ts-band) |
 | file-dock | 把你粘贴的图片、你提示里写的路径、Claude 回答里提到的文件和文件夹（绝对 / 相对路径）收集成提示框上方的按钮，点一下用系统默认程序或文件管理器打开；韩文说明。备注：只收文件夹和文档 / 图片 / 音视频 / zip 等扩展名（paths.ts 5–11）；按按钮才运行 open / xdg-open / rundll32（register.tsx 59–62、platform.ts 12–16）；prompt.submit 只记录路径、原样放行（100–108）；tool.call 原样放行；不联网。 | MIT | [链接](https://github.com/Changroro/plugins/tree/main/plugins/file-dock) |
 | MacLoad | 提示框下方显示 Mac 的 CPU 和内存占用，指出拖慢电脑的应用，过载时提醒；`/mac-load` 看按应用的明细和正在跑的模拟器。备注：只支持 macOS；定时运行固定的只读系统命令 `/usr/sbin/iostat`、`/bin/ps`、`/usr/sbin/sysctl`、`/usr/bin/top`、`xcrun simctl list`（hooks/register.tsx 53–57、69–75）；钩子都原样放行（272–318）；不联网。 | MIT | [链接](https://github.com/Heuwzen/claude-runway/tree/main/mac-load) |
+| cheatsheet | `/cheat` 离线查看 git、docker、regex、tmux、kubectl、vim、SQL 等速查表。备注：只返回内置文本（hooks/register.ts 6–15）；不运行其他程序、不读写文件、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/cheatsheet) |
 
 ### 其他工具 Other Tools
 
@@ -1448,6 +1473,9 @@ For detailed descriptions of all 1312 mods, see the Chinese section below.
 | model-effort-shortcuts | 用快捷键切换推理努力程度（low→medium→high→xhigh 循环，范围可设）和模型（Haiku 4.5、Sonnet 5.5、Opus 5.5、Fable 5.1，可去掉某个），底栏显示下一次请求用的模型和努力程度；需在 ~/.claude/keybindings.json 把键绑到 strip:jump6–9。备注：turn.step 按你的选择改写每次请求的 model / effort（register.tsx 41–52），选择用插件存储跨会话保留；/model、/effort 只观察、原样放行（54–69）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/richkuo/claude-code-model-effort-shortcuts) |
 | agent-quick-menu | `/menu` 打开一个面板，汇总各已装插件在 `quick-menu.json` 里声明的命令和设置，以及 Claude Code 自身设置，可收藏、搜索；提示框上方有入口条。**备注**：只读已装插件清单 `installed_plugins.json` 和各插件自带的 `.claude-plugin/quick-menu.json`（quick-menu.tsx 7、237），按按钮才用 `$.command.run` 运行该插件已注册的斜杠命令（488）或经 `/config` 改设置（684）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/agentic-workbench/agent-quick-menu) |
 | palette | 侧边面板列出本会话可用的子代理、技能和命令（按使用次数排出常用），点一下就把它放进提示框；`/palette` 开关。**备注**：按按钮才用 `$.prompt.fill` 把 `/命令` 或 `@agent-名字` 放进提示框，保留你的草稿内容（register.tsx 102–107、core.ts 161–174），不自动发送；command.run、skill.prompt、agent.spawn、agent.offer 只计数或记描述后原样放行（138–159）；不运行外部程序、不联网。 | Apache-2.0 | [链接](https://github.com/vampik33/claude-plugins/tree/main/plugins/palette) |
+| command-coach | 根据你的使用习惯（长输出、频繁提交、上下文快满、授权多等）弹出可用的命令和 mod 建议，`/coach` 查看。备注：prompt.submit 只计数、提示原样放行（hooks/register.ts 163–166）；tool.call 先原样执行再计数（168–181）；会跑 `claude plugin list --json` 看已装哪些 mod（83）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/command-coach) |
+| skill-tracker | 记录你每周用过哪些语言和工具，`/my-skills` 查看本周与近 8 周。备注：tool.call 先原样执行再按文件后缀和命令名记数（hooks/register.ts 62–71）；数据存插件本地存储；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/skill-tracker) |
+| mod-profiles | 把已装 mod 的启用组合存成 work、personal、demo 等配置，`/profile-mods` 一键切换。备注：切换时会跑 `claude plugin enable/disable` 改你的插件启用状态（hooks/register.tsx 128–131、cli.ts 18–19），只在你点按钮或输入命令时执行；列表用 `claude plugin list`（69）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mod-profiles) |
 
 ---
 
