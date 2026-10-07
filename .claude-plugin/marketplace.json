@@ -9229,6 +9229,56 @@
         "path": "plugin",
         "sha": "479a95243645e922fcd53bcd6f542233d387789c"
       }
+    },
+    {
+      "name": "wrap-buttons",
+      "source": {
+        "source": "github",
+        "repo": "lisim/wrap-buttons",
+        "sha": "593a75b463827ac8eab28d700a38aba8906395ea"
+      }
+    },
+    {
+      "name": "context-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/le0u0/mods.git",
+        "path": "mods/context-tracker",
+        "sha": "2f4be627e9d9b8d4b62c647e038217e53a360526"
+      }
+    },
+    {
+      "name": "wills-status",
+      "source": {
+        "source": "github",
+        "repo": "William-Long-II/claude-wills-status",
+        "sha": "686907943c0a1706cc014854e01f8f95bf1ab222"
+      }
+    },
+    {
+      "name": "prompt-drafts",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vynnlee/mods.git",
+        "path": "prompt-drafts",
+        "sha": "58653d3862eb78e5823caab8a99592ec8ae007c2"
+      }
+    },
+    {
+      "name": "redpen",
+      "source": {
+        "source": "github",
+        "repo": "joonhyukyim/redpen",
+        "sha": "a26cbe5dc38f4b094bb4a1bc70577c6a78c32c60"
+      }
+    },
+    {
+      "name": "review-inbox",
+      "source": {
+        "source": "github",
+        "repo": "SummerRiversound/review-inbox",
+        "sha": "618aa88ae2e423454d42b2950db6a4234c1d2add"
+      }
     }
   ]
 }
