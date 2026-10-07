@@ -11131,6 +11131,200 @@
         "path": "claude-code/clawdmeter",
         "sha": "1d4a1cc8b7d4a54126c1aee85783fbccf57b76bf"
       }
+    },
+    {
+      "name": "prompt-box",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ekinertac/claude-code-mods.git",
+        "path": "prompt-box",
+        "sha": "a112d4e24268bd71599f7bb7727389b20fc74363"
+      }
+    },
+    {
+      "name": "tool-oneline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ekinertac/claude-code-mods.git",
+        "path": "tool-oneline",
+        "sha": "a112d4e24268bd71599f7bb7727389b20fc74363"
+      }
+    },
+    {
+      "name": "last-message",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trtmn/agent-plugins.git",
+        "path": "plugins/last-message",
+        "sha": "67cb97f5b0aa369a1ff284e8f1a248aa3ef319b5"
+      }
+    },
+    {
+      "name": "current-goal",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trtmn/agent-plugins.git",
+        "path": "plugins/current-goal",
+        "sha": "67cb97f5b0aa369a1ff284e8f1a248aa3ef319b5"
+      }
+    },
+    {
+      "name": "auto-pin",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ulttla/claude-mod-repo.git",
+        "path": "auto-pin",
+        "sha": "d8dad14d5b3e9c2b4e4532cf565331cb6e69ead8"
+      }
+    },
+    {
+      "name": "zed-clear-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/popoffvg/dotfiles.git",
+        "path": "harness/plugins/zed-clear-guard",
+        "sha": "7db84c2b4b12603ca4609077c6dfc4a8ceb01793"
+      }
+    },
+    {
+      "name": "setup-notes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/maximmaxim345/dotfiles.git",
+        "path": "claude/mods/setup-notes",
+        "sha": "3747e8badd882dd7b38d3f0ee605ba360ae4de24"
+      }
+    },
+    {
+      "name": "hintline",
+      "source": {
+        "source": "github",
+        "repo": "warmlogic/claude-hintline",
+        "sha": "824ff018495744b3c55177b03bd25b979328ded6"
+      }
+    },
+    {
+      "name": "warmline",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Miguel-Barroso/claude-warmline.git",
+        "path": "plugin",
+        "sha": "125e3a322856a096b80c6e08ad7579ce1eaeb472"
+      }
+    },
+    {
+      "name": "agent-usage",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AUCB21/cc-mods.git",
+        "path": "agent-usage",
+        "sha": "51d155c6522e0d4231a3d089310164f353a74164"
+      }
+    },
+    {
+      "name": "session-autocompact",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Butanium/claude-code-patches.git",
+        "path": "mods/session-autocompact",
+        "sha": "32f2c86b49de3653aff1bdb377dda85c6c1b2f71"
+      }
+    },
+    {
+      "name": "publish-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/seanyyoo/claude-code-mods.git",
+        "path": "plugins/publish-guard",
+        "sha": "61e953719796728ad28a64d79ee4a3f8dcad9b64"
+      }
+    },
+    {
+      "name": "herdr-fleet",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/abhibansal60/claude-mods.git",
+        "path": "herdr-fleet",
+        "sha": "d1e45d99e782ee721f802545a115c8f25364c685"
+      }
+    },
+    {
+      "name": "twin-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/abhibansal60/claude-mods.git",
+        "path": "twin-meter",
+        "sha": "d1e45d99e782ee721f802545a115c8f25364c685"
+      }
+    },
+    {
+      "name": "rtk-gain",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Fazzani/claude-mods.git",
+        "path": "plugins/rtk-gain",
+        "sha": "dcfee2772e78946bf6b49a5bc20c324e339ffef9"
+      }
+    },
+    {
+      "name": "read-tracker",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/armandli/get-skilled.git",
+        "path": "mods/read-tracker",
+        "sha": "1d7e7b79bb35dc1ac2a36bc2b5f0b24ffd468529"
+      }
+    },
+    {
+      "name": "task-chime",
+      "source": {
+        "source": "github",
+        "repo": "ialoni66/task-chime",
+        "sha": "92a0d57d6fb12dbb33f630645e1d96cf44db9ae1"
+      }
+    },
+    {
+      "name": "project-color",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mrjk05/modemon.git",
+        "path": "mods/project-color",
+        "sha": "977cb8e719d0c7ed990890fd14fa1e3eeb28bc13"
+      }
+    },
+    {
+      "name": "dia-santo",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/monkfrodo/claude-mods.git",
+        "path": "plugins/dia-santo",
+        "sha": "c4b26fb6bac1fa270e81ec113be5ccb54fb896b5"
+      }
+    },
+    {
+      "name": "token-meter",
+      "source": {
+        "source": "github",
+        "repo": "Dumorro/token-meter",
+        "sha": "9f058e5d46549f3f1506079d13774a709c479e2a"
+      }
+    },
+    {
+      "name": "superpowers-progress",
+      "source": {
+        "source": "github",
+        "repo": "Dave93/superpowers-progress",
+        "sha": "26e855ec31c6cf3ae334dd59955c6baa6d58d595"
+      }
+    },
+    {
+      "name": "subagent-tree",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bobtat/claude-plugins.git",
+        "path": "plugins/subagent-tree",
+        "sha": "4e28f704c25a679f40ef444987db26787be8550b"
+      }
     }
   ]
 }
