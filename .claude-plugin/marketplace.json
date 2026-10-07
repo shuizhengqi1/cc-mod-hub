@@ -9965,6 +9965,51 @@
         "repo": "ATworks-np/agent-hero-claude-plugin",
         "sha": "cf97d2046dd6011829b763684829a01b07ba85ae"
       }
+    },
+    {
+      "name": "mod-hud",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DaiZiQiao/clawd-hud-zq.git",
+        "path": "mod-hud",
+        "sha": "26fdd32045fb05690bc1364bd341dd55c5f68b88"
+      }
+    },
+    {
+      "name": "watch-tower",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/BastienTeissier/watch-tower.git",
+        "path": "mods/watch-tower",
+        "sha": "ac3054dae866e322781bfa8b33dcce288218c8e4"
+      }
+    },
+    {
+      "name": "docker-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/docker-pane",
+        "sha": "7f312f1f391e5aec6da245bdf2d442a836db5f1f"
+      }
+    },
+    {
+      "name": "deploy-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lucasleandro08/claude-mods.git",
+        "path": "plugins/deploy-watch",
+        "sha": "7f312f1f391e5aec6da245bdf2d442a836db5f1f"
+      }
+    },
+    {
+      "name": "crossloom-env",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hanuele/crossloom-marketplace.git",
+        "path": "plugins/crossloom-env",
+        "sha": "5d91ceb2bfc1c650f94d1028e5606c60a6e94d13"
+      }
     }
   ]
 }
