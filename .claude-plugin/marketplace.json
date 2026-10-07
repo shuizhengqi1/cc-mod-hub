@@ -9037,6 +9037,68 @@
         "path": "plugins/world-news",
         "sha": "ada851eb722e93376c6a66543b2ac9654cb53ec9"
       }
+    },
+    {
+      "name": "image-mirror",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/voitta-ai/mods.git",
+        "path": "image-mirror",
+        "sha": "53f8e5d15c3414e368d4a2a5cbc81ba16113222e"
+      }
+    },
+    {
+      "name": "cw-chart",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/voitta-ai/mods.git",
+        "path": "cw-chart",
+        "sha": "53f8e5d15c3414e368d4a2a5cbc81ba16113222e"
+      }
+    },
+    {
+      "name": "tidy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MomoChenisMe/claude-code-mods.git",
+        "path": "tidy",
+        "sha": "4856a8a37ac2cf3518730a62845cea64319fcde2"
+      }
+    },
+    {
+      "name": "wait-jump",
+      "source": {
+        "source": "github",
+        "repo": "kawase1295/wait-jump",
+        "sha": "e39ddb8ae1364065b32e7c5ada0d923049722dd2"
+      }
+    },
+    {
+      "name": "github-actions",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jeffer1312/hangar.git",
+        "path": "plugins/github-actions",
+        "sha": "9980c2ba13f72d154ad6eb41ee03b50175d5a2cd"
+      }
+    },
+    {
+      "name": "model-pick",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/joshuatonga/claude-mods.git",
+        "path": "model-pick",
+        "sha": "062b11ee295454ff5c713d14c1fd8d22fcae9e99"
+      }
+    },
+    {
+      "name": "muse-avatar",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arjkul/claude-code-muse-avatar.git",
+        "path": "plugins/muse-avatar",
+        "sha": "acfaeffc0b82c48061e93172baf863bb7a75b1ed"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1118 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1125 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1118 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1125 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1118 mods, see the Chinese section below.
+For detailed descriptions of all 1125 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1118 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1125 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -494,6 +494,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | game-stance | GAME MODE 套件之一：在提示框底栏右侧用彩色徽章显示当前权限模式（默认/自动批准编辑/计划/自动判定/绕过权限等），跟随 shift+tab 切换。备注：只读 settings 的 defaultMode，`classic.UserPromptSubmit`/`classic.PostToolUse` 只读取 permission_mode、原样放行；只改显示；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-stance) |
 | diffspider | 每次 Edit/Write 完成后，一只盲文点阵小蜘蛛爬过 diff，把改动的词标成霓虹色，爬完显示增删行数。备注：`tool.call` 只记下调用 id、原样返回；只改终端里工具行的显示；不注册命令、不跑外部程序、不联网。 | MIT | [链接](https://github.com/Silvertree2010/diffspider) |
 | thai-mode | 把 Claude Code 的界面换成泰文：工具行（Read→อ่านไฟล์、Bash→รันคำสั่ง，MCP 工具显示为「服务 · 泰文动词」）、工具结果摘要、折叠的工具组、按真实阶段变化的加载词、回合耗时和进度提示；`/thai` 开关（记在本机 `$.store`）。备注：内置词典翻译，不调模型；只改显示（`ui.render`），不改模型收到的内容；配色按浅色背景挑选；不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/thai-mode) |
+| tidy | 把每一轮的工具调用、思考和过程说明收成一行 `› 處理了 N 秒`（出错时附错误数，工作中显示 `› 處理中…`），点一下展开、缩排显示原样内容；只留你的消息和 Claude 的最后回复（开头换成橘色粗体 `✻`），并隐藏每轮结尾的 `Worked for …`。备注：界面为繁体中文；作者标注需 Claude Code 2.1.290+（本市场冒烟用 2.1.289 可正常加载）；点击展开需全屏版面（settings.json 的 `"tui": "fullscreen"`），否则只收起不能点开；`session.append` 只记录每行属于哪一轮、原样写入，只改画面，对话记录与模型读到的内容不变；不注册命令、不运行外部程序、不联网；仓库没有 LICENSE 文件。 |  | [链接](https://github.com/MomoChenisMe/claude-code-mods/tree/main/tidy) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -572,6 +573,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | chess | `/chess` 在侧边面板（全屏布局下停靠在对话旁，否则在提示框上方）和 Claude 下国际象棋：点棋子和格子或输入着法（`e4`、`Nf3`、`O-O`），面板显示 Claude 每步花费的 token 和累计。备注：Claude 的每一步用 `$.model.fork` 在当前会话模型上做一次无工具补全（共享提示缓存，会消耗 token；不写入会话记录、不碰文件和 git）；首轮之前没有会话可分叉时用 `fallbackModel`（默认 haiku）走 `$.model.complete`；只有你在选项里填了 TypeSafe 或 Vercel AI Gateway 的 Jev key 才改由 Jev 下棋，这时只把棋盘局面（FEN）和已走着法经 `$.http` 发给对应 API，不发会话内容。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/games/chess) |
 | hamster-saga | 加载提示偶尔讲一段仓鼠的长篇连载故事，按时间推进章节，可与 spinner-quips 配合；`/hamster-saga:status`、`travel`、`reset`、`debug` 查看与跳转。备注：`prompt.submit` 只检查是否含重置口令、原样返回不改写；`tool.call`/`turn.complete` 只推进进度；数据存在本机 `$.store`；不联网、不跑外部程序。许可证为 CC BY-NC-ND 4.0（非商业、禁止演绎）。 | CC BY-NC-ND 4.0 | [链接](https://github.com/Li-Technologies/claude-mods/tree/main/plugins/hamster-saga) |
 | game-achievement | GAME MODE 套件之一：成就系统——首次存档、无拦截的回合里安全提交 10 次、修好失败命令后逆转通过、连续 10 次成功、上下文降到 10% 前及时 /compact 等，解锁时弹提示；`/achievements` 查看进度。备注：`tool.call`/`session.append` 只读取结果计数、原样返回；进度存在本机 `$.store`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-achievement) |
+| wait-jump | Claude 工作时在提示框上方的框里玩一个小恐龙式跳跃游戏（Claude Jump）：空格/↑/回车/w/k 或点击跳跃，回合结束后显示本局分数与最高分约 10 秒，被权限询问等打断后可接着玩；`/wait-jump` 开关。备注：提示文字为日文；最高分与开关存在插件自己的存储里；不改提示或工具、不运行外部程序、不联网。 | MIT | [链接](https://github.com/kawase1295/wait-jump) |
 
 ### 安全防护 Security & Safety
 
@@ -792,6 +794,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | game-map | GAME MODE 套件之一：底部状态行显示当前分支（受保护分支 main/master/production/release/* 加 ⚠）、本次游玩时长；`/map` 查看分支、时长和改动文件数。备注：会话开始、每回合结束和每 60 秒在本机只读运行 `git rev-parse`/`git status --porcelain`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-map) |
 | game-minimap | GAME MODE 套件之一：`/minimap` 打开侧边小地图，把项目文件按已编辑/已读/未探索着色，并标出被反复读取的文件。备注：`tool.call` 只记录读写的路径、原样返回；打开面板时在本机只读运行 `git ls-files`；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-minimap) |
 | repo-band | 提示框上方一行显示当前仓库的 Git 状态：仓库名与分支、与远端是否一致（待推送/待拉取提交数）、未提交改动数与增删行数，以及当前分支 PR 的 draft/检查（CI）通过·失败·进行中/审查结论；当前分支没有 PR 时显示仓库打开的 PR 数；不在 Git 仓库里时改列本会话 Claude 新建/编辑过的文件。备注：界面为韩文；每 30 秒（编辑或跑 Bash 后立即）跑本机只读 `git status/rev-parse/diff --shortstat`，每 2 分钟（CI 进行中时 10 秒）跑 `gh pr view`/`gh pr list`（用你本机 gh 的登录访问 GitHub，没装或未登录 gh 时只少 PR 栏）；`tool.call` 只记录编辑过的文件、原样放行；不改提示、不写文件、不注册命令；可与同作者的 task-band 侧栏配合（task-band 本身未收录）。 | MIT | [链接](https://github.com/LDH1103/claude-mods/tree/main/repo-band) |
+| github-actions | 提示框上方一条显示当前分支的 GitHub Actions 与 PR：只跟踪本会话里 `git push` 过的提交，列出每个 workflow 与 job 的通过/失败/运行中/等待状态（运行中或失败时显示当前步骤），以及该分支 PR 的编号、标题、draft、审查结论与检查计数；点击可在浏览器打开对应页面；跑完 `git push` 或 `gh pr/run/workflow` 后自动刷新，有运行中的任务时每 15 秒刷新。备注：界面为葡萄牙语；用本机 `git` 与已登录的 `gh`（`gh pr view`、`gh run list/view`、`gh api rate_limit`，只读）访问 GitHub，没装 gh 时整条隐藏、未登录或限流时显示提示；`tool.call` 只观察 Bash 命令、原样放行；推送过的提交记录（sha 与分支，最多 5 个/会话、保留 30 个会话）存在插件存储里；打开链接用 xdg-open/open/start；不注册命令；来自 Hangar 仓库，但单独可用，不需要装 Hangar。 | MIT | [链接](https://github.com/jeffer1312/hangar/tree/main/plugins/github-actions) |
 
 ### 子代理管理 Subagent Management
 
@@ -948,6 +951,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | clawd-pet | 像素 Clawd 在提示框上方散步，按 Claude 当前在做的事（思考、读写、跑命令、等批准、测试通过）做出反应，会饿、会升级学新动作，可点它摸摸；`/clawd-pet help` 查看喂食、改名、尺寸、帽子、音效等（`/pet` 别名仅在没有其他插件占用时注册）。备注：`prompt.submit`/`tool.call` 只用来切换动画、原样返回；读取本机 `~/.claude/stats-cache.json` 统计 token，只跑本机 `date +%H`；音效默认关闭；不联网。Clawd 角色与动画素材归 Anthropic 所有，不在本仓库 MIT 许可范围内（见仓库 NOTICE）；素材帧较多，安装包约 60 MB。 | MIT | [链接](https://github.com/yuyongyan29-dev/claude-pet/tree/main/clawd-pet) |
 | cyclops-spark | Spark：一个程序生成的小生物，只按真实会话事件动——Claude 思考时蜷起、每个工具伸出一条触须、等你批准时等着、每答完一回合在天空点亮一颗星；可放在侧边面板、提示框上方或状态行，kitty/Ghostty 下用真像素；`/spark` 切换 focus/band/主题/调色板/声音等。备注：`prompt.submit` 只记下你的文字用于 focus 模式、原样返回；`tool.call`/`turn.step` 只观察；focus 模式只隐藏对话行的显示；只有你执行 `/spark ask` 时才用 `$.model.fork`（你自己的 Claude、基于本会话）回答一个侧问题；声音、Link 默认关闭，开启 Link 后会在本机起一个 python3 小助手，仅通过 0600 本地文件和同目录的 Cyclops 家族共享粗略状态；不联网。 | MIT | [链接](https://github.com/CyclopsEyeTeam/cyclops-spark/tree/main/plugins/cyclops-spark) |
 | clawd-wander | Claude 工作时，像素 Clawd 在提示框上方的带子里来回溜达；每启动一个子代理就多一个颜色和种类不同的伙伴，偶尔排成一列跟着走；编辑类工具时拿锤子、查找类工具时拿放大镜，工具失败会吓一跳，子代理结束后渐渐消失。备注：`agent.spawn`/`tool.call` 只观察、原样返回；只读 `$.agent.list()`；只在支持 Raster 的终端里绘制；不注册命令、不联网；代码注释为日文。 |  | [链接](https://github.com/takiguchi-yu/claude-modes/tree/main/clawd-wander) |
+| muse-avatar | 在 Claude 桌面版右侧停靠一个 Muse 风格的动画头像面板（名字 Po）：按空闲/思考/运行工具/回合完成切换动画，下面四个标签页列出最近会话、MCP 连接器状态、定时任务（routines）和角色文件（全局与项目 CLAUDE.md、记忆文件，可点开编辑），底部显示上下文、5 小时与每周用量条和本会话费用；面板关闭时提示框上方显示迷你头像按钮；`/avatar` 重新打开。备注：目前仅支持 Windows + Claude 桌面版（终端里只显示名字和状态文字，其他系统上各项读取会失败并提示）；仓库不带头像素材，没有素材时画一个纯色圆标，可用仓库里的 `scripts/build-frames.sh`（需 ffmpeg）把你自己的视频转成帧文件；用 PowerShell 读取 `~/.claude/projects` 下会话文件里的标题，运行 `claude mcp list`（会让 Claude Code 检查你配置的各个 MCP 服务器）；读 `~/.claude/scheduled-tasks`、CLAUDE.md 与记忆目录；点迷你头像会用 PowerShell 向前台窗口发送 Ctrl+B（切换桌面版左侧栏），文件按钮用 VS Code（没有则记事本）打开；`prompt.submit`/`tool.call` 只切换动画、原样放行；不联网。 | MIT | [链接](https://github.com/arjkul/claude-code-muse-avatar/tree/main/plugins/muse-avatar) |
 
 ### 图片与媒体 Images & Media
 
@@ -990,6 +994,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | peek | 在提示框上方显示已粘贴图片的缩略图预览。备注：仅 macOS（非 PNG 用 `sips` 转一份 PNG 存在 Claude Code 自己的临时目录）；prompt.submit 只清空预览不改写；不联网。 | MIT | [链接](https://github.com/PickleBoxer/peek) |
 | dictation-music | 语音输入时自动暂停正在播放的音乐，发送后再恢复。备注：仅 macOS；需 `brew install media-control`；会话开始时用本机 `/usr/bin/swiftc` 从仓库里的 Swift 源码编译一个监听小助手（存 `~/.claude/dictation-music`）；prompt.submit/turn.step 只用来恢复播放，不改写。 | MIT | [链接](https://github.com/yash-coded/claude-code-mods/tree/main/mods/dictation-music) |
 | dictate-cli | 提示框上方的麦克风按钮（可绑快捷键）驱动 Claude Code 自带的语音输入，暂存你已打的草稿，听写完自动发送后再还原草稿。备注：仅 Windows；转写由 Claude Code 自带语音完成，mod 不联网；会以你的身份把听写文字 `$.prompt.submit` 发出（不改写内容）；`/dictate setup` 才运行仓库内 install.ps1：用本机 csc 编译 helper/dictate-key.cs，并修改 ~/.claude/settings.json 与 keybindings.json（有备份，`/dictate remove` 还原）。 | MIT | [链接](https://github.com/augbastos/dictate-cli) |
+| image-mirror | Claude 用 Read 读取 PNG 图片时，直接把图片画在终端对话里那一行 Read 下面（按终端宽度保持比例，最大 100×30 格，PNG 不超过 2 MiB）；连续多次读取被折叠时，含 PNG 的那组会自动展开。备注：需支持 kitty 图形协议的终端（kitty、Ghostty），其他终端只显示替代文字；只改终端画面，不改工具结果；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/image-mirror) |
 
 ### 任务与项目 Task & Project
 
@@ -1108,6 +1113,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | agentbar | AgentBar 桌面应用的配套 mod：把 Claude Code 未经询问自行决定的操作，以及上下文、用量上限、运行中子代理等指标写到 `~/.agentbar/mods.d/` 给 AgentBar 应用和 CLI 读；可选在别的会话等你时在提示框上方显示一行。备注：只观察（`tool.check`/`tool.call` 原样返回结果，从不批准或拒绝）；点那行时在 macOS 用 `/usr/bin/open agentbar://…` 唤起应用；不联网。 | MIT | [链接](https://github.com/michalstrnadel/AgentBar/tree/main/Scripts/mods/claude) |
 | aidv-autos | 把案件知识库（case-knowledge）检索工具的调用在对话里渲染成一行折叠摘要，并在侧边面板列出找到的文书（巴西法律场景，葡萄牙语）。备注：只改显示；`tool.call` 只记录检索词和结果、原样返回；面板“请 Claude 处理”按钮按下时才用 `$.prompt.submit` 发提示；需配合对应的 case-knowledge 工具使用。 |  | [链接](https://github.com/PedroGiudice/opc-plugins/tree/main/plugins/aidv-autos) |
 | world-news | 把 Google 新闻台湾版的大事钉在提示框下方：每次发消息时若过了冷却时间（默认 30 分钟）就在后台读取你选的分类（国际、科技、财经、台湾、军事、科学、健康、体育，以及美国、中国、日韩、欧洲、俄乌、中东、东南亚等地区）的 RSS，把最新一条没看过的标题显示在状态栏；`/world-news` 选分类、改冷却、立即检查、开关，侧栏列出最新标题并可点开原文。备注：界面为繁体中文；`prompt.submit` 只触发后台检查、提示原样放行，不往模型上下文加任何东西；只经 `$.http` 请求 news.google.com 的固定分类 RSS 地址（不带任何会话内容）；简体标题用内置 OpenCC 词表转繁体；设置与已读记录存在插件存储里；仓库没有 LICENSE 文件（plugin.json 写 MIT）。 |  | [链接](https://github.com/mukiwu/muki-ai-plugins/tree/master/plugins/world-news) |
+| cw-chart | `/cw-chart <widget.json>` 把一个 CloudWatch 指标小部件（metric widget JSON）在侧边面板里画成图表：1h/6h/24h 范围、左右平移、刷新，未固定时间窗时每 60 秒自动重取；点图下方的时间条会把 `[图表标题 @ 时间]` 插入到输入框（只填入，不发送）。备注：图片由本机 `aws cloudwatch get-metric-widget-image` 用你的默认 AWS 凭据获取（需要 `cloudwatch:GetMetricWidgetImage` 权限）；图表需支持 kitty 图形协议的终端（kitty、Ghostty）；只读你指定的 JSON 文件；不改提示或工具、mod 本身不发网络请求。 | MIT | [链接](https://github.com/voitta-ai/mods/tree/master/cw-chart) |
 
 ### 本地工具 Local Tools
 
@@ -1254,6 +1260,7 @@ For detailed descriptions of all 1118 mods, see the Chinese section below.
 | prompt-queue | Claude 工作时你在提示框发出的消息不再插进当前回合，而是排进队列，等 Claude 完成上一回合后按顺序一条条发出；`/queue` 打开面板可编辑、调整顺序、删除，`/queue pause`/`resume`/`clear`。备注：`prompt.submit` 只拦下回合进行中你自己输入的文字（斜杠命令和带图片的消息照常放行），之后用 `$.prompt.submit`（asUser）把你写的原文原样发出，不改写、不加上下文；你中断或回合出错后队列自动暂停，面板打开时不发送；不联网。 | MIT | [链接](https://github.com/florian-anthony/claude-code-mods/tree/main/plugins/prompt-queue) |
 | game-answer-memory | GAME MODE 套件之一：Claude 再次问到本项目里问过的同一个问题时，在选项对话框里给你上次选的那项标上「★ 上次选择」。备注：只改对话框的显示，选项、顺序和答案都不变；按项目在本机 `$.store` 保存最近 200 个问题的答案；界面文字为韩文；不联网。 | MIT | [链接](https://github.com/Reasonofmoon/bitgame-mods/tree/main/plugins/game-answer-memory) |
 | prompt-history | `/prompt-history` 在侧栏窗格浏览本会话发过的提示：按文字搜索过滤，展开看 Claude 的最终回复和该回合调用的工具（出错的会标出），上一条/下一条翻看；「Edit as new prompt」把那条提示填回输入框（不自动发送），「Rewind…」打开自带的 /rewind 选择器并提示该选第几条。备注：只读本会话消息（`$.session.messages()`）；只有你按按钮才会填入输入框或打开 /rewind；不联网、不写文件。 | MIT | [链接](https://github.com/felipeam86/claude-session-explorer/tree/main/plugins/prompt-history) |
+| model-pick | `/pick` 打开模糊搜索面板，一次切换模型和 effort 组合（如输入 `op hi` 回车即依次执行 `/model opus` 与 `/effort high`）：可收藏常用组合、给组合起短别名（`=fx fable xhigh`）、保留最近 5 次选择，行号 1–9 直接选择；`/pick <别名或关键词>` 不开面板直接切换。备注：作者标注需 Claude Code 2.1.292+（本市场冒烟用 2.1.289 可正常加载）；只读 settings 里的 `availableModels`/`model` 来补充可选模型；选中后通过 Claude Code 自带的 `/model`、`/effort` 命令切换（遇到确认框时等待你确认）；`classic.SessionStart` 只在 /clear、/resume、/branch 后重新读取收藏，不加上下文；收藏、别名与最近记录存在插件存储里；不联网；仓库没有 LICENSE 文件。 |  | [链接](https://github.com/joshuatonga/claude-mods/tree/main/model-pick) |
 
 ---
 
