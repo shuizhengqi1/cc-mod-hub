@@ -11559,6 +11559,344 @@
         "path": "desktop",
         "sha": "e760a2b3d65317a4e29991bb70e8f02645b1c02a"
       }
+    },
+    {
+      "name": "show-image",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DavidBoone/clod.git",
+        "path": "plugins/show-image",
+        "sha": "802ba4d569f4006a7ad930867c68e7280a643ae5"
+      }
+    },
+    {
+      "name": "caffeinate",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bfreis/claude-caffeinate.git",
+        "path": "plugins/caffeinate",
+        "sha": "1bcbc35b9728c465d67d28ae7152aa0f37462cbd"
+      }
+    },
+    {
+      "name": "miod",
+      "source": {
+        "source": "github",
+        "repo": "delexw/miod",
+        "sha": "605ff3ad71ccce919a1a583f633d1467305ac52b"
+      }
+    },
+    {
+      "name": "leitstand",
+      "source": {
+        "source": "github",
+        "repo": "dominikmartn/leitstand",
+        "sha": "ceb0d50cbba10ce3c3add44716fd2fefea5880cc"
+      }
+    },
+    {
+      "name": "tool-elapsed",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jiikko/dotfiles.git",
+        "path": "_claude/mods/tool-elapsed",
+        "sha": "897153cf2921ccc91862bb7b26781245ab4b0b4c"
+      }
+    },
+    {
+      "name": "peer-inbox",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jiikko/dotfiles.git",
+        "path": "_claude/mods/peer-inbox",
+        "sha": "897153cf2921ccc91862bb7b26781245ab4b0b4c"
+      }
+    },
+    {
+      "name": "downloads-drop",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/joeldg/claude-mods.git",
+        "path": "downloads-drop",
+        "sha": "d79ada3086b4477b92eaa4eb150b7053afc17451"
+      }
+    },
+    {
+      "name": "modal-meter",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/joeldg/claude-mods.git",
+        "path": "modal-meter",
+        "sha": "d79ada3086b4477b92eaa4eb150b7053afc17451"
+      }
+    },
+    {
+      "name": "info-holder",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jpzrdev/claude-mods.git",
+        "path": "info-holder",
+        "sha": "51a020e841b5688375b559d1e25edc0b9d6a4a05"
+      }
+    },
+    {
+      "name": "english-autocomplete",
+      "source": {
+        "source": "github",
+        "repo": "magatone/claude-autocomplete",
+        "sha": "eebbf34a4a493fdd4215af950bb886786aadb796"
+      }
+    },
+    {
+      "name": "visible-compact",
+      "source": {
+        "source": "github",
+        "repo": "nvsravank/visible-compact",
+        "sha": "b59803631553d1fec13eec89148e2953e3334e82"
+      }
+    },
+    {
+      "name": "token-weather-limits",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wenhao-shi/claude-mods.git",
+        "path": "token-weather-limits",
+        "sha": "e538f30672d39a59eb1518296946f309adcc0441"
+      }
+    },
+    {
+      "name": "beads-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/beads-pane",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "epics-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/epics-pane",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "port-watch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/port-watch",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "diff-stats",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/diff-stats",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "exit-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/exit-badge",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "file-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/file-links",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "issue-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/issue-links",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "json-pretty",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/json-pretty",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "path-shorten",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/path-shorten",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sha-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sha-links",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "size-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/size-badge",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "time-badge",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/time-badge",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "url-links",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/url-links",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "bead-chime",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/bead-chime",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-arcade",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-arcade",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-minimal",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-minimal",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-nature",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-nature",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-office",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-office",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-retro",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-retro",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-scifi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-scifi",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sounds-zen",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sounds-zen",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "bead-streak",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/bead-streak",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "langs",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/langs",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "night-owl",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/night-owl",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "personal-bests",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/personal-bests",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "weekly",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/weekly",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
     }
   ]
 }
