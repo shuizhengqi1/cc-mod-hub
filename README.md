@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1226 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1231 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1226 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1231 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1226 mods, see the Chinese section below.
+For detailed descriptions of all 1231 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1226 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1231 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -861,6 +861,7 @@ For detailed descriptions of all 1226 mods, see the Chinese section below.
 | y-change | 侧边面板列出本会话里 Claude 改过的每段代码 diff，回合结束后附上「改了什么、为什么改、给不懂这门语言的人的语法说明」；`/y-change` 开关；韩文界面。**备注**：每回合结束自动用 `$.model.fork` 基于本会话生成说明（register.tsx 90–109），会额外花 token，不写回主对话；tool.call 只读 Edit/Write 结果（76–87）；不运行外部程序、不联网。 | | [链接](https://github.com/nalpari/claude-mods/tree/main/y-change) |
 | annotate | 在对话记录里选中一段文字、写批注，攒好后一键把全部批注作为你的消息发给 Claude，或复制成 Markdown；`/annotate-mod` 打开面板。**备注**：只在你按「发送」时才用 `$.prompt.submit` 把你写的批注作为你的消息发出（register.tsx 174–179），不自动发送、不改写你的提示；读 `$.ui.selection()`（107）；不运行外部程序、不联网。 | | [链接](https://github.com/sagarr/claude-code-annotate-mod) |
 | script-logs | 侧边面板实时显示 Claude 跑的后台 shell 命令和 monitor 的输出、状态与耗时，可折叠、可按按钮停止；`/logs` 打开、`/logs-clear` 清掉已结束的。**备注**：tool.call 先原样执行，只记录后台任务（register.tsx 89–119）；session.append 原样放行，只读取后台任务通知（283–297）；按“停止”才用 `$.tool.call` 调 TaskStop（160–172）；会话开始时自动打开面板；不运行外部程序、不联网。 | MIT | [链接](https://github.com/naughty00shortie/script-logs) |
+| docker-pane | 提示框上方一个 Docker 小标签，`/docker` 打开按 compose 项目分组的容器面板：端口、健康状态，按钮启动/停止/重启容器，在终端里看日志或重建服务，容器比你上次 git 切换还旧时提醒。备注：定期在本机运行 `docker ps`（register.tsx 76）；启动/停止/重启只在你按按钮时执行（120–137），重建先弹窗确认，日志和重建通过终端工具打开（101–125）；tool.call 先原样执行 Bash，只在看到 docker 或 git 切换命令后刷新（162–167）；读本机 `git reflog`（61–65）；不联网。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/docker-pane) |
 
 ### 子代理管理 Subagent Management
 
@@ -918,6 +919,7 @@ For detailed descriptions of all 1226 mods, see the Chinese section below.
 | model-guard | 规定本会话能用哪些模型：`/models` 勾选 Opus、Sonnet、Haiku、Fable 等，可按仓库保存或设为默认；子代理或 Workflow 要用被关掉的模型时默认拒绝（可切成换成 fallback），子代理在被关模型上的请求换到 fallback，`/model` 切到被关模型时拒绝；面板显示拦截记录。备注：agent.spawn 默认 deny，swap 模式才改子代理 model（register.tsx 184–216）；turn.step 只对子代理把被关模型换成 fallback（218–237）；classic.PreModelSwitch 只返回 deny（265–279）；设置存在插件存储；不运行外部程序、不联网。 | | [链接](https://github.com/Recokioshi/claude-kit/tree/master/mods/model-guard) |
 | agent-tree | 侧边面板画出本会话子代理的实时关系树，显示谁派生了谁、各自正在用的工具、耗时和工具调用数；有子代理启动时自动打开；`/agent-tree` 打开。备注：tool.call 原样执行，只记录活动（register.tsx 176–205）；classic.SubagentStart/Stop 只刷新显示（153–174）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/VanillaFairy/agent-tree) |
 | task-band | 提示框上方带边框的任务带：正在运行的子代理、工作流、后台 shell 和 monitor 各一行，配进度条（按同类子代理历史耗时估算），可翻页。**备注**：prompt.submit 只解析后台任务完成通知来更新状态并原样放行，不改写（register.tsx 148–156）；tool.call 与 agent.spawn 先原样执行，只记录结果（76–125）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/task-band) |
+| mod-hud | `/mod-hud` 打开侧边 HUD：会话信息、需要你处理的提醒、git 状态、上下文与提示缓存条、限额、费用、待办进度，以及每个子代理的类型、模型、状态、耗时、工具调用和结果，下面还有一群可以用鼠标抓起来扔的 Claude 小吉祥物动画；可选状态栏文字。备注：agent.spawn、tool.call、tool.check、turn.step 都先原样执行，只记录（register.tsx 1289–1410、1472–1520）；只读本机 git（581）；读 `ANTHROPIC_API_KEY` 等环境变量只为判断是否设置以推断提示缓存时长，不使用其值（652–680）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/DaiZiQiao/clawd-hud-zq/tree/main/mod-hud) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -1148,6 +1150,7 @@ For detailed descriptions of all 1226 mods, see the Chinese section below.
 | project-activity | 会话开始时打开两个窗格：「專案活動」显示项目类型、关键文件、Claude 最近读写最多的文件和最近的工具调用，可在 `.claude/project-activity.json` 里列出需要检查是否存在的文件；「Git 狀態」显示分支、暂存 / 未暂存改动、最近 30 个提交和 stash 数；另有测试结果状态栏和回合摘要 band；`/project-activity`、`/git-status` 打开或开关窗格。界面为繁体中文。备注：用 `$.process.run` 只跑只读 git 命令，并用 `-c core.fsmonitor=false` 等命令行设置关掉仓库自带的外部程序钩子；仓库本地配置了 filter 或根目录有 git.exe 等文件时不跑 git（register.tsx 75–156）；prompt.submit 只重置回合统计、原样放行（224–227）；tool.call 只记录、原样返回；不联网。 |  | [链接](https://github.com/hn83320589/claude-mods/tree/main/project-activity) |
 | restack-view | ReStack（基于 Residuality Theory 的架构设计技能套件）的旅程视图：提示框上方一行显示当前进度，`/restack-view` 打开面板看未决问题、假设、决策和矩阵，`/restack-view band on\|off` 显隐。备注：只读 ReStack 写在项目里的旅程文件，自身不写文件、不运行外部程序、不联网；面板按钮只用 `$.prompt.fill` 把下一步命令放进空输入框、不发送，有草稿时只弹 toast（register.tsx 244–258）；需另装 ReStack 技能套件（未审）才有内容。 | MIT | [链接](https://github.com/pmelander/restack/tree/main/mods/restack-view) |
 | astrolabe | 在状态栏显示 Spec Kit 当前的功能、阶段和任务进度，随你编辑 spec/tasks 文件和调用技能实时更新。备注：只用 `$.fs` 读取项目里的 Spec Kit 文件和 `.git/HEAD`（register.tsx 11–17，io/git-branch.ts），通过 `$.ui.status` 显示；tool.call 先原样执行再刷新（72–97）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/jonyfs/astrolabe) |
+| watch-tower | 会话开始自动打开的侧边面板，一眼看全：各子代理在做什么、上下文、费用、限额、提示缓存倒计时，可选 ASCII 小伙伴；`/watch-tower plan <路径>` 挂上一个计划文件后显示进度。备注：prompt.submit 只记录、原样放行（register.tsx 231–239）；挂了计划后会按提交记录自动勾选计划文件里的复选框并写回该文件（82–89）；改计划外的文件时弹窗问你允许一次、允许该文件或拒绝，只拒绝不改写（149–171、261–263）；读本会话 transcript 末尾估算缓存（48–66），只跑本机只读 git 命令；不联网。 | | [链接](https://github.com/BastienTeissier/watch-tower/tree/main/mods/watch-tower) |
 
 ### 外部集成 External Integrations
 
@@ -1205,6 +1208,8 @@ For detailed descriptions of all 1226 mods, see the Chinese section below.
 | hitokoto | 提示框上方显示一句「一言」（Hitokoto）及出处，点 ↻ 换一句；刷新方式可选按间隔（默认 30 分钟）、每天一句、每个会话一句或每条提示一句，插件设置可选句子分类；`/hitokoto` 立即换一句，`/hitokoto off`/`on` 隐藏或显示；回复语言可选（句子本身是中文）。备注：只经 `$.http` 请求 `https://v1.hitokoto.cn/?encode=json`（只带你选的分类字母，不带任何会话内容），超时 10 秒，失败时保留上一句；只在交互会话里联网；`prompt.submit` 只在「每条提示」模式下触发换句、原样放行，`prompt.edit` 只读光标位置以便在 `/`、`@` 选择器打开时让开；`/hitokoto off`/`on` 会写本插件自己的 `hitokoto.visible` 设置；句子缓存在插件存储里；不运行外部程序。 | MIT | [链接](https://github.com/hoobnn/hoobnn-agent-mods/tree/main/claude-code/hitokoto) |
 | pumpfun-utilities | pump.fun 交易者用：`/positions` 打开面板看你钱包里的持仓、价值和盈亏（回合超过 10 秒会自动弹出、结束收起，金额默认隐藏、按 Reveal 才显示），`/journal` 对照链上数据检查交易日志，`/journal write` 把新的已平仓交易追加到当月 markdown 日志；只读，不需要私钥，没有卖出按钮。备注：经 python3 运行插件自带 scripts/pumpfun_journal.py（register.tsx 31、132），只用你的公开钱包地址请求 pump.fun 前端接口和 Helius（可选 API key，脚本 67–68、118、140），不发会话内容；日志写到 ~/pumpfun-journal；带 pumpfun-journal skill；需要 Python 3。 | MIT | [链接](https://github.com/KamiFin/pumpfun-utilities) |
 | tw-ticker | 提示框上方显示台股跑马灯（加权指数和自选股，默认 2330、0050，盘中每分钟更新），Claude 工作时可开 PTT 股票板当日闲聊串的推文弹幕；`/twstock` 设定自选股、弹幕、屏蔽词等；繁体中文。备注：只经 `$.http` 请求固定的 mis.twse.com.tw 报价接口和 www.ptt.cc Stock 板（带 over18 cookie，register.js 7–9、151、185、235），不发会话内容；弹幕是 PTT 网友推文原文。 | | [链接](https://github.com/starryAmy/amy-mods/tree/main/plugins/tw-ticker) |
+| deploy-watch | 盯 AWS CodeBuild 项目：提示框上方显示最近一次构建，推送到部署分支却没触发构建时警告，`/deploys` 打开构建列表面板，可在终端看日志、按按钮启动构建。备注：定期在本机运行 `aws codebuild list-builds-for-project`/`batch-get-builds`（register.tsx 79–84）；“Start build”按钮先弹窗确认（名字像 prod 时额外提示）才运行 `start-build`（141–167）；日志通过终端工具打开（169–175）；tool.call 先原样执行 Bash，只记下推送时间（200–210）；需要你本机已配置 aws CLI。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/deploy-watch) |
+| crossloom-env | 在提示框下方显示当前 CrossLoom 环境（`cl env show`），环境变了弹提示，`/cl-env` 查看；在你设为受保护的环境上运行 crossloom 写操作前弹窗确认。备注：定期在本机运行 `cl env show`（register.tsx 50）；tool.call 只在受保护环境的写操作时弹窗，取消则拒绝，不改写（98–110）；需要本机装有 CrossLoom 的 `cl` 命令；不联网。 | | [链接](https://github.com/hanuele/crossloom-marketplace/tree/main/plugins/crossloom-env) |
 
 ### 本地工具 Local Tools
 
