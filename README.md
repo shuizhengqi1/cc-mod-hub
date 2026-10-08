@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1528 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1530 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1528 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1530 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1528 mods, see the Chinese section below.
+For detailed descriptions of all 1530 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1528 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1530 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -595,6 +595,7 @@ For detailed descriptions of all 1528 mods, see the Chinese section below.
 | glamour-dark | 用 charmbracelet/glamour 的默认暗色样式重绘 Claude 的文字回复（标题、列表、代码高亮、表格），并把句子分行显示。备注：只改终端显示，Claude 收到和保存的内容不变；会接管 AssistantMessage 的绘制，和其他重绘回复的 mod 二选一；不运行其他程序、不联网。 |  | [链接](https://github.com/Tickloop/claude-mods/tree/main/glamour-dark) |
 | tool-lines | 把每次工具调用画成一行紧凑的 `tool_call: Tool(参数) - 状态`，并隐藏结果块；ctrl+o 展开视图时恢复原样。备注：只改终端显示，Claude 读到的工具结果不变；不运行其他程序、不联网。 |  | [链接](https://github.com/Tickloop/claude-mods/tree/main/tool-lines) |
 | jp-display | 把 Claude Code 终端里的英文提示改成日语：spinner 状态词、回合耗时（「✻ 3秒で完了」）、操作提示（「キー で 動作」）、工具运行提示和模式名。备注：只改终端显示（ui.render 替换文字），不改提示和回复；不运行其他程序、不联网。 |  | [链接](https://github.com/hptukurou0101-design/claude-mods-jp/tree/main/jp-display) |
+| cut-input | 一键剪切提示框内容：Ctrl+U / Ctrl+K 删掉的文字同时复制到系统剪贴板；提示框有字时右上方出现「✂ Cut input」按钮，点一下把整段草稿复制到剪贴板并清空提示框（复制失败则保留草稿并提示）。备注：prompt.edit / prompt.fill 只观察是否有字、结果原样返回，prompt.submit 只清掉按钮状态、原样放行不改写；有字时按钮占用提示框上方（不调 next），占用提示框上方、多装会互相遮挡；只用 $.ui.copy 和 $.prompt.fill 清空；不运行其他程序、不联网。 | MIT | [链接](https://github.com/shdennlin/agent-plugins/tree/main/plugins/cut-input) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -1255,6 +1256,7 @@ For detailed descriptions of all 1528 mods, see the Chinese section below.
 | clawdmeter | 提示框上方一条带：Clawd 吉祥物显示 Claude 正在做什么，旁边是 5 小时、每周和上下文用量条。备注：来自 Clawdmeter 桌面程序仓库，只安装其中 `claude-code/clawdmeter` 子目录的 mod；可选的 Fable 周额度条默认关闭，开启后通过 `$.session.authorize` 拿到的不透明凭据句柄 GET Anthropic 官方 api.anthropic.com/api/oauth/usage（凭据不经过 mod，不发会话内容）；tool.call 只观察；不运行其他程序。 | MIT | [链接](https://github.com/weltern/Clawdmeter/tree/main/claude-code/clawdmeter) |
 | codex-pet | 把你的 Codex 宠物放到提示框上方：Claude 干活时它也忙，需要你时它等着，一轮结束它庆祝，`/pet` 切换和管理。备注：读 `~/.codex/pets` 下的宠物；用本机 node（找不到时经登录 shell）运行插件自带的 `scripts/pet.mjs`；只有你输入 `/pet install <名字>` 时才从 petdex.dev 下载该宠物的图片和清单（校验后保存）；不上传会话内容。 | MIT | [链接](https://github.com/steven-panxd/codex-pet-in-claude) |
 | working-clawd | Claude 干活时，Clawd 在提示框上方来回走（偶尔停下张望、挥手、跳），每个运行中的子代理多一只小 Clawd 跟着走；桌面端是星空背景动画，Ghostty/kitty 显示图片，其他终端用半格字符画，并显示清单进度和最近一条命令。备注：只显示，工具调用原样放行（只读 TaskCreate/TaskUpdate 结果记清单）；占用提示框上方、多装会互相遮挡；不运行其他程序、不联网。 |  | [链接](https://github.com/cprentice9/ccmods/tree/main/working-clawd) |
+| buddy-go | 吉祥物 buddy（Clawd）住在提示框上方来回走：回复结尾在问你或用提问工具时闪现到最左边挥手，编辑文件（Edit/Write/NotebookEdit）时原地打字并显示文件名，执行 `gh pr create` 时集气丢出 PR 元气弹（繁体中文说明）。备注：只显示，tool.call 原样放行（只看工具名和参数决定播哪段动画）；prompt.submit 只在输入以 `buddy:` 开头的彩蛋口令（`buddy:your-turn` / `buddy:edit 文件名` / `buddy:send-pr`）时拦下不发给模型并播放动画，其他提示原样放行、不改写；占用提示框上方、多装会互相遮挡；不运行其他程序、不联网。 |  | [链接](https://github.com/magiclin99/buddy-go) |
 
 ### 图片与媒体 Images & Media
 
