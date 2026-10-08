@@ -12661,6 +12661,24 @@
         "repo": "magiclin99/buddy-go",
         "sha": "373096ad28f8f10856d2e635d6c7bbb0d5681adf"
       }
+    },
+    {
+      "name": "theme-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kokko-ng/kokko-claude-mods.git",
+        "path": "plugins/theme-sync",
+        "sha": "387eb7135356e2d187f77bea8333f3bba6de0675"
+      }
+    },
+    {
+      "name": "omf-panel",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/aron0628/mods.git",
+        "path": "omf-panel",
+        "sha": "2ae4ce92899e2aaad9eab9435771ff94b99c7b04"
+      }
     }
   ]
 }
