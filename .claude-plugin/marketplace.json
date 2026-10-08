@@ -12572,6 +12572,78 @@
         "path": "context-dancer",
         "sha": "4ce665fc7df5ee4d6255815774c8d8c1f32456df"
       }
+    },
+    {
+      "name": "jp-display",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hptukurou0101-design/claude-mods-jp.git",
+        "path": "jp-display",
+        "sha": "655222225964670f30c0897f7f09db80b9560dff"
+      }
+    },
+    {
+      "name": "work-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hptukurou0101-design/claude-mods-jp.git",
+        "path": "work-status",
+        "sha": "655222225964670f30c0897f7f09db80b9560dff"
+      }
+    },
+    {
+      "name": "working-clawd",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cprentice9/ccmods.git",
+        "path": "working-clawd",
+        "sha": "121212363eebb0d808f04efb0955d2a9b616f55b"
+      }
+    },
+    {
+      "name": "usage-meter-plus",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kikutani44-hash/claude-code-usage-meter-plus.git",
+        "path": "usage-meter-plus",
+        "sha": "d5f82a48b7b7c074266b766517eb41a6832f194e"
+      }
+    },
+    {
+      "name": "session-cost",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/david-crespo/dotfiles.git",
+        "path": "claude/mods/session-cost",
+        "sha": "2de38a384d1a50f6f5926ccb04cafab2573b0631"
+      }
+    },
+    {
+      "name": "cc-service-status",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/lu-llc-jp/lu-claude-mods.git",
+        "path": "plugins/cc-service-status",
+        "sha": "6f5963995dd85b3ddd36f43e8165bff4fd6f6537"
+      }
+    },
+    {
+      "name": "shell-mode",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/h1048576/claude-mods.git",
+        "path": "shell-mode",
+        "sha": "5cf7bfcf894b3f3000d6ffb1d3c9ef7aa9030639"
+      }
+    },
+    {
+      "name": "draft-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/meganemura/draft-pane.git",
+        "path": "plugin",
+        "sha": "6f4acfeef3090c21a9a064b2d097dff4bceefd31"
+      }
     }
   ]
 }
