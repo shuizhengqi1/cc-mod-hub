@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1532 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1535 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1532 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1535 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1532 mods, see the Chinese section below.
+For detailed descriptions of all 1535 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1532 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1535 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -322,6 +322,7 @@ For detailed descriptions of all 1532 mods, see the Chinese section below.
 | model-badge | 提示框上方一行显示当前模型短名和上下文占用百分比（如 opus-4-1 · 62%）。备注：只显示不改写，观察到的工具调用原样放行；占用提示框上方、多装会互相遮挡；每轮结束读 `$.session.model` / `$.session.usage`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/model-badge) |
 | usage-meter-plus | 提示框上方两行（日文界面）：每周和 5 小时用量条、已过时间比例、距重置时间、上下文占用，以及本会话开始以来用量涨了多少个百分点和按 API 价折算的累计日元估算。备注：占用提示框上方、多装会互相遮挡；只读 `$.session.usage`；每天一次经 `$.http` 向 open.er-api.com 取美元兑日元汇率（只发 GET，不带会话内容，失败时用上次值或 150 円），汇率存 `$.store`；基于 aikworks/claude-code-usage-meter 改写。 | MIT | [链接](https://github.com/kikutani44-hash/claude-code-usage-meter-plus/tree/main/usage-meter-plus) |
 | session-cost | 给模型一个 `cost` 工具，你问花了多少钱时它可以报出本会话到目前的费用（与 /cost 同口径），适合在没有 /cost 的手机远程控制里用。备注：会注册一个模型可调用的工具（工具说明会进入模型上下文），只返回 `$.session.usage` 里的金额；不运行其他程序、不联网；来自作者的 dotfiles 仓库。 | MIT | [链接](https://github.com/david-crespo/dotfiles/tree/main/claude/mods/session-cost) |
+| franja | 提示框上方一行状态条（西班牙语界面）：当前模型（回合进行中菱形会跳动）、git 分支和未提交文件数（不在仓库时显示文件夹名）、上下文用量格条和百分比、回合进行中显示最近调用的工具和计时、空闲时显示上一轮耗时和花费、5 小时用量额度百分比。备注：占用提示框上方、多装会互相遮挡；只读 `$.session.usage` 和 `.git/HEAD`，在本机运行只读的 `git status --porcelain` 统计改动数（需要 PATH 里有 git）；工具调用只记工具名和参数摘要、原样放行；不联网。 | MIT | [链接](https://github.com/zrdqns/claude-code-franja) |
 
 ### 上下文管理 Context Management
 
@@ -597,6 +598,7 @@ For detailed descriptions of all 1532 mods, see the Chinese section below.
 | jp-display | 把 Claude Code 终端里的英文提示改成日语：spinner 状态词、回合耗时（「✻ 3秒で完了」）、操作提示（「キー で 動作」）、工具运行提示和模式名。备注：只改终端显示（ui.render 替换文字），不改提示和回复；不运行其他程序、不联网。 |  | [链接](https://github.com/hptukurou0101-design/claude-mods-jp/tree/main/jp-display) |
 | cut-input | 一键剪切提示框内容：Ctrl+U / Ctrl+K 删掉的文字同时复制到系统剪贴板；提示框有字时右上方出现「✂ Cut input」按钮，点一下把整段草稿复制到剪贴板并清空提示框（复制失败则保留草稿并提示）。备注：prompt.edit / prompt.fill 只观察是否有字、结果原样返回，prompt.submit 只清掉按钮状态、原样放行不改写；有字时按钮占用提示框上方（不调 next），占用提示框上方、多装会互相遮挡；只用 $.ui.copy 和 $.prompt.fill 清空；不运行其他程序、不联网。 | MIT | [链接](https://github.com/shdennlin/agent-plugins/tree/main/plugins/cut-input) |
 | theme-sync | 主题实时同步：每秒检查一次 `~/.claude/settings.json`（或 CLAUDE_CONFIG_DIR 下的 settings.json），文件里的 `theme` 和当前会话不一致时，像 `/config` 那样把正在运行的会话切到该主题并弹提示；适合配合脚本随终端明暗一起切换，所有打开的会话都会跟着变。备注：只读 settings.json，只改 theme 这一项设置（该项被锁定时不改）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/kokko-ng/kokko-claude-mods/tree/main/plugins/theme-sync) |
+| minimap | 会话迷你图：提示框上方一排彩色小格，每格是一轮对话（最早的在左），颜色表示这一轮主要做了什么（绿=编辑、琥珀=命令、蓝=读取搜索、紫=子代理、青=网页、灰=其他工具、石板色=只聊天），亮度表示花费高低（按 token 价格比例排名，不显示数字），红顶表示有工具失败或以报错/拒答结束，矮格表示被你中断，竖线表示发生过压缩；轮数多于列数时相邻几轮合成一格。备注：占用提示框上方、多装会互相遮挡；工具调用只记工具名和是否出错、原样放行；只在终端显示，作者说明需要 Claude Code 2.1.293 或更高版本；不运行其他程序、不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/minimap) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -1412,6 +1414,7 @@ For detailed descriptions of all 1532 mods, see the Chinese section below.
 | bead | `/bead <id>` 显示一个 bead 的状态、优先级、标签、描述、阻塞项和子项。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `bd list … --json`（id 先校验，不会被当成参数）；只打印，不复制；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/bead) |
 | beads-standup | `/beads-standup` 列出昨天以来关闭的、进行中的 bead 和接下来 5 个可开始的。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `bd list` / `bd ready --json`；只打印，不复制；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-standup) |
 | omf-panel | `/omf-panel` 打开侧边面板，显示当前仓库（或工作目录下两层内带 `.harness` 的仓库）里进行中的 omf task：01 计划～05 完成五个阶段是否已有产出文件，以及计划的 Status（如 APPROVED），面板开着时每 5 秒刷新（韩文界面）。备注：只读本地 `.harness/active-plans` 和 `docs/plans/active` 下的文件并显示；不运行其他程序、不联网。 | MIT | [链接](https://github.com/aron0628/mods/tree/main/omf-panel) |
+| task-board | `/task-board` 打开侧边面板，列出本会话的任务清单（TaskCreate/TaskUpdate 的任务），你可以加任务、改标题、切换状态（待办/进行中/完成）或删除，按 save 才写回任务清单；Claude 改任务时面板自动刷新。备注：面板通过 TaskList/TaskCreate/TaskUpdate 工具读写本会话任务；只在你按「save and send to Claude」时才用 `$.prompt.submit` 把任务清单作为一条提示发出；工具调用只观察、原样放行；不运行其他程序、不联网。 |  | [链接](https://github.com/estasney/MyClaudeCode/tree/master/task-board) |
 
 ### 外部集成 External Integrations
 
