@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1530 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1532 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1530 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1532 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1530 mods, see the Chinese section below.
+For detailed descriptions of all 1532 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1530 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1532 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -596,6 +596,7 @@ For detailed descriptions of all 1530 mods, see the Chinese section below.
 | tool-lines | 把每次工具调用画成一行紧凑的 `tool_call: Tool(参数) - 状态`，并隐藏结果块；ctrl+o 展开视图时恢复原样。备注：只改终端显示，Claude 读到的工具结果不变；不运行其他程序、不联网。 |  | [链接](https://github.com/Tickloop/claude-mods/tree/main/tool-lines) |
 | jp-display | 把 Claude Code 终端里的英文提示改成日语：spinner 状态词、回合耗时（「✻ 3秒で完了」）、操作提示（「キー で 動作」）、工具运行提示和模式名。备注：只改终端显示（ui.render 替换文字），不改提示和回复；不运行其他程序、不联网。 |  | [链接](https://github.com/hptukurou0101-design/claude-mods-jp/tree/main/jp-display) |
 | cut-input | 一键剪切提示框内容：Ctrl+U / Ctrl+K 删掉的文字同时复制到系统剪贴板；提示框有字时右上方出现「✂ Cut input」按钮，点一下把整段草稿复制到剪贴板并清空提示框（复制失败则保留草稿并提示）。备注：prompt.edit / prompt.fill 只观察是否有字、结果原样返回，prompt.submit 只清掉按钮状态、原样放行不改写；有字时按钮占用提示框上方（不调 next），占用提示框上方、多装会互相遮挡；只用 $.ui.copy 和 $.prompt.fill 清空；不运行其他程序、不联网。 | MIT | [链接](https://github.com/shdennlin/agent-plugins/tree/main/plugins/cut-input) |
+| theme-sync | 主题实时同步：每秒检查一次 `~/.claude/settings.json`（或 CLAUDE_CONFIG_DIR 下的 settings.json），文件里的 `theme` 和当前会话不一致时，像 `/config` 那样把正在运行的会话切到该主题并弹提示；适合配合脚本随终端明暗一起切换，所有打开的会话都会跟着变。备注：只读 settings.json，只改 theme 这一项设置（该项被锁定时不改）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/kokko-ng/kokko-claude-mods/tree/main/plugins/theme-sync) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -1410,6 +1411,7 @@ For detailed descriptions of all 1530 mods, see the Chinese section below.
 | ready | `/ready` 列出优先级最高的 20 个可开始的 bead 及总数。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `bd ready --json`（需装 bd）；只打印，不复制；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/ready) |
 | bead | `/bead <id>` 显示一个 bead 的状态、优先级、标签、描述、阻塞项和子项。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `bd list … --json`（id 先校验，不会被当成参数）；只打印，不复制；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/bead) |
 | beads-standup | `/beads-standup` 列出昨天以来关闭的、进行中的 bead 和接下来 5 个可开始的。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `bd list` / `bd ready --json`；只打印，不复制；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-standup) |
+| omf-panel | `/omf-panel` 打开侧边面板，显示当前仓库（或工作目录下两层内带 `.harness` 的仓库）里进行中的 omf task：01 计划～05 完成五个阶段是否已有产出文件，以及计划的 Status（如 APPROVED），面板开着时每 5 秒刷新（韩文界面）。备注：只读本地 `.harness/active-plans` 和 `docs/plans/active` 下的文件并显示；不运行其他程序、不联网。 | MIT | [链接](https://github.com/aron0628/mods/tree/main/omf-panel) |
 
 ### 外部集成 External Integrations
 
