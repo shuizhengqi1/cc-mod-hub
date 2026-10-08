@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1445 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1477 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1445 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1477 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1445 mods, see the Chinese section below.
+For detailed descriptions of all 1477 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1445 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1477 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -795,6 +795,32 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | zed-clear-guard | 在 Zed 终端里运行 Claude Code 时拦下 `/clear`，提示改开新的 Zed 代理线程。备注：只拦截不改写，按环境变量 `ZED_TERM`/`TERM_PROGRAM` 判断，其他终端原样放行；来自作者的 dotfiles 仓库。 | Apache-2.0 | [链接](https://github.com/popoffvg/dotfiles/tree/main/harness/plugins/zed-clear-guard) |
 | publish-guard | 在 Claude 往浏览器里打字、填表，或写入受保护路径（默认含 `/publishing/`）的文件前检查你的屏蔽词（可选也拦韩文），命中就拒绝并记日志，`/pubguard` 查看。备注：只拒绝不改写，命中的词不回显；会注册一个打开面板的 `show` 工具；不运行其他程序、不联网。 | MIT | [链接](https://github.com/seanyyoo/claude-code-mods/tree/main/plugins/publish-guard) |
 | pii-shield | 录屏时在屏幕上遮住邮箱、姓名、账号和密钥，`/redact` 控制。备注：只改显示，模型和会话记录仍是原值；自动模式每 5 秒用 `ps` 检查是否有录屏软件，会运行 `whoami`、`git config user.name`、`uname -s`；不联网。 | MIT | [链接](https://github.com/mrjk05/modemon/tree/main/mods/pii-shield) |
+| git-guard | 拦截会丢掉未提交改动的 git 命令（`checkout --`、`restore`、`reset --hard`、`clean -f`），子代理里也生效。备注：只 deny，不改写命令；只读命令字符串判定，不运行其他程序、不联网；拒绝理由里写着“需要例外请问 Craig”（作者个人配置）。 |  | [链接](https://github.com/hughescr/claude-code-config/tree/develop/my-plugins/git-guard) |
+| taxi-speedcam | 危险 Bash 命令前的“测速摄像头”：force push、`rm -rf`、删库 SQL、丢弃改动、生产部署时拍下并问你继续还是停车，`/speedcam` 看本会话记录。备注：只询问或拒绝，不改写命令（设 mode=block 时一律拒绝）；用 `$.audio` 播放自带快门声并用 macOS 语音播报（可关）；界面为韩文；不运行其他程序、不联网。 | MIT | [链接](https://github.com/devbrother2024/devbrothers-mods/tree/main/plugins/taxi-speedcam) |
+| beads-guard | 会删数据或改写历史的 bd 命令（delete、purge、prune、gc、sql、admin、import、rename、forget、restore、migrate 等）执行前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行 bd、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-guard) |
+| secret-filename-guard | Bash 命令碰到像机密的文件（.env、私钥、credentials）前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/secret-filename-guard) |
+| env-exfil-guard | 命令要打印环境变量、回显机密变量或把本地数据发往远程主机前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/env-exfil-guard) |
+| infra-guard | terraform destroy/apply、kubectl delete、force push、DROP TABLE、`rm -rf` 前询问（/tmp 和 node_modules 里的 `rm -rf` 放行）。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/infra-guard) |
+| sudo-guard | sudo、doas 或 `su -c` 提权运行命令前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sudo-guard) |
+| no-verify-guard | 跳过 git hooks（`--no-verify`、`commit -n`、`HUSKY=0`、`core.hooksPath=/dev/null`）前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/no-verify-guard) |
+| package-guard | 安装新依赖前询问并列出包名（npm、pnpm、yarn、bun、pip、uv、poetry、cargo、go、gem）。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/package-guard) |
+| prod-db-guard | 命令里带破坏性 SQL（TRUNCATE、没有 WHERE 的 DELETE 或 UPDATE）时询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/prod-db-guard) |
+| docker-guard | 会删数据的 Docker 命令前询问：system/volume/image prune、`rm -f`、volume rm、`compose down -v`。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/docker-guard) |
+| k8s-guard | `kubectl apply/replace --force`、kubectl drain、helm uninstall 以及带全局参数的 kubectl delete 前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/k8s-guard) |
+| ci-config-guard | Write 或 Edit 要改 CI 配置（.github/workflows、.gitlab-ci.yml、.circleci/config.yml）前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读路径，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/ci-config-guard) |
+| chmod-guard | chmod 让文件全局可写（777、a+w、o+w），或在 /、系统目录、家目录上递归 chmod/chown 前询问。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/chmod-guard) |
+| git-history-guard | 会丢弃工作或改写历史的 git 命令前询问：`reset --hard`、clean、rebase、filter-branch、filter-repo、`push --delete`、`branch -D`、`stash clear`。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/git-history-guard) |
+| deploy-guard | 生产部署前询问：`vercel --prod`、`netlify deploy --prod`、firebase deploy、fly deploy、gcloud app deploy、eb deploy、heroku rollback、serverless 部署到 prod。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/deploy-guard) |
+| db-reset-guard | 框架清库命令前询问：prisma migrate reset、rails/rake db:drop 和 db:reset、alembic downgrade、django flush、supabase db reset、`knex rollback --all`。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/db-reset-guard) |
+| cron-guard | 清空或停止定时任务和服务前询问：`crontab -r`、用 stdin 或文件替换 crontab、launchctl unload/bootout、systemctl stop/disable/mask。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/cron-guard) |
+| upload-guard | 本地文件发往远程主机前询问：scp/rsync 到 host:path、管道输入 nc、`curl -T`、sftp put；本地复制、下载和 localhost 放行。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/upload-guard) |
+| registry-push-guard | 镜像或 chart 推到仓库前询问：docker push、`docker buildx --push`、podman push、helm push、gcloud artifacts docker push；本地仓库放行。备注：只在执行前弹窗请你确认（ask），不改写命令；只读命令文本，不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/registry-push-guard) |
+| secret-commit-guard | git commit 会记录凭据或机密命名的文件时询问。备注：只在执行前弹窗请你确认（ask），不改写命令；用只读的 `git diff --cached` 读暂存内容；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/secret-commit-guard) |
+| protect-main | 在 main 或 master 上 commit、push 或 merge 前询问，提醒在分支或 worktree 上开发。备注：只在执行前弹窗请你确认（ask），不改写命令；用只读的 `git branch --show-current` 读当前分支；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/protect-main) |
+| gitignore-check | git add 或 commit 时，如果有像机密的文件没被忽略或已被跟踪就询问。备注：只在执行前弹窗请你确认（ask），不改写命令；用只读的 `git ls-files` 检查；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/gitignore-check) |
+| tag-guard | 发布 tag 推到远程前询问：`git push --tags`、`--follow-tags`、`--mirror`、推送 tag ref、删除远程 tag；dry run 放行。备注：只在执行前弹窗请你确认（ask），不改写命令；用只读的 `git show-ref` 读 tag；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/tag-guard) |
+| big-file-guard | Write 写入超过 1 MB 的内容，或 git add 的文件超过 5 MB 时询问。备注：只在执行前弹窗请你确认（ask），不改写命令；用 `find` 量文件大小；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/big-file-guard) |
+| ssh-guard | 读取 .ssh 里的私钥、修改 authorized_keys 或 SSH 配置、ssh-keygen 会覆盖已有密钥前询问；公钥和 `ssh -i` 放行。备注：只在执行前弹窗请你确认（ask），不改写命令；用 `printenv HOME` 取家目录；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/ssh-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -995,6 +1021,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | issue-links | 仓库 origin 在 GitHub 或 GitLab 时，Claude 回复里的 #123 变成指向该 issue 的链接。备注：只改显示；读本地 git 远程地址拼链接（去掉其中的用户名和令牌）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/issue-links) |
 | sha-links | 仓库 origin 在 GitHub 或 GitLab 时，Claude 回复和 git 命令输出里的提交 SHA 变成提交页面链接。备注：只改显示；读本地 git 远程地址拼链接（去掉其中的用户名和令牌）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sha-links) |
 | url-links | 把工具输出里的 https 链接（以及 http://localhost）列在结果下方变成可点击链接，最多 5 个。备注：只改显示，Claude 读到的仍是原输出；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/url-links) |
+| taxi-blackbox | 工具调用“行车记录仪”：提示框上方显示 REC 条，出错或被拒时用 `/blackbox` 回放事故前的几步。备注：只观察不改写；记录只存在内存里，记录前把 token、密码等打码；界面为韩文；不运行其他程序、不联网。 | MIT | [链接](https://github.com/devbrother2024/devbrothers-mods/tree/main/plugins/taxi-blackbox) |
 
 ### 子代理管理 Subagent Management
 
@@ -1058,6 +1085,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | subagent-tree | `/agents-tree` 面板以树状显示子代理，含运行时长、工具调用数、步数和输出 token。备注：tool.call、turn.step、turn.complete 只计数、请求原样放行；不运行其他程序、不联网。 | MIT | [链接](https://github.com/bobtat/claude-plugins/tree/main/plugins/subagent-tree) |
 | agent-deck | 侧边窗格列出本会话所有子代理：状态、模型、类型、任务标题、提示摘要、耗时和正在做什么。备注：只观察不改写；会接管内置的隐藏命令 `/agents`（别名 `/agent-deck`），子代理出现时自动打开窗格；不运行其他程序、不联网。 | MIT | [链接](https://github.com/mrjk05/modemon/tree/main/mods/agent-deck) |
 | leitstand | 提示框上方的控制台：后台代理和 shell、磁盘空间、上下文一目了然，有响亮和安静两种主题，`/stand` 切换列表。备注：用 `sh -c` 运行 `df` 看磁盘，只有设置了 `LEITSTAND_DISK_HOST` 才会 `ssh` 到该主机查看；用 `afplay` 播放系统 Glass 提示音；prompt.submit 只读任务通知结尾、不改写，tool.call 原样放行；打开时占用 AbovePrompt 且不让后面的 mod 显示（会挡住其他提示框上方的 mod）。 | MIT | [链接](https://github.com/dominikmartn/leitstand) |
+| savvy-progress | 提示框上方的进度条和实时子代理面板：每个子代理的模型、effort、token、耗时和花费，`/savvy-progress` 开关。备注：只观察 agent.spawn 和 turn.step，不换模型、不改写；不运行其他程序、不联网。 |  | [链接](https://github.com/srepollock/dotfiles/tree/trunk/.claude/skills/savvy-progress) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -1335,6 +1363,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | beads-pane | 侧边窗格实时显示 beads 任务：进行中、可开始、被阻塞的各 10 条及数量，`/beads` 打开。备注：每次 Bash 后用 `bd --readonly … --json` 只读刷新（需装 bd）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-pane) |
 | epics-pane | 侧边窗格显示每个未关闭的 beads epic：子任务完成进度条，可以关闭时打标记，`/epics` 打开。备注：用 `bd --readonly … --json` 只读（需装 bd）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/epics-pane) |
 | bead-streak | 统计你连续多少天都关闭过 bead（来自成功退出的 `bd close` Bash 调用），`/bead-streak` 查看，破纪录时弹提示。备注：只读命令文本，数据存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/bead-streak) |
+| taxi-navi | 把 Claude 的待办列表画成导航路线：进度和下一站，计划变化时播报“重新规划路线”，全部完成时播报到达，`/navi` 查看。备注：只观察 TaskCreate/TaskUpdate/TaskList/TodoWrite 的结果，不改写；用 `$.audio` 播放自带提示音并用 macOS 语音播报（可关）；较新的模型需用 `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` 启动才有待办工具；界面为韩文；不联网。 | MIT | [链接](https://github.com/devbrother2024/devbrothers-mods/tree/main/plugins/taxi-navi) |
 
 ### 外部集成 External Integrations
 
@@ -1403,6 +1432,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | pr-pilot | 提示框上方显示当前分支的 PR、检查状态和能否合并，检查结束时提示，`/merge` 合并该 PR 或整个 gh-stack。备注：每 60 秒运行 `gh pr view`；只有你输入 `/merge` 时才真的合并并删除分支；不上传会话内容。 | MIT | [链接](https://github.com/tartinerlabs/claude-code-mods/tree/main/plugins/pr-pilot) |
 | routine-watch | 从 Notion 数据库一览你的定时任务：今天按来源的收获、最近 7 天、沉寂的来源和下次运行时间，`/routine-watch` 打开。备注：通过你已装的 Notion MCP 只读查询；会注册一个模型可调用的 `show` 工具打开面板；不运行其他程序。 | MIT | [链接](https://github.com/seanyyoo/claude-code-mods/tree/main/plugins/routine-watch) |
 | modal-meter | 在状态栏看 Modal 应用：运行中的应用和容器数、某个应用跑太久时弹提示、CLI 能给出的今日花费，还有一个停止应用的窗格。备注：每 60 秒运行 `modal app list --json`，并运行 `modal billing report`（用你本机已登录的 Modal CLI）；`modal app stop` 只在你确认后才执行；不调用模型。 |  | [链接](https://github.com/joeldg/claude-mods/tree/main/modal-meter) |
+| pr-approvals | 在提示框底栏显示本会话 PR 的评审状态（是否已批准、还有几个评审待完成），点开看每个 PR 的详情，`/pr-approvals` 添加或移除。备注：只运行只读的 `gh pr view`、`gh api`（读分支保护规则）和对本会话记录的 `grep`；每 5 分钟刷新；tool.call 原样放行；用你本机已登录的 gh。 | MIT | [链接](https://github.com/RomanHotsiy/claude-mods/tree/main/pr-approvals) |
 
 ### 本地工具 Local Tools
 
@@ -1453,6 +1483,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | caffeinate | Claude 干活时让电脑保持唤醒：在每轮期间或整个会话里运行 `caffeinate`（或你指定的命令），`/caffeinate` 设置。备注：默认启动 macOS 的 `caffeinate -i`，也可改成你自己设的命令（会照原样运行）；classic.Stop 只读后台/定时任务数量；设置存在 `$.store`；不联网。 | MIT | [链接](https://github.com/bfreis/claude-caffeinate/tree/main/plugins/caffeinate) |
 | downloads-drop | 干活时发现新落进「下载」文件夹的文件（PDF、3MF 模型、图片、笔记），在提示框上方列出，Attach 把 `@"路径"` 填进提示框，Dismiss 清掉，`/downloads` 列出最新文件按编号附加。备注：每 5 秒列一次 `~/Downloads`；Attach 只用 prompt.fill 插入、不会替你发送；不调用模型、不运行其他程序、不联网。 |  | [链接](https://github.com/joeldg/claude-mods/tree/main/downloads-drop) |
 | port-watch | 侧边窗格列出本机正在监听的 TCP 端口及进程名和 pid，打开时每 10 秒刷新，`/ports` 打开。备注：只运行 `lsof -nP -iTCP -sTCP:LISTEN`；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/port-watch) |
+| split | `/split` 把当前会话分叉到旁边的 cmux 或 tmux 分屏里（`claude --resume --fork-session`），自动命名为 `<名称>-branch-<n>`。备注：用 `find`、`grep` 读本会话记录取标题；运行 cmux 或 tmux 开分屏，`/split` 后写的 claude 参数原样传过去；不在 cmux/tmux 里时只给出命令让你自己运行；不联网。 |  | [链接](https://github.com/abdelrahman-elkady/claude-plugins/tree/master/plugins/split) |
 
 ### 其他工具 Other Tools
 
@@ -1581,6 +1612,7 @@ For detailed descriptions of all 1445 mods, see the Chinese section below.
 | langs | 跨会话统计 Claude 编辑最多的文件类型，`/langs` 显示条形图（每个文件每会话只算一次）。备注：数据存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/langs) |
 | night-owl | 跨会话记录你每次发提示的时段，`/hours` 显示 24 小时分布图并标出高峰时段。备注：只记下每轮的时间，不读也不改提示内容；数据存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/night-owl) |
 | personal-bests | 跨会话记录你的个人纪录（最长会话、单会话最多工具调用、单日最多编辑文件、30 分钟以上最便宜的会话），破纪录时弹提示，`/bests` 查看。备注：数据存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/personal-bests) |
+| pin-me | 给长会话里的消息加图钉，在提示框上方的卡片里一键找回，也能随手记笔记，`/pin-me` 显示、隐藏或清空。备注：内容只给你看，不发给模型；Windows 桌面版点 find 时用 PowerShell 模拟 Ctrl+F 粘贴搜索词（临时借用剪贴板后还原），其他环境只复制到剪贴板；不联网。 | MIT | [链接](https://github.com/jpzrdev/claude-mods/tree/main/pin-me) |
 
 ---
 
