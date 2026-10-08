@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1539 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1545 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1539 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1545 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1539 mods, see the Chinese section below.
+For detailed descriptions of all 1545 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1539 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1545 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -390,6 +390,7 @@ For detailed descriptions of all 1539 mods, see the Chinese section below.
 | kamehameha | 用像素动画显示上下文占用：主角硬扛一记随上下文变大的龟派气功，越来越吃力，到 95% 就 GAME OVER 提醒你压缩，`/kamehameha` 控制。备注：会话开始时会自动打开面板，动画用 100 ms 计时器刷新；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Aurumdev952/claude-code-kamehameha) |
 | visible-compact | 在窗格里并排显示 `/compact` 前后的对话，看清压缩掉了什么、留下了什么，`/show-last-compact` 重新打开。备注：session.compact 只观察不改写；会把压缩前后的对话副本存到 `$TMPDIR/visible-compact`（设 storage=home 时存到 `~/.claude/visible-compact`）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/nvsravank/visible-compact) |
 | context-dancer | 上下文超过 70% 时，提示框上方出现跳舞的小人、均衡器和“该 /compact 了”的提醒，`/dance` 切换演示模式，可点 Hide 隐藏。备注：只显示不改写；跳舞时占用提示框上方、多装会互相遮挡；跳舞期间约每 2.4 秒用 `$.audio` 播放插件自带的 groove.wav（不想听可点 Hide）；不运行其他程序、不联网。 |  | [链接](https://github.com/rachit-oss/claude-mods/tree/main/context-dancer) |
+| context-line | 提示框下方提示行上面加一行上下文窗口摘要：已用 token / 窗口大小（百分比）和占用最多的 5 个类别，回复回来后、`/clear` 和压缩后都会刷新。备注：占用提示框下方的提示行位置，和其他改这一行的 mod 会互相遮挡；只读 `$.session.usage` 的用量数据；不运行其他程序、不联网。 |  | [链接](https://github.com/Haoyu-UT/claude-mods/tree/main/context-line) |
 
 ### UI 与主题 UI & Themes
 
@@ -600,6 +601,8 @@ For detailed descriptions of all 1539 mods, see the Chinese section below.
 | cut-input | 一键剪切提示框内容：Ctrl+U / Ctrl+K 删掉的文字同时复制到系统剪贴板；提示框有字时右上方出现「✂ Cut input」按钮，点一下把整段草稿复制到剪贴板并清空提示框（复制失败则保留草稿并提示）。备注：prompt.edit / prompt.fill 只观察是否有字、结果原样返回，prompt.submit 只清掉按钮状态、原样放行不改写；有字时按钮占用提示框上方（不调 next），占用提示框上方、多装会互相遮挡；只用 $.ui.copy 和 $.prompt.fill 清空；不运行其他程序、不联网。 | MIT | [链接](https://github.com/shdennlin/agent-plugins/tree/main/plugins/cut-input) |
 | theme-sync | 主题实时同步：每秒检查一次 `~/.claude/settings.json`（或 CLAUDE_CONFIG_DIR 下的 settings.json），文件里的 `theme` 和当前会话不一致时，像 `/config` 那样把正在运行的会话切到该主题并弹提示；适合配合脚本随终端明暗一起切换，所有打开的会话都会跟着变。备注：只读 settings.json，只改 theme 这一项设置（该项被锁定时不改）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/kokko-ng/kokko-claude-mods/tree/main/plugins/theme-sync) |
 | minimap | 会话迷你图：提示框上方一排彩色小格，每格是一轮对话（最早的在左），颜色表示这一轮主要做了什么（绿=编辑、琥珀=命令、蓝=读取搜索、紫=子代理、青=网页、灰=其他工具、石板色=只聊天），亮度表示花费高低（按 token 价格比例排名，不显示数字），红顶表示有工具失败或以报错/拒答结束，矮格表示被你中断，竖线表示发生过压缩；轮数多于列数时相邻几轮合成一格。备注：占用提示框上方、多装会互相遮挡；工具调用只记工具名和是否出错、原样放行；只在终端显示，作者说明需要 Claude Code 2.1.293 或更高版本；不运行其他程序、不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/minimap) |
+| project-colors | 每个项目文件夹记住自己的提示栏颜色和会话名：新项目按文件夹名固定挑一种颜色，新会话自动用项目名命名；你自己输入 `/color` 或 `/rename` 后，这个项目以后都用你的选择；`/project-colors` 查看、`reset` 忘掉、`off`/`on` 关开。备注：每次会话开始时通过 `$.command.run` 运行内置 `/color`（并在新会话时运行 `/rename`），所以每个会话开头会出现一行「Session color set to: …」；会观察你手动执行的 `/color`、`/rename`（原样执行后记下）；classic.SessionStart 只读取会话来源；和 project-color、session-nametag、color-on-start 等也会自动改色的 mod 同时装会互相覆盖；不运行其他程序、不联网。 |  | [链接](https://github.com/RenegadeRocks/claude-mods/tree/main/project-colors) |
+| color-on-start | 新对话会话开始时（启动和 `/clear` 之后）自动运行一次内置 `/color`，给提示栏上色；在 `/config` 里选固定颜色，或用默认的 `random` 每次启动随机挑一种；恢复的会话不改色。备注：只用 classic.SessionStart 判断新会话来源，然后通过 `$.command.run` 运行内置 `/color`，没有界面时（如 `-p`）不运行；和 project-colors、project-color、session-nametag 等也会自动改色的 mod 同时装会互相覆盖；作者说明在 Claude Code 2.1.293 上确认过；不运行其他程序、不联网。 | MIT | [链接](https://github.com/tomatoaiu/color-on-start) |
 
 ### 游戏与娱乐 Games & Entertainment
 
@@ -838,6 +841,7 @@ For detailed descriptions of all 1539 mods, see the Chinese section below.
 | secret-scan | `/secret-scan` 列出已跟踪文件里像密钥/令牌/带密码 URL 的内容所在文件和行号，从不显示匹配到的值。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `git grep`；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/secret-scan) |
 | agent-firewall | 实时窗格列出代理的每次工具调用：执行（绿）、需确认、被拦截（红）、出错，并计数，`/firewall` 打开或关闭。备注：只观察不拦截，tool.check 和 tool.call 原样放行；记录只存在内存、先打码，最多 100 条；在状态栏显示调用/拦截计数；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/agent-firewall) |
 | heavy-job-guard | 机器上已经有一个重任务（tsc、测试、lint、构建等）在跑时，拒绝 Claude 再启动第二个，并告诉它正在跑的进程和时长，让它等跑完再来，避免两个一起跑卡死机器；也能看到后台、子代理、其他 Claude 会话和你自己终端里启动的任务。可在 `/config` 改匹配规则、忽略规则（默认忽略语言服务器和 watch）、`warn` 模式（只弹提示不拦）和禁止子代理跑重任务。备注：只对 Bash 的 tool.call 做拒绝（deny），不改写命令；每次匹配到重任务命令时在本机运行只读的 `ps -axo` 查看进程列表；检查出错时放行；不联网。 | MIT | [链接](https://github.com/azoof-ahmed/claude-heavy-job-guard) |
+| config-guard | Claude 要改 Claude Code 自己的配置和说明文件（`.claude/settings*.json`、`.claude.json`、`.mcp.json`、CLAUDE.md、AGENTS.md、`.claude/hooks`、`.claude/plugins`、statusline 脚本）或往文件里写入已知格式的密钥（Anthropic/OpenAI/GitHub/AWS/Slack/Google/Tailscale 令牌、私钥）之前，先弹框问你；Bash 命令看起来会改这些文件或带密钥时也会问；可在 `/config` 加自己要保护的路径。备注：tool.call（Write/Edit/NotebookEdit/Bash）只做拒绝（deny）或原样放行，不改写工具参数；弹框里选「Deny」、关掉弹框、没人可问（`-p` 运行）或检查出错时一律拒绝；提问只写密钥种类，不写密钥本身；作者个人规则也在里面：没有设置 `LIFE_ROLE=ops` 时拒绝写 `ideas/task-review/tasks.md`；不运行其他程序、不联网。 |  | [链接](https://github.com/38kta-lab/dotfile/tree/main/mods/config-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -1188,6 +1192,7 @@ For detailed descriptions of all 1539 mods, see the Chinese section below.
 | sounds-retro | 8-bit 音效：测试通过投币声，失败嗡一声，一轮结束一声铃。备注：只观察工具结果，用 `$.audio` 播放插件自带的 WAV；同类音效包装一个即可；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sounds-retro) |
 | sounds-scifi | 科幻控制台音效：测试通过哔一声，失败警报，一轮结束跃迁声。备注：只观察工具结果，用 `$.audio` 播放插件自带的 WAV；同类音效包装一个即可；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sounds-scifi) |
 | sounds-zen | 柔和的钟声和颂钵：测试通过一声钟，失败低沉颂钵，被拦截一声闷铃，一轮结束一声颂钵。备注：只观察工具结果，用 `$.audio` 播放插件自带的 WAV；同类音效包装一个即可；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sounds-zen) |
+| soundtrack | 给 Claude 的工作配上轻柔的提示音：开始处理你的提示时两个上升音，工具运行时轻轻一声（最多每 3 秒一声，可在 `/config` 关掉），回合结束时一声铃音，被打断或失败时两个低音；子代理不出声；`/soundtrack on|off|test` 开关（跨会话记住）或试听。备注：tool.call 只用来出声、原样放行；macOS 用 Claude Code 自带播放器播放自带的 wav 文件，Windows 在本机运行 PowerShell 播放这些 wav，作者说明 Linux 暂时没有声音；不联网。 |  | [链接](https://github.com/RenegadeRocks/claude-mods/tree/main/soundtrack) |
 
 ### 吉祥物与宠物 Mascots & Pets
 
@@ -1542,6 +1547,7 @@ For detailed descriptions of all 1539 mods, see the Chinese section below.
 | battery-band | 提示框上方一行显示 Mac 电量和充电状态（🔋 87%、⚡ 54%），每分钟读一次，非 macOS 隐藏。备注：只显示不改写，观察到的工具调用原样放行；占用提示框上方、多装会互相遮挡；只运行 `pmset -g batt`；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/battery-band) |
 | envinfo | `/envinfo` 显示操作系统及 git、node、npm、python3、go、rustc、docker 的版本（未安装显示 not installed）。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；在根目录 `/` 运行 `uname -srm` 和各程序的 `--version`（每个限 2 秒）；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/envinfo) |
 | shell-mode | `/shell-mode` 打开一个 Bash 控制台面板，连续输入命令执行并保留颜色和当前目录，退出后命令和输出仍显示在对话记录里。备注：仅 Windows（用 Git for Windows 的 Bash，可用 CLAUDE_CODE_GIT_BASH_PATH 指定）；你在面板里输入的命令会照原样用 `bash --login -c` 执行；输出存到本机 `%LOCALAPPDATA%\Claude\shell-mode\history\`，对话记录（模型能看到的部分）里只留一个引用编号，显示时再从本机存档读出；不联网。 |  | [链接](https://github.com/h1048576/claude-mods/tree/main/shell-mode) |
+| table-copy | 把最后一次回答里的 Markdown 表格复制成 TSV（适合粘到 Excel）或 CSV：提示框上方出现「복사 / 표 N」按钮，点一下就复制到剪贴板；`/copy-table [编号|all]` 也可复制（韩文界面，`/config` 选 TSV/CSV）。备注：占用提示框上方、多装会互相遮挡；只读主代理的回答文本找表格，通过 `$.ui.copy` 复制到剪贴板；不运行其他程序、不联网。 |  | [链接](https://github.com/sooop/my-claude-settings/tree/main/my-mods/table-copy) |
 
 ### 其他工具 Other Tools
 

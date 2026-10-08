@@ -12739,6 +12739,59 @@
         "repo": "zrdqns/claude-code-band",
         "sha": "be947287cf877d5e7bd0511c822b815b86bac89e"
       }
+    },
+    {
+      "name": "config-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/38kta-lab/dotfile.git",
+        "path": "mods/config-guard",
+        "sha": "164ed6ec9ea6882bdf9e41ec6450bc53191b87d9"
+      }
+    },
+    {
+      "name": "context-line",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Haoyu-UT/claude-mods.git",
+        "path": "context-line",
+        "sha": "ecdce2b47485b3a1cc9f3baa9a2dcb6253e59d98"
+      }
+    },
+    {
+      "name": "project-colors",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RenegadeRocks/claude-mods.git",
+        "path": "project-colors",
+        "sha": "65288d8dcfb937e6df32b38c18e11926b699d68a"
+      }
+    },
+    {
+      "name": "color-on-start",
+      "source": {
+        "source": "github",
+        "repo": "tomatoaiu/color-on-start",
+        "sha": "7d82e54b9f4b3c9efa86cf3da1f7bff556a4f21c"
+      }
+    },
+    {
+      "name": "soundtrack",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RenegadeRocks/claude-mods.git",
+        "path": "soundtrack",
+        "sha": "65288d8dcfb937e6df32b38c18e11926b699d68a"
+      }
+    },
+    {
+      "name": "table-copy",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sooop/my-claude-settings.git",
+        "path": "my-mods/table-copy",
+        "sha": "d07b16be7b543450c3159d061386192c8b2c8f02"
+      }
     }
   ]
 }
