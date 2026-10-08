@@ -11897,6 +11897,294 @@
         "path": "plugins/weekly",
         "sha": "452251077ed9da2804983fa353079da532c431b3"
       }
+    },
+    {
+      "name": "git-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/hughescr/claude-code-config.git",
+        "path": "my-plugins/git-guard",
+        "sha": "caf8fbbeed0548ec0c155c7157be590f4bb2a398"
+      }
+    },
+    {
+      "name": "taxi-speedcam",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devbrother2024/devbrothers-mods.git",
+        "path": "plugins/taxi-speedcam",
+        "sha": "82b075ca7af3e066a4c88f542dabb95888225e1e"
+      }
+    },
+    {
+      "name": "taxi-blackbox",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devbrother2024/devbrothers-mods.git",
+        "path": "plugins/taxi-blackbox",
+        "sha": "82b075ca7af3e066a4c88f542dabb95888225e1e"
+      }
+    },
+    {
+      "name": "taxi-navi",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/devbrother2024/devbrothers-mods.git",
+        "path": "plugins/taxi-navi",
+        "sha": "82b075ca7af3e066a4c88f542dabb95888225e1e"
+      }
+    },
+    {
+      "name": "pin-me",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jpzrdev/claude-mods.git",
+        "path": "pin-me",
+        "sha": "6c78366aba2f21176690c41e9910b6acd8e399ab"
+      }
+    },
+    {
+      "name": "split",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/abdelrahman-elkady/claude-plugins.git",
+        "path": "plugins/split",
+        "sha": "47d1e487793bc711c345677f9adf2ed37950c99c"
+      }
+    },
+    {
+      "name": "pr-approvals",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RomanHotsiy/claude-mods.git",
+        "path": "pr-approvals",
+        "sha": "204a8da7c0ed804d3bc2d29a7ff020ee74aa3b09"
+      }
+    },
+    {
+      "name": "savvy-progress",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/srepollock/dotfiles.git",
+        "path": ".claude/skills/savvy-progress",
+        "sha": "4419ec5bd04edae9fad399bab386f16061e2ecb6"
+      }
+    },
+    {
+      "name": "beads-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/beads-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "secret-filename-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/secret-filename-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "env-exfil-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/env-exfil-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "infra-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/infra-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "sudo-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/sudo-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "no-verify-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/no-verify-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "package-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/package-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "prod-db-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/prod-db-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "docker-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/docker-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "k8s-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/k8s-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "ci-config-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/ci-config-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "chmod-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/chmod-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "git-history-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/git-history-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "deploy-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/deploy-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "db-reset-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/db-reset-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "cron-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/cron-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "upload-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/upload-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "registry-push-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/registry-push-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "secret-commit-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/secret-commit-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "protect-main",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/protect-main",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "gitignore-check",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/gitignore-check",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "tag-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/tag-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "big-file-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/big-file-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
+    },
+    {
+      "name": "ssh-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/baselane-sh/mods.git",
+        "path": "plugins/ssh-guard",
+        "sha": "452251077ed9da2804983fa353079da532c431b3"
+      }
     }
   ]
 }
