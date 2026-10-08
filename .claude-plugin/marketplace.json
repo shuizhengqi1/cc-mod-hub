@@ -12705,6 +12705,40 @@
         "path": "task-board",
         "sha": "ffcd5e45eb3d55c4ed63f3669b26f9b2d6c6e661"
       }
+    },
+    {
+      "name": "worktree",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/astrosteveo/claude-plugins.git",
+        "path": "plugins/worktree",
+        "sha": "24ca30c66d6c26afd4d7f31c28347b11e43fb0e3"
+      }
+    },
+    {
+      "name": "heavy-job-guard",
+      "source": {
+        "source": "github",
+        "repo": "azoof-ahmed/claude-heavy-job-guard",
+        "sha": "9f61ff532b09287ea33d3ee8589c4b42d0dcc37f"
+      }
+    },
+    {
+      "name": "remote-control-toggle",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/standbib/claude-mods.git",
+        "path": "remote-control-toggle",
+        "sha": "8cbfc1561242bf4df3b328689d4e5605f1da993b"
+      }
+    },
+    {
+      "name": "band",
+      "source": {
+        "source": "github",
+        "repo": "zrdqns/claude-code-band",
+        "sha": "be947287cf877d5e7bd0511c822b815b86bac89e"
+      }
     }
   ]
 }
