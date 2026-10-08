@@ -12644,6 +12644,23 @@
         "path": "plugin",
         "sha": "6f4acfeef3090c21a9a064b2d097dff4bceefd31"
       }
+    },
+    {
+      "name": "cut-input",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/shdennlin/agent-plugins.git",
+        "path": "plugins/cut-input",
+        "sha": "6e36c100b172aed981da296bfbb79c4ee5db30d8"
+      }
+    },
+    {
+      "name": "buddy-go",
+      "source": {
+        "source": "github",
+        "repo": "magiclin99/buddy-go",
+        "sha": "373096ad28f8f10856d2e635d6c7bbb0d5681adf"
+      }
     }
   ]
 }
