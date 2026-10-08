@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1535 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 1539 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1535 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 1539 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 1535 mods, see the Chinese section below.
+For detailed descriptions of all 1539 mods, see the Chinese section below.
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 1535 个精选 Claude Code mods，按类别组织：
+以下是本市场的 1539 个精选 Claude Code mods，按类别组织：
 
 
 ### 内置核心 Built-in Core
@@ -323,6 +323,7 @@ For detailed descriptions of all 1535 mods, see the Chinese section below.
 | usage-meter-plus | 提示框上方两行（日文界面）：每周和 5 小时用量条、已过时间比例、距重置时间、上下文占用，以及本会话开始以来用量涨了多少个百分点和按 API 价折算的累计日元估算。备注：占用提示框上方、多装会互相遮挡；只读 `$.session.usage`；每天一次经 `$.http` 向 open.er-api.com 取美元兑日元汇率（只发 GET，不带会话内容，失败时用上次值或 150 円），汇率存 `$.store`；基于 aikworks/claude-code-usage-meter 改写。 | MIT | [链接](https://github.com/kikutani44-hash/claude-code-usage-meter-plus/tree/main/usage-meter-plus) |
 | session-cost | 给模型一个 `cost` 工具，你问花了多少钱时它可以报出本会话到目前的费用（与 /cost 同口径），适合在没有 /cost 的手机远程控制里用。备注：会注册一个模型可调用的工具（工具说明会进入模型上下文），只返回 `$.session.usage` 里的金额；不运行其他程序、不联网；来自作者的 dotfiles 仓库。 | MIT | [链接](https://github.com/david-crespo/dotfiles/tree/main/claude/mods/session-cost) |
 | franja | 提示框上方一行状态条（西班牙语界面）：当前模型（回合进行中菱形会跳动）、git 分支和未提交文件数（不在仓库时显示文件夹名）、上下文用量格条和百分比、回合进行中显示最近调用的工具和计时、空闲时显示上一轮耗时和花费、5 小时用量额度百分比。备注：占用提示框上方、多装会互相遮挡；只读 `$.session.usage` 和 `.git/HEAD`，在本机运行只读的 `git status --porcelain` 统计改动数（需要 PATH 里有 git）；工具调用只记工具名和参数摘要、原样放行；不联网。 | MIT | [链接](https://github.com/zrdqns/claude-code-franja) |
+| band | 提示框上方一行状态条（英文界面，与 franja 同一作者）：当前模型（回合进行中菱形会跳动）、git 分支和未提交文件数（不在仓库时显示文件夹名）、上下文用量格条和百分比、回合进行中显示最近调用的工具和计时、空闲时显示上一轮耗时和花费、5 小时用量额度百分比。备注：占用提示框上方、多装会互相遮挡；只读 `$.session.usage` 和 `.git/HEAD`，在本机运行只读的 `git status --porcelain` 统计改动数（需要 PATH 里有 git）；工具调用只记工具名和参数摘要、原样放行；不联网。 | MIT | [链接](https://github.com/zrdqns/claude-code-band) |
 
 ### 上下文管理 Context Management
 
@@ -836,6 +837,7 @@ For detailed descriptions of all 1535 mods, see the Chinese section below.
 | ssh-guard | 读取 .ssh 里的私钥、修改 authorized_keys 或 SSH 配置、ssh-keygen 会覆盖已有密钥前询问；公钥和 `ssh -i` 放行。备注：只在执行前弹窗请你确认（ask），不改写命令；用 `printenv HOME` 取家目录；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/ssh-guard) |
 | secret-scan | `/secret-scan` 列出已跟踪文件里像密钥/令牌/带密码 URL 的内容所在文件和行号，从不显示匹配到的值。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行 `git grep`；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/secret-scan) |
 | agent-firewall | 实时窗格列出代理的每次工具调用：执行（绿）、需确认、被拦截（红）、出错，并计数，`/firewall` 打开或关闭。备注：只观察不拦截，tool.check 和 tool.call 原样放行；记录只存在内存、先打码，最多 100 条；在状态栏显示调用/拦截计数；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/agent-firewall) |
+| heavy-job-guard | 机器上已经有一个重任务（tsc、测试、lint、构建等）在跑时，拒绝 Claude 再启动第二个，并告诉它正在跑的进程和时长，让它等跑完再来，避免两个一起跑卡死机器；也能看到后台、子代理、其他 Claude 会话和你自己终端里启动的任务。可在 `/config` 改匹配规则、忽略规则（默认忽略语言服务器和 watch）、`warn` 模式（只弹提示不拦）和禁止子代理跑重任务。备注：只对 Bash 的 tool.call 做拒绝（deny），不改写命令；每次匹配到重任务命令时在本机运行只读的 `ps -axo` 查看进程列表；检查出错时放行；不联网。 | MIT | [链接](https://github.com/azoof-ahmed/claude-heavy-job-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -1059,6 +1061,7 @@ For detailed descriptions of all 1535 mods, see the Chinese section below.
 | recent | `/recent` 列出你（按 git user.name 匹配）在所有本地分支上最近 15 个提交及分支和日期。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只运行只读 `git config/log`；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/recent) |
 | readme-check | `/readme-check` 检查 README 是否缺少安装、用法、许可证、贡献等章节，以及失效的相对链接。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只读文件；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/readme-check) |
 | session-path | 提示框上方一行显示会话目录、git 分支（可下拉切换或复制）和落后远程默认分支的提交数，还可复制路径。备注：占用提示框上方、多装会互相遮挡；每 10 秒及每次 Bash 后运行只读 git 刷新；每 5 分钟自动 `git fetch --quiet --no-tags origin <默认分支>`（会联网到你的 git 远程，`GIT_TERMINAL_PROMPT=0` 不弹凭据）；只有你在下拉框里选分支且工作区干净、Claude 不在工作时才 `git switch`。 | MIT | [链接](https://github.com/JashDev/claude-mods/tree/main/plugins/session-path) |
+| worktree | Claude 在默认分支（main/master 或 origin/HEAD 指向的分支）第一次改仓库里的文件前拦下一次，让 Claude 用提问框问你要不要改到 git worktree 里做（设置 `always` 时直接进 worktree，`never` 时不做事），每个会话只拦一次；`/wt` 打开面板列出仓库的各个 worktree（分支、是否有未提交改动、锁定、目录丢失），可以切换、新建、离开（保留或删除）。备注：tool.call 只对主代理第一次 Edit/Write 做拒绝（deny）并附说明，不改写工具参数，子代理和仓库外的文件不拦；本机只运行读取类 git 命令（rev-parse、worktree list、status）；面板按钮才调用 Claude Code 自带的 EnterWorktree/ExitWorktree，「Leave and remove it」会删掉该 worktree 和分支（由 Claude Code 自己检查未提交改动）；作者说明需要 Claude Code 2.1.293 或更高版本；不联网。 | MIT | [链接](https://github.com/astrosteveo/claude-plugins/tree/main/plugins/worktree) |
 
 ### 子代理管理 Subagent Management
 
@@ -1671,6 +1674,7 @@ For detailed descriptions of all 1535 mods, see the Chinese section below.
 | session-clock | 提示框上方一行显示当前时间和本会话已运行时长（14:05 · 1h 12m）。备注：只显示不改写，观察到的工具调用原样放行；占用提示框上方、多装会互相遮挡；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/session-clock) |
 | streak-flame | 提示框上方一行显示连续每天至少完成一轮的天数（🔥 5d）。备注：只显示不改写，观察到的工具调用原样放行；占用提示框上方、多装会互相遮挡；计数存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/streak-flame) |
 | draft-pane | 转录旁的面板显示模型最新写的草稿（标为 `draft` 的代码块，也可指向文件），可以逐段选中写批注或批注整篇，按 Submit 把批注合成一条提示发出，按 Approve 表示直接采用。备注：附带 `draft` 技能，教模型把草稿写在标为 `draft` 的代码块里；只在你按 Submit/Approve 时才用 `$.prompt.submit` 发出你自己写的批注；草稿指向文件时只读该文件显示；纯本机、不联网。 | MIT | [链接](https://github.com/meganemura/draft-pane/tree/main/plugin) |
+| remote-control-toggle | 提示框上方一行显示 Remote Control 是否开启、连着几个手机或网页客户端，带一个开/关按钮（等同输入 `/rc`）；`/rc-status` 以文字输出同样的状态。备注：占用提示框上方、多装会互相遮挡；每 5 秒读一次本机命令列表和会话连接情况来判断状态；只有你按按钮（或按 r 键）时才运行 Claude Code 自带的 `/remote-control` 开关远程控制，开启后会话可从你的手机或网页端访问；不运行其他程序，模组本身不联网。 |  | [链接](https://github.com/standbib/claude-mods/tree/main/remote-control-toggle) |
 
 ---
 
