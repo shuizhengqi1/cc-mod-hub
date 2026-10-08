@@ -12679,6 +12679,32 @@
         "path": "omf-panel",
         "sha": "2ae4ce92899e2aaad9eab9435771ff94b99c7b04"
       }
+    },
+    {
+      "name": "minimap",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/astrosteveo/claude-plugins.git",
+        "path": "plugins/minimap",
+        "sha": "11c832038e99a850a1e5f5f479169779bb9d487d"
+      }
+    },
+    {
+      "name": "franja",
+      "source": {
+        "source": "github",
+        "repo": "zrdqns/claude-code-franja",
+        "sha": "0296395c409e0f1f14196f275522eaa816aaa732"
+      }
+    },
+    {
+      "name": "task-board",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/estasney/MyClaudeCode.git",
+        "path": "task-board",
+        "sha": "ffcd5e45eb3d55c4ed63f3669b26f9b2d6c6e661"
+      }
     }
   ]
 }
