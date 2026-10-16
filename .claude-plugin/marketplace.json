@@ -1379,14 +1379,6 @@
       }
     },
     {
-      "name": "mogger-status",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/yonitesser/claude-mogger.git",
-        "path": "mods/mogger-status"
-      }
-    },
-    {
       "name": "maestro-lanes",
       "source": {
         "source": "git-subdir",
@@ -1595,14 +1587,6 @@
         "source": "git-subdir",
         "url": "https://github.com/atomicstack/progress-bar-3000.git",
         "path": "claude-code-mod"
-      }
-    },
-    {
-      "name": "xmuse",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/iiyazu/Cross-Muse.git",
-        "path": "integrations/claude-code"
       }
     },
     {
@@ -1881,14 +1865,6 @@
         "source": "git-subdir",
         "url": "https://github.com/neonelemental/claude-code-board-mods.git",
         "path": "board"
-      }
-    },
-    {
-      "name": "orch-session",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/severinlindenmann/orch-core.git",
-        "path": "plugins/orch-session"
       }
     },
     {
@@ -2419,14 +2395,6 @@
       }
     },
     {
-      "name": "lazygit-popup",
-      "source": {
-        "source": "github",
-        "repo": "PedroLaRosa/claude-code-lazygit-popup",
-        "sha": "3beed7245d67eaf1fa6d31ab23fc933c8df47c12"
-      }
-    },
-    {
       "name": "pr-live-review",
       "source": {
         "source": "github",
@@ -2580,14 +2548,6 @@
         "url": "https://github.com/KMNervanin/pivo.git",
         "path": "claude/mod/pivo",
         "sha": "932fbcddfa182c27909836588a6b766c03f00600"
-      }
-    },
-    {
-      "name": "dep-bouncer",
-      "source": {
-        "source": "github",
-        "repo": "PedroLaRosa/claude-code-dep-bouncer",
-        "sha": "69fa6d918866d89e91f20baca0e4fc3f39dc99b9"
       }
     },
     {
@@ -4449,30 +4409,12 @@
       }
     },
     {
-      "name": "minimap",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/astrosteveo/claude-plugins.git",
-        "path": "plugins/minimap",
-        "sha": "11c832038e99a850a1e5f5f479169779bb9d487d"
-      }
-    },
-    {
       "name": "task-board",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/estasney/MyClaudeCode.git",
         "path": "task-board",
         "sha": "ffcd5e45eb3d55c4ed63f3669b26f9b2d6c6e661"
-      }
-    },
-    {
-      "name": "worktree",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/astrosteveo/claude-plugins.git",
-        "path": "plugins/worktree",
-        "sha": "24ca30c66d6c26afd4d7f31c28347b11e43fb0e3"
       }
     },
     {
