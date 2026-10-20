@@ -4627,6 +4627,7 @@
         "sha": "e8f4707c1f135ff17a7a8e2c8d660280d0470257"
       }
     },
-    {"name":"push-guard","source":{"source":"git-subdir","url":"https://github.com/nazmang/claude-agents-kit.git","path":"plugins/push-guard","sha":"0869ab5f393fd651c7d7a918ef97f1222aacfea9"}}
+    {"name":"push-guard","source":{"source":"git-subdir","url":"https://github.com/nazmang/claude-agents-kit.git","path":"plugins/push-guard","sha":"0869ab5f393fd651c7d7a918ef97f1222aacfea9"}},
+    {"name":"docs-sync","source":{"source":"git-subdir","url":"https://github.com/soundkitchen/Agent-Skills.git","path":"docs-sync","sha":"e9f8e04d5c30946aef6e12fd93b8b59c5e46abc7"}}
   ]
 }

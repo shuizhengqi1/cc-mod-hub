@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 557 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 558 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 557 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 558 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 557 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 558 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 557 个精选 Claude Code mods，按类别组织：
+以下是本市场的 558 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -434,6 +434,7 @@ For detailed descriptions of all 557 mods, see the Chinese section below. The �
 | graphite-stack | — | 仅桌面版：在提示框上方按 `gt log` 的树形画出当前分支所在的 Graphite stack，每个分支一行：PR 状态（草稿/打开/已合并/已关闭/未提交）、CI 失败（悬停看失败的检查和链接）、审查状态、未解决讨论数、PR 标签、相对父分支的增删行数，并标出需要 restack 的分支；点增删行数可在侧边窗格看该分支的 diff；每分钟及 Claude 跑完 git/gh/gt 后刷新，`/stack` 显示或隐藏。备注：只读：跑本机 `git`、`gh api graphql`（只查询）和 `sqlite3` 读 `.git/.graphite_metadata.db`，需装好 gt、已登录的 gh 和 sqlite3；tool.call 先执行 Bash 再触发刷新、原样返回；「Sync with main」「↻ restack」「Ask Claude」等按钮只在你点击时以你的名义发一条可见提示，让 Claude 跑 `gt sync`/`gt restack`（不 push）或审查某个文件；终端、VS Code 和手机上不显示内容。 | MIT | [链接](https://github.com/adrianjost/claude-graphite-stack-status) |
 | simpane | — | `/simpane [ios\|android]` 在侧边窗格实时显示 iPhone 模拟器或 Android 模拟器画面（约每秒 5 帧），在窗格里点击即点按、拖动即滑动、滚轮滚动、点窗格后打字即输入；没有在跑的设备时列出可用的模拟器/AVD，点一下以无头方式启动；Claude 在 Bash 里用 axe/adb 测试 app 时你能同时看着。备注：需要能显示图片的终端（Ghostty、cmux 或 kitty，tmux 不行）；iOS 需 Xcode，装 AXe 才能输入并有较高帧率（否则 simctl 约 1 帧/秒、只能看）；作者注明 Android 部分尚未测试；只在窗格打开时运行本机 `xcrun simctl`/`axe`/`adb`/`emulator` 截图到临时目录并发送你的输入，窗格关掉后停止；不联网、不碰工具调用。 | MIT | [链接](https://github.com/XyndoX/simpane) |
 | meta-lint | — | Claude 用 Write/Edit 改完 Markdown、MDX、Astro 或 HTML 页面后，提示框上方显示一行 SEO 基础检查：标题长度（30–60 字符）、meta description 长度（70–160）、H1 数量、缺 alt 的图片、字数；`/meta-lint [文件]` 查看每项取自哪里、超出多少，并给出搜索结果摘要预览。备注：纯本机只读：tool.call 在工具跑完后读取刚改的文件、原样返回结果（hooks/register.tsx 31–43），不联网、不跑命令、不改写工具调用或提示、不给 Claude 注入内容；子代理的编辑不计。 | MIT | [链接](https://github.com/krysmalskipl/claude-code-mods/tree/main/mods/meta-lint) |
+| docs-sync | — | Claude 运行 `gh pr create`，或向已有打开 PR 的分支 `git push` 之前，用当前会话的同一个模型（另起调用、不带会话历史）把分支相对 base 的 diff 与仓库中已提交的全部 .md/.mdx 文档对照；文档与实现不符就拦下，列出哪份文档哪里不对、建议怎么改，让 Claude 改完提交后再推。diff 太大时按文件分段判定（最多 5 段）；检查本身失败时弹窗问你是否仍继续，无人可问的 `-p` 运行一律拦下。备注：只拒绝不改写（hooks/register.ts 78–111）；本机只跑 git 和 gh（480、595、671），需 gh 已登录；$.model.complete（710、745）把分支 diff 和 Markdown 文档发给当前会话模型，未脱敏、不经第三方；放行时只在该条 Bash 结果后附一句检查说明（467–470、1284–1290），不改写提示；每次建 PR 或推送到有 PR 的分支都会多花模型调用（单次最多约 30 万字符），同一提交通过后不再重查；与 readme-sync、doc-drift-watch 同属文档漂移，但它是 PR 前的语义级闸门，能查出正文描述与实际行为不符；README 为日文，拦截提示里的停用命令写的是 `docs-sync@skills-dir`，从本市场安装时应为 `docs-sync@cc-mod-hub`。 | MIT | [链接](https://github.com/soundkitchen/Agent-Skills/tree/main/docs-sync) |
 
 ### 子代理管理 Subagent Management
 
