@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 560 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 562 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 560 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 562 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 560 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 562 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 560 个精选 Claude Code mods，按类别组织：
+以下是本市场的 562 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -437,6 +437,7 @@ For detailed descriptions of all 560 mods, see the Chinese section below. The �
 | meta-lint | — | Claude 用 Write/Edit 改完 Markdown、MDX、Astro 或 HTML 页面后，提示框上方显示一行 SEO 基础检查：标题长度（30–60 字符）、meta description 长度（70–160）、H1 数量、缺 alt 的图片、字数；`/meta-lint [文件]` 查看每项取自哪里、超出多少，并给出搜索结果摘要预览。备注：纯本机只读：tool.call 在工具跑完后读取刚改的文件、原样返回结果（hooks/register.tsx 31–43），不联网、不跑命令、不改写工具调用或提示、不给 Claude 注入内容；子代理的编辑不计。 | MIT | [链接](https://github.com/krysmalskipl/claude-code-mods/tree/main/mods/meta-lint) |
 | docs-sync | — | Claude 运行 `gh pr create`，或向已有打开 PR 的分支 `git push` 之前，用当前会话的同一个模型（另起调用、不带会话历史）把分支相对 base 的 diff 与仓库中已提交的全部 .md/.mdx 文档对照；文档与实现不符就拦下，列出哪份文档哪里不对、建议怎么改，让 Claude 改完提交后再推。diff 太大时按文件分段判定（最多 5 段）；检查本身失败时弹窗问你是否仍继续，无人可问的 `-p` 运行一律拦下。备注：只拒绝不改写（hooks/register.ts 78–111）；本机只跑 git 和 gh（480、595、671），需 gh 已登录；$.model.complete（710、745）把分支 diff 和 Markdown 文档发给当前会话模型，未脱敏、不经第三方；放行时只在该条 Bash 结果后附一句检查说明（467–470、1284–1290），不改写提示；每次建 PR 或推送到有 PR 的分支都会多花模型调用（单次最多约 30 万字符），同一提交通过后不再重查；与 readme-sync、doc-drift-watch 同属文档漂移，但它是 PR 前的语义级闸门，能查出正文描述与实际行为不符；README 为日文，拦截提示里的停用命令写的是 `docs-sync@skills-dir`，从本市场安装时应为 `docs-sync@cc-mod-hub`。 | MIT | [链接](https://github.com/soundkitchen/Agent-Skills/tree/main/docs-sync) |
 | git-graph-panel | — | 仿 VS Code Git Graph 的提交图窗格：彩色分支线和分支/标签标记，j/k 移动、o 展开提交详情与改动文件、看单个文件的 diff、两个提交对比、搜索提交、显示/隐藏远端分支、Fetch；`a` 打开操作菜单（checkout、新建/重命名/删除分支、cherry-pick、revert、merge、rebase、reset、tag、stash、push/pull 等）；kitty/Ghostty/WezTerm 显示曲线图，其他终端和 tmux 里用文字图；`/graph` 开关。备注：需要 Claude Code 2.1.302+（2.1.292 上加载失败）；在 git 仓库里会话开始时自动打开窗格；全部经本机 git 运行，只有 Fetch/pull/push/删除远端分支联网；操作只在你按键时运行，checkout、建分支、打 tag、stash 直接执行，其他先显示要跑的命令等你确认，reset --hard、强推（--force-with-lease）、丢弃改动、clean 标为危险；`protectedBranches`（默认 main,develop）里的分支不推送、不强推、不删远端；tool.call 只在 Claude 跑完含 git 的 Bash 后刷新窗格、结果原样返回（hooks/register.tsx 124–136）。与本表 gitgraph 同类，但功能明显更全。 | MIT | [链接](https://github.com/tunggary/git-graph-panel) |
+| difnote | — | 审阅「上次看过之后」改了什么：`/difnote` 打开窗格，按文件列出工作目录里的 diff（Claude、你自己、脚本或其他会话改的都算），可对某一行、某个 hunk 或整个文件写批注、标记已看，确认后标为已审；一键把批注连同 `文件:行号` 和引用的代码追加进提示框，你改好后自己发送。备注：在 Claude Code 插件数据目录里为每个工作目录建一个私有 git 影子库（不碰仓库自己的 .git，git 全局配置关闭），首次记录某个目录时 Edit/Write 最多等 5 秒；超过 1 MB 或名字像密钥的文件只记占位、不存副本；不监视 home、Desktop、Documents、Downloads、临时目录和 Claude Code 自己的目录；30 天没用的记录自动清空；批注只用 prompt.fill 追加、不替你发送；tool.call 只观察、不改写；不调用模型、不联网；需本机 git。 | Apache-2.0 | [链接](https://github.com/mmedum/difnote) |
 
 ### 子代理管理 Subagent Management
 
@@ -614,6 +615,7 @@ For detailed descriptions of all 560 mods, see the Chinese section below. The �
 | port-watch | ⭐ 1（所在仓库） | 侧边窗格列出本机正在监听的 TCP 端口及进程名和 pid，打开时每 10 秒刷新，`/ports` 打开。备注：只运行 `lsof -nP -iTCP -sTCP:LISTEN`；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/port-watch) |
 | job-watch | ⭐ 1（所在仓库） | 实时窗格显示长时间任务（训练、下载、解压）的进度、预计剩余时间、卡住和完成，从它们的日志读取，不调用模型，`/jobs`、`/watch`、`/unwatch` 管理。备注：运行 `df`、`tail` 读日志；有任务时自动打开窗格；不联网。 |  | [链接](https://github.com/joeldg/claude-mods/tree/main/job-watch) |
 | downloads-drop | ⭐ 1（所在仓库） | 干活时发现新落进「下载」文件夹的文件（PDF、3MF 模型、图片、笔记），在提示框上方列出，Attach 把 `@"路径"` 填进提示框，Dismiss 清掉，`/downloads` 列出最新文件按编号附加。备注：每 5 秒列一次 `~/Downloads`；Attach 只用 prompt.fill 插入、不会替你发送；不调用模型、不运行其他程序、不联网。 |  | [链接](https://github.com/joeldg/claude-mods/tree/main/downloads-drop) |
+| worktree-terminal | ⭐ 1（所在仓库） | `/term` 在当前会话目录或任一 git worktree（包括子代理 `isolation: "worktree"` 建在 `.claude/worktrees/` 下的）里打开终端：分屏、标签页或新窗口；`/term list` 列出 worktree，`/term <编号>`、`/term main`、`/term <名字>` 选择；有子代理 worktree 时提示框上方一排按钮一键打开。支持 tmux、Zellij、kitty、WezTerm、iTerm2、Ghostty、Warp、Alacritty、GNOME Terminal、Konsole、Terminal.app 或自定义命令。备注：只在你输入 `/term` 或点按钮时用本机 `$.process.run` 启动终端（kitty 需 `allow_remote_control yes`，iTerm2 需自动化授权）；会话开始、子代理/worktree 工具调用后和每回合结束跑 `git worktree list` 刷新列表；tool.call 只观察、不改写；不调用模型、不联网。 | MIT | [链接](https://github.com/brunolca/claude-plugins/tree/main/plugins/worktree-terminal) |
 | tmux-status | — | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
 | usage-reporter | — | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | quickswitch | — | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
