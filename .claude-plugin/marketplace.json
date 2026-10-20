@@ -4660,6 +4660,8 @@
         "path": "plugin-band",
         "sha": "37957bb3f14d4113c31132bdbeb8717dc9e98740"
       }
-    }
+    },
+    {"name":"drupal-guard","source":{"source":"git-subdir","url":"https://github.com/o0Charly0o/drupal-mods.git","path":"drupal-guard","sha":"bbd55cd65ac1180437e45572c48755cf75a1aab7"}},
+    {"name":"drupal-phpcs","source":{"source":"git-subdir","url":"https://github.com/o0Charly0o/drupal-mods.git","path":"drupal-phpcs","sha":"bbd55cd65ac1180437e45572c48755cf75a1aab7"}}
   ]
 }
