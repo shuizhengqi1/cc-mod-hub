@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 549 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 552 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 549 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 552 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 549 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 552 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 549 个精选 Claude Code mods，按类别组织：
+以下是本市场的 552 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -428,6 +428,8 @@ For detailed descriptions of all 549 mods, see the Chinese section below. The �
 | praft | — | `/praft` 在侧栏里预览当前分支 PR/MR 草稿（标题、描述、提交），可直接改标题、改提交标题。备注：没有草稿时 `/praft` 会替你给 Claude 发一条“写草稿”的提示（只有你运行命令或点按钮时才发）；在面板里改提交标题会运行 `git rebase -i` 改写提交历史（工作区不干净时拒绝、失败自动 abort）；跑本机 `git`；不联网。 | MIT | [链接](https://github.com/yarcod/praft) |
 | ship-check | — | 开发验证面板：显示哪些测试、构建、类型检查真的跑过、结果如何、结果是否还对应当前代码。备注：只观察工具调用；用本机 git 只读命令；「Ask Claude to fix」按钮把修复提示填进输入框（replace，由你发送）；设了 `SHIP_CHECK_DEBUG` 才写调试文件；不联网。 | MIT | [链接](https://github.com/panyuti-ai/ship-check-mods/tree/main/plugins/ship-check) |
 | lara-cc | — | Laravel 项目的 `/lara` 面板：跟踪 `storage/logs` 新错误、队列任务与失败任务、路由列表和测试结果，在面板里启停队列 worker（或 Horizon）、Vite、scheduler；提示框上方提示崩溃的进程、有积压却没 worker、待执行迁移、缓存未清、需要 composer/npm install 等问题，修复只在你点按钮时运行；给 Claude 提供 artisan、logs、queue、service、routes、health 工具（会毁数据的 artisan 命令直接拒绝，读日志和失败任务前先问你并脱敏）。备注：需在含 `artisan` 的项目根启动，macOS/Linux，作者要求 2.1.295+；默认在 Claude 改完 PHP 后重启队列 worker、回合结束对改过的 PHP 跑 `php -l`，Pint 默认关（hooks/register.tsx 199）；Bash 只读取测试结果、原样放行（3075–3094）；会把 Laravel Boost 工具的结果脱敏后再给 Claude，并在其日志工具描述后追加一句（3098–3118）；「ask Claude」按钮经 `$.prompt.submit` 以你的名义发新提示，不改写你输入的提示（605–607）；curl 只探测本机端口（1755–1769），不读 `.env`、不外传。与 laravel-tooling 部分重叠（Pint），但覆盖面广得多，暂并存。 | MIT | [链接](https://github.com/markszymik/lara-cc) |
+| graphite-stack | — | 仅桌面版：在提示框上方按 `gt log` 的树形画出当前分支所在的 Graphite stack，每个分支一行：PR 状态（草稿/打开/已合并/已关闭/未提交）、CI 失败（悬停看失败的检查和链接）、审查状态、未解决讨论数、PR 标签、相对父分支的增删行数，并标出需要 restack 的分支；点增删行数可在侧边窗格看该分支的 diff；每分钟及 Claude 跑完 git/gh/gt 后刷新，`/stack` 显示或隐藏。备注：只读：跑本机 `git`、`gh api graphql`（只查询）和 `sqlite3` 读 `.git/.graphite_metadata.db`，需装好 gt、已登录的 gh 和 sqlite3；tool.call 先执行 Bash 再触发刷新、原样返回；「Sync with main」「↻ restack」「Ask Claude」等按钮只在你点击时以你的名义发一条可见提示，让 Claude 跑 `gt sync`/`gt restack`（不 push）或审查某个文件；终端、VS Code 和手机上不显示内容。 | MIT | [链接](https://github.com/adrianjost/claude-graphite-stack-status) |
+| simpane | — | `/simpane [ios\|android]` 在侧边窗格实时显示 iPhone 模拟器或 Android 模拟器画面（约每秒 5 帧），在窗格里点击即点按、拖动即滑动、滚轮滚动、点窗格后打字即输入；没有在跑的设备时列出可用的模拟器/AVD，点一下以无头方式启动；Claude 在 Bash 里用 axe/adb 测试 app 时你能同时看着。备注：需要能显示图片的终端（Ghostty、cmux 或 kitty，tmux 不行）；iOS 需 Xcode，装 AXe 才能输入并有较高帧率（否则 simctl 约 1 帧/秒、只能看）；作者注明 Android 部分尚未测试；只在窗格打开时运行本机 `xcrun simctl`/`axe`/`adb`/`emulator` 截图到临时目录并发送你的输入，窗格关掉后停止；不联网、不碰工具调用。 | MIT | [链接](https://github.com/XyndoX/simpane) |
 
 ### 子代理管理 Subagent Management
 
@@ -626,6 +628,7 @@ For detailed descriptions of all 549 mods, see the Chinese section below. The �
 | lcm | ⭐ 55 | 无损上下文管理：用 DAG 式分层摘要压缩对话，保留每条原始消息可回溯（prompt.context/prompt.submit 等钩子）。 | MIT | [链接](https://github.com/lossless-claude/lcm) |
 | effort-keys | ⭐ 34（所在仓库） | **推荐** 在提示框里按 Option+↑/↓（或 Ctrl+↑/↓）把推理 effort 升一级或降一级（low→medium→high→xhigh→max），走内置 `/effort` 命令。备注：用隐藏按钮借用 diff 面板文件列表的快捷键（app:diffFileListUp/Down）；turn.step 只读当前 effort、请求原样放行；会读设置里 modelSettings 的 effortLevel；不运行其他程序、不联网。来自作者的 dotfiles 仓库。 |  | [链接](https://github.com/wkentaro/dotfiles/tree/main/claude/mods/effort-keys) |
 | ContextSaver | ⭐ 27 | 标记浪费会话习惯。 | MIT | [链接](https://github.com/AlmogBaku/ContextSaver) |
+| loadout | ⭐ 19 | Claude Code 配置总开关：`/loadout` 面板按类别列出 CLAUDE.md/规则/记忆、技能与命令、子代理、MCP 服务器、hook 事件、插件、权限规则和设置项，每项标明来自哪个作用域（policy/flag/user/project/local/plugin 等，policy 与 flag 锁定不可改），一项一个开关；可存成多个 profile 整套切换（内置 vanilla 为全关基线），`/loadout status` 列出当前关掉的项。备注：关掉 CLAUDE.md/规则/记忆、技能、子代理、MCP 只在会话里生效、不写文件（prompt.context 去掉对应说明文件、skill.prompt 换成「已停用」说明、tool.describe 在停用的 MCP 工具描述前加一句停用说明、调用时 deny）；关掉设置里的 hook、权限规则、设置项或插件会改对应的 settings.json（第一次改之前备份到配置目录的 loadout-backups/，重新打开时把原条目放回原文件，不写符号链接的项目设置）；关掉某个 hook 事件会跳过该事件的全部 hook（包括安全类 hook），切到 vanilla 会关掉全部插件和设置里的 hook，请留意；改 profile 的命令只接受你本人在提示框输入的；不联网、不调模型、不起进程。 | MIT | [链接](https://github.com/MK27MK/loadout) |
 | zsh-safe | ⭐ 18（所在仓库） | 把 bash 写法的 Bash 命令改写成 macOS zsh 可跑。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/zsh-safe) |
 | action-pin | ⭐ 11（所在仓库） | 把常用动作钉在提示框上方。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/action-pin) |
 | ask-autopick | ⭐ 11（所在仓库） | 自动采纳或拒绝提问。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/ask-autopick) |

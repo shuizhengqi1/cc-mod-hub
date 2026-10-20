@@ -4568,6 +4568,30 @@
         "repo": "dot-agi/sandbox-tuner",
         "sha": "c6f75f5654369c4c5944f21a905b20c60a34a857"
       }
+    },
+    {
+      "name": "loadout",
+      "source": {
+        "source": "github",
+        "repo": "MK27MK/loadout",
+        "sha": "6695e2fe3a87ff81eae22c7ab5435f3c6e8ccebd"
+      }
+    },
+    {
+      "name": "graphite-stack",
+      "source": {
+        "source": "github",
+        "repo": "adrianjost/claude-graphite-stack-status",
+        "sha": "f00a8a3a7a9c4802bafecec4783e2da4bb02270c"
+      }
+    },
+    {
+      "name": "simpane",
+      "source": {
+        "source": "github",
+        "repo": "XyndoX/simpane",
+        "sha": "19f015e38170fe1603e0731e662f688b56bdb615"
+      }
     }
   ]
 }
