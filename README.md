@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 547 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 549 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 547 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 549 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 547 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 549 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 547 个精选 Claude Code mods，按类别组织：
+以下是本市场的 549 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -306,6 +306,8 @@ For detailed descriptions of all 547 mods, see the Chinese section below. The �
 | publish-guard | — | 在 Claude 往浏览器里打字、填表，或写入受保护路径（默认含 `/publishing/`）的文件前检查你的屏蔽词（可选也拦韩文），命中就拒绝并记日志，`/pubguard` 查看。备注：只拒绝不改写，命中的词不回显；会注册一个打开面板的 `show` 工具；不运行其他程序、不联网。 | MIT | [链接](https://github.com/seanyyoo/claude-code-mods/tree/main/plugins/publish-guard) |
 | heavy-job-guard | — | 机器上已经有一个重任务（tsc、测试、lint、构建等）在跑时，拒绝 Claude 再启动第二个，并告诉它正在跑的进程和时长，让它等跑完再来，避免两个一起跑卡死机器；也能看到后台、子代理、其他 Claude 会话和你自己终端里启动的任务。可在 `/config` 改匹配规则、忽略规则（默认忽略语言服务器和 watch）、`warn` 模式（只弹提示不拦）和禁止子代理跑重任务。备注：只对 Bash 的 tool.call 做拒绝（deny），不改写命令；每次匹配到重任务命令时在本机运行只读的 `ps -axo` 查看进程列表；检查出错时放行；不联网。 | MIT | [链接](https://github.com/azoof-ahmed/claude-heavy-job-guard) |
 | config-guard | — | Claude 要改 Claude Code 自己的配置和说明文件（`.claude/settings*.json`、`.claude.json`、`.mcp.json`、CLAUDE.md、AGENTS.md、`.claude/hooks`、`.claude/plugins`、statusline 脚本）或往文件里写入已知格式的密钥（Anthropic/OpenAI/GitHub/AWS/Slack/Google/Tailscale 令牌、私钥）之前，先弹框问你；Bash 命令看起来会改这些文件或带密钥时也会问；可在 `/config` 加自己要保护的路径。备注：tool.call（Write/Edit/NotebookEdit/Bash）只做拒绝（deny）或原样放行，不改写工具参数；弹框里选「Deny」、关掉弹框、没人可问（`-p` 运行）或检查出错时一律拒绝；提问只写密钥种类，不写密钥本身；作者个人规则也在里面：没有设置 `LIFE_ROLE=ops` 时拒绝写 `ideas/task-review/tasks.md`；不运行其他程序、不联网。 |  | [链接](https://github.com/38kta-lab/dotfile/tree/main/mods/config-guard) |
+| arrester | — | 守卫（settings 里的 hook、deny 规则、auto mode）拦下一次工具调用后，记住被拦的目标，在之后一段时间（默认 30 分钟）里拦住换个工具或换种写法去碰同一目标的绕路（比如 cat 被拒后改用 head），也拦住读改守卫文件、用 `claude` 命令关守卫；你在权限框点 No 之后只拦完全相同的重试；子代理同样检查；`/arrester` 查看未关的拦截和最近的决定。备注：tool.call 只 deny 或弹窗询问（可选 hold），放行时原样转发、不改写命令；有未关拦截而检查出错时默认拒绝；只读本机文件和设置，不联网、不调模型；作者标注需 Claude Code 2.1.296+，在 2.1.292 上能装、hooks module 能加载。 | MIT | [链接](https://github.com/dot-agi/arrester) |
+| sandbox-tuner | — | Bash 被 Claude Code 沙箱拦下时，在提示框上方用白话说明拦的是哪个主机或写目录、为什么；同一目标跨会话反复出现（默认 3 次）后才给 Allow，按之前先显示要写进设置的确切条目，可 Undo；`/sandbox-tuner` 按主机和写目录排出待处理项。备注：tool.call 只在执行后读结果、原样返回，不改工具调用和结果；只在你按 Allow / Deny / Undo 时改用户 settings.json 里 `sandbox` 下的一项，并写一份完整备份（备份可能含 env 里的密钥）；不给通配主机，写目录只限缓存和临时目录；不联网、不起进程。 | MIT | [链接](https://github.com/dot-agi/sandbox-tuner) |
 
 ### 开发工具 Dev Tools
 

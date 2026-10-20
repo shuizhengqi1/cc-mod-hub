@@ -4552,6 +4552,22 @@
         "path": "mods/branch-janitor",
         "sha": "3dfd1f92b444711631c34ff498670f4ceef56d9d"
       }
+    },
+    {
+      "name": "arrester",
+      "source": {
+        "source": "github",
+        "repo": "dot-agi/arrester",
+        "sha": "37de42d6e28812ef4823f8eedf2954c34d4bbcf8"
+      }
+    },
+    {
+      "name": "sandbox-tuner",
+      "source": {
+        "source": "github",
+        "repo": "dot-agi/sandbox-tuner",
+        "sha": "c6f75f5654369c4c5944f21a905b20c60a34a857"
+      }
     }
   ]
 }
