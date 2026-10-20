@@ -4666,6 +4666,7 @@
     {"name":"inline-images","source":{"source":"github","repo":"nicolopignatelli/claude-code-inline-images","sha":"068c15592a7164b207851334c546d87fe2915a43"}},
     {"name":"architecture-sidecar","source":{"source":"github","repo":"TribeAI/architecture-sidecar","sha":"3c7a3c8a8dfe6bbab831faf749c6264ceabcde12"}},
     {"name":"gh-account-guard","source":{"source":"git-subdir","url":"https://github.com/jsnkle/ai-native-sdlc.git","path":"mods/gh-account-guard","sha":"81438472cf3a935ba8eef5a6079934dd3fcae5ef"}},
-    {"name":"coordinator-guard","source":{"source":"git-subdir","url":"https://github.com/sb2403/pixel-office.git","path":"coordinator-guard","sha":"4146c6fbb40e3b67b7fd22e22c64cb417860441e"}}
+    {"name":"coordinator-guard","source":{"source":"git-subdir","url":"https://github.com/sb2403/pixel-office.git","path":"coordinator-guard","sha":"4146c6fbb40e3b67b7fd22e22c64cb417860441e"}},
+    {"name":"codevibez","source":{"source":"github","repo":"leonhong18/codevibez","sha":"8d888b5b67f4cc70f697be2d2f88769055ba9301"}}
   ]
 }
