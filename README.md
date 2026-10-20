@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 565 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 566 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 565 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 566 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 565 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 566 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 565 个精选 Claude Code mods，按类别组织：
+以下是本市场的 566 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -472,6 +472,7 @@ For detailed descriptions of all 565 mods, see the Chinese section below. The �
 | 名称 Name | ⭐ Stars | 功能 Description | 许可证 License | 来源 Source |
 |-----------|---------|------------------|----------------|-------------|
 | cuelume | ⭐ 1,996（所在仓库） | **推荐** 两种提示音：长回合结束时播放「就绪」，有权限请求等你处理时播放「注意」；/cuelume 切换音色或关闭。备注：只播放插件自带的 wav 音频，不改权限决定；纯本机。 | MIT | [链接](https://github.com/danielwh2/cuelume/tree/main/claude-code) |
+| agent-standup-band | ⭐ 291（所在仓库） | 别的本机 Claude Code 会话在等你（批准权限、回答问题）时，在当前会话提示框上方显示一行「✋ 文件夹 · 会话名 needs an approval / an answer」（最多 3 条，可点 Hide 收起），别的会话开始等你或回合结束时弹 toast。备注：每 4 秒只读 Claude Code 自己写的 `~/.claude/sessions/<pid>.json` 会话状态文件（需 Claude Code 2.1.294+，不读对话内容），并在本机跑 `ps -o pid= -p …` 确认等待中的会话进程还在（hooks/register.tsx 31、50–57）；不写文件、不联网、只观察不改写任何事件；与 party 不同，不需要每个会话都装、只做提醒不做面板；提示行里提到的 `/agent-standup:open` 属于同仓库另一个插件（动画通话界面，未收录）。 | MIT | [链接](https://github.com/Atoll92/agent-standup/tree/main/plugin-band) |
 | gfm-render | ⭐ 19 | 在 transcript 里渲染 GFM：alerts、任务列表、删除线与 Mermaid。 | MIT | [链接](https://github.com/briangtn/claude-gfm-render) |
 | notice-board | ⭐ 18（所在仓库） | 同仓库各会话共享通知板。 |  | [链接](https://github.com/HolyGrail/claude-mods/tree/main/plugins/notice-board) |
 | error-poke | ⭐ 11（所在仓库） | 错误提醒助手。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/error-poke) |

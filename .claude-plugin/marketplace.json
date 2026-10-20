@@ -4651,6 +4651,15 @@
     {"name":"worktree-terminal","source":{"source":"git-subdir","url":"https://github.com/brunolca/claude-plugins.git","path":"plugins/worktree-terminal","sha":"eb0c364f24c1d03de8d2549b5138d5f88c878437"}},
     {"name":"status-light","source":{"source":"github","repo":"someonewithpc/claude-mod-status-light","sha":"fa1f665e8c3b407951a5a454a6c30dc099cfc2da"}},
     {"name":"weekly-tokens","source":{"source":"github","repo":"IgorMonasterio/claude-weekly-tokens","sha":"4312651b1a2b2153c074c7ba39c8b844c0acb181"}},
-    {"name":"tool-gate","source":{"source":"github","repo":"justmytwospence/claude-tool-gate","sha":"12ec3a40321837b528a8b2daa24c64754499b83a"}}
+    {"name":"tool-gate","source":{"source":"github","repo":"justmytwospence/claude-tool-gate","sha":"12ec3a40321837b528a8b2daa24c64754499b83a"}},
+    {
+      "name": "agent-standup-band",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Atoll92/agent-standup.git",
+        "path": "plugin-band",
+        "sha": "37957bb3f14d4113c31132bdbeb8717dc9e98740"
+      }
+    }
   ]
 }
