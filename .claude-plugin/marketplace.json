@@ -4517,6 +4517,14 @@
         "path": "mods/split-diff",
         "sha": "970ade8849480de31edd805f6b8a954c3f9462b6"
       }
+    },
+    {
+      "name": "lara-cc",
+      "source": {
+        "source": "github",
+        "repo": "markszymik/lara-cc",
+        "sha": "8ac6ca43d7209ffd03ce87b9ff1884a49ca28711"
+      }
     }
   ]
 }
