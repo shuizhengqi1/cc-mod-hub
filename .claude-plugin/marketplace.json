@@ -4646,6 +4646,8 @@
         "repo": "tunggary/git-graph-panel",
         "sha": "59698a89db79f5e1b89f330280c33f6f41869fd6"
       }
-    }
+    },
+    {"name":"difnote","source":{"source":"github","repo":"mmedum/difnote","sha":"94e419a84ed42f41fb440e3f7c262cdc3f2db307"}},
+    {"name":"worktree-terminal","source":{"source":"git-subdir","url":"https://github.com/brunolca/claude-plugins.git","path":"plugins/worktree-terminal","sha":"eb0c364f24c1d03de8d2549b5138d5f88c878437"}}
   ]
 }
