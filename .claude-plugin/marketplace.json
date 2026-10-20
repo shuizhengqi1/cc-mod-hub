@@ -4618,6 +4618,14 @@
         "repo": "EmreErdogan/ccpopout",
         "sha": "e886d8a293c4f49fd6f57c04aa23e8c681fdbd9f"
       }
+    },
+    {
+      "name": "claudeblender",
+      "source": {
+        "source": "github",
+        "repo": "AndreaChiacchia/claudeblender",
+        "sha": "e8f4707c1f135ff17a7a8e2c8d660280d0470257"
+      }
     }
   ]
 }

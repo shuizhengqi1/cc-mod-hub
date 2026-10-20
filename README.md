@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 555 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 556 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 555 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 556 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 555 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 556 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 555 个精选 Claude Code mods，按类别组织：
+以下是本市场的 556 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -497,6 +497,7 @@ For detailed descriptions of all 555 mods, see the Chinese section below. The �
 | dictate-cli | — | 提示框上方的麦克风按钮（可绑快捷键）驱动 Claude Code 自带的语音输入，暂存你已打的草稿，听写完自动发送后再还原草稿。备注：仅 Windows；转写由 Claude Code 自带语音完成，mod 不联网；会以你的身份把听写文字 `$.prompt.submit` 发出（不改写内容）；`/dictate setup` 才运行仓库内 install.ps1：用本机 csc 编译 helper/dictate-key.cs，并修改 ~/.claude/settings.json 与 keybindings.json（有备份，`/dictate remove` 还原）。 | MIT | [链接](https://github.com/augbastos/dictate-cli) |
 | charts | — | 给 Claude 一个 draw 工具，在终端面板里画折线图和柱状图，`/charts` 打开面板。备注：注册自定义工具 draw（hooks/register.tsx 155），tool.call 只校验并返回图表数据（171–193）；读 TERM 等环境变量判断终端能否画图（207–209、238–240）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/JorgeRomero123/claude-charts) |
 | artifact-mod | — | 侧栏列出本会话创建的媒体文件和文档，带类型图标和分页，回车或双击用系统默认程序打开；`/artifacts` 打开。备注：tool.call 只观察写入了哪些文件、结果原样返回；只在你按回车/双击时运行 `open`、`xdg-open` 或 `explorer.exe`，启动时跑 `uname -s` 判断系统；不联网。 | MIT | [链接](https://github.com/netgfx/claude-artifact-mod) |
+| claudeblender | — | `/blender` 打开侧边窗格，用半格像素实时显示 Blender 场景的低分辨率画面：Claude 或子代理通过 Blender MCP 每改一次场景就自动重画，并标出是谁改的；可切换视口、场景相机、六个正交视图和 ¾ 视角，`/blender play` 在窗格里循环预览动画。备注：需 Claude Code 2.1.302+ 和已连接的 Blender MCP（Blender 3.0+ 及其 MCP 插件）；tool.call 只在工具执行后观察、结果原样返回（hooks/register.tsx 834–849）；重画时经 Blender MCP 的 `execute_blender_code` 发送插件自带的只读渲染脚本（hooks/script.ts 78–237，离屏绘制，只临时改视口着色和叠加层、动画预览临时切帧，都在 finally 里还原），不写文件、不联网；动效可在 /config 里关掉。 | MIT | [链接](https://github.com/AndreaChiacchia/claudeblender) |
 
 ### 任务与项目 Task & Project
 
