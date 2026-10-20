@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 536 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 539 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 536 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 539 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 536 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 539 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 536 个精选 Claude Code mods，按类别组织：
+以下是本市场的 539 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -310,6 +310,7 @@ For detailed descriptions of all 536 mods, see the Chinese section below. The �
 | git-sidebar | ⭐ 32,676（所在仓库） | **推荐** lazygit 风格侧栏：worktree/分支列表；本机 git（可 git switch，脏树拒绝）与 /cd。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/ui/git-sidebar) |
 | universal-audit-log | ⭐ 32,676（所在仓库） | 把 tool/prompt/turn 等事件记成本地 JSONL 审计日志（含拒绝）。备注：只写本地文件，不外传。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/observability/universal-audit-log) |
 | session-time-machine | ⭐ 32,676（所在仓库） | **推荐** `/timemachine` 打开会话时间线（每条提示、工具调用和回合结束，读自本会话的记录文件），选一个点并给出新指令，就把截到该点的会话副本写成新会话，给出 `claude --resume` 命令接着走另一条路，原会话不动。备注：`prompt.submit` 只拍快照、原样放行，不改写；`tool.call` 只在调用完成后观察；默认（`snapshots` 选项，可关）每次提示、每次写类工具调用和回合结束都用单独的临时 index 跑 `git add -A` + `commit-tree`，写到 `refs/time-machine/<会话id>/` 引用下（不动 HEAD、分支和暂存区，但会在仓库里留下快照对象与引用）；分叉时会在 `~/.claude/projects/` 写新会话 jsonl，有快照时用 `git worktree add -b` 建新分支和工作树，默认把 resume 命令复制到剪贴板，macOS 上默认用 osascript 开新 Terminal 窗口。纯本机。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/productivity/session-time-machine) |
+| loop-detective | ⭐ 1,073（所在仓库） | 发现重复失败的 Bash 命令和反复编辑/重试的循环：同一失败连续出现（默认 3 次，可设 3–10）就开一个案例并 toast 提醒；`/loop-report`（`--agents` 含子代理、`--history` 看历史）列出证据和排查建议，`/loop-pane` 打开实时案例窗格，`/loop-reset` 清空观察记录。备注：tool.call 只在结果返回后记录，不改写、不拒绝，也不往对话里加内容（hooks/register.tsx 56–81）；纯本机，不调用模型、不联网。和 edit-loop 思路相近，但 edit-loop 会给模型追加提示，这个只给你看。 | Apache-2.0 | [链接](https://github.com/YeonwooSung/my-claude-code-mods/tree/main/loop-detective) |
 | promote-lights | ⭐ 295（所在仓库） | 有打开中的 promote PR（base 为 main、head 为 dev 或 PROMOTE_HEAD，或带 promote 标签）时在提示框上方显示 CI 状态灯，/lights 查看详情。备注：本机运行 gh 只读查询，需已登录 gh；纯本机 UI。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/promote-lights) |
 | review-watch | ⭐ 260（所在仓库） | 提示框上方为每个进行中的代码审查（Codex `codex review` 或审查类子代理）显示一行：模型、审查对象、用时、最新输出，结束时弹 toast。备注：只观察，tool.call 原样执行；本机读取 Codex 输出和 ~/.codex 配置里的模型名；纯本机 UI。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/review-watch) |
 | filetree | ⭐ 207 | 侧栏文件树，跟住 Claude 正在读/写的文件并可点选带入提示。 |  | [链接](https://github.com/data-goblin/claude-code-filetree) |
@@ -326,6 +327,8 @@ For detailed descriptions of all 536 mods, see the Chinese section below. The �
 | taxi-blackbox | ⭐ 8（所在仓库） | 工具调用“行车记录仪”：提示框上方显示 REC 条，出错或被拒时用 `/blackbox` 回放事故前的几步。备注：只观察不改写；记录只存在内存里，记录前把 token、密码等打码；界面为韩文；不运行其他程序、不联网。 | MIT | [链接](https://github.com/devbrother2024/devbrothers-mods/tree/main/plugins/taxi-blackbox) |
 | md-prompt | ⭐ 7（所在仓库） | 输入时把 prompt 框画成 Markdown（代码块高亮等，不改原文）。 | MIT | [链接](https://github.com/nogu66/md-prompt/tree/main/plugins/md-prompt) |
 | followthrough-band | ⭐ 7（所在仓库） | 提示框上方显示本仓库到期的 followthrough 跟进检查（Run / Snooze / Close）；会话里部署/发布后若没登记检查会提醒。备注：需安装 followthrough CLI；本机运行 followthrough 固定子命令；tool.call 原样返回；按「Run」或「Register checks」会以你的身份提交一条提示（你按才会）。 | MIT | [链接](https://github.com/BayramAnnakov/followthrough/tree/main/mod) |
+| gh-status | ⭐ 6 | 当前分支 GitHub PR 的实时状态：提示框上方一行显示 PR 号、状态、合并结论、流水线、审查和未解决讨论；`/gh`（或 `/pr`，被占用时用 `/gh-pr`）打开 PRs / Issues / Actions 三个标签的详情窗格，含合并队列、各 job 的实时步骤、默认分支 CI 失败提示，可按仓库 owner 自动用不同的 gh 账号。备注：**需要本机已登录的 gh**；只在本机运行 gh/git 读 GitHub 数据，token 只通过 GH_TOKEN 传给它启动的 gh 子进程，不发送会话内容；合并、进出合并队列、自动合并、approve / request changes、标记 ready、重跑失败 job 都要在窗格里确认后才执行；「失败检查」按钮只用 $.prompt.fill 填进提示框，不自动发送；tool.call 只在 Bash 结果返回后触发刷新，不改写（hooks/register.tsx 1531–1535）。和 github-actions、pr-view、aichemist-pr-review-pane 部分重叠，这个功能更完整。 | MIT | [链接](https://github.com/oborchers/claude-gh-status) |
+| time-blame | ⭐ 6 | 把每一轮的耗时拆成 Claude（等待/输出）、工具、你（审批、提问）和其他，回合结束时在 "Worked for" 位置显示一行分解，`/blame` 打开整个会话的耗时清单窗格。备注：只计时，所有钩子（tool.call、turn.step、classic.PermissionRequest/PostToolUse/PostToolUseFailure）都原样 next 后返回，不改写、不拒绝、不往对话里加内容（hooks/register.ts 138–230）；纯本机，不调用模型、不联网；作者写明需要 Claude Code 2.1.302+（box 上 2.1.292 冒烟也能加载）。 | MIT | [链接](https://github.com/karanb192/time-blame) |
 | github-actions | ⭐ 5（所在仓库） | 提示框上方一条显示当前分支的 GitHub Actions 与 PR：只跟踪本会话里 `git push` 过的提交，列出每个 workflow 与 job 的通过/失败/运行中/等待状态（运行中或失败时显示当前步骤），以及该分支 PR 的编号、标题、draft、审查结论与检查计数；点击可在浏览器打开对应页面；跑完 `git push` 或 `gh pr/run/workflow` 后自动刷新，有运行中的任务时每 15 秒刷新。备注：界面为葡萄牙语；用本机 `git` 与已登录的 `gh`（`gh pr view`、`gh run list/view`、`gh api rate_limit`，只读）访问 GitHub，没装 gh 时整条隐藏、未登录或限流时显示提示；`tool.call` 只观察 Bash 命令、原样放行；推送过的提交记录（sha 与分支，最多 5 个/会话、保留 30 个会话）存在插件存储里；打开链接用 xdg-open/open/start；不注册命令；来自 Hangar 仓库，但单独可用，不需要装 Hangar。 | MIT | [链接](https://github.com/jeffer1312/hangar/tree/main/plugins/github-actions) |
 | dash-guard | ⭐ 5（所在仓库） | 拒绝在 md/txt 写入 em dash、en dash 或双连字符；只拒绝不改写。备注：本机 $.fs.read。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dash-guard) |
 | skill-stats | ⭐ 5（所在仓库） | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |

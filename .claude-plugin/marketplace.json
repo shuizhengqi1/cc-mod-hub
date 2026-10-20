@@ -4459,6 +4459,31 @@
         "path": "my-mods/table-copy",
         "sha": "d07b16be7b543450c3159d061386192c8b2c8f02"
       }
+    },
+    {
+      "name": "gh-status",
+      "source": {
+        "source": "github",
+        "repo": "oborchers/claude-gh-status",
+        "sha": "9fa9c05b8afd35053726bb8cea188f5352212784"
+      }
+    },
+    {
+      "name": "loop-detective",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/YeonwooSung/my-claude-code-mods.git",
+        "path": "loop-detective",
+        "sha": "82f9bf698508bdc003cd3508fa6af5fcca245300"
+      }
+    },
+    {
+      "name": "time-blame",
+      "source": {
+        "source": "github",
+        "repo": "karanb192/time-blame",
+        "sha": "482072626df584c986f423316a29399402d05fcf"
+      }
     }
   ]
 }
