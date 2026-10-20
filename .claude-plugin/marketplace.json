@@ -4662,6 +4662,8 @@
       }
     },
     {"name":"drupal-guard","source":{"source":"git-subdir","url":"https://github.com/o0Charly0o/drupal-mods.git","path":"drupal-guard","sha":"bbd55cd65ac1180437e45572c48755cf75a1aab7"}},
-    {"name":"drupal-phpcs","source":{"source":"git-subdir","url":"https://github.com/o0Charly0o/drupal-mods.git","path":"drupal-phpcs","sha":"bbd55cd65ac1180437e45572c48755cf75a1aab7"}}
+    {"name":"drupal-phpcs","source":{"source":"git-subdir","url":"https://github.com/o0Charly0o/drupal-mods.git","path":"drupal-phpcs","sha":"bbd55cd65ac1180437e45572c48755cf75a1aab7"}},
+    {"name":"inline-images","source":{"source":"github","repo":"nicolopignatelli/claude-code-inline-images","sha":"068c15592a7164b207851334c546d87fe2915a43"}},
+    {"name":"architecture-sidecar","source":{"source":"github","repo":"TribeAI/architecture-sidecar","sha":"3c7a3c8a8dfe6bbab831faf749c6264ceabcde12"}}
   ]
 }
