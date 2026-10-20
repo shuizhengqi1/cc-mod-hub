@@ -1888,7 +1888,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/ntaksh42/dotfiles.git",
-        "path": "claude/mods/ado-link-bar"
+        "path": "claude/mods/ado-link-bar",
+        "sha": "dab1bbfb1411bcaa993af6d441a48b9301e0549a"
       }
     },
     {
@@ -1896,7 +1897,8 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/ntaksh42/dotfiles.git",
-        "path": "claude/mods/ado-pr-status"
+        "path": "claude/mods/ado-pr-status",
+        "sha": "dab1bbfb1411bcaa993af6d441a48b9301e0549a"
       }
     },
     {
