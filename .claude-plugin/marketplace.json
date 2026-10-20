@@ -4508,6 +4508,15 @@
         "repo": "huynamboz/strays",
         "sha": "8af0d41d1680c6b7e7dfd7076026e81d64c06cc2"
       }
+    },
+    {
+      "name": "split-diff",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/oobg/claude-code-mods.git",
+        "path": "mods/split-diff",
+        "sha": "970ade8849480de31edd805f6b8a954c3f9462b6"
+      }
     }
   ]
 }
