@@ -4601,6 +4601,23 @@
         "path": "mods/meta-lint",
         "sha": "ce9b329a8cf32f596ba43923eac0d966117a5659"
       }
+    },
+    {
+      "name": "shell-edit-guard",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/daviddecorso/claude-mods.git",
+        "path": "shell-edit-guard",
+        "sha": "f7ab188eb66a6bb6febd9b3ab4f6b62d2acecbc0"
+      }
+    },
+    {
+      "name": "ccpopout",
+      "source": {
+        "source": "github",
+        "repo": "EmreErdogan/ccpopout",
+        "sha": "e886d8a293c4f49fd6f57c04aa23e8c681fdbd9f"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 553 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 555 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 553 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 555 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 553 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 555 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 553 个精选 Claude Code mods，按类别组织：
+以下是本市场的 555 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -226,6 +226,7 @@ For detailed descriptions of all 553 mods, see the Chinese section below. The �
 | jp-display | — | 把 Claude Code 终端里的英文提示改成日语：spinner 状态词、回合耗时（「✻ 3秒で完了」）、操作提示（「キー で 動作」）、工具运行提示和模式名。备注：只改终端显示（ui.render 替换文字），不改提示和回复；不运行其他程序、不联网。 |  | [链接](https://github.com/hptukurou0101-design/claude-mods-jp/tree/main/jp-display) |
 | theme-sync | — | 主题实时同步：每秒检查一次 `~/.claude/settings.json`（或 CLAUDE_CONFIG_DIR 下的 settings.json），文件里的 `theme` 和当前会话不一致时，像 `/config` 那样把正在运行的会话切到该主题并弹提示；适合配合脚本随终端明暗一起切换，所有打开的会话都会跟着变。备注：只读 settings.json，只改 theme 这一项设置（该项被锁定时不改）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/kokko-ng/kokko-claude-mods/tree/main/plugins/theme-sync) |
 | prompt-toc | — | 侧边窗格里的会话目录：列出你发过的每条提示，以及每个回复里的 #–### 标题，点一行就滚到对话里那个位置；可切换「全部 / 只看提示」，显示每条提示的时间和它占本会话 token 费用的比例，支持搜索过滤（`/prompt-toc 关键词`），`/prompt-toc-export` 导出成 Markdown。备注：需要 python3，用插件自带的 scripts/scan.py 读取本机会话记录重建目录（hooks/register.tsx 275–276）；导出只写到工作目录内且不覆盖已有文件（355–377）；会注册一个模型可调用的 `mcp__prompt-toc__pane` 工具，只用来开关窗格（410、457–462）；不联网。与 where-were-we、prompt-marks、transcript-bookmarks 有部分重叠，但只有它提供带回复标题、可点击跳转的目录窗格。 | MIT | [链接](https://github.com/weskao/weskao-agent-plugins/tree/main/plugins/prompt-toc) |
+| ccpopout | — | `/popout` 打开会话阅读窗格：选你发过的一条消息，只看 Claude 从那之后做了什么，每个工具调用折成一行（可逐个展开），可隐藏思考、一键清爽视图，按 p/n 前后翻；在 tmux 或 herdr 里用 `/popout side`（或 `/popout-side`）在旁边的终端格打开同样的阅读器，实时跟随会话。备注：只读：tool.call / turn.complete 先原样执行再刷新窗格（hooks/register.tsx 711–721），不改写工具调用、提示或结果，不联网；侧格需 Node 20+，运行插件自带的 tui/popout.mjs 读本机会话记录，打开侧格时先把当前会话消息写成 CLAUDE_CONFIG_DIR 下的临时快照，阅读器读后即删（register.tsx 596–604，popout.mjs 1817–1823）；复制时用 OSC 52 或本机 pbcopy/wl-copy/xclip。 | MIT | [链接](https://github.com/EmreErdogan/ccpopout) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -308,6 +309,7 @@ For detailed descriptions of all 553 mods, see the Chinese section below. The �
 | config-guard | — | Claude 要改 Claude Code 自己的配置和说明文件（`.claude/settings*.json`、`.claude.json`、`.mcp.json`、CLAUDE.md、AGENTS.md、`.claude/hooks`、`.claude/plugins`、statusline 脚本）或往文件里写入已知格式的密钥（Anthropic/OpenAI/GitHub/AWS/Slack/Google/Tailscale 令牌、私钥）之前，先弹框问你；Bash 命令看起来会改这些文件或带密钥时也会问；可在 `/config` 加自己要保护的路径。备注：tool.call（Write/Edit/NotebookEdit/Bash）只做拒绝（deny）或原样放行，不改写工具参数；弹框里选「Deny」、关掉弹框、没人可问（`-p` 运行）或检查出错时一律拒绝；提问只写密钥种类，不写密钥本身；作者个人规则也在里面：没有设置 `LIFE_ROLE=ops` 时拒绝写 `ideas/task-review/tasks.md`；不运行其他程序、不联网。 |  | [链接](https://github.com/38kta-lab/dotfile/tree/main/mods/config-guard) |
 | arrester | — | 守卫（settings 里的 hook、deny 规则、auto mode）拦下一次工具调用后，记住被拦的目标，在之后一段时间（默认 30 分钟）里拦住换个工具或换种写法去碰同一目标的绕路（比如 cat 被拒后改用 head），也拦住读改守卫文件、用 `claude` 命令关守卫；你在权限框点 No 之后只拦完全相同的重试；子代理同样检查；`/arrester` 查看未关的拦截和最近的决定。备注：tool.call 只 deny 或弹窗询问（可选 hold），放行时原样转发、不改写命令；有未关拦截而检查出错时默认拒绝；只读本机文件和设置，不联网、不调模型；作者标注需 Claude Code 2.1.296+，在 2.1.292 上能装、hooks module 能加载。 | MIT | [链接](https://github.com/dot-agi/arrester) |
 | sandbox-tuner | — | Bash 被 Claude Code 沙箱拦下时，在提示框上方用白话说明拦的是哪个主机或写目录、为什么；同一目标跨会话反复出现（默认 3 次）后才给 Allow，按之前先显示要写进设置的确切条目，可 Undo；`/sandbox-tuner` 按主机和写目录排出待处理项。备注：tool.call 只在执行后读结果、原样返回，不改工具调用和结果；只在你按 Allow / Deny / Undo 时改用户 settings.json 里 `sandbox` 下的一项，并写一份完整备份（备份可能含 env 里的密钥）；不给通配主机，写目录只限缓存和临时目录；不联网、不起进程。 | MIT | [链接](https://github.com/dot-agi/sandbox-tuner) |
+| shell-edit-guard | — | Claude 用 Bash 写文件（内联 Python/Node 脚本、`sed -i`、`perl -pi`、重定向、`tee`）时拦下，提示改用 Edit/Write，让每处改动都以可审查的 diff 出现；写 /tmp、/var/folders、scratchpad 和 /dev/null 照常放行，格式化/构建/包管理器（prettier、eslint、git、gh、tsc、npm、pnpm 等）的输出重定向也放行，可用 `extraAllowed` 正则加白名单；同一回合被拦超过 3 次就让 Claude 停下来问你；`/edit-guard off|on|allow-once|status`。备注：只拒绝不改写命令（hooks/register.ts 92–131）；只有你运行 `/edit-guard allow-once` 时，命令结果里给 Claude 附一句固定说明「下一条会被拦的命令可以运行」（70–75），不含会话内容；每次拦截把命令前 400 字符和目标文件记到本机 `~/.claude/mod-logs/shell-edit-guard.jsonl`（27–39、114–122）；不联网。 | MIT | [链接](https://github.com/daviddecorso/claude-mods/tree/main/shell-edit-guard) |
 
 ### 开发工具 Dev Tools
 
