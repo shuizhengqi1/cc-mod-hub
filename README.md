@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 543 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 544 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 543 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 544 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 543 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 544 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 543 个精选 Claude Code mods，按类别组织：
+以下是本市场的 544 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -422,6 +422,7 @@ For detailed descriptions of all 543 mods, see the Chinese section below. The �
 | ship-state | — | 提示框上方一条带：当前仓库的分支、未提交文件、领先/落后、PR、CI 和生产部署状态，CI 结束或生产上线时弹提示。备注：跑本机 `git` 和 `gh`（需已登录）查询 PR/CI/部署；tool.call 只观察 Bash 里的 `cd`、`git push`，结果原样返回；不改写任何调用。 | MIT | [链接](https://github.com/tyree88/tempered_plugins/tree/main/ship-state) |
 | praft | — | `/praft` 在侧栏里预览当前分支 PR/MR 草稿（标题、描述、提交），可直接改标题、改提交标题。备注：没有草稿时 `/praft` 会替你给 Claude 发一条“写草稿”的提示（只有你运行命令或点按钮时才发）；在面板里改提交标题会运行 `git rebase -i` 改写提交历史（工作区不干净时拒绝、失败自动 abort）；跑本机 `git`；不联网。 | MIT | [链接](https://github.com/yarcod/praft) |
 | ship-check | — | 开发验证面板：显示哪些测试、构建、类型检查真的跑过、结果如何、结果是否还对应当前代码。备注：只观察工具调用；用本机 git 只读命令；「Ask Claude to fix」按钮把修复提示填进输入框（replace，由你发送）；设了 `SHIP_CHECK_DEBUG` 才写调试文件；不联网。 | MIT | [链接](https://github.com/panyuti-ai/ship-check-mods/tree/main/plugins/ship-check) |
+| lara-cc | — | Laravel 项目的 `/lara` 面板：跟踪 `storage/logs` 新错误、队列任务与失败任务、路由列表和测试结果，在面板里启停队列 worker（或 Horizon）、Vite、scheduler；提示框上方提示崩溃的进程、有积压却没 worker、待执行迁移、缓存未清、需要 composer/npm install 等问题，修复只在你点按钮时运行；给 Claude 提供 artisan、logs、queue、service、routes、health 工具（会毁数据的 artisan 命令直接拒绝，读日志和失败任务前先问你并脱敏）。备注：需在含 `artisan` 的项目根启动，macOS/Linux，作者要求 2.1.295+；默认在 Claude 改完 PHP 后重启队列 worker、回合结束对改过的 PHP 跑 `php -l`，Pint 默认关（hooks/register.tsx 199）；Bash 只读取测试结果、原样放行（3075–3094）；会把 Laravel Boost 工具的结果脱敏后再给 Claude，并在其日志工具描述后追加一句（3098–3118）；「ask Claude」按钮经 `$.prompt.submit` 以你的名义发新提示，不改写你输入的提示（605–607）；curl 只探测本机端口（1755–1769），不读 `.env`、不外传。与 laravel-tooling 部分重叠（Pint），但覆盖面广得多，暂并存。 | MIT | [链接](https://github.com/markszymik/lara-cc) |
 
 ### 子代理管理 Subagent Management
 
