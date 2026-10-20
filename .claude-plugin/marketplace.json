@@ -4592,6 +4592,15 @@
         "repo": "XyndoX/simpane",
         "sha": "19f015e38170fe1603e0731e662f688b56bdb615"
       }
+    },
+    {
+      "name": "meta-lint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/krysmalskipl/claude-code-mods.git",
+        "path": "mods/meta-lint",
+        "sha": "ce9b329a8cf32f596ba43923eac0d966117a5659"
+      }
     }
   ]
 }
