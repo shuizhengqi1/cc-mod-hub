@@ -4534,6 +4534,15 @@
         "path": "plugins/prompt-toc",
         "sha": "859490429f8f4750b3bc2708d807a8c8f26ccd56"
       }
+    },
+    {
+      "name": "repro-log",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/samuelbfernandes/moddeck.git",
+        "path": "mods/repro-log",
+        "sha": "3dfd1f92b444711631c34ff498670f4ceef56d9d"
+      }
     }
   ]
 }

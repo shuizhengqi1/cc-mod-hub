@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 545 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 546 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 545 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 546 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 545 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 546 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 545 个精选 Claude Code mods，按类别组织：
+以下是本市场的 546 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -387,6 +387,7 @@ For detailed descriptions of all 545 mods, see the Chinese section below. The �
 | licenses | ⭐ 1（所在仓库） | `/licenses` 列出每个直接依赖的许可证（读 node_modules 和 Python dist-info，判断不了显示 unknown）。备注：只读，tool.call 原样放行（本会话工具记录只存在内存、先打码）；只读文件；结果复制到剪贴板；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/licenses) |
 | omnigraph-viz | ⭐ 1（所在仓库） | 实时可视化 Omnigraph 图数据库操作，`/og` 开关面板、回放录制的会话。备注：需本机已装 omnigraph 命令行；tool.call 只观察 Bash、原样放行（hooks/register.tsx 534–549）；只读地跑 omnigraph schema/export/commit 查询来补图（216–254）；操作记录写到项目下 `.omnigraph-viz/` 并自动放一个忽略全部的 .gitignore（134–140）。 | MIT | [链接](https://github.com/pronskiy/omnigraph-claude-mod/tree/main/omnigraph-viz) |
 | laravel-tooling | ⭐ 1（所在仓库） | Claude 改完 PHP 后运行 Pint 和 Larastan，按需运行 Pest，结果显示在实时窗格和状态栏，`/laravel-tooling` 打开。备注：在 Laravel 项目里改 PHP 后会自动运行 `vendor/bin/pint --dirty`（就地格式化文件）和 phpstan；按钮把修复提示填进输入框（replace，由你发送）；不联网。 | MIT | [链接](https://github.com/tomshaw/claude-code-plugins/tree/main/mods/laravel-tooling) |
+| repro-log | ⭐ 1（所在仓库） | 数据分析可复现记录：记下 Claude 成功跑过的分析命令（python、Rscript、make、quarto、pytest 等，可配置）和改过的文件名，`/repro` 在项目的 `.moddeck/repro/` 写出一份 Markdown 配方（git commit 与是否有未提交改动、运行时版本、锁文件 sha256、随机种子、可直接运行的命令清单）；`/repro status/clear/on/off`。备注：tool.call 只在调用结束后旁观、原样返回，不改写；含 KEY/TOKEN/密码等的命令不记录，.env/私钥类文件不列出；只在本机跑 git、python3/R/node --version、shasum，不联网、不调模型；作者要求 2.1.295+。 | MIT | [链接](https://github.com/samuelbfernandes/moddeck/tree/main/mods/repro-log) |
 | codebase-atlas | — | 代码库架构图随读写点亮；可选用本机 $.model.complete 与 $.model.fork 提取决策，向用户模型发函数源码与 git diff HEAD，不外传。备注：本机 git。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/codebase-atlas) |
 | editor-context | — | 在桌面端提示框上方显示 Cursor/VS Code 当前文件与选区，并在每次提交时把你正在看的内容悄悄告诉 Claude。 | MIT | [链接](https://github.com/talbarina/claude-editor-context/tree/main/plugins/editor-context) |
 | gitgraph | — | /branches 打开本机 git 分支提交线图画板，可勾选多条分支对比。备注：本机只读 git status、for-each-ref、log；面板打开时每 15 秒刷新，Claude 跑含 git 的 Bash 后也会刷新；Bash 工具调用只观察原样返回。 |  | [链接](https://github.com/TCcodemaster/claude-mods/tree/main/gitgraph) |
