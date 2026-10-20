@@ -4484,6 +4484,14 @@
         "repo": "karanb192/time-blame",
         "sha": "482072626df584c986f423316a29399402d05fcf"
       }
+    },
+    {
+      "name": "installguard",
+      "source": {
+        "source": "github",
+        "repo": "griches/installguard",
+        "sha": "4a3785dc986a16ba36fefd9c005addea7ad25551"
+      }
     }
   ]
 }
