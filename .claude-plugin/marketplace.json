@@ -4543,6 +4543,15 @@
         "path": "mods/repro-log",
         "sha": "3dfd1f92b444711631c34ff498670f4ceef56d9d"
       }
+    },
+    {
+      "name": "branch-janitor",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/samuelbfernandes/moddeck.git",
+        "path": "mods/branch-janitor",
+        "sha": "3dfd1f92b444711631c34ff498670f4ceef56d9d"
+      }
     }
   ]
 }
