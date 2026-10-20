@@ -4525,6 +4525,15 @@
         "repo": "markszymik/lara-cc",
         "sha": "8ac6ca43d7209ffd03ce87b9ff1884a49ca28711"
       }
+    },
+    {
+      "name": "prompt-toc",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/weskao/weskao-agent-plugins.git",
+        "path": "plugins/prompt-toc",
+        "sha": "859490429f8f4750b3bc2708d807a8c8f26ccd56"
+      }
     }
   ]
 }
