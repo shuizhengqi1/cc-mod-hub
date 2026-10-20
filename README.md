@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 558 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 560 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 558 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 560 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 558 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 560 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 558 个精选 Claude Code mods，按类别组织：
+以下是本市场的 560 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -227,6 +227,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below. The �
 | theme-sync | — | 主题实时同步：每秒检查一次 `~/.claude/settings.json`（或 CLAUDE_CONFIG_DIR 下的 settings.json），文件里的 `theme` 和当前会话不一致时，像 `/config` 那样把正在运行的会话切到该主题并弹提示；适合配合脚本随终端明暗一起切换，所有打开的会话都会跟着变。备注：只读 settings.json，只改 theme 这一项设置（该项被锁定时不改）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/kokko-ng/kokko-claude-mods/tree/main/plugins/theme-sync) |
 | prompt-toc | — | 侧边窗格里的会话目录：列出你发过的每条提示，以及每个回复里的 #–### 标题，点一行就滚到对话里那个位置；可切换「全部 / 只看提示」，显示每条提示的时间和它占本会话 token 费用的比例，支持搜索过滤（`/prompt-toc 关键词`），`/prompt-toc-export` 导出成 Markdown。备注：需要 python3，用插件自带的 scripts/scan.py 读取本机会话记录重建目录（hooks/register.tsx 275–276）；导出只写到工作目录内且不覆盖已有文件（355–377）；会注册一个模型可调用的 `mcp__prompt-toc__pane` 工具，只用来开关窗格（410、457–462）；不联网。与 where-were-we、prompt-marks、transcript-bookmarks 有部分重叠，但只有它提供带回复标题、可点击跳转的目录窗格。 | MIT | [链接](https://github.com/weskao/weskao-agent-plugins/tree/main/plugins/prompt-toc) |
 | ccpopout | — | `/popout` 打开会话阅读窗格：选你发过的一条消息，只看 Claude 从那之后做了什么，每个工具调用折成一行（可逐个展开），可隐藏思考、一键清爽视图，按 p/n 前后翻；在 tmux 或 herdr 里用 `/popout side`（或 `/popout-side`）在旁边的终端格打开同样的阅读器，实时跟随会话。备注：只读：tool.call / turn.complete 先原样执行再刷新窗格（hooks/register.tsx 711–721），不改写工具调用、提示或结果，不联网；侧格需 Node 20+，运行插件自带的 tui/popout.mjs 读本机会话记录，打开侧格时先把当前会话消息写成 CLAUDE_CONFIG_DIR 下的临时快照，阅读器读后即删（register.tsx 596–604，popout.mjs 1817–1823）；复制时用 OSC 52 或本机 pbcopy/wl-copy/xclip。 | MIT | [链接](https://github.com/EmreErdogan/ccpopout) |
+| paste-inline | — | 让粘贴和语音输入的文字在提示框里保持可编辑：Claude Code 会把多行或长粘贴折成 `[Pasted text #N +X lines]` 标签，没法检查或改；这个 mod 发现新标签且剪贴板里文字的行数与标签相符时，把标签换回原文（前后已打的字保留），适合 Wispr Flow、Typeless 等经剪贴板输入的听写和片段工具；`maxLines` 可让超长粘贴保持折叠，`/paste-inline on\|off` 开关。备注：每 250 毫秒读一次提示框草稿，出现新标签才运行本机剪贴板命令（pbpaste / wl-paste / xclip / xsel / powershell.exe，或你在 `clipboardCommand` 里设的命令）读剪贴板（hooks/register.ts 14–31、47–70）；只用 prompt.fill 改草稿、不自动发送，不用 prompt.submit；行数不符就不动、不重试；SSH 下通常没有剪贴板，标签保持原样；不联网。 | MIT | [链接](https://github.com/rafal-one/paste-inline) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -435,6 +436,7 @@ For detailed descriptions of all 558 mods, see the Chinese section below. The �
 | simpane | — | `/simpane [ios\|android]` 在侧边窗格实时显示 iPhone 模拟器或 Android 模拟器画面（约每秒 5 帧），在窗格里点击即点按、拖动即滑动、滚轮滚动、点窗格后打字即输入；没有在跑的设备时列出可用的模拟器/AVD，点一下以无头方式启动；Claude 在 Bash 里用 axe/adb 测试 app 时你能同时看着。备注：需要能显示图片的终端（Ghostty、cmux 或 kitty，tmux 不行）；iOS 需 Xcode，装 AXe 才能输入并有较高帧率（否则 simctl 约 1 帧/秒、只能看）；作者注明 Android 部分尚未测试；只在窗格打开时运行本机 `xcrun simctl`/`axe`/`adb`/`emulator` 截图到临时目录并发送你的输入，窗格关掉后停止；不联网、不碰工具调用。 | MIT | [链接](https://github.com/XyndoX/simpane) |
 | meta-lint | — | Claude 用 Write/Edit 改完 Markdown、MDX、Astro 或 HTML 页面后，提示框上方显示一行 SEO 基础检查：标题长度（30–60 字符）、meta description 长度（70–160）、H1 数量、缺 alt 的图片、字数；`/meta-lint [文件]` 查看每项取自哪里、超出多少，并给出搜索结果摘要预览。备注：纯本机只读：tool.call 在工具跑完后读取刚改的文件、原样返回结果（hooks/register.tsx 31–43），不联网、不跑命令、不改写工具调用或提示、不给 Claude 注入内容；子代理的编辑不计。 | MIT | [链接](https://github.com/krysmalskipl/claude-code-mods/tree/main/mods/meta-lint) |
 | docs-sync | — | Claude 运行 `gh pr create`，或向已有打开 PR 的分支 `git push` 之前，用当前会话的同一个模型（另起调用、不带会话历史）把分支相对 base 的 diff 与仓库中已提交的全部 .md/.mdx 文档对照；文档与实现不符就拦下，列出哪份文档哪里不对、建议怎么改，让 Claude 改完提交后再推。diff 太大时按文件分段判定（最多 5 段）；检查本身失败时弹窗问你是否仍继续，无人可问的 `-p` 运行一律拦下。备注：只拒绝不改写（hooks/register.ts 78–111）；本机只跑 git 和 gh（480、595、671），需 gh 已登录；$.model.complete（710、745）把分支 diff 和 Markdown 文档发给当前会话模型，未脱敏、不经第三方；放行时只在该条 Bash 结果后附一句检查说明（467–470、1284–1290），不改写提示；每次建 PR 或推送到有 PR 的分支都会多花模型调用（单次最多约 30 万字符），同一提交通过后不再重查；与 readme-sync、doc-drift-watch 同属文档漂移，但它是 PR 前的语义级闸门，能查出正文描述与实际行为不符；README 为日文，拦截提示里的停用命令写的是 `docs-sync@skills-dir`，从本市场安装时应为 `docs-sync@cc-mod-hub`。 | MIT | [链接](https://github.com/soundkitchen/Agent-Skills/tree/main/docs-sync) |
+| git-graph-panel | — | 仿 VS Code Git Graph 的提交图窗格：彩色分支线和分支/标签标记，j/k 移动、o 展开提交详情与改动文件、看单个文件的 diff、两个提交对比、搜索提交、显示/隐藏远端分支、Fetch；`a` 打开操作菜单（checkout、新建/重命名/删除分支、cherry-pick、revert、merge、rebase、reset、tag、stash、push/pull 等）；kitty/Ghostty/WezTerm 显示曲线图，其他终端和 tmux 里用文字图；`/graph` 开关。备注：需要 Claude Code 2.1.302+（2.1.292 上加载失败）；在 git 仓库里会话开始时自动打开窗格；全部经本机 git 运行，只有 Fetch/pull/push/删除远端分支联网；操作只在你按键时运行，checkout、建分支、打 tag、stash 直接执行，其他先显示要跑的命令等你确认，reset --hard、强推（--force-with-lease）、丢弃改动、clean 标为危险；`protectedBranches`（默认 main,develop）里的分支不推送、不强推、不删远端；tool.call 只在 Claude 跑完含 git 的 Bash 后刷新窗格、结果原样返回（hooks/register.tsx 124–136）。与本表 gitgraph 同类，但功能明显更全。 | MIT | [链接](https://github.com/tunggary/git-graph-panel) |
 
 ### 子代理管理 Subagent Management
 
