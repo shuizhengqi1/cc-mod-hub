@@ -4626,6 +4626,7 @@
         "repo": "AndreaChiacchia/claudeblender",
         "sha": "e8f4707c1f135ff17a7a8e2c8d660280d0470257"
       }
-    }
+    },
+    {"name":"push-guard","source":{"source":"git-subdir","url":"https://github.com/nazmang/claude-agents-kit.git","path":"plugins/push-guard","sha":"0869ab5f393fd651c7d7a918ef97f1222aacfea9"}}
   ]
 }
