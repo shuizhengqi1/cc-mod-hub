@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 540 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 542 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 540 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 542 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 540 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 542 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 540 个精选 Claude Code mods，按类别组织：
+以下是本市场的 542 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -199,6 +199,7 @@ For detailed descriptions of all 540 mods, see the Chinese section below. The �
 | catch-me-up | ⭐ 1 | 侧栏实时 catch-up 摘要：为何开始、做了什么、卡在哪里。 | MIT | [链接](https://github.com/oliverow/catch-me-up) |
 | pivo | ⭐ 1（所在仓库） | `/tool` 在显示全部、只显示重要、全部隐藏之间切换工具调用行（出错的始终显示）；`/accent` 让你自己的消息加粗并用主题强调色；全屏模式下 `/sidebar` 在右侧停靠状态栏（模型、会话时长、上下文、花费、限额、待办、已配置的 MCP 名称、当前目录）。提示文字为俄语。备注：替换 UserMessage 渲染；只读 ~/.claude.json 和设置里的 MCP 服务器名称；tool.call 只记录 TodoWrite 待办、原样传递；不联网。 | MIT | [链接](https://github.com/KMNervanin/pivo/tree/main/claude/mod/pivo) |
 | color-on-start | ⭐ 1 | 新对话会话开始时（启动和 `/clear` 之后）自动运行一次内置 `/color`，给提示栏上色；在 `/config` 里选固定颜色，或用默认的 `random` 每次启动随机挑一种；恢复的会话不改色。备注：只用 classic.SessionStart 判断新会话来源，然后通过 `$.command.run` 运行内置 `/color`，没有界面时（如 `-p`）不运行；和其他也会自动改色的 mod 同时装会互相覆盖；作者说明在 Claude Code 2.1.293 上确认过；不运行其他程序、不联网。 | MIT | [链接](https://github.com/tomatoaiu/color-on-start) |
+| tldr | ⭐ 1 | 把每个回合的工具调用折成一张卡片：改了哪些文件（整回合的净 diff）、测试前后的结果，以及值得你检查的地方（为了让测试通过而改测试文件、写到项目外、删除文件、跳过测试、`--no-verify` 或 force push）；提示框上方可选显示上下文占用条和 Claude 任务列表进度；`/tldr` 查看详情、历史、复制或看 diff；每项都能在 /plugin 设置里单独关掉。备注：tool.call 原样放行，只在 Claude 第一次编辑某文件前用 $.fs.read 读一次原文来算净 diff（hooks/register.tsx 120–134）；完成的卡片（不含 diff 内容，每会话最多 50 张）存在本机插件存储；不联网、不运行其他程序（见仓库 PRIVACY.md）。 | MIT | [链接](https://github.com/kushalBanda/claude-tldr) |
 | cc-math-renderer | — | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | al-syntax | — | 把回复里 ```al 代码块（Business Central AL 语言）用 tree-sitter 着色显示，其他回复不动。备注：本机 process 用 node 运行仓库自带的 tree-sitter 高亮脚本和 wasm 语法文件（随插件一起，不另下载）；只改回复显示，不改原文，不联网。 | MIT | [链接](https://github.com/abonckus/claude-code-al-syntax) |
 | collapse-answers | — | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
@@ -607,6 +608,7 @@ For detailed descriptions of all 540 mods, see the Chinese section below. The �
 | split | — | `/split` 把当前会话分叉到旁边的 cmux 或 tmux 分屏里（`claude --resume --fork-session`），自动命名为 `<名称>-branch-<n>`。备注：用 `find`、`grep` 读本会话记录取标题；运行 cmux 或 tmux 开分屏，`/split` 后写的 claude 参数原样传过去；不在 cmux/tmux 里时只给出命令让你自己运行；不联网。 |  | [链接](https://github.com/abdelrahman-elkady/claude-plugins/tree/master/plugins/split) |
 | shell-mode | — | `/shell-mode` 打开一个 Bash 控制台面板，连续输入命令执行并保留颜色和当前目录，退出后命令和输出仍显示在对话记录里。备注：仅 Windows（用 Git for Windows 的 Bash，可用 CLAUDE_CODE_GIT_BASH_PATH 指定）；你在面板里输入的命令会照原样用 `bash --login -c` 执行；输出存到本机 `%LOCALAPPDATA%\Claude\shell-mode\history\`，对话记录（模型能看到的部分）里只留一个引用编号，显示时再从本机存档读出；不联网。 |  | [链接](https://github.com/h1048576/claude-mods/tree/main/shell-mode) |
 | table-copy | — | 把最后一次回答里的 Markdown 表格复制成 TSV（适合粘到 Excel）或 CSV：提示框上方出现「복사 / 표 N」按钮，点一下就复制到剪贴板；`/copy-table [编号|all]` 也可复制（韩文界面，`/config` 选 TSV/CSV）。备注：占用提示框上方、多装会互相遮挡；只读主代理的回答文本找表格，通过 `$.ui.copy` 复制到剪贴板；不运行其他程序、不联网。 |  | [链接](https://github.com/sooop/my-claude-settings/tree/main/my-mods/table-copy) |
+| strays | — | 找出 Claude Code 启动后一直没结束的进程（开发服务器、watcher、无头浏览器等，包括已关闭会话留下的），显示端口、内存、运行时长和来自哪个会话；`/strays`（别名 `/ps`）列出或打开面板，可按编号结束一个或全部遗留进程，也能在浏览器打开它的端口、复制启动命令。备注：仅限 macOS；只运行插件自带、可直接阅读的三个 shell 脚本：bin/scan.sh 用 ps/lsof 找带 CLAUDECODE 标记或挂在会话下的进程，bin/info.sh 查单个进程详情，bin/kill.sh 只在你按键或输入 `/strays kill` 时执行，先 TERM 再 KILL，并核对 pid 的启动时间、属于当前用户、不会结束 Claude Code 本身；另外只在你点按钮时运行 `open`/`pbcopy`；不联网，不拦也不改工具调用。和本市场的 port-watch 相近（port-watch 列出本机所有监听端口），这个只找 Claude 留下的进程并能结束它们。 | MIT | [链接](https://github.com/huynamboz/strays) |
 
 ### 其他工具 Other Tools
 

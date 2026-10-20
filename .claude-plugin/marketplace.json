@@ -4492,6 +4492,22 @@
         "repo": "griches/installguard",
         "sha": "4a3785dc986a16ba36fefd9c005addea7ad25551"
       }
+    },
+    {
+      "name": "tldr",
+      "source": {
+        "source": "github",
+        "repo": "kushalBanda/claude-tldr",
+        "sha": "07ca8e48e0d7a6d4b7a91f8019ef0fc3c5f31730"
+      }
+    },
+    {
+      "name": "strays",
+      "source": {
+        "source": "github",
+        "repo": "huynamboz/strays",
+        "sha": "8af0d41d1680c6b7e7dfd7076026e81d64c06cc2"
+      }
     }
   ]
 }
