@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 575 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 576 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 575 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 576 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 575 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 576 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 575 个精选 Claude Code mods，按类别组织：
+以下是本市场的 576 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -144,6 +144,7 @@ For detailed descriptions of all 575 mods, see the Chinese section below. The �
 | micro-compaction | ⭐ 2 | 提供 /compact micro：精简 Read 结果并去掉 thinking，保留对话结构。 | Unlicense | [链接](https://github.com/ruihe774/cc-micro-compaction) |
 | context-handoff | ⭐ 2（所在仓库） | 上下文用到设定比例（默认 50%）后锁住会话，只放行只读工具和写交接文件，直到完成交接（可指定你自己的交接技能）。备注：只拒绝不改写，拒绝理由里给出交接步骤（hooks/register.ts 183–219）；注册 handoff_complete 工具记录交接位置（104–117、161–181）；不联网。 |  | [链接](https://github.com/Naoray/skills/tree/main/plugins/context-handoff) |
 | visible-compact | ⭐ 2 | 在窗格里并排显示 `/compact` 前后的对话，看清压缩掉了什么、留下了什么，`/show-last-compact` 重新打开。备注：session.compact 只观察不改写；会把压缩前后的对话副本存到 `$TMPDIR/visible-compact`（设 storage=home 时存到 `~/.claude/visible-compact`）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/nvsravank/visible-compact) |
+| topic-nudge | ⭐ 2（所在仓库） | 你发的新提示和本会话前面几条请求不是同一件事时，弹出 toast 提醒先 `/clear` 开新会话（或说明和当前工作的关系），减少无关旧上下文和 token 浪费；第一条、斜杠命令、15 字以内的短回复和任务/SDK 发来的提示不判断，换题后只提醒一次。备注：prompt.submit 只记录不改写、原样放行（hooks/register.ts 60–75）；每条提示（第一条之后）在回合旁异步调用一次 `$.model.classify`（Haiku，约 500 tokens），发送最近 5 条请求各前 300 字；不阻塞提示、不联网、不运行其他程序。 | MIT | [链接](https://github.com/lbzepoqo/claude-plugins/tree/main/plugins/topic-nudge) |
 | compact-tools | ⭐ 1（所在仓库） | 压缩工具输出显示（含 MCP/Bash 错误）。 |  | [链接](https://github.com/AJclemendor/my-mods/tree/main/plugins/compact-tools) |
 | idle-compact | ⭐ 1 | 检测会话闲置时自动调用 $.session.compact 压缩上下文。 | MIT | [链接](https://github.com/davidar/claude-idle-compact) |
 | segmem | ⭐ 1 | 长期记忆：区分身份（你是谁）、过程（仓库如何工作）、情节（周二发生了什么）与人物档案；按衰减窗口加载，项目级作用域，压缩历史为摘要，无需服务器或守护进程。 |  | [链接](https://github.com/mahuebel/segmem) |

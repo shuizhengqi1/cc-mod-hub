@@ -4669,6 +4669,7 @@
     {"name":"coordinator-guard","source":{"source":"git-subdir","url":"https://github.com/sb2403/pixel-office.git","path":"coordinator-guard","sha":"4146c6fbb40e3b67b7fd22e22c64cb417860441e"}},
     {"name":"codevibez","source":{"source":"github","repo":"leonhong18/codevibez","sha":"8d888b5b67f4cc70f697be2d2f88769055ba9301"}},
     {"name":"trash-guard","source":{"source":"git-subdir","url":"https://github.com/benjaminb10/encore-mods.git","path":"plugins/trash-guard","sha":"4d17cbcf26e7b52087e9a087a29c8b317df3dbbd"}},
-    {"name":"statusline-footer","source":{"source":"github","repo":"erikus/statusline-footer","sha":"284821e23393748f0e7692a4062bbb1798968bd3"}}
+    {"name":"statusline-footer","source":{"source":"github","repo":"erikus/statusline-footer","sha":"284821e23393748f0e7692a4062bbb1798968bd3"}},
+    {"name":"topic-nudge","description":"Shows a toast when a prompt starts a different topic than the earlier requests in the session, so you can /clear first","source":{"source":"git-subdir","url":"https://github.com/lbzepoqo/claude-plugins.git","path":"plugins/topic-nudge","sha":"b8d4f81df8f5f7d26d70897307b6c7593fb3aa08"}}
   ]
 }
