@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 583 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 584 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 583 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 584 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 583 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 584 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 583 个精选 Claude Code mods，按类别组织：
+以下是本市场的 584 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -572,6 +572,7 @@ For detailed descriptions of all 583 mods, see the Chinese section below. The �
 | quiet-items | — | 会话记录里每次写任务跟踪器的工具调用只显示成一行简短摘要，`/quiet-items` 切换。备注：依赖本批 workitems（安装时自动带上）；只改显示；不运行其他程序、不联网。 | MIT | [链接](https://github.com/niksavis/handily/tree/main/mods/quiet-items) |
 | task-board | — | `/task-board` 打开侧边面板，列出本会话的任务清单（TaskCreate/TaskUpdate 的任务），你可以加任务、改标题、切换状态（待办/进行中/完成）或删除，按 save 才写回任务清单；Claude 改任务时面板自动刷新。备注：面板通过 TaskList/TaskCreate/TaskUpdate 工具读写本会话任务；只在你按「save and send to Claude」时才用 `$.prompt.submit` 把任务清单作为一条提示发出；工具调用只观察、原样放行；不运行其他程序、不联网。 |  | [链接](https://github.com/estasney/MyClaudeCode/tree/master/task-board) |
 | evergreen-sessions | — | `/pin [备注]` 钉住当前会话，`/pins` 跨所有项目列出钉住的会话并给出现成的 `cd … && claude --resume <id>` 命令，`/unpin [序号或 id]` 取消；钉住会话的记录文件（含子代理目录）复制一份备份，每次会话结束时刷新，Claude Code 按 cleanupPeriodDays 清理旧记录时也不会丢。备注：清单存本机 `~/.claude/evergreen-sessions/pins.json`，备份在同目录 `backups/`；用 `$.process.run` 只运行 `mkdir -p`、`cp -p`/`cp -Rp` 和 `rm -rf`（只删被 /unpin 的那条备份）；不联网、不改提示；仓库另带可选的终端选择器 `bin/claude-pin`（明文 bash，需 jq，可选 fzf，要自己放进 PATH），原记录被清掉时从备份恢复后 `claude --resume`。 | MIT | [链接](https://github.com/himanshu07gupta/claude-evergreen-sessions) |
+| checklist | — | 每个项目（git 根目录，不在仓库里时按会话目录）一份跨会话保留的清单，显示在聊天旁的侧栏：`/checklist add <标题> [-- 说明]` 添加，`/checklist done/open/drop/edit/remove/clear <编号>` 修改，点行切换完成；项目已有条目时会话开始自动打开窗格。备注：另注册一个工具 `mcp__checklist__checklist`，Claude 可以读取并改动这份清单（工具说明让它记录你同意的任务、做完打勾）；数据存在插件自己的 store，不运行其他程序、不联网、不改写提示或其他工具。与 task-board（只管本会话 TaskCreate 任务）不同，这份清单按项目长期保留。 | MIT | [链接](https://github.com/mjb-it/checklist) |
 
 ### 外部集成 External Integrations
 
