@@ -4695,6 +4695,15 @@
         "repo": "cavi-ai/loop-killer",
         "sha": "2e9dfc811705da1d66e4792ebf012f01e27e15e2"
       }
+    },
+    {
+      "name": "usage-hotkey",
+      "description": "Screen-reader hotkey for Windows + NVDA: one key speaks context tokens, 5-hour and weekly usage with reset times, this conversation's share of each limit, and cost.",
+      "source": {
+        "source": "github",
+        "repo": "nibarAhmed/usage-hotkey",
+        "sha": "ccc1300dd2443ac8e649583fd1393af02cec1ba3"
+      }
     }
   ]
 }
