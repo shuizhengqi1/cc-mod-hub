@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 573 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 574 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 573 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 574 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 573 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 574 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 573 个精选 Claude Code mods，按类别组织：
+以下是本市场的 574 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -317,6 +317,7 @@ For detailed descriptions of all 573 mods, see the Chinese section below. The �
 | push-guard | — | Claude 要 `git push` 到一个 PR 已经合并的分支时（推上去的提交永远到不了主分支），先弹窗问你，只有你点「仍要推送」才放行；拒绝、关掉弹窗、10 分钟无人应答（`PUSH_GUARD_ASK_MIN` 可改）或无人可问的 `-p` 运行都会拒绝，并告诉 Claude 从当前主分支新开分支再 cherry-pick。备注：只拒绝不改写（hooks/register.js 197–241）；本机用 `gh pr list --head` 和 `git rev-parse` 查分支（109、129–130），不推送、不联网发会话内容；main/master/develop/staging/release 等受保护分支、删除/打 tag/dry-run 以及没装 `gh`、不是 GitHub 仓库时直接放行；模型没有可自行输入的绕过开关。 | MIT | [链接](https://github.com/nazmang/claude-agents-kit/tree/main/plugins/push-guard) |
 | tool-gate | — | 目录策略：Claude 的文件工具（Read/Grep/Glob/LS 读，Edit/MultiEdit/Write/NotebookEdit 写）或 Bash 命令里出现的路径（含重定向目标，会跟进 `sh -c`/`eval` 嵌套）超出本项目时先拦下问你。默认：项目（git 检出及 worktree 的主检出）可读写；`~/Projects`、`~/Documents`、`~/Desktop`、`~/Downloads`、iCloud Drive 这些私有目录在项目之外既不读也不写；其他路径可读，只有临时和缓存目录可写；可在 `~/.config/agents/tool-gate.json` 或项目的 `.agents/tool-gate.json`、`.claude/tool-gate.json` 里加读写授权、derived（生成出来的路径，写时提示去改源头）和免检命令，`/tool-gate` 查看当前策略。备注：挂在权限判定 `tool.check` 上，只把放行/询问改成询问或拒绝，不改写工具参数，Claude Code 自己的拒绝保持不变（hooks/register.ts 142–180）；默认、acceptEdits、plan 模式交给 Claude Code 自带的确认框，auto 模式由 mod 自己弹「允许一次 / 本会话允许该目录 / 拒绝」，`-p`/SDK 无人可问时直接拒绝，bypassPermissions 下不管；classic.SessionStart/UserPromptSubmit 只读取 permission_mode、原样放行（115–116）；会话开始在本机跑一次 `git rev-parse` 找项目根（125–127）；不联网。与 path-jail（只管项目内写）同类但更全：也管读和 Bash 命令里的路径。 | MIT | [链接](https://github.com/justmytwospence/claude-tool-gate) |
 | drupal-guard | — | Drupal/DDEV 项目里 Claude 要跑会毁数据或 git 救不回的命令时先弹窗问你：重装站点（`drush si`、`site:install`）、`sql:drop`/`DROP TABLE`/`TRUNCATE`、批量 `entity:delete`、`ddev delete`/`poweroff`/`snapshot restore`/`import-db`、`rm -rf`、`find … -delete`、`git clean -f`/`stash drop`/`branch -D`、`config:import`（`cim`）。备注：挂在权限判定 `tool.check`（只看 Bash），只把结果改成询问、不改写命令，已有的 deny 规则保持拒绝（hooks/register.ts 18–29）；不运行外部程序、不联网；按命令文本正则匹配，`TRUNCATE`、`cim` 等词出现在别的命令里也会问。与 block-destructive-commands 部分重叠（rm -rf、SQL drop、git clean），多出 Drush/DDEV/配置导入这些 Drupal 专属命令。 | MIT | [链接](https://github.com/o0Charly0o/drupal-mods/tree/main/drupal-guard) |
+| trash-guard | — | Claude 永远不做不可恢复的删除：临时目录（/tmp、/var/folders）以外的 rm、unlink、rmdir、git clean、find -delete 一律拒绝，并告诉 Claude 改用废纸篓（macOS 14+ 的 trash、Finder「放回原处」或 Linux 的 gio trash），删了也能找回；引号和 heredoc 里的 rm 文字不误报，$( … )、&&、;、sudo 后面的 rm 仍能拦住；可用 allowed_paths 选项加放行目录。备注：只拒绝（deny），不改写命令；只读命令文本，不运行进程、不联网（hooks/register.js 81–98）。 | MIT | [链接](https://github.com/benjaminb10/encore-mods/tree/main/plugins/trash-guard) |
 
 ### 开发工具 Dev Tools
 
