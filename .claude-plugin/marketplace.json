@@ -4672,6 +4672,7 @@
     {"name":"statusline-footer","source":{"source":"github","repo":"erikus/statusline-footer","sha":"284821e23393748f0e7692a4062bbb1798968bd3"}},
     {"name":"topic-nudge","description":"Shows a toast when a prompt starts a different topic than the earlier requests in the session, so you can /clear first","source":{"source":"git-subdir","url":"https://github.com/lbzepoqo/claude-plugins.git","path":"plugins/topic-nudge","sha":"b8d4f81df8f5f7d26d70897307b6c7593fb3aa08"}},
     {"name":"tokenscope-live","description":"Live tokenscope pane: current intent, cost-weighted tokens, tests, edited files, alerts and recap for the session, fed by a local tokenscope live server","source":{"source":"git-subdir","url":"https://github.com/rstagi/tokenscope.git","path":"mod/tokenscope-live","sha":"b89840b4998a0bbe151521f7ed0c13e637134dac"}},
-    {"name":"mod-health","source":{"source":"github","repo":"mcmanussliam/claude-mod-health","sha":"6c619f68b75309ad2f2df732fa4536e851d10082"}}
+    {"name":"mod-health","source":{"source":"github","repo":"mcmanussliam/claude-mod-health","sha":"6c619f68b75309ad2f2df732fa4536e851d10082"}},
+    {"name":"plugin-updates","description":"Tells you when installed plugins or copied skills are behind upstream, without updating them","source":{"source":"git-subdir","url":"https://github.com/lbzepoqo/claude-plugins.git","path":"plugins/plugin-updates","sha":"b6f3ab559e7abcac4a5829aacf7a8a317946a9a3"}}
   ]
 }

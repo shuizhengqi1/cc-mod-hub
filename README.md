@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 578 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 579 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 578 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 579 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 578 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 579 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 578 个精选 Claude Code mods，按类别组织：
+以下是本市场的 579 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -694,6 +694,7 @@ For detailed descriptions of all 578 mods, see the Chinese section below. The �
 | agent-quick-menu | ⭐ 2 | `/menu` 打开一个面板，汇总各已装插件在 `quick-menu.json` 里声明的命令和设置，以及 Claude Code 自身设置，可收藏、搜索；提示框上方有入口条。**备注**：只读已装插件清单 `installed_plugins.json` 和各插件自带的 `.claude-plugin/quick-menu.json`（quick-menu.tsx 7、237），按按钮才用 `$.command.run` 运行该插件已注册的斜杠命令（488）或经 `/config` 改设置（684）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/agentic-workbench/agent-quick-menu) |
 | peer-inbox | ⭐ 2（所在仓库） | 把和其他会话之间 SendMessage 的收发记录留在提示框上方的条、提示和状态栏里，记录滚走了也还看得到。备注：只观察 session.send/receive，不改写；界面为日文；不运行其他程序、不联网。 |  | [链接](https://github.com/jiikko/dotfiles/tree/master/_claude/mods/peer-inbox) |
 | auto-resume | ⭐ 2（所在仓库） | 回合因限流或 API 过载中断时倒计时到重置，然后自动替你发一句 continue（文字可配）；你自己发消息就取消。备注：会以你的身份自动发出这句配置好的提示；prompt.submit 只检测接管不改写；不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/auto-resume) |
+| plugin-updates | ⭐ 2（所在仓库） | 检查已装插件和手动复制的技能是否落后上游，不替你更新：每天一次（会话开始 30 秒后）在 ~/.cache/plugin-updates 维护各市场/插件仓库的 blobless 镜像并 git fetch，按插件自己的目录数落后的提交数；有更新时状态行显示「updates: 名称 N」、新提交只 toast 一次；`/plugin-updates` 立即检查并列出缺的提交和 `claude plugin update …` 命令；版本号没变（CC 不会替换）的标为 held。技能目录里放 SOURCE.txt 可一并检查并给出 compare 链接。备注：与 mod-doctor 不同，它会联网 fetch 上游（只拉公开仓库代码，不发会话内容）；本机运行 git（参数先校验只接受 https URL/普通 ref/相对路径），只读 installed_plugins.json、known_marketplaces.json 和技能 SOURCE.txt；不改任何插件、不调用模型；npm/archive/本地目录等来源不检查。 | MIT | [链接](https://github.com/lbzepoqo/claude-plugins/tree/main/plugins/plugin-updates) |
 | model-pick | ⭐ 1（所在仓库） | `/pick` 打开模糊搜索面板，一次切换模型和 effort 组合（如输入 `op hi` 回车即依次执行 `/model opus` 与 `/effort high`）：可收藏常用组合、给组合起短别名（`=fx fable xhigh`）、保留最近 5 次选择，行号 1–9 直接选择；`/pick <别名或关键词>` 不开面板直接切换。备注：作者标注需 Claude Code 2.1.292+（本市场冒烟用 2.1.289 可正常加载）；只读 settings 里的 `availableModels`/`model` 来补充可选模型；选中后通过 Claude Code 自带的 `/model`、`/effort` 命令切换（遇到确认框时等待你确认）；`classic.SessionStart` 只在 /clear、/resume、/branch 后重新读取收藏，不加上下文；收藏、别名与最近记录存在插件存储里；不联网；仓库没有 LICENSE 文件。 |  | [链接](https://github.com/joshuatonga/claude-mods/tree/main/model-pick) |
 | command-coach | ⭐ 1（所在仓库） | 根据你的使用习惯（长输出、频繁提交、上下文快满、授权多等）弹出可用的命令和 mod 建议，`/coach` 查看。备注：prompt.submit 只计数、提示原样放行（hooks/register.ts 163–166）；tool.call 先原样执行再计数（168–181）；会跑 `claude plugin list --json` 看已装哪些 mod（83）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/command-coach) |
 | mod-profiles | ⭐ 1（所在仓库） | 把已装 mod 的启用组合存成 work、personal、demo 等配置，`/profile-mods` 一键切换。备注：切换时会跑 `claude plugin enable/disable` 改你的插件启用状态（hooks/register.tsx 128–131、cli.ts 18–19），只在你点按钮或输入命令时执行；列表用 `claude plugin list`（69）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mod-profiles) |
