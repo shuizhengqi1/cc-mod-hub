@@ -4686,6 +4686,15 @@
         "repo": "mjb-it/checklist",
         "sha": "a8aaeeab62da2f8fbb3dd304fe9319770bf306b8"
       }
+    },
+    {
+      "name": "loop-killer",
+      "description": "Ends a stop-hook (e.g. /goal) re-prompt loop: after repeated re-prompt turns with no tool work, runs /goal clear and says so.",
+      "source": {
+        "source": "github",
+        "repo": "cavi-ai/loop-killer",
+        "sha": "2e9dfc811705da1d66e4792ebf012f01e27e15e2"
+      }
     }
   ]
 }
