@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 577 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 578 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 577 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 578 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 577 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 578 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 577 个精选 Claude Code mods，按类别组织：
+以下是本市场的 578 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -449,6 +449,7 @@ For detailed descriptions of all 577 mods, see the Chinese section below. The �
 | difnote | — | 审阅「上次看过之后」改了什么：`/difnote` 打开窗格，按文件列出工作目录里的 diff（Claude、你自己、脚本或其他会话改的都算），可对某一行、某个 hunk 或整个文件写批注、标记已看，确认后标为已审；一键把批注连同 `文件:行号` 和引用的代码追加进提示框，你改好后自己发送。备注：在 Claude Code 插件数据目录里为每个工作目录建一个私有 git 影子库（不碰仓库自己的 .git，git 全局配置关闭），首次记录某个目录时 Edit/Write 最多等 5 秒；超过 1 MB 或名字像密钥的文件只记占位、不存副本；不监视 home、Desktop、Documents、Downloads、临时目录和 Claude Code 自己的目录；30 天没用的记录自动清空；批注只用 prompt.fill 追加、不替你发送；tool.call 只观察、不改写；不调用模型、不联网；需本机 git。 | Apache-2.0 | [链接](https://github.com/mmedum/difnote) |
 | drupal-phpcs | — | Drupal 项目里 Claude 改完或新建自定义模块的 PHP 文件（`web/modules/custom/` 下的 .php/.module/.install/.inc/.theme/.profile）后，在 DDEV 容器里对这个文件跑 phpcs（Drupal、DrupalPractice 标准），有问题就把报告（最多 30 行）附在这次 Edit/Write 的结果里让 Claude 当场改，状态栏显示 phpcs ✓/✗；webroot 不是 `web/` 时设环境变量 `DRUPAL_WEBROOT`（如 `docroot`）。备注：tool.call 先 `await next(e)` 执行编辑，再把 phpcs 报告追加到工具结果的 context（hooks/register.ts 15–18、43–48），不改写编辑内容、从不拦编辑；只在本机跑 `ddev exec vendor/bin/phpcs …`（60 秒超时，35–38），DDEV 没起或没装 phpcs 时静默跳过；不联网、不调模型。与 laravel-tooling（Laravel 的 Pint/Larastan）同思路，面向 Drupal。 | MIT | [链接](https://github.com/o0Charly0o/drupal-mods/tree/main/drupal-phpcs) |
 | architecture-sidecar | — | 在 Claude Code 里看项目架构：`/architecture` 打开窗格，按依赖分层显示组件与连接、每条工作流的时序图、改一个组件或关系可能影响什么（并对照本地 git 改动），每条结论都标「已观察/推断/未知」并能打开所引用的源码行；`/architecture build [范围]` 让 Claude 用自带 skill 写或刷新 `.architecture/model.json`，`review <plan.md>`、`preflight <spec.md>`、`explore` 把计划或规格对照现有架构审一遍；可在浏览器打开本地 HTML 视图。备注：mod 只渲染不分析，不联网、不调模型、无 prompt.submit 钩子；只有你执行 build/review/preflight/explore 时才以你的身份提交一条固定请求，让 Claude 调用同插件的 architecture-* skill（hooks/register.mjs 680–686、700–710、755–800）；本机只跑 `git diff`/`ls-files`（只读，868–873）、`rsvg-convert`（可选，把图转 PNG 内联显示）和 `open`/`xdg-open` 打开写在私有临时目录、权限 600、一天后清理的 HTML（603–642）；提示框上方常驻一行显示模型状态（1573–1579）。 | MIT | [链接](https://github.com/TribeAI/architecture-sidecar) |
+| mod-health | — | 排查 mod 为什么没加载、钩子有没有跑、界面有没有显示：`/mod-health` 输出引擎版本、可用界面、观测到的钩子结果；`/mod-health probe` 打开窗格和提示框上方横条各带一个确认按钮，验证界面能否显示和交互；`/mod-health json` 输出结构化报告；还给 Claude 注册一个只读的 report 工具，并附带 debug-mods 排查技能。备注：只观察 tool.call、plugin.register、ui.render，全部原样放行，只在内存保留最多 200 行元数据（插件名、事件名、结果、耗时），不记录提示、工具参数或结果；钩子模块不读写文件、不起进程、不联网、不调用模型；仓库里另有可选的配套 CLI（会启动本机 claude 做静态校验），不随 mod 运行。 | MIT | [链接](https://github.com/mcmanussliam/claude-mod-health) |
 
 ### 子代理管理 Subagent Management
 
