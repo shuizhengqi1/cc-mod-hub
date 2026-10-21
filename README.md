@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 580 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 582 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 580 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 582 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 580 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 582 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 580 个精选 Claude Code mods，按类别组织：
+以下是本市场的 582 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -571,6 +571,7 @@ For detailed descriptions of all 580 mods, see the Chinese section below. The �
 | workitems | — | 给其他 handily mod 提供统一的工作项列表（适配多种任务跟踪器）。备注：只读本地文件，通过 engine.create 提供 `$.workitems`；切换目录时刷新；不运行其他程序、不联网。 | MIT | [链接](https://github.com/niksavis/handily/tree/main/mods/workitems) |
 | quiet-items | — | 会话记录里每次写任务跟踪器的工具调用只显示成一行简短摘要，`/quiet-items` 切换。备注：依赖本批 workitems（安装时自动带上）；只改显示；不运行其他程序、不联网。 | MIT | [链接](https://github.com/niksavis/handily/tree/main/mods/quiet-items) |
 | task-board | — | `/task-board` 打开侧边面板，列出本会话的任务清单（TaskCreate/TaskUpdate 的任务），你可以加任务、改标题、切换状态（待办/进行中/完成）或删除，按 save 才写回任务清单；Claude 改任务时面板自动刷新。备注：面板通过 TaskList/TaskCreate/TaskUpdate 工具读写本会话任务；只在你按「save and send to Claude」时才用 `$.prompt.submit` 把任务清单作为一条提示发出；工具调用只观察、原样放行；不运行其他程序、不联网。 |  | [链接](https://github.com/estasney/MyClaudeCode/tree/master/task-board) |
+| evergreen-sessions | — | `/pin [备注]` 钉住当前会话，`/pins` 跨所有项目列出钉住的会话并给出现成的 `cd … && claude --resume <id>` 命令，`/unpin [序号或 id]` 取消；钉住会话的记录文件（含子代理目录）复制一份备份，每次会话结束时刷新，Claude Code 按 cleanupPeriodDays 清理旧记录时也不会丢。备注：清单存本机 `~/.claude/evergreen-sessions/pins.json`，备份在同目录 `backups/`；用 `$.process.run` 只运行 `mkdir -p`、`cp -p`/`cp -Rp` 和 `rm -rf`（只删被 /unpin 的那条备份）；不联网、不改提示；仓库另带可选的终端选择器 `bin/claude-pin`（明文 bash，需 jq，可选 fzf，要自己放进 PATH），原记录被清掉时从备份恢复后 `claude --resume`。 | MIT | [链接](https://github.com/himanshu07gupta/claude-evergreen-sessions) |
 
 ### 外部集成 External Integrations
 
@@ -653,6 +654,7 @@ For detailed descriptions of all 580 mods, see the Chinese section below. The �
 | where-am-i | ⭐ 260（所在仓库） | 提示上方只读回顾：目标/正在做/等你什么（观察工具调用，不改写）。 |  | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/where-am-i) |
 | winnow | ⭐ 110 | **推荐** 精简大型未使用的工具结果。 |  | [链接](https://github.com/GhalebDweikat/winnow) |
 | lcm | ⭐ 55 | 无损上下文管理：用 DAG 式分层摘要压缩对话，保留每条原始消息可回溯（prompt.context/prompt.submit 等钩子）。 | MIT | [链接](https://github.com/lossless-claude/lcm) |
+| brewmod-plan-effort | ⭐ 37（所在仓库） | 进入计划模式（Shift+Tab）时把主会话请求的 effort 提到设定档（默认 xhigh，可选 medium/high/xhigh/max），离开计划模式即恢复；只升不降，子代理和会话 effort 设置不动；提示框上方显示计划模式 effort 行并 toast 一次，`/plan-effort <档位>` 查看或修改。备注：turn.step 改写请求的 effort 字段（计划模式下会多花 token）；另带两个经典命令钩子（UserPromptSubmit、PostToolBatch）运行插件内明文 `node hooks/mode.mjs`，只把 permission_mode 写到插件目录 `.state/` 并清理 7 天前的状态文件；作者标注需 Claude Code 2.1.301+；不联网、不改提示内容。 | MIT | [链接](https://github.com/kochetkov-ma/claude-brewcode/tree/main/brewmod-plan-effort) |
 | effort-keys | ⭐ 34（所在仓库） | **推荐** 在提示框里按 Option+↑/↓（或 Ctrl+↑/↓）把推理 effort 升一级或降一级（low→medium→high→xhigh→max），走内置 `/effort` 命令。备注：用隐藏按钮借用 diff 面板文件列表的快捷键（app:diffFileListUp/Down）；turn.step 只读当前 effort、请求原样放行；会读设置里 modelSettings 的 effortLevel；不运行其他程序、不联网。来自作者的 dotfiles 仓库。 |  | [链接](https://github.com/wkentaro/dotfiles/tree/main/claude/mods/effort-keys) |
 | ContextSaver | ⭐ 27 | 标记浪费会话习惯。 | MIT | [链接](https://github.com/AlmogBaku/ContextSaver) |
 | loadout | ⭐ 19 | Claude Code 配置总开关：`/loadout` 面板按类别列出 CLAUDE.md/规则/记忆、技能与命令、子代理、MCP 服务器、hook 事件、插件、权限规则和设置项，每项标明来自哪个作用域（policy/flag/user/project/local/plugin 等，policy 与 flag 锁定不可改），一项一个开关；可存成多个 profile 整套切换（内置 vanilla 为全关基线），`/loadout status` 列出当前关掉的项。备注：关掉 CLAUDE.md/规则/记忆、技能、子代理、MCP 只在会话里生效、不写文件（prompt.context 去掉对应说明文件、skill.prompt 换成「已停用」说明、tool.describe 在停用的 MCP 工具描述前加一句停用说明、调用时 deny）；关掉设置里的 hook、权限规则、设置项或插件会改对应的 settings.json（第一次改之前备份到配置目录的 loadout-backups/，重新打开时把原条目放回原文件，不写符号链接的项目设置）；关掉某个 hook 事件会跳过该事件的全部 hook（包括安全类 hook），切到 vanilla 会关掉全部插件和设置里的 hook，请留意；改 profile 的命令只接受你本人在提示框输入的；不联网、不调模型、不起进程。 | MIT | [链接](https://github.com/MK27MK/loadout) |
