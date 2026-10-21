@@ -4704,6 +4704,16 @@
         "repo": "nibarAhmed/usage-hotkey",
         "sha": "ccc1300dd2443ac8e649583fd1393af02cec1ba3"
       }
+    },
+    {
+      "name": "control-watch",
+      "description": "A band above the prompt showing what Claude is controlling right now or in the last minute: your Chrome (Claude in Chrome), the built-in browser, desktop apps / your screen (computer use), Docker, simulators, terminals; a toast (and a macOS notification) when it takes over your real Chrome or a desktop app. Observe-only.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/abdallah-hatem/claude-skills.git",
+        "path": "plugins/control-watch",
+        "sha": "56f5b68cab8df9a1eb022a6b7e0fd8bc67d1b5e4"
+      }
     }
   ]
 }
