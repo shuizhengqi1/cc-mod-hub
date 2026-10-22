@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 594 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 595 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 594 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 595 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 594 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 595 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 594 个精选 Claude Code mods，按类别组织：
+以下是本市场的 595 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -459,6 +459,7 @@ For detailed descriptions of all 594 mods, see the Chinese section below. The �
 | mod-health | — | 排查 mod 为什么没加载、钩子有没有跑、界面有没有显示：`/mod-health` 输出引擎版本、可用界面、观测到的钩子结果；`/mod-health probe` 打开窗格和提示框上方横条各带一个确认按钮，验证界面能否显示和交互；`/mod-health json` 输出结构化报告；还给 Claude 注册一个只读的 report 工具，并附带 debug-mods 排查技能。备注：只观察 tool.call、plugin.register、ui.render，全部原样放行，只在内存保留最多 200 行元数据（插件名、事件名、结果、耗时），不记录提示、工具参数或结果；钩子模块不读写文件、不起进程、不联网、不调用模型；仓库里另有可选的配套 CLI（会启动本机 claude 做静态校验），不随 mod 运行。 | MIT | [链接](https://github.com/mcmanussliam/claude-mod-health) |
 | loop-killer | — | Stop hook（比如 /goal）不停回灌、Claude 连着几轮不调用任何工具空转时（默认连续 3 轮回复相似，或任意 6 轮），自动执行 /goal clear 结束循环，弹出提示并在该回合回答末尾附一行说明；两次触发至少相隔 10 回合，子代理回合不计。备注：只挂 turn.complete，只读本会话消息；只在检测到空转时自动运行 /goal clear 并在回答末尾追加一行说明，不改提示、不注入上下文；不联网、不跑子进程。 | MIT | [链接](https://github.com/cavi-ai/loop-killer) |
 | worktrees | — | `/worktrees` 侧边窗格清理 git worktree：扫描设定目录（默认 `~/code`）下所有带关联 worktree 的仓库，每个 worktree 显示判定（SAFE 已合并且无未提交改动 / DIRTY / LOCAL ONLY 未合并也未推送 / UNMERGED / LIVE 有会话在跑 / MISSING 目录已不存在）、闲置时长、相对你选定目标分支的合并状态（能识别 squash 合并），以及在里面工作过的 Claude 会话（可 `claude -r <id>` 接回）；勾选后一键删除。备注：仅 macOS（git 2.38+）；用本机 bash 跑 find/git/stat/lsof 扫描，把会话 cwd 与标题缓存到 `~/.claude/worktree-sessions-cache`；只有点 Fetch 才 `git fetch --prune`；Delete 先确认，跳过有会话在跑的，有改动或锁定的需打开 force，只对已合并分支执行 `git branch -D`；不上传会话内容，不改写提示或工具调用。 | MIT | [链接](https://github.com/ambareeshav/worktrees) |
+| dbview | — | `/db` 打开只读的 PostgreSQL 浏览窗格：树状列出已保存的连接和本机 Docker 里的 Postgres 容器，逐层展开数据库、schema、表，查看列、约束、索引、示例行和 DDL；`/db connect <url>` 保存连接，`/db forget`、`/db refresh`、`/db theme` 管理。备注：只读，所有查询经本机 psql 执行并强制 `default_transaction_read_only=on` 和语句超时；Docker 容器用 `docker ps`/`docker inspect`/`docker exec … psql` 访问，需本机装有 psql 或 docker；`/db connect` 保存的 URL（含密码）存在插件存储里，密码通过 PGPASSWORD 传给 psql、不出现在命令行；除数据库连接本身外不联网，不调模型，不改提示或工具调用。 | MIT | [链接](https://github.com/agntflw/claude-dbview) |
 
 ### 子代理管理 Subagent Management
 

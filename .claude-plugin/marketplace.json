@@ -4780,6 +4780,15 @@
         "repo": "RainZL0/code-tab-latex-fix",
         "sha": "928dcd0e36decbe094779b1a2c0d3ea8a19c9b2b"
       }
+    },
+    {
+      "name": "dbview",
+      "description": "Read-only PostgreSQL browser pane: /db opens a tree of your saved connections and local Docker Postgres containers, drilling down from databases and schemas to tables, showing columns, constraints, indexes, sample rows and DDL. Every query runs through local psql with default_transaction_read_only=on and a statement timeout; Docker containers are reached with docker exec. URLs saved with /db connect (including any password) are kept in plugin storage; the password is passed via PGPASSWORD, never on the command line. No network beyond the database connection itself, no model calls, no prompt changes.",
+      "source": {
+        "source": "github",
+        "repo": "agntflw/claude-dbview",
+        "sha": "43d7102c45b11040ac6951af31501452a30e4cf1"
+      }
     }
   ]
 }
