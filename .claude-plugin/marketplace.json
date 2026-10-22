@@ -4733,6 +4733,15 @@
         "repo": "moka-apps/unattended",
         "sha": "6eee2e0c5add3f6f46cd2b5d052d095be139e855"
       }
+    },
+    {
+      "name": "worktrees",
+      "description": "/worktrees docks a panel that lists every linked git worktree under your code folders (default ~/code) with a verdict (SAFE merged and clean, DIRTY, LOCAL ONLY, UNMERGED, LIVE session, MISSING), idle time, merge state against the target branches you pick (squash merges detected) and the Claude sessions that worked in it; tick the finished ones and delete them in one go. macOS only. Local git/find/stat/lsof scan; git fetch only when you press Fetch; delete asks first and only deletes merged branches. No network upload, no prompt or tool rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "ambareeshav/worktrees",
+        "sha": "7b3babce3fe82196ea9a9a0f105d9d2a1528ecae"
+      }
     }
   ]
 }
