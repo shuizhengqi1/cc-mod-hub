@@ -4762,6 +4762,15 @@
         "path": "plugins/link-footer",
         "sha": "614713d06ca8ac1177b308bffe12381ccf3b6e02"
       }
+    },
+    {
+      "name": "tdd-mod",
+      "description": "Keeps Claude to Red → Green → Refactor on coding tasks: before each Write, Edit or NotebookEdit of a non-test source file, a judge model (Haiku by default, via $.model.complete on your own Claude account) checks the change against the TDD rules (port of probity's enforceTdd) and denies it with the reason when it skips a failing test or implements more than the test needs; Bash commands that write source files are denied so changes go through Write/Edit. Covers subagents too. Deny only, never rewrites; prompt.submit only labels the typed prompt coding/other and passes it on unchanged. Each judged write costs extra Haiku calls (session excerpt, capped). /tdd-eval replays its regression cases.",
+      "source": {
+        "source": "github",
+        "repo": "koslowskyj/tdd-mod",
+        "sha": "3516167e1a00f5d0d8e5dffcb5f31279c3641f34"
+      }
     }
   ]
 }
