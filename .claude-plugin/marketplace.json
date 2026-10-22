@@ -4817,6 +4817,15 @@
         "path": "plugins/keep-awake-linux",
         "sha": "41409b355b329cef32ab0bee62226e03c852ca3b"
       }
+    },
+    {
+      "name": "cargo-progress",
+      "description": "Shows cargo's progress bar under a running cargo command instead of a line per crate, and leaves a short result note when it finishes (build errors/lint errors/warnings and time, or tests passed/failed/ignored with failing names). Transparently wraps Bash commands that call cargo in a shell function that runs the mod's bundled perl script (bin/cargo-progress.pl); Claude still gets cargo's normal output and exit code. Permission denies for the original command still apply; never allows a call itself. Needs perl (falls back to plain cargo without it); no network.",
+      "source": {
+        "source": "github",
+        "repo": "Celsiusss/cargo-progress-claude-mod",
+        "sha": "3905aae27a8b84e7c7f157472e3559411d30d73b"
+      }
     }
   ]
 }
