@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 596 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 598 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 596 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 598 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 596 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 598 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 596 个精选 Claude Code mods，按类别组织：
+以下是本市场的 598 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -240,6 +240,7 @@ For detailed descriptions of all 596 mods, see the Chinese section below. The �
 | ran-once | — | 防止误把同一条 shell 命令跑两次：Claude 回复里的 bash/sh/zsh/shell 代码块一旦跑过（Claude 桌面版点 Run 按钮，或在提示框用 `!` 输入执行），该代码块就变暗显示并去掉 Run 按钮，仍可选中复制、手动再跑；之后回复里出现同一命令的新代码块，在它跑之前仍保留 Run 按钮。备注：只读本会话历史、在插件存储里记代码块标识；不联网、不调模型、不跑本机进程、不改提示；作者注明需 Claude Code 2.1.304+（Run 按钮在桌面版，终端里只有 `!` 运行会变暗）；按命令文本完全匹配，点旧代码块会让最新一个未跑的同命令块变暗。 | MIT | [链接](https://github.com/m1cster/ran-once) |
 | code-tab-latex-fix | — | 让 Claude 桌面版 Code 标签页能渲染回复里的 LaTeX 公式，而不是显示成原始文本：回复流式输出时在行内 `\(...\)` 前补上 Code 标签页要求的空格，把 `\(n\)` 这类没有数学符号的公式改成纯文本，并改写几种 Code 标签页不认的写法（如 `\|x\|`）。备注：只改回复正文，且改动会写进会话记录（存的是改写后的文本）；行内代码、代码块、thinking、工具调用和写文件都不碰；不联网、不调模型、不跑本机进程、不改提示；终端里本来就不渲染公式，改写无害。与 cc-math-renderer（终端里把 LaTeX 画成 Unicode）面向的界面不同。 | MIT | [链接](https://github.com/RainZL0/code-tab-latex-fix) |
 | callout-colors | — | 让长回复里不能漏看的段落更醒目：以「Decision for you / Needs your input / Your call」开头的段落画成带边框的警示色块，「Summary / TL;DR / Recap」段落和工具调用之间的引擎摘要画成提示色块；子代理（Agent/Task）调用和结果左侧加按代理区分颜色的竖条，让调用和结果对上、并行子代理分得清，折叠视图显示一行身份信息和结果（工具数、token、耗时、报告首行），ctrl+o 展开时保留引擎原样。备注：只改显示（`ui.render` 的 AssistantMessage、ToolUse、ToolResult），保存的会话和 Claude 看到的内容不变；需要回复里用这些标题才会生效；与 needs-you 部分相近但不加按钮、不发消息；无命令，不联网，不调模型，不运行其他程序。 | MIT | [链接](https://github.com/Tyru5/claude-callout-colors) |
+| adhd-reader-zh | — | ADHD Reader 的中文增强版：把 Claude 回复里每个词的开头加粗、方便扫读，先用系统自带的 `Intl.Segmenter` 给简体和繁体中文分词再加粗（词典不认识的词按两个字一组），英文照常；提示框上方一键开关、5 档强度，`/adhd` 切换。备注：基于 UBRN/adhd-reader（MIT）改写，与本市场已收的 adhd-reader 功能重叠，二者择一安装即可（斜杠命令不冲突：那个是 `/adhd-reader`）；只改回复的显示（hooks/register.tsx 119–123），不改对话内容；不运行外部程序、不联网；单次提交，带测试。 | MIT | [链接](https://github.com/yuanruoyu515/adhd-reader-zh) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -659,6 +660,7 @@ For detailed descriptions of all 596 mods, see the Chinese section below. The �
 | shell-mode | — | `/shell-mode` 打开一个 Bash 控制台面板，连续输入命令执行并保留颜色和当前目录，退出后命令和输出仍显示在对话记录里。备注：仅 Windows（用 Git for Windows 的 Bash，可用 CLAUDE_CODE_GIT_BASH_PATH 指定）；你在面板里输入的命令会照原样用 `bash --login -c` 执行；输出存到本机 `%LOCALAPPDATA%\Claude\shell-mode\history\`，对话记录（模型能看到的部分）里只留一个引用编号，显示时再从本机存档读出；不联网。 |  | [链接](https://github.com/h1048576/claude-mods/tree/main/shell-mode) |
 | table-copy | — | 把最后一次回答里的 Markdown 表格复制成 TSV（适合粘到 Excel）或 CSV：提示框上方出现「복사 / 표 N」按钮，点一下就复制到剪贴板；`/copy-table [编号|all]` 也可复制（韩文界面，`/config` 选 TSV/CSV）。备注：占用提示框上方、多装会互相遮挡；只读主代理的回答文本找表格，通过 `$.ui.copy` 复制到剪贴板；不运行其他程序、不联网。 |  | [链接](https://github.com/sooop/my-claude-settings/tree/main/my-mods/table-copy) |
 | strays | — | 找出 Claude Code 启动后一直没结束的进程（开发服务器、watcher、无头浏览器等，包括已关闭会话留下的），显示端口、内存、运行时长和来自哪个会话；`/strays`（别名 `/ps`）列出或打开面板，可按编号结束一个或全部遗留进程，也能在浏览器打开它的端口、复制启动命令。备注：仅限 macOS；只运行插件自带、可直接阅读的三个 shell 脚本：bin/scan.sh 用 ps/lsof 找带 CLAUDECODE 标记或挂在会话下的进程，bin/info.sh 查单个进程详情，bin/kill.sh 只在你按键或输入 `/strays kill` 时执行，先 TERM 再 KILL，并核对 pid 的启动时间、属于当前用户、不会结束 Claude Code 本身；另外只在你点按钮时运行 `open`/`pbcopy`；不联网，不拦也不改工具调用。和本市场的 port-watch 相近（port-watch 列出本机所有监听端口），这个只找 Claude 留下的进程并能结束它们。 | MIT | [链接](https://github.com/huynamboz/strays) |
+| keep-awake-linux | — | 在 Linux 上让 Claude 工作时系统不进入空闲挂起或睡眠：每次回合开始、工具调用、回合结束都续期，空闲超过设定分钟数（默认 30）或会话结束就自动放开；`/keep-awake-info` 打开窗格，列出哪些 Claude 会话正在阻止休眠（活跃、孤儿、重复）。备注：仅限装有 systemd 的 Linux，与 macOS 专用的 cc-mod-caffeinate 互补；运行 `systemd-inhibit --what=idle:sleep … sleep 1800`（每段 30 分钟租期，Claude 异常退出后也会自己失效）并用 `ps` 读取状态（hooks/register.tsx 53–63、117、131）；没有 systemd-inhibit 时只弹一条提示、不报错（box 冒烟即如此）；tool.call 原样放行；不联网。 | MIT | [链接](https://github.com/hk9890/claude-dev-tools/tree/master/plugins/keep-awake-linux) |
 
 ### 其他工具 Other Tools
 
