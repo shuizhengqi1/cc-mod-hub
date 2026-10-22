@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 599 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 600 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 599 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 600 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 599 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 600 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 599 个精选 Claude Code mods，按类别组织：
+以下是本市场的 600 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -241,6 +241,7 @@ For detailed descriptions of all 599 mods, see the Chinese section below. The �
 | code-tab-latex-fix | — | 让 Claude 桌面版 Code 标签页能渲染回复里的 LaTeX 公式，而不是显示成原始文本：回复流式输出时在行内 `\(...\)` 前补上 Code 标签页要求的空格，把 `\(n\)` 这类没有数学符号的公式改成纯文本，并改写几种 Code 标签页不认的写法（如 `\|x\|`）。备注：只改回复正文，且改动会写进会话记录（存的是改写后的文本）；行内代码、代码块、thinking、工具调用和写文件都不碰；不联网、不调模型、不跑本机进程、不改提示；终端里本来就不渲染公式，改写无害。与 cc-math-renderer（终端里把 LaTeX 画成 Unicode）面向的界面不同。 | MIT | [链接](https://github.com/RainZL0/code-tab-latex-fix) |
 | callout-colors | — | 让长回复里不能漏看的段落更醒目：以「Decision for you / Needs your input / Your call」开头的段落画成带边框的警示色块，「Summary / TL;DR / Recap」段落和工具调用之间的引擎摘要画成提示色块；子代理（Agent/Task）调用和结果左侧加按代理区分颜色的竖条，让调用和结果对上、并行子代理分得清，折叠视图显示一行身份信息和结果（工具数、token、耗时、报告首行），ctrl+o 展开时保留引擎原样。备注：只改显示（`ui.render` 的 AssistantMessage、ToolUse、ToolResult），保存的会话和 Claude 看到的内容不变；需要回复里用这些标题才会生效；与 needs-you 部分相近但不加按钮、不发消息；无命令，不联网，不调模型，不运行其他程序。 | MIT | [链接](https://github.com/Tyru5/claude-callout-colors) |
 | adhd-reader-zh | — | ADHD Reader 的中文增强版：把 Claude 回复里每个词的开头加粗、方便扫读，先用系统自带的 `Intl.Segmenter` 给简体和繁体中文分词再加粗（词典不认识的词按两个字一组），英文照常；提示框上方一键开关、5 档强度，`/adhd` 切换。备注：基于 UBRN/adhd-reader（MIT）改写，与本市场已收的 adhd-reader 功能重叠，二者择一安装即可（斜杠命令不冲突：那个是 `/adhd-reader`）；只改回复的显示（hooks/register.tsx 119–123），不改对话内容；不运行外部程序、不联网；单次提交，带测试。 | MIT | [链接](https://github.com/yuanruoyu515/adhd-reader-zh) |
+| smart-rtl | — | 让 Claude 桌面版（及其他非终端界面）里的 Claude Code 正确显示希伯来语、阿拉伯语、波斯语等从右到左文字：按段落、列表、表格判断方向，用 Unicode 双向控制符排版，行内代码、数学和 LaTeX 保持从左到右，代码块不动，你自己输入的 RTL 提示右对齐；`/rtl` 开关（记在本机 `$.store`）。备注：只改显示（ui.render AssistantMessage/UserMessage），终端界面不处理，与终端用的 rtl 互补；`/ltr` 仅限 Windows，运行插件自带的 `windows/claude-ltr.ps1`，会强制关闭 Claude 桌面版并以 `--force-ui-direction=ltr` 重启；不联网、不调模型。 | MIT | [链接](https://github.com/xShakedDev/RTL-For-Claude-Desktop) |
 
 ### 趣味与吉祥物 Fun & Mascots
 

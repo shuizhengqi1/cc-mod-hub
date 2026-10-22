@@ -4826,6 +4826,15 @@
         "repo": "Celsiusss/cargo-progress-claude-mod",
         "sha": "3905aae27a8b84e7c7f157472e3559411d30d73b"
       }
+    },
+    {
+      "name": "smart-rtl",
+      "description": "Right-to-left (Hebrew, Arabic, Persian) layout for Claude Code in the Claude desktop app and other non-terminal surfaces: per paragraph/list/table direction detection, expressed with Unicode bidi controls in the rendered text; inline code, math and LaTeX stay left-to-right, code blocks are untouched, and your own RTL prompts are right-aligned. /rtl toggles it (remembered in $.store). Display only (ui.render on AssistantMessage/UserMessage); the terminal is left alone (complements the terminal rtl mod). /ltr (Windows only) runs the bundled windows/claude-ltr.ps1, which closes Claude Desktop and restarts it with --force-ui-direction=ltr. No network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "xShakedDev/RTL-For-Claude-Desktop",
+        "sha": "99b5f48b251304906c5ccaf6f72612f354679945"
+      }
     }
   ]
 }
