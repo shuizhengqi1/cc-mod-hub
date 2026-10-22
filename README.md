@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 588 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 589 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 588 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 589 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 588 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 589 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 588 个精选 Claude Code mods，按类别组织：
+以下是本市场的 589 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -725,6 +725,7 @@ For detailed descriptions of all 588 mods, see the Chinese section below. The �
 | info-holder | — | 提示框上方的记事板：把长会话里要随时看的信息贴在这里，`/info` 编辑。备注：内容只给你看，不会发给模型；不运行其他程序、不联网。 | MIT | [链接](https://github.com/jpzrdev/claude-mods/tree/main/info-holder) |
 | draft-pane | — | 转录旁的面板显示模型最新写的草稿（标为 `draft` 的代码块，也可指向文件），可以逐段选中写批注或批注整篇，按 Submit 把批注合成一条提示发出，按 Approve 表示直接采用。备注：附带 `draft` 技能，教模型把草稿写在标为 `draft` 的代码块里；只在你按 Submit/Approve 时才用 `$.prompt.submit` 发出你自己写的批注；草稿指向文件时只读该文件显示；纯本机、不联网。 | MIT | [链接](https://github.com/meganemura/draft-pane/tree/main/plugin) |
 | remote-control-toggle | — | 提示框上方一行显示 Remote Control 是否开启、连着几个手机或网页客户端，带一个开/关按钮（等同输入 `/rc`）；`/rc-status` 以文字输出同样的状态。备注：占用提示框上方、多装会互相遮挡；每 5 秒读一次本机命令列表和会话连接情况来判断状态；只有你按按钮（或按 r 键）时才运行 Claude Code 自带的 `/remote-control` 开关远程控制，开启后会话可从你的手机或网页端访问；不运行其他程序，模组本身不联网。 |  | [链接](https://github.com/standbib/claude-mods/tree/main/remote-control-toggle) |
+| unattended | — | 放着让 Claude 跑、人不在键盘前时不让会话卡在提问上：`/unattended` 开关（或以 `CLAUDE_UNATTENDED=1` 启动），开启后拒绝 AskUserQuestion 与 EnterPlanMode，并提示 Claude 自行选最合理的选项、在回复里说明选了什么和理由后继续。备注：只拒绝（deny），不改写提示或工具输入，无联网；以计划模式启动的会话仍会停在计划审批。 | MIT | [链接](https://github.com/moka-apps/unattended) |
 
 ---
 
