@@ -4724,6 +4724,15 @@
         "path": "agens-view",
         "sha": "978ac9fe63b9a4fba72bfb6c90c74c77b104424a"
       }
+    },
+    {
+      "name": "unattended",
+      "description": "Stops a Claude Code session from asking you questions when nobody is at the keyboard: while on (/unattended, or launch with CLAUDE_UNATTENDED=1), AskUserQuestion and EnterPlanMode are denied with a note telling Claude to pick the most sensible option itself, say which and why, and carry on. Deny-only; no rewriting, no network.",
+      "source": {
+        "source": "github",
+        "repo": "moka-apps/unattended",
+        "sha": "6eee2e0c5add3f6f46cd2b5d052d095be139e855"
+      }
     }
   ]
 }
