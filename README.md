@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 590 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 592 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 590 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 592 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 590 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 592 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 590 个精选 Claude Code mods，按类别组织：
+以下是本市场的 592 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -158,6 +158,7 @@ For detailed descriptions of all 590 mods, see the Chinese section below. The �
 | tool-trim-compaction | — | 压缩时不做摘要：删掉较早的工具调用和它们的结果，保留第一条和最近 6 条消息里的调用，所有对话原文照留；削减不到 25% 就交回标准摘要；另外在上下文用到 60% 时自动触发一次 compact；日文说明。备注：session.compact 返回裁剪后的消息列表，只删不加（register.ts 13–30、trim.ts 20–46）；每回合结束检查用量，到 60% 自动 `$.session.compact()`（33–47）；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/okamyuji/tool-trim-compaction) |
 | skill-map | — | 侧栏显示主会话里加载过哪些技能、各占多少 token、落在上下文窗口哪个位置，压缩后被丢掉的划线显示，`/skill-map` 开关。备注：prompt.submit 只计轮数、提示原样放行（hooks/register.tsx 104–107）；session.append、session.compact、tool.call 只观察、原样放行（114–137）；不运行其他程序、不联网。 |  | [链接](https://github.com/vuon9/cc-mods/tree/main/plugins/skill-map) |
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
+| defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
 
 ### UI 与主题 UI & Themes
 
@@ -235,6 +236,7 @@ For detailed descriptions of all 590 mods, see the Chinese section below. The �
 | ccpopout | — | `/popout` 打开会话阅读窗格：选你发过的一条消息，只看 Claude 从那之后做了什么，每个工具调用折成一行（可逐个展开），可隐藏思考、一键清爽视图，按 p/n 前后翻；在 tmux 或 herdr 里用 `/popout side`（或 `/popout-side`）在旁边的终端格打开同样的阅读器，实时跟随会话。备注：只读：tool.call / turn.complete 先原样执行再刷新窗格（hooks/register.tsx 711–721），不改写工具调用、提示或结果，不联网；侧格需 Node 20+，运行插件自带的 tui/popout.mjs 读本机会话记录，打开侧格时先把当前会话消息写成 CLAUDE_CONFIG_DIR 下的临时快照，阅读器读后即删（register.tsx 596–604，popout.mjs 1817–1823）；复制时用 OSC 52 或本机 pbcopy/wl-copy/xclip。 | MIT | [链接](https://github.com/EmreErdogan/ccpopout) |
 | paste-inline | — | 让粘贴和语音输入的文字在提示框里保持可编辑：Claude Code 会把多行或长粘贴折成 `[Pasted text #N +X lines]` 标签，没法检查或改；这个 mod 发现新标签且剪贴板里文字的行数与标签相符时，把标签换回原文（前后已打的字保留），适合 Wispr Flow、Typeless 等经剪贴板输入的听写和片段工具；`maxLines` 可让超长粘贴保持折叠，`/paste-inline on\|off` 开关。备注：每 250 毫秒读一次提示框草稿，出现新标签才运行本机剪贴板命令（pbpaste / wl-paste / xclip / xsel / powershell.exe，或你在 `clipboardCommand` 里设的命令）读剪贴板（hooks/register.ts 14–31、47–70）；只用 prompt.fill 改草稿、不自动发送，不用 prompt.submit；行数不符就不动、不重试；SSH 下通常没有剪贴板，标签保持原样；不联网。 | MIT | [链接](https://github.com/rafal-one/paste-inline) |
 | statusline-footer | — | 把你 `statusLine` 设置里的状态行脚本输出画到模式指示行（如「⏵⏵ auto mode on · …」）同一行的右侧，而不是单独占一行，省出一行终端高度，适合手机或分屏；脚本不用改（喂给它同样的 JSON），装好后要从 settings.json 删掉原 `statusLine` 条目，否则会画两次；可在 /config 设脚本路径和指示列宽。备注：每 30 秒及回合开始/结束、每次工具调用后用本机 `bash` 运行你自己的状态行脚本（5 秒超时，只取第一行）；渲染 PromptHint 时有输出就不调 next，可能盖住其他 mod 的提示行；不联网。 | MIT | [链接](https://github.com/erikus/statusline-footer) |
+| link-footer | — | 在终端里每条 Claude 回复下方，把回复中的每个 URL 再列一行 OSC 8 可点超链接：标签去掉协议、过长时省略路径中段、保证不折行，点击打开完整地址，解决长链接折行后点开是半截的问题。备注：只改终端显示（ui.render AssistantMessage，先画原回复再追加），Claude 看到的内容不变，零 token、不联网；需终端支持 OSC 8（Windows Terminal 为 Ctrl+点击）。与已有 url-links（只处理工具输出里的链接）互补。 | MIT | [链接](https://github.com/javirub/claude-mods/tree/main/plugins/link-footer) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
