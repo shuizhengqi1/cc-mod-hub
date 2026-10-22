@@ -4789,6 +4789,15 @@
         "repo": "agntflw/claude-dbview",
         "sha": "43d7102c45b11040ac6951af31501452a30e4cf1"
       }
+    },
+    {
+      "name": "callout-colors",
+      "description": "Makes the parts of long replies you must not miss stand out: sections headed 'Decision for you', 'Needs your input', 'Your call' are drawn in a bordered box in the theme's warning color, 'Summary', 'TL;DR' and 'Recap' sections (and the engine's between-tool-call summaries) in the suggestion color. Subagent (Agent/Task) calls and results get an indented left rail in a per-agent color so each call pairs with its result and parallel agents stay apart, with a compact one-line identity and outcome (tools, tokens, time, report first line); ctrl+o keeps the engine's expanded view. Display only (ui.render): the stored conversation and what Claude sees are unchanged. No commands, no network, no model calls, no processes.",
+      "source": {
+        "source": "github",
+        "repo": "Tyru5/claude-callout-colors",
+        "sha": "7173fb311488dd969c37a2bb78c6c9ae43639ef0"
+      }
     }
   ]
 }
