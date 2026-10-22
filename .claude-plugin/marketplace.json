@@ -4714,6 +4714,16 @@
         "path": "plugins/control-watch",
         "sha": "56f5b68cab8df9a1eb022a6b7e0fd8bc67d1b5e4"
       }
+    },
+    {
+      "name": "switchboard",
+      "description": "A Board pane listing every local Claude Code session (Desktop Code tab and terminal) with its state: Needs You (permission prompt, question, API error) on top, then Working and Idle, with last-reply preview, branch/PR, context bar and background tasks; click to jump to the session (macOS; Desktop sessions on Windows). Observe-only; status reports are written under ~/.claude/switchboard/reports.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wide3751/switchboard.git",
+        "path": "agens-view",
+        "sha": "978ac9fe63b9a4fba72bfb6c90c74c77b104424a"
+      }
     }
   ]
 }
