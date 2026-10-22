@@ -4771,6 +4771,15 @@
         "repo": "m1cster/ran-once",
         "sha": "7679996e862a8b81a574093e2345db197451a353"
       }
+    },
+    {
+      "name": "code-tab-latex-fix",
+      "description": "Makes LaTeX math in Claude's replies render in the Code tab of the Claude desktop app instead of showing as raw text: as the reply streams it adds the space the Code tab needs before inline \\(...\\), turns trivial formulas like \\(n\\) into plain text, and adjusts a few constructs the Code tab rejects. Only reply text is rewritten (before display and before it is saved to the transcript); inline code, fenced code blocks, thinking, tool calls and file writes are untouched. No network, no model calls, no process, no prompt changes.",
+      "source": {
+        "source": "github",
+        "repo": "RainZL0/code-tab-latex-fix",
+        "sha": "928dcd0e36decbe094779b1a2c0d3ea8a19c9b2b"
+      }
     }
   ]
 }
