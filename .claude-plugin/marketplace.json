@@ -4762,6 +4762,15 @@
         "path": "plugins/link-footer",
         "sha": "614713d06ca8ac1177b308bffe12381ccf3b6e02"
       }
+    },
+    {
+      "name": "ran-once",
+      "description": "Guards against running a shell command twice by accident: once a bash/sh/zsh/shell code block from Claude's reply has run (its Run button in the Claude desktop app, or typed with ! at the prompt), that block is drawn dimmed and without its Run button; it stays selectable for copying. A later reply with the same command keeps its own Run button until that one runs. Reads only the session history, stores block keys in plugin state, no network, no model calls, no process, no prompt changes. Needs Claude Code 2.1.304+ for full effect.",
+      "source": {
+        "source": "github",
+        "repo": "m1cster/ran-once",
+        "sha": "7679996e862a8b81a574093e2345db197451a353"
+      }
     }
   ]
 }
