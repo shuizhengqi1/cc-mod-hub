@@ -4914,6 +4914,22 @@
       },
       "homepage": "https://github.com/geethasagarb/query-guard",
       "license": "MIT"
+    },
+    {
+      "name": "agent-trace",
+      "description": "Adds a trace pane (/agent-trace, titled 轨迹) showing what the agent did this session as a Langfuse-style tree: turns → model steps → the tool calls each step asked for → subagent runs nested under the Agent call that spawned them. Each model step shows the messages it added since the previous request, tokens, cache hit (yellow under 50%, ⚠ when uncached input jumps 3×), time to first token, tok/s, thinking and reply preview; per-tool stats (count/total/average/failures), a clickable 3-lane timeline, and search. Observe-only: turn.step passes every stream chunk through unchanged, tool.call records and returns the result unchanged; optional captureSystemPrompt (off by default) only reads the prompt.compose result and returns it unchanged. Records live in session state (max 2000 rows, full payloads of the latest 150, each block clipped); no network, no child processes, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "jasoncai0/claude-agent-trace",
+        "sha": "bf38cc2140839027f8a9b50aa427aa1fcf32275d"
+      },
+      "version": "0.5.0",
+      "author": {
+        "name": "jasoncai0",
+        "url": "https://github.com/jasoncai0"
+      },
+      "homepage": "https://github.com/jasoncai0/claude-agent-trace",
+      "license": "MIT"
     }
   ]
 }
