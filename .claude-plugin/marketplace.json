@@ -5062,6 +5062,23 @@
       },
       "homepage": "https://github.com/Monte9/claude-memory-mods/tree/main/view-memory",
       "license": "MIT"
+    },
+    {
+      "name": "agent-atc",
+      "description": "Air-traffic control for subagents: /atc opens a pane listing every subagent as a tree (status, elapsed time, current tool call; 'quiet' when a running agent has made no tool call for 90s), pick one with 1-9 to see its model, call count, tokens, recent tool trail and final answer, then type a message to it (or a follow-up to a finished agent) or press Stop. Status line shows the running count; optionally auto-opens on the first subagent on wide terminals. Messages go only to the picked agent via $.session.send when you press Send; Stop calls the built-in TaskStop only when you press it; tool.call/agent.spawn/turn.complete are observed and passed through unchanged; no network, no model calls, no external programs, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tinyorbit-ai/skills.git",
+        "path": "mods/agent-atc",
+        "sha": "8e71ca6e7dfbbdaa91e44bc28136ac4d3520e429"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Matteo Hertel",
+        "url": "https://github.com/tinyorbit-ai"
+      },
+      "homepage": "https://github.com/tinyorbit-ai/skills/tree/main/mods/agent-atc",
+      "license": "MIT"
     }
   ]
 }
