@@ -4930,6 +4930,22 @@
       },
       "homepage": "https://github.com/jasoncai0/claude-agent-trace",
       "license": "MIT"
+    },
+    {
+      "name": "session-load",
+      "description": "A band above the prompt for people running many Claude Code sessions on a Mac: CPU and memory column charts grouped by Claude Code session (each session plus everything it started: shells, test runs, dev servers, subagent tools), with a 90-second trend; processes still running after their session ended (grouped by worktree, yellow); Claude's own helpers in grey; and work in progress — test/lint/build/deploy commands running on the machine, in-progress GitHub Actions runs for the session's repo, and running subagents — with percent done and time left estimated from previous run durations. macOS only. Polls fixed read-only commands (ps, memory_pressure, sysctl every 3 s; ~/.claude/sessions/*.json every 15 s; `gh run list` in the session cwd every 30 s, using your local gh login, only to read Actions status). Hooks pass through unchanged (session.start calls next first; ui.render keeps next(e) below the band). Duration history in the plugin store; no model calls, no session content sent anywhere.",
+      "source": {
+        "source": "github",
+        "repo": "chcliu/session-load",
+        "sha": "7f3d7f28505e975922519fad87d354c7bc1120db"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "chcliu",
+        "url": "https://github.com/chcliu"
+      },
+      "homepage": "https://github.com/chcliu/session-load",
+      "license": "MIT"
     }
   ]
 }
