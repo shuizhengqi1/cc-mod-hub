@@ -4995,6 +4995,23 @@
       },
       "homepage": "https://github.com/Nachx639/context-canary",
       "license": "MIT"
+    },
+    {
+      "name": "lean-comments",
+      "description": "Checks every Edit and Write Claude makes and refuses changes that add banner/divider comments, multi-line comments (including multi-line /** */ doc blocks unless allowDocComments is on), comments over 120 characters, narrating or labelling comments (\"Step 1: …\", \"# Helpers\"), or more than 3 new comments in one change, so Claude rewrites it with only short why-comments. Only comments the change adds are checked; tool directives (eslint-disable, @ts-expect-error, noqa, license headers, …) are never flagged; Markdown/prose files are skipped. Settings: mode block (default) / warn / off, maxLength, maxNewComments, allowDocComments. Deny-only by default (warn mode lets the edit through and appends a note to the tool result); no network, no model calls, no child processes, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/WilsonKinyua/claude-mods.git",
+        "path": "plugins/lean-comments",
+        "sha": "07fba7fd798bbb68dab984ad2a5e15cad1618e62"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Wilson Kinyua",
+        "url": "https://github.com/WilsonKinyua"
+      },
+      "homepage": "https://github.com/WilsonKinyua/claude-mods/tree/main/plugins/lean-comments",
+      "license": "MIT"
     }
   ]
 }
