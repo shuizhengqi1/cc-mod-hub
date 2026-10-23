@@ -4835,6 +4835,36 @@
         "repo": "xShakedDev/RTL-For-Claude-Desktop",
         "sha": "99b5f48b251304906c5ccaf6f72612f354679945"
       }
+    },
+    {
+      "name": "aws-guard",
+      "description": "Denies AWS CLI calls that delete IAM roles or policies (iam delete-role*/delete-policy*), change AWS Organizations (any organizations operation other than describe-*/list-*), or destroy KMS keys (schedule-key-deletion, delete-imported-key-material), and tells Claude to hand you the exact command to run yourself with the ! prefix. Finds the aws call through bash -c, env, xargs, sudo, subshells, command substitutions and PowerShell wrappers; help and --generate-cli-skeleton pass. Deny only, never rewrites or allows a command. Reads the command line as written (no variable/alias expansion; AWS Tools for PowerShell cmdlets and SDK scripts are not checked), so it is a guardrail, not a security boundary. No network.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DustyStudy/claude-code-guardrails.git",
+        "path": "mods/aws-guard",
+        "sha": "374d844f96b87bcc42fc931ac2bfdb35f5f10f26"
+      }
+    },
+    {
+      "name": "tf-plan-summary",
+      "description": "Gives Claude a plan_summary tool for a saved Terraform plan (terraform plan -out=FILE): it runs terraform show -json locally and returns only a few lines - counts to add/change/replace/destroy/import/forget, drift, every destroy and replace (with the attributes forcing a replace), IAM/KMS/security group/S3 policy and other security-sensitive changes listed by attribute name only (never values), and changing outputs - so the model does not read the raw plan. Needs terraform on PATH; runs it via $.process.spawn without a shell; on failure returns only terraform's first Error line. No network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DustyStudy/claude-code-guardrails.git",
+        "path": "mods/tf-plan-summary",
+        "sha": "374d844f96b87bcc42fc931ac2bfdb35f5f10f26"
+      }
+    },
+    {
+      "name": "output-trimmer",
+      "description": "Keeps long output of noisy commands out of the model's context: for terraform/tofu init/plan/apply/destroy/import/refresh, checkov/trivy/tfsec/prowler, npm/pnpm/yarn/bun/pip/uv/poetry installs and docker build/pull/compose, output over 120 lines is cut in the result Claude sees to the first 15 lines, up to 30 error/warning lines from the middle, and the last 40 lines, with a note giving the path of the full output. Rewrites only those tool results (never the command); the full stdout/stderr is written first to claude-output/ under $TEMP/$TMPDIR (or /tmp), and if that write fails the result is returned untouched; files are left to OS temp cleanup. No network.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DustyStudy/claude-code-guardrails.git",
+        "path": "mods/output-trimmer",
+        "sha": "374d844f96b87bcc42fc931ac2bfdb35f5f10f26"
+      }
     }
   ]
 }
