@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 603 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 604 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 603 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 604 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 603 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 604 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 603 个精选 Claude Code mods，按类别组织：
+以下是本市场的 604 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -129,6 +129,7 @@ For detailed descriptions of all 603 mods, see the Chinese section below. The �
 | weekly-tokens | — | 按真实的每周额度重置时间切分，从本机会话记录（`~/.claude/projects/**/*.jsonl`）统计每周用掉的 token（输入、缓存读写、输出），并记下 Claude Code 报告的每周额度百分比，算出「每 1% 额度≈多少 token」和 100% 约合多少，方便看出一周的额度是不是缩水了；`/tokens` 打开窗格按周柱状对比，状态行显示本周用量。备注：会话开始、每 10 分钟以及额度读数变化时用 $.process.run 调本机 python3 跑仓库自带的 `bin/weekly-tokens.py`（需本机 python3），只读会话记录里的 usage 数字，不存会话正文；缓存在 `~/.cache/weekly-tokens/`，额度读数存在 `~/.claude/state/weekly-tokens.json`；百分比只在装上之后、订阅账号有每周限额时才有，以前的周只显示 token 数；不联网、不改写提示和工具。 | MIT | [链接](https://github.com/IgorMonasterio/claude-weekly-tokens) |
 | bedrock-meter | — | 给按 token 计费的 Amazon Bedrock 会话用的费用与 token 表：提示框上方一条带显示本会话费用、上下文占比、输入/输出 token、缓存读取与命中率和今日合计；/bedrock-cost 打开按模型拆分的面板（附 Claude Code /cost 全局价对照），可设会话预算提醒。备注：价格来自仓库内 AWS 官方价目表（hooks/prices.ts，含区域价与可配的区域加价%），只是估算；turn.step / session.compact / session.measure 只读 usage 原样返回；开局用 $.fs 读本机 ~/.claude/projects 下本会话 transcript 补算加载前的用量；每日合计存在插件 store、保留 31 天；会读 ~/.claude/claude-code-mods/bands.json 与 hamzafer 的 band mod 排序；不联网、不改提示、不运行进程。 | MIT | [链接](https://github.com/weidu-tpvision/claude-mods/tree/main/bedrock-meter) |
 | usage-hotkey | — | 给 Windows 上用 NVDA 读屏的用户：按一个热键，NVDA 朗读上下文 token、5 小时与每周额度（含重置时间）、本对话占各额度的百分比和费用；多个会话同时跑时按各自花费拆分额度涨幅。备注：仅 Windows + NVDA；需在 ~/.claude/keybindings.json 把热键绑到 app:toggleDiffNoiseFilter；按键时本机 process 用 powershell（-ExecutionPolicy Bypass）运行插件自带 scripts/speak.ps1，经随附的 NV Access 官方 nvdaControllerClient.dll（LGPL-2.1，SHA-256 与官方 2026.2 发布包一致）朗读；不联网，不改提示。 | MIT | [链接](https://github.com/nibarAhmed/usage-hotkey) |
+| litellm-key | — | 给通过 LiteLLM 代理用 Claude 的人：底栏一行预算摘要，/litellm 打开面板看虚拟 key 的预算、花费、速率限制、到期、可用模型和近 30 天用量（可复制/导出 CSV、JSON），预算用完时提示框上方常驻提醒，接近预算（默认 80%）、key 将到期或代理出错时 toast，可另设每日花费提醒（默认关）。管理员还可新建/修改/封禁 key、追加预算、看路由 fallback。备注：只连 Claude Code 已在用的代理（ANTHROPIC_BASE_URL 或 litellm_url），用它已发送的 key（可另配 admin key）；默认每 60 秒和每回合结束后读取一次；管理操作每次先弹窗确认；只有你运行 /litellm share 时才把报告（不含 key）交给 Claude；不改提示、不运行进程、不调模型。 | MIT | [链接](https://github.com/juninmd/cc-litellm/tree/main/plugins/litellm-key) |
 
 ### 上下文管理 Context Management
 
