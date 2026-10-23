@@ -5079,6 +5079,22 @@
       },
       "homepage": "https://github.com/tinyorbit-ai/skills/tree/main/mods/agent-atc",
       "license": "MIT"
+    },
+    {
+      "name": "doorbell",
+      "description": "Band above the prompt that rings when a GitHub pull request needs you, across all your repos: review requested from you, new comments on your PRs (bot comments hidden by default), approvals, and your merged PR shipping in a release; each item links to the PR, with a desktop/in-session notification when something new appears. /doorbell picks which repos and which of the four events to watch. One session holds a lease and polls GitHub GraphQL through your own gh login (read-only queries, default every 60s); state is shared under ~/.cache/doorbell. Optional per-trigger Actions (off by default): 'ask' shows a run button, 'auto' runs your own prompt/skill in the session or a background agent (max 3 per hour). No other network calls, no model calls, no prompt rewriting, tool calls untouched.",
+      "source": {
+        "source": "github",
+        "repo": "jaylane/doorbell",
+        "sha": "d7996e53112f249243c57795ee8b385b7bbb6007"
+      },
+      "version": "0.2.1",
+      "author": {
+        "name": "jaylane",
+        "url": "https://github.com/jaylane"
+      },
+      "homepage": "https://github.com/jaylane/doorbell",
+      "license": "MIT"
     }
   ]
 }

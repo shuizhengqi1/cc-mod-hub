@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 616 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 617 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 616 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 617 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 616 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 617 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 616 个精选 Claude Code mods，按类别组织：
+以下是本市场的 617 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -522,6 +522,7 @@ For detailed descriptions of all 616 mods, see the Chinese section below. The �
 | desktop-notify | ⭐ 1（所在仓库） | **推荐** Claude 做完或需要你时发系统桌面通知。备注：用 osascript / notify-send / powershell，参数经 argv/环境变量传入、不拼接命令（hooks/register.ts 39–50、82）；通知里会带最多 200 字的回答摘要（99），只发到本机通知中心。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/desktop-notify) |
 | long-run-alert | ⭐ 1（所在仓库） | 单条命令跑太久时提醒你。备注：只用计时器弹提示（hooks/register.ts 18–35）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/long-run-alert) |
 | sounds-minimal | ⭐ 1（所在仓库） | 很短很轻的咔嗒和滴答声：测试通过一下、失败两下低音、被拦截一下、一轮结束轻轻一下。备注：只观察工具结果，用 `$.audio` 播放插件自带的 WAV；同类音效包装一个即可；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/sounds-minimal) |
+| doorbell | — | 跨你所有仓库的 GitHub PR 提醒带：提示框上方一行显示请你审查的 PR（👀）、你的 PR 有新评论（💬，默认不含机器人）、你的 PR 被批准（✅）、你合并的 PR 进了发布（🚀），每项可点开，有新事件时发通知；`/doorbell` 选择盯哪些仓库、哪几种事件。备注：用你本机已登录的 gh 跑只读 GraphQL 查询（默认 60 秒一次，多个会话只由持有租约的一个轮询，状态存 ~/.cache/doorbell，hooks/gh.ts、lease.ts）；macOS 上用 osascript 发桌面通知；可选 Actions 默认关闭：设为 ask 时条目旁出现 ▶ 由你按，设为 auto 时会在空闲会话里以你的身份 $.prompt.submit / 运行斜杠命令，或起后台子代理，执行你自己写的提示（每触发器每小时最多 3 次；PR 标题和评论包在 untrusted 围栏里，但仍有提示注入风险，建议只用 {pr_url} 等占位符）（hooks/run.ts 22–40、register.tsx 128–130、163–184）；不调模型、不改写提示、工具调用不碰。 | MIT | [链接](https://github.com/jaylane/doorbell) |
 | bus-band | — | 读本机 ~/.agent-team-os（或 AB_HOME）收件箱，在提示框上方列出本会话待处理的 Agent Team OS 消息，紧急消息弹 toast，/bus-band 显隐。只观察。备注：有消息时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/mariomosca/agent-team-os/tree/main/mods/bus-band) |
 | inbox-band | — | 提示框上方显示共享收件箱文件里有几条新报告、几条可能需要你处理。备注：需配合 herdr（只读 ~/.config/herdr/inbox.md 与 inbox.read）；纯本机。 | MIT | [链接](https://github.com/soyakaai-studio/claude-herdr-mods/tree/master/mods/inbox-band) |
 | work-alerts | — | 工作提醒：回合较长（默认 60 秒以上）结束、出错停下、子代理完成或失败、测试/lint/类型检查/构建命令失败（附失败摘要）、上下文用到 60%/85%、5 小时或 7 天用量到 80%/95% 时弹提示并播放提示音，重要的再发一条 macOS 系统通知；/alerts 开关提示、声音、系统通知或调整长回合秒数，/task-alert 快速开关声音。备注：提示文字是韩语；声音用 macOS 的 `afplay` 播放系统音效、系统通知用 `osascript`，其他系统只弹应用内提示；tool.call 只在 Bash 跑完后读取结果、原样放行；不联网。 |  | [链接](https://github.com/parkyountaek/claude-mods/tree/main/work-alerts) |
