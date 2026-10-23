@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 613 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 614 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 613 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 614 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 613 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 614 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 613 个精选 Claude Code mods，按类别组织：
+以下是本市场的 614 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -97,6 +97,7 @@ For detailed descriptions of all 613 mods, see the Chinese section below. The �
 | limit-watch | ⭐ 11（所在仓库） | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
 | context-xray | ⭐ 10（所在仓库） | 窗格拆开上下文占用：系统提示、工具、记忆、skills、消息。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/context-xray) |
 | turn-budget | ⭐ 10（所在仓库） | 单个回合超过 +5 个会话额度点或 50 万未缓存输入 token 时，在两次请求之间弹框问你是否继续，可停止该回合；/turn-budget 调整阈值或关闭。备注：只在请求之间检查，不打断正在运行的命令；你选「Stop here」时会往会话追加一条说明「用户已在此停止」的消息并中止回合（你选才会）。 | MIT | [链接](https://github.com/VedantAndhale/claude-pro-kit/tree/main/plugins/turn-budget) |
+| leaks | ⭐ 10（所在仓库） | `/leaks` 打开面板，回放本机最近 7 天会话记录（`/leaks --days 30` 看更久），按 API 价格排出可避免的花费：超过压缩点仍继续的会话、离开后提示缓存过期重建、只读子代理用了大模型、子代理缓存在步骤间过期、每回合重复读取的超大工具输出，每项给出修复办法，设置项（如 autoCompactWindow）或 CLAUDE.md 一行可按 a 一键应用；提示框上方一条实时提示正在发生的浪费（上下文超过 warn_at，默认 40 万 token，或大会话的 1 小时缓存即将/已经过期及重写成本），带「compact now」和「hide」按钮。备注：用本机 node 运行插件自带 leaks.mjs（需 Node 22+），只读 ~/.claude/projects；只有按「apply」才写 ~/.claude/settings.json 或 ~/.claude/CLAUDE.md；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/davekiss/mods/tree/main/leaks) |
 | budget-guard | ⭐ 9（所在仓库） | 费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard) |
 | tokenscope-live | ⭐ 7（所在仓库） | `/tokenscope` 开关侧边窗格，实时显示本会话：你的目标（ASKED）、Claude 当前在做什么及持续时长（NOW）、测试失败数变化、已改文件、按回合的成本加权 token 走势图、费用和上下文占用；配合 tokenscope 的 `tokenscope live` 本机服务时还能按「意图」分组显示步骤与花费、子代理、成本/跑偏/循环告警（可确认或清除）和回合结束后的总结与建议，`/tokenscope top 5h\|24h\|7d\|30d` 列出最费 token 的会话或意图。备注：需另装 tokenscope（Python，读取本机 `~/.claude/projects` 会话记录，默认只监听 127.0.0.1 且默认脱敏）；没有服务时退回本机模式，只显示当前工具、调用计数和 token 走势；mod 每秒用 `$.http.fetch` 向本机服务（默认 `http://127.0.0.1:8765`，可用 `TOKENSCOPE_LIVE_URL` 改）读取本会话数据，只发送会话 id 和告警编号，不发送对话内容；所有钩子只观察、原样放行，不改提示、不注入上下文、不运行其他程序；服务端的 `--haiku` / `--name-with-claude` 是可选项，会经你自己的 claude CLI 发送脱敏后的提示开头。 | MIT | [链接](https://github.com/rstagi/tokenscope/tree/main/mod/tokenscope-live) |
 | turn-footer | ⭐ 6（所在仓库） | 每条回答下方改成回合摘要（工具、请求、tokens、缓存命中）。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/turn-footer) |

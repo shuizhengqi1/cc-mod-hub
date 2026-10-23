@@ -5028,6 +5028,23 @@
       },
       "homepage": "https://github.com/illsv/extended-polls-plugin",
       "license": "MIT"
+    },
+    {
+      "name": "leaks",
+      "description": "Finds where your Claude Code week went: /leaks opens a pane that replays the last 7 days of local transcripts (~/.claude/projects, /leaks --days 30 for more) and ranks the avoidable spend at API prices — sessions running past the compact point, cache rebuilt after a break, read-only subagents on a big model, subagent caches expiring between steps, huge tool outputs re-read every turn — each with the fix; a setting (e.g. autoCompactWindow) or a CLAUDE.md line applies with one press (a), writing ~/.claude/settings.json or ~/.claude/CLAUDE.md only when you press it. A strip above the prompt flags a leak as it happens (context past warn_at, default 400k, or a 1h cache about to expire / expired on a big conversation, with the re-write cost) with compact now / hide buttons. Runs the bundled leaks.mjs with local node (Node 22+); no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davekiss/mods.git",
+        "path": "leaks",
+        "sha": "5e8a57745a1ee65e71befd2bc3d91b50b9addc3d"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Dave Kiss",
+        "url": "https://github.com/davekiss"
+      },
+      "homepage": "https://github.com/davekiss/mods/tree/main/leaks",
+      "license": "MIT"
     }
   ]
 }
