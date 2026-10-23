@@ -4978,6 +4978,23 @@
       },
       "homepage": "https://github.com/summerz/errfold",
       "license": "MIT"
+    },
+    {
+      "name": "context-canary",
+      "description": "Makes instruction drift visible in long sessions: /canary setup (after asking for consent) adds a rule to CLAUDE.md that every final answer must start with a sentinel (default 🐤), optionally with 1–5 checkpoint words spread through the file. When an answer misses it, a small canary above the prompt dies, a notice names the missing part, and by default the built-in session compaction runs with instructions to keep your rules; a second miss within 30 minutes locks automatic compaction. /canary log lists the last 30 misses. Reads answer text on turn.complete and only appends a one-line note; writes only CLAUDE.md (with consent) and its own store; no network, no model calls, no child processes, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Nachx639/context-canary.git",
+        "path": "plugins/context-canary",
+        "sha": "7f8e3f6a1a527c8091c25b2fe0e95157f7a419da"
+      },
+      "version": "1.3.6",
+      "author": {
+        "name": "Nachx639",
+        "url": "https://github.com/Nachx639"
+      },
+      "homepage": "https://github.com/Nachx639/context-canary",
+      "license": "MIT"
     }
   ]
 }
