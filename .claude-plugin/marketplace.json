@@ -4946,6 +4946,22 @@
       },
       "homepage": "https://github.com/chcliu/session-load",
       "license": "MIT"
+    },
+    {
+      "name": "brainless-claude-progress",
+      "description": "A progress pane (/progress) and a one-line status-line summary for the current ticket: steps Write → Review → Verify → CI → Merge, CI status with time estimates learned from past runs (medians), running background agents and bash tasks, and a 'Your turn' marker when Claude is waiting on you. Reads PR/CI state with fixed read-only gh commands (gh pr view, gh pr list --state merged, gh repo view) using your local gh login. Hooks only observe: tool.call calls next first; prompt.submit only detects the UI language and passes the prompt through unchanged. Animated spark can be turned off with /progress still. UI in English, 繁體中文, 简体中文, 日本語. No model calls, no network besides gh, no session content sent anywhere.",
+      "source": {
+        "source": "github",
+        "repo": "greedysisyphus/Brainless-Claude-Progress",
+        "sha": "ad7bc92631eec7a078bd6414da1ffee7014934e1"
+      },
+      "version": "1.1.1",
+      "author": {
+        "name": "greedysisyphus",
+        "url": "https://github.com/greedysisyphus"
+      },
+      "homepage": "https://github.com/greedysisyphus/Brainless-Claude-Progress",
+      "license": "MIT"
     }
   ]
 }
