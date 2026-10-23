@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 614 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 615 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 614 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 615 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 614 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 615 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 614 个精选 Claude Code mods，按类别组织：
+以下是本市场的 615 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -155,6 +155,7 @@ For detailed descriptions of all 614 mods, see the Chinese section below. The �
 | segmem | ⭐ 1 | 长期记忆：区分身份（你是谁）、过程（仓库如何工作）、情节（周二发生了什么）与人物档案；按衰减窗口加载，项目级作用域，压缩历史为摘要，无需服务器或守护进程。 |  | [链接](https://github.com/mahuebel/segmem) |
 | resume-brief | ⭐ 1（所在仓库） | 新会话开始时显示你上次在做什么（分支、首条提示摘要），带 Continue 按钮。备注：把上次会话首行提示摘要存插件本地存储（hooks/register.tsx 106–112）；只有点 Continue 按钮才 prompt.submit（141–145、225）；prompt.submit 钩子只用来隐藏卡片、原样放行（172–176）；只读 `git rev-parse`（97）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/resume-brief) |
 | context-canary | ⭐ 1 | 检测长会话把 CLAUDE.md 里的指令忘掉：/canary setup（先征得同意）在 CLAUDE.md 写一条规则，要求每条最终回复以哨兵（默认 🐤）开头，可在文件各处加 1–5 个检查词；某条回复缺了，提示框上方的像素金丝雀就「死掉」并说明丢了哪部分，默认调用内置压缩并保留你的规则，30 分钟内再次失败就暂停自动压缩；/canary log 看最近 30 次。备注：turn.complete 只读回答、只追加一行提示；只在征得同意后改 CLAUDE.md，不联网、不调模型、不起子进程；每条回复会多一个前缀。 | MIT | [链接](https://github.com/Nachx639/context-canary) |
+| view-memory | ⭐ 1（所在仓库） | `/view-memory` 窗格浏览所有项目的自动记忆（不只当前项目）：全局搜索记忆文件、列出 `due YYYY-MM-DD` 已过期的条目、检查各文件夹健康（MEMORY.md 未链接的文件、失效链接、符号链接文件夹缺的文件），并显示本项目每次会话会载入哪些 CLAUDE.md/MEMORY.md 及其 token 数；单次回复重读超 150k token 时提示一次存记忆后 /clear。备注：只读本机文件，仅运行 `git rev-parse` 找仓库根；prompt.context 只观察、原样返回；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/Monte9/claude-memory-mods/tree/main/view-memory) |
 | context-pane | — | /context-pane 侧边窗格列出本会话读过和改过的文件、用过的 skill、MCP 服务器调用次数，以及已载入的记忆文件（CLAUDE.md 等）和估算 token；会话开始时自动打开。只观察：tool.call、skill.prompt、session.compact 都先 next 再记录，不改写；用量用本机 summary 估算，不发计数请求。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/context-pane) |
 | teach-me | — | 改代码后在提示框上方出一道多选题；/a 作答。备注：使用 $.model.complete（本机 diff，不外传）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-teach-me) |
 | handoff | — | 每个改动了工作区的回合结束后，在项目的 `.claude/handoff/` 里写 LATEST.md（分支、提交、模型、本回合 Edit/Write 过的文件、git diff --stat 与 status、接手步骤）和 LATEST.patch（git diff HEAD，超过 30 万字符时按文件/hunk 截断并注明），方便下一个会话或同事接手。备注：会自动在项目里写文件（同时写一个内容为 `*` 的 .gitignore，不会被提交）；补丁排除 .env、*.pem、*.key、名字含 secret/credential 的文件等；`prompt.submit` 只清空本回合的文件列表、原样放行；只跑本机 git 只读命令；不联网、不注册命令。 | MIT | [链接](https://github.com/OrenSegal/sous/tree/main/mods/handoff) |

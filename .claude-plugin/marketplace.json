@@ -5045,6 +5045,23 @@
       },
       "homepage": "https://github.com/davekiss/mods/tree/main/leaks",
       "license": "MIT"
+    },
+    {
+      "name": "view-memory",
+      "description": "/view-memory opens a Memory pane over every project's Claude Code auto-memory folder (~/.claude/projects/*/memory), not only the current one: search across all memory files, an Overdue list of lines whose `due YYYY-MM-DD` has passed, per-folder health (files MEMORY.md doesn't link, dead links, missing files in symlinked folders), and what each session here loads (CLAUDE.md files and MEMORY.md with token sizes). Once a reply re-reads more than 150k tokens it shows a one-time toast suggesting saving memory and /clear. Read-only: only reads local files and runs `git rev-parse` to find the repo root; prompt.context is observed only (result returned unchanged); no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Monte9/claude-memory-mods.git",
+        "path": "view-memory",
+        "sha": "4f54074281634858c54987b0914ee62dfcf40cf1"
+      },
+      "version": "0.4.1",
+      "author": {
+        "name": "Monte Thakkar",
+        "url": "https://github.com/Monte9"
+      },
+      "homepage": "https://github.com/Monte9/claude-memory-mods/tree/main/view-memory",
+      "license": "MIT"
     }
   ]
 }
