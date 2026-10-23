@@ -4898,6 +4898,22 @@
       },
       "homepage": "https://github.com/summerz/clipring",
       "license": "MIT"
+    },
+    {
+      "name": "query-guard",
+      "description": "Holds risky database commands that Claude runs through Bash (sqlite3, psql, mysql, snowsql, databricks CLI, dbt) until you choose: DROP TABLE/DATABASE/SCHEMA, TRUNCATE, DELETE or UPDATE without WHERE, ALTER TABLE ... DROP COLUMN, dbt --full-refresh, and any command whose host, URL, connection, profile or dbt target names prod/production. A pane (or a band above the prompt on narrow terminals) shows the command, why it was held, the targets and, for local SQLite files, the current row count; Proceed (1) runs the command unchanged, Cancel (2) or closing the pane denies it. A status line counts held commands. Only waits/denies, never rewrites the command; runs only `sqlite3 -readonly ... SELECT COUNT(*)` on local SQLite files and `sleep` while waiting; no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "geethasagarb/query-guard",
+        "sha": "80759cbb781750f9f83c9900a5ee925b23b56010"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Geetha Sagar Bonthu",
+        "url": "https://github.com/geethasagarb"
+      },
+      "homepage": "https://github.com/geethasagarb/query-guard",
+      "license": "MIT"
     }
   ]
 }
