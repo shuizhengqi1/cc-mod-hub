@@ -5012,6 +5012,22 @@
       },
       "homepage": "https://github.com/WilsonKinyua/claude-mods/tree/main/plugins/lean-comments",
       "license": "MIT"
+    },
+    {
+      "name": "extended-polls",
+      "description": "Gives Claude a poll tool (mcp__extended-polls__ask) for up to 30 multiple-choice questions on one screen (configurable 1-100; 2-10 options each, single or multi-select, optional recommended option and a free-text Other field), answered in a keyboard-first pane beside the conversation, so a batch of planning decisions can be settled at once instead of AskUserQuestion's 4 questions x 4 options. The call waits until you press Submit or Cancel (closing the pane only hides it; a band above the prompt or /poll brings it back), then Claude gets every answer, unanswered ones as skipped. 22 interface languages. Runs a small local /bin/sh waiter in a temp dir to hold the call open; no network, no model calls, no prompt rewriting, does not touch other tools.",
+      "source": {
+        "source": "github",
+        "repo": "illsv/extended-polls-plugin",
+        "sha": "12d7057012ec349a05da7b5a7e950acd4aceeac6"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "illsv",
+        "url": "https://github.com/illsv"
+      },
+      "homepage": "https://github.com/illsv/extended-polls-plugin",
+      "license": "MIT"
     }
   ]
 }
