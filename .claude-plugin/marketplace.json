@@ -4962,6 +4962,22 @@
       },
       "homepage": "https://github.com/greedysisyphus/Brainless-Claude-Progress",
       "license": "MIT"
+    },
+    {
+      "name": "errfold",
+      "description": "Folds failed tool calls to a single red line in the transcript (✗ tool, short input, first error line; ctrl+o expands the full output) and keeps a session log of tool errors: /errors toggles a pane listing them newest first (lines per error configurable, c clears), and the status line shows '✗ n tool errors'. Display-only: tool.call passes every call through unchanged and only records failures; the log lives in memory only; no network, no model calls, no child processes.",
+      "source": {
+        "source": "github",
+        "repo": "summerz/errfold",
+        "sha": "759c0175c85b6a5991911d7f19d06cc4e5d934cc"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "summerz",
+        "url": "https://github.com/summerz"
+      },
+      "homepage": "https://github.com/summerz/errfold",
+      "license": "MIT"
     }
   ]
 }

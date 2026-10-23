@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 609 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 610 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 609 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 610 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 609 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 610 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 609 个精选 Claude Code mods，按类别组织：
+以下是本市场的 610 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -245,6 +245,7 @@ For detailed descriptions of all 609 mods, see the Chinese section below. The �
 | adhd-reader-zh | — | ADHD Reader 的中文增强版：把 Claude 回复里每个词的开头加粗、方便扫读，先用系统自带的 `Intl.Segmenter` 给简体和繁体中文分词再加粗（词典不认识的词按两个字一组），英文照常；提示框上方一键开关、5 档强度，`/adhd` 切换。备注：基于 UBRN/adhd-reader（MIT）改写，与本市场已收的 adhd-reader 功能重叠，二者择一安装即可（斜杠命令不冲突：那个是 `/adhd-reader`）；只改回复的显示（hooks/register.tsx 119–123），不改对话内容；不运行外部程序、不联网；单次提交，带测试。 | MIT | [链接](https://github.com/yuanruoyu515/adhd-reader-zh) |
 | smart-rtl | — | 让 Claude 桌面版（及其他非终端界面）里的 Claude Code 正确显示希伯来语、阿拉伯语、波斯语等从右到左文字：按段落、列表、表格判断方向，用 Unicode 双向控制符排版，行内代码、数学和 LaTeX 保持从左到右，代码块不动，你自己输入的 RTL 提示右对齐；`/rtl` 开关（记在本机 `$.store`）。备注：只改显示（ui.render AssistantMessage/UserMessage），终端界面不处理，与终端用的 rtl 互补；`/ltr` 仅限 Windows，运行插件自带的 `windows/claude-ltr.ps1`，会强制关闭 Claude 桌面版并以 `--force-ui-direction=ltr` 重启；不联网、不调模型。 | MIT | [链接](https://github.com/xShakedDev/RTL-For-Claude-Desktop) |
 | clipring | — | 提示框的 kill ring（类似 Emacs）：Alt+Backspace 剪切选中文字或光标所在行（连按会合并成一条），Ctrl+Alt+Backspace 剪切整段草稿，Ctrl+U / Ctrl+K 删掉的文字也会收进来；最多保存 50 条、跨会话保留，最新一条同时复制到系统剪贴板。提示框上方一条显示当前选中的片段（Alt+↑/↓ 切换、Alt+V 粘贴到光标处、Alt+D 删除），`/clips` 或 Alt+C 打开列表窗格（回车粘贴），Alt+H 看帮助；快捷键都可在插件选项里改。备注：只在你按它的快捷键时改提示框草稿（prompt.edit 返回新文本 / prompt.fill 插入，hooks/register.tsx 71–122、32、189），从不自动发送；剪切内容存在本机插件存储（$.store）里，敏感内容剪切后会留在历史中，可用 Alt+D 删掉；Alt+V 等默认键可能与其他用这些键的 mod 冲突，可改；与 cut-input 都会捕获 Ctrl+U/K，同时装无害。不联网、不调模型、不起子进程。 | MIT | [链接](https://github.com/summerz/clipring) |
+| errfold | — | 失败的工具调用在对话里折成一行红字（✗ 工具名、简短输入、第一行报错，ctrl+o 展开全文）；`/errors` 开关错误列表窗格（最新在上，每条显示行数可设，按 c 清空），状态栏显示「✗ n tool errors」。备注：只改显示；tool.call 原样放行、只记录失败（hooks/register.tsx 42–52）；错误记录只在内存，重载即清；不联网、不调模型、不起子进程。与 compact-tools、exit-badge 部分重叠（折叠失败行），新增的是本会话错误列表窗格。 | MIT | [链接](https://github.com/summerz/errfold) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
