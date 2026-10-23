@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 600 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 603 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 600 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 603 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 600 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 603 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 600 个精选 Claude Code mods，按类别组织：
+以下是本市场的 603 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -159,6 +159,7 @@ For detailed descriptions of all 600 mods, see the Chinese section below. The �
 | skill-map | — | 侧栏显示主会话里加载过哪些技能、各占多少 token、落在上下文窗口哪个位置，压缩后被丢掉的划线显示，`/skill-map` 开关。备注：prompt.submit 只计轮数、提示原样放行（hooks/register.tsx 104–107）；session.append、session.compact、tool.call 只观察、原样放行（114–137）；不运行其他程序、不联网。 |  | [链接](https://github.com/vuon9/cc-mods/tree/main/plugins/skill-map) |
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
 | defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
+| output-trimmer | — | terraform/tofu init/plan/apply/destroy、checkov/trivy/tfsec/prowler 扫描、npm/pnpm/yarn/bun/pip/uv/poetry 安装、docker build/pull/compose 等嘈杂命令输出超过 120 行时，交给 Claude 的结果只留前 15 行、中间最多 30 行错误/警告和后 40 行，并注明完整输出文件的路径，省上下文。备注：会改写这些命令的工具结果（命令本身不改）；裁剪前先把完整 stdout/stderr 写到 $TEMP/$TMPDIR（或 /tmp）下的 claude-output/，写入失败就原样返回；文件留给系统清理；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/output-trimmer) |
 
 ### UI 与主题 UI & Themes
 
@@ -331,6 +332,7 @@ For detailed descriptions of all 600 mods, see the Chinese section below. The �
 | tool-gate | — | 目录策略：Claude 的文件工具（Read/Grep/Glob/LS 读，Edit/MultiEdit/Write/NotebookEdit 写）或 Bash 命令里出现的路径（含重定向目标，会跟进 `sh -c`/`eval` 嵌套）超出本项目时先拦下问你。默认：项目（git 检出及 worktree 的主检出）可读写；`~/Projects`、`~/Documents`、`~/Desktop`、`~/Downloads`、iCloud Drive 这些私有目录在项目之外既不读也不写；其他路径可读，只有临时和缓存目录可写；可在 `~/.config/agents/tool-gate.json` 或项目的 `.agents/tool-gate.json`、`.claude/tool-gate.json` 里加读写授权、derived（生成出来的路径，写时提示去改源头）和免检命令，`/tool-gate` 查看当前策略。备注：挂在权限判定 `tool.check` 上，只把放行/询问改成询问或拒绝，不改写工具参数，Claude Code 自己的拒绝保持不变（hooks/register.ts 142–180）；默认、acceptEdits、plan 模式交给 Claude Code 自带的确认框，auto 模式由 mod 自己弹「允许一次 / 本会话允许该目录 / 拒绝」，`-p`/SDK 无人可问时直接拒绝，bypassPermissions 下不管；classic.SessionStart/UserPromptSubmit 只读取 permission_mode、原样放行（115–116）；会话开始在本机跑一次 `git rev-parse` 找项目根（125–127）；不联网。与 path-jail（只管项目内写）同类但更全：也管读和 Bash 命令里的路径。 | MIT | [链接](https://github.com/justmytwospence/claude-tool-gate) |
 | drupal-guard | — | Drupal/DDEV 项目里 Claude 要跑会毁数据或 git 救不回的命令时先弹窗问你：重装站点（`drush si`、`site:install`）、`sql:drop`/`DROP TABLE`/`TRUNCATE`、批量 `entity:delete`、`ddev delete`/`poweroff`/`snapshot restore`/`import-db`、`rm -rf`、`find … -delete`、`git clean -f`/`stash drop`/`branch -D`、`config:import`（`cim`）。备注：挂在权限判定 `tool.check`（只看 Bash），只把结果改成询问、不改写命令，已有的 deny 规则保持拒绝（hooks/register.ts 18–29）；不运行外部程序、不联网；按命令文本正则匹配，`TRUNCATE`、`cim` 等词出现在别的命令里也会问。与 block-destructive-commands 部分重叠（rm -rf、SQL drop、git clean），多出 Drush/DDEV/配置导入这些 Drupal 专属命令。 | MIT | [链接](https://github.com/o0Charly0o/drupal-mods/tree/main/drupal-guard) |
 | trash-guard | — | Claude 永远不做不可恢复的删除：临时目录（/tmp、/var/folders）以外的 rm、unlink、rmdir、git clean、find -delete 一律拒绝，并告诉 Claude 改用废纸篓（macOS 14+ 的 trash、Finder「放回原处」或 Linux 的 gio trash），删了也能找回；引号和 heredoc 里的 rm 文字不误报，$( … )、&&、;、sudo 后面的 rm 仍能拦住；可用 allowed_paths 选项加放行目录。备注：只拒绝（deny），不改写命令；只读命令文本，不运行进程、不联网（hooks/register.js 81–98）。 | MIT | [链接](https://github.com/benjaminb10/encore-mods/tree/main/plugins/trash-guard) |
+| aws-guard | — | Claude 要跑会删除 IAM 角色/策略（`iam delete-role*`/`delete-policy*`）、改动 AWS Organizations（describe/list 以外的操作）或销毁 KMS 密钥（`schedule-key-deletion`、`delete-imported-key-material`）的 AWS CLI 命令时直接拦下，让 Claude 把完整命令交给你用 `!` 前缀自己运行；能识别 `bash -c`、env、xargs、sudo、子 shell、命令替换和 PowerShell 包装，help 与 `--generate-cli-skeleton` 放行。备注：只 deny，不改写命令（hooks/register.ts）；只看写出来的命令行，不展开变量/别名，不检查 AWS Tools for PowerShell cmdlet 和 SDK 脚本，作者说明这是防误操作护栏而不是安全边界；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/aws-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -464,6 +466,7 @@ For detailed descriptions of all 600 mods, see the Chinese section below. The �
 | worktrees | — | `/worktrees` 侧边窗格清理 git worktree：扫描设定目录（默认 `~/code`）下所有带关联 worktree 的仓库，每个 worktree 显示判定（SAFE 已合并且无未提交改动 / DIRTY / LOCAL ONLY 未合并也未推送 / UNMERGED / LIVE 有会话在跑 / MISSING 目录已不存在）、闲置时长、相对你选定目标分支的合并状态（能识别 squash 合并），以及在里面工作过的 Claude 会话（可 `claude -r <id>` 接回）；勾选后一键删除。备注：仅 macOS（git 2.38+）；用本机 bash 跑 find/git/stat/lsof 扫描，把会话 cwd 与标题缓存到 `~/.claude/worktree-sessions-cache`；只有点 Fetch 才 `git fetch --prune`；Delete 先确认，跳过有会话在跑的，有改动或锁定的需打开 force，只对已合并分支执行 `git branch -D`；不上传会话内容，不改写提示或工具调用。 | MIT | [链接](https://github.com/ambareeshav/worktrees) |
 | dbview | — | `/db` 打开只读的 PostgreSQL 浏览窗格：树状列出已保存的连接和本机 Docker 里的 Postgres 容器，逐层展开数据库、schema、表，查看列、约束、索引、示例行和 DDL；`/db connect <url>` 保存连接，`/db forget`、`/db refresh`、`/db theme` 管理。备注：只读，所有查询经本机 psql 执行并强制 `default_transaction_read_only=on` 和语句超时；Docker 容器用 `docker ps`/`docker inspect`/`docker exec … psql` 访问，需本机装有 psql 或 docker；`/db connect` 保存的 URL（含密码）存在插件存储里，密码通过 PGPASSWORD 传给 psql、不出现在命令行；除数据库连接本身外不联网，不调模型，不改提示或工具调用。 | MIT | [链接](https://github.com/agntflw/claude-dbview) |
 | cargo-progress | — | Rust 项目里 Claude 跑 cargo 命令时，在命令下方显示 cargo 自己的进度条（不再一个 crate 一行），结束后留一行结果：编译错误/lint 错误/警告数和耗时，或测试通过/失败/忽略数及失败用例名；`cargo test 2>&1 \| tail` 这类管道命令也能统计。备注：会改写调用 cargo 的 Bash 命令——在前面加一个 `cargo` shell 函数，让 cargo 经插件自带的 `bin/cargo-progress.pl` 运行（hooks/register.tsx 114–128、hooks/progress.ts 17–23），Claude 拿到的仍是 cargo 原本的输出（只去掉进度条帧）和退出码；README 已写明，权限确认里会看到包装后的长命令；对原命令另做一次权限检查，你的规则拒绝就拒绝，自己从不放行（register.tsx 146–163）；后台运行和按路径调用的 cargo 不处理；需本机 perl，没有就照常跑 cargo；只读写 `$TMPDIR` 下自己的临时文件并 `rm -f`；不联网；单次提交，带测试。 | CC0-1.0 | [链接](https://github.com/Celsiusss/cargo-progress-claude-mod) |
+| tf-plan-summary | — | 给 Claude 一个 `plan_summary` 工具：对已保存的 Terraform 计划（`terraform plan -out=FILE`）在本机跑 `terraform show -json`，只返回几行摘要——增/改/替换/销毁/导入数量、漂移、每个销毁与替换（含强制替换的属性）、IAM/KMS/安全组/S3 策略等敏感变更（只列属性名，不带值）和变化的 outputs，让 Claude 不用读完整 plan 输出。备注：需本机 terraform；经 $.process.spawn 直接运行、不经 shell，失败时只返回 terraform 的首条 Error 行；不联网、不调模型。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/tf-plan-summary) |
 
 ### 子代理管理 Subagent Management
 
