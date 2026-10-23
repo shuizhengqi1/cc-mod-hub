@@ -5079,6 +5079,22 @@
       },
       "homepage": "https://github.com/tinyorbit-ai/skills/tree/main/mods/agent-atc",
       "license": "MIT"
+    },
+    {
+      "name": "context-rings",
+      "description": "A row of rings above the prompt, one per recent Claude Code session on this machine, filled by how much of its context window is used (yellow/red at 50%/80% by default, against a configurable 100K-1M window); newest activity first, up to ten plus a +N, hover for name, folder, tokens and working/idle/closed; an All/this-folder chip filters. Subagents show as small dots once they pass 75% of a 500K limit, with one toast at 90%. A ring flashes shortly before its session's 1-hour or 5-minute prompt cache expires, so you can reply or /compact first. Reads ~/.claude/sessions/*.json and the tail of recently changed transcripts every 5 s via fixed read-only ps/find/stat/tail (BSD stat -f, so effectively macOS only); stores only session names and toasted subagents; every hook passes events through unchanged; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "nvsravank/context-rings",
+        "sha": "e04b95fb4a7b9f7bb5a34a2211e29f235595cd0f"
+      },
+      "version": "0.3.0",
+      "author": {
+        "name": "Sravan",
+        "url": "https://github.com/nvsravank"
+      },
+      "homepage": "https://github.com/nvsravank/context-rings",
+      "license": "MIT"
     }
   ]
 }

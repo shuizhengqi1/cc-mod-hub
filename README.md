@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 616 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 617 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 616 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 617 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 616 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 617 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 616 个精选 Claude Code mods，按类别组织：
+以下是本市场的 617 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -164,6 +164,7 @@ For detailed descriptions of all 616 mods, see the Chinese section below. The �
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
 | defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
 | output-trimmer | — | terraform/tofu init/plan/apply/destroy、checkov/trivy/tfsec/prowler 扫描、npm/pnpm/yarn/bun/pip/uv/poetry 安装、docker build/pull/compose 等嘈杂命令输出超过 120 行时，交给 Claude 的结果只留前 15 行、中间最多 30 行错误/警告和后 40 行，并注明完整输出文件的路径，省上下文。备注：会改写这些命令的工具结果（命令本身不改）；裁剪前先把完整 stdout/stderr 写到 $TEMP/$TMPDIR（或 /tmp）下的 claude-output/，写入失败就原样返回；文件留给系统清理；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/output-trimmer) |
+| context-rings | — | 提示框上方一排圆环，每个圆环对应本机最近一小时内活跃的一个 Claude Code 会话，按上下文窗口占用填充（默认 1M 窗口，50%/80% 变黄/变红，可在 /config 调）；最近活跃的排前面，最多 10 个、其余折成 +N，悬停看会话名、目录、token 数和工作中/空闲/已关闭；点开头的 All 只看当前目录的会话。子代理超过 500K 的 75% 时显示成小圆点，到 90% 弹一次提醒；会话的 1 小时或 5 分钟提示缓存快过期时圆环闪烁，提醒你先回复或 /compact。备注：仅 macOS（用 BSD `stat -f`，Linux 上 stat 报错、读不到会话记录，圆环不显示占用）；每 5 秒用固定只读命令（ps、find、stat、tail）读 `~/.claude/sessions/*.json` 和最近改过的会话记录末尾 1 MB（hooks/register.tsx 63–129）；$.store 只存会话名和已提醒过的子代理；钩子都原样放行；AbovePrompt 不调 next，会替换同位置别的 mod 的行；不联网、不调模型、不改提示。 | MIT | [链接](https://github.com/nvsravank/context-rings) |
 
 ### UI 与主题 UI & Themes
 
