@@ -4882,6 +4882,22 @@
       },
       "homepage": "https://github.com/juninmd/cc-litellm/tree/main/plugins/litellm-key",
       "license": "MIT"
+    },
+    {
+      "name": "clipring",
+      "description": "A kill ring for the prompt box: alt+backspace cuts the selection or the cursor's line (consecutive cuts merge, Emacs-style), ctrl+alt+backspace cuts the whole draft, and text killed with ctrl+u / ctrl+k is captured too; up to 50 clips persist across sessions in the plugin store and the latest cut also goes to the system clipboard. A band above the prompt shows the selected clip (alt+up/down to pick, alt+v to paste at the cursor, alt+d to delete); /clips or alt+c opens a pane listing every clip (enter pastes), alt+h shows help. All chords are configurable via plugin options. Only edits the draft in the prompt box when you press its keys (prompt.edit / prompt.fill insert, never submits); no network, no model calls, no child processes.",
+      "source": {
+        "source": "github",
+        "repo": "summerz/clipring",
+        "sha": "ab88889bb6cb7af303bf6219b1b290d75a7c2e85"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "summerz",
+        "url": "https://github.com/summerz"
+      },
+      "homepage": "https://github.com/summerz/clipring",
+      "license": "MIT"
     }
   ]
 }
