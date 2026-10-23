@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 608 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 609 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 608 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 609 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 608 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 609 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 608 个精选 Claude Code mods，按类别组织：
+以下是本市场的 609 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -568,6 +568,7 @@ For detailed descriptions of all 608 mods, see the Chinese section below. The �
 | restack-view | ⭐ 1（所在仓库） | ReStack（基于 Residuality Theory 的架构设计技能套件）的旅程视图：提示框上方一行显示当前进度，`/restack-view` 打开面板看未决问题、假设、决策和矩阵，`/restack-view band on\|off` 显隐。备注：只读 ReStack 写在项目里的旅程文件，自身不写文件、不运行外部程序、不联网；面板按钮只用 `$.prompt.fill` 把下一步命令放进空输入框、不发送，有草稿时只弹 toast（register.tsx 244–258）；需另装 ReStack 技能套件（未审）才有内容。 | MIT | [链接](https://github.com/pmelander/restack/tree/main/mods/restack-view) |
 | astrolabe | ⭐ 1 | 在状态栏显示 Spec Kit 当前的功能、阶段和任务进度，随你编辑 spec/tasks 文件和调用技能实时更新。备注：只用 `$.fs` 读取项目里的 Spec Kit 文件和 `.git/HEAD`（register.tsx 11–17，io/git-branch.ts），通过 `$.ui.status` 显示；tool.call 先原样执行再刷新（72–97）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/jonyfs/astrolabe) |
 | beads-pane | ⭐ 1（所在仓库） | 侧边窗格实时显示 beads 任务：进行中、可开始、被阻塞的各 10 条及数量，`/beads` 打开。备注：每次 Bash 后用 `bd --readonly … --json` 只读刷新（需装 bd）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-pane) |
+| brainless-claude-progress | ⭐ 1 | `/progress` 窗格 + 状态栏一行摘要：当前工单步骤 Write→Review→Verify→CI→Merge、CI 状态与按历史中位数估算的剩余时间、后台子代理与 bash 任务、Claude 等你回复时标「Your turn」；界面支持英/繁中/简中/日。备注：本机 gh 只读命令（pr view、pr list --state merged、repo view）查 PR/CI；钩子只观察（tool.call 先 next，prompt.submit 只识别语言、原样放行）；动画火花可用 `/progress still` 关闭；无模型调用。与 gh-status、eta、task-band、plan-progress 部分重叠。 | MIT | [链接](https://github.com/greedysisyphus/Brainless-Claude-Progress) |
 | backlog-pane | — | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bw-peek | — | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
 | dev-dash | — | 开发者仪表板窗格，集中显示会话状态与项目信息。 |  | [链接](https://github.com/RanaRauff/claude-dev-dashboard/tree/main/plugins/dev-dash) |
