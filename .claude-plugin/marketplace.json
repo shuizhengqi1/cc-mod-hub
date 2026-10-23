@@ -4865,6 +4865,23 @@
         "path": "mods/output-trimmer",
         "sha": "374d844f96b87bcc42fc931ac2bfdb35f5f10f26"
       }
+    },
+    {
+      "name": "litellm-key",
+      "description": "For people who reach Claude through a LiteLLM proxy: a status line and /litellm pane with the virtual key's budget, spend, rate limits, expiry, models and 30 days of usage, a band above the prompt while a budget is used up, and warning toasts. Admins can create/edit/block keys, grant budget and read router fallbacks, each change confirmed in a dialog first. Talks only to the proxy Claude Code already uses (ANTHROPIC_BASE_URL or litellm_url); /litellm share hands a report to Claude only when you run it.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/juninmd/cc-litellm.git",
+        "path": "plugins/litellm-key",
+        "sha": "8f8ac0eaf7df737eac46c07fe0facb69fcbb657b"
+      },
+      "version": "0.7.0",
+      "author": {
+        "name": "juninmd",
+        "url": "https://github.com/juninmd"
+      },
+      "homepage": "https://github.com/juninmd/cc-litellm/tree/main/plugins/litellm-key",
+      "license": "MIT"
     }
   ]
 }
