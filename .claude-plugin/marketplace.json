@@ -5160,6 +5160,22 @@
       },
       "homepage": "https://github.com/mikelane/thrift/tree/main/plugins/meter",
       "license": "MIT"
+    },
+    {
+      "name": "codex-monitor",
+      "description": "A pane (/codex-monitor) that shows, live, the Codex work this Claude session sent out: jobs from the openai codex-plugin-cc (/codex:rescue etc., matched by the plugin's state.json sessionId), codex exec runs from Bash/PowerShell (registered when the command is sent and matched to the rollout by its first prompt), and claude-codex-bridge codex_message_send threads. Splits up to 4 running jobs, shows each turn's commands with exit codes and Codex's replies, a job list you can click to pin, paging buttons, a status-line count and a toast when each Codex turn finishes. Read-only: polls ~/.codex/sessions rollout files every 3 s with $.fs.read (large files via local tail/head/base64 on macOS/Linux or pwsh on Windows); tool.call is only observed and passed through unchanged. No network, no model calls, no prompt rewriting, no file writes.",
+      "source": {
+        "source": "github",
+        "repo": "ar36planet/mod-codex-monitor",
+        "sha": "532aae4f58eb0371d260b92789403bd4667ad140"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "ar36planet",
+        "url": "https://github.com/ar36planet"
+      },
+      "homepage": "https://github.com/ar36planet/mod-codex-monitor",
+      "license": "MIT"
     }
   ]
 }
