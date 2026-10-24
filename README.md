@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 621 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 622 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 621 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 622 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 621 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 622 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 621 个精选 Claude Code mods，按类别组织：
+以下是本市场的 622 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -507,6 +507,7 @@ For detailed descriptions of all 621 mods, see the Chinese section below. The �
 | maestro-lanes | — | 配合 Maestro，每 2 秒读本机 /tmp/maestro-lanes 下的 lane 输出文件，在提示框上方显示各外部 lane 的状态与耗时。只观察。备注：有运行项时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/ricardosuman/maestro/tree/main/mods/lanes) |
 | fleet | — | 面板按 GitHub 看板的 epic/工单分组显示本会话的子代理：工单状态、epic 完成度、各工单下的代理。备注：通过本机 gh api 只读 GET（需已登录 gh，需配置看板）；只在本机从子代理描述/提示开头匹配工单号；tool.call 原样返回。 | MIT | [链接](https://github.com/neonelemental/claude-code-board-mods/tree/main/fleet) |
 | model-guard | — | 规定本会话能用哪些模型：`/models` 勾选 Opus、Sonnet、Haiku、Fable 等，可按仓库保存或设为默认；子代理或 Workflow 要用被关掉的模型时默认拒绝（可切成换成 fallback），子代理在被关模型上的请求换到 fallback，`/model` 切到被关模型时拒绝；面板显示拦截记录。备注：agent.spawn 默认 deny，swap 模式才改子代理 model（register.tsx 184–216）；turn.step 只对子代理把被关模型换成 fallback（218–237）；classic.PreModelSwitch 只返回 deny（265–279）；设置存在插件存储；不运行外部程序、不联网。 | | [链接](https://github.com/Recokioshi/claude-kit/tree/master/mods/model-guard) |
+| codex-monitor | — | `/codex-monitor` 打开窗格，实时显示本会话派出去的 Codex 工作：codex 插件（`/codex:rescue` 等）的 job、Bash/PowerShell 里跑的 `codex exec`、claude-codex-bridge 发出的线程；最多 4 格并排，显示每轮执行的命令与退出码、Codex 回复，可点选钉住、翻页，状态行计数，每轮完成弹 toast。备注：只读，每 3 秒读本机 `~/.codex/sessions` rollout 文件（大文件在 macOS/Linux 用本机 tail/head/base64、Windows 用 pwsh 读）；tool.call 只观察、原样执行；不联网、不调模型、不改提示、不写文件。 | MIT | [链接](https://github.com/ar36planet/mod-codex-monitor) |
 
 ### 通知提醒 Notifications & Alerts
 
