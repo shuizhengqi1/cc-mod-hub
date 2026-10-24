@@ -5143,6 +5143,23 @@
       },
       "homepage": "https://github.com/abmorrill4/gh-refs",
       "license": "MIT"
+    },
+    {
+      "name": "meter",
+      "description": "A side pane (/meter) with context fill and compaction point, cache hit rate, 5-hour and weekly rate-limit use with burn pace (percent used vs share of the window elapsed, colored green/yellow/red, with a projected time of hitting 100% when pace is above 1), session cost, and the largest context categories (messages, MCP tools, agents, skills, memory files, per MCP server). Drawn outside the model's context, so it adds no tokens. /meter refresh takes a full count; optional meterAutoOpen opens it at session start on wide terminals. Needs Claude Code 2.1.302+. Uses only $.session.usage, session.measure, $.ui panes, $.clock and its own /meter command; writes no files, no processes, no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mikelane/thrift.git",
+        "path": "plugins/meter",
+        "sha": "4a6b58eab2548db39264093d5ef8f3b9a91117bd"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "Mike Lane",
+        "url": "https://github.com/mikelane"
+      },
+      "homepage": "https://github.com/mikelane/thrift/tree/main/plugins/meter",
+      "license": "MIT"
     }
   ]
 }
