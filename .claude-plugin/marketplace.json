@@ -5095,6 +5095,22 @@
       },
       "homepage": "https://github.com/nvsravank/context-rings",
       "license": "MIT"
+    },
+    {
+      "name": "sf-headless-band",
+      "description": "Shows your Salesforce CLI default org above the prompt with its type pill (scratch, developer edition, sandbox, production in red) and a scratch org's days to expiry, plus every Salesforce DX / Hosted MCP server added to Claude Code and the orgs each can reach, with a connected check mark. Hidden until you run /sf-headless-band (on|off|toggle). Read-only: reads the sf CLI config, aliases and org auth files under ~/.sf and ~/.sfdx (only org type, instance URL and expiry are used), sfdx-project.json and Claude Code's MCP config (~/.claude.json, .mcp.json); refreshes every 15 s and when those files change; tool.call only watches mcp__ calls for the My Domain they carry and returns results unchanged; no processes, no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "deejay-hub/sf-headless-band",
+        "sha": "0754f9b63e99185a02753ba82fa3a69be00b8e7a"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Dave Norris",
+        "url": "https://github.com/deejay-hub"
+      },
+      "homepage": "https://github.com/deejay-hub/sf-headless-band",
+      "license": "MIT"
     }
   ]
 }

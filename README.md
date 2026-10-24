@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 617 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 618 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 617 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 618 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 617 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 618 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 617 个精选 Claude Code mods，按类别组织：
+以下是本市场的 618 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -623,6 +623,7 @@ For detailed descriptions of all 617 mods, see the Chinese section below. The �
 | coderabbit-band | ⭐ 3（所在仓库） | 提示框上方一条带，显示当前分支 GitLab MR 上未解决的 CodeRabbit 评论（按严重程度）和 nitpick 数，附链接；没有未解决项时不显示，`/coderabbit` 隐藏到数量变化。备注：只支持 GitLab `origin` 远程，定时跑 `glab mr view` 和 `glab api` 拉讨论（push 后 15 分钟内每分钟、有内容时每 5 分钟、否则每 15 分钟），需要已登录的 glab；tool.call 只观察 push 与 resolve；不改写任何调用。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/coderabbit-band) |
 | calendar | ⭐ 2（所在仓库） | AbovePrompt 显示即将到来的 Google Calendar 事件（/cal）。备注：通过用户已配置的「claude.ai Google Calendar」MCP 读取。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/calendar) |
 | github-issues | ⭐ 2（所在仓库） | **推荐** /issues 打开侧边窗格，把仓库的 GitHub issue 显示成卡片：Open、Assigned、Created、Closed 四个标签页，搜索框和标签筛选，卡片显示标题、编号、指派人、更新时间、评论数、关联 PR 和彩色标签，可展开正文；/issues owner/name 或 /issues . 指定仓库，不带参数时列出你最近推送过的仓库供选择；窗格打开时有新指派给你的 issue 会弹提示。备注：**需要本机已登录的 gh**（gh auth login），只运行 `gh api graphql` 查询（不做修改）和 `gh issue view`，除 GitHub 外不连其他外网；窗格打开时每 2 分钟和每回合结束后刷新，关闭时不发请求；只有你点「Work on it」才用 $.prompt.submit 以你的名义发一条固定提示，让 Claude 读该 issue 并动手实现。 | MIT | [链接](https://github.com/MarcoCarnevali/claude-code-mods/tree/main/github-issues) |
+| sf-headless-band | ⭐ 2 | 提示框上方显示 Salesforce CLI 默认 org 及其类型（scratch、开发版、sandbox、生产，生产标红）和 scratch org 剩余天数，另列出已加到 Claude Code 的 Salesforce DX / Hosted MCP 服务器、各自能连到的 org 和是否已连上，随时看清 Claude 能碰到哪个 org；`/sf-headless-band [on\|off]` 开关。备注：**默认隐藏，先运行 /sf-headless-band 打开**；只读本机 ~/.sf、~/.sfdx 的配置、别名和 org 授权文件（只取 org 类型、实例地址和到期日）以及 sfdx-project.json 和 Claude 的 MCP 配置（~/.claude.json、.mcp.json），每 15 秒及这些文件变化时刷新；tool.call 只观察 mcp__ 调用里出现的 My Domain 并原样返回；不运行子进程、不联网、不调用模型。 | MIT | [链接](https://github.com/deejay-hub/sf-headless-band) |
 | devbrain-live | ⭐ 1（所在仓库） | 状态行显示 DevBrain 本会话保存/已知/召回了多少条记忆，/devbrain-session 列出明细。备注：tool.call 只观察 save_entry / devbrain note 调用，原样返回；只读本机 ~/.devbrain/sessions/<会话>.json；DevBrain 本体需另装；不联网。 | MIT | [链接](https://github.com/pushthev1be/devbrain/tree/main/mods/devbrain-live) |
 | ado-link-bar | ⭐ 1（所在仓库） | 提示框上方一行列出对话里最近提到的 Azure DevOps PR 和工作项链接（带标题和状态）。备注：session.append 只读取链接并原样传递；本机运行 `az boards work-item show` 取标题（需安装并登录 az）；恢复会话时读本机 transcript 末尾。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-link-bar) |
 | ado-pr-status | ⭐ 1（所在仓库） | 后台获取当前分支对应的 Azure DevOps PR（审批、草稿等）写到 ~/.claude/ado-pr-status/，配合附带的 statusline/pr-line.mjs 在 ccstatusline 里显示。备注：本机运行 git 和 `az repos pr list` 只读查询（需安装并登录 az）；需自行配置 ccstatusline；说明为日文。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-pr-status) |
