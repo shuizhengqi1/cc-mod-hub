@@ -5258,6 +5258,23 @@
       },
       "homepage": "https://github.com/jjailer/claude-skills/tree/main/plugins/commit-gate",
       "license": "MIT"
+    },
+    {
+      "name": "uptick",
+      "description": "/uptick pane listing updates for Claude Code, plugins, skills-CLI skills and Homebrew; runs an update only after you confirm the exact command",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trustmeimlumi/uptick.git",
+        "path": "plugin",
+        "sha": "401fe318d7d1558485daf10a6aca7901c48accf8"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "trustmeimlumi",
+        "url": "https://github.com/trustmeimlumi"
+      },
+      "homepage": "https://github.com/trustmeimlumi/uptick/tree/main/plugin",
+      "license": "MIT"
     }
   ]
 }
