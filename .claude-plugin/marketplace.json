@@ -5127,6 +5127,22 @@
       },
       "homepage": "https://github.com/Production-Grade/usage-meter",
       "license": "MIT"
+    },
+    {
+      "name": "gh-refs",
+      "description": "When a Claude reply mentions GitHub issues or PRs (full URLs, owner/repo#N, or a bare #N resolved to the reply's last named repo, the Default repository setting, or the session folder's GitHub repo), shows a row of chips under the reply colored by state; hovering a chip shows title, issue/PR, state (open/closed/merged/draft/not planned), milestone, labels, parent theme and a one- or two-line body summary. Fetches with your local gh CLI (one gh api graphql call per batch, cached 5 minutes in the mod's $.state); only the issue/PR references are sent to GitHub, never conversation text. Render-only (ui.render AssistantMessage) plus session.start; no prompt rewriting, no model calls, no file writes. Requires gh signed in.",
+      "source": {
+        "source": "github",
+        "repo": "abmorrill4/gh-refs",
+        "sha": "36703789e9ee64e0b7a5ee3f34c0ed074756d751"
+      },
+      "version": "1.0.0",
+      "author": {
+        "name": "abmorrill4",
+        "url": "https://github.com/abmorrill4"
+      },
+      "homepage": "https://github.com/abmorrill4/gh-refs",
+      "license": "MIT"
     }
   ]
 }
