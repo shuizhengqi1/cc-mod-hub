@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 635 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 636 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 635 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 636 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 635 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 636 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 635 个精选 Claude Code mods，按类别组织：
+以下是本市场的 636 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -350,6 +350,7 @@ For detailed descriptions of all 635 mods, see the Chinese section below. The �
 | blast-radius-win | — | 官方 blast-radius 的 Windows/PowerShell 版：Claude 跑风险 Bash、PowerShell 或 Monitor 命令（rm -rf、Remove-Item -Recurse、git reset --hard、git clean、force push、数据库迁移）前先拦下，在面板里列出会删/改的文件、数量和大小，等你点 Proceed 或 Cancel（默认选中 Cancel，窄终端改在提示框上方显示）；能读 PowerShell 参数缩写、反引号续行、here-string、嵌套 `powershell -Command`/`cmd /c`。备注：tool.call 只 deny 或原样放行，不改写命令；mod 自身出错时拒绝命令（fail closed）；测量只读：本机 git（关闭 fsmonitor）、Git 自带 bash 的 find/du 或 powershell.exe（路径以 JSON 经 stdin 传入），不运行项目自己的工具；不联网、不调模型。与 blast-radius 同源（Apache-2.0 修改版，附 NOTICE），主要给 Windows 用户。 | Apache-2.0 | [链接](https://github.com/FlyinSteve/blast-radius-win) |
 | commit-gate | — | 让 Claude 在你点头之前不能 git commit：你最近一条提示说了 go、commit it、/commit，或对 Claude 的「要提交吗？」回答了 yes 才放行；否则弹出对话框（默认选 Not yet，无人应答或离开超时都算拒绝）。提交后再编辑文件（/tmp 草稿除外）会让批准失效，下次提交需要重新批准。备注：只 deny/询问，不改写命令；prompt.submit 只记录批准状态，不改写提示、不注入上下文；读会话最后一条回复判断是否在问提交；不联网、不调模型；所在仓库是作者个人插件集，⭐0。 | MIT | [链接](https://github.com/jjailer/claude-skills/tree/main/plugins/commit-gate) |
 | taint-guard | — | 会话一旦读过不可信内容（WebFetch、WebSearch、非信任的 MCP 工具结果、Bash 里的 curl/wget），就拦下之后能把数据发出去或对外发布的操作：联网工具、git push、gh 与 AWS 写操作、terraform apply、包发布、docker push、非信任 MCP 工具、带查询串的 WebFetch，直到你亲手输入 `/taint-clear`（只认你在输入框或桥接端输入，Claude 自己调用无效）。备注：只 deny 不改写，用 deny 而非询问，避免自动模式下被分类器放行；第一次读到不可信内容时在那条工具结果后附一句说明，提醒 Claude 把其中的指令当数据；钩子出错时默认拒绝；不联网、不调模型；与 net-guard（主机白名单）、env-exfil-guard 角度不同，按“读过不可信内容”整体上锁。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/taint-guard) |
+| secret-input | — | 密码、令牌、API 密钥改在专用输入窗格里填，不贴进聊天：`/secret 名称` 或 Claude 调 `request_secret` 工具打开窗格，值只存在 Claude Code 进程内存里（重启或重载即清空），Claude 在 Bash/PowerShell 命令里写 `'{{secret:名称}}'`，执行时才替换成真实值，命令输出和会话记录里出现的值遮成 `[secret:名称]`；`/secret` 列出已存名称（不显示值），`/secret --clear` 全部清除。备注：tool.call 只把占位符换成按 shell 转义的值并遮盖结果，遮盖失败时扣下结果；session.append 再遮一遍记录；Claude 发起的请求在你保存或取消后用 $.prompt.submit 发一条固定通知（不含值）；窗格输入时明文可见；settings.json 里的命令型 PreToolUse 钩子能看到替换后的命令；不联网。 | MIT | [链接](https://github.com/YouHyuksoo/secret-input) |
 
 ### 开发工具 Dev Tools
 
