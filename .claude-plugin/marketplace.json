@@ -5406,6 +5406,23 @@
       },
       "homepage": "https://github.com/YouHyuksoo/secret-input",
       "license": "MIT"
+    },
+    {
+      "name": "session-procs",
+      "description": "Live pane listing the processes this Claude Code session started: dev servers, tool shells and MCP servers, with memory, age and sparklines; read-only, never stops or changes a process.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/iftahs/claude-mods.git",
+        "path": "mods/session-procs",
+        "sha": "10db6fab6cfb604395657e075d71184ab73bf5c0"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Iftah Saar",
+        "url": "https://iftah.dev"
+      },
+      "homepage": "https://github.com/iftahs/claude-mods/tree/main/mods/session-procs",
+      "license": "MIT"
     }
   ]
 }
