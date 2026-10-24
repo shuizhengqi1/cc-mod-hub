@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 623 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 624 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 623 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 624 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 623 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 624 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 623 个精选 Claude Code mods，按类别组织：
+以下是本市场的 624 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -344,6 +344,7 @@ For detailed descriptions of all 623 mods, see the Chinese section below. The �
 | drupal-guard | — | Drupal/DDEV 项目里 Claude 要跑会毁数据或 git 救不回的命令时先弹窗问你：重装站点（`drush si`、`site:install`）、`sql:drop`/`DROP TABLE`/`TRUNCATE`、批量 `entity:delete`、`ddev delete`/`poweroff`/`snapshot restore`/`import-db`、`rm -rf`、`find … -delete`、`git clean -f`/`stash drop`/`branch -D`、`config:import`（`cim`）。备注：挂在权限判定 `tool.check`（只看 Bash），只把结果改成询问、不改写命令，已有的 deny 规则保持拒绝（hooks/register.ts 18–29）；不运行外部程序、不联网；按命令文本正则匹配，`TRUNCATE`、`cim` 等词出现在别的命令里也会问。与 block-destructive-commands 部分重叠（rm -rf、SQL drop、git clean），多出 Drush/DDEV/配置导入这些 Drupal 专属命令。 | MIT | [链接](https://github.com/o0Charly0o/drupal-mods/tree/main/drupal-guard) |
 | trash-guard | — | Claude 永远不做不可恢复的删除：临时目录（/tmp、/var/folders）以外的 rm、unlink、rmdir、git clean、find -delete 一律拒绝，并告诉 Claude 改用废纸篓（macOS 14+ 的 trash、Finder「放回原处」或 Linux 的 gio trash），删了也能找回；引号和 heredoc 里的 rm 文字不误报，$( … )、&&、;、sudo 后面的 rm 仍能拦住；可用 allowed_paths 选项加放行目录。备注：只拒绝（deny），不改写命令；只读命令文本，不运行进程、不联网（hooks/register.js 81–98）。 | MIT | [链接](https://github.com/benjaminb10/encore-mods/tree/main/plugins/trash-guard) |
 | aws-guard | — | Claude 要跑会删除 IAM 角色/策略（`iam delete-role*`/`delete-policy*`）、改动 AWS Organizations（describe/list 以外的操作）或销毁 KMS 密钥（`schedule-key-deletion`、`delete-imported-key-material`）的 AWS CLI 命令时直接拦下，让 Claude 把完整命令交给你用 `!` 前缀自己运行；能识别 `bash -c`、env、xargs、sudo、子 shell、命令替换和 PowerShell 包装，help 与 `--generate-cli-skeleton` 放行。备注：只 deny，不改写命令（hooks/register.ts）；只看写出来的命令行，不展开变量/别名，不检查 AWS Tools for PowerShell cmdlet 和 SDK 脚本，作者说明这是防误操作护栏而不是安全边界；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/aws-guard) |
+| blast-radius-win | — | 官方 blast-radius 的 Windows/PowerShell 版：Claude 跑风险 Bash、PowerShell 或 Monitor 命令（rm -rf、Remove-Item -Recurse、git reset --hard、git clean、force push、数据库迁移）前先拦下，在面板里列出会删/改的文件、数量和大小，等你点 Proceed 或 Cancel（默认选中 Cancel，窄终端改在提示框上方显示）；能读 PowerShell 参数缩写、反引号续行、here-string、嵌套 `powershell -Command`/`cmd /c`。备注：tool.call 只 deny 或原样放行，不改写命令；mod 自身出错时拒绝命令（fail closed）；测量只读：本机 git（关闭 fsmonitor）、Git 自带 bash 的 find/du 或 powershell.exe（路径以 JSON 经 stdin 传入），不运行项目自己的工具；不联网、不调模型。与 blast-radius 同源（Apache-2.0 修改版，附 NOTICE），主要给 Windows 用户。 | Apache-2.0 | [链接](https://github.com/FlyinSteve/blast-radius-win) |
 
 ### 开发工具 Dev Tools
 
