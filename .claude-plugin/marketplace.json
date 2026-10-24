@@ -5193,6 +5193,22 @@
       },
       "homepage": "https://github.com/aseem-upadhyay/qol-mods/tree/main/plugins/repo-spend",
       "license": "MIT"
+    },
+    {
+      "name": "blast-radius-win",
+      "description": "Windows/PowerShell-ready fork of the official Blast Radius mod: holds risky Bash, PowerShell and Monitor commands (rm -rf, Remove-Item -Recurse, git reset --hard, git clean, force push, migrations), measures what they would delete or change, and waits for Proceed or Cancel in a pane (Cancel pre-selected; falls back to a band above the prompt). Fails closed: if the mod errors, the command is refused. tool.call only denies or passes the call through unchanged, never rewrites it. Measuring is read-only: local git (fsmonitor off), Git's bash find/du, or powershell.exe with paths passed as JSON on stdin; never runs project tools. No network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "FlyinSteve/blast-radius-win",
+        "sha": "7724e7845f69e89aae471512ed6757e61ebe4732"
+      },
+      "version": "0.3.0",
+      "author": {
+        "name": "FlyinSteve",
+        "url": "https://github.com/FlyinSteve"
+      },
+      "homepage": "https://github.com/FlyinSteve/blast-radius-win",
+      "license": "Apache-2.0"
     }
   ]
 }
