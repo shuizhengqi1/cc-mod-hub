@@ -5176,6 +5176,23 @@
       },
       "homepage": "https://github.com/ar36planet/mod-codex-monitor",
       "license": "MIT"
+    },
+    {
+      "name": "repo-spend",
+      "description": "A band above the prompt showing what your Claude Code sessions have cost in the current repo (main checkout and its worktrees; each session's spend is attributed to the repo where the work happened), today and over the last 7 days, plus this session's live cost, burn rate over the last 30 minutes and a sparkline. On Pro/Max it shows API-price equivalents. A weekly archive keeps totals after Claude Code deletes old logs. /repo-spend hides or shows the band. Local only: runs local git rev-parse and the bundled python3 scan.py over ~/.claude/projects logs (cache in ~/.cache/claude-repo-spend, archive in ~/.local/share/claude-repo-spend). No network, no model calls, no prompt or tool rewriting. Needs python3.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/aseem-upadhyay/qol-mods.git",
+        "path": "plugins/repo-spend",
+        "sha": "22bcf5097baf23dfe7c56c39e03d6826f6f01a36"
+      },
+      "version": "0.5.1",
+      "author": {
+        "name": "Aseem Upadhyay",
+        "url": "https://github.com/aseem-upadhyay"
+      },
+      "homepage": "https://github.com/aseem-upadhyay/qol-mods/tree/main/plugins/repo-spend",
+      "license": "MIT"
     }
   ]
 }
