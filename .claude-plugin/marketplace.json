@@ -5275,6 +5275,40 @@
       },
       "homepage": "https://github.com/trustmeimlumi/uptick/tree/main/plugin",
       "license": "MIT"
+    },
+    {
+      "name": "read-budget",
+      "description": "Refuses the third full Read of the same large, unchanged file in a session and points Claude to Grep or a ranged Read",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pradyb/claude-mods.git",
+        "path": "read-budget",
+        "sha": "1e7769237b952bde774afa66b01cc229fb5a916f"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Pradeep Kumar Balakrishnan",
+        "url": "https://github.com/pradyb"
+      },
+      "homepage": "https://github.com/pradyb/claude-mods/tree/main/read-budget",
+      "license": "MIT"
+    },
+    {
+      "name": "nvim-inline-review",
+      "description": "Snapshots each file before Claude's first Edit/Write/NotebookEdit so the claude-inline-review.nvim Neovim plugin can review Claude's changes hunk by hunk in your real buffers",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rohitsrao/claude-inline-review.nvim.git",
+        "path": "claude-mod",
+        "sha": "f7c8f4cfa21f9522f2ae72cec5e2371f2352b55a"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Rohit Rao",
+        "url": "https://github.com/rohitsrao"
+      },
+      "homepage": "https://github.com/rohitsrao/claude-inline-review.nvim",
+      "license": "MIT"
     }
   ]
 }

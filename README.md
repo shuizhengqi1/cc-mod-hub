@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 628 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 630 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 628 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 630 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 628 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 630 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 628 个精选 Claude Code mods，按类别组织：
+以下是本市场的 630 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -168,6 +168,7 @@ For detailed descriptions of all 628 mods, see the Chinese section below. The �
 | defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
 | output-trimmer | — | terraform/tofu init/plan/apply/destroy、checkov/trivy/tfsec/prowler 扫描、npm/pnpm/yarn/bun/pip/uv/poetry 安装、docker build/pull/compose 等嘈杂命令输出超过 120 行时，交给 Claude 的结果只留前 15 行、中间最多 30 行错误/警告和后 40 行，并注明完整输出文件的路径，省上下文。备注：会改写这些命令的工具结果（命令本身不改）；裁剪前先把完整 stdout/stderr 写到 $TEMP/$TMPDIR（或 /tmp）下的 claude-output/，写入失败就原样返回；文件留给系统清理；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/output-trimmer) |
 | context-rings | — | 提示框上方一排圆环，每个圆环对应本机最近一小时内活跃的一个 Claude Code 会话，按上下文窗口占用填充（默认 1M 窗口，50%/80% 变黄/变红，可在 /config 调）；最近活跃的排前面，最多 10 个、其余折成 +N，悬停看会话名、目录、token 数和工作中/空闲/已关闭；点开头的 All 只看当前目录的会话。子代理超过 500K 的 75% 时显示成小圆点，到 90% 弹一次提醒；会话的 1 小时或 5 分钟提示缓存快过期时圆环闪烁，提醒你先回复或 /compact。备注：仅 macOS（用 BSD `stat -f`，Linux 上 stat 报错、读不到会话记录，圆环不显示占用）；每 5 秒用固定只读命令（ps、find、stat、tail）读 `~/.claude/sessions/*.json` 和最近改过的会话记录末尾 1 MB（hooks/register.tsx 63–129）；$.store 只存会话名和已提醒过的子代理；钩子都原样放行；AbovePrompt 不调 next，会替换同位置别的 mod 的行；不联网、不调模型、不改提示。 | MIT | [链接](https://github.com/nvsravank/context-rings) |
+| read-budget | — | 同一会话里对同一个未改动的大文件（默认 ≥20 KB）整文件 Read 超过 2 次后，拒绝下一次整读，提示 Claude 用已读内容、Grep 或带 offset/limit 的分段读取；文件改动、compaction、/clear 后计数重来，可在设置里调 minKb 与 maxFullReads。备注：只拒绝不改写（hooks/register.ts，tool.call Read）；分段读取和子代理不计；计数只在内存，mod 重载后重来；不联网、不调模型。 | MIT | [链接](https://github.com/pradyb/claude-mods/tree/main/read-budget) |
 
 ### UI 与主题 UI & Themes
 
@@ -483,6 +484,7 @@ For detailed descriptions of all 628 mods, see the Chinese section below. The �
 | tf-plan-summary | — | 给 Claude 一个 `plan_summary` 工具：对已保存的 Terraform 计划（`terraform plan -out=FILE`）在本机跑 `terraform show -json`，只返回几行摘要——增/改/替换/销毁/导入数量、漂移、每个销毁与替换（含强制替换的属性）、IAM/KMS/安全组/S3 策略等敏感变更（只列属性名，不带值）和变化的 outputs，让 Claude 不用读完整 plan 输出。备注：需本机 terraform；经 $.process.spawn 直接运行、不经 shell，失败时只返回 terraform 的首条 Error 行；不联网、不调模型。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/tf-plan-summary) |
 | agent-trace | — | `/agent-trace` 打开「轨迹」面板：按回合 → 模型请求 → 工具调用 → 子代理逐层展示的 Langfuse 式树；每个模型请求可看这次新增的消息、token、缓存命中（低于 50% 标黄，未缓存输入暴涨 3 倍标 ⚠）、首 token 时间与 tok/s、思考与回复预览；按工具统计次数/耗时/失败，三泳道可点时间线，支持搜索。备注：只观察——turn.step 原样透传、tool.call 只记录不改写；可选 captureSystemPrompt（默认关）只读 prompt.compose 结果原样返回；记录存在会话状态（最多 2000 行、最近 150 条完整载荷）；不联网、不跑进程、不调模型；与 stepscope、flight-recorder 部分重叠（本 mod 侧重每次模型请求看到了什么和缓存命中）。 | MIT | [链接](https://github.com/jasoncai0/claude-agent-trace) |
 | lean-comments | — | Claude 每次 Edit/Write 时检查这次新增的注释，拒绝加横幅/分隔线注释、多行注释（含多行 `/** */` 文档注释，可开 allowDocComments 放行）、超过 120 字符的注释、复述代码的注释（如「Step 1: …」「# Helpers」），以及一次新增超过 3 条注释的改动，让 Claude 改成只写一行说明「为什么」的短注释；只查新增注释，eslint-disable、@ts-expect-error、noqa、许可证头等指令不算，Markdown 等文档文件跳过。备注：默认 block 模式只拒绝不改写（hooks/register.ts 165）；可在 /config 改为 warn（放行并在工具结果后附说明）或 off，并调 maxLength、maxNewComments；不联网、不调模型、不起子进程。 | MIT | [链接](https://github.com/WilsonKinyua/claude-mods/tree/main/plugins/lean-comments) |
+| nvim-inline-review | — | 配合同仓库的 Neovim 插件 claude-inline-review.nvim，在你真实的 Neovim 缓冲区里逐块（hunk）审阅、接受或拒绝 Claude 的改动：Claude 首次 Edit/Write/NotebookEdit 某个文件前先给它拍快照，Neovim 端据此显示新旧差异。备注：需另装 Neovim 插件（Neovim ≥ 0.11），单独装 mod 只记录不显示；工具调用原样放行，只在无法记录时拒绝并中止回合；快照用 `git hash-object -w` 存进本仓库 git 对象库（不提交、不暂存），记录写在 .git/claude-inline-review/session.json；记录失败或按 Esc 中断回合时会往会话追加一条系统说明；不联网、不调模型。 | MIT | [链接](https://github.com/rohitsrao/claude-inline-review.nvim/tree/main/claude-mod) |
 
 ### 子代理管理 Subagent Management
 
