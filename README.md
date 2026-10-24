@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 632 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 635 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 632 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 635 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 632 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 635 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 632 个精选 Claude Code mods，按类别组织：
+以下是本市场的 635 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -487,6 +487,9 @@ For detailed descriptions of all 632 mods, see the Chinese section below. The �
 | agent-trace | — | `/agent-trace` 打开「轨迹」面板：按回合 → 模型请求 → 工具调用 → 子代理逐层展示的 Langfuse 式树；每个模型请求可看这次新增的消息、token、缓存命中（低于 50% 标黄，未缓存输入暴涨 3 倍标 ⚠）、首 token 时间与 tok/s、思考与回复预览；按工具统计次数/耗时/失败，三泳道可点时间线，支持搜索。备注：只观察——turn.step 原样透传、tool.call 只记录不改写；可选 captureSystemPrompt（默认关）只读 prompt.compose 结果原样返回；记录存在会话状态（最多 2000 行、最近 150 条完整载荷）；不联网、不跑进程、不调模型；与 stepscope、flight-recorder 部分重叠（本 mod 侧重每次模型请求看到了什么和缓存命中）。 | MIT | [链接](https://github.com/jasoncai0/claude-agent-trace) |
 | lean-comments | — | Claude 每次 Edit/Write 时检查这次新增的注释，拒绝加横幅/分隔线注释、多行注释（含多行 `/** */` 文档注释，可开 allowDocComments 放行）、超过 120 字符的注释、复述代码的注释（如「Step 1: …」「# Helpers」），以及一次新增超过 3 条注释的改动，让 Claude 改成只写一行说明「为什么」的短注释；只查新增注释，eslint-disable、@ts-expect-error、noqa、许可证头等指令不算，Markdown 等文档文件跳过。备注：默认 block 模式只拒绝不改写（hooks/register.ts 165）；可在 /config 改为 warn（放行并在工具结果后附说明）或 off，并调 maxLength、maxNewComments；不联网、不调模型、不起子进程。 | MIT | [链接](https://github.com/WilsonKinyua/claude-mods/tree/main/plugins/lean-comments) |
 | nvim-inline-review | — | 配合同仓库的 Neovim 插件 claude-inline-review.nvim，在你真实的 Neovim 缓冲区里逐块（hunk）审阅、接受或拒绝 Claude 的改动：Claude 首次 Edit/Write/NotebookEdit 某个文件前先给它拍快照，Neovim 端据此显示新旧差异。备注：需另装 Neovim 插件（Neovim ≥ 0.11），单独装 mod 只记录不显示；工具调用原样放行，只在无法记录时拒绝并中止回合；快照用 `git hash-object -w` 存进本仓库 git 对象库（不提交、不暂存），记录写在 .git/claude-inline-review/session.json；记录失败或按 Esc 中断回合时会往会话追加一条系统说明；不联网、不调模型。 | MIT | [链接](https://github.com/rohitsrao/claude-inline-review.nvim/tree/main/claude-mod) |
+| ast-grep | — | 给 Claude 四个结构化代码工具（ast-grep CLI）：按语法模式搜索（如 `console.log($A)`）、预览改写的完整 diff、照预览原样应用或丢弃；应用前比对每个文件的 SHA-256，文件在预览后改过就一个都不写；`/ast-grep on\|off\|discard`。备注：需自行安装 ast-grep CLI；本机以参数数组运行 ast-grep（不经 shell，hooks/register.ts 136、150）；每个文件都通过内置 Write 工具写入，先 `$.tool.check` 再 `$.tool.call`，照常走你的权限规则和确认（349、377）；只读会话目录内的普通 UTF-8 文件；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-ast-grep) |
+| edit-diagnostics | — | Claude 每次 Edit/Write/NotebookEdit 后，跑你仓库 `.claude/edit-diagnostics.json` 里配置的检查（tsc、ruff 或输出简单 JSON 的命令），把这次改到的文件里新出现的问题用几行告诉 Claude，已报告过的只计数；检查没正常结束会标「未验证」而不是「干净」。备注：必须先在提示框亲自输入 `/edit-diagnostics approve` 批准配置文件原文才会运行，文件改一个字节就要重新批准（hooks/register.ts 280–289）；检查结果作为该次编辑工具结果的附加 context 给模型（标明是工具输出、不是指令，329–342），不改提示、不改编辑、不拦截；命令不经 shell、带超时；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-edit-diagnostics) |
+| pr-evidence | — | 给 Claude 一个只读工具 `pr_evidence`：按 repo+PR 号或精确 commit SHA 一次取回 PR 元数据、diff、该 commit 的 CI 运行/检查状态和失败任务的日志尾部，并按固定规则给出结论（排队中算 pending、没有 workflow 不算通过、发现不完整算 inconclusive），避免把没跑完或没跑的 CI 说成通过；`/pr-evidence on\|off`。备注：用本机已登录的 `gh` 只读查询，命令白名单只放行 `gh api --method GET`、`gh run view --log-failed`、`gh pr view --json` 和 `git rev-parse HEAD`（hooks/gh.ts 85–106）；默认拒绝子代理调用；不发送会话内容、不调模型。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-pr-evidence) |
 
 ### 子代理管理 Subagent Management
 
