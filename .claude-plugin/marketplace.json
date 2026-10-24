@@ -5111,6 +5111,22 @@
       },
       "homepage": "https://github.com/deejay-hub/sf-headless-band",
       "license": "MIT"
+    },
+    {
+      "name": "usage-meter",
+      "description": "Status line with this session's spend, its $/hour over the last hour, and every open session's $/hour combined. Toasts when all sessions together pass a $/hour budget (default $40/h, at most every 30 min), at three compactions within 30 minutes (context refilling fast), and when Haiku runs past 100K context; /spend ranks open sessions by $/hour with total spend, context size and model. Spend is Claude Code's own session cost figure at API prices (read it as relative usage on a subscription). Sessions share readings through the mod's own $.store; thresholds are constants at the top of hooks/register.ts. Hooks turn.complete, session.compact and its own /spend command only; writes no files, no processes, no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "Production-Grade/usage-meter",
+        "sha": "20d41386a9befdf4f1ea97098f2d3b3348c86d26"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Production Grade",
+        "url": "https://github.com/Production-Grade"
+      },
+      "homepage": "https://github.com/Production-Grade/usage-meter",
+      "license": "MIT"
     }
   ]
 }
