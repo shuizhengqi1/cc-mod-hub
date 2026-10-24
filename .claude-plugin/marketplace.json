@@ -5225,6 +5225,39 @@
       },
       "homepage": "https://github.com/MustafaManhal/agy-lead",
       "license": "MIT"
+    },
+    {
+      "name": "ask-preview-text",
+      "description": "让 AskUserQuestion 的选项预览能被读屏软件读：把预览从对话框里拿掉（对话框变成普通竖排选项列表），在对话记录里该问题下方一次性以纯文本列出所有预览（编号与选项对应）。只改显示，不改答案；mod 出错时原样交回自带对话框。",
+      "source": {
+        "source": "github",
+        "repo": "alex19EP/claude-ask-preview-text",
+        "sha": "52a3f420673a612f3aa2f241f7ea749e329c1de2"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Alexander Epaneshnikov",
+        "url": "https://github.com/alex19EP"
+      },
+      "homepage": "https://github.com/alex19EP/claude-ask-preview-text",
+      "license": "MIT"
+    },
+    {
+      "name": "commit-gate",
+      "description": "拦下 git commit，直到你批准：你最近一条提示里说了 go / commit it，或对 Claude 的提交提问回答了 yes；否则弹出对话框（默认选 Not yet）。提交后若又编辑了文件，需要重新批准。只 deny/询问，不改写命令；prompt.submit 只记录批准状态，不改写提示、不注入上下文；不联网、不调模型。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jjailer/claude-skills.git",
+        "path": "plugins/commit-gate",
+        "sha": "edeac72ddff32ea3f00507aed5be3a0e60abd15e"
+      },
+      "version": "0.3.0",
+      "author": {
+        "name": "Joseph Jailer-Coley",
+        "url": "https://github.com/jjailer"
+      },
+      "homepage": "https://github.com/jjailer/claude-skills/tree/main/plugins/commit-gate",
+      "license": "MIT"
     }
   ]
 }
