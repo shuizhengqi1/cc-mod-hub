@@ -5390,6 +5390,22 @@
       },
       "homepage": "https://github.com/chrisvaillancourt/claude-pr-evidence",
       "license": "MIT"
+    },
+    {
+      "name": "secret-input",
+      "description": "Take passwords and tokens in a private input pane instead of the chat: the model never sees the value, which goes only into the commands that run.",
+      "source": {
+        "source": "github",
+        "repo": "YouHyuksoo/secret-input",
+        "sha": "065b59c6f204d247f65cd74c8d5950d07729364c"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "YouHyuksoo",
+        "url": "https://github.com/YouHyuksoo"
+      },
+      "homepage": "https://github.com/YouHyuksoo/secret-input",
+      "license": "MIT"
     }
   ]
 }
