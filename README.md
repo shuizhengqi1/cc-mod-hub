@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 625 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 627 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 625 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 627 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 625 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 627 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 625 个精选 Claude Code mods，按类别组织：
+以下是本市场的 627 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -253,6 +253,7 @@ For detailed descriptions of all 625 mods, see the Chinese section below. The �
 | smart-rtl | — | 让 Claude 桌面版（及其他非终端界面）里的 Claude Code 正确显示希伯来语、阿拉伯语、波斯语等从右到左文字：按段落、列表、表格判断方向，用 Unicode 双向控制符排版，行内代码、数学和 LaTeX 保持从左到右，代码块不动，你自己输入的 RTL 提示右对齐；`/rtl` 开关（记在本机 `$.store`）。备注：只改显示（ui.render AssistantMessage/UserMessage），终端界面不处理，与终端用的 rtl 互补；`/ltr` 仅限 Windows，运行插件自带的 `windows/claude-ltr.ps1`，会强制关闭 Claude 桌面版并以 `--force-ui-direction=ltr` 重启；不联网、不调模型。 | MIT | [链接](https://github.com/xShakedDev/RTL-For-Claude-Desktop) |
 | clipring | — | 提示框的 kill ring（类似 Emacs）：Alt+Backspace 剪切选中文字或光标所在行（连按会合并成一条），Ctrl+Alt+Backspace 剪切整段草稿，Ctrl+U / Ctrl+K 删掉的文字也会收进来；最多保存 50 条、跨会话保留，最新一条同时复制到系统剪贴板。提示框上方一条显示当前选中的片段（Alt+↑/↓ 切换、Alt+V 粘贴到光标处、Alt+D 删除），`/clips` 或 Alt+C 打开列表窗格（回车粘贴），Alt+H 看帮助；快捷键都可在插件选项里改。备注：只在你按它的快捷键时改提示框草稿（prompt.edit 返回新文本 / prompt.fill 插入，hooks/register.tsx 71–122、32、189），从不自动发送；剪切内容存在本机插件存储（$.store）里，敏感内容剪切后会留在历史中，可用 Alt+D 删掉；Alt+V 等默认键可能与其他用这些键的 mod 冲突，可改；与 cut-input 都会捕获 Ctrl+U/K，同时装无害。不联网、不调模型、不起子进程。 | MIT | [链接](https://github.com/summerz/clipring) |
 | errfold | — | 失败的工具调用在对话里折成一行红字（✗ 工具名、简短输入、第一行报错，ctrl+o 展开全文）；`/errors` 开关错误列表窗格（最新在上，每条显示行数可设，按 c 清空），状态栏显示「✗ n tool errors」。备注：只改显示；tool.call 原样放行、只记录失败（hooks/register.tsx 41–50）；错误记录只在内存，重载即清；不联网、不调模型、不起子进程。与 compact-tools、exit-badge 部分重叠（折叠失败行），新增的是本会话错误列表窗格。 | MIT | [链接](https://github.com/summerz/errfold) |
+| ask-preview-text | — | 给用读屏软件（如 Orca、NVDA）的用户：Claude 用 AskUserQuestion 提问且选项带预览（代码片段、草图）时，把预览从左右两栏的对话框里拿掉，对话框变成普通竖排选项列表；所有预览以纯文本一次性列在对话记录里该问题下方，编号与选项对应。备注：只改显示，不改你的答案；tool.call 只去掉 preview 字段，mod 出错时原样交回自带对话框；不联网、不调模型；单提交、⭐0。 | MIT | [链接](https://github.com/alex19EP/claude-ask-preview-text) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -345,6 +346,7 @@ For detailed descriptions of all 625 mods, see the Chinese section below. The �
 | trash-guard | — | Claude 永远不做不可恢复的删除：临时目录（/tmp、/var/folders）以外的 rm、unlink、rmdir、git clean、find -delete 一律拒绝，并告诉 Claude 改用废纸篓（macOS 14+ 的 trash、Finder「放回原处」或 Linux 的 gio trash），删了也能找回；引号和 heredoc 里的 rm 文字不误报，$( … )、&&、;、sudo 后面的 rm 仍能拦住；可用 allowed_paths 选项加放行目录。备注：只拒绝（deny），不改写命令；只读命令文本，不运行进程、不联网（hooks/register.js 81–98）。 | MIT | [链接](https://github.com/benjaminb10/encore-mods/tree/main/plugins/trash-guard) |
 | aws-guard | — | Claude 要跑会删除 IAM 角色/策略（`iam delete-role*`/`delete-policy*`）、改动 AWS Organizations（describe/list 以外的操作）或销毁 KMS 密钥（`schedule-key-deletion`、`delete-imported-key-material`）的 AWS CLI 命令时直接拦下，让 Claude 把完整命令交给你用 `!` 前缀自己运行；能识别 `bash -c`、env、xargs、sudo、子 shell、命令替换和 PowerShell 包装，help 与 `--generate-cli-skeleton` 放行。备注：只 deny，不改写命令（hooks/register.ts）；只看写出来的命令行，不展开变量/别名，不检查 AWS Tools for PowerShell cmdlet 和 SDK 脚本，作者说明这是防误操作护栏而不是安全边界；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/aws-guard) |
 | blast-radius-win | — | 官方 blast-radius 的 Windows/PowerShell 版：Claude 跑风险 Bash、PowerShell 或 Monitor 命令（rm -rf、Remove-Item -Recurse、git reset --hard、git clean、force push、数据库迁移）前先拦下，在面板里列出会删/改的文件、数量和大小，等你点 Proceed 或 Cancel（默认选中 Cancel，窄终端改在提示框上方显示）；能读 PowerShell 参数缩写、反引号续行、here-string、嵌套 `powershell -Command`/`cmd /c`。备注：tool.call 只 deny 或原样放行，不改写命令；mod 自身出错时拒绝命令（fail closed）；测量只读：本机 git（关闭 fsmonitor）、Git 自带 bash 的 find/du 或 powershell.exe（路径以 JSON 经 stdin 传入），不运行项目自己的工具；不联网、不调模型。与 blast-radius 同源（Apache-2.0 修改版，附 NOTICE），主要给 Windows 用户。 | Apache-2.0 | [链接](https://github.com/FlyinSteve/blast-radius-win) |
+| commit-gate | — | 让 Claude 在你点头之前不能 git commit：你最近一条提示说了 go、commit it、/commit，或对 Claude 的「要提交吗？」回答了 yes 才放行；否则弹出对话框（默认选 Not yet，无人应答或离开超时都算拒绝）。提交后再编辑文件（/tmp 草稿除外）会让批准失效，下次提交需要重新批准。备注：只 deny/询问，不改写命令；prompt.submit 只记录批准状态，不改写提示、不注入上下文；读会话最后一条回复判断是否在问提交；不联网、不调模型；所在仓库是作者个人插件集，⭐0。 | MIT | [链接](https://github.com/jjailer/claude-skills/tree/main/plugins/commit-gate) |
 
 ### 开发工具 Dev Tools
 
