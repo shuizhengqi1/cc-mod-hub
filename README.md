@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 620 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 621 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 620 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 621 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 620 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 621 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 620 个精选 Claude Code mods，按类别组织：
+以下是本市场的 621 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -132,6 +132,7 @@ For detailed descriptions of all 620 mods, see the Chinese section below. The �
 | usage-hotkey | — | 给 Windows 上用 NVDA 读屏的用户：按一个热键，NVDA 朗读上下文 token、5 小时与每周额度（含重置时间）、本对话占各额度的百分比和费用；多个会话同时跑时按各自花费拆分额度涨幅。备注：仅 Windows + NVDA；需在 ~/.claude/keybindings.json 把热键绑到 app:toggleDiffNoiseFilter；按键时本机 process 用 powershell（-ExecutionPolicy Bypass）运行插件自带 scripts/speak.ps1，经随附的 NV Access 官方 nvdaControllerClient.dll（LGPL-2.1，SHA-256 与官方 2026.2 发布包一致）朗读；不联网，不改提示。 | MIT | [链接](https://github.com/nibarAhmed/usage-hotkey) |
 | litellm-key | — | 给通过 LiteLLM 代理用 Claude 的人：底栏一行预算摘要，/litellm 打开面板看虚拟 key 的预算、花费、速率限制、到期、可用模型和近 30 天用量（可复制/导出 CSV、JSON），预算用完时提示框上方常驻提醒，接近预算（默认 80%）、key 将到期或代理出错时 toast，可另设每日花费提醒（默认关）。管理员还可新建/修改/封禁 key、追加预算、看路由 fallback。备注：只连 Claude Code 已在用的代理（ANTHROPIC_BASE_URL 或 litellm_url），用它已发送的 key（可另配 admin key）；默认每 60 秒和每回合结束后读取一次；管理操作每次先弹窗确认；只有你运行 /litellm share 时才把报告（不含 key）交给 Claude；不改提示、不运行进程、不调模型。 | MIT | [链接](https://github.com/juninmd/cc-litellm/tree/main/plugins/litellm-key) |
 | usage-meter | — | 状态栏一行显示本会话花费、本会话近一小时的每小时花费，以及所有打开会话合计的每小时花费（例如 `$12.40 · $8.10/h · all $23.60/h`）；所有会话合计超过每小时预算（默认 $40/h，最多 30 分钟提醒一次）、30 分钟内压缩 3 次（上下文回填太快）、Haiku 上下文超过 10 万 token 时弹提示；`/spend` 按每小时花费排出各会话（总花费、上下文大小、模型）。备注：花费取 Claude Code 自己的会话费用（按 API 价格，订阅用户当相对用量看）；各会话通过本 mod 自己的 $.store 共享读数，阈值是 hooks/register.ts 顶部的常量；只挂 turn.complete、session.compact 和自己的 /spend，不写文件、不运行子进程、不联网、不调用模型、不改提示。与 cost-meter 相近，多了跨会话每小时花费和压缩/Haiku 提醒。 | MIT | [链接](https://github.com/Production-Grade/usage-meter) |
+| meter | — | /meter 打开侧边面板：上下文占用和自动压缩点、缓存命中率，5 小时和每周限额的用量与消耗节奏（已用百分比对比窗口已过时间，绿/黄/红着色，节奏超过 1 时预估何时用满），本会话花费，以及占上下文最多的几类（消息、MCP 工具、子代理、技能、记忆文件，按 MCP 服务器细分）；面板画在模型上下文之外，不占 token。备注：需要 Claude Code 2.1.302 及以上；只用 $.session.usage、session.measure、面板和自己的 /meter 命令，不写文件、不起进程、不联网、不调用模型、不改写提示。 | MIT | [链接](https://github.com/mikelane/thrift/tree/main/plugins/meter) |
 
 ### 上下文管理 Context Management
 
