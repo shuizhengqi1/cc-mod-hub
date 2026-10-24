@@ -5209,6 +5209,22 @@
       },
       "homepage": "https://github.com/FlyinSteve/blast-radius-win",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "agy-lead",
+      "description": "/agy 面板实时显示 Antigravity CLI（agy）的执行步骤、被拒命令和回复；配套 skill 让 Claude 规划、写 brief，并在 git worktree 里审查 agy 的改动。",
+      "source": {
+        "source": "github",
+        "repo": "MustafaManhal/agy-lead",
+        "sha": "b3125d5dd89286322de1a6c40b1763cb7d2938e6"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Mustafa Manhal",
+        "url": "https://github.com/MustafaManhal"
+      },
+      "homepage": "https://github.com/MustafaManhal/agy-lead",
+      "license": "MIT"
     }
   ]
 }
