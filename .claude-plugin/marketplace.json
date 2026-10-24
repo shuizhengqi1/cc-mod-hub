@@ -5342,6 +5342,54 @@
       },
       "homepage": "https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/taint-guard",
       "license": "MIT"
+    },
+    {
+      "name": "ast-grep",
+      "description": "Structural code search and previewed, staged rewrites through the ast-grep CLI.",
+      "source": {
+        "source": "github",
+        "repo": "chrisvaillancourt/claude-ast-grep",
+        "sha": "60ecd412e6a9b0d7cd2b07008e737026e8bc90e0"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Vaillancourt",
+        "url": "https://github.com/chrisvaillancourt"
+      },
+      "homepage": "https://github.com/chrisvaillancourt/claude-ast-grep",
+      "license": "MIT"
+    },
+    {
+      "name": "edit-diagnostics",
+      "description": "After Claude edits a file, runs the repo's own approved checks and gives the model a short, deduplicated list of what they report.",
+      "source": {
+        "source": "github",
+        "repo": "chrisvaillancourt/claude-edit-diagnostics",
+        "sha": "0778b8c49e9592f57626da4a6be6ca6759a676b4"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Vaillancourt",
+        "url": "https://github.com/chrisvaillancourt"
+      },
+      "homepage": "https://github.com/chrisvaillancourt/claude-edit-diagnostics",
+      "license": "MIT"
+    },
+    {
+      "name": "pr-evidence",
+      "description": "Reads a pull request's diff, its CI status for an exact commit and the failed jobs' logs, as one model-callable tool.",
+      "source": {
+        "source": "github",
+        "repo": "chrisvaillancourt/claude-pr-evidence",
+        "sha": "4638d5ac77806456df572610dbb802c92a820f28"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Vaillancourt",
+        "url": "https://github.com/chrisvaillancourt"
+      },
+      "homepage": "https://github.com/chrisvaillancourt/claude-pr-evidence",
+      "license": "MIT"
     }
   ]
 }
