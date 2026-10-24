@@ -5309,6 +5309,39 @@
       },
       "homepage": "https://github.com/rohitsrao/claude-inline-review.nvim",
       "license": "MIT"
+    },
+    {
+      "name": "tree",
+      "description": "Browse this session's conversation tree, branches included, label entries, and branch or rewind from any of them.",
+      "source": {
+        "source": "github",
+        "repo": "chrisvaillancourt/claude-tree",
+        "sha": "5f5b2bb2d3da4f28cecf73b8f9410c759f976a15"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Chris Vaillancourt",
+        "url": "https://github.com/chrisvaillancourt"
+      },
+      "homepage": "https://github.com/chrisvaillancourt/claude-tree",
+      "license": "MIT"
+    },
+    {
+      "name": "taint-guard",
+      "description": "After a session reads untrusted content (web pages, searches, MCP results), blocks the commands that could send data out or publish until the user clears it",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DustyStudy/claude-code-guardrails.git",
+        "path": "mods/taint-guard",
+        "sha": "90d826030db30a75faaf9a835ca0c2725291a619"
+      },
+      "version": "0.4.0",
+      "author": {
+        "name": "Dustin Arrington",
+        "url": "https://github.com/DustyStudy"
+      },
+      "homepage": "https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/taint-guard",
+      "license": "MIT"
     }
   ]
 }
