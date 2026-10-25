@@ -5519,6 +5519,20 @@
       },
       "homepage": "https://github.com/PnxLasantha/claude-qa-mods/tree/main/plugins/robot-progress",
       "license": "MIT"
+    },
+    {
+      "name": "all-prompts",
+      "description": "A side pane listing your prompts from every Claude Code session, newest first, grouped by the session each was typed in, with filter and copy prompt / copy resume command.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gvarnell/Claude_Mods.git",
+        "path": "all-prompts",
+        "sha": "36b36882fd985d061f4acfc9c9aadda922c23b8a"
+      },
+      "version": "0.1.0",
+      "author": { "name": "Greg Varnell", "url": "https://github.com/gvarnell" },
+      "homepage": "https://github.com/gvarnell/Claude_Mods/tree/main/all-prompts",
+      "license": "MIT"
     }
   ]
 }
