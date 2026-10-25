@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 643 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 644 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 643 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 644 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 643 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 644 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 643 个精选 Claude Code mods，按类别组织：
+以下是本市场的 644 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -259,6 +259,7 @@ For detailed descriptions of all 643 mods, see the Chinese section below. The �
 | errfold | — | 失败的工具调用在对话里折成一行红字（✗ 工具名、简短输入、第一行报错，ctrl+o 展开全文）；`/errors` 开关错误列表窗格（最新在上，每条显示行数可设，按 c 清空），状态栏显示「✗ n tool errors」。备注：只改显示；tool.call 原样放行、只记录失败（hooks/register.tsx 41–50）；错误记录只在内存，重载即清；不联网、不调模型、不起子进程。与 compact-tools、exit-badge 部分重叠（折叠失败行），新增的是本会话错误列表窗格。 | MIT | [链接](https://github.com/summerz/errfold) |
 | ask-preview-text | — | 给用读屏软件（如 Orca、NVDA）的用户：Claude 用 AskUserQuestion 提问且选项带预览（代码片段、草图）时，把预览从左右两栏的对话框里拿掉，对话框变成普通竖排选项列表；所有预览以纯文本一次性列在对话记录里该问题下方，编号与选项对应。备注：只改显示，不改你的答案；tool.call 只去掉 preview 字段，mod 出错时原样交回自带对话框；不联网、不调模型；单提交、⭐0。 | MIT | [链接](https://github.com/alex19EP/claude-ask-preview-text) |
 | tree | — | `/tree` 打开窗格，把本会话的对话记录画成一棵树，连 /rewind 或改写提示后留下的旧分支一起显示；可按「默认 / 隐藏工具调用 / 只看你的提示 / 已加标签 / 全部」筛选、搜索、给节点加标签；选中节点后按 e 把那条旧提示填进输入框（不自动发送）、c 复制、w/b 确认后执行 /rewind 或 /branch、o 复制 `claude --resume <id> --fork-session` 命令。备注：只读本机会话记录文件（用 `tail` 增量读取，超过 256 MB 拒读，可在插件设置里改），从不写入记录；标签存在插件自己的存储；没有 prompt.submit，不改提示，不调模型、不联网；与 session-time-machine、prompt-toc 部分相近，独特处是显示分支树。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-tree) |
+| all-prompts | — | 右侧窗格列出你在所有 Claude Code 会话里发过的提示（最新在上，按会话分组，● 仍打开 / ○ 已结束，标出本会话），可过滤、隐藏斜杠命令，点一条看全文并复制提示或 `cd … && claude --resume <id>` 命令；`/prompts` 开关窗格（隐藏状态跨会话保留）。备注：只读本机 `~/.claude/history.jsonl`（用 `tail -n 2000`）和 `~/.claude/sessions/*.json`，每 3 秒轮询；会话名缓存在插件 `$.store`；终端宽度 ≥144 列的交互会话会自动打开窗格；不改写提示、不联网（hooks/register.tsx）。 | MIT | [链接](https://github.com/gvarnell/Claude_Mods/tree/main/all-prompts) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
