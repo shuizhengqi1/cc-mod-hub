@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 639 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 640 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 639 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 640 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 639 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 640 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 639 个精选 Claude Code mods，按类别组织：
+以下是本市场的 640 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -513,6 +513,7 @@ For detailed descriptions of all 639 mods, see the Chinese section below. The �
 | agent-router | ⭐ 7（所在仓库） | 代理路由器，管理子代理调用。 |  | [链接](https://github.com/alexandernicholson/agent-router/tree/main/agent-router) |
 | squad-board | ⭐ 5（所在仓库） | agent-squad 多会话协作框架的看板：在 CTO 会话的提示框上方显示各个代理（CTO/DEV/QA）的状态（工作中、等待权限、等你回答、空闲）、上下文用量和正在处理的 issue 或 PR，代理在等你时弹提示。备注：需配合同仓库的 agent-squad 框架使用，会话名要按 `CTO:`、`DEV:`、`QA:` 命名，否则不显示；各会话的状态写在 mod 自己的存储里共享；prompt.submit 只读取暂停/恢复命令、原样放行；tool.call 只读取 gh 输出里的 issue/PR 链接、原样放行；不联网。CTO 会话里绘制提示框上方区域时不调用 next，会盖住其他 mod 在这一栏的内容。 | MIT | [链接](https://github.com/gzurl/agent-squad/tree/main/mods/squad-board) |
 | agents-panel | ⭐ 5（所在仓库） | /agents-panel 打开侧栏，列出本项目、用户和插件定义的子代理（描述、模型、token），每个带 ▶ run 按钮。备注：读本机 .claude/agents/*.md；只有你点 ▶ run 才会用 $.agent.spawn 启动该子代理。 | | [链接](https://github.com/Boom-Vitt/claude-mods-boombignose/tree/main/agents-panel) |
+| session-radar | ⭐ 3（所在仓库） | 长会话侧栏一屏总览：需要你处理的权限/提问/计划审批（及等了多久）、模型与推理强度、上下文占用、5 小时/7 天限额与按当前节奏的用满预估、git 分支/worktree；最多 4 个子代理卡片（任务、上下文、工具调用数、当前 MCP/技能）、已连 MCP 服务器与正在调用的工具、在用技能、后台 shell/monitor（PID、实时输出、退出码，可复制或 Stop）、定时任务与 /loop 唤醒、任务清单和已批准计划；后台任务或子代理结束时弹 toast。`/radar` 开关，默认会话开始时在够宽（144 列以上）的终端自动以侧栏打开（autoOpen 可关）。备注：与 agent-radar、shell-monitor、usage-dash、meter 部分重叠，作为不依赖外部应用的一体化面板收录；所有钩子只观察并原样放行（含 prompt.submit 只记录不改写，hooks/register.tsx 618–627）；本机只跑 `git rev-parse`、`tail` 读 Claude Code 自己的任务输出文件、`ps -A -ww` 找后台 shell 的 PID（会读取本机所有进程命令行，仅在本地匹配，不显示也不保存，register.tsx 207–260）；Stop 按钮通过 TaskStop 工具调用，照常走权限确认；不联网、不调用模型、不写文件。 | MIT | [链接](https://github.com/ibrahimkobeissy/claude-mods/tree/main/mods/session-radar) |
 | droid-reviews | ⭐ 2（所在仓库） | 提示框上方每个正在跑的 droid review 一行：进度、droid 在做什么、结果。备注：配合同仓库的 droid-review 技能使用；只读当前仓库 `.droid-reviews/` 目录，用 `kill -0` 判断进程是否还活着；不联网。 | MIT | [链接](https://github.com/AuthorOfTheSurf/droid-review-skill/tree/master/skills/droid-reviews) |
 | task-band | ⭐ 2（所在仓库） | **推荐** 提示框上方带边框的任务带：正在运行的子代理、工作流、后台 shell 和 monitor 各一行，配进度条（按同类子代理历史耗时估算），可翻页。**备注**：prompt.submit 只解析后台任务完成通知来更新状态并原样放行，不改写（register.tsx 148–156）；tool.call 与 agent.spawn 先原样执行，只记录结果（76–125）；不运行外部程序、不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/task-band) |
 | subagent-cap | ⭐ 1（所在仓库） | 限制同时运行的子代理数量（默认上限可在设置里改），超出时拦下并让 Claude 等待或自己做。备注：只拒绝不改写（hooks/register.ts 46–60）；agent.spawn 只观察、原样放行（62–67）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/subagent-cap) |
