@@ -5440,6 +5440,20 @@
       },
       "homepage": "https://github.com/invinby/claude-code-ru/tree/main/mods/cc-ru",
       "license": "MIT"
+    },
+    {
+      "name": "loop-watch",
+      "description": "Warns when a project keeps starting sessions on its own (a scheduled job or keep-alive loop burning tokens): a toast after more than 10 starts from one project in an hour; /loop-watch lists the busiest projects of the last 24 hours with unattended counts, and can ignore/unignore a project. Local log only; no network, no model calls, no prompt or tool changes.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vinayagrw/claude-skills.git",
+        "path": "mods/loop-watch",
+        "sha": "08b82c281ec0b8534b6144461212eb5f63354655"
+      },
+      "version": "0.1.0",
+      "author": { "name": "vinayagrw", "url": "https://github.com/vinayagrw" },
+      "homepage": "https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch",
+      "license": "Apache-2.0"
     }
   ]
 }
