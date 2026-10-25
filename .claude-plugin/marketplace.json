@@ -5454,6 +5454,19 @@
       "author": { "name": "vinayagrw", "url": "https://github.com/vinayagrw" },
       "homepage": "https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "wirepane",
+      "description": "HTTPS debugging proxy inside Claude Code on macOS: captures HTTP/1.1, HTTP/2, gRPC, WebSockets and SSE from the browser, iOS and Android in a pane, and gives Claude 16 tools to list, inspect, diff, replay, mock and export (HAR) requests; /proxy starts it. Runs a local Node sidecar; system proxy, keychain CA and brew install only on button press; no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "legostin/wirepane",
+        "sha": "8ac0d2f6c24f96df5009b58060cec75bcc41fb08"
+      },
+      "version": "0.9.3",
+      "author": { "name": "Legostin Vyacheslav", "url": "https://github.com/legostin" },
+      "homepage": "https://github.com/legostin/wirepane",
+      "license": "MIT"
     }
   ]
 }

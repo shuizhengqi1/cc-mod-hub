@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 639 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 640 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 639 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 640 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 639 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 640 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 639 个精选 Claude Code mods，按类别组织：
+以下是本市场的 640 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -400,6 +400,7 @@ For detailed descriptions of all 639 mods, see the Chinese section below. The �
 | ou-on-en-est | ⭐ 2（所在仓库） | 各仓库进度面板：每个仓库的分支、未提交和未推送的改动、PR 与 CI；可选查看服务器上部署的提交相对 main 的位置和现场改动，以及你的页面是否能访问；`/ou-on-en-est` 打开，可给仓库加备注；法 / 英双语。**备注**：每 10 分钟自动对本地仓库 `git fetch --prune`（register.tsx 69、182）、跑 `gh pr view`（86）；配置了服务器才用 `ssh` 执行只读 git 查询（113），配置了地址才 `curl` 看状态码（137）；不发送会话内容。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/ou-on-en-est) |
 | CommitNudge | ⭐ 2（所在仓库） | 未提交的改动越积越多时，在状态栏轻提醒、必要时弹一次提示；`/commit-nudge` 看本项目的未提交改动和上次提交。备注：只读 git（`git status --porcelain`、`git diff --shortstat HEAD`、`git log -1`，hooks/register.tsx 28–34、69–73）；钩子先原样执行再刷新（163–182）；仓库里的 install.sh 只是可选的软链脚本，用市场安装不需要；不联网。 | MIT | [链接](https://github.com/Heuwzen/claude-runway/tree/main/commit-nudge) |
 | sources | ⭐ 2（所在仓库） | 侧栏列出本会话 Claude 读过的文件并按来源分组，可开“只读项目文件夹”锁（/sources allow 放行目录）。备注：Read/Grep/Glob 的 tool.call 只放行或 deny，不改参数；不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/sources) |
+| wirepane | ⭐ 2 | macOS 上的 HTTPS 调试代理（Charles/Proxyman 替代）：抓浏览器、iOS 模拟器/iPhone、Android 模拟器/手机的 HTTP/1.1、HTTP/2、gRPC、WebSocket 和 SSE，在面板里显示，Claude 可用 16 个工具查找、对比、重放请求、写 mock/延迟/改写规则、导出 HAR；`/proxy` 启动。备注：仅 macOS，需 Node 18+（本机跑 sidecar 代理，默认监听 127.0.0.1:8899）；只有按按钮才会用 networksetup 开关系统代理（可能弹管理员密码框，原设置备份在 ~/.claude/proxy-mod/ 并有看门狗恢复）、把自签 CA 加入登录钥匙串、给模拟器装 CA、没有 Node 时 `brew install node`；规则存在项目的 .claude/proxy-rules.json，script 规则在 node:vm（不是安全沙箱）里运行，项目自带的脚本要点「Allow script」才执行，但 Claude 通过 add_rule 工具写的脚本会自动信任（hooks/register.tsx 3538）；「To prompt」按钮只把请求摘要填进输入框、不自动发送（1695）；不改写提示、不调用模型、不外发会话内容，流量只经本机代理。 | MIT | [链接](https://github.com/legostin/wirepane) |
 | auto-checkpoint | ⭐ 1（所在仓库） | 每回合开始在 refs/claude-checkpoints 做工作树快照；/checkpoints 与 /undo-turn。纯本地 git。 | MIT | [链接](https://github.com/Justmalhar/awesome-claude-mods/tree/main/mods/auto-checkpoint) |
 | command-buttons | ⭐ 1 | 在助手 shell 代码块下画 Run/Copy 按钮与热键带；备注：本机 process（剪贴板），用户按按钮才经 tool.call 跑 Bash。 | MIT | [链接](https://github.com/faridmurzone/command-buttons-claude-code) |
 | aichemist-pr-review-pane | ⭐ 1（所在仓库） | 只读面板显示当前 PR 的 Copilot 审查状态、CI 与未解决评论线程。备注：用本机已登录的 gh 读 GitHub PR 数据（不发送会话内容）；「Run review loop」按钮只在你点时以你的身份发一句固定提示，需配合 AIchemist 的 pr-review-loop skill。 | MIT | [链接](https://github.com/Anras573/AIchemist/tree/main/mods/pr-review-pane) |
