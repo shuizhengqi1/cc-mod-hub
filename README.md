@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 639 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 640 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 639 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 640 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 639 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 640 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 639 个精选 Claude Code mods，按类别组织：
+以下是本市场的 640 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -667,6 +667,7 @@ For detailed descriptions of all 639 mods, see the Chinese section below. The �
 | cc-service-status | — | 在状态栏显示 Claude 服务运行状态（status.claude.com），出故障时列出受影响组件；`/cc-service-status` 打开面板看各组件状态、进行中的故障和维护（日文界面）。备注：开会话时和每 5 分钟经 `$.http` GET 一次 status.claude.com 的公开 summary.json，不带会话内容；不运行其他程序。 | MIT | [链接](https://github.com/lu-llc-jp/lu-claude-mods/tree/main/plugins/cc-service-status) |
 | chrome-profile-names | — | Claude in Chrome 连了多个 Chrome 配置时，把浏览器列表和选择框里的「Browser 1」「Browser 2」和设备 ID 换成你的 Chrome 配置名（配对时起的名字、账号与配置目录），别的电脑上的浏览器标为「another computer（系统，多久前连接）」，可在 /config 的 remoteNames 里按 `deviceId=名字` 给它们起名；读不到本机任何配置时原样放行，避免选错浏览器。备注：只读本机 Chrome/Edge/Brave/Chromium 的 `Local State` 与 Claude 扩展的 LevelDB 存储（自带纯 TS 解析器），不运行子进程、不联网；会改写 `list_connected_browsers`/`select_browser`/`switch_browser` 的结果文本和 AskUserQuestion 选项标签（只换名字），配置名和 Google 账号邮箱会因此出现在发给模型的工具结果里；box 冒烟 2.1.306 加载正常，2.1.292 加载失败，需较新版 Claude Code。 | MIT | [链接](https://github.com/navels/chrome-profile-names) |
 | gh-refs | — | Claude 回复里提到 GitHub issue 或 PR（完整链接、`owner/repo#123`，或裸 `#123`：指向同一条回复最后点名的仓库，否则用「Default repository」设置，否则用当前文件夹的 GitHub 仓库）时，回复下方出现一排按状态着色的小标签，悬停显示标题、issue/PR、状态（open/closed/merged/draft/not planned）、里程碑、标签、父 theme 和一两行正文摘要。备注：只改显示（ui.render），不改提示、不调模型、不写文件；本机运行 `gh api graphql` 取数据（需安装并登录 gh），只把 issue/PR 编号发给 GitHub，不发对话内容，结果在本 mod 的 $.state 里缓存 5 分钟；手机上没有悬停，只显示彩色标签。与 issue-links（只把 #123 变成链接）互补，相当于 GitHub 版的 ado-link-bar。 | MIT | [链接](https://github.com/abmorrill4/gh-refs) |
+| devlog | — | Notion 课题库做成 Backlog 风的工单管理：`/devlog`（简写 `/dl`）打开课题面板（未完成 / 本周到期 / 进行中 / 人工负责四个标签），选中看正文要点、提示框上方显示 git 分支名里那张工单（如 `feat/sek-08-x` → SEK-08），甘特图拖动改期限，附件上传下载，起票表单；检测到 Claude 运行的 `git commit` / `gh pr merge` 时提议改状态。备注：界面为日语；需 Notion MCP 连接器和 Claude Code 2.1.304 以上；写入 Notion 一律等你按「确定」；要点摘要和起票标题草稿在你操作时用 haiku（`$.model.complete`，只送工单正文或 git 分支/最近提交/diff --stat，不带会话）；会让 Claude 运行的所有 `gh` 命令在 auto 模式下也要人工确认（无法询问时拒绝）；附件存到 ~/Downloads/devlog/，图片预览用 macOS 的 sips。 | Unlicense | [链接](https://github.com/HTNCode/devlog) |
 
 ### 本地工具 Local Tools
 

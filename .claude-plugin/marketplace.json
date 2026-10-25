@@ -5454,6 +5454,22 @@
       "author": { "name": "vinayagrw", "url": "https://github.com/vinayagrw" },
       "homepage": "https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "devlog",
+      "description": "Backlog-style ticket management on a Notion issue database inside Claude Code: /devlog (/dl) pane with tabs (open / due this week / in progress / human-owned), summaries, a current-ticket band above the prompt from the git branch key, a Gantt chart, attachments and a create form. Every Notion write happens only when you press confirm. Japanese UI; needs the Notion MCP connector and Claude Code 2.1.304+.",
+      "source": {
+        "source": "github",
+        "repo": "HTNCode/devlog",
+        "sha": "f3056f41d2ed16a737c9788aba5532b89f991181"
+      },
+      "version": "0.4.0",
+      "author": {
+        "name": "HTNCode",
+        "url": "https://github.com/HTNCode"
+      },
+      "homepage": "https://github.com/HTNCode/devlog",
+      "license": "Unlicense"
     }
   ]
 }
