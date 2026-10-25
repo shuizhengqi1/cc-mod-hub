@@ -5468,6 +5468,23 @@
       "author": { "name": "Ibrahim Kobeissy", "url": "https://github.com/ibrahimkobeissy" },
       "homepage": "https://github.com/ibrahimkobeissy/claude-mods/tree/main/mods/session-radar",
       "license": "MIT"
+    },
+    {
+      "name": "image-diet",
+      "description": "Shrinks large PNG/JPEG images from the Read tool and mcp__* tool results to 1280 px on the long edge (IMAGE_DIET_MAX_EDGE) before they enter Claude's context, saving about 60% of image tokens; skips click-by-coordinate tools (computer, cua, browser_batch), never shrinks files named *.full.*, and falls back to the original on failure. Runs sips (macOS) or ImageMagick locally via sh; adds a one-line note about the resize to the tool result; no network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sergical/claude-plugins.git",
+        "path": "plugins/image-diet",
+        "sha": "252bb9ddfecb114f18e58159d7904c020f0522fb"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Sergiy Dybskiy",
+        "url": "https://github.com/sergical"
+      },
+      "homepage": "https://github.com/sergical/claude-plugins/tree/main/plugins/image-diet",
+      "license": "MIT"
     }
   ]
 }
