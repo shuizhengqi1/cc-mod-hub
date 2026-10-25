@@ -5544,6 +5544,20 @@
       },
       "homepage": "https://github.com/gabrieloy-star/usage-coach",
       "license": "MIT"
+    },
+    {
+      "name": "subagent-saver",
+      "description": "Search subagents (Explore by default) that were given no model of their own run on a cheaper one (sonnet by default, or haiku) instead of inheriting the main model. An explicit model, forks, teammates, workflow agents and plugin agents stay untouched; stays out when CLAUDE_CODE_SUBAGENT_MODEL is set. A band above the prompt shows how many spawns were routed. Local only: no network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/LupusMalusDeviant/mod-box.git",
+        "path": "plugins/subagent-saver",
+        "sha": "67e4e474b0842a2f855a1a536c7b4652df7d90fd"
+      },
+      "version": "0.7.0",
+      "author": { "name": "Lupus Malus Deviant", "url": "https://github.com/LupusMalusDeviant" },
+      "homepage": "https://github.com/LupusMalusDeviant/mod-box/tree/main/plugins/subagent-saver",
+      "license": "MIT"
     }
   ]
 }
