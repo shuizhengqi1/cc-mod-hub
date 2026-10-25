@@ -5485,6 +5485,40 @@
       },
       "homepage": "https://github.com/sergical/claude-plugins/tree/main/plugins/image-diet",
       "license": "MIT"
+    },
+    {
+      "name": "run-guard",
+      "description": "Stops Claude from starting overlapping Robot Framework/Playwright test runs, deleting test reports/evidence, or running commands against hosts you mark as protected (deny-only).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PnxLasantha/claude-qa-mods.git",
+        "path": "plugins/run-guard",
+        "sha": "d8d017166f4cad5159ed93bb52d6120f19632472"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Lasa",
+        "url": "https://github.com/PnxLasantha"
+      },
+      "homepage": "https://github.com/PnxLasantha/claude-qa-mods/tree/main/plugins/run-guard",
+      "license": "MIT"
+    },
+    {
+      "name": "robot-progress",
+      "description": "Live Robot Framework run progress in a pane and status line: progress bar, current test, failures as they happen, stall warning.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PnxLasantha/claude-qa-mods.git",
+        "path": "plugins/robot-progress",
+        "sha": "d8d017166f4cad5159ed93bb52d6120f19632472"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Lasa",
+        "url": "https://github.com/PnxLasantha"
+      },
+      "homepage": "https://github.com/PnxLasantha/claude-qa-mods/tree/main/plugins/robot-progress",
+      "license": "MIT"
     }
   ]
 }

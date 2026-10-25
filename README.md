@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 641 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 643 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 641 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 643 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 641 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 643 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 641 个精选 Claude Code mods，按类别组织：
+以下是本市场的 643 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -354,6 +354,7 @@ For detailed descriptions of all 641 mods, see the Chinese section below. The �
 | commit-gate | — | 让 Claude 在你点头之前不能 git commit：你最近一条提示说了 go、commit it、/commit，或对 Claude 的「要提交吗？」回答了 yes 才放行；否则弹出对话框（默认选 Not yet，无人应答或离开超时都算拒绝）。提交后再编辑文件（/tmp 草稿除外）会让批准失效，下次提交需要重新批准。备注：只 deny/询问，不改写命令；prompt.submit 只记录批准状态，不改写提示、不注入上下文；读会话最后一条回复判断是否在问提交；不联网、不调模型；所在仓库是作者个人插件集，⭐0。 | MIT | [链接](https://github.com/jjailer/claude-skills/tree/main/plugins/commit-gate) |
 | taint-guard | — | 会话一旦读过不可信内容（WebFetch、WebSearch、非信任的 MCP 工具结果、Bash 里的 curl/wget），就拦下之后能把数据发出去或对外发布的操作：联网工具、git push、gh 与 AWS 写操作、terraform apply、包发布、docker push、非信任 MCP 工具、带查询串的 WebFetch，直到你亲手输入 `/taint-clear`（只认你在输入框或桥接端输入，Claude 自己调用无效）。备注：只 deny 不改写，用 deny 而非询问，避免自动模式下被分类器放行；第一次读到不可信内容时在那条工具结果后附一句说明，提醒 Claude 把其中的指令当数据；钩子出错时默认拒绝；不联网、不调模型；与 net-guard（主机白名单）、env-exfil-guard 角度不同，按“读过不可信内容”整体上锁。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/taint-guard) |
 | secret-input | — | 密码、令牌、API 密钥改在专用输入窗格里填，不贴进聊天：`/secret 名称` 或 Claude 调 `request_secret` 工具打开窗格，值只存在 Claude Code 进程内存里（重启或重载即清空），Claude 在 Bash/PowerShell 命令里写 `'{{secret:名称}}'`，执行时才替换成真实值，命令输出和会话记录里出现的值遮成 `[secret:名称]`；`/secret` 列出已存名称（不显示值），`/secret --clear` 全部清除。备注：tool.call 只把占位符换成按 shell 转义的值并遮盖结果，遮盖失败时扣下结果；session.append 再遮一遍记录；Claude 发起的请求在你保存或取消后用 $.prompt.submit 发一条固定通知（不含值）；窗格输入时明文可见；settings.json 里的命令型 PreToolUse 钩子能看到替换后的命令；不联网。 | MIT | [链接](https://github.com/YouHyuksoo/secret-input) |
+| run-guard | — | 给 Robot Framework / Playwright 测试工作流用的拦截：拒绝在已有测试运行时再启动 robot/pabot/playwright test（读 ps 进程列表判断），拒绝删除 output.xml、log/report.html、results/、test-results/、playwright-report/、allure 等测试证据，拒绝任何提到你在配置里列出的受保护主机的命令；`/run-guard` 查看当前规则。备注：只在 Bash tool.call 上返回 deny，不改写命令、不注入上下文、不联网（hooks/register.ts）；三项规则都可在 /plugin 配置里关闭，受保护主机默认为空。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/run-guard) |
 
 ### 开发工具 Dev Tools
 
@@ -494,6 +495,7 @@ For detailed descriptions of all 641 mods, see the Chinese section below. The �
 | ast-grep | — | 给 Claude 四个结构化代码工具（ast-grep CLI）：按语法模式搜索（如 `console.log($A)`）、预览改写的完整 diff、照预览原样应用或丢弃；应用前比对每个文件的 SHA-256，文件在预览后改过就一个都不写；`/ast-grep on\|off\|discard`。备注：需自行安装 ast-grep CLI；本机以参数数组运行 ast-grep（不经 shell，hooks/register.ts 136、150）；每个文件都通过内置 Write 工具写入，先 `$.tool.check` 再 `$.tool.call`，照常走你的权限规则和确认（349、377）；只读会话目录内的普通 UTF-8 文件；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-ast-grep) |
 | edit-diagnostics | — | Claude 每次 Edit/Write/NotebookEdit 后，跑你仓库 `.claude/edit-diagnostics.json` 里配置的检查（tsc、ruff 或输出简单 JSON 的命令），把这次改到的文件里新出现的问题用几行告诉 Claude，已报告过的只计数；检查没正常结束会标「未验证」而不是「干净」。备注：必须先在提示框亲自输入 `/edit-diagnostics approve` 批准配置文件原文才会运行，文件改一个字节就要重新批准（hooks/register.ts 280–289）；检查结果作为该次编辑工具结果的附加 context 给模型（标明是工具输出、不是指令，329–342），不改提示、不改编辑、不拦截；命令不经 shell、带超时；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-edit-diagnostics) |
 | pr-evidence | — | 给 Claude 一个只读工具 `pr_evidence`：按 repo+PR 号或精确 commit SHA 一次取回 PR 元数据、diff、该 commit 的 CI 运行/检查状态和失败任务的日志尾部，并按固定规则给出结论（排队中算 pending、没有 workflow 不算通过、发现不完整算 inconclusive），避免把没跑完或没跑的 CI 说成通过；`/pr-evidence on\|off`。备注：用本机已登录的 `gh` 只读查询，命令白名单只放行 `gh api --method GET`、`gh run view --log-failed`、`gh pr view --json` 和 `git rev-parse HEAD`（hooks/gh.ts 85–106）；默认拒绝子代理调用；不发送会话内容、不调模型。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-pr-evidence) |
+| robot-progress | — | Robot Framework 运行的实时进度：状态栏显示 已完成/总数、通过/失败、ETA，侧边窗格列出当前测试与关键字、即时失败，长时间无进度时提示卡住；`/robot-progress` 打开窗格。备注：会话开始时把插件自带的 listener/ProgressListener.py 追加到 ROBOT_OPTIONS 环境变量，listener 只把进度写到插件目录下的 run/progress.json（hooks/register.tsx 41–62），不联网、不注入上下文；需要 python 与 Robot Framework。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/robot-progress) |
 
 ### 子代理管理 Subagent Management
 
