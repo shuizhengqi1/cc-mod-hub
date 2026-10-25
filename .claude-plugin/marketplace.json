@@ -5454,6 +5454,20 @@
       "author": { "name": "vinayagrw", "url": "https://github.com/vinayagrw" },
       "homepage": "https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "session-radar",
+      "description": "A live sidebar for long sessions: usage limits, context, agents, MCP servers, skills, background shells, cron/loop wakeups and task progress at a glance; /radar toggles it. Read-only: hooks only observe and pass events through; runs local git rev-parse, tail and ps; no network, no model calls, writes nothing to disk.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ibrahimkobeissy/claude-mods.git",
+        "path": "mods/session-radar",
+        "sha": "fb8cc43bae05e913a02fdc9c3cb95ffb83aff114"
+      },
+      "version": "0.3.1",
+      "author": { "name": "Ibrahim Kobeissy", "url": "https://github.com/ibrahimkobeissy" },
+      "homepage": "https://github.com/ibrahimkobeissy/claude-mods/tree/main/mods/session-radar",
+      "license": "MIT"
     }
   ]
 }
