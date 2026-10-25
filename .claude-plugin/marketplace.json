@@ -5533,6 +5533,17 @@
       "author": { "name": "Greg Varnell", "url": "https://github.com/gvarnell" },
       "homepage": "https://github.com/gvarnell/Claude_Mods/tree/main/all-prompts",
       "license": "MIT"
+    },
+    {
+      "name": "usage-coach",
+      "description": "Strip above the prompt with context, prompt-cache time left, 5-hour/7-day limits with run-out pace and session cost, ending in the single change that saves the most (one-click compact); /usage-coach side pane with breakdown, 14-day history and model-fit insights; warns when the same step fails 3 times or a session passes its budget. Idle compact before the 1-hour cache expires is on by default (set to 0 to disable). Local only: no network, no model calls, never rewrites prompts or tool calls.",
+      "source": {
+        "source": "github",
+        "repo": "gabrieloy-star/usage-coach",
+        "sha": "f273cdf66ef160f9a4170cfc4cd0cf8970a185d7"
+      },
+      "homepage": "https://github.com/gabrieloy-star/usage-coach",
+      "license": "MIT"
     }
   ]
 }
