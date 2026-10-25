@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 637 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 638 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 637 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 638 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 637 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 638 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 637 个精选 Claude Code mods，按类别组织：
+以下是本市场的 638 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -203,6 +203,7 @@ For detailed descriptions of all 637 mods, see the Chinese section below. The �
 | status-ko | ⭐ 2（所在仓库） | 把工作中的转圈提示词换成韩语的「正在做什么」（思考中、读取中 · 文件名、执行中 · 命令等），回合结束行改成「模型 时长 · 工具数 · 缓存命中率 · 时刻」，中断、出错、拒绝分别标记。备注：tool.call 只计数、原样传递；只改界面文字；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/status-ko) |
 | streamer-mode | ⭐ 2（所在仓库） | 直播、共享屏幕或结对编程时，只在屏幕上遮住密钥和令牌、韩国身份证号/卡号/营业执照号、电话、邮箱、IP、家目录用户名和自定义词；`/streamer` 开关，`/streamer status` 看本会话遮了多少项。界面为韩语。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；不联网。 | MIT | [链接](https://github.com/SeongGwangJu/k-mods/tree/main/mods/streamer-mode) |
 | thai-mode | ⭐ 2（所在仓库） | 把 Claude Code 的界面换成泰文：工具行（Read→อ่านไฟล์、Bash→รันคำสั่ง，MCP 工具显示为「服务 · 泰文动词」）、工具结果摘要、折叠的工具组、按真实阶段变化的加载词、回合耗时和进度提示；`/thai` 开关（记在本机 `$.store`）。备注：内置词典翻译，不调模型；只改显示（`ui.render`），不改模型收到的内容；配色按浅色背景挑选；不联网。 | MIT | [链接](https://github.com/MankhongGarden/claude-code-mods-field-notes/tree/main/mods/thai-mode) |
+| cc-ru | ⭐ 1（所在仓库） | 把 Claude Code 的界面换成俄文：命令说明、设置名称、转圈提示词、输入框提示、通知、折叠的工具组和回合耗时；`/ru-status` 查看翻译覆盖率和未翻译条目。备注：只用本地词典（dict.json，英文条目来自 MIT 的 claude-code-zh），不调模型、不联网；只改显示（command.describe、config.describe、ui.render），不改模型收到的内容；权限窗口、启动画面等 mod API 不开放的界面仍是英文。 | MIT | [链接](https://github.com/invinby/claude-code-ru/tree/main/mods/cc-ru) |
 | message-timestamps | ⭐ 1（所在仓库） | 在 transcript 里给每条 Claude 回复加本地到达时间戳；无模型调用、不上网。 |  | [链接](https://github.com/benjaminmodayil/live-recap/tree/main/plugins/message-timestamps) |
 | netsignal | ⭐ 1 | 网络探针：向 api.anthropic.com 发延迟探测和带宽采样（不上传会话内容），在状态行显示往返时间。 | MIT | [链接](https://github.com/avazibra/claude-statusbar) |
 | account-badge | ⭐ 1（所在仓库） | 在提示框页脚显示当前登录组织的缩写（个人账号显示 PERS，用 API key 时显示 API）。备注：只读本机 ~/.claude.json 里的 oauthAccount，每 15 秒刷新；纯本机 UI。 | MIT | [链接](https://github.com/Amnesiac9/claude-mods/tree/main/account-badge) |
