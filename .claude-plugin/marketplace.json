@@ -5423,6 +5423,23 @@
       },
       "homepage": "https://github.com/iftahs/claude-mods/tree/main/mods/session-procs",
       "license": "MIT"
+    },
+    {
+      "name": "cc-ru",
+      "description": "Russian localization for Claude Code's mod-exposed UI: command descriptions, settings labels, spinner words, prompt hints, notices, tool groups and turn duration, from a local dictionary; /ru-status shows coverage. No model calls, no network.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/invinby/claude-code-ru.git",
+        "path": "mods/cc-ru",
+        "sha": "c7ca185b23e3018dd13a5f8b4fdd6be576e4ccd5"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "invinby",
+        "url": "https://github.com/invinby"
+      },
+      "homepage": "https://github.com/invinby/claude-code-ru/tree/main/mods/cc-ru",
+      "license": "MIT"
     }
   ]
 }
