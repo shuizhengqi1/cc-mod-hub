@@ -5591,6 +5591,34 @@
       },
       "homepage": "https://github.com/coreyx/claude-md-taskview",
       "license": "MIT"
+    },
+    {
+      "name": "tex-preview",
+      "description": "After Claude edits or writes a .tex file, compiles it locally (latexmk / pdflatex / xelatex / lualatex) and shows the PDF in a pane scrolled to the changed page via synctex; compile errors are listed with file and line; /tex compiles on demand. Uses only $.fs, $.process.run, $.ui, $.clock; no network, no model calls, no prompt rewriting; tool results are passed through unchanged.",
+      "source": {
+        "source": "github",
+        "repo": "lunatila/tex-preview",
+        "sha": "3fdac16a7adcb0268b661537c26914fb25d60caf"
+      },
+      "version": "0.2.0",
+      "homepage": "https://github.com/lunatila/tex-preview",
+      "license": "MIT"
+    },
+    {
+      "name": "whoami",
+      "description": "Footer showing the current Claude account, organization, email, plan and 5-hour / weekly usage. /whoami pin binds a folder to an account; if the active account differs, prompts are dropped (not rewritten) with a red banner above the prompt until /whoami ok. /account switches accounts. Runs only `claude auth status --json`, reads ~/.claude.json and ~/.claude-accounts/accounts.json; no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "tornikegomareli/claude-whoami",
+        "sha": "e81ee4875b12e2917a940ecc6f8633ee7a09259f"
+      },
+      "version": "0.3.1",
+      "author": {
+        "name": "tornikegomareli",
+        "url": "https://github.com/tornikegomareli"
+      },
+      "homepage": "https://github.com/tornikegomareli/claude-whoami",
+      "license": "MIT"
     }
   ]
 }
