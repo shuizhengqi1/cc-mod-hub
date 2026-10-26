@@ -5636,6 +5636,23 @@
       },
       "homepage": "https://github.com/Abrar118/claude-workflow/tree/c3270ccc8b0c5010957f68f9821354ebe6fda627/mods/push-preflight",
       "license": "MIT"
+    },
+    {
+      "name": "color-preview",
+      "description": "Paints each colour code in Claude's replies (6/8-digit hex, rgb()/rgba(), hsl()/hsla(), CSS colour names) as a chip in the colour it names, with black or white text for contrast; when the reply is drawn by Claude Code's own markdown it shows a row of chips under the reply instead. `/color-preview` opens a pane to switch each format on or off (saved across sessions). Display only: it never changes the conversation, makes no network calls and calls no model. Everyday words that are colour names (red, gold, tan) also get chips; switch CSS names off in `/color-preview` if that is noisy.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/WahiduzzamanKhan/wahid-claude-tweaks.git",
+        "path": "plugins/color-preview",
+        "sha": "9345fdfb1ea20202a1dc41ce678a78684052a836"
+      },
+      "version": "0.1.4",
+      "author": {
+        "name": "Wahiduzzaman Khan",
+        "url": "https://github.com/WahiduzzamanKhan"
+      },
+      "homepage": "https://github.com/WahiduzzamanKhan/wahid-claude-tweaks/tree/9345fdfb1ea20202a1dc41ce678a78684052a836/plugins/color-preview",
+      "license": "MIT"
     }
   ]
 }
