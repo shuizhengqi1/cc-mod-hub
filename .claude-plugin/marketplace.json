@@ -5558,6 +5558,23 @@
       "author": { "name": "Lupus Malus Deviant", "url": "https://github.com/LupusMalusDeviant" },
       "homepage": "https://github.com/LupusMalusDeviant/mod-box/tree/main/plugins/subagent-saver",
       "license": "MIT"
+    },
+    {
+      "name": "devops-consumption",
+      "description": "A /consumption pane (opened at session start) tracking GitLab.com and Azure DevOps usage: per-namespace monthly compute minutes against the plan quota, storage breakdown, seats and open merge requests with an extra-cost estimate past the plan; Azure DevOps hosted pipeline minutes, parallel jobs and licenses; plus how many MRs/PRs await your review. Meters turn amber at a warning percent and red at 100% with one toast per meter per month; a status line shows the top minutes meter. Runs local glab and az (read-only API calls, Key Vault read if configured) and calls dev.azure.com with your PAT or az token; never sends conversation content, no model calls, no prompt or tool rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/henkei-lakmal/mods.git",
+        "path": "devops-consumption",
+        "sha": "af364cd6c5a1d3953dfd18f7694de1d635e50659"
+      },
+      "version": "0.5.0",
+      "author": {
+        "name": "henkei-lakmal",
+        "url": "https://github.com/henkei-lakmal"
+      },
+      "homepage": "https://github.com/henkei-lakmal/mods/tree/main/devops-consumption",
+      "license": "MIT"
     }
   ]
 }
