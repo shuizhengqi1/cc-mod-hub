@@ -5619,6 +5619,23 @@
       },
       "homepage": "https://github.com/tornikegomareli/claude-whoami",
       "license": "MIT"
+    },
+    {
+      "name": "push-preflight",
+      "description": "Before Claude runs `git push`, runs the repo's own npm `format:check`, `lint` and `typecheck` scripts (whichever exist) and blocks the push if any fail. Deny-only: the command is never rewritten. Each script runs locally via `npm run` with a 300 second timeout and the push waits; reads only the session directory's package.json. `cd subdir && git push` is still caught, but the checks use the session directory rather than the subdirectory; `git -C` pushes are not recognized. `git push --dry-run` and repos without those scripts are allowed through. npm only, and node_modules must already be installed (otherwise the checks are skipped). Executes the repo's npm scripts, so be careful in untrusted repositories.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Abrar118/claude-workflow.git",
+        "path": "mods/push-preflight",
+        "sha": "c3270ccc8b0c5010957f68f9821354ebe6fda627"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Abrar118",
+        "url": "https://github.com/Abrar118"
+      },
+      "homepage": "https://github.com/Abrar118/claude-workflow/tree/c3270ccc8b0c5010957f68f9821354ebe6fda627/mods/push-preflight",
+      "license": "MIT"
     }
   ]
 }
