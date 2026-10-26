@@ -5653,6 +5653,23 @@
       },
       "homepage": "https://github.com/WahiduzzamanKhan/wahid-claude-tweaks/tree/9345fdfb1ea20202a1dc41ce678a78684052a836/plugins/color-preview",
       "license": "MIT"
+    },
+    {
+      "name": "session-report",
+      "description": "Writes a readable HTML report of the session: turns, cost, files changed, commands, subagents and notes. /report opens it; one is saved when the session ends.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ovidb/claude-mods.git",
+        "path": "plugins/session-report",
+        "sha": "8af429768924586c901717877194625049a1e6f8"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "ovidb",
+        "url": "https://github.com/ovidb"
+      },
+      "homepage": "https://github.com/ovidb/claude-mods/tree/8af429768924586c901717877194625049a1e6f8/plugins/session-report",
+      "license": "MIT"
     }
   ]
 }
