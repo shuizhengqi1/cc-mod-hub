@@ -5575,6 +5575,22 @@
       },
       "homepage": "https://github.com/henkei-lakmal/mods/tree/main/devops-consumption",
       "license": "MIT"
+    },
+    {
+      "name": "md-taskview",
+      "description": "A /md-tasks pane beside the transcript showing the milestone and task tree of spec/*/tasks.md and implementation_plan.md files (GFM or Obsidian Tasks states); press a task to cycle its state, which edits that line in the file; refreshes when Claude edits a task file. Reads files only through $.fs (and only folders Claude may read when following the shell), optional open-in-VS-Code via the local code command; no model calls, no network, no prompt or tool rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "coreyx/claude-md-taskview",
+        "sha": "4d7a0c83da58e7ff6bd3d6115094b47edb3f519c"
+      },
+      "version": "0.6.0",
+      "author": {
+        "name": "Corey Struzan",
+        "url": "https://github.com/coreyx"
+      },
+      "homepage": "https://github.com/coreyx/claude-md-taskview",
+      "license": "MIT"
     }
   ]
 }
