@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 650 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 651 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 650 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 651 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 650 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 651 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 650 个精选 Claude Code mods，按类别组织：
+以下是本市场的 651 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -499,6 +499,7 @@ For detailed descriptions of all 650 mods, see the Chinese section below. The �
 | edit-diagnostics | — | Claude 每次 Edit/Write/NotebookEdit 后，跑你仓库 `.claude/edit-diagnostics.json` 里配置的检查（tsc、ruff 或输出简单 JSON 的命令），把这次改到的文件里新出现的问题用几行告诉 Claude，已报告过的只计数；检查没正常结束会标「未验证」而不是「干净」。备注：必须先在提示框亲自输入 `/edit-diagnostics approve` 批准配置文件原文才会运行，文件改一个字节就要重新批准（hooks/register.ts 280–289）；检查结果作为该次编辑工具结果的附加 context 给模型（标明是工具输出、不是指令，329–342），不改提示、不改编辑、不拦截；命令不经 shell、带超时；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-edit-diagnostics) |
 | pr-evidence | — | 给 Claude 一个只读工具 `pr_evidence`：按 repo+PR 号或精确 commit SHA 一次取回 PR 元数据、diff、该 commit 的 CI 运行/检查状态和失败任务的日志尾部，并按固定规则给出结论（排队中算 pending、没有 workflow 不算通过、发现不完整算 inconclusive），避免把没跑完或没跑的 CI 说成通过；`/pr-evidence on\|off`。备注：用本机已登录的 `gh` 只读查询，命令白名单只放行 `gh api --method GET`、`gh run view --log-failed`、`gh pr view --json` 和 `git rev-parse HEAD`（hooks/gh.ts 85–106）；默认拒绝子代理调用；不发送会话内容、不调模型。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-pr-evidence) |
 | robot-progress | — | Robot Framework 运行的实时进度：状态栏显示 已完成/总数、通过/失败、ETA，侧边窗格列出当前测试与关键字、即时失败，长时间无进度时提示卡住；`/robot-progress` 打开窗格。备注：会话开始时把插件自带的 listener/ProgressListener.py 追加到 ROBOT_OPTIONS 环境变量，listener 只把进度写到插件目录下的 run/progress.json（hooks/register.tsx 41–62），不联网、不注入上下文；需要 python 与 Robot Framework。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/robot-progress) |
+| push-preflight | — | Claude 运行 `git push` 之前，按顺序跑本仓库 package.json 里已有的 npm 脚本 `format:check`、`lint`、`typecheck`（有哪个跑哪个），任一失败就拦住这次 push；`git push --dry-run` 和不含这些脚本的仓库直接放行。备注：只拒绝不改写命令；每次 push 前在本机运行仓库自己的 npm 脚本（每个最多 300 秒），push 会等待；只读会话目录的 package.json，不跟踪 `cd subdir && git push` 或 `git -C`（`cd subdir && git push` 这条命令仍会命中，但读的仍是会话目录的 package.json，不会进到子目录；`git -C` 识别不到）；仅支持 npm 且需已装 node_modules（没装时跳过检查并放行）；不可信仓库慎用（会执行其 npm 脚本）；新仓库 0⭐，是作者个人配置合集的子目录。 | MIT | [链接](https://github.com/Abrar118/claude-workflow/tree/c3270ccc8b0c5010957f68f9821354ebe6fda627/mods/push-preflight) |
 
 ### 子代理管理 Subagent Management
 
