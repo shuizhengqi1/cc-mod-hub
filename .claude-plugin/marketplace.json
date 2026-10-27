@@ -5687,6 +5687,22 @@
       },
       "homepage": "https://github.com/KimSuro5773/korean-ui",
       "license": "MIT"
+    },
+    {
+      "name": "node-close",
+      "description": "Ends the Node processes a finished Bash/PowerShell command left running (test runners, worker pools, esbuild/swc/turbo under node_modules): only processes new since the command started, orphaned, and carrying this Claude Code's CLAUDE_PID; commands that background on purpose (&, nohup, pm2, --detach) are kept and reported. Background commands' leftovers are ended when they stop or the session ends. /node-close lists every orphaned Node with CPU and run time; /node-close kill <PID ...> | kill all ends chosen ones and only runs when you type it yourself. Runs local ps/kill (taskkill and an inline Add-Type helper on Windows); no network, no model calls, no prompt changes.",
+      "source": {
+        "source": "github",
+        "repo": "AnnihilationWizard/node-close",
+        "sha": "7ad2823ecd9604a53829dc02def0acae80cdf861"
+      },
+      "version": "1.3.1",
+      "author": {
+        "name": "AnnihilationWizard",
+        "url": "https://github.com/AnnihilationWizard"
+      },
+      "homepage": "https://github.com/AnnihilationWizard/node-close",
+      "license": "MIT"
     }
   ]
 }
