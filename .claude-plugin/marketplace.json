@@ -5670,6 +5670,23 @@
       },
       "homepage": "https://github.com/ovidb/claude-mods/tree/8af429768924586c901717877194625049a1e6f8/plugins/session-report",
       "license": "MIT"
+    },
+    {
+      "name": "korean-ui",
+      "description": "Korean localization for Claude Code's mod-exposed UI: built-in command descriptions and /config labels from a bundled dictionary (locales/ko.json); other plugins' and skills' descriptions are opt-in (translate_others off by default) and only translated when you run /korean-ui-translate, which sends those UI strings (not session content) to Haiku via $.model.complete. /korean-ui-status shows coverage, /korean-ui-reset clears translations.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/KimSuro5773/korean-ui.git",
+        "path": "plugins/korean-ui",
+        "sha": "a0f62e93db04c0c0ce70c522099ad99865d152a0"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "KimSuro5773",
+        "url": "https://github.com/KimSuro5773"
+      },
+      "homepage": "https://github.com/KimSuro5773/korean-ui",
+      "license": "MIT"
     }
   ]
 }
