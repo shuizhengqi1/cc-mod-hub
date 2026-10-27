@@ -5719,6 +5719,7 @@
       },
       "homepage": "https://github.com/pepperonas/path-links",
       "license": "MIT"
-    }
+    },
+    {"name":"status-dots","source":{"source":"github","repo":"kevlar10x/status-dots","sha":"37f8f43d6258ddd8e7b298af75a6ed8a90583dc3"}}
   ]
 }
