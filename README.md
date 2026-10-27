@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 655 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 656 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 655 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 656 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 655 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 656 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 655 个精选 Claude Code mods，按类别组织：
+以下是本市场的 656 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -223,6 +223,7 @@ For detailed descriptions of all 655 mods, see the Chinese section below. The �
 | color-on-start | ⭐ 1 | 新对话会话开始时（启动和 `/clear` 之后）自动运行一次内置 `/color`，给提示栏上色；在 `/config` 里选固定颜色，或用默认的 `random` 每次启动随机挑一种；恢复的会话不改色。备注：只用 classic.SessionStart 判断新会话来源，然后通过 `$.command.run` 运行内置 `/color`，没有界面时（如 `-p`）不运行；和其他也会自动改色的 mod 同时装会互相覆盖；作者说明在 Claude Code 2.1.293 上确认过；不运行其他程序、不联网。 | MIT | [链接](https://github.com/tomatoaiu/color-on-start) |
 | tldr | ⭐ 1 | 把每个回合的工具调用折成一张卡片：改了哪些文件（整回合的净 diff）、测试前后的结果，以及值得你检查的地方（为了让测试通过而改测试文件、写到项目外、删除文件、跳过测试、`--no-verify` 或 force push）；提示框上方可选显示上下文占用条和 Claude 任务列表进度；`/tldr` 查看详情、历史、复制或看 diff；每项都能在 /plugin 设置里单独关掉。备注：tool.call 原样放行，只在 Claude 第一次编辑某文件前用 $.fs.read 读一次原文来算净 diff（hooks/register.tsx 120–134）；完成的卡片（不含 diff 内容，每会话最多 50 张）存在本机插件存储；不联网、不运行其他程序（见仓库 PRIVACY.md）。 | MIT | [链接](https://github.com/kushalBanda/claude-tldr) |
 | split-diff | ⭐ 1（所在仓库） | 终端宽度 ≥120 列时，把 Edit、Write（覆盖已有文件）和 Bash 改动文件的 diff 改成左右并排：左边原内容、右边新内容，行号与语法色沿用自带 diff，改动的词用更亮的底色标出；Bash 一次改多个文件时先列出文件清单和各自加减行数，每个文件最多显示 40 行；终端变窄时自动退回原来的上下 diff。备注：只钩 ui.render 的 ToolResult 改绘制（hooks/register.tsx 唯一的钩子），不改工具调用和会话内容；不运行其他程序、不联网、不存数据；作者标注需 Claude Code 2.1.296 或更高。 | MIT | [链接](https://github.com/oobg/claude-code-mods/tree/main/mods/split-diff) |
+| path-links | ⭐ 1 | 把 Claude 回复里出现的文件路径变成终端可点的 OSC 8 file:// 链接：每级文件夹各是一个链接（点开在 Finder/文件管理器里打开），点文件名打开文件；代码块里提到的路径可在块下方加一行可点链接，相对路径按工作目录解析；`/path-links` 切换 segments/file/off 模式及代码块、相对路径开关。备注：只改回复的显示（ui.render AssistantMessage，hooks/register.tsx 145–155），Claude 看到的内容和会话记录不变；只用 $.fs.stat/$.fs.list 查本机路径是否存在（限工作目录、家目录等可信根，300ms 超时）；不运行外部程序、不联网，点击由终端处理；需终端支持 OSC 8，作者标注支持 macOS/Linux。与 link-footer（回复里的 URL）、file-view（工具行路径开侧栏）互补。 | MIT | [链接](https://github.com/pepperonas/path-links) |
 | whoami | — | 页脚显示当前 Claude 账号、组织、邮箱、套餐和 5 小时/每周用量；`/whoami pin` 把文件夹绑定到一个账号，账号不对时只拦下提示（不改写）并在提示框上方显示红框，`/whoami ok` 放行；`/account` 切换账号。不联网，不调模型。备注：README 标 CC 2.1.296+（2.1.292 实测能加载）；和 account-badge 改同一处页脚，二选一；`/account` 切换需装作者的 Claude Accounts 菜单栏 app，会改本会话的 CLAUDE_SECURESTORAGE_CONFIG_DIR。 | MIT | [链接](https://github.com/tornikegomareli/claude-whoami) |
 | cc-math-renderer | — | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | al-syntax | — | 把回复里 ```al 代码块（Business Central AL 语言）用 tree-sitter 着色显示，其他回复不动。备注：本机 process 用 node 运行仓库自带的 tree-sitter 高亮脚本和 wasm 语法文件（随插件一起，不另下载）；只改回复显示，不改原文，不联网。 | MIT | [链接](https://github.com/abonckus/claude-code-al-syntax) |

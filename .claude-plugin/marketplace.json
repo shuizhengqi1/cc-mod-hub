@@ -5703,6 +5703,22 @@
       },
       "homepage": "https://github.com/AnnihilationWizard/node-close",
       "license": "MIT"
+    },
+    {
+      "name": "path-links",
+      "description": "Clickable paths in Claude Code replies: every folder and the file name become OSC 8 links (folder opens in your file manager, file opens in its app). Display-only, no network.",
+      "source": {
+        "source": "github",
+        "repo": "pepperonas/path-links",
+        "sha": "67a0e963ee2e158c004b4076efd208291eeb1a9a"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Martin Pfeffer",
+        "url": "https://github.com/pepperonas"
+      },
+      "homepage": "https://github.com/pepperonas/path-links",
+      "license": "MIT"
     }
   ]
 }
