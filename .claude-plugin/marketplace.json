@@ -5733,6 +5733,18 @@
       "version": "0.1.0",
       "homepage": "https://github.com/tilladam/ratatui-slint/tree/main/integrations/claude-code/slint-preview",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "idle-mod",
+      "description": "While Claude works, a line above the prompt rotates through findings about this session's work: FIXMEs/TODOs in files Claude edited, commits made but not pushed, new npm audit vulnerabilities or major updates; /idle-mod opens a pane that also lists project-wide items (stale branches, stashes, TODO counts). Each fixable line has a preview and a 'fix with Claude' button that submits a fixed, look-and-propose prompt as you (only when pressed). Runs local git/npm via $.process (npm audit/outdated contact the npm registry; skipped when the repo has its own .npmrc). Tool calls pass through unchanged; no $.http, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "demartinogiuseppe/idle-mod",
+        "sha": "3fc01345249eca49b7d7bfb91d54dc911477d6ea"
+      },
+      "version": "0.3.2",
+      "homepage": "https://github.com/demartinogiuseppe/idle-mod",
+      "license": "MIT"
     }
   ]
 }
