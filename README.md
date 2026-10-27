@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 657 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 658 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 657 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 658 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 657 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 658 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 657 个精选 Claude Code mods，按类别组织：
+以下是本市场的 658 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -378,6 +378,7 @@ For detailed descriptions of all 657 mods, see the Chinese section below. The �
 | repo-heatmap | ⭐ 20（所在仓库） | 当前项目的文件树状图，面积按文件大小，颜色随 Claude 读取、搜索、编辑和失败操作变化；/heatmap open。备注：跑本机 git ls-files/ls-tree 和 wc 统计文件；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/repo-heatmap) |
 | output-tray | ⭐ 20（所在仓库） | 侧边面板收集本会话新建的文件，可打开、在 Finder 中显示、复制路径；/tray。备注：Bash 前后用本机 git status/find 对比新文件；打开和显示用 macOS 的 open 命令，只在你点按钮时运行；注册一个自己的工具供 Claude 打开面板；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/output-tray) |
 | changes-receipt | ⭐ 20（所在仓库） | 每轮结束给一张白话收据：新建、修改、删除了哪些文件，经工具还是 shell，失败的尝试单独列出；/receipt 查看。备注：用本机 git status/hash-object/ls-tree/diff 比对；tool.call 先放行再记录；/receipt 与 away-receipt 的命令同名，别同时装；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/changes-receipt) |
+| slint-preview | ⭐ 14（所在仓库） | `/slint-preview 路径.slint` 在对话旁的窗格里实时预览 Slint 界面文件，保存该文件或同目录的 .slint 后自动刷新；画面由同仓库开源的 slint-preview-helper 在本机渲染。不联网，不调模型，不改提示和工具调用。备注：需自行用 `cargo install --locked --git https://github.com/tilladam/ratatui-slint slint-preview-helper` 编译 helper（首次编译要几分钟），需要 kitty 或 Ghostty 终端显示图片，作者只在 macOS 实测；版本 0.1.0 较早期，预览不接收鼠标键盘输入。 | Apache-2.0 | [链接](https://github.com/tilladam/ratatui-slint/tree/main/integrations/claude-code/slint-preview) |
 | pr-view | ⭐ 12（所在仓库） | 面板列出项目根仓库打开中的 PR 标题，点一个在浏览器中打开。备注：本机运行 gh pr list（需已登录 gh），用 open 打开链接（macOS）。 |  | [链接](https://github.com/ushironoko/dotfiles/tree/main/claude/.claude/skills/pr-view) |
 | config-parse | ⭐ 11（所在仓库） | 配置文件解析器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/config-parse) |
 | disk-janitor | ⭐ 11（所在仓库） | 清理临时文件。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/disk-janitor) |
