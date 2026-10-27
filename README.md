@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 653 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 654 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 653 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 654 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 653 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 654 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 653 个精选 Claude Code mods，按类别组织：
+以下是本市场的 654 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -195,6 +195,7 @@ For detailed descriptions of all 653 mods, see the Chinese section below. The �
 | codevibez | ⭐ 5 | 把 Claude Code 原始的工具调用行换成白话描述（如「→ Checking everything still works…」「✓ All checks pass (3 checks)」「⚠ Deleting 'build' and everything inside it」），失败、删除、改权限、删库等危险步骤始终标 ⚠/✗、不弱化；`/codevibez` 切回原始行；另有「The story so far」窗格按你每次提问分章节记录做过的事，每轮结束打一行总结。备注：只改终端显示，`tool.call` 先 next 再记录、原样返回结果（hooks/register.tsx 294–328），Claude 读到的工具结果不变；不调模型、不联网、不运行其他程序；故事只存在本会话状态里。 | MIT | [链接](https://github.com/leonhong18/codevibez) |
 | a2ui-claude-code | ⭐ 4（所在仓库） | 在窗格里原生渲染 A2UI 目录块（/a2ui 读文件或内联 JSON，并自动画 a2uicatalog MCP 载荷），带动画进度和长任务仪表盘（/a2ui-job，回合超过 60 秒后打开）。备注：tool.call 原样放行；只读本机文件，不联网；源仓库约 800 MB，首次安装较慢。 | MIT | [链接](https://github.com/a2uicatalog/a2ui/tree/main/claude-code-surface) |
 | change-journal | ⭐ 4（所在仓库） | 编辑变更的即时说明窗格。 |  | [链接](https://github.com/theonly1me/claude-code-mods/tree/main/plugins/change-journal) |
+| korean-ui | ⭐ 4 | 把 Claude Code 的命令说明和 /config 设置项换成韩文（自带词典 locales/ko.json）；`/korean-ui-status` 看覆盖率，`/korean-ui-reset` 清除翻译。备注：默认只用本地词典；其他插件和技能的说明默认不翻译（translate_others 关），只有手动运行 `/korean-ui-translate` 时才把这些界面文字（不含会话内容）经 $.model.complete 发给 Haiku 翻译；为避免模型看到韩文，会在 prompt.attachment(skill_listing) 里把技能列表还原成英文原文，不注入新内容。与 status-ko（只换转圈提示词）不重复。 | MIT | [链接](https://github.com/KimSuro5773/korean-ui/tree/main/plugins/korean-ui) |
 | review-pane | ⭐ 3 | 侧边阅读窗格：显示本会话最新回复、计划、提问与任务，可翻看前几轮、冻结、复制；/claude-review 开关，默认会话开始时打开（可在设置关掉）。只读本会话消息，复制键会写入剪贴板，不改写工具或提示。隐藏快捷键获得焦点时，ui.focus 拒绝并不调用 next。 | MIT | [链接](https://github.com/r3al1tym/claude-review) |
 | cut-input | ⭐ 3（所在仓库） | 一键剪切提示框内容：Ctrl+U / Ctrl+K 删掉的文字同时复制到系统剪贴板；提示框有字时右上方出现「✂ Cut input」按钮，点一下把整段草稿复制到剪贴板并清空提示框（复制失败则保留草稿并提示）。备注：prompt.edit / prompt.fill 只观察是否有字、结果原样返回，prompt.submit 只清掉按钮状态、原样放行不改写；有字时按钮占用提示框上方（不调 next），占用提示框上方、多装会互相遮挡；只用 $.ui.copy 和 $.prompt.fill 清空；不运行其他程序、不联网。 | MIT | [链接](https://github.com/shdennlin/agent-plugins/tree/main/plugins/cut-input) |
 | quiet-bash | ⭐ 3（所在仓库） | 精简 Bash 行展示，可选本地 magick 缩略图。备注：会本地调用 magick/identify 生成缩略图。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/quiet-bash) |
