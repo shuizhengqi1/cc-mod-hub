@@ -5745,6 +5745,18 @@
       "version": "0.3.2",
       "homepage": "https://github.com/demartinogiuseppe/idle-mod",
       "license": "MIT"
+    },
+    {
+      "name": "submit-without-autoscroll",
+      "description": "In fullscreen mode, send your prompt with a chord of your choice (e.g. Ctrl+Enter) without the transcript jumping back to the bottom, so you can keep reading an earlier answer while asking about it. Hooks only ui.render (AbovePrompt) to draw a hidden button bound to an existing engine keybinding action (default app:cycleDiffBase, configurable); pressing it submits your own draft verbatim as you. No prompt rewriting or context injection, no $.http, no model calls. Needs Claude Code 2.1.308+ and a binding in ~/.claude/keybindings.json (see the author's README).",
+      "source": {
+        "source": "github",
+        "repo": "someonewithpc/claude-mod-submit-without-autoscroll",
+        "sha": "20a371be9b46c6877a8768f8d763a2657d410d69"
+      },
+      "version": "0.1.0",
+      "homepage": "https://github.com/someonewithpc/claude-mod-submit-without-autoscroll",
+      "license": "MIT"
     }
   ]
 }
