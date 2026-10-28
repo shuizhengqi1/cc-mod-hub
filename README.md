@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 661 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 662 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 661 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 662 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 661 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 662 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 661 个精选 Claude Code mods，按类别组织：
+以下是本市场的 662 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -266,6 +266,7 @@ For detailed descriptions of all 661 mods, see the Chinese section below. The �
 | all-prompts | — | 右侧窗格列出你在所有 Claude Code 会话里发过的提示（最新在上，按会话分组，● 仍打开 / ○ 已结束，标出本会话），可过滤、隐藏斜杠命令，点一条看全文并复制提示或 `cd … && claude --resume <id>` 命令；`/prompts` 开关窗格（隐藏状态跨会话保留）。备注：只读本机 `~/.claude/history.jsonl`（用 `tail -n 2000`）和 `~/.claude/sessions/*.json`，每 3 秒轮询；会话名缓存在插件 `$.store`；终端宽度 ≥144 列的交互会话会自动打开窗格；不改写提示、不联网（hooks/register.tsx）。 | MIT | [链接](https://github.com/gvarnell/Claude_Mods/tree/main/all-prompts) |
 | color-preview | — | 把回复里的颜色代码（6/8 位十六进制、rgb()/rgba()、hsl()/hsla()、CSS 颜色名）画成对应颜色的色块，文字自动用黑或白保证可读；回复由 Claude Code 自带 markdown 渲染时改为在回复下方显示一排色块。`/color-preview` 打开面板按格式开关（跨会话保存）。备注：只改显示，不改会话内容，不联网、不调模型；red、gold 这类普通词也会被上色，嫌吵可在面板关掉 CSS 颜色名。 | MIT | [链接](https://github.com/WahiduzzamanKhan/wahid-claude-tweaks/tree/main/plugins/color-preview) |
 | submit-without-autoscroll | — | 全屏模式下用自选快捷键（如 Ctrl+Enter）发送提示，转录不会跳回底部，方便边看上文边提问。备注：只钩 ui.render 画一个隐藏按钮，原样以你的名义提交草稿，不改写提示；需 Claude Code 2.1.308+，并在 ~/.claude/keybindings.json 绑定 app:cycleDiffBase（可在 /config 改）。 | MIT | [链接](https://github.com/someonewithpc/claude-mod-submit-without-autoscroll) |
+| md-pane | — | Claude 写或改 `.md` 文件时，在对话旁的窗格里按回复同款样式渲染该文件，文件变动自动刷新；带最近文件列表、目录跳转、上次改动的 diff、点文档里的 .md 链接直接打开，`/md host:/路径` 可经 ssh 看远程机器上的文件，`/md auto always/project/off` 设自动打开方式。备注：tool.call 只观察、原样放行；会话开始时用本机 sh/find/grep 只从近 30 天 `~/.claude/projects` 记录里提取 Write/Edit 的文件路径来填最近列表（需 GNU 工具，非 Linux 列表从空开始）；只有打开 host:/路径 时才调用 ssh；按 e 只把「Edit 路径: 」填进输入框，不自动发送；不联网、不调用模型、不改写提示。与 file-view（点工具行路径看任意文件）、tui-preview-mod（/preview 预览媒体）相近，本条专注自动跟随 Claude 写的 Markdown。 | MIT | [链接](https://github.com/nicdavidson/md-pane) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
