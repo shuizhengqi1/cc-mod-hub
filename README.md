@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 660 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 661 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 660 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 661 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 660 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 661 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 660 个精选 Claude Code mods，按类别组织：
+以下是本市场的 661 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -539,6 +539,7 @@ For detailed descriptions of all 660 mods, see the Chinese section below. The �
 | model-guard | — | 规定本会话能用哪些模型：`/models` 勾选 Opus、Sonnet、Haiku、Fable 等，可按仓库保存或设为默认；子代理或 Workflow 要用被关掉的模型时默认拒绝（可切成换成 fallback），子代理在被关模型上的请求换到 fallback，`/model` 切到被关模型时拒绝；面板显示拦截记录。备注：agent.spawn 默认 deny，swap 模式才改子代理 model（register.tsx 184–216）；turn.step 只对子代理把被关模型换成 fallback（218–237）；classic.PreModelSwitch 只返回 deny（265–279）；设置存在插件存储；不运行外部程序、不联网。 | | [链接](https://github.com/Recokioshi/claude-kit/tree/master/mods/model-guard) |
 | codex-monitor | — | `/codex-monitor` 打开窗格，实时显示本会话派出去的 Codex 工作：codex 插件（`/codex:rescue` 等）的 job、Bash/PowerShell 里跑的 `codex exec`、claude-codex-bridge 发出的线程；最多 4 格并排，显示每轮执行的命令与退出码、Codex 回复，可点选钉住、翻页，状态行计数，每轮完成弹 toast。备注：只读，每 3 秒读本机 `~/.codex/sessions` rollout 文件（大文件在 macOS/Linux 用本机 tail/head/base64、Windows 用 pwsh 读）；tool.call 只观察、原样执行；不联网、不调模型、不改提示、不写文件。 | MIT | [链接](https://github.com/ar36planet/mod-codex-monitor) |
 | agy-lead | — | /agy 面板实时显示 Antigravity CLI（agy）的执行步骤、被拒命令和回复；配套 skill 让 Claude 规划、写 brief，并在 git worktree 里审查 agy 的改动。备注：需要自己安装 agy 并配置允许列表；面板只读 ~/.claude/agy-runs/live.ndjson；单提交，⭐0。 | MIT | [链接](https://github.com/MustafaManhal/agy-lead) |
+| agent-model-router | — | 按项目配置表（`.claude/agent-model-router.json`）给每个子代理选模型；同一任务被再次派发时自动升一档（haiku→sonnet→opus，maxModel 封顶），每次选择写入本地日志，附带只读的 model-tuner 代理据日志提出调表建议。`/model-router` 生成或调整配置，`status` 查看。备注：只改子代理的 model 字段、不改其提示，出错时放行；`/model-router` 只提交插件自带的固定提示；`fable on` 时用 $.model.complete 发一句不含会话内容的探测；无 $.http、无 $.process。作者标 2.1.293+。 | MIT | [链接](https://github.com/deki-lab/agent-model-router) |
 
 ### 通知提醒 Notifications & Alerts
 

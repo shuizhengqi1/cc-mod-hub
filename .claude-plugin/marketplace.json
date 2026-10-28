@@ -5757,6 +5757,18 @@
       "version": "0.1.0",
       "homepage": "https://github.com/someonewithpc/claude-mod-submit-without-autoscroll",
       "license": "MIT"
+    },
+    {
+      "name": "agent-model-router",
+      "description": "Picks the model each subagent runs on from a per-project table (.claude/agent-model-router.json), steps up one model when the same task is delegated again (haiku → sonnet → opus, capped by maxModel), and logs each choice to a local journal that the bundled read-only model-tuner agent reads to propose table changes. Hooks agent.spawn (changes only the model field, never the subagent prompt; fail-open), session.start and command.run (/model-router). /model-router submits the plugin's own fixed prompts/adjust.md only when you run it; `/model-router fable on` sends a one-line 'Reply with OK.' probe via $.model.complete with no session content. No $.http, no $.process, no prompt rewriting or context injection. Author targets Claude Code 2.1.293+.",
+      "source": {
+        "source": "github",
+        "repo": "deki-lab/agent-model-router",
+        "sha": "31d1b559243c4ca8761e32524366aa5581f4b93a"
+      },
+      "version": "0.5.1",
+      "homepage": "https://github.com/deki-lab/agent-model-router",
+      "license": "MIT"
     }
   ]
 }
