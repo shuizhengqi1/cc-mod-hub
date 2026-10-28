@@ -5769,6 +5769,18 @@
       "version": "0.5.1",
       "homepage": "https://github.com/deki-lab/agent-model-router",
       "license": "MIT"
+    },
+    {
+      "name": "md-pane",
+      "description": "Side pane that renders the .md files Claude writes or edits, live: auto-opens on Write/Edit of a .md (always / only under the session folder / off), re-reads on change, keeps a recent-files list, table of contents, diff of the last change, follows links to other .md files, and can open host:/path files over ssh. /md opens it. Hooks session.start, command.run, prompt.autocomplete, tool.call (observe only, returns next() unchanged) and ui.render. At session start runs a local sh/find/grep script that extracts only Write/Edit file_path values from the last 30 days of ~/.claude/projects transcripts (GNU find/tac, Linux) to seed the recent list; ssh runs only for host:/path files you open. The 'e' key fills the prompt with 'Edit <path>: ' (no auto-submit). No $.http, no model calls, no prompt rewriting or context injection.",
+      "source": {
+        "source": "github",
+        "repo": "nicdavidson/md-pane",
+        "sha": "f5085beff67d9a747e658797e81444851cc26a72"
+      },
+      "version": "0.2.0",
+      "homepage": "https://github.com/nicdavidson/md-pane",
+      "license": "MIT"
     }
   ]
 }
