@@ -5895,6 +5895,23 @@
       },
       "homepage": "https://github.com/i-noma-ru/claude-decision-tracker",
       "license": "MIT"
+    },
+    {
+      "name": "citation-check",
+      "description": "When an answer cites links, one line names the ones Claude never opened.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/robertiuoras/claude-mods.git",
+        "path": "citation-check",
+        "sha": "dd4d10398b2af2ea9d6f6315df759b3b4e7ac610"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "robertiuoras",
+        "url": "https://github.com/robertiuoras"
+      },
+      "homepage": "https://github.com/robertiuoras/claude-mods/tree/main/citation-check",
+      "license": "MIT"
     }
   ]
 }
