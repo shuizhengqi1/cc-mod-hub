@@ -5945,6 +5945,36 @@
       },
       "homepage": "https://github.com/InventivetalentDev/claude-find-session",
       "license": "MIT"
+    },
+    {
+      "name": "wcag-enforcer",
+      "description": "After each Write, Edit or shell command that changes a .tsx/.jsx/.html/.vue/.css file, runs eslint-plugin-jsx-a11y, axe-core (from the project's own node_modules) and a WCAG 2.2 AA contrast check, and hands Claude each failure with file, line and rule; at turn end it blocks at most twice while failures remain.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/WasteOfADrumBum/one-small-mods-pack.git",
+        "path": "mods/wcag-enforcer",
+        "sha": "c747cbd6a9c3baddf2adca42798cd05f9511cef1"
+      }
+    },
+    {
+      "name": "design-guardrail",
+      "description": "Before a Write or Edit to a UI file, blocks hardcoded hex/rgb/hsl colors and px spacing/font values and names the design token to use instead (from your tokens file); refuses shell commands that write UI files. Idle until tokensFile is set. Deny-only.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/WasteOfADrumBum/one-small-mods-pack.git",
+        "path": "mods/design-guardrail",
+        "sha": "c747cbd6a9c3baddf2adca42798cd05f9511cef1"
+      }
+    },
+    {
+      "name": "qa-gate",
+      "description": "When Claude tries to finish a turn after changing code, runs the project's lint, type check, spell check and test scripts from package.json and keeps Claude working until they pass (gives up after maxAttempts). Missing scripts are skipped and reported.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/WasteOfADrumBum/one-small-mods-pack.git",
+        "path": "mods/qa-gate",
+        "sha": "c747cbd6a9c3baddf2adca42798cd05f9511cef1"
+      }
     }
   ]
 }
