@@ -5814,6 +5814,38 @@
       },
       "homepage": "https://github.com/Uplift-Foundation/jira-board-mod",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "token-ledger",
+      "description": "Shows what each plugin costs per request (its skill listing plus MCP tool schemas, from Claude Code's local /context estimate), counts which plugins you actually use, and suggests idle ones to turn off. /token-ledger opens a pane; status line shows the per-request total. Only measures and suggests; changes nothing.",
+      "source": {
+        "source": "github",
+        "repo": "leonwcl95/who-ate-my-tokens",
+        "sha": "a9c431258b4244b06f092d1b775ac41dcd84d15e"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "leonwcl95",
+        "url": "https://github.com/leonwcl95"
+      },
+      "homepage": "https://github.com/leonwcl95/who-ate-my-tokens",
+      "license": "MIT"
+    },
+    {
+      "name": "my-skills-anywhere",
+      "description": "Suggests your own skills and commands when you type / in the middle of a message, not only at the start of the prompt.",
+      "source": {
+        "source": "github",
+        "repo": "joboyx/my-skills-anywhere",
+        "sha": "5517deaed8a951ff08627d15cf58c7cc1aea2ca3"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Joboy Jordan",
+        "url": "https://github.com/joboyx"
+      },
+      "homepage": "https://github.com/joboyx/my-skills-anywhere",
+      "license": "MIT"
     }
   ]
 }
