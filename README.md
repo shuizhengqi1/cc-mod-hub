@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 666 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 668 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 666 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 668 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 666 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 668 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 666 个精选 Claude Code mods，按类别组织：
+以下是本市场的 668 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -236,6 +236,7 @@ For detailed descriptions of all 666 mods, see the Chinese section below. The �
 | stepscope | — | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | thinking-band | — | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
 | title-bar | — | 在提示下方的 PromptHint 显示会话名、文件夹和 git 分支，并同步成终端窗口标题。本机每 5 秒跑 git branch/rev-parse；读本会话 transcript 只取标题行；设置 CLAUDE_CODE_DISABLE_TERMINAL_TITLE=1 关掉引擎自带标题；macOS/Linux 用 printf 写 /dev/tty，Windows 运行仓库里的 scripts/set-title.ps1（-ExecutionPolicy Bypass，只调 SetConsoleTitleW）。classic.UserPromptSubmit 只记录 transcript 路径和会话标题后原样 next，不改写提示；Bash 工具调用原样 next 后再刷新。显示标题时 PromptHint 不调用 next 而自绘（保留原提示文字）。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/title-bar) |
+| turn-duration | — | 在 Claude Desktop 等不会画终端 TurnDuration 的界面上，在每条回答下方补上「✻ Churned for 5s · done 14:48」耗时行；终端表面跳过以免重复。备注：turn.complete/ui.render 只改显示；session.start 在 macOS 上读 defaults 对齐 12/24 小时制（非 macOS 无 defaults 时回退运行时本地）；不联网、不调模型。与 turn-footer（回合工具/token 摘要）不同，只复刻终端那一行。 | MIT | [链接](https://github.com/M1nu0x0/claude-turn-duration) |
 | turn-progress | — | 状态行显示本回合阶段、经过时间与完成标记；可注册 progress 工具申报进度。 | MIT | [链接](https://github.com/tsumugilabo/turn-progress/tree/main/plugins/turn-progress) |
 | progress-bar-3000 | — | 注册自己的 `progress` 工具和 /progress-bar-3000 命令，驱动本机渲染器在 tmux 里画两行进度窗格。备注：Go 程序，同仓库 `make build`，把路径设到 `binary` 选项；只处理自己的工具；只开本机 tmux 进程，不联网。 | MIT | [链接](https://github.com/atomicstack/progress-bar-3000/tree/main/claude-code-mod) |
 | vim | — | 提示框上方的 vim 命令行：:w / :e 按会话保存和读回草稿，:q 退出（:q! 强制），输入其他名字就执行对应斜杠命令，支持 Tab 补全；用聚焦快捷键打开。备注：prompt.fill 只把你自己 :w 保存的草稿回填到空提示框，不自动提交；classic.UserPromptSubmit 只在发送后删掉已存草稿，不改写 prompt；草稿存于插件本地 store，不联网。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/vim) |
@@ -289,6 +290,7 @@ For detailed descriptions of all 666 mods, see the Chinese section below. The �
 | secrets-veil | ⭐ 295（所在仓库） | **推荐** 工具执行后遮盖结果中的疑似密钥字符串，不改写命令本身。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/secrets-veil) |
 | pii-guard | ⭐ 249（所在仓库） | 台湾 PII 可逆脱敏（经本地 hookd）；需 Python/uv。 |  | [链接](https://github.com/danyuchn/pii-guard/tree/main/examples/claude-code-mod) |
 | collision-guard | ⭐ 32（所在仓库） | 另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。 |  | [链接](https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard) |
+| no-email | ⭐ 30 | 从会话上下文里去掉 Claude Code 自动附加的 userEmail 块（来自 ~/.claude.json 的 oauth 邮箱），减轻模型把邮箱写进请求头等副作用。备注：只过滤 prompt.context 的 blocks（去掉 name=userEmail），不改写提示正文、不联网、不调模型；Team/Enterprise 托管策略可能跳过本 mod 的 hooks（见仓库 #1）。 | MIT | [链接](https://github.com/AlexErrant/claude-code-no-email/tree/main/.claude/skills/no-email) |
 | secrets-guard | ⭐ 29（所在仓库） | 拒绝 Edit/Write/NotebookEdit/Bash 写入密钥文件（.env、密钥、~/.ssh、~/.aws/credentials 等）或内容呈凭据形态的调用，并拒绝 cat/head .env 与 id_rsa。备注：只拒绝不改写，不联网。 | MIT | [链接](https://github.com/BioInfo/slopless/tree/main/mods/secrets-guard) |
 | subagent-fence | ⭐ 24（所在仓库） | 拒绝 force-push、推送受保护分支、`--no-verify` 和按进程名杀进程；可选封禁指定路径、禁止子代理改共享检出、禁止子代理整文件读大文件。备注：只对 `tool.call` 做拒绝（deny），不改写命令；检查出错时放行。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-fence) |
 | storage-guard | ⭐ 11（所在仓库） | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
