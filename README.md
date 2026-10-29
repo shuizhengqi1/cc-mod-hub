@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 662 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 663 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 662 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 663 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 662 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 663 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 662 个精选 Claude Code mods，按类别组织：
+以下是本市场的 663 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -297,6 +297,7 @@ For detailed descriptions of all 662 mods, see the Chinese section below. The �
 | net-guard | ⭐ 3（所在仓库） | 防数据外泄和意外联网：检查每条 curl、wget、ssh、scp、git push 和 WebFetch 的目标主机，按允许/拒绝名单放行或拒绝，没批准过的主机先弹窗问你（允许一次/本会话/拒绝）。备注：只对 Bash 和 WebFetch 做 deny 或询问，不改写命令；无人可问（-p 模式）时默认拒绝；纯本机解析，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/safety/net-guard) |
 | open-file-guard | ⭐ 2（所在仓库） | Claude 要写/改你正打开的 Word、Excel、PowerPoint 文件前，先问你关掉（最多问 3 次），否则拒绝这次调用。备注：tool.call 只放行或 deny，不改参数；只检查本机锁文件，不联网。 |  | [链接](https://github.com/seanrobertwright/claude-mods/tree/main/mods/open-file-guard) |
 | installguard | ⭐ 2 | Claude 要安装项目里还没有的包（npm、PyPI、crates、RubyGems）前先查注册表：不存在的包名（AI 臆造的包名被抢注）、仿冒热门包的近似名、刚发布几天的新版本、下载量很低的包，以及 `curl \| sh` 这类把网上脚本直接管道进 shell 的命令，都会先停下来问你；正常的包直接放行并弹一条提示。`/installguard` 看检查记录，可 `check`/`allow` 某个包。备注：tool.call 只放行或在你取消/无人应答时 deny，不改写命令（hooks/register.tsx 358–459）；只经 `$.http` 用 GET 向 7 个固定公开地址（registry.npmjs.org、api.npmjs.org、pypi.org、pypistats.org、crates.io、rubygems.org、api.deps.dev）查询包名（及你固定的版本号），不发会话内容、代码或命令（register.tsx 163–197，见仓库 PRIVACY.md）；需 Claude Code 2.1.295+。和本市场的 package-guard 功能相近（package-guard 每次都问、不联网），这个会查注册表、只拦有风险的。 | MIT | [链接](https://github.com/griches/installguard) |
+| guard-rules | ⭐ 2（所在仓库） | 拦下提交/PR 里的 AI 署名、直接提交到受保护分支（默认 develop、main）、用错 git 身份提交（按目录配置邮箱），以及在受保护或未分类环境上改动的 kubectl/helm/terraform/tofu 命令；`/guard-context` 给环境分类。备注：只 deny 不改写命令，出错即拒绝（fail closed）；本机运行 git、`kubectl config current-context`、`terraform/tofu workspace show` 判断分支、身份和环境；未分类环境默认拦截；不联网、不调模型。 | MIT | [链接](https://github.com/iuliandita/mods/tree/develop/mods/guard-rules/claude) |
 | reins-status | ⭐ 1（所在仓库） | 只读显示 reins 审批队列（本机 .reins/pending）：状态行计数、提示框上方一行、/reins 窗格看完整输入，新挂起时 toast。不批准也不拒绝。.reins/pending 队列为空时会调用 $.ui.status(undefined) 并可能清除其他 mod 的状态行。备注：有挂起项时 AbovePrompt 会盖住别的行。 | MIT | [链接](https://github.com/manishkumar/reins/tree/main/mods/reins-status) |
 | big-read-guard | ⭐ 1（所在仓库） | 拦下对超大文件或压缩文件的整文件 Read，提示改用 offset/limit 或 grep。备注：只拒绝不改写（hooks/register.ts 48–81）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/big-read-guard) |
 | curl-pipe-guard | ⭐ 1（所在仓库） | 拦下把下载的脚本直接管道给 shell（curl … \| sh），可配白名单域名。备注：只拒绝不改写（hooks/register.ts 11–22）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/curl-pipe-guard) |
