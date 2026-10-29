@@ -5781,6 +5781,23 @@
       "version": "0.2.0",
       "homepage": "https://github.com/nicdavidson/md-pane",
       "license": "MIT"
+    },
+    {
+      "name": "guard-rules",
+      "description": "Blocks AI attribution in commits and PRs, direct commits to protected branches, commits under the wrong git identity, and mutating kubectl, helm and terraform calls on protected or unclassified environments.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/iuliandita/mods.git",
+        "path": "mods/guard-rules/claude",
+        "sha": "6f2ca6b113baf9b2edd4ac3a92c949854e44847b"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "iuliandita",
+        "url": "https://github.com/iuliandita"
+      },
+      "homepage": "https://github.com/iuliandita/mods",
+      "license": "MIT"
     }
   ]
 }
