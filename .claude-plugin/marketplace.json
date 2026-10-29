@@ -5975,6 +5975,34 @@
         "path": "mods/qa-gate",
         "sha": "c747cbd6a9c3baddf2adca42798cd05f9511cef1"
       }
+    },
+    {
+      "name": "cwd-path",
+      "description": "Shows the session's working directory (with ~ for home) and git branch at the bottom right of the prompt footer.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/adamff-dev/claude-plugins.git",
+        "path": "plugins/cwd-path",
+        "sha": "07b8b96c48692dabe0fb35bb7840ea40efb7a3cd"
+      }
+    },
+    {
+      "name": "artifact-view",
+      "description": "An Artifacts toggle in the footer lists your recently updated published artifacts above the prompt; open one in the sidebar or your browser.",
+      "source": {
+        "source": "github",
+        "repo": "mncoffeenord/claude-artifact-view-mod",
+        "sha": "1e7584e6b8853388df3687600fe25ae56cd6a62e"
+      }
+    },
+    {
+      "name": "spec-manager",
+      "description": "A live OpenSpec pane: each change's step, whether AI or you act next, task progress per tasks.md section, and a multi-module overview.",
+      "source": {
+        "source": "github",
+        "repo": "jordan-temim/spec-manager",
+        "sha": "bdb053ce81699d9ee30c7bb008ae4995924e0f65"
+      }
     }
   ]
 }
