@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 678 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 679 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 678 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 679 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 678 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 679 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 678 个精选 Claude Code mods，按类别组织：
+以下是本市场的 679 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -665,6 +665,7 @@ For detailed descriptions of all 678 mods, see the Chinese section below. The �
 | vercel-deploys | ⭐ 32,676（所在仓库） | /vercel 只读侧栏，使用用户的 token 调用 api.vercel.com，不发送会话内容；健康检查 GET 部署域名时不携带会话主体。 | MIT | [链接](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/mods/integrations/vercel-deploys) |
 | remctl | ⭐ 615（所在仓库） | Apple 提醒事项：RemCTL 的 MCP 工具，加上提示框上方今日任务一行，/reminders 面板可勾选完成。备注：需自行安装 RemCTL 到 ~/bin/remctl（仅 macOS）；面板勾选经 $.mcp.call 完成提醒（你按才会）；tool.call 原样返回。 | MIT | [链接](https://github.com/viticci/remctl/tree/main/plugins/claude-code) |
 | vox | ⭐ 165（所在仓库） | vox 说话或聆听时在提示框上方显示动态波形和字幕；/vox-wave 预览或改颜色。备注：需安装 vox（rtk-ai/vox）；tool.call 只观察 vox 工具和 vox 命令并原样返回；纯本机 UI。 | Apache-2.0 | [链接](https://github.com/rtk-ai/vox/tree/main/plugins/vox) |
+| gitlab-mr | ⭐ 142（所在仓库） | 提示框上方右侧显示当前分支的 GitLab MR：编号（可点）、状态/草稿、不可合并原因、目标分支；没有 MR 时给出创建链接。`/mr` 显示详情和流水线状态，`/mr web` 在浏览器打开。备注：需本机已登录的 glab；只通过 $.process 跑 `git branch --show-current` 和 `glab mr list/view`、`glab repo view`（20 秒超时，每 60 秒轮询，git 命令或切目录后刷新）；不调模型、不读也不外发对话内容。与 mr-panel（`/mr-panel` 面板、需 token 走 $.http）不同。 | Apache-2.0 | [链接](https://github.com/NikiforovAll/claude-code-rules/tree/main/plugins/handbook-gitlab-mr) |
 | agent-state-observer | ⭐ 119（所在仓库） | 只观察：把代理状态（working/idle/awaiting_approval/ended）、状态切换历史和限额读数写进一个 JSON 文件，供 Marveen 启动器读取。备注：只有设置了 MARVEEN_AGENT_ID 与 MARVEEN_STATE_OBSERVER_DIR 环境变量才写文件，否则什么都不做；所有钩子原样 next，不拒绝不改写；无界面；不联网。 | MIT | [链接](https://github.com/Szotasz/marveen/tree/develop/plugins/agent-state-observer) |
 | cortex-bar | ⭐ 61（所在仓库） | 提示框上方用分色堆叠条显示 Cortex Hub 工具调用、/cs 会话进度、token 节省与代码检索 hit@k；/cortex-bar 开关，/cortex-calls 看明细。备注：tool.call 只观察 cortex MCP 及 Read/Bash/Edit/Write 调用，原样返回结果；读项目内 cortex 状态标记文件；需配合 Cortex Hub MCP；不联网。 | MIT | [链接](https://github.com/lktiep/cortex-hub/tree/master/mods/cortex-bar) |
 | corgi-band | ⭐ 37（所在仓库） | 提示框上方显示别处在等你的 corgi 会话（可一键 Focus），以及本轮发布、移动或推送了什么，各带成功标记或错误，`/corgi` 控制。备注：需要本机安装 corgi CLI，每 20 秒运行 `corgi --json agent sessions`；prompt.submit 只清空自己的列表；不上传会话内容。 | MIT | [链接](https://github.com/Andriiklymiuk/corgi/tree/main/plugins/corgi-band) |

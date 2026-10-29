@@ -6003,6 +6003,16 @@
         "repo": "jordan-temim/spec-manager",
         "sha": "bdb053ce81699d9ee30c7bb008ae4995924e0f65"
       }
+    },
+    {
+      "name": "gitlab-mr",
+      "description": "Shows the GitLab merge request of the current branch above the prompt (number, state, draft, merge blockers, target branch, or a create link), through glab; /mr for details and pipeline, /mr web to open it.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/NikiforovAll/claude-code-rules.git",
+        "path": "plugins/handbook-gitlab-mr",
+        "sha": "146af7f86cbf7c42b0cf010dc27b39a79e9fc430"
+      }
     }
   ]
 }
