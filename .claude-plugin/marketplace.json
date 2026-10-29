@@ -5846,6 +5846,39 @@
       },
       "homepage": "https://github.com/joboyx/my-skills-anywhere",
       "license": "MIT"
+    },
+    {
+      "name": "no-email",
+      "description": "Drops the userEmail block from the context Claude Code attaches to a conversation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AlexErrant/claude-code-no-email.git",
+        "path": ".claude/skills/no-email",
+        "sha": "06ddeb65ba9d9d204ea88a534c363751d54f0787"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "AlexErrant",
+        "url": "https://github.com/AlexErrant"
+      },
+      "homepage": "https://github.com/AlexErrant/claude-code-no-email",
+      "license": "MIT"
+    },
+    {
+      "name": "turn-duration",
+      "description": "The terminal's turn-end line (Crunched for 4s · done 13:15) beneath each answer on surfaces that do not draw it",
+      "source": {
+        "source": "github",
+        "repo": "M1nu0x0/claude-turn-duration",
+        "sha": "552afbb8dc51fb7e0a1da46923dde3328ee8ed6e"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "M1nu0x0",
+        "url": "https://github.com/M1nu0x0"
+      },
+      "homepage": "https://github.com/M1nu0x0/claude-turn-duration",
+      "license": "MIT"
     }
   ]
 }
