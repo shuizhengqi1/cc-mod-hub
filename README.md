@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 664 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 666 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 664 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 666 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 664 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 666 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 664 个精选 Claude Code mods，按类别组织：
+以下是本市场的 666 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -136,6 +136,7 @@ For detailed descriptions of all 664 mods, see the Chinese section below. The �
 | usage-meter | — | 状态栏一行显示本会话花费、本会话近一小时的每小时花费，以及所有打开会话合计的每小时花费（例如 `$12.40 · $8.10/h · all $23.60/h`）；所有会话合计超过每小时预算（默认 $40/h，最多 30 分钟提醒一次）、30 分钟内压缩 3 次（上下文回填太快）、Haiku 上下文超过 10 万 token 时弹提示；`/spend` 按每小时花费排出各会话（总花费、上下文大小、模型）。备注：花费取 Claude Code 自己的会话费用（按 API 价格，订阅用户当相对用量看）；各会话通过本 mod 自己的 $.store 共享读数，阈值是 hooks/register.ts 顶部的常量；只挂 turn.complete、session.compact 和自己的 /spend，不写文件、不运行子进程、不联网、不调用模型、不改提示。与 cost-meter 相近，多了跨会话每小时花费和压缩/Haiku 提醒。 | MIT | [链接](https://github.com/Production-Grade/usage-meter) |
 | meter | — | /meter 打开侧边面板：上下文占用和自动压缩点、缓存命中率，5 小时和每周限额的用量与消耗节奏（已用百分比对比窗口已过时间，绿/黄/红着色，节奏超过 1 时预估何时用满），本会话花费，以及占上下文最多的几类（消息、MCP 工具、子代理、技能、记忆文件，按 MCP 服务器细分）；面板画在模型上下文之外，不占 token。备注：需要 Claude Code 2.1.302 及以上；只用 $.session.usage、session.measure、面板和自己的 /meter 命令，不写文件、不起进程、不联网、不调用模型、不改写提示。 | MIT | [链接](https://github.com/mikelane/thrift/tree/main/plugins/meter) |
 | usage-coach | — | 提示框上方一条用量带：上下文占用、提示缓存剩余时间、5 小时/7 天限额与按当前速度的耗尽时间、本会话费用，末尾给出当前最省钱的一条建议（可一键压缩）；`/usage-coach` 侧窗看上下文分项、14 天历史和模型选择建议；同一步连续失败 3 次、会话超预算（默认 $100）时提醒。备注：默认在会话空闲且上下文 ≥4 万 token 时，于 1 小时缓存过期前 5 分钟自动 $.session.compact（设置项设 0 关闭）；用本机 node 跑插件自带 scripts/week.mjs，只读 ~/.claude/projects 里的 token 计数；不联网、不调模型、不改写提示和工具调用。 | MIT | [链接](https://github.com/gabrieloy-star/usage-coach) |
+| token-ledger | — | `/token-ledger` 打开窗格，按插件估算每次请求多占多少 token（该插件技能清单 + MCP 工具 schema，取自 Claude Code 本机 /context 估算），统计每个插件的技能/MCP 工具实际使用次数，连续 7 天没用的建议关闭；状态栏显示插件每请求合计。备注：只读 `$.session.usage` 和本机 store，不调模型、不联网、不运行其他程序、不改设置，只建议不关闭；只统计技能与 MCP 工具，靠 hooks/命令/代理工作的插件不计（hooks/register.tsx）。仓库名 who-ate-my-tokens，插件名 token-ledger。 | MIT | [链接](https://github.com/leonwcl95/who-ate-my-tokens) |
 
 ### 上下文管理 Context Management
 
@@ -267,6 +268,7 @@ For detailed descriptions of all 664 mods, see the Chinese section below. The �
 | color-preview | — | 把回复里的颜色代码（6/8 位十六进制、rgb()/rgba()、hsl()/hsla()、CSS 颜色名）画成对应颜色的色块，文字自动用黑或白保证可读；回复由 Claude Code 自带 markdown 渲染时改为在回复下方显示一排色块。`/color-preview` 打开面板按格式开关（跨会话保存）。备注：只改显示，不改会话内容，不联网、不调模型；red、gold 这类普通词也会被上色，嫌吵可在面板关掉 CSS 颜色名。 | MIT | [链接](https://github.com/WahiduzzamanKhan/wahid-claude-tweaks/tree/main/plugins/color-preview) |
 | submit-without-autoscroll | — | 全屏模式下用自选快捷键（如 Ctrl+Enter）发送提示，转录不会跳回底部，方便边看上文边提问。备注：只钩 ui.render 画一个隐藏按钮，原样以你的名义提交草稿，不改写提示；需 Claude Code 2.1.308+，并在 ~/.claude/keybindings.json 绑定 app:cycleDiffBase（可在 /config 改）。 | MIT | [链接](https://github.com/someonewithpc/claude-mod-submit-without-autoscroll) |
 | md-pane | — | Claude 写或改 `.md` 文件时，在对话旁的窗格里按回复同款样式渲染该文件，文件变动自动刷新；带最近文件列表、目录跳转、上次改动的 diff、点文档里的 .md 链接直接打开，`/md host:/路径` 可经 ssh 看远程机器上的文件，`/md auto always/project/off` 设自动打开方式。备注：tool.call 只观察、原样放行；会话开始时用本机 sh/find/grep 只从近 30 天 `~/.claude/projects` 记录里提取 Write/Edit 的文件路径来填最近列表（需 GNU 工具，非 Linux 列表从空开始）；只有打开 host:/路径 时才调用 ssh；按 e 只把「Edit 路径: 」填进输入框，不自动发送；不联网、不调用模型、不改写提示。与 file-view（点工具行路径看任意文件）、tui-preview-mod（/preview 预览媒体）相近，本条专注自动跟随 Claude 写的 Markdown。 | MIT | [链接](https://github.com/nicdavidson/md-pane) |
+| my-skills-anywhere | — | 在消息中间打 `/` 时，也弹出你自己的技能和命令（用户/项目技能）供补全，原生斜杠菜单只在开头出现。备注：只用 prompt.autocomplete 追加最多 8 条建议，不改写、不发送提示；不联网、不调模型、不运行其他程序（hooks/register.ts，68 行）。 | MIT | [链接](https://github.com/joboyx/my-skills-anywhere) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
