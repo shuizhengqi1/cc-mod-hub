@@ -5798,6 +5798,22 @@
       },
       "homepage": "https://github.com/iuliandita/mods",
       "license": "MIT"
+    },
+    {
+      "name": "jira-board",
+      "description": "A live Jira board in a pane beside the chat: columns, cards, issue details and status moves, through your connected Atlassian MCP server.",
+      "source": {
+        "source": "github",
+        "repo": "Uplift-Foundation/jira-board-mod",
+        "sha": "84ac38cedf0694e2306ed38acb146e49e6be6b21"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Uplift Foundation",
+        "url": "https://github.com/Uplift-Foundation"
+      },
+      "homepage": "https://github.com/Uplift-Foundation/jira-board-mod",
+      "license": "Apache-2.0"
     }
   ]
 }
