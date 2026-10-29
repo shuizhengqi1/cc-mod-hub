@@ -6013,6 +6013,16 @@
         "path": "plugins/handbook-gitlab-mr",
         "sha": "146af7f86cbf7c42b0cf010dc27b39a79e9fc430"
       }
+    },
+    {
+      "name": "forensics",
+      "description": "Evidence-safety guardrails for DFIR work, plus forensics skills: refuses shell commands and file edits that would run, open, modify, delete or upload anything under a folder named evidence, and asks before downloading an executable or archive from a host outside a vetted-source list. Deny/ask only, never rewrites commands; no network.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Atlantium-AI/claude-forensics.git",
+        "path": "plugins/forensics",
+        "sha": "85763dd6585ab0a90afaabd8a837303637b9c175"
+      }
     }
   ]
 }
