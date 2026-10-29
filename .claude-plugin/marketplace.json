@@ -5879,6 +5879,22 @@
       },
       "homepage": "https://github.com/M1nu0x0/claude-turn-duration",
       "license": "MIT"
+    },
+    {
+      "name": "decision-tracker",
+      "description": "Keeps decisions mentioned in replies in a band above the prompt until they are written to your decision log",
+      "source": {
+        "source": "github",
+        "repo": "i-noma-ru/claude-decision-tracker",
+        "sha": "77c8b798c8b38da9e106c617cf3897742d6472fe"
+      },
+      "version": "0.2.1",
+      "author": {
+        "name": "i-noma-ru",
+        "url": "https://github.com/i-noma-ru"
+      },
+      "homepage": "https://github.com/i-noma-ru/claude-decision-tracker",
+      "license": "MIT"
     }
   ]
 }
