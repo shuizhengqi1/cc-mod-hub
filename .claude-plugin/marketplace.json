@@ -5929,6 +5929,22 @@
       },
       "homepage": "https://github.com/cipriantuz/claude-code-mods/tree/main/mods/anti-polling",
       "license": "MIT"
+    },
+    {
+      "name": "find-session",
+      "description": "/find-session <term> [limit]: full-text search over what you and the assistant said in past Claude Code and Codex sessions across every project (not tool output), newest first, with a ready cd … && claude --resume / codex resume command per match. Read-only; runs a local python3 script over session files; no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "InventivetalentDev/claude-find-session",
+        "sha": "9588e966b8e7905f833139e47918c9ab18ecbb57"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "Haylee Schäfer",
+        "url": "https://github.com/InventivetalentDev"
+      },
+      "homepage": "https://github.com/InventivetalentDev/claude-find-session",
+      "license": "MIT"
     }
   ]
 }
