@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 668 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 669 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 668 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 669 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 668 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 669 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 668 个精选 Claude Code mods，按类别组织：
+以下是本市场的 669 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -621,6 +621,7 @@ For detailed descriptions of all 668 mods, see the Chinese section below. The �
 | brainless-claude-progress | ⭐ 1 | `/progress` 窗格 + 状态栏一行摘要：当前工单步骤 Write→Review→Verify→CI→Merge、CI 状态与按历史中位数估算的剩余时间、后台子代理与 bash 任务、Claude 等你回复时标「Your turn」；界面支持英/繁中/简中/日。备注：本机 gh 只读命令（pr view、pr list --state merged、repo view）查 PR/CI；钩子只观察（tool.call 先 next，prompt.submit 只识别语言、原样放行）；动画火花可用 `/progress still` 关闭；无模型调用。与 gh-status、eta、task-band、plan-progress 部分重叠。 | MIT | [链接](https://github.com/greedysisyphus/Brainless-Claude-Progress) |
 | backlog-pane | — | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bw-peek | — | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
+| decision-tracker | — | 把回复里提到的决定（「we decided / going with / 決定」等关键词句子）留在提示框上方的一条横栏里，直到你把它写进决策日志（默认路径含 `docs/decisions/` 的 Edit/Write 成功后自动清空）；点横栏展开全部，`/decisions` 列出、`/decisions done N` 删一条、`/decisions clear` 清空。备注：turn.complete 只读主代理回答做本地关键词匹配，tool.call 原样返回；只存在会话状态里，不联网、不调模型、不改写提示；关键词、日志路径、条数上限可在 /plugin configure 里改。 | MIT | [链接](https://github.com/i-noma-ru/claude-decision-tracker) |
 | dev-dash | — | 开发者仪表板窗格，集中显示会话状态与项目信息。 |  | [链接](https://github.com/RanaRauff/claude-dev-dashboard/tree/main/plugins/dev-dash) |
 | loose-ends | — | 追踪会话中未完成的待办事项，回合结束用 $.model.complete 总结剩余任务。 | MIT | [链接](https://github.com/fernandomoraes/loose-ends) |
 | party | — | 本机多会话面板；别的会话碰过同一 PR 时 ask，不改写命令。/broadcast 把用户刚输入的文字发给本机另一个会话。备注：本机 git。 | MIT | [链接](https://github.com/pourya7/claude-code-mods/tree/main/party) |
