@@ -5912,6 +5912,23 @@
       },
       "homepage": "https://github.com/robertiuoras/claude-mods/tree/main/citation-check",
       "license": "MIT"
+    },
+    {
+      "name": "anti-polling",
+      "description": "Stops wait-only turns: denies Bash/PowerShell commands that only sleep or do nothing (sleep, Start-Sleep, timeout /t, ping localhost, echo/true), and the 3rd identical check in a row with nothing changed in between; the deny message tells Claude to use run_in_background or one blocking loop instead. Main session and subagents. Deny-only (never rewrites a command); no network, no model calls, no file writes.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cipriantuz/claude-code-mods.git",
+        "path": "mods/anti-polling",
+        "sha": "7072606e7a6be25305cb00b636f19660d75b799a"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Ciprian Tuzaru",
+        "url": "https://github.com/cipriantuz"
+      },
+      "homepage": "https://github.com/cipriantuz/claude-code-mods/tree/main/mods/anti-polling",
+      "license": "MIT"
     }
   ]
 }
