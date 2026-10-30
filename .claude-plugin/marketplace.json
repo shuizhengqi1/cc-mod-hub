@@ -6107,6 +6107,15 @@
         "path": "plugins/line-width",
         "sha": "69327fc0c7fd3bc27f53a7c322556b2f4ea73b73"
       }
+    },
+    {
+      "name": "agents-skills",
+      "description": "Lets Claude Code use the skills in .agents/skills/ (where npx skills and other agents put them): at session start each skill folder holding a SKILL.md is copied into .claude/skills/ with a .gitignore and a marker file, refreshed when it changes, and your own same-named .claude/skills folders are never overwritten. Optional home folder setting copies that folder's .agents/skills too. Writes only inside .claude/skills via $.fs; no network, no model calls, no prompt changes.",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/agents-skills",
+        "sha": "22b5122884e2dee4348dbdf4029daf650fd6ee3d"
+      }
     }
   ]
 }
