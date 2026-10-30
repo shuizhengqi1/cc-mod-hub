@@ -6088,6 +6088,25 @@
         "repo": "dlepold/prompt-draft-autosave-restore",
         "sha": "3dce17d33996386d4f3eca5057f69c0e6fb701d2"
       }
+    },
+    {
+      "name": "plan-names",
+      "description": "Saves each plan you approve in plan mode (ExitPlanMode) as plans/<date>-<title>.md in your project folder (folder configurable), named from the plan's first heading, so plans get readable names and earlier ones are never overwritten; re-approving the same plan the same day updates its copy. Only hooks the ExitPlanMode tool result and never changes it; writes files only through $.fs; no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/plan-names",
+        "sha": "c088ba7dd0255f502f8cb2ff9931cc4b31878052"
+      }
+    },
+    {
+      "name": "line-width",
+      "description": "Wraps Claude's replies in the terminal at whitespace to a readable measure (80 columns by default, configurable 40-200) on wide terminals, leaving tables, code blocks and long paths and URLs at full width. Only changes how AssistantMessage is drawn in the terminal; the stored reply and what Claude reads are untouched. No network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/chewygumxx/claude-library.git",
+        "path": "plugins/line-width",
+        "sha": "69327fc0c7fd3bc27f53a7c322556b2f4ea73b73"
+      }
     }
   ]
 }

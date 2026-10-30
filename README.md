@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 687 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 689 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 687 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 689 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 687 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 689 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 687 个精选 Claude Code mods，按类别组织：
+以下是本市场的 689 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -275,6 +275,7 @@ For detailed descriptions of all 687 mods, see the Chinese section below. The �
 | md-pane | — | Claude 写或改 `.md` 文件时，在对话旁的窗格里按回复同款样式渲染该文件，文件变动自动刷新；带最近文件列表、目录跳转、上次改动的 diff、点文档里的 .md 链接直接打开，`/md host:/路径` 可经 ssh 看远程机器上的文件，`/md auto always/project/off` 设自动打开方式。备注：tool.call 只观察、原样放行；会话开始时用本机 sh/find/grep 只从近 30 天 `~/.claude/projects` 记录里提取 Write/Edit 的文件路径来填最近列表（需 GNU 工具，非 Linux 列表从空开始）；只有打开 host:/路径 时才调用 ssh；按 e 只把「Edit 路径: 」填进输入框，不自动发送；不联网、不调用模型、不改写提示。与 file-view（点工具行路径看任意文件）、tui-preview-mod（/preview 预览媒体）相近，本条专注自动跟随 Claude 写的 Markdown。 | MIT | [链接](https://github.com/nicdavidson/md-pane) |
 | my-skills-anywhere | — | 在消息中间打 `/` 时，也弹出你自己的技能和命令（用户/项目技能）供补全，原生斜杠菜单只在开头出现。备注：只用 prompt.autocomplete 追加最多 8 条建议，不改写、不发送提示；不联网、不调模型、不运行其他程序（hooks/register.ts，68 行）。 | MIT | [链接](https://github.com/joboyx/my-skills-anywhere) |
 | cwd-path | — | 提示框页脚右下显示当前工作目录（家目录显示为 ~，过长从左截断）和 git 分支，可在 /config 设最大长度、是否显示分支。备注：只改显示，保留引擎原有模式标签；只运行 `git branch --show-current` / `git rev-parse --short HEAD`（2 秒超时、同目录 3 秒缓存）；不联网、不调模型。 | MIT | [链接](https://github.com/adamff-dev/claude-plugins/tree/main/plugins/cwd-path) |
+| line-width | — | 终端很宽时，把 Claude 回复的正文按空白折到易读的宽度（默认 80 列，可在插件配置里设 40–200），表格、代码块和过长的路径、URL 保持终端全宽、不被截断或挤压。备注：只替换终端里 AssistantMessage 的渲染（ui.render），保存的回复和 Claude 读到的内容不变；摘要和超长回复（约 9 万字符以上）交回原生渲染；不联网、不调模型；GPL-3.0 许可。 | GPL-3.0 | [链接](https://github.com/chewygumxx/claude-library/tree/main/plugins/line-width) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -662,6 +663,7 @@ For detailed descriptions of all 687 mods, see the Chinese section below. The �
 | find-session | — | `/find-session <词> [条数]` 全文搜索本机所有项目里过往 Claude Code 和 Codex 会话中你和助手说过的话（不含工具调用和输出、压缩摘要、子代理回合和当前会话），按最后消息时间倒序列出，每条给出命中片段和现成的 `cd … && claude --resume <id>`（或 `codex resume <id>`）命令，命中词高亮。备注：只读；需要本机 python3，`command.run` 经 `$.process.run` 跑内嵌的 Python 脚本扫描 `~/.claude*/projects` 与 `~/.codex/sessions` 下的 jsonl（hooks/register.tsx 4–221、244–248），文件夹、条数、python 路径可在插件配置里改；不联网、不调模型、不改提示。与 all-prompts（只列提示、可过滤）、evergreen-sessions（只列钉住的会话）互补，本 mod 搜的是全文且含 Codex。 | MIT | [链接](https://github.com/InventivetalentDev/claude-find-session) |
 | checklist | — | 每个项目（git 根目录，不在仓库里时按会话目录）一份跨会话保留的清单，显示在聊天旁的侧栏：`/checklist add <标题> [-- 说明]` 添加，`/checklist done/open/drop/edit/remove/clear <编号>` 修改，点行切换完成；项目已有条目时会话开始自动打开窗格。备注：另注册一个工具 `mcp__checklist__checklist`，Claude 可以读取并改动这份清单（工具说明让它记录你同意的任务、做完打勾）；数据存在插件自己的 store，不运行其他程序、不联网、不改写提示或其他工具。与 task-board（只管本会话 TaskCreate 任务）不同，这份清单按项目长期保留。 | MIT | [链接](https://github.com/mjb-it/checklist) |
 | md-taskview | — | `/md-tasks` 在对话旁打开窗格，按里程碑和任务树显示 `spec/*/tasks.md` 与 `implementation_plan.md`（支持 GFM 与 Obsidian Tasks 状态），点任务即在文件里切换状态，Claude 改任务文件时立即刷新，可跳到 VS Code 对应行。备注：只经 `$.fs` 读写任务文件（跟随 shell 目录时默认只看 Claude 有读权限的目录），本机 `code` 命令打开文件；不调用模型、不联网、不改写提示或工具；与 VS Code 扩展 Markdown Tasks View 同一解析器。 | MIT | [链接](https://github.com/coreyx/claude-md-taskview) |
+| plan-names | — | 在计划模式里每批准一个计划，就把它另存为项目里的 `plans/<日期>-<标题>.md`（标题取计划的第一个 Markdown 标题，文件夹可在插件配置里改），计划有了可读的文件名，之前的计划不会被覆盖；同一天再次批准同一个计划时更新那份副本（仅当副本内容没被别人改过）。备注：只挂 ExitPlanMode 的 tool.call，先放行再读结果，从不改变计划或调用结果；只通过 $.fs 写文件；不联网、不调模型；新仓库（8 次提交）。 | MIT | [链接](https://github.com/nightlab-agent/plan-names) |
 
 ### 外部集成 External Integrations
 
