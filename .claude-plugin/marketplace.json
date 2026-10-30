@@ -6079,6 +6079,15 @@
         "repo": "GiuseppeBellamacina/session-manager",
         "sha": "a987b02455c7a7600230d861f0d02a5e2c30745c"
       }
+    },
+    {
+      "name": "prompt-draft-autosave-restore",
+      "description": "Saves the unsent draft in the Claude Code prompt box as you type and puts it back after a reboot, a crash or claude --resume.",
+      "source": {
+        "source": "github",
+        "repo": "dlepold/prompt-draft-autosave-restore",
+        "sha": "3dce17d33996386d4f3eca5057f69c0e6fb701d2"
+      }
     }
   ]
 }
