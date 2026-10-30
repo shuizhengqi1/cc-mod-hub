@@ -6023,6 +6023,43 @@
         "path": "plugins/forensics",
         "sha": "85763dd6585ab0a90afaabd8a837303637b9c175"
       }
+    },
+    {
+      "name": "ysk-throttle",
+      "description": "Cuts the cost of Claude Code's built-in 'You should know' side agent: lets its routine checks through only every N main-conversation tool calls (default 24) and never on an expired prompt cache, answering the rest 'nothing to say'; 'explain' requests always pass. Warns once if the plugin's check prompt changes. Local only: no network, no extra model calls.",
+      "source": {
+        "source": "github",
+        "repo": "declanbx/you-should-know-throttle",
+        "sha": "be1ac4a32c4501a93cc626b2fa9471de8d403a8c"
+      }
+    },
+    {
+      "name": "reflect",
+      "description": "/reflect opens a pane charting how you use Claude Code over 7/30/90 days or all time: prompts, sessions, output tokens, busy hours, streaks, cache hit rate, per-project, per-model, effort, tools, skills and MCP usage, computed locally from your own transcripts and history (summaries kept so numbers outlive the 30-day transcript cleanup). Optional Tips button asks Haiku for suggestions using anonymized numbers only.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/tacodx/TacosPlugins.git",
+        "path": "plugins/reflect",
+        "sha": "9cf0def217d4f70fb1e2fa19d4040f5d0254a840"
+      }
+    },
+    {
+      "name": "interrupt-hook",
+      "description": "Runs your own command when you press Escape to interrupt Claude Code mid-turn (Claude Code's Stop hook skips interrupts), passing one hook-style JSON line on stdin: hook_event_name UserInterrupt, session_id, cwd, turn_id, duration_ms. Main-conversation turns only, runs after the turn ends, with a configurable timeout. The mod itself sends nothing and writes no file.",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/interrupt-hook",
+        "sha": "063d4addd2bd060201f829bdf3e989e60f5da8ea"
+      }
+    },
+    {
+      "name": "tmux",
+      "description": "A pane listing the interactive Claude Code and Codex sessions in the current tmux session with each one's state (Active, Needs you, Idle), highlighting the one facing you; click a row to bring it to the front, [x] twice to close it, or [new] to start another session in a new tmux window. /tmux reopens it. Local tmux commands only: no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "Elijah-J/claude-tmux-pane",
+        "sha": "33f7028f12b140847f9f8de4a93e26df287c4a43"
+      }
     }
   ]
 }
