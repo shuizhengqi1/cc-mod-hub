@@ -6060,6 +6060,25 @@
         "repo": "Elijah-J/claude-tmux-pane",
         "sha": "33f7028f12b140847f9f8de4a93e26df287c4a43"
       }
+    },
+    {
+      "name": "open-in-editor",
+      "description": "Rows above the prompt for the last three files Claude wrote or edited (Write, Edit, NotebookEdit), newest first, each with buttons to copy its path or open it in Zed or VS Code (macOS, via open -a). Local only.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/berk-karaal/agent-plugins.git",
+        "path": "plugins/open-in-editor",
+        "sha": "106afb25faf3855c486f8107e60741a71f194622"
+      }
+    },
+    {
+      "name": "session-manager",
+      "description": "See every Claude Code session on your computer, open one, move a session or a whole project to another folder when the project moved, and send sessions or all orphans to the trash, always with a preview and a confirmation. A local browser page (127.0.0.1, random token) or /sessions commands.",
+      "source": {
+        "source": "github",
+        "repo": "GiuseppeBellamacina/session-manager",
+        "sha": "a987b02455c7a7600230d861f0d02a5e2c30745c"
+      }
     }
   ]
 }
