@@ -6164,6 +6164,15 @@
         "sha": "fcdc4cd67f764678a1093a5260f7dffdbce8ad24"
       },
       "license": "MIT"
+    },
+    {
+      "name": "plan-view",
+      "description": "Shows Claude's plan-mode plan in a pane beside the chat and updates it live as Claude writes or edits the plan file; opens on its own when the terminal is wide enough, or with /plan-view. Display only: it never changes how Claude plans. Remembers each session's plan file path and pane state (last 100 sessions) in its own store, never plan contents; no network, no model calls, no processes.",
+      "source": {
+        "source": "github",
+        "repo": "yukisaitoo/claude-code-plan-view",
+        "sha": "34528a083db15c8000f650f5b90838f7aae7548a"
+      }
     }
   ]
 }
