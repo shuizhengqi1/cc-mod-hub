@@ -6153,6 +6153,17 @@
         "sha": "926325094d9f57c6c65b7650aba756766d0c7bc1"
       },
       "license": "MIT"
+    },
+    {
+      "name": "checkout-guard",
+      "description": "Warns above the prompt when another live Claude Code session is working in the same git checkout, and denies git commands that would move the tree under it (checkout, switch, rebase, pull, merge, stash, reset --hard/--merge/--keep, clean, restore) until this session moves into a worktree; subagents started in a worktree or another checkout are not blocked. Deny-only, never rewrites commands; reads ~/.claude/sessions and runs local git; no network, no model calls. A 'Use a worktree' button asks Claude to move into a worktree only when you press it.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rumstead/ai-loadout.git",
+        "path": "mods/checkout-guard",
+        "sha": "fcdc4cd67f764678a1093a5260f7dffdbce8ad24"
+      },
+      "license": "MIT"
     }
   ]
 }

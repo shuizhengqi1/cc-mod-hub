@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 694 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 695 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 694 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 695 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 694 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 695 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 694 个精选 Claude Code mods，按类别组织：
+以下是本市场的 695 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -345,6 +345,7 @@ For detailed descriptions of all 694 mods, see the Chinese section below. The �
 | agent-firewall | ⭐ 1（所在仓库） | 实时窗格列出代理的每次工具调用：执行（绿）、需确认、被拦截（红）、出错，并计数，`/firewall` 打开或关闭。备注：只观察不拦截，tool.check 和 tool.call 原样放行；记录只存在内存、先打码，最多 100 条；在状态栏显示调用/拦截计数；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/agent-firewall) |
 | gh-account-guard | ⭐ 1（所在仓库） | 防止用错 GitHub 账号：Claude 在 Bash/Monitor 里跑 `gh` 或 `git push` 时，按你在插件设置里写的「账号=仓库 owner」规则，核对这次实际会用哪个账号（GH_TOKEN/GITHUB_TOKEN、仓库自带的凭据助手、同一条命令里前面的 `gh auth switch`、gh 当前账号）；不匹配或判断不了时，用 Claude Code 自带的问答框问你「切换到 <账号> 并运行 / 仍然运行 / 取消」。备注：`tool.call` 只原样放行或拒绝（deny），不改写命令（hooks/register.tsx 59–67），检查出错时拒绝；本机只跑只读的 `git rev-parse`、`git remote get-url`、`git config --get-regexp` 和 `gh config get`，只有你点「切换」时才运行 `gh auth switch --user <账号>`（194）；GH_TOKEN/GITHUB_TOKEN 只看是否设置，不外发；不联网、不调模型。没配规则时每次 `gh`/`git push` 都会问；`claude -p` 等无人可问时一律拒绝。 | MIT | [链接](https://github.com/jsnkle/ai-native-sdlc/tree/main/mods/gh-account-guard) |
 | control-watch | ⭐ 1（所在仓库） | 提示框上方一条显示 Claude 此刻或最近一分钟在操控什么：你的 Chrome（Claude in Chrome）、内置浏览器、桌面应用或整个屏幕（computer use）、Docker、iOS/Android 模拟器、终端面板，子代理发起的会标出；首次接管你自己的 Chrome 或桌面应用时弹 toast（macOS 另发系统通知）。备注：只观察 tool.call，原样 next，不拦截不改写；macOS 上用 osascript 发通知（参数数组调用，非 shell），其他系统通知静默失败；不联网。 | MIT | [链接](https://github.com/abdallah-hatem/claude-skills/tree/main/plugins/control-watch) |
+| checkout-guard | ⭐ 1（所在仓库） | 本机另一个活着的 Claude Code 会话也在同一个 git checkout 里工作时，在提示框上方提醒，并拦下会挪动工作树的 git 命令（checkout、switch、rebase、pull、merge、stash、reset --hard/--merge/--keep、clean、restore），让本会话先进 worktree；在 worktree 或别的 checkout 里起的子代理不拦。备注：只拒绝不改写命令；读 ~/.claude/sessions 并在本机跑 git，不联网、不调模型；「Use a worktree」按钮只在你按下时才让 Claude 进 worktree；与 collision-guard（同文件编辑冲突）互补；仓库无 README，单提交，带测试。 | MIT | [链接](https://github.com/rumstead/ai-loadout/tree/main/mods/checkout-guard) |
 | query-guard | ⭐ 1 | Claude 通过 Bash 跑 sqlite3、psql、mysql、snowsql、databricks CLI 或 dbt 的危险命令时先拦住等你选：DROP TABLE/DATABASE/SCHEMA、TRUNCATE、不带 WHERE 的 DELETE/UPDATE、ALTER TABLE … DROP COLUMN、dbt --full-refresh，以及连到名字含 prod/production 的主机、连接串、profile 或 dbt target 的任何命令。窗格（终端太窄时在提示框上方）显示命令、原因、目标，本机 SQLite 文件还显示当前行数；按 Proceed（1）原样执行，Cancel（2）或关掉窗格则 deny；状态行统计本会话拦下的次数。备注：只等待/deny，不改写命令（hooks/register.tsx 69–119）；只对本机 SQLite 文件跑 `sqlite3 -readonly … SELECT COUNT(*)`（48），等待时轮询 `sleep 0.25`（105）；不联网、不调模型。只看 Bash 命令文本，脚本、`-f` SQL 文件、MCP 数据库工具等绕得过去；会一直等你按键，无人值守会话（claude -p）里命中的命令会卡住直到中断；与 block-destructive-commands（破坏性 SQL 直接 deny）、prod-guard、seed-guard 部分重叠。 | MIT | [链接](https://github.com/geethasagarb/query-guard) |
 | browser-guard | — | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | council-of-elrond | — | 按规则给每次工具调用分级：放行、拦下、问你，或交给 $.model.complete 审核（会发送工具调用、最近一次提示和本会话写过的脚本内容，已脱敏）；只拒绝不改写；在本机项目里写审计日志。 | MIT | [链接](https://github.com/Deluha/council-of-elrond/tree/main/mods/council-of-elrond) |
