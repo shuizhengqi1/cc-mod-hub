@@ -6173,6 +6173,15 @@
         "repo": "yukisaitoo/claude-code-plan-view",
         "sha": "34528a083db15c8000f650f5b90838f7aae7548a"
       }
+    },
+    {
+      "name": "date-check",
+      "description": "Checks the dates and times Claude writes into Markdown/text files (changelogs, logs, release notes, handoffs) against the real clock before a Write, Edit or shell write lands: a stamp more than 2 minutes in the future is refused with the real time (writing the same line again lets an intended future date through), and a stale stamp gets a short note after the result. Only judges lines the call adds; no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/date-check",
+        "sha": "607b67443e8297fd3e9a238cf3bc9b499d6a21de"
+      }
     }
   ]
 }
