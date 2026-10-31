@@ -6116,6 +6116,15 @@
         "repo": "nightlab-agent/agents-skills",
         "sha": "22b5122884e2dee4348dbdf4029daf650fd6ee3d"
       }
+    },
+    {
+      "name": "file-peek",
+      "description": "A file picker for @ mentions with a live info panel: type an @ path then ? (or run /peek [folder]) to browse a folder; the highlighted entry shows a block-character thumbnail and dimensions for images, page count for PDFs, line count and first lines for text, item count for folders, and git state. p opens macOS Quick Look, Enter inserts the @ mention, Esc restores your draft. macOS only (uses built-in sips, file, mdls, qlmanage and git locally); no network, no model calls, never rewrites submitted prompts.",
+      "source": {
+        "source": "github",
+        "repo": "maxlibin/claude-file-peek",
+        "sha": "6f5493731fc45fe0fe04d7dc8987bb30dc2fd796"
+      }
     }
   ]
 }
