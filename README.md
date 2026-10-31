@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 693 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 694 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 693 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 694 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 693 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 694 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 693 个精选 Claude Code mods，按类别组织：
+以下是本市场的 694 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -278,6 +278,7 @@ For detailed descriptions of all 693 mods, see the Chinese section below. The �
 | my-skills-anywhere | — | 在消息中间打 `/` 时，也弹出你自己的技能和命令（用户/项目技能）供补全，原生斜杠菜单只在开头出现。备注：只用 prompt.autocomplete 追加最多 8 条建议，不改写、不发送提示；不联网、不调模型、不运行其他程序（hooks/register.ts，68 行）。 | MIT | [链接](https://github.com/joboyx/my-skills-anywhere) |
 | cwd-path | — | 提示框页脚右下显示当前工作目录（家目录显示为 ~，过长从左截断）和 git 分支，可在 /config 设最大长度、是否显示分支。备注：只改显示，保留引擎原有模式标签；只运行 `git branch --show-current` / `git rev-parse --short HEAD`（2 秒超时、同目录 3 秒缓存）；不联网、不调模型。 | MIT | [链接](https://github.com/adamff-dev/claude-plugins/tree/main/plugins/cwd-path) |
 | line-width | — | 终端很宽时，把 Claude 回复的正文按空白折到易读的宽度（默认 80 列，可在插件配置里设 40–200），表格、代码块和过长的路径、URL 保持终端全宽、不被截断或挤压。备注：只替换终端里 AssistantMessage 的渲染（ui.render），保存的回复和 Claude 读到的内容不变；摘要和超长回复（约 9 万字符以上）交回原生渲染；不联网、不调模型；GPL-3.0 许可。 | GPL-3.0 | [链接](https://github.com/chewygumxx/claude-library/tree/main/plugins/line-width) |
+| hanzi-interface | — | 把 Claude Code 的界面换成简体中文：内置命令说明、`/config` 设置名称、转圈和转入后台提示、通知、会话模式标签，以及 `/copy`、`/export`、`/cost`/`/usage` 的输出摘要。备注：只用本地词典（hooks/register.ts 内置），不调模型、不联网；只改显示（command.describe、config.describe、ui.render），不改模型收到的内容；转圈词固定显示「处理中」；权限窗口、`claude --help` 等 mod API 不开放的界面仍是英文；作者按 Claude Code 2.1.316 开发；新仓库（1 次提交，默认分支 feat/initial-plugin）。 | MIT | [链接](https://github.com/gzx543097079/claude-code-zh-cn) |
 
 ### 趣味与吉祥物 Fun & Mascots
 

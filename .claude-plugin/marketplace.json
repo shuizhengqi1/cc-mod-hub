@@ -6143,6 +6143,16 @@
         "repo": "romakuchukov/setup-watch",
         "sha": "67ec4078970e219ff960de0acb1f9f5233d166e5"
       }
+    },
+    {
+      "name": "hanzi-interface",
+      "description": "Simplified Chinese localization for Claude Code's mod-exposed UI: built-in command descriptions, /config labels, spinner and background-run hints, notices, session-mode labels, and /copy, /export and /cost-/usage summary output, from a bundled dictionary. Display only (command.describe, config.describe, ui.render); never changes what the model receives; no network, no model calls. Permission dialogs and other surfaces the mod API doesn't expose stay in English.",
+      "source": {
+        "source": "github",
+        "repo": "gzx543097079/claude-code-zh-cn",
+        "sha": "926325094d9f57c6c65b7650aba756766d0c7bc1"
+      },
+      "license": "MIT"
     }
   ]
 }
