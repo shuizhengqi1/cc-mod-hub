@@ -6125,6 +6125,15 @@
         "repo": "maxlibin/claude-file-peek",
         "sha": "6f5493731fc45fe0fe04d7dc8987bb30dc2fd796"
       }
+    },
+    {
+      "name": "summarize-up-to",
+      "description": "Partial compaction: /summarize-up-to lists cut points (your prompts and notifications between turns); /summarize-up-to #n or n% [notes] summarizes only the conversation before that point with Claude Code's own compaction and keeps the chosen message and everything after it verbatim, including cuts inside long agent-driven turns. Optional: make every auto-compaction summarize only the oldest share (default 65%, set in /config). Falls back to normal full compaction when no cut fits. No network, no model calls of its own.",
+      "source": {
+        "source": "github",
+        "repo": "groundnuty/claude-summarize-up-to",
+        "sha": "426b73ad020fd8f70340f595f28d3e108097ddbc"
+      }
     }
   ]
 }
