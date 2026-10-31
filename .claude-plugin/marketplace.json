@@ -6134,6 +6134,15 @@
         "repo": "groundnuty/claude-summarize-up-to",
         "sha": "426b73ad020fd8f70340f595f28d3e108097ddbc"
       }
+    },
+    {
+      "name": "setup-watch",
+      "description": "Tells you at session start what changed since your last session: Claude Code version, installed plugins (added, removed, updated, enabled or disabled), MCP servers and their tool counts, skills and slash commands, and built-in tools, so you can catch context-window bloat and disable what you don't use. Silent when nothing changed. Runs `claude plugin list --json` locally and keeps a snapshot in the mod's own store; no network, no model calls, never touches prompts.",
+      "source": {
+        "source": "github",
+        "repo": "romakuchukov/setup-watch",
+        "sha": "67ec4078970e219ff960de0acb1f9f5233d166e5"
+      }
     }
   ]
 }
