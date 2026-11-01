@@ -6173,6 +6173,16 @@
         "repo": "yukisaitoo/claude-code-plan-view",
         "sha": "34528a083db15c8000f650f5b90838f7aae7548a"
       }
+    },
+    {
+      "name": "prompt-guard",
+      "description": "Caps how many turns other mods can start by submitting prompts, so a mod that re-submits from turn.complete cannot run an unattended loop: at most 3 mod prompts since you last typed in a session, 6 per session per hour, 20 per machine per hour, and the same text again within 10 minutes is refused. Your own typed or Remote Control prompts are never touched. /pause-mod-prompts and /resume-mod-prompts stop or allow every mod prompt machine-wide. Fails closed for mods. No network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nabinpkl/coding-agents-desk.git",
+        "path": "agent-feed/sidecar/mods/prompt-guard",
+        "sha": "d087df8543c5593e69db8508b0d132427932ba8e"
+      }
     }
   ]
 }
