@@ -6183,6 +6183,16 @@
         "path": "agent-feed/sidecar/mods/prompt-guard",
         "sha": "d087df8543c5593e69db8508b0d132427932ba8e"
       }
+    },
+    {
+      "name": "shell-guard",
+      "description": "For Claude Code on Windows: stops commands that use the other shell's syntax before they run (&& / || in PowerShell 5.1, head/grep/sed/export/rm -rf/ls -la, /dev/null, heredocs and VAR=value in PowerShell; cmdlets, $env:NAME and 2>$null in Bash; %VAR% in either) and tells Claude what to write instead. Strings, comments, here-strings and heredoc bodies are skipped; '# shell-guard: ignore' skips a command; PowerShell 7 option in /config. Deny-only, never rewrites commands. No network, no model calls, no processes.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/dani3lfrenc/modbox.git",
+        "path": "shell-guard",
+        "sha": "3bd38d61905f63c89ec8f5f7136f0414df038bd2"
+      }
     }
   ]
 }
