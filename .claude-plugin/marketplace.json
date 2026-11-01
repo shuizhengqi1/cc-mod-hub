@@ -6210,6 +6210,22 @@
       },
       "homepage": "https://github.com/AnaCataVC/ami-claude-mods/tree/main/mods/undelegated-reads",
       "license": "MIT"
+    },
+    {
+      "name": "gridtalk",
+      "description": "A grid board pane beside the chat (/gridtalk) for talking with Claude in diagrams: place boxes, group frames and text on a square grid and connect them with lines (arrow direction, block mark, five colors). Claude gets read_board / write_board / show_board tools: it reads the diagram as compact text (grid ranges, groups, lines) instead of a screenshot and can redraw it to propose an idea; every change can be undone. Boards are saved per project in the mod's own store. Full panel in Claude Code Desktop, plain-text fallback in the terminal. No network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "Nine-Shell/gridtalk",
+        "sha": "21ecb59ad4f5a511667ccd09c6ba10341933e4b6"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Nine-Shell",
+        "url": "https://github.com/Nine-Shell"
+      },
+      "homepage": "https://github.com/Nine-Shell/gridtalk",
+      "license": "MIT"
     }
   ]
 }
