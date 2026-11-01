@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 697 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 698 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 697 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 698 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 697 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 698 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 697 个精选 Claude Code mods，按类别组织：
+以下是本市场的 698 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -380,6 +380,7 @@ For detailed descriptions of all 697 mods, see the Chinese section below. The �
 | run-guard | — | 给 Robot Framework / Playwright 测试工作流用的拦截：拒绝在已有测试运行时再启动 robot/pabot/playwright test（读 ps 进程列表判断），拒绝删除 output.xml、log/report.html、results/、test-results/、playwright-report/、allure 等测试证据，拒绝任何提到你在配置里列出的受保护主机的命令；`/run-guard` 查看当前规则。备注：只在 Bash tool.call 上返回 deny，不改写命令、不注入上下文、不联网（hooks/register.ts）；三项规则都可在 /plugin 配置里关闭，受保护主机默认为空。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/run-guard) |
 | forensics | — | 取证（DFIR）护栏：凡路径里有名为 evidence 的文件夹，拒绝运行、用默认程序打开、修改、删除或上传其中文件的 shell 命令（Bash/PowerShell）和文件编辑；从可信来源列表外的主机下载可执行文件或压缩包前先询问。附带 Windows/Linux/网络/恶意样本/内存/时间线等取证 skills。备注：只 deny/ask，不改写命令；不联网；Beta 0.1.1。 | Apache-2.0 | [链接](https://github.com/Atlantium-AI/claude-forensics/tree/main/plugins/forensics) |
 | prompt-guard | — | 限制其他 mod 通过提交提示自动开启的回合数，防止某个 mod 在 turn.complete 里反复提交、无人值守地一直跑下去烧额度：自你上次亲手输入后同一会话最多 3 条 mod 提示，每会话每小时 6 条、整机每小时 20 条，10 分钟内重复同样文本直接拒绝；你自己输入或经 Remote Control 发来的提示从不拦。/pause-mod-prompts、/resume-mod-prompts 一键暂停或恢复本机所有 mod 提示。备注：只挂 prompt.submit 且只对 mod 来源的提示 drop（拒绝）不改写，钩子出错时对 mod 失败即拒；计数存在 $.store；不联网、不调模型、不跑进程。来自 agent-desk 产品仓库的 sidecar 子目录（plugin.json 名为 agentdesk-prompt-guard），对 agentdesk-hub 代用户转发的提示视同本人，其他情况可独立使用。 | MIT | [链接](https://github.com/nabinpkl/coding-agents-desk/tree/main/agent-feed/sidecar/mods/prompt-guard) |
+| shell-guard | — | Windows 上 Claude 混用 Bash 和 PowerShell 语法时，命令运行前先拦下并告诉它该怎么写：PowerShell 5.1 里的 `&&`/`||`、head/grep/sed/export、`rm -rf`、`ls -la`、`/dev/null`、heredoc、`VAR=value`，Bash 里的 cmdlet、`$env:NAME`、`2>$null`，以及两边的 `%VAR%`；字符串、注释、here-string 和 heredoc 正文不检查，命令里写 `# shell-guard: ignore` 可跳过；`/config` 可选 PowerShell 7。备注：tool.call 只 deny 或原样放行，不改写命令；纯本地规则匹配，不联网、不调模型、不跑进程。与 stay-put（只管 `cd &&` 链式命令）互补。 | MIT | [链接](https://github.com/dani3lfrenc/modbox/tree/main/shell-guard) |
 
 ### 开发工具 Dev Tools
 
