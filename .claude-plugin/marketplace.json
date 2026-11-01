@@ -6193,6 +6193,23 @@
         "path": "shell-guard",
         "sha": "3bd38d61905f63c89ec8f5f7136f0414df038bd2"
       }
+    },
+    {
+      "name": "undelegated-reads",
+      "description": "Counts consecutive mechanical reads and searches in the main session (Read, Grep, Glob, and grep/rg/find/recursive ls in Bash or PowerShell), shows a gauge in the status line and a warning above the prompt from 7, and denies the 10th in a row so Claude delegates exploration to a subagent. Agent/Task calls or a new typed prompt reset the count; subagent calls are not counted. Deny-only, never rewrites. No network, no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AnaCataVC/ami-claude-mods.git",
+        "path": "mods/undelegated-reads",
+        "sha": "5189523b8a4e78ea4089850c2441ca153a7fecf8"
+      },
+      "version": "1.0.0",
+      "author": {
+        "name": "Catalina Villalobos",
+        "url": "https://github.com/AnaCataVC"
+      },
+      "homepage": "https://github.com/AnaCataVC/ami-claude-mods/tree/main/mods/undelegated-reads",
+      "license": "MIT"
     }
   ]
 }
