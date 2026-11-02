@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 731 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 732 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 731 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 732 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 731 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 732 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 731 个精选 Claude Code mods，按类别组织：
+以下是本市场的 732 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -747,6 +747,7 @@ For detailed descriptions of all 731 mods, see the Chinese section below. The �
 | gh-refs | — | Claude 回复里提到 GitHub issue 或 PR（完整链接、`owner/repo#123`，或裸 `#123`：指向同一条回复最后点名的仓库，否则用「Default repository」设置，否则用当前文件夹的 GitHub 仓库）时，回复下方出现一排按状态着色的小标签，悬停显示标题、issue/PR、状态（open/closed/merged/draft/not planned）、里程碑、标签、父 theme 和一两行正文摘要。备注：只改显示（ui.render），不改提示、不调模型、不写文件；本机运行 `gh api graphql` 取数据（需安装并登录 gh），只把 issue/PR 编号发给 GitHub，不发对话内容，结果在本 mod 的 $.state 里缓存 5 分钟；手机上没有悬停，只显示彩色标签。与 issue-links（只把 #123 变成链接）互补，相当于 GitHub 版的 ado-link-bar。 | MIT | [链接](https://github.com/abmorrill4/gh-refs) |
 | devops-consumption | — | `/consumption` 窗格（会话开始时自动打开）跟踪 GitLab.com 与 Azure DevOps 用量：每个顶级命名空间的月度 CI 分钟对比套餐额度、存储明细（镜像仓库/产物/仓库/其他）、席位和打开的 MR，超出套餐时估算额外费用；Azure DevOps 托管流水线分钟、并行作业和许可证；以及等你审查的 MR/PR 数。到警告百分比变琥珀色、100% 变红，每个指标每月提醒一次；状态栏显示用量最高的分钟数。备注：需 `glab` 登录 gitlab.com，ADO 用 PAT（可存 Key Vault）或 `az` 登录；本机运行 glab/az 只读查询并用你的凭据请求 dev.azure.com，不发送会话内容、不调用模型、不改写提示或工具；默认每 30 分钟刷新；作者 2026-10-26 新建、单提交。 | MIT | [链接](https://github.com/henkei-lakmal/mods/tree/main/devops-consumption) |
 | jira-board | — | `/jira` 在聊天旁的窗格里显示实时 Jira 看板：宽窗格按状态分列、每张卡片一条 issue，窄窗格（或手机）按状态分标签页、数字键 1–9 切换；选中卡片看状态、优先级、负责人和更新时间，并用可用的流转按钮移动 issue（调 Jira 后刷新）；「Mine」只看指派给你的，`r` 刷新，可在网页打开看板；`/jira mine`、`/jira all`、`/jira close`、`/jira PROJ-123` 直接打开某个 issue。备注：**需要会话里已连上 Atlassian MCP 服务器**，并在 `/config` → jira-board 填 Jira 站点和项目键；只经 $.mcp.call 调该服务器做 JQL 搜索、查询可用流转，以及在你点按钮时流转 issue；不自存 token、不用 $.http、不发会话内容、不调模型；窗格打开时默认每 60 秒刷新，关闭时不请求。 | Apache-2.0 | [链接](https://github.com/Uplift-Foundation/jira-board-mod) |
+| gh-links | — | 会话里工具输出出现过的所有 GitHub PR 和 issue（比如 gh pr create 返回的链接）汇总到对话旁一个 30 列宽的窗格，可点击打开，显示状态（PR：draft/ready/merged/closed；issue：open/closed），未合并的 PR 还显示审查结论和 CI（✓ ✗ …）；第一次出现链接时自动打开，`/gh-links` 重新打开并刷新。备注：载入时、每轮结束和每 5 分钟用本机 gh 登录批量调用一次 `gh api graphql` 刷新状态，只把 PR/issue 链接发给 GitHub，不发会话内容；tool.call 只读取结果、原样返回；不改写提示、不调模型、不用 $.http；需要已登录 gh。和 gh-refs（每条回复下的小标签）、gh-status（只看当前分支 PR）不同，它保留整个会话的一份清单。 | MIT | [链接](https://github.com/juliusknorr/claude-gh-links) |
 
 ### 本地工具 Local Tools
 
