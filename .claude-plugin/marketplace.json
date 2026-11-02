@@ -6388,6 +6388,17 @@
         "path": "activity-pane",
         "sha": "bbe541a225c8508faca72b29e2c584de9b3674c6"
       }
+    },
+    {
+      "name": "send-after-reset",
+      "description": "Queues a prompt typed now to send automatically after the usage limit resets: a button appears above the prompt once the limit window is past a threshold (default 90%); queue survives restart; pending entries can be sent now or removed",
+      "source": {
+        "source": "github",
+        "repo": "michalstocki/send-after-reset",
+        "sha": "b5e6faeb03c96880141f59719fc82913ef3950f9"
+      },
+      "homepage": "https://github.com/michalstocki/send-after-reset",
+      "license": "MIT"
     }
   ]
 }
