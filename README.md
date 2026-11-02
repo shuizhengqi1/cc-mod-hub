@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 717 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 719 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 717 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 719 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 717 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 719 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 717 个精选 Claude Code mods，按类别组织：
+以下是本市场的 719 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -418,6 +418,8 @@ For detailed descriptions of all 717 mods, see the Chinese section below. The �
 | github-actions | ⭐ 5（所在仓库） | 提示框上方一条显示当前分支的 GitHub Actions 与 PR：只跟踪本会话里 `git push` 过的提交，列出每个 workflow 与 job 的通过/失败/运行中/等待状态（运行中或失败时显示当前步骤），以及该分支 PR 的编号、标题、draft、审查结论与检查计数；点击可在浏览器打开对应页面；跑完 `git push` 或 `gh pr/run/workflow` 后自动刷新，有运行中的任务时每 15 秒刷新。备注：界面为葡萄牙语；用本机 `git` 与已登录的 `gh`（`gh pr view`、`gh run list/view`、`gh api rate_limit`，只读）访问 GitHub，没装 gh 时整条隐藏、未登录或限流时显示提示；`tool.call` 只观察 Bash 命令、原样放行；推送过的提交记录（sha 与分支，最多 5 个/会话、保留 30 个会话）存在插件存储里；打开链接用 xdg-open/open/start；不注册命令；来自 Hangar 仓库，但单独可用，不需要装 Hangar。 | MIT | [链接](https://github.com/jeffer1312/hangar/tree/main/plugins/github-actions) |
 | dash-guard | ⭐ 5（所在仓库） | 拒绝在 md/txt 写入 em dash、en dash 或双连字符；只拒绝不改写。备注：本机 $.fs.read。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dash-guard) |
 | skill-stats | ⭐ 5（所在仓库） | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |
+| git-diff | ⭐ 4（所在仓库） | `/git-diff` 打开类似 VS Code Source Control 的 Changes 窗格：暂存/未暂存分组、点开看逐文件 diff（宽屏并排）、Stage/Unstage；多仓库时分节。备注：只跑本机 git（status/diff/add/restore --staged），命令行关闭 fsmonitor/hooks/ext；从不 fetch/pull/push/commit；`tool.call` 只观察后刷新、原样返回；不调模型、不经 `$.http` 外发会话；与 git-sidebar（分支/worktree）与 activity-pane（会话改动）互补；所在仓库 README 自称 MIT，但仓库无 LICENSE 文件。 |  | [链接](https://github.com/gradscalerteam/claude_cli/tree/main/mods/git-diff) |
+| git-sync | ⭐ 4（所在仓库） | 状态栏 `git ↑N ↓M` 显示冲突/暂存/改动/未跟踪与相对 upstream；有入站提交或冲突时提示框上方条带，Pull 仅 `git pull --ff-only` 且需你按下。备注：每 3 分钟本机 `git fetch`；其余只读本地；关闭危险 git 配置；不调模型；与同仓 git-diff 互补；所在仓库无 LICENSE 文件。 |  | [链接](https://github.com/gradscalerteam/claude_cli/tree/main/mods/git-sync) |
 | claude-mermaid | ⭐ 4（所在仓库） | 把助手回复里的 mermaid 块画成彩色 box art。 |  | [链接](https://github.com/galElmalah/claude-mods/tree/main/claude-mermaid) |
 | redpen | ⭐ 4 | `/redpen` 打开逐行审查窗格：列出 Claude 上一回合用 Edit/Write/NotebookEdit 改过的文件，以及 Claude 的最后一条回答；打开后按 diff（或全文）显示，可对单行或一段行写评论并选标签（预设标签可在项目或用户目录的 `.claude/redpen.json` 里自定义），最后按 `s` 把全部评论连同所在位置和原文摘录合成一条提示发给 Claude；`/redpen <路径>` 直接打开某个文件。备注：界面、预设标签和所发提示的固定开头（「请按以下审查意见全部修改，评论没提到的地方不要动」）都是韩语；只有你按 `s`（或点「전송」按钮）时才以你的身份用 `$.prompt.submit` 发出评论，Claude 正在工作时会等这一回合结束；`tool.call` 只记录改动前的文件内容、原样返回；读本会话消息取最后一条回答；不运行外部程序、不联网。 |  | [链接](https://github.com/joonhyukyim/redpen) |
 | vero-diff | ⭐ 3（所在仓库） | **推荐** 每个回合开始和结束时给工作区拍快照，在侧边面板里按回合浏览 Claude 改了什么（带语法高亮的真实 diff）；`/vero-diff` 打开面板，`/vero-diff last [N]` 把某一回合的 diff 贴进对话，`/vero-diff purge` 删除本项目的快照。备注：快照存在项目外的 ~/.cache/verodiff 独立 git 仓库，不碰项目自己的 .git；会把工作区全部文件（含未跟踪文件）写进快照，注意定期 purge；在 git 仓库里会话开始时自动打开面板；运行插件自带、源码可读的 scripts/snapshot.sh；`last` 的 diff 模型也会读到；不联网。 | MIT | [链接](https://github.com/GomelHawk/VeroDiff/tree/main/plugins/vero-diff) |

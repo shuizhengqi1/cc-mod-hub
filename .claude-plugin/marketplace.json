@@ -6399,6 +6399,28 @@
       },
       "homepage": "https://github.com/michalstocki/send-after-reset",
       "license": "MIT"
+    },
+    {
+      "name": "git-diff",
+      "description": "Opens a /git-diff Changes pane like VS Code Source Control: staged/unstaged groups, per-file diffs (side-by-side when wide), Stage/Unstage; multi-repo sections. Local git only (status/diff/add/restore --staged) with fsmonitor/hooks/ext disabled; never fetch/pull/push/commit; tool.call observe-and-refresh only; no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gradscalerteam/claude_cli.git",
+        "path": "mods/git-diff",
+        "sha": "bce0c2dc8698944927b9736c5a028e3618123d4b"
+      },
+      "homepage": "https://github.com/gradscalerteam/claude_cli/tree/main/mods/git-diff"
+    },
+    {
+      "name": "git-sync",
+      "description": "Status-line git ↑N ↓M (conflicts/staged/modified/untracked vs upstream) plus an above-prompt band for incoming commits or conflicts; Pull is git pull --ff-only and only when you press it. Periodic local git fetch every 3 minutes; otherwise local reads; disables unsafe git config; no model calls. Sibling of git-diff.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/gradscalerteam/claude_cli.git",
+        "path": "mods/git-sync",
+        "sha": "bce0c2dc8698944927b9736c5a028e3618123d4b"
+      },
+      "homepage": "https://github.com/gradscalerteam/claude_cli/tree/main/mods/git-sync"
     }
   ]
 }
