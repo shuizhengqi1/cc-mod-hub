@@ -6422,6 +6422,17 @@
       },
       "homepage": "https://github.com/j0hanz/j0hanz-marketplace/tree/main/plugins/telltale",
       "license": "MIT"
+    },
+    {
+      "name": "netops",
+      "description": "Network diagnostics for Claude Code: tools diagnose/run for connectivity, DNS, TLS, latency, ports, certificates, VPN/Wi-Fi and speed; /netops health pane; status line with latest result. Local CLI via scripts/netops (first run npm install --omit=dev); argv validated; speed test hits public endpoints only—no session content uploaded; no prompt rewrite, no model calls. Complements netsignal, net-guard, and port-watch.",
+      "source": {
+        "source": "github",
+        "repo": "Salberg87/netops",
+        "sha": "2bc797a2e911162ec722e4eb92d513e5ca2226b9"
+      },
+      "homepage": "https://github.com/Salberg87/netops",
+      "license": "MIT"
     }
   ]
 }

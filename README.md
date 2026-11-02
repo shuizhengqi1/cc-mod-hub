@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 719 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 720 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 719 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 720 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 719 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 720 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 719 个精选 Claude Code mods，按类别组织：
+以下是本市场的 720 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -759,6 +759,7 @@ For detailed descriptions of all 719 mods, see the Chinese section below. The �
 | session-manager | ⭐ 1 | 看本机所有 Claude Code 会话（`/resume` 只显示当前目录的），可打开、在项目搬家后把会话或整个项目移到新目录、把会话或所有找不到目录的孤儿会话送进回收站；`/sessions` 打开浏览器页面，也有 `/sessions list/open/orphans/prune/move/delete` 命令。备注：mod 只挂 session.start/command.run，用 $.process 跑插件自带的 Node 脚本（lib/cli.mjs、server/sessions-server.mjs）；页面服务只监听 127.0.0.1、带随机 token 并校验 Host；每次移动/删除先预览、需确认码，删除走系统回收站；改写 `~/.claude/projects` 下的会话文件；需 Node 18+；不联网、不调模型。 | MIT | [链接](https://github.com/GiuseppeBellamacina/session-manager) |
 | file-peek | ⭐ 1 | 给 `@` 提及加一个带信息面板的文件选择器：输入 `@` 路径后按 `?`（或在空提示框跑 `/peek [文件夹]`）打开，上下键浏览，旁边面板显示高亮项的信息：图片给色块缩略图和尺寸、PDF 给页数、文本给行数和开头几行、文件夹给条目数，并显示 git 状态；`p` 用 macOS 快速查看（Quick Look）打开，回车插入 `@` 提及，Esc 还原草稿。备注：仅 macOS；本机 process 调用系统自带 sips/file/mdls/qlmanage 和 git，只读文件；不联网、不调模型；prompt.edit 只拦截 `@…?` 触发键并在你选择后回填草稿，不改写提交的提示；新仓库（3 次提交）。 | MIT | [链接](https://github.com/maxlibin/claude-file-peek) |
 | session-export | ⭐ 1 | `/export-session` 生成本会话脱敏配置 + transcript 查看器，并把完整 JSONL 作为可下载附件，经 Claude Code 内置 Artifact 工具发布（用户确认）。备注：只注册命令；发布走 `$.tool.call` Artifact，不经 `$.http` 外发；配置会脱敏；不改写提示、不调模型。 | MIT | [链接](https://github.com/cateland/claude-session-export) |
+| netops | — | 网络诊断：工具 `diagnose`/`run` 查连通性、DNS、TLS、延迟、端口、证书、VPN/Wi‑Fi 与测速；`/netops` 打开健康窗格；状态行显示最近结果。备注：本机 `scripts/netops`（首次 `npm install --omit=dev`）；工具参数校验后才跑 CLI；测速会访问公共测速端点，不上传会话内容；不改写提示、不调模型。与 netsignal（只测 Anthropic API 延迟）、net-guard（外发防护）、port-watch（列监听端口）互补。 | MIT | [链接](https://github.com/Salberg87/netops) |
 | tmux-status | — | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
 | usage-reporter | — | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | quickswitch | — | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
