@@ -6580,17 +6580,6 @@
       },
       "homepage": "https://github.com/matteo-psnt/file-viewer/tree/main/plugin",
       "license": "MIT"
-    },
-    {
-      "name": "temps-projet",
-      "description": "A dim line above the prompt with cumulative project time converted to workdays (default 8 h) plus this conversation's tokens. Recounts on session.start and turn.complete by running the bundled scripts/compteur.py (local python3) over Claude Code transcripts with an inactivity gap (default 15 min); writes a cache and optional report under ~/.claude. Display and local accounting only: no $.http, no model calls, no prompt rewriting. Desktop-oriented (statusLine is not run there). fr/en. Differs from time-spent (per-tool timing cards) and client-clock (per-client billing) by showing project cumulative workdays + session tokens.",
-      "source": {
-        "source": "github",
-        "repo": "zerpo-lab/temps-projet",
-        "sha": "a001194a4f2445f61708efdbbbd9c713e10e5682"
-      },
-      "homepage": "https://github.com/zerpo-lab/temps-projet",
-      "license": "MIT"
     }
   ]
 }
