@@ -6306,6 +6306,33 @@
         "path": "plugins/ext-agent",
         "sha": "6f7013f08b8a453fea3394c5d14526ba7eee7fe5"
       }
+    },
+    {
+      "name": "sticky-suggestion",
+      "description": "Restores the dim prompt suggestion after running a local slash command like /copy; a new model turn or /clear|/resume|/rewind discards it",
+      "source": {
+        "source": "github",
+        "repo": "mmorearty/sticky-suggestion",
+        "sha": "d6ca0d6723d002762e69508fd518545c7a492835"
+      }
+    },
+    {
+      "name": "opus-guard",
+      "description": "Warning band above the prompt whenever the session is not on an Opus model; dismiss until the model changes",
+      "source": {
+        "source": "github",
+        "repo": "acidprime/opus-guard",
+        "sha": "a2c6a4c70d4d20379952b27c798306de068c5aed"
+      }
+    },
+    {
+      "name": "session-tracker",
+      "description": "Sidebar listing every open Claude Code session with Needs you / Working / Finished / Idle; complementary to tmux (no tmux required)",
+      "source": {
+        "source": "github",
+        "repo": "fixter-dev/claude-code-session-tracker",
+        "sha": "983b30367eced01504cb01dbff4fd9ba7009dbca"
+      }
     }
   ]
 }
