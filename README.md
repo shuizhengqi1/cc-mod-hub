@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 726 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 728 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 726 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 728 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 726 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 728 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 726 个精选 Claude Code mods，按类别组织：
+以下是本市场的 728 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -634,6 +634,7 @@ For detailed descriptions of all 726 mods, see the Chinese section below. The �
 | tex-preview | — | Claude 改或写 .tex 后自动在本机编译，在窗格里显示 PDF 并滚到改动的那一页；编译错误带文件和行号；`/tex` 手动编译。不联网，不调模型。备注：需本机装 TeX Live 或 MacTeX，latexmk、pdftocairo、synctex 在 PATH；窗格只在桌面 app 或 VS Code 扩展里显示，终端里只显示 PDF 路径；界面文字为葡萄牙语；每改一次 .tex 就在本机跑一次 LaTeX，latexmk 会读项目里的 .latexmkrc，打开不受信的仓库时要小心。 | MIT | [链接](https://github.com/lunatila/tex-preview) |
 | artifact-view | — | 页脚「Artifacts ▸」开关，在提示框上方列出最近更新的已发布 artifact（最新 5 个，14 天内改过的最多 10 个），点标题在侧栏打开、点 🌐 用系统浏览器打开；也可输入 `recent artifacts` 切换。备注：调用 Artifact 工具 list 读取列表；tool.call(Artifact) 原样执行，发布/删除后刷新；prompt.submit 只在整条提示是「recent artifacts」时拦下不发给模型，其他提示原样放行；只在点 🌐 时运行 rundll32/open/xdg-open；不联网、不调模型。与 artifact-mod（本会话写出的本地文件）不同。 | MIT | [链接](https://github.com/mncoffeenord/claude-artifact-view-mod) |
 | shot-preview | — | Claude 回复里若点名一张本机截图路径，就在该条回复下画缩略图，点击可打开原图。备注：只挂 `session.append` 观察并画 UI，不改写提示或工具；用本机读图；不联网、不调模型、不注册斜杠命令。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
+| lightbox | — | 提示框上方一条图片带：显示你粘贴的图片，以及 Claude 用 Read 打开、工具返回（截图）或命令刚写出的图片，`/lightbox <路径>` 手动打开；可前后翻、`larger` 打开大图窗格，macOS 上可用预览打开/在访达中显示；Ghostty/kitty 画真实像素，tmux/zellij/SSH 下用 Unicode 四分块字符画。备注：比 image-view（仅粘贴缩略图）覆盖面大，另注册自带命名空间的 `show` 工具（mcp__lightbox__show，hooks/register.tsx 23、591）让 Claude 主动给你看图，与 inline-images 功能部分重叠；本机用 sips/ImageMagick 转换（固定 sh 脚本，$.process，私有副本在 $TMPDIR/lightbox/<会话>）；tool.call 只观察结果不改写（624–639），不联网、不调模型。 | MIT | [链接](https://github.com/nuko-nova-dynamics/lightbox) |
 
 ### 任务与项目 Task & Project
 
@@ -863,6 +864,7 @@ For detailed descriptions of all 726 mods, see the Chinese section below. The �
 | extended-polls | — | 给 Claude 一个提问表单工具：一屏最多 30 个单选/多选题（可在 /config 调 1–100，每题 2–10 个选项，可标推荐项，自带「自己填」输入框），在对话旁的面板里用键盘作答，规划时一次定下一批决定，突破自带 AskUserQuestion 4 题×4 选项的限制；按 Submit/Cancel 前调用一直等待，关面板只是隐藏，提示框上方一行或 `/poll` 可再打开，未答的题按跳过返回；22 种界面语言。备注：为保持调用等待会起一个本地 `/bin/sh` 小进程在临时目录里等回答文件（中断即结束，残留目录一天后清理）；只处理自己的工具，不改写其他工具或提示，不联网、不调模型；10-23 新建、⭐0，带测试与文档。 | MIT | [链接](https://github.com/illsv/extended-polls-plugin) |
 | uptick | — | `/uptick` 打开面板，列出 Claude Code 本身、已装插件、skills CLI 装的技能和 Homebrew 包里哪些有新版本；选一项或按 a 全选，先显示将要运行的确切命令（`claude plugin update <id>`、`npx --yes skills@1.7.4 update -g <id>`、`brew upgrade <id>`），你确认后才执行；有更新时提示符上方显示一行提醒。备注：会在本机运行随附的 Python 检查脚本（只用标准库）以及 npm/gh/brew 查询上游版本，只拉版本信息、不发会话内容；不调用模型、不改提示；更新完只把 `/reload-plugins` 填进输入框由你按回车；与 plugin-updates 部分重叠（后者只提醒不更新），本条额外覆盖 Homebrew 并可确认后执行更新；需 Python 3.9+；单提交、⭐0。 | MIT | [链接](https://github.com/trustmeimlumi/uptick/tree/main/plugin) |
 | gridtalk | — | `/gridtalk` 在聊天旁打开方格画板，用方框、分组框、文字和连线（箭头方向、✕ 阻断标记、五种颜色）跟 Claude 用图沟通；Claude 获得 read_board / write_board / show_board 三个工具，把图读成简短精确的文字（格子范围、分组、连线）而不是截图，也能重画整张图给你看，任何改动都能撤销；图按项目保存在 mod 自己的存储里。Desktop 显示完整面板，终端退化为纯文本。备注：只注册自己的工具和面板，不改写提示、不注入上下文；不联网、不调模型；工具说明里要求把图中文字当数据、不当指令。 | MIT | [链接](https://github.com/Nine-Shell/gridtalk) |
+| mod-switch | — | `/mod-switch` 打开面板：选哪些已装 mod 在提示框上方横条里显示、按什么顺序（读 `next.trace` 后只重画选中的部分），一键静音所有 mod 的横条，并可勾选启用/停用任意 mod。备注：启用/停用跑 `claude plugin enable/disable`，在你下次 `/reload-plugins` 后生效（hooks/register.tsx 303–319）；按「Run first」才把自己写进 ~/.claude/settings.json 的 prependPlugins（323–338）；用 `claude plugin list --json` 列 mod；不联网、不调模型、不挂提示钩子；需 CC 2.1.309+。 | Apache-2.0 | [链接](https://github.com/nevermemo/mod-switch) |
 
 ---
 

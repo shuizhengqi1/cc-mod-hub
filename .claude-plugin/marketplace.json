@@ -6500,6 +6500,28 @@
       },
       "homepage": "https://github.com/tg-bomze/speech-insert",
       "license": "MIT"
+    },
+    {
+      "name": "lightbox",
+      "description": "A strip above the prompt that shows images you paste plus the ones Claude reads (Read), tools return (screenshots) or commands write, and files you open with /lightbox <path>; larger view pane, prev/next, open/reveal on macOS. Draws real pixels in Ghostty/kitty and Unicode quadrant cells in tmux/zellij/SSH. Converts images locally via sips/ImageMagick ($.process, fixed sh scripts, private copies under $TMPDIR/lightbox/<session>). Registers its own namespaced show tool (mcp__lightbox__show). tool.call only observes results (passes through), session.append observe-only; no $.http, no model calls, no prompt rewriting. CC 2.1.288+.",
+      "source": {
+        "source": "github",
+        "repo": "nuko-nova-dynamics/lightbox",
+        "sha": "51723389134713998ff675bc88e15281354921e8"
+      },
+      "homepage": "https://github.com/nuko-nova-dynamics/lightbox",
+      "license": "MIT"
+    },
+    {
+      "name": "mod-switch",
+      "description": "/mod-switch pane: choose which installed mods draw in the band above the prompt and in what order (reads next.trace and redraws only the chosen pieces), mute every mod's band at once, and switch any mod on/off via `claude plugin enable/disable` (applies at your next /reload-plugins). 'Run first' button adds itself to prependPlugins in ~/.claude/settings.json only when pressed. Runs `claude plugin list --json`; no network, no model calls, no prompt hooks. CC 2.1.309+.",
+      "source": {
+        "source": "github",
+        "repo": "nevermemo/mod-switch",
+        "sha": "e51eac8b93c73c7944176b0fe5f3400d1b949a99"
+      },
+      "homepage": "https://github.com/nevermemo/mod-switch",
+      "license": "Apache-2.0"
     }
   ]
 }
