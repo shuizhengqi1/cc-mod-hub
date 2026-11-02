@@ -6260,6 +6260,52 @@
       },
       "homepage": "https://github.com/max06/claude-mods/tree/main/plugins/thread-pulse",
       "license": "MIT"
+    },
+    {
+      "name": "unspin",
+      "description": "See what your agent's shell commands are doing instead of a spinner: live steps, progress bars, elapsed time and ETAs in Claude Code's spinner, above the prompt, or in the status line. Local only; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "nkyriazis/unspin",
+        "sha": "f98e5b764f0c81170b848a711b6836db73702367"
+      }
+    },
+    {
+      "name": "cc-sidecar",
+      "description": "When Claude Code delegates to codex/claude/gemini from Bash, show live agent-run progress (pane and/or hint) and keep only the final answer in context. Needs function hooks. Local observation of child CLIs; no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "HoshimuraYuto/cc-sidecar",
+        "sha": "eebf612101044f6333dee3be2c8cf0e4a1e0eaff"
+      }
+    },
+    {
+      "name": "vhs",
+      "description": "A tape of every Edit/Write: /vhs opens a replay pane (step/play/rewind with r twice). Needs function hooks. Local snapshots only; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "saksham10arora-dotcom/claude-vhs",
+        "sha": "76654d55fade052555f417c47bf0c9c978b08f78"
+      }
+    },
+    {
+      "name": "idle-micro-compact",
+      "description": "Before a 1-hour prompt cache expires on an idle session, first mask old tool results / drop thinking with no model call; if still too large, run /compact for a summary. Configurable idleMinutes/minTokens. Complements idle-compact and micro-compaction. Local; uses session.compact / command.run only—no $.http, no $.model.complete, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "kylesnowschwartz/idle-micro-compact",
+        "sha": "ba4599e5b7a223b8cca0bef30f951172980205d3"
+      }
+    },
+    {
+      "name": "ext-agent",
+      "description": "Adds agent type ext-agent:worker that runs subagents in pi or opencode CLI instead of a Claude model (no Claude tokens for those turns). Built-ins stay available unless blockBuiltin. Optional worktrees. Needs function hooks + pi/opencode on PATH. Local process spawn only; no $.http, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/darkautism/ext-agent.git",
+        "path": "plugins/ext-agent",
+        "sha": "6f7013f08b8a453fea3394c5d14526ba7eee7fe5"
+      }
     }
   ]
 }
