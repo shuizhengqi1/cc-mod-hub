@@ -6500,6 +6500,17 @@
       },
       "homepage": "https://github.com/tg-bomze/speech-insert",
       "license": "MIT"
+    },
+    {
+      "name": "coordinator-monitor",
+      "description": "One pane (/agents-monitor) for every local Claude Code session that runs the mod: state, model, context, cost, 5h/weekly limits and subagents (savvy-flow aware), plus every pending permission request and question answerable in place. Protected Bash/PowerShell commands (merges, pushes to main/force, deploys, service restarts; regex rules extendable via rules.json) are denied until you approve once/for the session from the pane; AskUserQuestion dialogs and '## Questions for you' sections are forwarded to the pane (forwardQuestions=off to disable). Your pane answer reaches the owning session as $.prompt.submit (asUser) only when you press a button. Status/answers are local JSON files under ~/.claude/coordinator-monitor (busDir); deny-only gating, no prompt.compose, no model calls, no network. Early 0.1; built for CC 2.1.316+.",
+      "source": {
+        "source": "github",
+        "repo": "easly1989/coordinator-monitor",
+        "sha": "6b986d7633b2c26ab5168cb7dc7ef984f812003e"
+      },
+      "homepage": "https://github.com/easly1989/coordinator-monitor",
+      "license": "AGPL-3.0-or-later"
     }
   ]
 }

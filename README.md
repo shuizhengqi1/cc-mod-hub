@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 726 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 727 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 726 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 727 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 726 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 727 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 726 个精选 Claude Code mods，按类别组织：
+以下是本市场的 727 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -586,6 +586,7 @@ For detailed descriptions of all 726 mods, see the Chinese section below. The �
 | ext-agent | — | 新增子代理类型 ext-agent:worker，改由本机 pi 或 opencode CLI 运行，这些回合不消耗 Claude token；内置代理默认仍可用（除非 blockBuiltin），可选 worktree。备注：需要 function hooks，且 pi/opencode 在 PATH 上；只在本机拉起进程，无 $.http、不改写提示。 | MIT | [链接](https://github.com/darkautism/ext-agent/tree/main/plugins/ext-agent) |
 | agent-model-router | — | 按项目配置表（`.claude/agent-model-router.json`）给每个子代理选模型；同一任务被再次派发时自动升一档（haiku→sonnet→opus，maxModel 封顶），每次选择写入本地日志，附带只读的 model-tuner 代理据日志提出调表建议。`/model-router` 生成或调整配置，`status` 查看。备注：只改子代理的 model 字段、不改其提示，出错时放行；`/model-router` 只提交插件自带的固定提示；`fable on` 时用 $.model.complete 发一句不含会话内容的探测；无 $.http、无 $.process。作者标 2.1.293+。 | MIT | [链接](https://github.com/deki-lab/agent-model-router) |
 | lazy-agents | — | 把 ~/.claude/agents 下用户级子代理从 Agent 列表藏起，按需用 find_agent(query) 搜索并解锁匹配项，避免大代理库每会话/每子代理白烧约 14k token；内置/插件/项目代理与 PINNED 名单仍可见。备注：只观察/隐藏 agent.offer，解锁后交回引擎；注册本机工具 find_agent（运行时名 mcp__lazy-agents__find_agent）；只读 HOME 与 ~/.claude/agents/*.md（深≤6、文件≤1000，不跟随符号链接）；不联网、不调模型、不改写提示；PINNED 写在 hooks/register.ts，常用代理需自行改源码；单提交新仓。 | MIT | [链接](https://github.com/oscarpedrero/lazy-agents) |
+| coordinator-monitor | — | `/agents-monitor` 打开窗格，集中查看本机所有装了该 mod 的 Claude Code 会话：状态、模型、上下文、费用、5 小时/每周限额和子代理（识别 savvy-flow），并把各会话待批的权限请求和提问汇总到一处直接回答；受保护命令（合并、推 main/强推、部署、重启服务，可用 rules.json 增改正则）在你从窗格「批准一次 / 本会话批准」前一律拒绝；AskUserQuestion 和回合末「## Questions for you」转到窗格（forwardQuestions=off 可关）。备注：状态与回答只写本机 `~/.claude/coordinator-monitor` 下的 JSON；只有你在窗格点按钮回答时，所属会话才用 $.prompt.submit（asUser）把答复作为新消息发出；拦截只拒绝不改写；不用 prompt.compose、不调模型、不联网；0.1 早期版本，需 Claude Code 2.1.316+。 | AGPL-3.0 | [链接](https://github.com/easly1989/coordinator-monitor) |
 
 ### 通知提醒 Notifications & Alerts
 
