@@ -6545,6 +6545,18 @@
       },
       "homepage": "https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield",
       "license": "MIT"
+    },
+    {
+      "name": "code-colors",
+      "description": "Your own syntax palette for Claude Code's terminal UI (from anthropics/claude-code#48636): code blocks and prose in replies (headings, lists, bold, inline code, links, hex codes in their color), Edit/Write diffs and new files with delta-style tints and changed-word highlights, Bash rows drawn in full (command, heredoc bodies, printed files and grep/rg results colored in their language, diffs and JSON), and WebFetch results; 18 languages. Palettes are constants in hooks/highlight.ts, prose.ts and diff.ts. Render-only: what Claude reads and the saved transcript are unchanged; turn.step only measures thinking speed and passes chunks through untouched; reads files a Bash command printed (local, up to 2 MB) to color them; CODE_COLORS_DEBUG=<file> opt-in debug log. Also turns the thinking spinner word into a rainbow (always on). No network, no model calls, no prompt rewrite. Broader than shell-highlight (Bash calls only).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/duplonicus/claude-mods.git",
+        "path": "code-colors",
+        "sha": "64962dd69155b97c997294a453f258b3dff7f8e2"
+      },
+      "homepage": "https://github.com/duplonicus/claude-mods/tree/main/code-colors",
+      "license": "MIT"
     }
   ]
 }
