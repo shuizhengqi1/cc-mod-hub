@@ -6226,6 +6226,23 @@
       },
       "homepage": "https://github.com/Nine-Shell/gridtalk",
       "license": "MIT"
+    },
+    {
+      "name": "emu",
+      "description": "Start, stop and monitor iOS simulators and Android emulators from Claude Code: /emu pane lists devices side by side (running first), keyboard boot/stop/refresh; /emu list|boot|stop|stop-all text commands; Claude gets devices/boot/shutdown tools. Lifecycle only—no screenshots, taps, or app installs. macOS; uses local xcrun simctl/adb/emulator. No network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wasabeef/emu-for-claude-mods.git",
+        "path": "plugins/emu",
+        "sha": "c6a1920c673b41556002d979f3da0052b91a042c"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "wasabeef",
+        "url": "https://github.com/wasabeef"
+      },
+      "homepage": "https://github.com/wasabeef/emu-for-claude-mods/tree/main/plugins/emu",
+      "license": "MIT"
     }
   ]
 }
