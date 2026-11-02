@@ -6333,6 +6333,51 @@
         "repo": "fixter-dev/claude-code-session-tracker",
         "sha": "983b30367eced01504cb01dbff4fd9ba7009dbca"
       }
+    },
+    {
+      "name": "logpane",
+      "description": "A pane that tails the files your Bash calls write to, so you can watch long-running output without a second terminal.",
+      "source": {
+        "source": "github",
+        "repo": "benlrice/logpane",
+        "sha": "95955b60cb07b5c5dc3c3e8c15e0ae60354eb6dc"
+      }
+    },
+    {
+      "name": "ask-first",
+      "description": "Holds git commit, push, PR merge and PR creation against protected branches, and edits to .claude/settings*.json, behind a Proceed / Cancel question unless your prompt or slash command asked for them; refuses deleting sudoers, authorized_keys or sshd_config and account changes that remove your own access.",
+      "source": {
+        "source": "github",
+        "repo": "nasrallah-adel/claude-ask-first",
+        "sha": "1b98a3b97fd703ab91265252b3a006f56267d0e5"
+      }
+    },
+    {
+      "name": "drift-radar",
+      "description": "Fingerprint the system prompt, tool descriptions, model and effort every session, and toast when something changed between versions, including changes the changelog leaves out.",
+      "source": {
+        "source": "github",
+        "repo": "jvrd97/claude-drift-radar",
+        "sha": "ed60a27c131e064af8ad9f3a96fb6f942971a764"
+      }
+    },
+    {
+      "name": "session-export",
+      "description": "/export-session: publish an artifact with the session's redacted config, a transcript viewer and the full JSONL to download",
+      "source": {
+        "source": "github",
+        "repo": "cateland/claude-session-export",
+        "sha": "4c106b44c9375bcb9e9d8e5bc55d8afd589bb3cc"
+      }
+    },
+    {
+      "name": "shot-preview",
+      "description": "Draws a thumbnail under a Claude reply that names a screenshot path, with a click to open it",
+      "source": {
+        "source": "github",
+        "repo": "mikhin/claude-shot-preview",
+        "sha": "29f1efb424fa461e653519d7bf954940f27bcbbe"
+      }
     }
   ]
 }

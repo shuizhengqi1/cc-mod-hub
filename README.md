@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 710 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 715 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 710 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 715 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 710 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 715 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 710 个精选 Claude Code mods，按类别组织：
+以下是本市场的 715 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -180,6 +180,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | summarize-up-to | — | 只压缩对话的前半段、后面原样保留：`/summarize-up-to` 列出可切的位置（你发的提示和回合之间的通知），`/summarize-up-to #12 [备注]` 或 `/summarize-up-to 70% [备注]` 把那一点之前的内容交给 Claude Code 自带的压缩做摘要，选中的那条及之后全部逐字保留，长的代理自动回合中间也能切；可在 /config 打开「部分自动压缩」，让每次自动压缩只摘要最早的一部分（默认 65%）。备注：session.compact 只把切点之前的消息交给内置摘要再拼回原文尾部，找不到合适切点时回退为正常整段压缩；不联网、不自己调模型；Team/Enterprise 或有托管设置的机器上内置安全默认会挡住，mod 会拒绝执行并说明；新仓库（2 次提交）。 | MIT | [链接](https://github.com/groundnuty/claude-summarize-up-to) |
 | setup-watch | — | 每次会话开始约 15 秒后，列出与上次会话相比的变化：Claude Code 版本、已装插件（新增/移除/更新/启用或停用）、MCP 服务器及其工具数、技能与斜杠命令、内置工具，方便及早发现悄悄撑大上下文的新增项并停用不用的。没有变化时不出声。备注：本机 process 只运行 `claude plugin list --json`，快照存在 mod 自己的 store；不联网、不调模型、不碰提示；新仓库（1 次提交）。 | MIT | [链接](https://github.com/romakuchukov/setup-watch) |
 | undelegated-reads | — | 主会话里连续做机械式读取和搜索（Read、Grep、Glob，以及 Bash/PowerShell 里的 grep/rg/find/递归 ls）时计数，状态栏显示进度条，到第 7 次在提示框上方黄色提醒，第 10 次连续调用直接拒绝，让 Claude 把探索交给子代理；调用 Agent/Task 或你输入新提示后清零，子代理里的调用不计。备注：tool.call 只 deny 或原样放行，不改写；prompt.submit 只用来清零计数，原样放行提示；阈值固定 10 不可配置；计数只在内存；不联网、不调模型。与 read-budget（同一大文件重复整读）、ration-book（按字节额度）不同，管的是连续探索次数。 | MIT | [链接](https://github.com/AnaCataVC/ami-claude-mods/tree/main/mods/undelegated-reads) |
+| drift-radar | — | 每会话指纹系统提示分段、工具说明、模型与 effort，和上次可比会话对比，有变化（含 changelog 没写的）就 toast；`/drift` 看历史，`/drift dump` 把当前指纹落到本机文件。备注：挂 `prompt.section`/`session` 相关事件只观察、原样放行，不改写提示；指纹与历史存在插件 store；dump 只写本机；不联网、不调模型。与 setup-watch（插件/MCP/技能清单变化）互补：本 mod 盯系统提示与工具描述本身。 | MIT | [链接](https://github.com/jvrd97/claude-drift-radar) |
 
 ### UI 与主题 UI & Themes
 
@@ -350,6 +351,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | control-watch | ⭐ 1（所在仓库） | 提示框上方一条显示 Claude 此刻或最近一分钟在操控什么：你的 Chrome（Claude in Chrome）、内置浏览器、桌面应用或整个屏幕（computer use）、Docker、iOS/Android 模拟器、终端面板，子代理发起的会标出；首次接管你自己的 Chrome 或桌面应用时弹 toast（macOS 另发系统通知）。备注：只观察 tool.call，原样 next，不拦截不改写；macOS 上用 osascript 发通知（参数数组调用，非 shell），其他系统通知静默失败；不联网。 | MIT | [链接](https://github.com/abdallah-hatem/claude-skills/tree/main/plugins/control-watch) |
 | checkout-guard | ⭐ 1（所在仓库） | 本机另一个活着的 Claude Code 会话也在同一个 git checkout 里工作时，在提示框上方提醒，并拦下会挪动工作树的 git 命令（checkout、switch、rebase、pull、merge、stash、reset --hard/--merge/--keep、clean、restore），让本会话先进 worktree；在 worktree 或别的 checkout 里起的子代理不拦。备注：只拒绝不改写命令；读 ~/.claude/sessions 并在本机跑 git，不联网、不调模型；「Use a worktree」按钮只在你按下时才让 Claude 进 worktree；与 collision-guard（同文件编辑冲突）互补；仓库无 README，单提交，带测试。 | MIT | [链接](https://github.com/rumstead/ai-loadout/tree/main/mods/checkout-guard) |
 | query-guard | ⭐ 1 | Claude 通过 Bash 跑 sqlite3、psql、mysql、snowsql、databricks CLI 或 dbt 的危险命令时先拦住等你选：DROP TABLE/DATABASE/SCHEMA、TRUNCATE、不带 WHERE 的 DELETE/UPDATE、ALTER TABLE … DROP COLUMN、dbt --full-refresh，以及连到名字含 prod/production 的主机、连接串、profile 或 dbt target 的任何命令。窗格（终端太窄时在提示框上方）显示命令、原因、目标，本机 SQLite 文件还显示当前行数；按 Proceed（1）原样执行，Cancel（2）或关掉窗格则 deny；状态行统计本会话拦下的次数。备注：只等待/deny，不改写命令（hooks/register.tsx 69–119）；只对本机 SQLite 文件跑 `sqlite3 -readonly … SELECT COUNT(*)`（48），等待时轮询 `sleep 0.25`（105）；不联网、不调模型。只看 Bash 命令文本，脚本、`-f` SQL 文件、MCP 数据库工具等绕得过去；会一直等你按键，无人值守会话（claude -p）里命中的命令会卡住直到中断；与 block-destructive-commands（破坏性 SQL 直接 deny）、prod-guard、seed-guard 部分重叠。 | MIT | [链接](https://github.com/geethasagarb/query-guard) |
+| ask-first | ⭐ 1 | 未在本轮提示或指定斜杠命令里要求时，对 `git commit`/`push`、`gh pr merge`、对着受保护分支建 PR、以及改 `.claude/settings*.json` 先弹 Proceed/Cancel；删除/改写 `sudoers`/`authorized_keys`/`sshd_config` 或摘掉受保护账户访问的命令一律拒绝。`/guard` 查看状态，`/guard off|on` 暂停/恢复拦阻（拒绝仍生效）。备注：`prompt.submit` 只根据原文记录意图、**不改写**提示后原样 `next(e)`（register.ts 61–66）；`tool.call` 只 deny 或询问后放行，不改参数；可在 `/config` 配保护分支/仓库正则与暗示性斜杠命令；不联网、不调模型。 | Apache-2.0 | [链接](https://github.com/nasrallah-adel/claude-ask-first) |
 | browser-guard | — | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | council-of-elrond | — | 按规则给每次工具调用分级：放行、拦下、问你，或交给 $.model.complete 审核（会发送工具调用、最近一次提示和本会话写过的脚本内容，已脱敏）；只拒绝不改写；在本机项目里写审计日志。 | MIT | [链接](https://github.com/Deluha/council-of-elrond/tree/main/mods/council-of-elrond) |
 | guardclaw | — | 只拒绝、失败即关闭：每条 shell 命令交给本机 `guardclaw-scan` 扫描，并挡住文件工具碰凭据与设置文件。备注：完整模式需要本机 guardclaw-scan 二进制（同仓库 `go install github.com/TakeInterestInc/guardclaw-core/cmd/guardclaw-scan@latest`；没有则退回内置规则）；不联网；会拒绝加载钩住风险事件的其他非信任 mod（包括本市场里的 mod），除非加进它的 `allowMods` 选项。 | Apache-2.0 | [链接](https://github.com/TakeInterestInc/guardclaw-core/tree/main/claude-code-mod) |
@@ -622,6 +624,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | inline-images | — | 给 Claude 一个 `show` 工具，把截图、视频帧、示意图等 PNG 直接显示在对话里：可按原图比例裁剪，画框和箭头并编号标注，回复里说「这个按钮」时你能看到指的是哪个；同时生成带文字标注的 SVG 副本并给出 `file://` 链接，终端画不了图（非 kitty/Ghostty、tmux、桌面版）时打开链接看。备注：注册工具 `mcp__inline-images__show`（hooks/register.tsx 103–106），tool.call 只读 Claude 指定的 PNG（超过 4 MiB 或非 8 位 PNG 时拒绝并说明原因），裁剪、标注、编码都在 mod 内用纯 JS 完成（随附 fflate 0.8.2，MIT），把 PNG/SVG/JSON 写到 `$TMPDIR/claude-inline-images/`（不自动清理，108–154）；ui.render 只改这个工具自己的结果行（159–204）；不运行外部程序、不联网、不调模型、不碰提示。与 figures（渲染 mermaid/LaTeX 等）不同，专做截图裁剪与指点标注。 | MIT | [链接](https://github.com/nicolopignatelli/claude-code-inline-images) |
 | tex-preview | — | Claude 改或写 .tex 后自动在本机编译，在窗格里显示 PDF 并滚到改动的那一页；编译错误带文件和行号；`/tex` 手动编译。不联网，不调模型。备注：需本机装 TeX Live 或 MacTeX，latexmk、pdftocairo、synctex 在 PATH；窗格只在桌面 app 或 VS Code 扩展里显示，终端里只显示 PDF 路径；界面文字为葡萄牙语；每改一次 .tex 就在本机跑一次 LaTeX，latexmk 会读项目里的 .latexmkrc，打开不受信的仓库时要小心。 | MIT | [链接](https://github.com/lunatila/tex-preview) |
 | artifact-view | — | 页脚「Artifacts ▸」开关，在提示框上方列出最近更新的已发布 artifact（最新 5 个，14 天内改过的最多 10 个），点标题在侧栏打开、点 🌐 用系统浏览器打开；也可输入 `recent artifacts` 切换。备注：调用 Artifact 工具 list 读取列表；tool.call(Artifact) 原样执行，发布/删除后刷新；prompt.submit 只在整条提示是「recent artifacts」时拦下不发给模型，其他提示原样放行；只在点 🌐 时运行 rundll32/open/xdg-open；不联网、不调模型。与 artifact-mod（本会话写出的本地文件）不同。 | MIT | [链接](https://github.com/mncoffeenord/claude-artifact-view-mod) |
+| shot-preview | — | Claude 回复里若点名一张本机截图路径，就在该条回复下画缩略图，点击可打开原图。备注：只挂 `session.append` 观察并画 UI，不改写提示或工具；用本机读图；不联网、不调模型、不注册斜杠命令。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
 
 ### 任务与项目 Task & Project
 
@@ -752,6 +755,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | worktree-terminal | ⭐ 1（所在仓库） | `/term` 在当前会话目录或任一 git worktree（包括子代理 `isolation: "worktree"` 建在 `.claude/worktrees/` 下的）里打开终端：分屏、标签页或新窗口；`/term list` 列出 worktree，`/term <编号>`、`/term main`、`/term <名字>` 选择；有子代理 worktree 时提示框上方一排按钮一键打开。支持 tmux、Zellij、kitty、WezTerm、iTerm2、Ghostty、Warp、Alacritty、GNOME Terminal、Konsole、Terminal.app 或自定义命令。备注：只在你输入 `/term` 或点按钮时用本机 `$.process.run` 启动终端（kitty 需 `allow_remote_control yes`，iTerm2 需自动化授权）；会话开始、子代理/worktree 工具调用后和每回合结束跑 `git worktree list` 刷新列表；tool.call 只观察、不改写；不调用模型、不联网。 | MIT | [链接](https://github.com/brunolca/claude-plugins/tree/main/plugins/worktree-terminal) |
 | session-manager | ⭐ 1 | 看本机所有 Claude Code 会话（`/resume` 只显示当前目录的），可打开、在项目搬家后把会话或整个项目移到新目录、把会话或所有找不到目录的孤儿会话送进回收站；`/sessions` 打开浏览器页面，也有 `/sessions list/open/orphans/prune/move/delete` 命令。备注：mod 只挂 session.start/command.run，用 $.process 跑插件自带的 Node 脚本（lib/cli.mjs、server/sessions-server.mjs）；页面服务只监听 127.0.0.1、带随机 token 并校验 Host；每次移动/删除先预览、需确认码，删除走系统回收站；改写 `~/.claude/projects` 下的会话文件；需 Node 18+；不联网、不调模型。 | MIT | [链接](https://github.com/GiuseppeBellamacina/session-manager) |
 | file-peek | ⭐ 1 | 给 `@` 提及加一个带信息面板的文件选择器：输入 `@` 路径后按 `?`（或在空提示框跑 `/peek [文件夹]`）打开，上下键浏览，旁边面板显示高亮项的信息：图片给色块缩略图和尺寸、PDF 给页数、文本给行数和开头几行、文件夹给条目数，并显示 git 状态；`p` 用 macOS 快速查看（Quick Look）打开，回车插入 `@` 提及，Esc 还原草稿。备注：仅 macOS；本机 process 调用系统自带 sips/file/mdls/qlmanage 和 git，只读文件；不联网、不调模型；prompt.edit 只拦截 `@…?` 触发键并在你选择后回填草稿，不改写提交的提示；新仓库（3 次提交）。 | MIT | [链接](https://github.com/maxlibin/claude-file-peek) |
+| session-export | ⭐ 1 | `/export-session` 生成本会话脱敏配置 + transcript 查看器，并把完整 JSONL 作为可下载附件，经 Claude Code 内置 Artifact 工具发布（用户确认）。备注：只注册命令；发布走 `$.tool.call` Artifact，不经 `$.http` 外发；配置会脱敏；不改写提示、不调模型。 | MIT | [链接](https://github.com/cateland/claude-session-export) |
 | tmux-status | — | 把 Claude 状态（working/waiting/done）写到本机 tmux 窗口选项。备注：本机 process（tmux）。 | MIT | [链接](https://github.com/XavierYounan/claude-code-tmux-status) |
 | usage-reporter | — | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | quickswitch | — | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
@@ -770,6 +774,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | node-close | — | Claude 跑完测试、构建等命令后，自动结束这条命令留下还在跑的 Node 进程（测试运行器、worker、node_modules 里的 esbuild/swc/turbo 等），避免越积越多占内存；后台命令在停止或会话结束时再清理；`/node-close` 列出本机所有父进程已不在的 Node（CPU、运行时长），`/node-close kill <PID…>` 或 `kill all` 结束选中的。备注：只结束「命令开始后新出现、已失去父进程、且带本会话 CLAUDE_PID」的进程，带 `&`、nohup、pm2、--detach 的命令视为有意常驻，只提示不结束；会自动发 SIGTERM，1 秒后仍在则 SIGKILL（Windows 用 `taskkill /T /F`）；`kill` 子命令只在你自己输入时执行；tool.call 先 next 原样执行，只在结果后附一行说明结束了哪些进程（hooks/register.ts 600–664）；本机运行 ps（读候选进程环境变量里的 CLAUDE_PID）/kill，Windows 上用 PowerShell 内联编译一段可读的 C# 读取 CLAUDE_PID（173–212）；不联网、不调模型、不改提示。与 strays（仅 macOS、手动结束）、session-procs（只读）部分重叠，本 mod 跨平台且自动清理。 | MIT | [链接](https://github.com/AnnihilationWizard/node-close) |
 | tmux | — | 在 tmux 里同时开多个 Claude Code（和 Codex）会话时，侧边窗格列出当前 tmux 会话里所有交互会话及状态（工作中 / 等你处理 / 空闲），高亮你正对着的那个；点一行把它切到前台，点 [x] 两次关闭该会话，点 [new] 在新 tmux 窗口里启动一个新会话（启动命令可在插件配置里改）；`/tmux` 重新打开窗格。备注：会话开始时自动打开窗格；通过 $.process 跑本机 tmux（list-panes/select-pane/new-window/send-keys/kill-pane，关闭需二次确认），读 `~/.claude/sessions` 判断状态；不联网、不调模型、不碰提示和工具调用；不在 tmux 里时只显示提示；新仓库（12 次提交）。 | MIT | [链接](https://github.com/Elijah-J/claude-tmux-pane) |
 | session-tracker | — | 侧栏列出本机所有打开的 Claude Code 会话，优先显示 Needs you；可消息/结束会话。不依赖 tmux，与 tmux（仅当前 tmux 会话）互补。备注：读本机会话注册表与 transcript 尾部，不联网、不改写提示。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |
+| logpane | — | 侧窗持续跟踪 Bash 正在写的日志文件（解析重定向目标，用 lsof 看谁在写），长跑命令不用另开终端；`/logpane` 开关/尺寸。备注：只观察 Bash 与本机文件，不改写命令；本机可选 `lsof`；不联网、不调模型。 | MIT | [链接](https://github.com/benlrice/logpane) |
 
 ### 其他工具 Other Tools
 
