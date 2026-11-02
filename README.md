@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 717 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 719 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 717 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 719 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 717 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 719 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 717 个精选 Claude Code mods，按类别组织：
+以下是本市场的 719 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -171,6 +171,7 @@ For detailed descriptions of all 717 mods, see the Chinese section below. The �
 | handoff | — | 每个改动了工作区的回合结束后，在项目的 `.claude/handoff/` 里写 LATEST.md（分支、提交、模型、本回合 Edit/Write 过的文件、git diff --stat 与 status、接手步骤）和 LATEST.patch（git diff HEAD，超过 30 万字符时按文件/hunk 截断并注明），方便下一个会话或同事接手。备注：会自动在项目里写文件（同时写一个内容为 `*` 的 .gitignore，不会被提交）；补丁排除 .env、*.pem、*.key、名字含 secret/credential 的文件等；`prompt.submit` 只清空本回合的文件列表、原样放行；只跑本机 git 只读命令；不联网、不注册命令。 | MIT | [链接](https://github.com/OrenSegal/sous/tree/main/mods/handoff) |
 | tool-trim-compaction | — | 压缩时不做摘要：删掉较早的工具调用和它们的结果，保留第一条和最近 6 条消息里的调用，所有对话原文照留；削减不到 25% 就交回标准摘要；另外在上下文用到 60% 时自动触发一次 compact；日文说明。备注：session.compact 返回裁剪后的消息列表，只删不加（register.ts 13–30、trim.ts 20–46）；每回合结束检查用量，到 60% 自动 `$.session.compact()`（33–47）；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/okamyuji/tool-trim-compaction) |
 | skill-map | — | 侧栏显示主会话里加载过哪些技能、各占多少 token、落在上下文窗口哪个位置，压缩后被丢掉的划线显示，`/skill-map` 开关。备注：prompt.submit 只计轮数、提示原样放行（hooks/register.tsx 104–107）；session.append、session.compact、tool.call 只观察、原样放行（114–137）；不运行其他程序、不联网。 |  | [链接](https://github.com/vuon9/cc-mods/tree/main/plugins/skill-map) |
+| telltale | —（所在仓库） | /telltale 窗格观察 skills/MCP 放进上下文的东西：调用表（工具/服务器/耗时/token/下一步）、Inventory 计量各 MCP/技能/记忆占窗口份额、状态行与提示框上方运行中 MCP 条带、本机脱敏日志（默认 .claude/telltale）。备注：所有钩子先 next 再记录，只观察不改写不阻断；可写本机日志；不联网、不调模型；与 context-pane/skill-map 互补（更深调用明细）；0⭐ 宿主仓 j0hanz-marketplace。 | MIT | [链接](https://github.com/j0hanz/j0hanz-marketplace/tree/main/plugins/telltale) |
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
 | idle-micro-compact | — | 空闲会话在 1 小时提示缓存过期前，先掩码旧工具结果并丢掉 thinking（不调模型）；仍然太大时再跑 `/compact` 做摘要。可配置 idleMinutes 与 minTokens。与 idle-compact、micro-compaction 互补，不替代它们。备注：只用 session.compact 与 command.run，无 $.http、无 $.model.complete、不改写提示。 | MIT | [链接](https://github.com/kylesnowschwartz/idle-micro-compact) |
 | defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
@@ -578,6 +579,7 @@ For detailed descriptions of all 717 mods, see the Chinese section below. The �
 | agy-lead | — | /agy 面板实时显示 Antigravity CLI（agy）的执行步骤、被拒命令和回复；配套 skill 让 Claude 规划、写 brief，并在 git worktree 里审查 agy 的改动。备注：需要自己安装 agy 并配置允许列表；面板只读 ~/.claude/agy-runs/live.ndjson；单提交，⭐0。 | MIT | [链接](https://github.com/MustafaManhal/agy-lead) |
 | ext-agent | — | 新增子代理类型 ext-agent:worker，改由本机 pi 或 opencode CLI 运行，这些回合不消耗 Claude token；内置代理默认仍可用（除非 blockBuiltin），可选 worktree。备注：需要 function hooks，且 pi/opencode 在 PATH 上；只在本机拉起进程，无 $.http、不改写提示。 | MIT | [链接](https://github.com/darkautism/ext-agent/tree/main/plugins/ext-agent) |
 | agent-model-router | — | 按项目配置表（`.claude/agent-model-router.json`）给每个子代理选模型；同一任务被再次派发时自动升一档（haiku→sonnet→opus，maxModel 封顶），每次选择写入本地日志，附带只读的 model-tuner 代理据日志提出调表建议。`/model-router` 生成或调整配置，`status` 查看。备注：只改子代理的 model 字段、不改其提示，出错时放行；`/model-router` 只提交插件自带的固定提示；`fable on` 时用 $.model.complete 发一句不含会话内容的探测；无 $.http、无 $.process。作者标 2.1.293+。 | MIT | [链接](https://github.com/deki-lab/agent-model-router) |
+| lazy-agents | — | 把 ~/.claude/agents 下用户级子代理从 Agent 列表藏起，按需用 find_agent(query) 搜索并解锁匹配项，避免大代理库每会话/每子代理白烧约 14k token；内置/插件/项目代理与 PINNED 名单仍可见。备注：只观察/隐藏 agent.offer，解锁后交回引擎；注册本机工具 find_agent（运行时名 mcp__lazy-agents__find_agent）；只读 HOME 与 ~/.claude/agents/*.md（深≤6、文件≤1000，不跟随符号链接）；不联网、不调模型、不改写提示；PINNED 写在 hooks/register.ts，常用代理需自行改源码；单提交新仓。 | MIT | [链接](https://github.com/oscarpedrero/lazy-agents) |
 
 ### 通知提醒 Notifications & Alerts
 

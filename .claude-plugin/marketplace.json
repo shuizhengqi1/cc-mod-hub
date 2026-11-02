@@ -6399,6 +6399,29 @@
       },
       "homepage": "https://github.com/michalstocki/send-after-reset",
       "license": "MIT"
+    },
+    {
+      "name": "lazy-agents",
+      "description": "Hides user-level subagents under ~/.claude/agents from the Agent listing and unlocks matches on demand via find_agent(query), so large agent collections stop costing ~14k tokens every session/subagent. Built-in, plugin, project agents and a short PINNED set stay visible. Local only; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "github",
+        "repo": "oscarpedrero/lazy-agents",
+        "sha": "ad08032fe82f44ff4cff01d9804fbc3dc8b3f303"
+      },
+      "homepage": "https://github.com/oscarpedrero/lazy-agents",
+      "license": "MIT"
+    },
+    {
+      "name": "telltale",
+      "description": "Observe-only pane for what skills and MCP servers put in front of Claude: call table (tool/server/time/tokens/next), inventory of MCP/skill/memory context cost, status line and above-prompt band, local redacted logs under .claude/telltale. Never changes, delays or blocks a tool call; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/j0hanz/j0hanz-marketplace.git",
+        "path": "plugins/telltale",
+        "sha": "0f333556d9c7f01fa3a3caa62f50d6e9021f18ce"
+      },
+      "homepage": "https://github.com/j0hanz/j0hanz-marketplace/tree/main/plugins/telltale",
+      "license": "MIT"
     }
   ]
 }
