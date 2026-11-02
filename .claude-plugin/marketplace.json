@@ -6557,6 +6557,17 @@
       },
       "homepage": "https://github.com/duplonicus/claude-mods/tree/main/code-colors",
       "license": "MIT"
+    },
+    {
+      "name": "gh-links",
+      "description": "A 30-column pane beside the chat listing every GitHub pull request and issue that appears in tool output this session (e.g. from gh pr create), as clickable links with state (draft, ready, merged, closed; open/closed for issues) and, for open PRs, review decision and CI status (✓ ✗ …). Opens by itself on the first link; /gh-links reopens it and refreshes. Refreshes on load, after every turn and every 5 minutes with one batched `gh api graphql` call using your local gh login; only the PR/issue URLs are sent to GitHub, never conversation text. tool.call only observes results (calls next first, returns them unchanged); no prompt rewriting, no model calls, no $.http. Requires gh signed in. Differs from gh-refs (chips under each reply) and gh-status (current branch PR only) by keeping one session-wide list.",
+      "source": {
+        "source": "github",
+        "repo": "juliusknorr/claude-gh-links",
+        "sha": "80684135583442067e9e2c81b16d0f8bdddef456"
+      },
+      "homepage": "https://github.com/juliusknorr/claude-gh-links",
+      "license": "MIT"
     }
   ]
 }
