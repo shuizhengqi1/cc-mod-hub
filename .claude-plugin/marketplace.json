@@ -6433,6 +6433,40 @@
       },
       "homepage": "https://github.com/Salberg87/netops",
       "license": "MIT"
+    },
+    {
+      "name": "compaction-viewer",
+      "description": "Pane that shows what Claude kept when it compacted the conversation: the full compaction summary, diffs vs earlier summaries, and an overview of files/skills/kept messages with estimated tokens. Opens via footer N× badge or /compacted. Reads only the local session transcript under ~/.claude/projects by session id; nothing leaves the machine. No prompt rewrite, no model calls, no network.",
+      "source": {
+        "source": "github",
+        "repo": "afterimaginary/claude-plugin-context-inspector",
+        "sha": "ff6bfd5b9cbdded78f5628d2b408669074c22440"
+      },
+      "homepage": "https://github.com/afterimaginary/claude-plugin-context-inspector",
+      "license": "MIT"
+    },
+    {
+      "name": "latex-kitty",
+      "description": "Renders display math in Claude's replies as images in kitty (or Ghostty) via the kitty graphics protocol, and simple inline math as Unicode. Compiles each formula with local latex+dvipng inside bubblewrap (no network, no home access); caches PNGs under ~/.cache/latex-kitty. Display-only ui.render AssistantMessage—does not rewrite stored transcript. Complements cc-math-renderer (Unicode) and code-tab-latex-fix (desktop Code tab).",
+      "source": {
+        "source": "github",
+        "repo": "maticplut/latex-kitty",
+        "sha": "fcbd960b6c72818585258fd7e11d9eb3f42d01f9"
+      },
+      "homepage": "https://github.com/maticplut/latex-kitty",
+      "license": "MIT"
+    },
+    {
+      "name": "git-sync",
+      "description": "Band above the prompt showing whether the session's git repo has commits to push or pull (ahead/behind vs upstream). Background git fetch every 3 minutes (never pull/push; GIT_TERMINAL_PROMPT=0). Recounts locally on turn.complete; toast when new commits to pull appear; manual fetch button. English/Spanish via locale or setting. Local git only; no prompt rewrite, no model calls, no session upload.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sawady/sawady-claude-mods.git",
+        "path": "plugins/git-sync",
+        "sha": "e4bc6bf41e59f0d823332e5cd40b428706ed827a"
+      },
+      "homepage": "https://github.com/sawady/sawady-claude-mods/tree/main/plugins/git-sync",
+      "license": "MIT"
     }
   ]
 }
