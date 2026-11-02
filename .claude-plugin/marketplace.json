@@ -6522,6 +6522,17 @@
       },
       "homepage": "https://github.com/nevermemo/mod-switch",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "session-mover",
+      "description": "Move Claude Desktop Code-tab sessions between sidebar workspaces (the app has no built-in way): /move-sessions opens a pane listing sessions by workspace with a Move-to picker, queue/undo moves, then 'Apply & restart Claude' (confirm) quits the app, rewrites the session file and the app's Local Storage (LevelDB) workspace map, copies the transcript to the new project folder, and reopens Claude. Backs up everything to ~/claude-session-backups first. macOS + Claude desktop app + python3 only; local files only, no network, no model calls, no prompt rewrite. Unofficial: edits undocumented app files. Complements session-manager (CLI project folders).",
+      "source": {
+        "source": "github",
+        "repo": "webdevnerdstuff/claude-session-mover",
+        "sha": "efe626e7354453409f784b76d68e405a9dbdcb0b"
+      },
+      "homepage": "https://github.com/webdevnerdstuff/claude-session-mover",
+      "license": "MIT"
     }
   ]
 }
