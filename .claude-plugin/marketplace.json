@@ -6378,6 +6378,16 @@
         "repo": "mikhin/claude-shot-preview",
         "sha": "29f1efb424fa461e653519d7bf954940f27bcbbe"
       }
+    },
+    {
+      "name": "activity-pane",
+      "description": "Terminal-only: Files pane with diffs and session PRs, a footer file the status line reads (Files count, today's meetings), and Run (or Run and send the output to Claude), Mermaid, table and copy helpers in replies",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/leonemendes/claude-mods.git",
+        "path": "activity-pane",
+        "sha": "bbe541a225c8508faca72b29e2c584de9b3674c6"
+      }
     }
   ]
 }
