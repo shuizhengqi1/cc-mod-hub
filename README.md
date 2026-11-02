@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 723 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 726 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 723 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 726 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 723 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 726 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 723 个精选 Claude Code mods，按类别组织：
+以下是本市场的 726 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -287,6 +287,8 @@ For detailed descriptions of all 723 mods, see the Chinese section below. The �
 | line-width | — | 终端很宽时，把 Claude 回复的正文按空白折到易读的宽度（默认 80 列，可在插件配置里设 40–200），表格、代码块和过长的路径、URL 保持终端全宽、不被截断或挤压。备注：只替换终端里 AssistantMessage 的渲染（ui.render），保存的回复和 Claude 读到的内容不变；摘要和超长回复（约 9 万字符以上）交回原生渲染；不联网、不调模型；GPL-3.0 许可。 | GPL-3.0 | [链接](https://github.com/chewygumxx/claude-library/tree/main/plugins/line-width) |
 | hanzi-interface | — | 把 Claude Code 的界面换成简体中文：内置命令说明、`/config` 设置名称、转圈和转入后台提示、通知、会话模式标签，以及 `/copy`、`/export`、`/cost`/`/usage` 的输出摘要。备注：只用本地词典（hooks/register.ts 内置），不调模型、不联网；只改显示（command.describe、config.describe、ui.render），不改模型收到的内容；转圈词固定显示「处理中」；权限窗口、`claude --help` 等 mod API 不开放的界面仍是英文；作者按 Claude Code 2.1.316 开发；新仓库（1 次提交，默认分支 feat/initial-plugin）。 | MIT | [链接](https://github.com/gzx543097079/claude-code-zh-cn) |
 | sticky-suggestion | — | 运行 /copy 等本地斜杠命令后，把被清掉的暗色提示建议重新提出；新模型回合或 /clear、/resume、/rewind 会丢弃。备注：只观察 prompt.suggest / command.run，不改写提示，不联网。 | MIT | [链接](https://github.com/mmorearty/sticky-suggestion) |
+| tqdm-bar | — | 后台 Bash（`run_in_background`）若打印标准 tqdm 进度，就在提示框上方画一条实时进度条（百分比/计数/ETA/速率）；任务结束变绿或红，约 10 秒后或点 Hide 清除；同一时间只跟最新一个后台任务。备注：只读该任务本机输出文件；`tool.call` Bash 只观察、原样放行；不改写提示、不调模型、不联网；脚本无需改动。与 progress-bar-3000（自注册 progress 工具 + tmux）互补。 | MIT | [链接](https://github.com/ReallyFloppyPenguin/claude-tqdm-bar) |
+| speech-insert | — | 提示框上方麦克风：录音后用任意 OpenAI 兼容语音转写 API（OpenAI / Groq / 自建 Whisper）转成文字，插入光标处；⚙ 配置 base URL、token、模型、语言（存本机 `$.store`）。`/speech-off` `/speech-on` `/speech-chat-off`。备注：**仅 macOS**，需 ffmpeg；用本机 curl 只上传刚录的音频，不发会话内容；不改写提示、不调 `$.model.complete`；与 paste-inline（剪贴板听写展开）互补。 | MIT | [链接](https://github.com/tg-bomze/speech-insert) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -548,6 +550,7 @@ For detailed descriptions of all 723 mods, see the Chinese section below. The �
 | spec-manager | — | OpenSpec 实时窗格：每个变更的步骤条（proposal › specs › design › tasks › apply › archive）、下一步该 AI 还是你做、按 tasks.md 分节的任务进度、多模块总览，共享仓库里别人的变更置灰；有 openspec/ 的项目自动打开，`/spec-manager` 重新打开。备注：需本机已装 openspec 命令行，只运行 `openspec list/status --json`、`git config user.email`、`git log --format=%ae`（hooks/register.tsx 140–146、255–275）；每 10 秒读一次文件；不联网、不调模型、不读对话。比 openspec-status（提示框下方一行状态）更完整。 | MIT | [链接](https://github.com/jordan-temim/spec-manager) |
 | open-in-editor | — | 提示框上方列出 Claude 最近写或改过的 3 个文件（Write/Edit/NotebookEdit，新的在上），每行可复制路径、用 Zed 或 VS Code 打开，× 移除；Claude 写文件前不显示。备注：tool.call 先 next 再记录路径、原样放行；打开编辑器用 $.process.run 跑 `open -a`，仅 macOS；不联网、不调模型。 | MIT | [链接](https://github.com/berk-karaal/agent-plugins/tree/main/plugins/open-in-editor) |
 | agents-skills | — | 让 Claude Code 用上 `.agents/skills/` 里的技能（`npx skills` 和其他代理工具装技能的位置）：每次会话开始把其中含 SKILL.md 的技能文件夹复制到 `.claude/skills/`，副本自带 `.gitignore` 和标记文件、不进 git，原件改了会刷新；你自己在 `.claude/skills/` 里同名的技能不会被覆盖（会弹提示）。可在插件配置里填一个主目录，把那里的 `.agents/skills` 也一并复制。备注：只挂 session.start 与 classic.SessionStart，只通过 $.fs 在 `.claude/skills` 内写文件；不联网、不调模型、不改提示；新仓库（8 次提交）；新建 `.claude/skills` 后需按提示跑一次 `/reload-skills`。 | MIT | [链接](https://github.com/nightlab-agent/agents-skills) |
+| editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
 
 ### 子代理管理 Subagent Management
 
