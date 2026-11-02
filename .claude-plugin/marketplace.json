@@ -6568,6 +6568,29 @@
       },
       "homepage": "https://github.com/juliusknorr/claude-gh-links",
       "license": "MIT"
+    },
+    {
+      "name": "file-viewer",
+      "description": "Inline previews of PDFs, Office files (Word/PowerPoint/Excel), images and animated GIFs in the conversation, with a paging viewer (/view <path>) and a preview tool Claude can call (mcp__file-viewer__preview). Converts locally via poppler/LibreOffice/ImageMagick/sips (plugin scripts through $.process.run); real pixels in Ghostty/kitty, Unicode blocks elsewhere. Display and local conversion only: no $.http, no model calls, no prompt rewriting. Requires converter tools on PATH for Office/PDF. Differs from lightbox (image strip), tex-preview (LaTeX PDF), md-pane (Markdown), and file-view (sidebar open any path) by focusing on document/Office/GIF inline preview.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matteo-psnt/file-viewer.git",
+        "path": "plugin",
+        "sha": "320573f0d91fa0f2f5441c5d665bd3a338b93331"
+      },
+      "homepage": "https://github.com/matteo-psnt/file-viewer/tree/main/plugin",
+      "license": "MIT"
+    },
+    {
+      "name": "temps-projet",
+      "description": "A dim line above the prompt with cumulative project time converted to workdays (default 8 h) plus this conversation's tokens. Recounts on session.start and turn.complete by running the bundled scripts/compteur.py (local python3) over Claude Code transcripts with an inactivity gap (default 15 min); writes a cache and optional report under ~/.claude. Display and local accounting only: no $.http, no model calls, no prompt rewriting. Desktop-oriented (statusLine is not run there). fr/en. Differs from time-spent (per-tool timing cards) and client-clock (per-client billing) by showing project cumulative workdays + session tokens.",
+      "source": {
+        "source": "github",
+        "repo": "zerpo-lab/temps-projet",
+        "sha": "a001194a4f2445f61708efdbbbd9c713e10e5682"
+      },
+      "homepage": "https://github.com/zerpo-lab/temps-projet",
+      "license": "MIT"
     }
   ]
 }
