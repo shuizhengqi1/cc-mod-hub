@@ -281,7 +281,7 @@ For detailed descriptions of all 710 mods, see the Chinese section below. The �
 | cwd-path | — | 提示框页脚右下显示当前工作目录（家目录显示为 ~，过长从左截断）和 git 分支，可在 /config 设最大长度、是否显示分支。备注：只改显示，保留引擎原有模式标签；只运行 `git branch --show-current` / `git rev-parse --short HEAD`（2 秒超时、同目录 3 秒缓存）；不联网、不调模型。 | MIT | [链接](https://github.com/adamff-dev/claude-plugins/tree/main/plugins/cwd-path) |
 | line-width | — | 终端很宽时，把 Claude 回复的正文按空白折到易读的宽度（默认 80 列，可在插件配置里设 40–200），表格、代码块和过长的路径、URL 保持终端全宽、不被截断或挤压。备注：只替换终端里 AssistantMessage 的渲染（ui.render），保存的回复和 Claude 读到的内容不变；摘要和超长回复（约 9 万字符以上）交回原生渲染；不联网、不调模型；GPL-3.0 许可。 | GPL-3.0 | [链接](https://github.com/chewygumxx/claude-library/tree/main/plugins/line-width) |
 | hanzi-interface | — | 把 Claude Code 的界面换成简体中文：内置命令说明、`/config` 设置名称、转圈和转入后台提示、通知、会话模式标签，以及 `/copy`、`/export`、`/cost`/`/usage` 的输出摘要。备注：只用本地词典（hooks/register.ts 内置），不调模型、不联网；只改显示（command.describe、config.describe、ui.render），不改模型收到的内容；转圈词固定显示「处理中」；权限窗口、`claude --help` 等 mod API 不开放的界面仍是英文；作者按 Claude Code 2.1.316 开发；新仓库（1 次提交，默认分支 feat/initial-plugin）。 | MIT | [链接](https://github.com/gzx543097079/claude-code-zh-cn) |
-| sticky-suggestion | — | 运行 /copy 等本地斜杠命令后，把被清掉的暗色提示建议重新提出；新模型回合或 /clear|/resume|/rewind 会丢弃。备注：只观察 prompt.suggest / command.run，不改写提示，不联网。 | MIT | [链接](https://github.com/mmorearty/sticky-suggestion) |
+| sticky-suggestion | — | 运行 /copy 等本地斜杠命令后，把被清掉的暗色提示建议重新提出；新模型回合或 /clear、/resume、/rewind 会丢弃。备注：只观察 prompt.suggest / command.run，不改写提示，不联网。 | MIT | [链接](https://github.com/mmorearty/sticky-suggestion) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
