@@ -6533,6 +6533,18 @@
       },
       "homepage": "https://github.com/webdevnerdstuff/claude-session-mover",
       "license": "MIT"
+    },
+    {
+      "name": "share-shield",
+      "description": "Blurs secrets and personal info on screen while your screen is shared or recorded: polls `ps` every 2 s (macOS) for Zoom screen share (CptHost), macOS/QuickTime screen recording and OBS (plus extra process names you configure) and turns on by itself, off when sharing ends; masks API keys/tokens (Anthropic, OpenAI, GitHub, Slack, AWS, Google, Stripe), JWTs, Bearer headers, private keys, URL passwords, key=value secrets, emails, phone numbers, SSNs and card numbers in messages, tool calls/results, command output and other mods' panes. /shield on|off|auto|status; 'Show for this share' button. Display only: what Claude reads and the saved transcript are unchanged; only runs `ps`; no network, no model calls, no prompt rewrite. Browser sharing (Meet/Teams) not auto-detected (use /shield on). Similar to streamer-mode (Korean UI, manual toggle).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kwoekel/woekel-works.git",
+        "path": "mods/share-shield",
+        "sha": "277cfc4d7393fa94e482fca426b9d22591e19949"
+      },
+      "homepage": "https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield",
+      "license": "MIT"
     }
   ]
 }
