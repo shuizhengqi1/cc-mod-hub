@@ -6467,6 +6467,39 @@
       },
       "homepage": "https://github.com/sawady/sawady-claude-mods/tree/main/plugins/git-sync",
       "license": "MIT"
+    },
+    {
+      "name": "tqdm-bar",
+      "description": "Live tqdm progress bar above the prompt for background Bash jobs that print a standard tqdm bar. Follows the background command's output file once a second, draws the latest redraw as a band between transcript and prompt, turns green/red when the job exits, and clears after 10s (or Hide). One bar at a time; no script changes needed. Local fs read of the job log only; tool.call Bash observe-and-pass; no prompt rewrite, no model calls, no network.",
+      "source": {
+        "source": "github",
+        "repo": "ReallyFloppyPenguin/claude-tqdm-bar",
+        "sha": "10c582d7051a19ccce630c1ab770547d8c5de599"
+      },
+      "homepage": "https://github.com/ReallyFloppyPenguin/claude-tqdm-bar",
+      "license": "MIT"
+    },
+    {
+      "name": "editable-diff",
+      "description": "Panel of every file Claude edited this session as a GitHub Desktop-style diff you can edit in place and save, leave line comments, and send as one review message. Opens on first edit; /editable-diff reopens. Save writes the file locally and appends a short note asking Claude to re-read before the next edit; sending comments uses $.prompt.submit only when you press send (asUser). Local git/fs only; no model calls, no session upload.",
+      "source": {
+        "source": "github",
+        "repo": "tg-bomze/editable-diff",
+        "sha": "240cee3ac7089d61c5ef65084f9ee968ed959d4b"
+      },
+      "homepage": "https://github.com/tg-bomze/editable-diff",
+      "license": "MIT"
+    },
+    {
+      "name": "speech-insert",
+      "description": "Mic button above the prompt: record, transcribe via any OpenAI-compatible audio API (OpenAI/Groq/self-hosted Whisper), insert text at the cursor. Settings (base URL, token, model, language) in local $.store. macOS + ffmpeg required; curl posts only the audio file you just recorded (not the conversation). /speech-off|/speech-on|/speech-chat-off. No prompt rewrite, no model.complete.",
+      "source": {
+        "source": "github",
+        "repo": "tg-bomze/speech-insert",
+        "sha": "2b27ea75db9e5f6cb30591c68a4e9d18cc9bd2c5"
+      },
+      "homepage": "https://github.com/tg-bomze/speech-insert",
+      "license": "MIT"
     }
   ]
 }
