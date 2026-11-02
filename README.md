@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 720 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 723 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 720 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 723 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 720 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 723 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 720 个精选 Claude Code mods，按类别组织：
+以下是本市场的 723 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -170,6 +170,7 @@ For detailed descriptions of all 720 mods, see the Chinese section below. The �
 | teach-me | — | 改代码后在提示框上方出一道多选题；/a 作答。备注：使用 $.model.complete（本机 diff，不外传）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-teach-me) |
 | handoff | — | 每个改动了工作区的回合结束后，在项目的 `.claude/handoff/` 里写 LATEST.md（分支、提交、模型、本回合 Edit/Write 过的文件、git diff --stat 与 status、接手步骤）和 LATEST.patch（git diff HEAD，超过 30 万字符时按文件/hunk 截断并注明），方便下一个会话或同事接手。备注：会自动在项目里写文件（同时写一个内容为 `*` 的 .gitignore，不会被提交）；补丁排除 .env、*.pem、*.key、名字含 secret/credential 的文件等；`prompt.submit` 只清空本回合的文件列表、原样放行；只跑本机 git 只读命令；不联网、不注册命令。 | MIT | [链接](https://github.com/OrenSegal/sous/tree/main/mods/handoff) |
 | tool-trim-compaction | — | 压缩时不做摘要：删掉较早的工具调用和它们的结果，保留第一条和最近 6 条消息里的调用，所有对话原文照留；削减不到 25% 就交回标准摘要；另外在上下文用到 60% 时自动触发一次 compact；日文说明。备注：session.compact 返回裁剪后的消息列表，只删不加（register.ts 13–30、trim.ts 20–46）；每回合结束检查用量，到 60% 自动 `$.session.compact()`（33–47）；不注册命令、不运行外部程序、不联网。 | MIT | [链接](https://github.com/okamyuji/tool-trim-compaction) |
+| compaction-viewer | — | 窗格显示 Claude 压缩会话时留下了什么：完整摘要、与前次摘要的 diff、以及文件/技能/保留消息与估算 token 概览；页脚 `N×` 徽章或 `/compacted` 打开。备注：只按会话 id 读本机 `~/.claude/projects` 转录，不外发；不改写提示、不调模型、不联网。与 visible-compact（并排看压缩前后对话）互补——本 mod 展示摘要正文本身。 | MIT | [链接](https://github.com/afterimaginary/claude-plugin-context-inspector) |
 | skill-map | — | 侧栏显示主会话里加载过哪些技能、各占多少 token、落在上下文窗口哪个位置，压缩后被丢掉的划线显示，`/skill-map` 开关。备注：prompt.submit 只计轮数、提示原样放行（hooks/register.tsx 104–107）；session.append、session.compact、tool.call 只观察、原样放行（114–137）；不运行其他程序、不联网。 |  | [链接](https://github.com/vuon9/cc-mods/tree/main/plugins/skill-map) |
 | telltale | —（所在仓库） | /telltale 窗格观察 skills/MCP 放进上下文的东西：调用表（工具/服务器/耗时/token/下一步）、Inventory 计量各 MCP/技能/记忆占窗口份额、状态行与提示框上方运行中 MCP 条带、本机脱敏日志（默认 .claude/telltale）。备注：所有钩子先 next 再记录，只观察不改写不阻断；可写本机日志；不联网、不调模型；与 context-pane/skill-map 互补（更深调用明细）；0⭐ 宿主仓 j0hanz-marketplace。 | MIT | [链接](https://github.com/j0hanz/j0hanz-marketplace/tree/main/plugins/telltale) |
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
@@ -238,6 +239,7 @@ For detailed descriptions of all 720 mods, see the Chinese section below. The �
 | prompt-draft-autosave-restore | ⭐ 1 | 边打字边把提示框里还没发送的草稿自动存下来（停笔 0.8 秒后按会话保存），重启、崩溃或 `claude --resume` 后自动填回提示框；`/draft-restore` 手动取回，本会话没有时取同一文件夹里其他会话留下的最新草稿；发送、清空或 Ctrl+C 会删除已存草稿，30 天以上的自动清理。备注：草稿只存在本机 `$.store`（~/.claude/plugins/store/），不联网、不调模型、不运行外部程序；prompt.edit 原样返回，`$.prompt.fill` 只把你自己的草稿填回空提示框，不自动提交；长粘贴只能存成 `[Pasted text #N]` 占位，恢复时会提示内容缺失；需 Claude Code 2.1.312+（用到 prompt.change 事件）；界面英文，可选德文。 | MIT | [链接](https://github.com/dlepold/prompt-draft-autosave-restore) |
 | whoami | — | 页脚显示当前 Claude 账号、组织、邮箱、套餐和 5 小时/每周用量；`/whoami pin` 把文件夹绑定到一个账号，账号不对时只拦下提示（不改写）并在提示框上方显示红框，`/whoami ok` 放行；`/account` 切换账号。不联网，不调模型。备注：README 标 CC 2.1.296+（2.1.292 实测能加载）；和 account-badge 改同一处页脚，二选一；`/account` 切换需装作者的 Claude Accounts 菜单栏 app，会改本会话的 CLAUDE_SECURESTORAGE_CONFIG_DIR。 | MIT | [链接](https://github.com/tornikegomareli/claude-whoami) |
 | cc-math-renderer | — | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
+| latex-kitty | — | 在 kitty/Ghostty 终端把回复里的展示公式画成图片（kitty 图形协议），简单行内公式转 Unicode；本机 latex+dvipng 在 bubblewrap 沙箱编译（无网络、无家目录），PNG 缓存在 `~/.cache/latex-kitty`。备注：只改 `ui.render` AssistantMessage 显示，不改会话存储；需 Linux、kitty/Ghostty、TeX、ImageMagick、bwrap；不改写提示、不调模型。与 cc-math-renderer（Unicode）、code-tab-latex-fix（桌面 Code 标签）互补。 | MIT | [链接](https://github.com/maticplut/latex-kitty) |
 | al-syntax | — | 把回复里 ```al 代码块（Business Central AL 语言）用 tree-sitter 着色显示，其他回复不动。备注：本机 process 用 node 运行仓库自带的 tree-sitter 高亮脚本和 wasm 语法文件（随插件一起，不另下载）；只改回复显示，不改原文，不联网。 | MIT | [链接](https://github.com/abonckus/claude-code-al-syntax) |
 | collapse-answers | — | 折叠过长回复，界面更干净。 |  | [链接](https://github.com/adriancoman/claude-code-mods/tree/main/collapse-answers) |
 | crosstalk | — | /crosstalk 打开窗格，记录本会话与其他 Claude Code 会话的 peer 收发，并可在窗格内回复；只读观察、不改写工具。备注：hook 本机 find/grep 扫描 session journal；thread 存 local store。 | MIT | [链接](https://github.com/kbrdn1/claude-crosstalk) |
@@ -537,6 +539,7 @@ For detailed descriptions of all 720 mods, see the Chinese section below. The �
 | pr-evidence | — | 给 Claude 一个只读工具 `pr_evidence`：按 repo+PR 号或精确 commit SHA 一次取回 PR 元数据、diff、该 commit 的 CI 运行/检查状态和失败任务的日志尾部，并按固定规则给出结论（排队中算 pending、没有 workflow 不算通过、发现不完整算 inconclusive），避免把没跑完或没跑的 CI 说成通过；`/pr-evidence on\|off`。备注：用本机已登录的 `gh` 只读查询，命令白名单只放行 `gh api --method GET`、`gh run view --log-failed`、`gh pr view --json` 和 `git rev-parse HEAD`（hooks/gh.ts 85–106）；默认拒绝子代理调用；不发送会话内容、不调模型。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-pr-evidence) |
 | robot-progress | — | Robot Framework 运行的实时进度：状态栏显示 已完成/总数、通过/失败、ETA，侧边窗格列出当前测试与关键字、即时失败，长时间无进度时提示卡住；`/robot-progress` 打开窗格。备注：会话开始时把插件自带的 listener/ProgressListener.py 追加到 ROBOT_OPTIONS 环境变量，listener 只把进度写到插件目录下的 run/progress.json（hooks/register.tsx 41–62），不联网、不注入上下文；需要 python 与 Robot Framework。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/robot-progress) |
 | push-preflight | — | Claude 运行 `git push` 之前，按顺序跑本仓库 package.json 里已有的 npm 脚本 `format:check`、`lint`、`typecheck`（有哪个跑哪个），任一失败就拦住这次 push；`git push --dry-run` 和不含这些脚本的仓库直接放行。备注：只拒绝不改写命令；每次 push 前在本机运行仓库自己的 npm 脚本（每个最多 300 秒），push 会等待；只读会话目录的 package.json，不跟踪 `cd subdir && git push` 或 `git -C`（`cd subdir && git push` 这条命令仍会命中，但读的仍是会话目录的 package.json，不会进到子目录；`git -C` 识别不到）；仅支持 npm 且需已装 node_modules（没装时跳过检查并放行）；不可信仓库慎用（会执行其 npm 脚本）；新仓库 0⭐，是作者个人配置合集的子目录。 | MIT | [链接](https://github.com/Abrar118/claude-workflow/tree/c3270ccc8b0c5010957f68f9821354ebe6fda627/mods/push-preflight) |
+| git-sync | — | 提示框上方条带：当前仓库相对 upstream 有多少 commit 待 push/pull；后台每 3 分钟 `git fetch`（从不 pull/push；`GIT_TERMINAL_PROMPT=0`）；回合结束本地重计；有新待 pull 时 toast；可手动 fetch；英/西语随 locale。备注：只跑本机 git；不改写提示、不调模型、不上传会话。0⭐ 宿主仓 sawady-claude-mods。 | MIT | [链接](https://github.com/sawady/sawady-claude-mods/tree/main/plugins/git-sync) |
 | session-report | — | `/report` 把本次会话写成一份可读的 HTML 报告并在浏览器打开（`/report quiet` 只保存）：每轮提示、耗时、模型与估算费用、改动的文件和增删行数、跑过的命令与工具结果（失败/被拒标出）、子代理及其费用、其他 mod 留下的提示；会话结束或 /clear 时默认自动保存一份到 `~/.claude/session-reports`（可在 /plugin 配置里关掉或换目录）。备注：纯本机：prompt.submit 只记下提示前 300 字、原样传递不改写；tool.call、turn.step、agent.spawn、session.append 只观察记录、原样返回；只跑 `git rev-parse` 取分支名、`mkdir -p` 和 `open`/`xdg-open` 打开报告；HTML 内容已转义；费用按 Anthropic 公开价目估算，订阅/Bedrock/Vertex 不准；不联网、不调模型、不注入上下文（hooks/register.tsx）。 | MIT | [链接](https://github.com/ovidb/claude-mods/tree/8af429768924586c901717877194625049a1e6f8/plugins/session-report) |
 | citation-check | — | 回合结束时若 Claude 的回答里有链接，在回答下方显示一行：列出 Claude 本次会话从未打开过（没有经 WebFetch、浏览器工具或 curl/wget 访问）的链接，以及只在搜索结果或抓取页面里出现过的链接；全都打开过或没有链接时不显示。备注：只读，tool.call 只记录工具结果里的 URL 后原样放行，turn.complete 只返回给用户看的一行文字，不进模型、不改回答；无网络、无子进程、不调用模型、不写盘。 | MIT | [链接](https://github.com/robertiuoras/claude-mods/tree/main/citation-check) |
 | wcag-enforcer | — | Claude 用 Write/Edit 或 shell 命令改了 .tsx/.jsx/.html/.vue/.css 文件后，自动跑 eslint-plugin-jsx-a11y、axe-core 和 WCAG 2.2 AA 对比度检查，把每条问题（文件、行号、规则）交给 Claude 修；回合结束时还有未修的问题最多拦两次。备注：通过 $.process 调项目自己的 eslint（默认 `npx eslint`，项目没装时 npx 可能去 npm 下载）和插件自带 scripts/axe-check.mjs（在 jsdom 里加载项目 node_modules 的 axe-core）；会往工具结果追加检查结果 context（本机 lint 输出，同 phpcs 类先例），不改写提示、不联网上传、不调模型；自动检查只覆盖部分 WCAG，不等于合规审计。 | MIT | [链接](https://github.com/WasteOfADrumBum/one-small-mods-pack/tree/main/mods/wcag-enforcer) |
