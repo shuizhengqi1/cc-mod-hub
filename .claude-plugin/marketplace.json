@@ -6243,6 +6243,23 @@
       },
       "homepage": "https://github.com/wasabeef/emu-for-claude-mods/tree/main/plugins/emu",
       "license": "MIT"
+    },
+    {
+      "name": "thread-pulse",
+      "description": "Makes running tool calls visible: live cards for every shell command with output as it runs (Command Watch on 127.0.0.1), a status line for long calls, and a live line in Claude project thread checklists when hearthbot MCP is present. Local only; no network, no model calls, no prompt rewriting.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/max06/claude-mods.git",
+        "path": "plugins/thread-pulse",
+        "sha": "2f5747054ed2c551e3ddf5760834bd2d09388503"
+      },
+      "version": "0.3.0",
+      "author": {
+        "name": "max06",
+        "url": "https://github.com/max06"
+      },
+      "homepage": "https://github.com/max06/claude-mods/tree/main/plugins/thread-pulse",
+      "license": "MIT"
     }
   ]
 }

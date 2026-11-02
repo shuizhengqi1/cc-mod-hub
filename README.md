@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 701 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 702 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 701 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 702 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 701 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 702 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 701 个精选 Claude Code mods，按类别组织：
+以下是本市场的 702 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -426,6 +426,7 @@ For detailed descriptions of all 701 mods, see the Chinese section below. The �
 | spx-chart | ⭐ 2 | 在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。 |  | [链接](https://github.com/zviryatko/claude-spx) |
 | docker-panel | ⭐ 2（所在仓库） | 提示框上方显示 Docker Compose 服务健康、端口、崩溃和配置过期提示，带一键操作（重启、看日志等）。备注：会在本机运行 `docker`/`docker compose`（操作只在你按按钮时执行）；“问 Claude”按钮只用 `$.prompt.fill` 把问题追加到输入框，由你决定是否发送；Claude 改了 compose 文件或 Dockerfile 后只触发刷新。 | MIT | [链接](https://github.com/SKFabric/docker-panel/tree/main/plugins/docker-panel) |
 | shellcast | ⭐ 2 | 把 Claude 运行的每条 Bash 命令画成对话里的实时卡片：标题、命令图标、滚动显示的输出尾部、进度条、用时、超时倒计时和退出码，转入后台的命令钉在提示框上方直到结束；含 shell 调用的工具分组自动展开；可用环境变量 `SHELLCAST_ICONS` 切换 Nerd Font 图标。备注：`tool.call`（Bash、TaskStop）只记录开始和结束，调用原样放行；`session.append` 只读取 `<task-notification>` 来标记后台命令结束，原样放行；为显示实时输出会运行 `id -u`，并用 `tail -c 16384` 读取 Claude Code 自己在临时目录 `claude-<uid>/…/tasks/` 下的命令输出文件（含 `CLAUDE_CODE_TMPDIR`）；只在终端界面生效；不联网。 |  | [链接](https://github.com/jeffarese/shellcast) |
+| thread-pulse | — | 让正在跑的工具调用看得见：每条 shell 命令在本机 Command Watch 页（127.0.0.1）上成卡片，实时滚动输出、超时与退出码，多会话共用一页；超过阈值的长调用进状态栏（`/pulse` 列表），若有 hearthbot 的项目线程清单工具则追加「仍在运行」行；`/command-watch` 显示页面地址。备注：卡片写在 `~/.claude/command-watch/calls/`，页面默认由首个会话用本机 `python3` 起在 127.0.0.1（可关 serveWatch）；只观察 tool.call/session.append 并原样放行；不联网、不调模型、不改写提示。与 shellcast（对话内 Bash 卡片）互补。 | MIT | [链接](https://github.com/max06/claude-mods/tree/main/plugins/thread-pulse) |
 | apk-fraicheur | ⭐ 2（所在仓库） | React Native / Expo / Gradle 项目的 Android APK 新鲜度：APK 是否跟得上代码、构建是否在跑及耗时、失败和内存不足立刻提示、包大小；`/apk` 查看，`/apk copy` 复制到你设定的文件夹；法 / 英双语。备注：tool.call 只识别构建命令并原样执行（register.tsx 196–209）；只跑本机 `git log/rev-parse/status` 和 `pgrep`（98–101、155），复制用 `cp`（223）；不联网。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/apk-fraicheur) |
 | ou-on-en-est | ⭐ 2（所在仓库） | 各仓库进度面板：每个仓库的分支、未提交和未推送的改动、PR 与 CI；可选查看服务器上部署的提交相对 main 的位置和现场改动，以及你的页面是否能访问；`/ou-on-en-est` 打开，可给仓库加备注；法 / 英双语。**备注**：每 10 分钟自动对本地仓库 `git fetch --prune`（register.tsx 69、182）、跑 `gh pr view`（86）；配置了服务器才用 `ssh` 执行只读 git 查询（113），配置了地址才 `curl` 看状态码（137）；不发送会话内容。 | MIT | [链接](https://github.com/DarkSawOktay/claude-mods/tree/main/ou-on-en-est) |
 | CommitNudge | ⭐ 2（所在仓库） | 未提交的改动越积越多时，在状态栏轻提醒、必要时弹一次提示；`/commit-nudge` 看本项目的未提交改动和上次提交。备注：只读 git（`git status --porcelain`、`git diff --shortstat HEAD`、`git log -1`，hooks/register.tsx 28–34、69–73）；钩子先原样执行再刷新（163–182）；仓库里的 install.sh 只是可选的软链脚本，用市场安装不需要；不联网。 | MIT | [链接](https://github.com/Heuwzen/claude-runway/tree/main/commit-nudge) |
