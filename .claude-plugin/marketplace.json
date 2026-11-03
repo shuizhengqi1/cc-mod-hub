@@ -6835,6 +6835,37 @@
         "repo": "ben-rosenthal/open-in-obsidian",
         "sha": "e234c907e5fcc204a1574f4a14a97abcef259a2d"
       }
+    },
+    {
+      "name": "comfy-band",
+      "description": "ComfyUI side panel for Claude Code: running job step/ETA/latent preview, queue, newest result, failures, GPU/CPU/RAM, Workflow pane with node graph, and a comfy_status tool. Talks only to a local ComfyUI URL (default http://127.0.0.1:8188); Ask Claude uses $.prompt.fill (does not send).",
+      "source": {
+        "source": "github",
+        "repo": "coinqueror/comfy-band",
+        "sha": "017b5cb917362c1d5fbd16815cf7abe11cb23ebb"
+      },
+      "homepage": "https://github.com/coinqueror/comfy-band",
+      "license": "MIT",
+      "author": {
+        "name": "Coinqueror",
+        "url": "https://github.com/coinqueror"
+      }
+    },
+    {
+      "name": "git-changes",
+      "description": "VS Code-style Source Control and Run and Debug pane for every folder in the project's .code-workspace (or discovered git repos): staged/unstaged changes, diffs, push/pull/discard with confirm, launch.json/tasks.json/package.json scripts. Local git/process only; tool.call observes then returns unchanged.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/isp3ct/claude-cozy-setup.git",
+        "path": "plugins/git-changes",
+        "sha": "bb7804d1dafffbc83c640a821cf51cb89f1139b1"
+      },
+      "homepage": "https://github.com/isp3ct/claude-cozy-setup/tree/main/plugins/git-changes",
+      "license": "MIT",
+      "author": {
+        "name": "isp3ct",
+        "url": "https://github.com/isp3ct"
+      }
     }
   ]
 }
