@@ -6690,6 +6690,37 @@
         "name": "darjss",
         "url": "https://github.com/darjss"
       }
+    },
+    {
+      "name": "agent-undo",
+      "description": "Lists Edit/Write (and in a git repo, Bash/MCP file changes Claude ran without asking) hunk-by-hunk; /agent-undo undoes one hunk or a whole edit while your later edits stay. Local git snapshots only; tool.check observes next() verdicts and never returns allow itself; no prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/agent-undo",
+        "sha": "8cf2d419d3255c2ba8329da0d43c8da4a2a7ded6"
+      },
+      "homepage": "https://github.com/nightlab-agent/agent-undo",
+      "license": "MIT",
+      "author": {
+        "name": "Nightlab",
+        "url": "https://github.com/nightlab-agent"
+      }
+    },
+    {
+      "name": "system-monitor",
+      "description": "Short live CPU, RAM and GPU bars above the prompt (Linux /proc + optional nvidia-smi); /sysmon opens a detail pane with load-tinted backdrop. Local sampling every 2s via $.process.run; no prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Guhan-SenSam/claude-mods.git",
+        "path": "plugins/system-monitor",
+        "sha": "438c97c9d2287495368985030b09bae2d87551e8"
+      },
+      "homepage": "https://github.com/Guhan-SenSam/claude-mods/tree/main/plugins/system-monitor",
+      "license": "MIT",
+      "author": {
+        "name": "Guhan Sensam",
+        "url": "https://github.com/Guhan-SenSam"
+      }
     }
   ]
 }
