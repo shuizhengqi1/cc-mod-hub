@@ -6705,6 +6705,21 @@
         "name": "Nightlab",
         "url": "https://github.com/nightlab-agent"
       }
+    },
+    {
+      "name": "prompt-image-preview",
+      "description": "Previews pasted images as thumbnails above the Claude Code prompt (kitty graphics on Ghostty/kitty/WezTerm/Orca); click a thumb to open the full image, click ✕ to remove that [Image #N] from the prompt via prompt.fill (user click only). prompt.submit only clears the row after next(e). macOS-only (osascript/sips/open); cache under ~/Library/Caches/claude-prompt-image-preview/<session>/, deleted on session.end. No prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "github",
+        "repo": "igarbayo/prompt-image-preview",
+        "sha": "3b139c2957d4922246f0e247ffb873ef6921907b"
+      },
+      "homepage": "https://github.com/igarbayo/prompt-image-preview",
+      "license": "MIT",
+      "author": {
+        "name": "Ignacio Garbayo",
+        "url": "https://github.com/igarbayo"
+      }
     }
   ]
 }
