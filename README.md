@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 745 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 747 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 745 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 747 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 745 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 747 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 745 个精选 Claude Code mods，按类别组织：
+以下是本市场的 747 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -141,6 +141,7 @@ For detailed descriptions of all 745 mods, see the Chinese section below. The �
 | ysk-throttle | — | 给开了 Claude Code 内置「You should know」旁观代理的人省钱：它每 6 次模型调用就把整段对话连同约 1.1 万 token 不缓存的提示用主模型重发一次检查；这个 mod 只在主对话累计 24 次工具调用（minToolCalls 可调）后放行一次例行检查，提示缓存可能已过期（间隔超过 staleMinutes，默认 55 分钟）时跳过，其余直接回「没什么可说」；你点开笔记触发的 explain 请求总是放行。作者实测一周检查次数 2385→679。备注：通过 model.fork 钩子拦截该内置插件的检查（只回空结果、不改写提示），tool.call/turn.step 只计数原样放行；按检查提示首句识别，插件改了措辞时放行并在会话里提示一次；不联网、不额外调模型；单提交新仓库。 | MIT | [链接](https://github.com/declanbx/you-should-know-throttle) |
 | reflect | — | `/reflect` 打开窗格，用图表回顾你最近 7/30/90 天或全部时间怎么用 Claude Code：提示数、会话数、输出 token、忙碌时长、连续天数、缓存命中率、子代理占比，按项目、模型、推理强度、工具、技能和 MCP 拆分，以及按星期×小时的提示分布；数据全在本机从 `~/.claude/projects/**/*.jsonl` 和 `~/.claude/history.jsonl` 统计，汇总存在 `~/.claude/tacos/reflect/`，所以超过 30 天被清理的记录数字也会保留；终端里只显示文字汇总，图表需桌面版 Code 标签页。备注：需本机 Node 22+（mod 用 $.process.run 跑插件自带的 indexer/cli.mjs）；只挂 session.start/command.run/ui.render，不碰工具调用和提示；只有你在 Tips 页按「Write suggestions」才用 $.model.complete 调一次 Haiku，发送的只是统计数字，项目名换成 project-1 等占位、不含会话标题和提示正文（hooks/tips.mjs、register.tsx 97–116）；Work 页可选用 sqlite3 只读打开 claude-mem 数据库；不联网。 | MIT | [链接](https://github.com/tacodx/TacosPlugins/tree/main/plugins/reflect) |
 | send-after-reset | — | 额度快用尽时在提示框上方出现「Send after reset」按钮：把当前输入框里的提示排队，等 5 小时/7 天限额重置后再自动发出（可设阈值默认 90%、重置后宽限秒数）；队列存在本机 store，重启后还在；可「现在发送」或移除。备注：仅桌面 Code 页；`$.prompt.submit` **只**在定时器到期（或你点 Send now）时发出你事先排好的原文，不改写、不调模型、不联网；应用关闭时不会代发。 | MIT | [链接](https://github.com/michalstocki/send-after-reset) |
+| usage-prediction | — | 提示框上方预测「提交当前输入」会花多少 token / 占 5 小时额度多少：根据本会话已学到的输入放大比、输出均值与近期倍率给出区间；回合中显示本回合实时消耗。韩/英界面（`/config` 或 language 选项）。备注：`prompt.submit`/`prompt.change`/`prompt.edit` 只观察后 `next(e)`，不改写提示；只读 `$.session.usage()`；统计存在本机 `$.store`；不调模型、不联网。 | MIT | [链接](https://github.com/cow-coding/claude-usage-prediction-mod) |
 
 ### 上下文管理 Context Management
 
@@ -270,6 +271,7 @@ For detailed descriptions of all 745 mods, see the Chinese section below. The �
 | paste-inline | — | 让粘贴和语音输入的文字在提示框里保持可编辑：Claude Code 会把多行或长粘贴折成 `[Pasted text #N +X lines]` 标签，没法检查或改；这个 mod 发现新标签且剪贴板里文字的行数与标签相符时，把标签换回原文（前后已打的字保留），适合 Wispr Flow、Typeless 等经剪贴板输入的听写和片段工具；`maxLines` 可让超长粘贴保持折叠，`/paste-inline on\|off` 开关。备注：每 250 毫秒读一次提示框草稿，出现新标签才运行本机剪贴板命令（pbpaste / wl-paste / xclip / xsel / powershell.exe，或你在 `clipboardCommand` 里设的命令）读剪贴板（hooks/register.ts 14–31、47–70）；只用 prompt.fill 改草稿、不自动发送，不用 prompt.submit；行数不符就不动、不重试；SSH 下通常没有剪贴板，标签保持原样；不联网。 | MIT | [链接](https://github.com/rafal-one/paste-inline) |
 | prompt-image-preview | — | 粘贴图片后，Claude Code 提示框里只显示 `[Image #N]`；本 mod 在提示框上方画出缩略图（需 kitty 图形协议：Ghostty / kitty / WezTerm，或 Orca + `CLAUDE_CODE_FORCE_TERMINAL_IMAGES=1`），点缩略图用 Preview 打开原图，点右上角 ✕ 从提示里去掉该图；发送后缩略图行清空。备注：**仅 macOS**（`osascript` / `sips` / `open`）；缩略图缓存在 `~/Library/Caches/claude-prompt-image-preview/<会话>/`，会话结束删除；拖入的文件图不在剪贴板会显示未捕获；`prompt.submit` 只在 `next(e)` 之后清空缩略图状态，不改写提示；点 ✕ 才用 `$.prompt.fill` 去掉对应 `[Image #N]`（用户点击）；无 model.complete、无 $.http、无 asUser；需 Claude Code 2.1.300+（`prompt.edit`）。与 image-diet（缩放工具结果图）、inline-images / image-view（展示回复里的图）不同，本条专注粘贴进提示前的预览与剔除。 | MIT | [链接](https://github.com/igarbayo/prompt-image-preview) |
 | prompt-toc | — | 侧边窗格里的会话目录：列出你发过的每条提示，以及每个回复里的 #–### 标题，点一行就滚到对话里那个位置；可切换「全部 / 只看提示」，显示每条提示的时间和它占本会话 token 费用的比例，支持搜索过滤（`/prompt-toc 关键词`），`/prompt-toc-export` 导出成 Markdown。备注：需要 python3，用插件自带的 scripts/scan.py 读取本机会话记录重建目录（hooks/register.tsx 275–276）；导出只写到工作目录内且不覆盖已有文件（355–377）；会注册一个模型可调用的 `mcp__prompt-toc__pane` 工具，只用来开关窗格（410、457–462）；不联网。与 where-were-we、prompt-marks、transcript-bookmarks 有部分重叠，但只有它提供带回复标题、可点击跳转的目录窗格。 | MIT | [链接](https://github.com/weskao/weskao-agent-plugins/tree/main/plugins/prompt-toc) |
+| session-address | — | Claude **桌面版**提示框模式行旁「⧉ Copy session」按钮：一键复制本会话 `local_…` 地址行，方便另一会话用 SendMessage 直达；`/session-address` 在剪贴板不可用时打印同一行。备注：仅桌面会话显示按钮（读 `CLAUDE_CODE_HOST_SESSION_ID`）；复制走 `$.ui.copy`，失败时 macOS 回退 `/usr/bin/pbcopy`；不调模型、不联网、不改写提示。 | MIT | [链接](https://github.com/ashnurkoff/claude-session-address) |
 | session-outline | — | 侧边会话目录：每条提示、回复里的标题、改过的文件、单回合 diff、问题标记（测试失败/工具报错/打断）；点击跳到对话对应位置；可看本项目历史会话；紧凑模式隐藏工具调用行；`/outline`。备注：会话开始时宽终端会自动打开窗格；`prompt.submit` 只观察后原样 next；「再问一次」需连按 a 两次确认后才 `$.prompt.submit asUser`（人手触发）；不调模型、不联网、不改写提示。与 prompt-toc 部分重叠（目录+标题跳转），但多了改动文件/diff/问题标记/历史会话/紧凑模式。 | MIT | [链接](https://github.com/gynsus/session-outline) |
 | statusline-footer | — | 把你 `statusLine` 设置里的状态行脚本输出画到模式指示行（如「⏵⏵ auto mode on · …」）同一行的右侧，而不是单独占一行，省出一行终端高度，适合手机或分屏；脚本不用改（喂给它同样的 JSON），装好后要从 settings.json 删掉原 `statusLine` 条目，否则会画两次；可在 /config 设脚本路径和指示列宽。备注：每 30 秒及回合开始/结束、每次工具调用后用本机 `bash` 运行你自己的状态行脚本（5 秒超时，只取第一行）；渲染 PromptHint 时有输出就不调 next，可能盖住其他 mod 的提示行；不联网。 | MIT | [链接](https://github.com/erikus/statusline-footer) |
 | link-footer | — | 在终端里每条 Claude 回复下方，把回复中的每个 URL 再列一行 OSC 8 可点超链接：标签去掉协议、过长时省略路径中段、保证不折行，点击打开完整地址，解决长链接折行后点开是半截的问题。备注：只改终端显示（ui.render AssistantMessage，先画原回复再追加），Claude 看到的内容不变，零 token、不联网；需终端支持 OSC 8（Windows Terminal 为 Ctrl+点击）。与已有 url-links（只处理工具输出里的链接）互补。 | MIT | [链接](https://github.com/javirub/claude-mods/tree/main/plugins/link-footer) |
