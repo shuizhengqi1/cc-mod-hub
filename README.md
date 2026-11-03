@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 742 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 743 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 742 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 743 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 742 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 743 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 742 个精选 Claude Code mods，按类别组织：
+以下是本市场的 743 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -785,6 +785,7 @@ For detailed descriptions of all 742 mods, see the Chinese section below. The �
 | usage-reporter | — | 把计划限额与 credits 写到本机 ~/.claude/usage-reporter/usage.json 供其他工具读取。备注：本机写本地文件；用用户 OAuth 读官方用量 API，不带会话正文。 | MIT | [链接](https://github.com/tksunw/usage-reporter) |
 | quickswitch | — | 提示框下方点击切换 Claude 账号。本地进程运行用户自己的 ccswitch，仅在点击时切换。**账号列表显示时 PromptHint 不调用 next，可能覆盖其他提示行**。 | MIT | [链接](https://github.com/Rocha101/claude-code-quickswitch) |
 | open-latest | — | 每轮结束把 Claude 的最终回答覆盖写到 `%USERPROFILE%\.claude\latest.md`（子代理、被中断和空回答不写），提示框上方出现「エディタで開く」（用编辑器打开）按钮，点一下用 .md 关联的程序打开，长回答可以在熟悉的编辑器里看（日语界面）。备注：仅支持 Windows（用 rundll32 打开文件，路径写死 USERPROFILE，macOS/Linux 别装）；每轮都会覆盖这个文件；AbovePrompt 调 next，可与其他 mod 叠加；不改提示，不联网。 |  | [链接](https://github.com/stakiran/open-latest) |
+| scratchpad-finder | — | Claude 把文件写进系统临时目录下的本会话 scratchpad 时弹出 toast，并可把完整路径复制到剪贴板；`/scratchpad`（及 list/open/reveal/copy）打开侧窗列出文件，一键用默认应用打开、在 Finder/资源管理器/文件管理器中显示或复制路径。备注：只观察 Write/Edit 的 tool.call，原样放行；用只读 `$.prompt.compose()` 定位 scratchpad 路径，**不**注册 `on('prompt.compose')` 注入；本机 `open`/`open -R`、`explorer.exe`、`xdg-open` 与剪贴板；无提示改写、无 model.complete、无 $.http、无 asUser；云会话里 Open/Reveal 打不开本机，列表与复制路径仍可用。 | MIT | [链接](https://github.com/nazareneism/scratchpad-finder) |
 | ram-guard | — | 状态栏显示本机可用内存与正在跑的 Gradle/模拟器/Maven/Metro 进程数，每 15 秒刷新，内存低于 6 GiB 时弹提示；可用内存不足 6 GiB 或有 Gradle 守护进程/模拟器在跑时拒绝启动子代理（Agent/Workflow），不足 4 GiB 时拒绝 gradlew/mvn/emulator 等重型构建命令。备注：**仅 Linux**（读 /proc/meminfo，其他系统上读不到，子代理与 Bash 调用可能直接报错，macOS/Windows 请勿安装）；本机运行 ps 只统计进程；工具门只拒绝不改写；不联网。 |  | [链接](https://github.com/jimisola/claude-plugins/tree/main/plugins/ram-guard) |
 | clean-copy | — | **推荐** 终端里选中文本自动复制时，把复制内容清理干净：去掉左侧的引用竖线/面板边框和回复前的 ⏺ 标记，统一去掉缩进，把因终端宽度折断的句子重新接成一行（代码块、列表、标题、表格保持原样）。备注：每 250 毫秒检查一次当前选区，选区稳定且确实需要清理时，用本机 `wl-paste`、`xclip` 或 `pbpaste` 读一次剪贴板确认是 Claude Code 刚复制的内容，再写回清理后的文本；只处理剪贴板，不联网。 | MIT | [链接](https://github.com/kbrianps/claude-clean-copy/tree/main/plugins/clean-copy) |
 | cc-mod-caffeinate | — | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |

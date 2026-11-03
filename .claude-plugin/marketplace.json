@@ -6720,6 +6720,21 @@
         "name": "Ignacio Garbayo",
         "url": "https://github.com/igarbayo"
       }
+    },
+    {
+      "name": "scratchpad-finder",
+      "description": "Toast + /scratchpad command + side pane for files Claude writes into the per-session scratchpad under the system temp dir: list newest-first, open in default app, reveal in Finder/Explorer/file manager, copy full path; optional autoCopy path on save. Observes tool.call only (Write/Edit into scratchpad). Uses $.prompt.compose() read-only to locate the scratchpad path — does NOT register on('prompt.compose') inject. No prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "github",
+        "repo": "nazareneism/scratchpad-finder",
+        "sha": "28d6c9478830cb1ec55959c0f61c4918a80cc8cb"
+      },
+      "homepage": "https://github.com/nazareneism/scratchpad-finder",
+      "license": "MIT",
+      "author": {
+        "name": "Naz",
+        "url": "https://github.com/nazareneism"
+      }
     }
   ]
 }
