@@ -6765,6 +6765,38 @@
         "name": "dshw1234-dot",
         "url": "https://github.com/dshw1234-dot"
       }
+    },
+    {
+      "name": "live-compact",
+      "description": "Background-prepares the compaction summary via $.model.fork so /compact and auto-compact finish faster; skips Claude's own precompute; falls back to standard compaction if the fork is not ready. Local only; no prompt rewrite, no $.http, no asUser.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SocialBuzzStudio/live-compact.git",
+        "path": "mod",
+        "sha": "12ca7f65cd1be92592510ca547b60af6883dfaca"
+      },
+      "homepage": "https://github.com/SocialBuzzStudio/live-compact",
+      "license": "MIT",
+      "author": {
+        "name": "SocialBuzzStudio",
+        "url": "https://github.com/SocialBuzzStudio"
+      }
+    },
+    {
+      "name": "session-dash",
+      "description": "Ukrainian session activity telemetry pane (/dash): prompts, tools, agents, skills, compact events and stats tabs; record-only prompt.submit/tool.call (next after observe). Local only; no prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/RenJeka/claude.git",
+        "path": "plugins/session-dash",
+        "sha": "ba4f94573ff87f80b3320c31f1fa5d184c947174"
+      },
+      "homepage": "https://github.com/RenJeka/claude/tree/main/plugins/session-dash",
+      "license": "MIT",
+      "author": {
+        "name": "RenJeka",
+        "url": "https://github.com/RenJeka"
+      }
     }
   ]
 }

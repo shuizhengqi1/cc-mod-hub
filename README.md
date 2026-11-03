@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 745 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 747 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 745 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 747 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 745 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 747 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 745 个精选 Claude Code mods，按类别组织：
+以下是本市场的 747 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -176,6 +176,7 @@ For detailed descriptions of all 745 mods, see the Chinese section below. The �
 | telltale | —（所在仓库） | /telltale 窗格观察 skills/MCP 放进上下文的东西：调用表（工具/服务器/耗时/token/下一步）、Inventory 计量各 MCP/技能/记忆占窗口份额、状态行与提示框上方运行中 MCP 条带、本机脱敏日志（默认 .claude/telltale）。备注：所有钩子先 next 再记录，只观察不改写不阻断；可写本机日志；不联网、不调模型；与 context-pane/skill-map 互补（更深调用明细）；0⭐ 宿主仓 j0hanz-marketplace。 | MIT | [链接](https://github.com/j0hanz/j0hanz-marketplace/tree/main/plugins/telltale) |
 | session-autocompact | — | 只对当前会话开启自动压缩：`/session-autocompact on|70%|400k` 设阈值，回合结束时上下文超过阈值就调用内置压缩，`off` 关闭。备注：默认关闭，按会话 id 记住设置；只调用内置 $.session.compact，不改写压缩内容；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Butanium/claude-code-patches/tree/master/mods/session-autocompact) |
 | idle-micro-compact | — | 空闲会话在 1 小时提示缓存过期前，先掩码旧工具结果并丢掉 thinking（不调模型）；仍然太大时再跑 `/compact` 做摘要。可配置 idleMinutes 与 minTokens。与 idle-compact、micro-compaction 互补，不替代它们。备注：只用 session.compact 与 command.run，无 $.http、无 $.model.complete、不改写提示。 | MIT | [链接](https://github.com/kylesnowschwartz/idle-micro-compact) |
+| live-compact | — | 在后台用 `$.model.fork` 预先准备压缩摘要，这样 `/compact` 或自动压缩触发时直接用现成摘要、更快结束；会跳过 Claude 自带的 precompute；摘要未就绪则回退标准压缩。备注：每次准备会消耗当前会话模型的一次 fork（无工具）token；不改写用户提示；不联网、无 asUser；与 session-autocompact（阈值触发内置压缩）、idle-compact、visible-compact、compaction-viewer 互补——本 mod 管的是「压缩前后台预摘要」。 | MIT | [链接](https://github.com/SocialBuzzStudio/live-compact/tree/main/mod) |
 | defer-tools | — | 把六个不常用的内置工具（Workflow、ScheduleWakeup、ListAgents、CronCreate/CronDelete/CronList）改成延迟加载，放到 ToolSearch 后面：平时只占名字，Claude 第一次调用时才把完整 schema 载入上下文（作者实测 /context 的 System tools 从 13.4k 降到 3.1k token）。备注：只挂 tool.describe 返回 isDeferred: true，工具仍可用；permissions.deny 里的工具照样被移除；在会话第一条请求时生效，可用 /context 查看；要改名单需编辑 hooks/register.ts 的 DEFERRED_TOOLS；不联网、不改写提示或工具调用。 | MIT | [链接](https://github.com/pt-hieu/defer-tools/tree/main/plugins/defer-tools) |
 | output-trimmer | — | terraform/tofu init/plan/apply/destroy、checkov/trivy/tfsec/prowler 扫描、npm/pnpm/yarn/bun/pip/uv/poetry 安装、docker build/pull/compose 等嘈杂命令输出超过 120 行时，交给 Claude 的结果只留前 15 行、中间最多 30 行错误/警告和后 40 行，并注明完整输出文件的路径，省上下文。备注：会改写这些命令的工具结果（命令本身不改）；裁剪前先把完整 stdout/stderr 写到 $TEMP/$TMPDIR（或 /tmp）下的 claude-output/，写入失败就原样返回；文件留给系统清理；不联网。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/output-trimmer) |
 | context-rings | — | 提示框上方一排圆环，每个圆环对应本机最近一小时内活跃的一个 Claude Code 会话，按上下文窗口占用填充（默认 1M 窗口，50%/80% 变黄/变红，可在 /config 调）；最近活跃的排前面，最多 10 个、其余折成 +N，悬停看会话名、目录、token 数和工作中/空闲/已关闭；点开头的 All 只看当前目录的会话。子代理超过 500K 的 75% 时显示成小圆点，到 90% 弹一次提醒；会话的 1 小时或 5 分钟提示缓存快过期时圆环闪烁，提醒你先回复或 /compact。备注：仅 macOS（用 BSD `stat -f`，Linux 上 stat 报错、读不到会话记录，圆环不显示占用）；每 5 秒用固定只读命令（ps、find、stat、tail）读 `~/.claude/sessions/*.json` 和最近改过的会话记录末尾 1 MB（hooks/register.tsx 63–129）；$.store 只存会话名和已提醒过的子代理；钩子都原样放行；AbovePrompt 不调 next，会替换同位置别的 mod 的行；不联网、不调模型、不改提示。 | MIT | [链接](https://github.com/nvsravank/context-rings) |
@@ -453,6 +454,7 @@ For detailed descriptions of all 745 mods, see the Chinese section below. The �
 | aichemist-pr-review-pane | ⭐ 1（所在仓库） | 只读面板显示当前 PR 的 Copilot 审查状态、CI 与未解决评论线程。备注：用本机已登录的 gh 读 GitHub PR 数据（不发送会话内容）；「Run review loop」按钮只在你点时以你的身份发一句固定提示，需配合 AIchemist 的 pr-review-loop skill。 | MIT | [链接](https://github.com/Anras573/AIchemist/tree/main/mods/pr-review-pane) |
 | repo-ledger | ⭐ 1（所在仓库） | 提示框上方一行列出本会话动过、还没收尾的 git 仓库（繁体中文界面）：每个仓库显示「名称(分支)」和未 commit 文件数（含未跟踪文件），干净的打勾，↑N 是未 push 的 commit 数，⎇N 是另开的 worktree 数，末尾「本輪 N 檔」是本轮 Edit/Write 改过的仓库内文件数（超过 5 个变橙色）；没有未 commit 文件、本轮也没改文件时整行不显示。备注：只跟踪 Edit/Write/NotebookEdit 改到的文件所在仓库，以及 Bash 命令里 cd/pushd/git -C 后面的字面路径；每轮结束和跑过 git 命令后，在这些仓库里自动执行本机只读 git（rev-parse、status、worktree list），status 带 -c core.fsmonitor=false，但仓库自己 .git/config 里的其他设置（如 filter）仍可能被执行，只在信任的仓库里用；tool.call 只观察、原样传递；AbovePrompt 调 next，可与其他 mod 叠加；图标需要 Nerd Font；不改提示，不联网。 | MIT | [链接](https://github.com/mangow314/mango-mods/tree/master/repo-ledger) |
 | session-dashboard | ⭐ 1（所在仓库） | `/dashboard` 打开或关闭会话总览面板：需要处理的事项（PR 的 CI 失败、未解决的审查讨论、未完成的验收条件），ship-session/acceptance-progress 的进度（装了才显示），当前分支 PR 的状态、检查计数、审查结论和请你审查的 PR 数，以及本会话启动后新出现的监听端口和 Docker 容器（回合结束时若还在运行会提示一次）；还会拦下 `pkill -f`、`killall`、`docker stop $(docker ps -q)` 这类会误杀其他会话进程的一次性全停命令。备注：界面为日语或英语（跟随 settings 的 language 或你输入的文字）；用本机已登录的 `gh`（`gh pr view`、`gh api graphql`、`gh api search/issues`，只读）；每 30 秒运行 `lsof -iTCP -sTCP:LISTEN` 和 `docker ps`；拦截只拒绝不改写命令；`prompt.submit` 只用来判断界面语言、原样放行；面板开着时下次会话自动重开；不联网（除 gh 外）。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/session-dashboard) |
+| session-dash | —（所在仓库） | `/dash` 打开会话活动遥测窗格（乌克兰语界面）：提示、工具、子代理、技能、压缩事件与统计各页签。备注：`prompt.submit`/`tool.call`/`agent.spawn`/`session.compact` 只记录后原样 next；不改写提示、不调模型、不联网、无 asUser。与 session-dashboard（`/dashboard`，PR/CI/端口总览）不同——本 mod 是本会话事件与用量遥测；斜杠为 `/dash`，不与 `/dashboard`、`/cc-dash` 冲突。 | MIT | [链接](https://github.com/RenJeka/claude/tree/main/plugins/session-dash) |
 | yomiyasu-gate | ⭐ 1（所在仓库） | Bash 执行 `gh pr`/`gh issue` 的 create、edit、comment 和 `git commit` 之前，把其中的日文正文（`--body`、`-b`、`--body-file`、`-F`、`-m` 等）交给 yomiyasu 文风检查器；得分低于 80 或命中必拒规则（默认表情符号、行尾冒号）时拒绝这条命令并列出问题行，让 Claude 改写后重试；同类命令连续拒绝 2 次后第 3 次放行并提示。备注：检查器 `yomiyasu_lint.py` 不在本插件里，需另装 nanaism/yomiyasu 插件（本市场未审查它），没装时全部放行；用 `python3` 运行该检查器；只检查含假名/汉字的正文，英文不查；会读取 `--body-file` 指定的文件；只拒绝不改写命令，出错时放行；`prompt.submit` 只用来判断提示语言、原样放行；不联网。 | MIT | [链接](https://github.com/insession-space/claude-ship/tree/main/plugins/yomiyasu-gate) |
 | bash-history | ⭐ 1（所在仓库） | `/bash-history` 列出 Claude 最近跑过的 shell 命令及退出码、耗时。备注：tool.call 先原样执行 Bash 再记录（hooks/register.ts 43–51）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/bash-history) |
 | codeowners-hint | ⭐ 1（所在仓库） | Claude 改文件时显示该文件在 CODEOWNERS 里的负责人，`/owners` 查看。备注：只读 CODEOWNERS（hooks/register.ts 17–31）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/codeowners-hint) |
