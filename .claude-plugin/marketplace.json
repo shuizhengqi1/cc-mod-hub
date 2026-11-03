@@ -6675,6 +6675,21 @@
         "name": "Yehor Hrabovskyi",
         "url": "https://github.com/egoushka"
       }
+    },
+    {
+      "name": "cc-codemod",
+      "description": "Adds one tool (mcp__cc-codemod__run) that runs a JavaScript subset calling Claude's own tools via $.tool.call, returning only the script result so raw nested outputs stay out of context. Optional one-line hints after large/chained direct reads. Nested calls keep normal permissions. No prompt.submit/compose rewrite, no $.model.complete, no $.http, no asUser submit. tool.check only records read-only verdicts then returns next().",
+      "source": {
+        "source": "github",
+        "repo": "darjss/claude-code-codemode",
+        "sha": "1dba7083c7ee942c48d1696ca7dc0751c7bfca64"
+      },
+      "homepage": "https://github.com/darjss/claude-code-codemode",
+      "license": "MIT",
+      "author": {
+        "name": "darjss",
+        "url": "https://github.com/darjss"
+      }
     }
   ]
 }
