@@ -6835,6 +6835,37 @@
         "repo": "ben-rosenthal/open-in-obsidian",
         "sha": "e234c907e5fcc204a1574f4a14a97abcef259a2d"
       }
+    },
+    {
+      "name": "recognitio-mod",
+      "description": "Gates reviewer agent.spawn on a verified review-packet manifest (RECOGNITIO_PACKET_DIR/manifest.json verified:true). Deny-only with fail-closed .catch; no prompt rewrite, no $.http, no model.complete, no asUser. Pair with the full recognitio plugin or use alone—never both.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/david-engelmann/recognitio.git",
+        "path": "plugins/recognitio-mod",
+        "sha": "357ba2d43d74f295c8e1953fe3dadd3406c2eb63"
+      },
+      "homepage": "https://github.com/david-engelmann/recognitio/tree/main/plugins/recognitio-mod",
+      "license": "MIT",
+      "author": {
+        "name": "David Engelmann",
+        "url": "https://github.com/david-engelmann"
+      }
+    },
+    {
+      "name": "blender-band",
+      "description": "Blender side panel for headless jobs: frame/sample progress, Pause/Resume/Stop/Log, GPU/CPU/RAM/disk meters, live render/sequence/video preview, blender_status tool. Optional Bash deny if wrappers are set. Ask Claude uses prompt.fill unsent. Local process reads only.",
+      "source": {
+        "source": "github",
+        "repo": "coinqueror/blender-band",
+        "sha": "585955cc073f8745beb76f5e55ef05b143ecaf9b"
+      },
+      "homepage": "https://github.com/coinqueror/blender-band",
+      "license": "MIT",
+      "author": {
+        "name": "Coinqueror",
+        "url": "https://github.com/Coinqueror"
+      }
     }
   ]
 }
