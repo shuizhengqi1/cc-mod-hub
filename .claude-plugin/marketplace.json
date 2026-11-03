@@ -6850,6 +6850,22 @@
         "name": "Coinqueror",
         "url": "https://github.com/coinqueror"
       }
+    },
+    {
+      "name": "thinking-pane",
+      "description": "Side pane showing Claude's thinking as it streams, with a page per subagent; /thinking toggles. Observation-only (turn.step/agent.spawn/ui.render); does not rewrite prompts or call models.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sallvainian/claude-code-mods.git",
+        "path": "plugins/thinking-pane",
+        "sha": "5f29d5c8d5f3b572788e83aa441ce2ebee57bd75"
+      },
+      "homepage": "https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane",
+      "license": "MIT",
+      "author": {
+        "name": "Sallvainian",
+        "url": "https://github.com/Sallvainian"
+      }
     }
   ]
 }
