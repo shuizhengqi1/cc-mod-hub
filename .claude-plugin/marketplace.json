@@ -6826,6 +6826,22 @@
         "name": "Muninn",
         "url": "https://github.com/oaustegard"
       }
+    },
+    {
+      "name": "display-redaction",
+      "description": "Masks email addresses and secret-shaped text (sk-/ghp_/JWT/PEM/etc.) where Claude Code draws them, for recordings and screen shares. Screen-only: transcript, model context, and disk files stay unmasked. No prompt rewrite, no $.http, no model.complete, no asUser.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/melodic-software/claude-code-plugins.git",
+        "path": "plugins/display-redaction",
+        "sha": "f534b3814076e16ba444d0f393a55740bcae0478"
+      },
+      "homepage": "https://github.com/melodic-software/claude-code-plugins/tree/main/plugins/display-redaction",
+      "license": "MIT",
+      "author": {
+        "name": "Melodic Software",
+        "url": "https://github.com/melodic-software"
+      }
     }
   ]
 }

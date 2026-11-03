@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 749 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 750 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 749 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 750 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 749 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 750 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 749 个精选 Claude Code mods，按类别组织：
+以下是本市场的 750 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -319,6 +319,7 @@ For detailed descriptions of all 749 mods, see the Chinese section below. The �
 | collision-guard | ⭐ 32（所在仓库） | 另一会话刚改过同一文件时先询问再编辑。备注：可 deny 编辑并询问用户。 |  | [链接](https://github.com/nateherkai/claude-code-mods/tree/main/collision-guard) |
 | no-email | ⭐ 30 | 从会话上下文里去掉 Claude Code 自动附加的 userEmail 块（来自 ~/.claude.json 的 oauth 邮箱），减轻模型把邮箱写进请求头等副作用。备注：只过滤 prompt.context 的 blocks（去掉 name=userEmail），不改写提示正文、不联网、不调模型；Team/Enterprise 托管策略可能跳过本 mod 的 hooks（见仓库 #1）。 | MIT | [链接](https://github.com/AlexErrant/claude-code-no-email/tree/main/.claude/skills/no-email) |
 | secrets-guard | ⭐ 29（所在仓库） | 拒绝 Edit/Write/NotebookEdit/Bash 写入密钥文件（.env、密钥、~/.ssh、~/.aws/credentials 等）或内容呈凭据形态的调用，并拒绝 cat/head .env 与 id_rsa。备注：只拒绝不改写，不联网。 | MIT | [链接](https://github.com/BioInfo/slopless/tree/main/mods/secrets-guard) |
+| display-redaction | ⭐ 28（所在仓库） | 屏幕分享/录屏时遮盖界面上画出的邮箱与密钥形态文本（sk-/ghp_/JWT/PEM 等）；只改渲染，不改 transcript、模型上下文或磁盘文件。备注：不是隐私/DLP；与 secrets-veil（工具结果遮盖密钥）互补；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/melodic-software/claude-code-plugins/tree/main/plugins/display-redaction) |
 | subagent-fence | ⭐ 24（所在仓库） | 拒绝 force-push、推送受保护分支、`--no-verify` 和按进程名杀进程；可选封禁指定路径、禁止子代理改共享检出、禁止子代理整文件读大文件。备注：只对 `tool.call` 做拒绝（deny），不改写命令；检查出错时放行。 | MIT | [链接](https://github.com/erikdarlingdata/claude-plugins/tree/main/plugins/subagent-fence) |
 | storage-guard | ⭐ 11（所在仓库） | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
 | guards | ⭐ 8（所在仓库） | 会丢弃本会话没碰过的改动的 git 命令（reset --hard、checkout --force、clean 等）和会开始 vast.ai 计费的命令先暂停等你确认；拒绝在 .py/.ipynb 里写全局随机种子。备注：只 deny/暂停确认，不改写命令；本机运行 git status。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/guards) |
