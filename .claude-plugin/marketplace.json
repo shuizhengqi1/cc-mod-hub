@@ -6735,6 +6735,36 @@
         "name": "Naz",
         "url": "https://github.com/nazareneism"
       }
+    },
+    {
+      "name": "session-outline",
+      "description": "Session outline side pane: every prompt, answer headings, changed files, per-turn diffs, problem markers (tests failed / tool errors / aborted); click to jump in the chat; past sessions of this project; compact chat mode. /outline. EN/RU. Local only; prompt.submit observes then next; reask (hotkey a twice) uses $.prompt.submit asUser only on your confirmed button press; no model.complete, no $.http, no prompt rewrite.",
+      "source": {
+        "source": "github",
+        "repo": "gynsus/session-outline",
+        "sha": "8bd7a3dccf7b6c28ef55ec903c987b2ff1cff02c"
+      },
+      "homepage": "https://github.com/gynsus/session-outline",
+      "license": "MIT",
+      "author": {
+        "name": "gynsus",
+        "url": "https://github.com/gynsus"
+      }
+    },
+    {
+      "name": "rc-panel",
+      "description": "Side panel listing every Claude desktop session on this machine with Remote Control on; turn RC off one-by-one or all; RC count button under the prompt; /rc-panel. Uses desktop session MCP tools only; quiet refresh only when already allowed; open-session via rundll32 is Windows-oriented. No model.complete, no $.http, no prompt rewrite. Complements remote-control-toggle (current session on/off).",
+      "source": {
+        "source": "github",
+        "repo": "dshw1234-dot/rc-panel",
+        "sha": "cf82d7b30302c383192ce328f9e408a253ee4a63"
+      },
+      "homepage": "https://github.com/dshw1234-dot/rc-panel",
+      "license": "MIT",
+      "author": {
+        "name": "dshw1234-dot",
+        "url": "https://github.com/dshw1234-dot"
+      }
     }
   ]
 }
