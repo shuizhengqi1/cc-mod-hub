@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 745 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 746 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 745 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 746 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 745 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 746 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 745 个精选 Claude Code mods，按类别组织：
+以下是本市场的 746 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -295,6 +295,7 @@ For detailed descriptions of all 745 mods, see the Chinese section below. The �
 | speech-insert | — | 提示框上方麦克风：录音后用任意 OpenAI 兼容语音转写 API（OpenAI / Groq / 自建 Whisper）转成文字，插入光标处；⚙ 配置 base URL、token、模型、语言（存本机 `$.store`）。`/speech-off` `/speech-on` `/speech-chat-off`。备注：**仅 macOS**，需 ffmpeg；用本机 curl 只上传刚录的音频，不发会话内容；不改写提示、不调 `$.model.complete`；与 paste-inline（剪贴板听写展开）互补。 | MIT | [链接](https://github.com/tg-bomze/speech-insert) |
 | share-shield | — | 共享屏幕或录屏时自动在屏幕上遮住密钥和个人信息：每 2 秒查一次本机进程，发现 Zoom 屏幕共享（CptHost）、macOS/QuickTime 录屏或 OBS（可在设置里加进程名）就自动开启、结束后自动关闭；遮住 API 密钥/令牌（Anthropic、OpenAI、GitHub、Slack、AWS、Google、Stripe）、JWT、Bearer 头、私钥、URL 里的密码、password=/API_KEY= 之类的值、邮箱、电话、SSN 和信用卡号，覆盖用户/助手消息、工具调用与结果、命令输出和其他 mod 的窗格；`/shield on\|off\|auto\|status`，提示框上方「Show for this share」可在本次共享中取消遮挡。与 streamer-mode（韩语界面、手动开关）功能相近，本 mod 为英文界面、能自动检测共享。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；自动检测仅 macOS（Google Meet、Teams 等浏览器共享检测不到，需 `/shield on`）；只运行 `ps -axo comm=`，不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield) |
 | code-colors | — | 用自己的配色给 Claude Code 终端界面上色（源自 anthropics/claude-code#48636）：回复里的代码块和正文（标题、列表、粗体、行内代码、链接，十六进制颜色码显示成它自己的颜色）、Edit/Write 的 diff 和新建文件（delta 风格底色，改动的词加深标出）、完整展开的 Bash 行（命令、heredoc 内容、命令打印出的文件和 grep/rg 结果按各自语言着色，diff 与 JSON 也着色）以及 WebFetch 结果；支持 18 种语言，配色在 hooks/highlight.ts、prose.ts、diff.ts 顶部常量里改。比 shell-highlight（只高亮 Bash 调用）覆盖面更广。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；turn.step 只统计思考速度、原样转发；为给 Bash 打印的文件着色会在本机读该文件（≤2 MB）；设 `CODE_COLORS_DEBUG=<文件>` 才写调试日志；思考时 spinner 文字会变成彩虹色（不能单独关）；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/duplonicus/claude-mods/tree/main/code-colors) |
+| copy-blocks | — | 回复下方编号「⧉  скопировать」块：抽出代码围栏、长行内代码、链接和文件路径；`/cp N` 或点 `[N]` 整段复制到剪贴板（避免终端折行把命令/路径弄断）；界面俄文。备注：只改 `ui.render` AssistantMessage 显示（先 next）；`turn.complete` 只存本会话可复制项；按按钮/`/cp` 才 `$.ui.copy`；不改写提示、不调模型、不联网。与 main `copy-command`（仅 shell 命令旁复制按钮）部分重叠，但本条另含链接/路径/整段代码块 + `/cp`。 | MIT | [链接](https://github.com/fkholkin0/copy-blocks) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
