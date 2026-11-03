@@ -6795,6 +6795,37 @@
         "name": "ashnurkoff",
         "url": "https://github.com/ashnurkoff"
       }
+    },
+    {
+      "name": "modwall",
+      "description": "Firewall for other Claude Code mods: as each mod loads, show what it can reach and audit / hold / refuse by your policy (audit, ask, allowlist + blocklist). /modwall. Local only; plugin.register may refuse; no prompt rewrite, no $.http, no model.complete, no asUser.",
+      "source": {
+        "source": "github",
+        "repo": "radtech-solutions/modwall",
+        "sha": "e7507f960d908c6598d4f63fc99533e3418d4716"
+      },
+      "homepage": "https://github.com/radtech-solutions/modwall",
+      "license": "MIT",
+      "author": {
+        "name": "RadTech",
+        "url": "https://radtech.nl"
+      }
+    },
+    {
+      "name": "tripwire",
+      "description": "Blocks recurring agent Bash failures mined from transcripts: whole-disk/home find without -maxdepth, long foreground sleep loops, errors masked by | tail/head without pipefail, forgotten background shells. Append # tripwire:allow to skip. Only deny (or annotate after run); no rewrite, no $.http, no model.complete, no asUser.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/oaustegard/claude-code-mods.git",
+        "path": "tripwire",
+        "sha": "38eb16fd0ce25ba6ea39e75ab2aaf68fa9cdd0b6"
+      },
+      "homepage": "https://github.com/oaustegard/claude-code-mods/tree/main/tripwire",
+      "license": "MIT",
+      "author": {
+        "name": "Muninn",
+        "url": "https://github.com/oaustegard"
+      }
     }
   ]
 }
