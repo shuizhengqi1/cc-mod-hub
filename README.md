@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 740 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 742 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 740 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 742 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 740 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 742 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 740 个精选 Claude Code mods，按类别组织：
+以下是本市场的 742 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -557,6 +557,7 @@ For detailed descriptions of all 740 mods, see the Chinese section below. The �
 | agents-skills | — | 让 Claude Code 用上 `.agents/skills/` 里的技能（`npx skills` 和其他代理工具装技能的位置）：每次会话开始把其中含 SKILL.md 的技能文件夹复制到 `.claude/skills/`，副本自带 `.gitignore` 和标记文件、不进 git，原件改了会刷新；你自己在 `.claude/skills/` 里同名的技能不会被覆盖（会弹提示）。可在插件配置里填一个主目录，把那里的 `.agents/skills` 也一并复制。备注：只挂 session.start 与 classic.SessionStart，只通过 $.fs 在 `.claude/skills` 内写文件；不联网、不调模型、不改提示；新仓库（8 次提交）；新建 `.claude/skills` 后需按提示跑一次 `/reload-skills`。 | MIT | [链接](https://github.com/nightlab-agent/agents-skills) |
 | editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
 | forge | — | 给 Claude 一个 `forge` 工具：提出新 mod 的文件与用途后弹出审批窗格，只有你按 Approve 才写入目标目录并跑 `claude plugin validate`；重复的 Bash/MCP 调用序列可在提示框上方建议「Draft a tool」（你按才提交提示）。备注：⭐0（所在仓库 egoushka/claude-mods）；不自动 asUser、不调 model.complete；批准前请通读提案文件（mod 与 CLI 同权）。 | MIT | [链接](https://github.com/egoushka/claude-mods/tree/main/mods/forge) |
+| agent-undo | — | 按 hunk 列出本会话 Claude（含子代理）的 Edit/Write；在 git 仓里还记录免确认的 Bash/MCP 改文件；`/agent-undo` 或 undo 工具可撤销单个 hunk 或整次编辑，你后来改过的行不动。备注：本机 `git` 私有 index 快照，不提交；`tool.check` 只观察 `next()` 的判定、从不自行返回 allow；无提示改写、无 model.complete、无 $.http、无 asUser。 | MIT | [链接](https://github.com/nightlab-agent/agent-undo) |
 
 ### 子代理管理 Subagent Management
 
@@ -799,6 +800,7 @@ For detailed descriptions of all 740 mods, see the Chinese section below. The �
 | session-tracker | — | 侧栏列出本机所有打开的 Claude Code 会话，优先显示 Needs you；可消息/结束会话。不依赖 tmux，与 tmux（仅当前 tmux 会话）互补。备注：读本机会话注册表与 transcript 尾部，不联网、不改写提示。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |
 | logpane | — | 侧窗持续跟踪 Bash 正在写的日志文件（解析重定向目标，用 lsof 看谁在写），长跑命令不用另开终端；`/logpane` 开关/尺寸。备注：只观察 Bash 与本机文件，不改写命令；本机可选 `lsof`；不联网、不调模型。 | MIT | [链接](https://github.com/benlrice/logpane) |
 | activity-pane | — | 终端侧窗 Files：本会话改过的文件与 PR，点开看 diff；回复里 bash 块有 `▶ Run` / `▶ Run → Claude`（跑完把输出交给模型）、Mermaid 画成 ASCII、表格重排、复制按钮；页脚文件可给状态行读（Files 计数、今日会议）。`/activity` 打开窗格。备注：`tool.call` 只观察原样返回；`▶ Run → Claude` 仅在你点击时用 `$.prompt.submit` 提交一条可见提示（含命令与输出），不改写普通用户提示；会议列表经本机已配置的 Google Calendar MCP（`claude.ai Google Calendar`）拉取，未配置则降级；本机 `zsh`/`mmdc` 可选；不调模型、不经 `$.http` 外发。 | MIT | [链接](https://github.com/leonemendes/claude-mods/tree/main/activity-pane) |
+| system-monitor | — | 提示框上方短条显示本机 CPU / RAM / GPU（Linux `/proc`，可选 `nvidia-smi`；休眠 GPU 不唤醒）；`/sysmon` 打开详情窗格。备注：每 2 秒本机采样；无提示改写、无 model.complete、无 $.http、无 asUser；仓库曾名 claude-system-monitor，现为 Guhan-SenSam/claude-mods 子目录。 | MIT | [链接](https://github.com/Guhan-SenSam/claude-mods/tree/main/plugins/system-monitor) |
 
 ### 其他工具 Other Tools
 
