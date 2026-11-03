@@ -6705,22 +6705,6 @@
         "name": "Nightlab",
         "url": "https://github.com/nightlab-agent"
       }
-    },
-    {
-      "name": "system-monitor",
-      "description": "Short live CPU, RAM and GPU bars above the prompt (Linux /proc + optional nvidia-smi); /sysmon opens a detail pane with load-tinted backdrop. Local sampling every 2s via $.process.run; no prompt rewrite, no model.complete, no $.http, no asUser.",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/Guhan-SenSam/claude-mods.git",
-        "path": "plugins/system-monitor",
-        "sha": "438c97c9d2287495368985030b09bae2d87551e8"
-      },
-      "homepage": "https://github.com/Guhan-SenSam/claude-mods/tree/main/plugins/system-monitor",
-      "license": "MIT",
-      "author": {
-        "name": "Guhan Sensam",
-        "url": "https://github.com/Guhan-SenSam"
-      }
     }
   ]
 }
