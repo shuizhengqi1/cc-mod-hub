@@ -6765,6 +6765,36 @@
         "name": "dshw1234-dot",
         "url": "https://github.com/dshw1234-dot"
       }
+    },
+    {
+      "name": "usage-prediction",
+      "description": "Predict how many tokens / how much of the 5-hour limit the current draft will cost before you submit; learns ratios from this session; live in-turn meter. KO/EN. Observes prompt.* then next; reads $.session.usage only; local store; no model.complete, no $.http, no prompt rewrite.",
+      "source": {
+        "source": "github",
+        "repo": "cow-coding/claude-usage-prediction-mod",
+        "sha": "6932d91ef0e1639f06b25cb931f56e918d925736"
+      },
+      "homepage": "https://github.com/cow-coding/claude-usage-prediction-mod",
+      "license": "MIT",
+      "author": {
+        "name": "cow-coding",
+        "url": "https://github.com/cow-coding"
+      }
+    },
+    {
+      "name": "session-address",
+      "description": "Claude Desktop footer button to copy this session's local_ id line for SendMessage from another session; /session-address prints the same line. Desktop-only button; $.ui.copy with pbcopy fallback; no model.complete, no $.http, no prompt rewrite.",
+      "source": {
+        "source": "github",
+        "repo": "ashnurkoff/claude-session-address",
+        "sha": "8245b3aa621ee091a9d344553ef6eedf0add7f29"
+      },
+      "homepage": "https://github.com/ashnurkoff/claude-session-address",
+      "license": "MIT",
+      "author": {
+        "name": "ashnurkoff",
+        "url": "https://github.com/ashnurkoff"
+      }
     }
   ]
 }
