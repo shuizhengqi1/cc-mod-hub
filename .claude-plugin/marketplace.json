@@ -6765,6 +6765,21 @@
         "name": "dshw1234-dot",
         "url": "https://github.com/dshw1234-dot"
       }
+    },
+    {
+      "name": "copy-blocks",
+      "description": "Under each Claude reply that has copyable bits, a numbered block of code fences, long inline code, links and file paths; /cp N (or click [N]) copies item N whole via $.ui.copy (avoids terminal wrap breaking commands/paths). RU UI. Local only; turn.complete stores items; ui.render AssistantMessage adds the block after next; no prompt rewrite, no model.complete, no $.http. Partial overlap with main copy-command (shell-command buttons only) — this also covers links/paths/fences + /cp.",
+      "source": {
+        "source": "github",
+        "repo": "fkholkin0/copy-blocks",
+        "sha": "f05aa737d2f6f6bbebefcbec12bd0555ee7c80ca"
+      },
+      "homepage": "https://github.com/fkholkin0/copy-blocks",
+      "license": "MIT",
+      "author": {
+        "name": "Fedor Kholkin",
+        "url": "https://github.com/fkholkin0"
+      }
     }
   ]
 }
