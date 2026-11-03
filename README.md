@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 751 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 755 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 751 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 755 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 751 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 755 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 751 个精选 Claude Code mods，按类别组织：
+以下是本市场的 755 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -297,6 +297,7 @@ For detailed descriptions of all 751 mods, see the Chinese section below. The �
 | speech-insert | — | 提示框上方麦克风：录音后用任意 OpenAI 兼容语音转写 API（OpenAI / Groq / 自建 Whisper）转成文字，插入光标处；⚙ 配置 base URL、token、模型、语言（存本机 `$.store`）。`/speech-off` `/speech-on` `/speech-chat-off`。备注：**仅 macOS**，需 ffmpeg；用本机 curl 只上传刚录的音频，不发会话内容；不改写提示、不调 `$.model.complete`；与 paste-inline（剪贴板听写展开）互补。 | MIT | [链接](https://github.com/tg-bomze/speech-insert) |
 | share-shield | — | 共享屏幕或录屏时自动在屏幕上遮住密钥和个人信息：每 2 秒查一次本机进程，发现 Zoom 屏幕共享（CptHost）、macOS/QuickTime 录屏或 OBS（可在设置里加进程名）就自动开启、结束后自动关闭；遮住 API 密钥/令牌（Anthropic、OpenAI、GitHub、Slack、AWS、Google、Stripe）、JWT、Bearer 头、私钥、URL 里的密码、password=/API_KEY= 之类的值、邮箱、电话、SSN 和信用卡号，覆盖用户/助手消息、工具调用与结果、命令输出和其他 mod 的窗格；`/shield on\|off\|auto\|status`，提示框上方「Show for this share」可在本次共享中取消遮挡。与 streamer-mode（韩语界面、手动开关）功能相近，本 mod 为英文界面、能自动检测共享。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；自动检测仅 macOS（Google Meet、Teams 等浏览器共享检测不到，需 `/shield on`）；只运行 `ps -axo comm=`，不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield) |
 | code-colors | — | 用自己的配色给 Claude Code 终端界面上色（源自 anthropics/claude-code#48636）：回复里的代码块和正文（标题、列表、粗体、行内代码、链接，十六进制颜色码显示成它自己的颜色）、Edit/Write 的 diff 和新建文件（delta 风格底色，改动的词加深标出）、完整展开的 Bash 行（命令、heredoc 内容、命令打印出的文件和 grep/rg 结果按各自语言着色，diff 与 JSON 也着色）以及 WebFetch 结果；支持 18 种语言，配色在 hooks/highlight.ts、prose.ts、diff.ts 顶部常量里改。比 shell-highlight（只高亮 Bash 调用）覆盖面更广。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；turn.step 只统计思考速度、原样转发；为给 Bash 打印的文件着色会在本机读该文件（≤2 MB）；设 `CODE_COLORS_DEBUG=<文件>` 才写调试日志；思考时 spinner 文字会变成彩虹色（不能单独关）；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/duplonicus/claude-mods/tree/main/code-colors) |
+| thinking-pane | — | 侧栏实时显示 Claude 的 thinking（按回合折叠用户提示与思考卡，子代理各一页可点进），`/thinking` 开关。备注：只观察 turn.step / agent.spawn / ui.render，不改写提示、不调模型、不联网；与 thinking-band（提示框上方最新 thinking 一行）互补，本条是带历史与子代理页的侧栏。仓根 MIT LICENSE（此前因无证暂拒，现已补）。 | MIT | [链接](https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -402,6 +403,9 @@ For detailed descriptions of all 751 mods, see the Chinese section below. The �
 | shell-guard | — | Windows 上 Claude 混用 Bash 和 PowerShell 语法时，命令运行前先拦下并告诉它该怎么写：PowerShell 5.1 里的 `&&`/`\|\|`、head/grep/sed/export、`rm -rf`、`ls -la`、`/dev/null`、heredoc、`VAR=value`，Bash 里的 cmdlet、`$env:NAME`、`2>$null`，以及两边的 `%VAR%`；字符串、注释、here-string 和 heredoc 正文不检查，命令里写 `# shell-guard: ignore` 可跳过；`/config` 可选 PowerShell 7。备注：tool.call 只 deny 或原样放行，不改写命令；纯本地规则匹配，不联网、不调模型、不跑进程。与 stay-put（只管 `cd &&` 链式命令）互补。 | MIT | [链接](https://github.com/dani3lfrenc/modbox/tree/main/shell-guard) |
 | modwall | — | 其他 mod 的防火墙：每个 mod 加载时显示它能碰到什么（reach/risk），按策略 audit（只记日志）、ask（高风险先拦住等你 `/modwall allow`）或 allowlist（名单外拒绝）+ blocklist；`/modwall`、`scan`、`lists`、`log`。备注：只在 `plugin.register` 上 refuse 或放行，不读提示、不拦工具、不联网；不改写提示、不调模型。 | MIT | [链接](https://github.com/radtech-solutions/modwall) |
 | tripwire | — | 拦住从历史 transcript 归纳出的反复 Bash 翻车：无 `-maxdepth` 的整盘/`~`/`$HOME` `find`、前台长时间 sleep 轮询、`\| tail/head` 掩盖错误且无 pipefail、遗忘的后台壳；命令末加 `# tripwire:allow` 可跳过。备注：只 `deny` 或跑完后附加提示，不改写命令；与 bash-guard / shell-guard 互补；纯本机。 | MIT | [链接](https://github.com/oaustegard/claude-code-mods/tree/main/tripwire) |
+| test-truth-gate | — | 记录本会话每次测试 / API 检查 / 渲染的真实结果，文件一改就标陈旧；Claude 在结束回合时声称成功但证据不支撑，则经 `classic.Stop` 拦回并写明缺口；`/qa`（别名 `/ttg`）查看或开关。备注：不调模型、不改写提示；`prompt.submit` 只清计数后原样 next；`tool.call` 先放行再记账；与 qa-gate（强制跑项目 lint/test 脚本）角度不同，本条盯「证据是否撑得住成功声明」。 | MIT | [链接](https://github.com/Mas-AI-Official/claude-receipts/tree/main/mods/test-truth-gate) |
+| session-rescue | — | 崩溃安全的会话检查点（脱敏）：同目录下一会话可用 `/rescue` 查看 / `load` 注入上下文（不自动重跑），未完成的破坏性命令（git push、rm -rf、部署、SQL drop 等）会 hold，需 `/rescue allow <n>` 才放行。备注：`prompt.submit` 只记录目标/最近提示后原样 next；`tool.call` 对 hold 中命令 deny；检查点写本机 `~/.claude/mods-data/masai/session-rescue/`；不联网、不调模型。与 ask-first（当场确认 git/设置）互补。 | MIT | [链接](https://github.com/Mas-AI-Official/claude-receipts/tree/main/mods/session-rescue) |
+| outbox | — | 对外动作（发邮件、日历、Notion、即时消息、`git push`、开 GitHub PR）先在提示框上方倒计时拦住，可 **Cancelar** / **Enviar já**（也可 ask / 只记 log）；`/outbox` 打开「Enviado deste chat」面板。界面为葡萄牙语（Portugal）。备注：`tool.call` 只 deny 或放行，不改写参数；不调模型、不联网发会话；与 ask-first（git/设置确认）互补，本条覆盖邮件/Notion 等外发通道。 | MIT | [链接](https://github.com/brunoluzweb/brunoluzweb-ai-mods/tree/main/plugins/outbox) |
 
 ### 开发工具 Dev Tools
 

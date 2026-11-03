@@ -6850,6 +6850,70 @@
         "name": "Coinqueror",
         "url": "https://github.com/coinqueror"
       }
+    },
+    {
+      "name": "thinking-pane",
+      "description": "Side pane showing Claude's thinking as it streams, with a page per subagent; /thinking toggles. Observation-only (turn.step/agent.spawn/ui.render); does not rewrite prompts or call models.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/sallvainian/claude-code-mods.git",
+        "path": "plugins/thinking-pane",
+        "sha": "5f29d5c8d5f3b572788e83aa441ce2ebee57bd75"
+      },
+      "homepage": "https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane",
+      "license": "MIT",
+      "author": {
+        "name": "Sallvainian",
+        "url": "https://github.com/Sallvainian"
+      }
+    },
+    {
+      "name": "test-truth-gate",
+      "description": "Records every test, API check and render result, marks evidence stale when files change, and blocks a success claim classic.Stop when the evidence does not hold; /qa (alias /ttg).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Mas-AI-Official/claude-receipts.git",
+        "path": "mods/test-truth-gate",
+        "sha": "0e4126010a05c2dc887cb4dcd24c2cd33164d0b0"
+      },
+      "homepage": "https://github.com/Mas-AI-Official/claude-receipts/tree/main/mods/test-truth-gate",
+      "license": "MIT",
+      "author": {
+        "name": "MAS-AI Technologies",
+        "url": "https://github.com/Mas-AI-Official"
+      }
+    },
+    {
+      "name": "session-rescue",
+      "description": "Crash-safe redacted checkpoints of session work; next session in the folder can load unfinished/unverified steps; holds unfinished destructive commands until /rescue allow; never reruns them automatically.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Mas-AI-Official/claude-receipts.git",
+        "path": "mods/session-rescue",
+        "sha": "0e4126010a05c2dc887cb4dcd24c2cd33164d0b0"
+      },
+      "homepage": "https://github.com/Mas-AI-Official/claude-receipts/tree/main/mods/session-rescue",
+      "license": "MIT",
+      "author": {
+        "name": "MAS-AI Technologies",
+        "url": "https://github.com/Mas-AI-Official"
+      }
+    },
+    {
+      "name": "outbox",
+      "description": "Holds outbound actions (email, calendar, Notion, messaging, git push, GitHub PR) behind a countdown above the prompt with Cancel / Send now, or ask/log modes; /outbox pane lists what left or was held. Portuguese (Portugal) UI.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/brunoluzweb/brunoluzweb-ai-mods.git",
+        "path": "plugins/outbox",
+        "sha": "deef470c7b73787d827f2f208daae27547c01370"
+      },
+      "homepage": "https://github.com/brunoluzweb/brunoluzweb-ai-mods/tree/main/plugins/outbox",
+      "license": "MIT",
+      "author": {
+        "name": "Bruno Luz",
+        "url": "https://github.com/brunoluzweb"
+      }
     }
   ]
 }
