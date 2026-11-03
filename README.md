@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 741 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 739 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 741 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 739 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 741 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 739 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 741 个精选 Claude Code mods，按类别组织：
+以下是本市场的 739 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -292,7 +292,6 @@ For detailed descriptions of all 741 mods, see the Chinese section below. The �
 | speech-insert | — | 提示框上方麦克风：录音后用任意 OpenAI 兼容语音转写 API（OpenAI / Groq / 自建 Whisper）转成文字，插入光标处；⚙ 配置 base URL、token、模型、语言（存本机 `$.store`）。`/speech-off` `/speech-on` `/speech-chat-off`。备注：**仅 macOS**，需 ffmpeg；用本机 curl 只上传刚录的音频，不发会话内容；不改写提示、不调 `$.model.complete`；与 paste-inline（剪贴板听写展开）互补。 | MIT | [链接](https://github.com/tg-bomze/speech-insert) |
 | share-shield | — | 共享屏幕或录屏时自动在屏幕上遮住密钥和个人信息：每 2 秒查一次本机进程，发现 Zoom 屏幕共享（CptHost）、macOS/QuickTime 录屏或 OBS（可在设置里加进程名）就自动开启、结束后自动关闭；遮住 API 密钥/令牌（Anthropic、OpenAI、GitHub、Slack、AWS、Google、Stripe）、JWT、Bearer 头、私钥、URL 里的密码、password=/API_KEY= 之类的值、邮箱、电话、SSN 和信用卡号，覆盖用户/助手消息、工具调用与结果、命令输出和其他 mod 的窗格；`/shield on\|off\|auto\|status`，提示框上方「Show for this share」可在本次共享中取消遮挡。与 streamer-mode（韩语界面、手动开关）功能相近，本 mod 为英文界面、能自动检测共享。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；自动检测仅 macOS（Google Meet、Teams 等浏览器共享检测不到，需 `/shield on`）；只运行 `ps -axo comm=`，不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield) |
 | code-colors | — | 用自己的配色给 Claude Code 终端界面上色（源自 anthropics/claude-code#48636）：回复里的代码块和正文（标题、列表、粗体、行内代码、链接，十六进制颜色码显示成它自己的颜色）、Edit/Write 的 diff 和新建文件（delta 风格底色，改动的词加深标出）、完整展开的 Bash 行（命令、heredoc 内容、命令打印出的文件和 grep/rg 结果按各自语言着色，diff 与 JSON 也着色）以及 WebFetch 结果；支持 18 种语言，配色在 hooks/highlight.ts、prose.ts、diff.ts 顶部常量里改。比 shell-highlight（只高亮 Bash 调用）覆盖面更广。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；turn.step 只统计思考速度、原样转发；为给 Bash 打印的文件着色会在本机读该文件（≤2 MB）；设 `CODE_COLORS_DEBUG=<文件>` 才写调试日志；思考时 spinner 文字会变成彩虹色（不能单独关）；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/duplonicus/claude-mods/tree/main/code-colors) |
-| session-queue | — | 提示框上方显示「等待中的会话」条，点开面板按等待时长列出 Claude 桌面 Code 标签里需要你回复/未答/近期出错的会话，可跳转或标已处理；`/queue`。备注：仅 macOS + Claude 桌面；本机只读 `~/Library/Application Support/Claude/claude-code-sessions/`，不外传；无提示改写、无 model.complete、无 asUser、无 $.http；无 LICENSE 文件。 |  | [链接](https://github.com/byywkim/session-queue) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -507,7 +506,6 @@ For detailed descriptions of all 741 mods, see the Chinese section below. The �
 | promote-branch | — | `/promote` 预览把当前分支合入集成分支（默认 staging）的提交与测试文件，`/promote go` 在临时 worktree 里合并并推送。备注：默认关闭；只在你输入 `/promote go` 时才 `git push origin HEAD:<target>`，工作区脏或冲突时拒绝且不推送；保护 main/master。 | MIT | [链接](https://github.com/lucasleandro08/claude-mods/tree/main/plugins/promote-branch) |
 | pr-preview | — | 拦住 `gh pr create`/`gh pr edit`/`glab mr create`/`glab mr update`，在提示框上方预览标题和描述并标出不符合规范的地方，可选 Proceed、Fix、Cancel。备注：只拦下或拒绝、不改写命令（Fix/Cancel 都是 deny）；10 秒内不选会自动放行；会读 `--body-file` 指定的文件和运行 `git branch --show-current`；纯本机。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/pr-preview) |
 | review-panel | — | `/review-panel` 打开只读面板：工作区 diff、当前分支的 PR/MR、CI 任务和已有评论，每 30 秒刷新。备注：只读；运行 `git`、`gh pr view`/`gh api`、`glab api` 读取，需要本机已登录 gh/glab；不写任何东西。 | | [链接](https://github.com/anderson-spider/spider-marketplace/tree/main/plugins/review-panel) |
-| rival | — | 改动文件的主回合结束后，后台只读子代理审查 `git diff HEAD`，提示框上方显示发现条数，可 Show / Fix these（你按才提交修复提示）/ Dismiss。备注：⭐0（所在仓库）；默认启用，每次合格审查额外消耗子代理 token（可关或提高 minLines/cooldown）；无提示改写、无 model.complete、无 $.http；审查员 Bash 仅限 git diff/log/show。 | MIT | [链接](https://github.com/egoushka/claude-mods/tree/main/mods/rival) |
 | swamp-watch | — | 当前仓库 swamp 工作流运行的状态行、面板和提示，Claude 跑了 swamp 命令后自动刷新。备注：在本机运行 `swamp workflow run search`（路径可配置）；`tool.call` 只在 Bash 调用完成后观察；面板“诊断”按钮按下时才用 `$.prompt.submit` 发出诊断这次运行的提示。 |  | [链接](https://github.com/jpisgeek/claude-mods/tree/main/mods/swamp-watch) |
 | mermaid-c4-zoom | — | 侧边面板把 mermaid 图画成彩色字符图，支持 C4 式逐层缩放（点带 ▸ 的框看里面一层）；回复里的 mermaid 代码块也会自动收进面板，`/diagrams` 开关。备注：给模型注册一个 `show_diagram` 工具（会出现在模型的工具列表里）；绘制全在本机，用仓库里 vendored 的 beautiful-mermaid 渲染代码（MIT，可读 JS）；不联网。 | MIT | [链接](https://github.com/testy-cool/mermaid-c4-zoom) |
 | jevlight | — | 你在 settings.json 里配置的命令钩子（作者称为 Jev）每次真正起作用时——拦下或询问工具调用、改写工具输入、裁剪工具输出、给提示或工具结果追加说明、拦住停止或结束会话——在对话记录里那次工具调用的结果行（或「Read 3 files」这类分组行）下方加一行天蓝色 `⚡ Jev …` 标记；没有对应工具行的动作（如对你的提示的附注）写成一行普通记录；标记按会话保存，恢复会话后重新显示。备注：只观察：所有 classic.* 钩子都先 `await next(e)` 再把结果原样返回，不拒绝、不改写、不加上下文；分不清是哪个 settings 钩子起的作用，所以其他钩子起作用也会标成 Jev；标记存在插件存储里（最多保留 20 个会话、每会话 200 次调用）；不注册命令、不运行外部程序、不联网；出自作者的个人 Claude 配置仓库。 | MIT | [链接](https://github.com/damilola-elegbede-org/claude-config/tree/main/system-configs/.claude/mods/jevlight) |
