@@ -6580,6 +6580,70 @@
       },
       "homepage": "https://github.com/matteo-psnt/file-viewer/tree/main/plugin",
       "license": "MIT"
+    },
+    {
+      "name": "statusline-desktop",
+      "description": "Runs your configured statusLine command and draws its first line above the prompt in the Claude desktop app (the desktop does not run statusLine itself). Refreshes on session start, after tools/turns, and every 30s; stays out of the terminal. Local only: runs your own bash statusLine script; no prompt rewrite, no model calls, no $.http.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/enhki/claude-mods.git",
+        "path": "mods/statusline-desktop",
+        "sha": "7481abb2eddf53680f59253c586dab11a678b392"
+      },
+      "homepage": "https://github.com/enhki/claude-mods/tree/main/mods/statusline-desktop",
+      "license": "MIT",
+      "author": {
+        "name": "enhki",
+        "url": "https://github.com/enhki"
+      }
+    },
+    {
+      "name": "forgejo-issues",
+      "description": "Pane to browse, search and manage the current repo's Forgejo or Gitea issues (milestones, labels, comments, close/reopen, new issue). Forge host from git remote; token from ~/.config/claude-mods/secrets/forgejo.env (or fgj). $.http only to that forge API; tool.call denies reads/writes that touch the secrets folder (deny-only). No prompt rewrite, no model.complete, no asUser submit.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/enhki/claude-mods.git",
+        "path": "mods/forgejo-issues",
+        "sha": "7481abb2eddf53680f59253c586dab11a678b392"
+      },
+      "homepage": "https://github.com/enhki/claude-mods/tree/main/mods/forgejo-issues",
+      "license": "MIT",
+      "author": {
+        "name": "enhki",
+        "url": "https://github.com/enhki"
+      }
+    },
+    {
+      "name": "walkthrough",
+      "description": "Manual-test checklist pane: Claude publishes steps via a tool; you mark pass/fail/skip with notes; Send results submits one summary message only when you press the button (no timer/auto submit). No prompt rewrite, no model.complete, no $.http.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/enhki/claude-mods.git",
+        "path": "mods/walkthrough",
+        "sha": "7481abb2eddf53680f59253c586dab11a678b392"
+      },
+      "homepage": "https://github.com/enhki/claude-mods/tree/main/mods/walkthrough",
+      "license": "MIT",
+      "author": {
+        "name": "enhki",
+        "url": "https://github.com/enhki"
+      }
+    },
+    {
+      "name": "reading",
+      "description": "Reading-list pane: Claude publishes files/sections/issues/notes; you mark read/acknowledged/discuss with comments; Send results submits one summary only on your button press. No prompt rewrite, no model.complete; no session-content exfil (local fs/process only).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/enhki/claude-mods.git",
+        "path": "mods/reading",
+        "sha": "7481abb2eddf53680f59253c586dab11a678b392"
+      },
+      "homepage": "https://github.com/enhki/claude-mods/tree/main/mods/reading",
+      "license": "MIT",
+      "author": {
+        "name": "enhki",
+        "url": "https://github.com/enhki"
+      }
     }
   ]
 }

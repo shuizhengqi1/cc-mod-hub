@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 733 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 737 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 733 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 737 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 733 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 737 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 733 个精选 Claude Code mods，按类别组织：
+以下是本市场的 737 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -237,6 +237,7 @@ For detailed descriptions of all 733 mods, see the Chinese section below. The �
 | split-diff | ⭐ 1（所在仓库） | 终端宽度 ≥120 列时，把 Edit、Write（覆盖已有文件）和 Bash 改动文件的 diff 改成左右并排：左边原内容、右边新内容，行号与语法色沿用自带 diff，改动的词用更亮的底色标出；Bash 一次改多个文件时先列出文件清单和各自加减行数，每个文件最多显示 40 行；终端变窄时自动退回原来的上下 diff。备注：只钩 ui.render 的 ToolResult 改绘制（hooks/register.tsx 唯一的钩子），不改工具调用和会话内容；不运行其他程序、不联网、不存数据；作者标注需 Claude Code 2.1.296 或更高。 | MIT | [链接](https://github.com/oobg/claude-code-mods/tree/main/mods/split-diff) |
 | path-links | ⭐ 1 | 把 Claude 回复里出现的文件路径变成终端可点的 OSC 8 file:// 链接：每级文件夹各是一个链接（点开在 Finder/文件管理器里打开），点文件名打开文件；代码块里提到的路径可在块下方加一行可点链接，相对路径按工作目录解析；`/path-links` 切换 segments/file/off 模式及代码块、相对路径开关。备注：只改回复的显示（ui.render AssistantMessage，hooks/register.tsx 145–155），Claude 看到的内容和会话记录不变；只用 $.fs.stat/$.fs.list 查本机路径是否存在（限工作目录、家目录等可信根，300ms 超时）；不运行外部程序、不联网，点击由终端处理；需终端支持 OSC 8，作者标注支持 macOS/Linux。与 link-footer（回复里的 URL）、file-view（工具行路径开侧栏）互补。 | MIT | [链接](https://github.com/pepperonas/path-links) |
 | prompt-draft-autosave-restore | ⭐ 1 | 边打字边把提示框里还没发送的草稿自动存下来（停笔 0.8 秒后按会话保存），重启、崩溃或 `claude --resume` 后自动填回提示框；`/draft-restore` 手动取回，本会话没有时取同一文件夹里其他会话留下的最新草稿；发送、清空或 Ctrl+C 会删除已存草稿，30 天以上的自动清理。备注：草稿只存在本机 `$.store`（~/.claude/plugins/store/），不联网、不调模型、不运行外部程序；prompt.edit 原样返回，`$.prompt.fill` 只把你自己的草稿填回空提示框，不自动提交；长粘贴只能存成 `[Pasted text #N]` 占位，恢复时会提示内容缺失；需 Claude Code 2.1.312+（用到 prompt.change 事件）；界面英文，可选德文。 | MIT | [链接](https://github.com/dlepold/prompt-draft-autosave-restore) |
+| statusline-desktop | ⭐ 1（所在仓库） | 在 Claude **桌面应用**的提示框上方画出你配置的 `statusLine` 命令输出（桌面端本身不跑 statusLine）；会话开始、每次工具/回合后及每 30 秒刷新；终端里不画（终端已有真状态行）。备注：本机 `bash` 跑你自己的状态行脚本并取第一行；不改写提示、不调模型、无 $.http。与 statusline-footer（终端 PromptHint 同行）互补。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/statusline-desktop) |
 | whoami | — | 页脚显示当前 Claude 账号、组织、邮箱、套餐和 5 小时/每周用量；`/whoami pin` 把文件夹绑定到一个账号，账号不对时只拦下提示（不改写）并在提示框上方显示红框，`/whoami ok` 放行；`/account` 切换账号。不联网，不调模型。备注：README 标 CC 2.1.296+（2.1.292 实测能加载）；和 account-badge 改同一处页脚，二选一；`/account` 切换需装作者的 Claude Accounts 菜单栏 app，会改本会话的 CLAUDE_SECURESTORAGE_CONFIG_DIR。 | MIT | [链接](https://github.com/tornikegomareli/claude-whoami) |
 | cc-math-renderer | — | 把回复里的 LaTeX 显示成 Unicode 数学符号（只改绘制，不改存储消息）；钩 classic.MessageDisplay 与 AssistantMessage。 | MIT | [链接](https://github.com/andrewroxby/cc-math-renderer) |
 | latex-kitty | — | 在 kitty/Ghostty 终端把回复里的展示公式画成图片（kitty 图形协议），简单行内公式转 Unicode；本机 latex+dvipng 在 bubblewrap 沙箱编译（无网络、无家目录），PNG 缓存在 `~/.cache/latex-kitty`。备注：只改 `ui.render` AssistantMessage 显示，不改会话存储；需 Linux、kitty/Ghostty、TeX、ImageMagick、bwrap；不改写提示、不调模型。与 cc-math-renderer（Unicode）、code-tab-latex-fix（桌面 Code 标签）互补。 | MIT | [链接](https://github.com/maticplut/latex-kitty) |
@@ -667,6 +668,8 @@ For detailed descriptions of all 733 mods, see the Chinese section below. The �
 | astrolabe | ⭐ 1 | 在状态栏显示 Spec Kit 当前的功能、阶段和任务进度，随你编辑 spec/tasks 文件和调用技能实时更新。备注：只用 `$.fs` 读取项目里的 Spec Kit 文件和 `.git/HEAD`（register.tsx 11–17，io/git-branch.ts），通过 `$.ui.status` 显示；tool.call 先原样执行再刷新（72–97）；没有命令；不运行外部程序、不联网。 | MIT | [链接](https://github.com/jonyfs/astrolabe) |
 | beads-pane | ⭐ 1（所在仓库） | 侧边窗格实时显示 beads 任务：进行中、可开始、被阻塞的各 10 条及数量，`/beads` 打开。备注：每次 Bash 后用 `bd --readonly … --json` 只读刷新（需装 bd）；不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/beads-pane) |
 | brainless-claude-progress | ⭐ 1 | `/progress` 窗格 + 状态栏一行摘要：当前工单步骤 Write→Review→Verify→CI→Merge、CI 状态与按历史中位数估算的剩余时间、后台子代理与 bash 任务、Claude 等你回复时标「Your turn」；界面支持英/繁中/简中/日。备注：本机 gh 只读命令（pr view、pr list --state merged、repo view）查 PR/CI；钩子只观察（tool.call 先 next，prompt.submit 只识别语言、原样放行）；动画火花可用 `/progress still` 关闭；无模型调用。与 gh-status、eta、task-band、plan-progress 部分重叠。 | MIT | [链接](https://github.com/greedysisyphus/Brainless-Claude-Progress) |
+| reading | ⭐ 1（所在仓库） | 阅读清单窗格：Claude 用工具发布文件片段/issue/笔记；你标记已读/确认/待讨论并写评论；只有你按「Send results」才把汇总发回一条消息。备注：无提示改写、无 model.complete；只读本机文件/可选 issue 命令；无定时代发。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/reading) |
+| walkthrough | ⭐ 1（所在仓库） | 手工测试清单窗格：Claude 发布步骤；你标 pass/fail/skip 与备注；只有你按「Send results」才汇总回一条消息。备注：无提示改写、无 model.complete、无 $.http、无定时/自动代发。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/walkthrough) |
 | backlog-pane | — | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bw-peek | — | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
 | decision-tracker | — | 把回复里提到的决定（「we decided / going with / 決定」等关键词句子）留在提示框上方的一条横栏里，直到你把它写进决策日志（默认路径含 `docs/decisions/` 的 Edit/Write 成功后自动清空）；点横栏展开全部，`/decisions` 列出、`/decisions done N` 删一条、`/decisions clear` 清空。备注：turn.complete 只读主代理回答做本地关键词匹配，tool.call 原样返回；只存在会话状态里，不联网、不调模型、不改写提示；关键词、日志路径、条数上限可在 /plugin configure 里改。 | MIT | [链接](https://github.com/i-noma-ru/claude-decision-tracker) |
@@ -724,6 +727,7 @@ For detailed descriptions of all 733 mods, see the Chinese section below. The �
 | devbrain-live | ⭐ 1（所在仓库） | 状态行显示 DevBrain 本会话保存/已知/召回了多少条记忆，/devbrain-session 列出明细。备注：tool.call 只观察 save_entry / devbrain note 调用，原样返回；只读本机 ~/.devbrain/sessions/<会话>.json；DevBrain 本体需另装；不联网。 | MIT | [链接](https://github.com/pushthev1be/devbrain/tree/main/mods/devbrain-live) |
 | ado-link-bar | ⭐ 1（所在仓库） | 提示框上方一行列出对话里最近提到的 Azure DevOps PR 和工作项链接（带标题和状态）。备注：session.append 只读取链接并原样传递；本机运行 `az boards work-item show` 取标题（需安装并登录 az）；恢复会话时读本机 transcript 末尾。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-link-bar) |
 | ado-pr-status | ⭐ 1（所在仓库） | 后台获取当前分支对应的 Azure DevOps PR（审批、草稿等）写到 ~/.claude/ado-pr-status/，配合附带的 statusline/pr-line.mjs 在 ccstatusline 里显示。备注：本机运行 git 和 `az repos pr list` 只读查询（需安装并登录 az）；需自行配置 ccstatusline；说明为日文。 |  | [链接](https://github.com/ntaksh42/dotfiles/tree/main/claude/mods/ado-pr-status) |
+| forgejo-issues | ⭐ 1（所在仓库） | `/issues` 窗格浏览/搜索/管理当前仓库的 Forgejo 或 Gitea issue（里程碑、标签、评论、关闭/重开、新建）；host 来自 git remote；token 放 `~/.config/claude-mods/secrets/forgejo.env`（或 fgj）。备注：`$.http` 只打该 forge API，不发会话正文；`tool.call` 对碰 secrets 目录的读/写只 deny；无提示改写、无 model.complete、无代发 prompt。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/forgejo-issues) |
 | vault-jot | ⭐ 1 | 在任意会话里把想法、待读链接、学到的东西、踩坑等随手记进 Obsidian 仓库的 inbox/：/jot idea: 文本 直接存成一条笔记，/jot 不带内容时让模型从当前对话起草一条填进输入框（回车才保存）；inbox 积压到一定数量或天数时提示框上方出现「Ingest」按钮；/incubate 打开侧边窗格浏览 wiki/ideas 和 wiki/reading 里的笔记，按钮可让 Claude 扩写想法、记录决定、标记阅读状态或导出为项目设计文档。备注：需先在 /config 设置 vaultPath（仓库须已有 inbox/ 目录）；笔记里会记下当前目录、仓库远程地址、git 分支和会话 id（分支用本机 `git rev-parse` 取）；/jot 起草用 $.model.fork 分叉一次、消耗少量用量；Ingest 按钮只把一条请求填进输入框（需另装 claude-obsidian 的 wiki-ingest），/incubate 窗格里的按钮是你点了才用 $.prompt.submit 以你的名义发出固定提示；本 mod 不直接改 wiki/ 下的笔记；不联网。 |  | [链接](https://github.com/Hsiang-LinC/vault-jot) |
 | modal-meter | ⭐ 1（所在仓库） | 在状态栏看 Modal 应用：运行中的应用和容器数、某个应用跑太久时弹提示、CLI 能给出的今日花费，还有一个停止应用的窗格。备注：每 60 秒运行 `modal app list --json`，并运行 `modal billing report`（用你本机已登录的 Modal CLI）；`modal app stop` 只在你确认后才执行；不调用模型。 |  | [链接](https://github.com/joeldg/claude-mods/tree/main/modal-meter) |
 | lavish-pages | — | 在提示框上方列出本会话打开的 Lavish 页面和状态，可 open、end、reopen；本机 process（find、grep 读本机会话记录，open，lavish-axi），http 只 GET 页面服务的 /health（默认 127.0.0.1:4387），$.model.complete 把页面可见文字（最多 4000 字）交给 Haiku 生成一行描述，tool.call 原样 next，显示时 AbovePrompt 不调 next。 | MIT | [链接](https://github.com/FoCDoT/lavish-pages/tree/main/lavish-pages) |
