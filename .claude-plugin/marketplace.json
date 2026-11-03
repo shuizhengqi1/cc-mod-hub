@@ -6826,6 +6826,21 @@
         "name": "Muninn",
         "url": "https://github.com/oaustegard"
       }
+    },
+    {
+      "name": "image-peek",
+      "description": "Hover an image path or http(s) link named in the transcript for a real-pixel popup that follows the mouse (Windows PowerShell+WPF); press for a zoom/pan window (cell pane on macOS/Linux). Downloads http(s) images via local curl/PowerShell only (URL as arg/env, no session content). No prompt rewrite, no model.complete, no $.http, no asUser, no tool.check allow.",
+      "source": {
+        "source": "github",
+        "repo": "parkertonra/image-peek",
+        "sha": "353f71f6af0a543a6b37ea6f42eda8d824ce9e0d"
+      },
+      "homepage": "https://github.com/parkertonra/image-peek",
+      "license": "MIT",
+      "author": {
+        "name": "Parker Tonra",
+        "url": "https://github.com/parkertonra"
+      }
     }
   ]
 }

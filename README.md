@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 749 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 750 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 749 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 750 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 749 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 750 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 749 个精选 Claude Code mods，按类别组织：
+以下是本市场的 750 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -647,6 +647,7 @@ For detailed descriptions of all 749 mods, see the Chinese section below. The �
 | tex-preview | — | Claude 改或写 .tex 后自动在本机编译，在窗格里显示 PDF 并滚到改动的那一页；编译错误带文件和行号；`/tex` 手动编译。不联网，不调模型。备注：需本机装 TeX Live 或 MacTeX，latexmk、pdftocairo、synctex 在 PATH；窗格只在桌面 app 或 VS Code 扩展里显示，终端里只显示 PDF 路径；界面文字为葡萄牙语；每改一次 .tex 就在本机跑一次 LaTeX，latexmk 会读项目里的 .latexmkrc，打开不受信的仓库时要小心。 | MIT | [链接](https://github.com/lunatila/tex-preview) |
 | artifact-view | — | 页脚「Artifacts ▸」开关，在提示框上方列出最近更新的已发布 artifact（最新 5 个，14 天内改过的最多 10 个），点标题在侧栏打开、点 🌐 用系统浏览器打开；也可输入 `recent artifacts` 切换。备注：调用 Artifact 工具 list 读取列表；tool.call(Artifact) 原样执行，发布/删除后刷新；prompt.submit 只在整条提示是「recent artifacts」时拦下不发给模型，其他提示原样放行；只在点 🌐 时运行 rundll32/open/xdg-open；不联网、不调模型。与 artifact-mod（本会话写出的本地文件）不同。 | MIT | [链接](https://github.com/mncoffeenord/claude-artifact-view-mod) |
 | shot-preview | — | Claude 回复里若点名一张本机截图路径，就在该条回复下画缩略图，点击可打开原图。备注：只挂 `session.append` 观察并画 UI，不改写提示或工具；用本机读图；不联网、不调模型、不注册斜杠命令。 | MIT | [链接](https://github.com/mikhin/claude-shot-preview) |
+| image-peek | — | 对话里提到的 `.png`/`.jpg`/`.jpeg` 路径或 http(s) 链接下方出芯片；悬停弹出真实像素预览（Windows 用本机 PowerShell+WPF 无边框窗跟随鼠标），点击打开缩放窗格（滚轮缩放、拖拽平移）。备注：Windows 悬停弹窗需 Windows Terminal 等能报鼠标移动的终端；macOS/Linux 无悬停弹窗，点击仍开终端色块缩放窗格；http(s) 图用本机 curl/PowerShell 只下载该 URL，不发会话内容；无 model.complete、无 $.http、无 asUser、不改写提示。与 shot-preview（回复下截图缩略图）、lightbox（粘贴/工具图条）互补，偏 Windows 真像素悬停。 | MIT | [链接](https://github.com/parkertonra/image-peek) |
 | lightbox | — | 提示框上方一条图片带：显示你粘贴的图片，以及 Claude 用 Read 打开、工具返回（截图）或命令刚写出的图片，`/lightbox <路径>` 手动打开；可前后翻、`larger` 打开大图窗格，macOS 上可用预览打开/在访达中显示；Ghostty/kitty 画真实像素，tmux/zellij/SSH 下用 Unicode 四分块字符画。备注：比 image-view（仅粘贴缩略图）覆盖面大，另注册自带命名空间的 `show` 工具（mcp__lightbox__show，hooks/register.tsx 23、591）让 Claude 主动给你看图，与 inline-images 功能部分重叠；本机用 sips/ImageMagick 转换（固定 sh 脚本，$.process，私有副本在 $TMPDIR/lightbox/<会话>）；tool.call 只观察结果不改写（624–639），不联网、不调模型。 | MIT | [链接](https://github.com/nuko-nova-dynamics/lightbox) |
 | file-viewer | — | 在对话里内联预览 PDF、Office（Word/PPT/Excel）、图片和动图，带分页查看器（`/view <路径>`），并给 Claude 一个预览工具（mcp__file-viewer__preview）。备注：本机用 poppler/LibreOffice/ImageMagick/sips 转换（插件脚本经 $.process.run）；Ghostty/kitty 画真实像素，其他终端用 Unicode 色块；只改显示与本机转换，不联网、不调模型、不改写提示；Office/PDF 需本机装好转换工具。与 lightbox（图片条）、tex-preview（LaTeX PDF）、md-pane（Markdown）、file-view（侧栏读任意文件）不同，本条专做文档/Office/GIF 内联预览。 | MIT | [链接](https://github.com/matteo-psnt/file-viewer/tree/main/plugin) |
 
