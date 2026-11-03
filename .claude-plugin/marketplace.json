@@ -6765,6 +6765,20 @@
         "name": "dshw1234-dot",
         "url": "https://github.com/dshw1234-dot"
       }
+    },
+    {
+      "name": "session-kanban",
+      "description": "Kanban pane of Claude desktop Code-tab sessions: In progress / Today / Earlier / Archived columns, sidebar-section filter, nested sub-sessions; /kanban. Uses desktop session MCP (list_sessions/get_session); open via local `open` (macOS); Auto-mode blocked actions only prompt.fill for you to send (never auto-submits). No prompt rewrite, no model.complete, no $.http, no asUser.",
+      "source": {
+        "source": "github",
+        "repo": "3meyc/session-kanban",
+        "sha": "41ba53d610336d2fd8edbcc4f8d244bab2fcc1ff"
+      },
+      "homepage": "https://github.com/3meyc/session-kanban",
+      "author": {
+        "name": "3meyc",
+        "url": "https://github.com/3meyc"
+      }
     }
   ]
 }
