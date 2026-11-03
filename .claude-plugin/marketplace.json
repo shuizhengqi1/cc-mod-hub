@@ -6826,6 +6826,15 @@
         "name": "Muninn",
         "url": "https://github.com/oaustegard"
       }
+    },
+    {
+      "name": "open-in-obsidian",
+      "description": "Adds an Open in Obsidian button under every Write/Edit to a markdown note inside an Obsidian vault, plus /obsidian pane of vault notes touched this session. macOS only (open + obsidian://). Local only.",
+      "source": {
+        "source": "github",
+        "repo": "ben-rosenthal/open-in-obsidian",
+        "sha": "e234c907e5fcc204a1574f4a14a97abcef259a2d"
+      }
     }
   ]
 }
