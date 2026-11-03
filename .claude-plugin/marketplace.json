@@ -6675,6 +6675,22 @@
         "name": "Yehor Hrabovskyi",
         "url": "https://github.com/egoushka"
       }
+    },
+    {
+      "name": "usage-statusline",
+      "description": "Status line above the prompt: model, context % (compaction window, with full 1M fill in brackets when larger), rate-limit windows (5h/7d/spend), session cost USD, live output tok/s from turn.step, and a desktop button that copies the session claude:// link. Local only; no prompt rewrite, no model calls, no $.http.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Yuuichu/claude-mods.git",
+        "path": "usage-statusline",
+        "sha": "964747fc3e71a13ac3d1606a65a78abf04d7ad18"
+      },
+      "homepage": "https://github.com/Yuuichu/claude-mods/tree/main/usage-statusline",
+      "license": "MIT",
+      "author": {
+        "name": "Yuuichu",
+        "url": "https://github.com/Yuuichu"
+      }
     }
   ]
 }
