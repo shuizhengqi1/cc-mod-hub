@@ -6661,20 +6661,6 @@
       }
     },
     {
-      "name": "session-queue",
-      "description": "AbovePrompt band + pane listing Claude Desktop Code-tab sessions waiting for you (need-reply / unanswered / recent error), oldest-wait first; /queue; open session or mark handled. Reads local macOS Claude session store only; no prompt rewrite, no model.complete, no asUser, no $.http.",
-      "source": {
-        "source": "github",
-        "repo": "byywkim/session-queue",
-        "sha": "ce39c3157c4e7d80d9c1f6fe6af0559925ab11b2"
-      },
-      "homepage": "https://github.com/byywkim/session-queue",
-      "author": {
-        "name": "byywkim",
-        "url": "https://github.com/byywkim"
-      }
-    },
-    {
       "name": "forge",
       "description": "Registers a forge tool so Claude can propose a new mod (files) for human Approve/Reject in a dialog; nothing written until Approve; optional repeat-sequence suggestion band whose Draft button submits a prompt (user press only). No asUser timer submit; no model.complete; validate via claude plugin validate after write.",
       "source": {
@@ -6684,22 +6670,6 @@
         "sha": "25b3063c9208d46f96253ff0ccbc8822d965ca56"
       },
       "homepage": "https://github.com/egoushka/claude-mods/tree/main/mods/forge",
-      "license": "MIT",
-      "author": {
-        "name": "Yehor Hrabovskyi",
-        "url": "https://github.com/egoushka"
-      }
-    },
-    {
-      "name": "rival",
-      "description": "After a turn that changed files, spawns a hidden read-only rival:reviewer subagent on the git diff; AbovePrompt band with Show/Fix these/Dismiss. Fix these button submits a prompt (user press only). No prompt rewrite hooks; no model.complete; no $.http; Bash for reviewer limited to git diff/log/show. Costs extra subagent tokens per review (default enabled).",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/egoushka/claude-mods.git",
-        "path": "mods/rival",
-        "sha": "25b3063c9208d46f96253ff0ccbc8822d965ca56"
-      },
-      "homepage": "https://github.com/egoushka/claude-mods/tree/main/mods/rival",
       "license": "MIT",
       "author": {
         "name": "Yehor Hrabovskyi",
