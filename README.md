@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 752 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 751 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 752 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 751 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 752 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 751 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 752 个精选 Claude Code mods，按类别组织：
+以下是本市场的 751 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -565,7 +565,6 @@ For detailed descriptions of all 752 mods, see the Chinese section below. The �
 | editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
 | forge | — | 给 Claude 一个 `forge` 工具：提出新 mod 的文件与用途后弹出审批窗格，只有你按 Approve 才写入目标目录并跑 `claude plugin validate`；重复的 Bash/MCP 调用序列可在提示框上方建议「Draft a tool」（你按才提交提示）。备注：⭐0（所在仓库 egoushka/claude-mods）；不自动 asUser、不调 model.complete；批准前请通读提案文件（mod 与 CLI 同权）。 | MIT | [链接](https://github.com/egoushka/claude-mods/tree/main/mods/forge) |
 | agent-undo | — | 按 hunk 列出本会话 Claude（含子代理）的 Edit/Write；在 git 仓里还记录免确认的 Bash/MCP 改文件；`/agent-undo` 或 undo 工具可撤销单个 hunk 或整次编辑，你后来改过的行不动。备注：本机 `git` 私有 index 快照，不提交；`tool.check` 只观察 `next()` 的判定、从不自行返回 allow；无提示改写、无 model.complete、无 $.http、无 asUser。 | MIT | [链接](https://github.com/nightlab-agent/agent-undo) |
-| git-changes | — | VS Code 风格 Source Control + Run and Debug 窗格：按 `.code-workspace`（或发现的 git 仓）列出各文件夹的暂存/未暂存改动与 diff，可 push/pull/discard（先确认）；并跑 launch.json / tasks.json / package.json scripts。`/git-changes`。备注：本机 git/`$.process`；`tool.call` 先 next 再刷新、原样返回；不联网、不调模型、不改写提示；上方 band 里 ponytail 的 Review/Audit 按钮仅在已装 ponytail 时可用，否则降级为文字。与 git-sidebar（lazygit 分支侧栏）、multirepo-diff、editable-diff 互补。 | MIT | [链接](https://github.com/isp3ct/claude-cozy-setup/tree/main/plugins/git-changes) |
 
 ### 子代理管理 Subagent Management
 
