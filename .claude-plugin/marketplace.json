@@ -6929,6 +6929,52 @@
         "name": "Alfredo Perez",
         "url": "https://github.com/alfredoperez"
       }
+    },
+    {
+      "name": "repo-pulse",
+      "description": "Glanceable git health above the Claude Code prompt: branch, dirty files, ahead/behind, and a toast when a merge, rebase, conflict or detached HEAD appears. Local read-only git only; AbovePrompt awaits next.",
+      "source": {
+        "source": "github",
+        "repo": "5d0tal1gat0r/repo-pulse",
+        "sha": "34edad82879dfe0b3e6b48ce3199c42e43fd76a4"
+      },
+      "homepage": "https://github.com/5d0tal1gat0r/repo-pulse",
+      "license": "MIT",
+      "author": {
+        "name": "5d0tal1gat0r",
+        "url": "https://github.com/5d0tal1gat0r"
+      }
+    },
+    {
+      "name": "named-subagents-mod",
+      "description": "Gives every subagent a themed unique name in the task tree, and lists running agents under those names in a side pane (what each is doing, tokens, conversation a press away). /roster opens the pane; /names manages name packs. AbovePrompt awaits next. No prompt rewrite, no model.complete, no network.",
+      "source": {
+        "source": "github",
+        "repo": "Bobby-cell-commits/named-subagents-mod",
+        "sha": "6e08613f01f0f4a382550320092e734eab836d49"
+      },
+      "homepage": "https://github.com/Bobby-cell-commits/named-subagents-mod",
+      "license": "MIT",
+      "author": {
+        "name": "Bobby-cell-commits",
+        "url": "https://github.com/Bobby-cell-commits"
+      }
+    },
+    {
+      "name": "workspace-sessions",
+      "description": "Pane (/ws) listing Claude Code sessions in the current workspace (repo + worktrees): peek, open, and send a message to another session. Send only when you press Enter in the compose UI (user-triggered $.session.send). Japanese UI. No prompt rewrite, no model.complete, no network of session content.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pregum/claude-mods.git",
+        "path": "workspace-sessions",
+        "sha": "95efa0c8f4d0957b1d8018e0307468d1919a038a"
+      },
+      "homepage": "https://github.com/pregum/claude-mods/tree/main/workspace-sessions",
+      "license": "MIT",
+      "author": {
+        "name": "Pregum",
+        "url": "https://github.com/pregum"
+      }
     }
   ]
 }

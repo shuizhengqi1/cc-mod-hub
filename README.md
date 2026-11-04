@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 756 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 759 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 756 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 759 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 756 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 759 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 756 个精选 Claude Code mods，按类别组织：
+以下是本市场的 759 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -557,6 +557,7 @@ For detailed descriptions of all 756 mods, see the Chinese section below. The �
 | robot-progress | — | Robot Framework 运行的实时进度：状态栏显示 已完成/总数、通过/失败、ETA，侧边窗格列出当前测试与关键字、即时失败，长时间无进度时提示卡住；`/robot-progress` 打开窗格。备注：会话开始时把插件自带的 listener/ProgressListener.py 追加到 ROBOT_OPTIONS 环境变量，listener 只把进度写到插件目录下的 run/progress.json（hooks/register.tsx 41–62），不联网、不注入上下文；需要 python 与 Robot Framework。 | MIT | [链接](https://github.com/PnxLasantha/claude-qa-mods/tree/d8d017166f4cad5159ed93bb52d6120f19632472/plugins/robot-progress) |
 | push-preflight | — | Claude 运行 `git push` 之前，按顺序跑本仓库 package.json 里已有的 npm 脚本 `format:check`、`lint`、`typecheck`（有哪个跑哪个），任一失败就拦住这次 push；`git push --dry-run` 和不含这些脚本的仓库直接放行。备注：只拒绝不改写命令；每次 push 前在本机运行仓库自己的 npm 脚本（每个最多 300 秒），push 会等待；只读会话目录的 package.json，不跟踪 `cd subdir && git push` 或 `git -C`（`cd subdir && git push` 这条命令仍会命中，但读的仍是会话目录的 package.json，不会进到子目录；`git -C` 识别不到）；仅支持 npm 且需已装 node_modules（没装时跳过检查并放行）；不可信仓库慎用（会执行其 npm 脚本）；新仓库 0⭐，是作者个人配置合集的子目录。 | MIT | [链接](https://github.com/Abrar118/claude-workflow/tree/c3270ccc8b0c5010957f68f9821354ebe6fda627/mods/push-preflight) |
 | git-sync | — | 提示框上方条带：当前仓库相对 upstream 有多少 commit 待 push/pull；后台每 3 分钟 `git fetch`（从不 pull/push；`GIT_TERMINAL_PROMPT=0`）；回合结束本地重计；有新待 pull 时 toast；可手动 fetch；英/西语随 locale。备注：只跑本机 git；不改写提示、不调模型、不上传会话。0⭐ 宿主仓 sawady-claude-mods。 | MIT | [链接](https://github.com/sawady/sawady-claude-mods/tree/main/plugins/git-sync) |
+| repo-pulse | — | 提示框上方一行看 git 健康：当前分支、脏文件数、相对上游 ahead/behind；进入合并冲突、rebase/merge 进行中或 detached HEAD 时 toast。备注：本机只读 `git status --porcelain=v2 --branch` 等；tool.call/prompt.submit/turn.complete 只观察后原样放行；AbovePrompt 调 next，可与其他 mod 叠加；不联网、不改提示。 | MIT | [链接](https://github.com/5d0tal1gat0r/repo-pulse) |
 | session-report | — | `/report` 把本次会话写成一份可读的 HTML 报告并在浏览器打开（`/report quiet` 只保存）：每轮提示、耗时、模型与估算费用、改动的文件和增删行数、跑过的命令与工具结果（失败/被拒标出）、子代理及其费用、其他 mod 留下的提示；会话结束或 /clear 时默认自动保存一份到 `~/.claude/session-reports`（可在 /plugin 配置里关掉或换目录）。备注：纯本机：prompt.submit 只记下提示前 300 字、原样传递不改写；tool.call、turn.step、agent.spawn、session.append 只观察记录、原样返回；只跑 `git rev-parse` 取分支名、`mkdir -p` 和 `open`/`xdg-open` 打开报告；HTML 内容已转义；费用按 Anthropic 公开价目估算，订阅/Bedrock/Vertex 不准；不联网、不调模型、不注入上下文（hooks/register.tsx）。 | MIT | [链接](https://github.com/ovidb/claude-mods/tree/8af429768924586c901717877194625049a1e6f8/plugins/session-report) |
 | citation-check | — | 回合结束时若 Claude 的回答里有链接，在回答下方显示一行：列出 Claude 本次会话从未打开过（没有经 WebFetch、浏览器工具或 curl/wget 访问）的链接，以及只在搜索结果或抓取页面里出现过的链接；全都打开过或没有链接时不显示。备注：只读，tool.call 只记录工具结果里的 URL 后原样放行，turn.complete 只返回给用户看的一行文字，不进模型、不改回答；无网络、无子进程、不调用模型、不写盘。 | MIT | [链接](https://github.com/robertiuoras/claude-mods/tree/main/citation-check) |
 | wcag-enforcer | — | Claude 用 Write/Edit 或 shell 命令改了 .tsx/.jsx/.html/.vue/.css 文件后，自动跑 eslint-plugin-jsx-a11y、axe-core 和 WCAG 2.2 AA 对比度检查，把每条问题（文件、行号、规则）交给 Claude 修；回合结束时还有未修的问题最多拦两次。备注：通过 $.process 调项目自己的 eslint（默认 `npx eslint`，项目没装时 npx 可能去 npm 下载）和插件自带 scripts/axe-check.mjs（在 jsdom 里加载项目 node_modules 的 axe-core）；会往工具结果追加检查结果 context（本机 lint 输出，同 phpcs 类先例），不改写提示、不联网上传、不调模型；自动检查只覆盖部分 WCAG，不等于合规审计。 | MIT | [链接](https://github.com/WasteOfADrumBum/one-small-mods-pack/tree/main/mods/wcag-enforcer) |
@@ -604,6 +605,7 @@ For detailed descriptions of all 756 mods, see the Chinese section below. The �
 | ext-agent | — | 新增子代理类型 ext-agent:worker，改由本机 pi 或 opencode CLI 运行，这些回合不消耗 Claude token；内置代理默认仍可用（除非 blockBuiltin），可选 worktree。备注：需要 function hooks，且 pi/opencode 在 PATH 上；只在本机拉起进程，无 $.http、不改写提示。 | MIT | [链接](https://github.com/darkautism/ext-agent/tree/main/plugins/ext-agent) |
 | agent-model-router | — | 按项目配置表（`.claude/agent-model-router.json`）给每个子代理选模型；同一任务被再次派发时自动升一档（haiku→sonnet→opus，maxModel 封顶），每次选择写入本地日志，附带只读的 model-tuner 代理据日志提出调表建议。`/model-router` 生成或调整配置，`status` 查看。备注：只改子代理的 model 字段、不改其提示，出错时放行；`/model-router` 只提交插件自带的固定提示；`fable on` 时用 $.model.complete 发一句不含会话内容的探测；无 $.http、无 $.process。作者标 2.1.293+。 | MIT | [链接](https://github.com/deki-lab/agent-model-router) |
 | lazy-agents | — | 把 ~/.claude/agents 下用户级子代理从 Agent 列表藏起，按需用 find_agent(query) 搜索并解锁匹配项，避免大代理库每会话/每子代理白烧约 14k token；内置/插件/项目代理与 PINNED 名单仍可见。备注：只观察/隐藏 agent.offer，解锁后交回引擎；注册本机工具 find_agent（运行时名 mcp__lazy-agents__find_agent）；只读 HOME 与 ~/.claude/agents/*.md（深≤6、文件≤1000，不跟随符号链接）；不联网、不调模型、不改写提示；PINNED 写在 hooks/register.ts，常用代理需自行改源码；单提交新仓。 | MIT | [链接](https://github.com/oscarpedrero/lazy-agents) |
+| named-subagents-mod | — | 给每个子代理在任务树里一个主题化、不重复的名字（图灵/麦哲伦等，可 `/names` 换名字包），侧窗 `/roster` 列出正在跑的代理在干什么、token 与耗时，可打开其对话。备注：Agent/tool.call 与 agent.spawn 只观察并原样放行（命名不注入子代理上下文）；AbovePrompt 调 next；不联网、不调模型、不改写提示。与 agent-flow（子代理树）互补，侧重命名与面板。 | MIT | [链接](https://github.com/Bobby-cell-commits/named-subagents-mod) |
 
 ### 通知提醒 Notifications & Alerts
 
@@ -812,6 +814,7 @@ For detailed descriptions of all 756 mods, see the Chinese section below. The �
 | node-close | — | Claude 跑完测试、构建等命令后，自动结束这条命令留下还在跑的 Node 进程（测试运行器、worker、node_modules 里的 esbuild/swc/turbo 等），避免越积越多占内存；后台命令在停止或会话结束时再清理；`/node-close` 列出本机所有父进程已不在的 Node（CPU、运行时长），`/node-close kill <PID…>` 或 `kill all` 结束选中的。备注：只结束「命令开始后新出现、已失去父进程、且带本会话 CLAUDE_PID」的进程，带 `&`、nohup、pm2、--detach 的命令视为有意常驻，只提示不结束；会自动发 SIGTERM，1 秒后仍在则 SIGKILL（Windows 用 `taskkill /T /F`）；`kill` 子命令只在你自己输入时执行；tool.call 先 next 原样执行，只在结果后附一行说明结束了哪些进程（hooks/register.ts 600–664）；本机运行 ps（读候选进程环境变量里的 CLAUDE_PID）/kill，Windows 上用 PowerShell 内联编译一段可读的 C# 读取 CLAUDE_PID（173–212）；不联网、不调模型、不改提示。与 strays（仅 macOS、手动结束）、session-procs（只读）部分重叠，本 mod 跨平台且自动清理。 | MIT | [链接](https://github.com/AnnihilationWizard/node-close) |
 | tmux | — | 在 tmux 里同时开多个 Claude Code（和 Codex）会话时，侧边窗格列出当前 tmux 会话里所有交互会话及状态（工作中 / 等你处理 / 空闲），高亮你正对着的那个；点一行把它切到前台，点 [x] 两次关闭该会话，点 [new] 在新 tmux 窗口里启动一个新会话（启动命令可在插件配置里改）；`/tmux` 重新打开窗格。备注：会话开始时自动打开窗格；通过 $.process 跑本机 tmux（list-panes/select-pane/new-window/send-keys/kill-pane，关闭需二次确认），读 `~/.claude/sessions` 判断状态；不联网、不调模型、不碰提示和工具调用；不在 tmux 里时只显示提示；新仓库（12 次提交）。 | MIT | [链接](https://github.com/Elijah-J/claude-tmux-pane) |
 | session-tracker | — | 侧栏列出本机所有打开的 Claude Code 会话，优先显示 Needs you；可消息/结束会话。不依赖 tmux，与 tmux（仅当前 tmux 会话）互补。备注：读本机会话注册表与 transcript 尾部，不联网、不改写提示。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |
+| workspace-sessions | —（所在仓库） | `/ws` 打开窗格，列出**当前工作区**（本仓库及 worktree）里的 Claude Code 会话，可 peek 对话、打开会话、在本机给另一个会话发消息。备注：界面日语；只有你在窗格里输入并回车才用 `$.session.send`（用户触发）；读本机会话目录与 transcript；不改写提示、不调模型、不外发会话内容。与 session-manager（全机会话）互补，本 mod 限定当前工作区并支持送消息。 | MIT | [链接](https://github.com/pregum/claude-mods/tree/main/workspace-sessions) |
 | logpane | — | 侧窗持续跟踪 Bash 正在写的日志文件（解析重定向目标，用 lsof 看谁在写），长跑命令不用另开终端；`/logpane` 开关/尺寸。备注：只观察 Bash 与本机文件，不改写命令；本机可选 `lsof`；不联网、不调模型。 | MIT | [链接](https://github.com/benlrice/logpane) |
 | activity-pane | — | 终端侧窗 Files：本会话改过的文件与 PR，点开看 diff；回复里 bash 块有 `▶ Run` / `▶ Run → Claude`（跑完把输出交给模型）、Mermaid 画成 ASCII、表格重排、复制按钮；页脚文件可给状态行读（Files 计数、今日会议）。`/activity` 打开窗格。备注：`tool.call` 只观察原样返回；`▶ Run → Claude` 仅在你点击时用 `$.prompt.submit` 提交一条可见提示（含命令与输出），不改写普通用户提示；会议列表经本机已配置的 Google Calendar MCP（`claude.ai Google Calendar`）拉取，未配置则降级；本机 `zsh`/`mmdc` 可选；不调模型、不经 `$.http` 外发。 | MIT | [链接](https://github.com/leonemendes/claude-mods/tree/main/activity-pane) |
 
