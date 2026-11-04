@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 757 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 755 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 757 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 755 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 757 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 755 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 757 个精选 Claude Code mods，按类别组织：
+以下是本市场的 755 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -117,7 +117,6 @@ For detailed descriptions of all 757 mods, see the Chinese section below. The �
 | usage-feed | ⭐ 1（所在仓库） | 把订阅账号的 5 小时、7 天与 spend_limit 限额窗口合并写进本地 usage.json（会话开始和每回合后更新，多会话同时写也按规则合并不回退），供同仓库的 Windows 11 任务栏小窗 usage_widget.py 画用量条。备注：**仅 Windows**，需在插件设置里填 dataDir（必须是盘符开头的本地绝对路径，拒绝 OneDrive 与网络路径），不填则什么都不做；只读 $.session.usage 与 session.measure，只写 dataDir 下 usage.json 与排障日志两个文件；不碰提示和工具；不联网；任务栏小窗是仓库里另行运行的 Python 脚本，不随插件安装。 |  | [链接](https://github.com/imrooki/claude-usage-bar/tree/main/plugins/usage-feed) |
 | repo-spend | ⭐ 1（所在仓库） | 提示框上方一条带：当前仓库（含其 worktree，按实际干活的仓库分摊）累计花了多少钱、今天和近 7 天的花费，以及本会话实时花费、近 30 分钟每小时消耗速率和走势小图；订阅用户显示按 API 价格折算的金额；按周归档，Claude Code 删掉旧日志后总额仍保留；`/repo-spend` 隐藏/显示。备注：需要本机 python3；本机跑 `git rev-parse` 和插件自带的 scan.py 读 `~/.claude/projects` 会话记录，缓存写 `~/.cache/claude-repo-spend`、归档写 `~/.local/share/claude-repo-spend`；不联网、不调模型、不改提示和工具调用。 | MIT | [链接](https://github.com/aseem-upadhyay/qol-mods/tree/main/plugins/repo-spend) |
 | loop-watch | ⭐ 1（所在仓库） | 发现某个项目在自己反复开会话（定时任务、keep-alive 循环等在烧 token）：每次会话开始记下项目名和是否有人值守，同一项目一小时内启动超过 10 次就弹出提示；`/loop-watch` 列出近 24 小时启动最多的项目及无人值守次数，`/loop-watch ignore\|unignore <项目>` 静音或恢复。备注：只在 `~/.claude/loop-watch/` 写启动记录（保留 24 小时）和忽略名单；`$.process.run` 只用来读取 $HOME；不联网、不调模型、不改提示和工具调用。 | Apache-2.0 | [链接](https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch) |
-| x-mcp-budget | ⭐ 1（所在仓库） | 限制 X（Twitter）MCP 读花费：把 list/search/timeline 的 max_results 压到上限（默认 10），按 UTC 日对本机各会话返回的每条帖/用户计价一次，估计达到 dailyUsd（默认 $1）后拒绝继续的 X MCP 调用。备注：只挂 tool.call；账本在 `~/.local/state/x-mcp-budget/`（或 XDG_STATE_HOME）；软估计、账本失败 fail-open；不改写提示、无 SessionStart shell、不调模型。宿主仓 House of Vibe / hov-stack。 | MIT | [链接](https://github.com/startupbros-com/hov-stack/tree/main/mods/x-mcp-budget) |
 | usage-log | — | 每回合写本地 jsonl 用量日志，并显示相对 7 日节奏的差距。备注：本机 process 写本地文件。 | MIT | [链接](https://github.com/tanuu5/usage-log/tree/main/plugins/usage-log) |
 | ration-book | — | 按历史给每个会话设读取额度（Read/Grep/Glob/WebFetch/WebSearch 结果字节数），用完后拒绝这些调用，/ration grant <KB> 手动加额度。备注：只拒绝不改写；额度历史存本机 $.store。 | MIT | [链接](https://github.com/arazvan-ec/xmarks/tree/main/mods/ration-book) |
 | time-spent | — | 每个回合一张实时卡片：时间和花费分别耗在 Claude 思考和哪类工具上（Bash、读写、子代理、后台任务等），支持时间线、条形、紧凑等视图；/time-spent 切换视图、看本会话汇总。备注：tool.call、turn.step、session.append 都只计时观察、原样传递，不改写内容；纯本机，不联网。 | MIT | [链接](https://github.com/leviyehonatan/claude-time-spent) |
@@ -300,7 +299,7 @@ For detailed descriptions of all 757 mods, see the Chinese section below. The �
 | share-shield | — | 共享屏幕或录屏时自动在屏幕上遮住密钥和个人信息：每 2 秒查一次本机进程，发现 Zoom 屏幕共享（CptHost）、macOS/QuickTime 录屏或 OBS（可在设置里加进程名）就自动开启、结束后自动关闭；遮住 API 密钥/令牌（Anthropic、OpenAI、GitHub、Slack、AWS、Google、Stripe）、JWT、Bearer 头、私钥、URL 里的密码、password=/API_KEY= 之类的值、邮箱、电话、SSN 和信用卡号，覆盖用户/助手消息、工具调用与结果、命令输出和其他 mod 的窗格；`/shield on\|off\|auto\|status`，提示框上方「Show for this share」可在本次共享中取消遮挡。与 streamer-mode（韩语界面、手动开关）功能相近，本 mod 为英文界面、能自动检测共享。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；自动检测仅 macOS（Google Meet、Teams 等浏览器共享检测不到，需 `/shield on`）；只运行 `ps -axo comm=`，不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/kwoekel/woekel-works/tree/main/mods/share-shield) |
 | code-colors | — | 用自己的配色给 Claude Code 终端界面上色（源自 anthropics/claude-code#48636）：回复里的代码块和正文（标题、列表、粗体、行内代码、链接，十六进制颜色码显示成它自己的颜色）、Edit/Write 的 diff 和新建文件（delta 风格底色，改动的词加深标出）、完整展开的 Bash 行（命令、heredoc 内容、命令打印出的文件和 grep/rg 结果按各自语言着色，diff 与 JSON 也着色）以及 WebFetch 结果；支持 18 种语言，配色在 hooks/highlight.ts、prose.ts、diff.ts 顶部常量里改。比 shell-highlight（只高亮 Bash 调用）覆盖面更广。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；turn.step 只统计思考速度、原样转发；为给 Bash 打印的文件着色会在本机读该文件（≤2 MB）；设 `CODE_COLORS_DEBUG=<文件>` 才写调试日志；思考时 spinner 文字会变成彩虹色（不能单独关）；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/duplonicus/claude-mods/tree/main/code-colors) |
 | thinking-pane | — | 侧栏实时显示 Claude 的 thinking（按回合折叠用户提示与思考卡，子代理各一页可点进），`/thinking` 开关。备注：只观察 turn.step / agent.spawn / ui.render，不改写提示、不调模型、不联网；与 thinking-band（提示框上方最新 thinking 一行）互补，本条是带历史与子代理页的侧栏。仓根 MIT LICENSE（此前因无证暂拒，现已补）。 | MIT | [链接](https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane) |
-| option-picker | — | Claude 回复以编号选项收尾时，在提示框上方显示可多选芯片，点 Use 填入「Do 1, 3」；Dismiss 清除。备注：AbovePrompt 先 `await next(e)` 再渲染下游；`prompt.submit` 只清状态后 `next(e)`，不改写提示正文；纯本机 UI。与同仓 ship-track 可分开装。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/option-picker) |
+| option-picker | — | Claude 回复以编号选项收尾时，在提示框上方显示可多选芯片，点 Use 填入「Do 1, 3」；Dismiss 清除。备注：AbovePrompt 先 `await next(e)` 再渲染下游；`prompt.submit` 只清状态后 `next(e)`，不改写提示正文；纯本机 UI。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/option-picker) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -570,7 +569,6 @@ For detailed descriptions of all 757 mods, see the Chinese section below. The �
 | editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
 | forge | — | 给 Claude 一个 `forge` 工具：提出新 mod 的文件与用途后弹出审批窗格，只有你按 Approve 才写入目标目录并跑 `claude plugin validate`；重复的 Bash/MCP 调用序列可在提示框上方建议「Draft a tool」（你按才提交提示）。备注：⭐0（所在仓库 egoushka/claude-mods）；不自动 asUser、不调 model.complete；批准前请通读提案文件（mod 与 CLI 同权）。 | MIT | [链接](https://github.com/egoushka/claude-mods/tree/main/mods/forge) |
 | agent-undo | — | 按 hunk 列出本会话 Claude（含子代理）的 Edit/Write；在 git 仓里还记录免确认的 Bash/MCP 改文件；`/agent-undo` 或 undo 工具可撤销单个 hunk 或整次编辑，你后来改过的行不动。备注：本机 `git` 私有 index 快照，不提交；`tool.check` 只观察 `next()` 的判定、从不自行返回 allow；无提示改写、无 model.complete、无 $.http、无 asUser。 | MIT | [链接](https://github.com/nightlab-agent/agent-undo) |
-| ship-track | — | 侧窗跟踪当前仓库上线路径 Commit → GitHub → Live：未提交文件、推送/PR、wrangler/npm deploy 后的 live URL 健康；`/ship-track`、`/ship-track url <link>`、`/ship-track deployed`。备注：tool.call 在 next 之后记账；按钮仅 `$.prompt.fill`；只读 git/gh 与一次 live URL 探测（$.http.fetch），不改写提示。与同仓 option-picker 可分开装。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/ship-track) |
 
 ### 子代理管理 Subagent Management
 
