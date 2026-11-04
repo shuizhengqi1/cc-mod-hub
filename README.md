@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 761 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 762 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 761 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 762 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 761 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 762 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 761 个精选 Claude Code mods，按类别组织：
+以下是本市场的 762 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -137,6 +137,7 @@ For detailed descriptions of all 761 mods, see the Chinese section below. The �
 | meter | — | /meter 打开侧边面板：上下文占用和自动压缩点、缓存命中率，5 小时和每周限额的用量与消耗节奏（已用百分比对比窗口已过时间，绿/黄/红着色，节奏超过 1 时预估何时用满），本会话花费，以及占上下文最多的几类（消息、MCP 工具、子代理、技能、记忆文件，按 MCP 服务器细分）；面板画在模型上下文之外，不占 token。备注：需要 Claude Code 2.1.302 及以上；只用 $.session.usage、session.measure、面板和自己的 /meter 命令，不写文件、不起进程、不联网、不调用模型、不改写提示。 | MIT | [链接](https://github.com/mikelane/thrift/tree/main/plugins/meter) |
 | usage-coach | — | 提示框上方一条用量带：上下文占用、提示缓存剩余时间、5 小时/7 天限额与按当前速度的耗尽时间、本会话费用，末尾给出当前最省钱的一条建议（可一键压缩）；`/usage-coach` 侧窗看上下文分项、14 天历史和模型选择建议；同一步连续失败 3 次、会话超预算（默认 $100）时提醒。备注：默认在会话空闲且上下文 ≥4 万 token 时，于 1 小时缓存过期前 5 分钟自动 $.session.compact（设置项设 0 关闭）；用本机 node 跑插件自带 scripts/week.mjs，只读 ~/.claude/projects 里的 token 计数；不联网、不调模型、不改写提示和工具调用。 | MIT | [链接](https://github.com/gabrieloy-star/usage-coach) |
 | token-ledger | — | `/token-ledger` 打开窗格，按插件估算每次请求多占多少 token（该插件技能清单 + MCP 工具 schema，取自 Claude Code 本机 /context 估算），统计每个插件的技能/MCP 工具实际使用次数，连续 7 天没用的建议关闭；状态栏显示插件每请求合计。备注：只读 `$.session.usage` 和本机 store，不调模型、不联网、不运行其他程序、不改设置，只建议不关闭；只统计技能与 MCP 工具，靠 hooks/命令/代理工作的插件不计（hooks/register.tsx）。仓库名 who-ate-my-tokens，插件名 token-ledger。 | MIT | [链接](https://github.com/leonwcl95/who-ate-my-tokens) |
+| ai-usage-meter | — | 在 Claude Code 里工作时，提示框上方显示 Codex 与 Gemini（Antigravity）的用量限额（可选 Claude）：已用百分比、重置时间；未安装的源自动隐藏。可用 `language`（en/ja/ko）与 `sources`（all/codex/gemini）配置。备注：Codex 经本机 `node scripts/codex-limits.mjs` 或读 `~/.codex/sessions` rollout；Gemini/Antigravity 经本机 `agy`；AbovePrompt 先 `await next(e)` 再叠自己的带；不把会话内容外发、不调模型、不改写提示。与 usage-meter/meter（偏 Claude 费用与限额）及 usagemeter（多工具历史花费面板）互补，本条是跨工具实时限额带。 | MIT | [链接](https://github.com/bsw0610/ai-usage-meter) |
 | anti-polling | — | 拦掉只等待的回合：只 sleep / 什么都不做的命令（sleep、Start-Sleep、timeout /t、ping localhost、echo/true）直接拒绝，同一检查命令中间没任何变化却第 3 次运行也拒绝，拒绝文本让 Claude 改用 run_in_background 或一个阻塞循环；主会话和子代理都生效。备注：只 deny 不改写命令（hooks/register.ts tool.call）；判断逻辑在 hooks/rules.ts，无网络、无进程、无模型调用、不写盘。 | MIT | [链接](https://github.com/cipriantuz/claude-code-mods/tree/main/mods/anti-polling) |
 | ysk-throttle | — | 给开了 Claude Code 内置「You should know」旁观代理的人省钱：它每 6 次模型调用就把整段对话连同约 1.1 万 token 不缓存的提示用主模型重发一次检查；这个 mod 只在主对话累计 24 次工具调用（minToolCalls 可调）后放行一次例行检查，提示缓存可能已过期（间隔超过 staleMinutes，默认 55 分钟）时跳过，其余直接回「没什么可说」；你点开笔记触发的 explain 请求总是放行。作者实测一周检查次数 2385→679。备注：通过 model.fork 钩子拦截该内置插件的检查（只回空结果、不改写提示），tool.call/turn.step 只计数原样放行；按检查提示首句识别，插件改了措辞时放行并在会话里提示一次；不联网、不额外调模型；单提交新仓库。 | MIT | [链接](https://github.com/declanbx/you-should-know-throttle) |
 | reflect | — | `/reflect` 打开窗格，用图表回顾你最近 7/30/90 天或全部时间怎么用 Claude Code：提示数、会话数、输出 token、忙碌时长、连续天数、缓存命中率、子代理占比，按项目、模型、推理强度、工具、技能和 MCP 拆分，以及按星期×小时的提示分布；数据全在本机从 `~/.claude/projects/**/*.jsonl` 和 `~/.claude/history.jsonl` 统计，汇总存在 `~/.claude/tacos/reflect/`，所以超过 30 天被清理的记录数字也会保留；终端里只显示文字汇总，图表需桌面版 Code 标签页。备注：需本机 Node 22+（mod 用 $.process.run 跑插件自带的 indexer/cli.mjs）；只挂 session.start/command.run/ui.render，不碰工具调用和提示；只有你在 Tips 页按「Write suggestions」才用 $.model.complete 调一次 Haiku，发送的只是统计数字，项目名换成 project-1 等占位、不含会话标题和提示正文（hooks/tips.mjs、register.tsx 97–116）；Work 页可选用 sqlite3 只读打开 claude-mem 数据库；不联网。 | MIT | [链接](https://github.com/tacodx/TacosPlugins/tree/main/plugins/reflect) |

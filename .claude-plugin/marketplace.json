@@ -7002,6 +7002,23 @@
       },
       "homepage": "https://github.com/shaharz/chat-find",
       "license": "MIT"
+    },
+    {
+      "name": "ai-usage-meter",
+      "description": "Band above the prompt showing Codex and Gemini (Antigravity) usage limits (and optionally Claude) while you work in Claude Code: percent used, reset time, and when each source is missing or not installed. Options: language (en/ja/ko), sources (all/codex/gemini). Local only: reads local Codex rollouts / helper and Antigravity CLI; AbovePrompt awaits next(e) and stacks with other mods; no network of your chat, no model calls, no prompt rewrite.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/bsw0610/ai-usage-meter.git",
+        "path": "ai-usage-meter",
+        "sha": "7fd2f1170dbdec7ad771a048c7c1deaad26b8ba2"
+      },
+      "version": "0.12.0",
+      "author": {
+        "name": "bsw0610",
+        "url": "https://github.com/bsw0610"
+      },
+      "homepage": "https://github.com/bsw0610/ai-usage-meter",
+      "license": "MIT"
     }
   ]
 }
