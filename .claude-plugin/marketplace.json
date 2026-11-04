@@ -6986,6 +6986,22 @@
         "path": "duckdb-results",
         "sha": "a76214b2115ca9d614bf3aebf4ebef0965648689"
       }
+    },
+    {
+      "name": "chat-find",
+      "description": "/find opens a pane to search the current chat as you type (newest first, match highlighted, how many prompts ago). Enter jumps to the transcript row; expand to read neighbours — including history compacted away (needs jq on PATH for full-history mode). Local only: no network, no model calls, no prompt rewrite. Complements find-session (past sessions across projects).",
+      "source": {
+        "source": "github",
+        "repo": "shaharz/chat-find",
+        "sha": "d300d69a15f8139db0a2b490bd939986fb7ea4f3"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Shahar Zaks",
+        "url": "https://github.com/shaharz"
+      },
+      "homepage": "https://github.com/shaharz/chat-find",
+      "license": "MIT"
     }
   ]
 }
