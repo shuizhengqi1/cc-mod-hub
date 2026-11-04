@@ -7035,6 +7035,14 @@
         "repo": "Rosh4an/skills-cheatsheet",
         "sha": "35efd175db5a18cd03a01e635ea7ef968ca2fe43"
       }
+    },
+    {
+      "name": "directory-viewer",
+      "source": {
+        "source": "github",
+        "repo": "AnimeshDali/ClaudeCode-DirectoryViewerPlugin",
+        "sha": "98edeeb94b97032982b9dbd11804676650b176db"
+      }
     }
   ]
 }
