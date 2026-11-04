@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 754 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 753 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 754 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 753 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 754 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 753 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 754 个精选 Claude Code mods，按类别组织：
+以下是本市场的 753 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -167,7 +167,6 @@ For detailed descriptions of all 754 mods, see the Chinese section below. The �
 | resume-brief | ⭐ 1（所在仓库） | 新会话开始时显示你上次在做什么（分支、首条提示摘要），带 Continue 按钮。备注：把上次会话首行提示摘要存插件本地存储（hooks/register.tsx 106–112）；只有点 Continue 按钮才 prompt.submit（141–145、225）；prompt.submit 钩子只用来隐藏卡片、原样放行（172–176）；只读 `git rev-parse`（97）。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/resume-brief) |
 | context-canary | ⭐ 1 | 检测长会话把 CLAUDE.md 里的指令忘掉：/canary setup（先征得同意）在 CLAUDE.md 写一条规则，要求每条最终回复以哨兵（默认 🐤）开头，可在文件各处加 1–5 个检查词；某条回复缺了，提示框上方的像素金丝雀就「死掉」并说明丢了哪部分，默认调用内置压缩并保留你的规则，30 分钟内再次失败就暂停自动压缩；/canary log 看最近 30 次。备注：turn.complete 只读回答、只追加一行提示；只在征得同意后改 CLAUDE.md，不联网、不调模型、不起子进程；每条回复会多一个前缀。 | MIT | [链接](https://github.com/Nachx639/context-canary) |
 | view-memory | ⭐ 1（所在仓库） | `/view-memory` 窗格浏览所有项目的自动记忆（不只当前项目）：全局搜索记忆文件、列出 `due YYYY-MM-DD` 已过期的条目、检查各文件夹健康（MEMORY.md 未链接的文件、失效链接、符号链接文件夹缺的文件），并显示本项目每次会话会载入哪些 CLAUDE.md/MEMORY.md 及其 token 数；单次回复重读超 150k token 时提示一次存记忆后 /clear。备注：只读本机文件，仅运行 `git rev-parse` 找仓库根；prompt.context 只观察、原样返回；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/Monte9/claude-memory-mods/tree/main/view-memory) |
-| reminder-diet | ⭐ 1（所在仓库） | 同一 loop 若再次注入与上次逐字相同的 task/todo reminder（任务列表未变），则从本次请求中去掉该附件，避免重复列表占满上下文、提前触发压缩；compaction、/clear、resume 后比较重置；转录仍保留引擎记录。备注：只挂 `prompt.attachment`（比较后可返回 text:null）、`session.compact`/`prompt.context`/`session.end` 重置记忆；不调用 `$`、不联网、不调模型、不改写用户提示。宿主仓 House of Vibe / hov-stack。 | MIT | [链接](https://github.com/startupbros-com/hov-stack/tree/main/mods/reminder-diet) |
 | cc-codemod | — | 注册 `mcp__cc-codemod__run`：用纯 TS 解释器跑一段 JavaScript（无 eval/WASM/Node），在脚本里调用 Claude 已有的 Bash/Read/Edit/MCP 等工具，只把脚本返回值写进上下文，嵌套调用的原始大输出不进会话；适合「上一次输出决定下一次读取」的链式探索，或只要大输出里的一小段。嵌套调用仍走宿主权限与钩子。备注：可选在直接大输出/连续单读后往 tool 结果追加一行提示（不改写用户提示）；`tool.check` 只记录只读判定后原样 `next`；会话 notebook 存在插件 `$.state`；早期并行启动里把 `~/dev` 与 `~/.t3/worktrees` 下的 git 当本机仓处理（可按作者仓库习惯调整）；打包了 opencode codemode 运行时；无 $.http、无 model.complete、无 prompt 改写/代发。 | MIT | [链接](https://github.com/darjss/claude-code-codemode) |
 | context-pane | — | /context-pane 侧边窗格列出本会话读过和改过的文件、用过的 skill、MCP 服务器调用次数，以及已载入的记忆文件（CLAUDE.md 等）和估算 token；会话开始时自动打开。只观察：tool.call、skill.prompt、session.compact 都先 next 再记录，不改写；用量用本机 summary 估算，不发计数请求。不联网。 |  | [链接](https://github.com/akagaya/claude-code-mods/tree/main/plugins/context-pane) |
 | teach-me | — | 改代码后在提示框上方出一道多选题；/a 作答。备注：使用 $.model.complete（本机 diff，不外传）。 | MIT | [链接](https://github.com/saksham10arora-dotcom/claude-teach-me) |
@@ -368,7 +367,7 @@ For detailed descriptions of all 754 mods, see the Chinese section below. The �
 | checkout-guard | ⭐ 1（所在仓库） | 本机另一个活着的 Claude Code 会话也在同一个 git checkout 里工作时，在提示框上方提醒，并拦下会挪动工作树的 git 命令（checkout、switch、rebase、pull、merge、stash、reset --hard/--merge/--keep、clean、restore），让本会话先进 worktree；在 worktree 或别的 checkout 里起的子代理不拦。备注：只拒绝不改写命令；读 ~/.claude/sessions 并在本机跑 git，不联网、不调模型；「Use a worktree」按钮只在你按下时才让 Claude 进 worktree；与 collision-guard（同文件编辑冲突）互补；仓库无 README，单提交，带测试。 | MIT | [链接](https://github.com/rumstead/ai-loadout/tree/main/mods/checkout-guard) |
 | query-guard | ⭐ 1 | Claude 通过 Bash 跑 sqlite3、psql、mysql、snowsql、databricks CLI 或 dbt 的危险命令时先拦住等你选：DROP TABLE/DATABASE/SCHEMA、TRUNCATE、不带 WHERE 的 DELETE/UPDATE、ALTER TABLE … DROP COLUMN、dbt --full-refresh，以及连到名字含 prod/production 的主机、连接串、profile 或 dbt target 的任何命令。窗格（终端太窄时在提示框上方）显示命令、原因、目标，本机 SQLite 文件还显示当前行数；按 Proceed（1）原样执行，Cancel（2）或关掉窗格则 deny；状态行统计本会话拦下的次数。备注：只等待/deny，不改写命令（hooks/register.tsx 69–119）；只对本机 SQLite 文件跑 `sqlite3 -readonly … SELECT COUNT(*)`（48），等待时轮询 `sleep 0.25`（105）；不联网、不调模型。只看 Bash 命令文本，脚本、`-f` SQL 文件、MCP 数据库工具等绕得过去；会一直等你按键，无人值守会话（claude -p）里命中的命令会卡住直到中断；与 block-destructive-commands（破坏性 SQL 直接 deny）、prod-guard、seed-guard 部分重叠。 | MIT | [链接](https://github.com/geethasagarb/query-guard) |
 | ask-first | ⭐ 1 | 未在本轮提示或指定斜杠命令里要求时，对 `git commit`/`push`、`gh pr merge`、对着受保护分支建 PR、以及改 `.claude/settings*.json` 先弹 Proceed/Cancel；删除/改写 `sudoers`/`authorized_keys`/`sshd_config` 或摘掉受保护账户访问的命令一律拒绝。`/guard` 查看状态，`/guard off、on` 暂停/恢复拦阻（拒绝仍生效）。备注：`prompt.submit` 只根据原文记录意图、**不改写**提示后原样 `next(e)`（register.ts 61–66）；`tool.call` 只 deny 或询问后放行，不改参数；可在 `/config` 配保护分支/仓库正则与暗示性斜杠命令；不联网、不调模型。 | Apache-2.0 | [链接](https://github.com/nasrallah-adel/claude-ask-first) |
-| install-preflight | ⭐ 1（所在仓库） | 安装前用 `/preflight <本地目录|owner/repo|git url>` 跑 `claude plugin validate --json`，把 hooks:/calls: 译成白话能力列表（进程/联网/环境变量/tool.check 等），附原始行作权威；开窗格可复制安装命令；仓库浅克隆到 `/tmp/install-preflight/` 复用。不安装任何东西。备注：本机只跑 `git clone/fetch/reset` 与 `claude plugin validate`；读目标 plugin.json/hooks.json；不调模型、不经 $.http、不改写提示。列表是能力说明不是裁决，仍须读源码。宿主仓 House of Vibe / hov-stack。 | MIT | [链接](https://github.com/startupbros-com/hov-stack/tree/main/mods/install-preflight) |
+| install-preflight | ⭐ 1（所在仓库） | 安装前用 `/preflight <本地目录、owner/repo 或 git url>` 跑 `claude plugin validate --json`，把 hooks:/calls: 译成白话能力列表（进程/联网/环境变量/tool.check 等），附原始行作权威；开窗格可复制安装命令；仓库浅克隆到 `/tmp/install-preflight/` 复用。不安装任何东西。备注：本机只跑 `git clone/fetch/reset` 与 `claude plugin validate`；读目标 plugin.json/hooks.json；不调模型、不经 $.http、不改写提示。列表是能力说明不是裁决，仍须读源码。宿主仓 House of Vibe / hov-stack。 | MIT | [链接](https://github.com/startupbros-com/hov-stack/tree/main/mods/install-preflight) |
 | browser-guard | — | 把 cswap 账号与 Chrome 配置配对，防止用错浏览器画像。备注：可 deny 不匹配的 Chrome 工具调用；依赖本机 `cswap stat... |  | [链接](https://github.com/abhibansal60/claude-mods/tree/main/browser-guard) |
 | council-of-elrond | — | 按规则给每次工具调用分级：放行、拦下、问你，或交给 $.model.complete 审核（会发送工具调用、最近一次提示和本会话写过的脚本内容，已脱敏）；只拒绝不改写；在本机项目里写审计日志。 | MIT | [链接](https://github.com/Deluha/council-of-elrond/tree/main/mods/council-of-elrond) |
 | guardclaw | — | 只拒绝、失败即关闭：每条 shell 命令交给本机 `guardclaw-scan` 扫描，并挡住文件工具碰凭据与设置文件。备注：完整模式需要本机 guardclaw-scan 二进制（同仓库 `go install github.com/TakeInterestInc/guardclaw-core/cmd/guardclaw-scan@latest`；没有则退回内置规则）；不联网；会拒绝加载钩住风险事件的其他非信任 mod（包括本市场里的 mod），除非加进它的 `allowMods` 选项。 | Apache-2.0 | [链接](https://github.com/TakeInterestInc/guardclaw-core/tree/main/claude-code-mod) |

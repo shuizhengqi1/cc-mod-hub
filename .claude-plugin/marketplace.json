@@ -6868,22 +6868,6 @@
       }
     },
     {
-      "name": "reminder-diet",
-      "description": "Drops a task reminder (task_reminder/todo_reminder) that is word-for-word identical to the last one the same loop was sent, so unchanged task lists stop filling the context window and bringing compaction sooner. Comparison resets after compaction, /clear, or resume. Transcript still keeps the engine's record. No network, no model calls, nothing on $.",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/startupbros-com/hov-stack.git",
-        "path": "mods/reminder-diet",
-        "sha": "6bf08e8e2db0082a84e7f7cbc5c64817f4855be3"
-      },
-      "homepage": "https://github.com/startupbros-com/hov-stack/tree/main/mods/reminder-diet",
-      "license": "MIT",
-      "author": {
-        "name": "startupbros-com",
-        "url": "https://github.com/startupbros-com"
-      }
-    },
-    {
       "name": "install-preflight",
       "description": "Before you install a plugin or mod, /preflight <folder | owner/repo | git url> runs claude plugin validate --json and lists what it can do in plain language (process/network/env/tool.check/etc.) with the raw hooks: and calls: lines as the authority. Opens a pane with Copy install command. Clones repos shallow into /tmp/install-preflight/ for reuse. Nothing is installed. No model calls; only local git clone/fetch and validate.",
       "source": {
