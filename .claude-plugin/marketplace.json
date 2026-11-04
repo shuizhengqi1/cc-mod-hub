@@ -6929,6 +6929,21 @@
         "name": "Alfredo Perez",
         "url": "https://github.com/alfredoperez"
       }
+    },
+    {
+      "name": "repo-pulse",
+      "description": "Glanceable git health above the Claude Code prompt: branch, dirty files, ahead/behind, and a toast when a merge, rebase, conflict or detached HEAD appears. Local read-only git only; AbovePrompt awaits next.",
+      "source": {
+        "source": "github",
+        "repo": "5d0tal1gat0r/repo-pulse",
+        "sha": "34edad82879dfe0b3e6b48ce3199c42e43fd76a4"
+      },
+      "homepage": "https://github.com/5d0tal1gat0r/repo-pulse",
+      "license": "MIT",
+      "author": {
+        "name": "5d0tal1gat0r",
+        "url": "https://github.com/5d0tal1gat0r"
+      }
     }
   ]
 }
