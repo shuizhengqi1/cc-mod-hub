@@ -6882,6 +6882,70 @@
         "name": "startupbros-com",
         "url": "https://github.com/startupbros-com"
       }
+    },
+    {
+      "name": "option-picker",
+      "description": "When Claude ends a reply with numbered options, shows them as chips above the prompt so you can pick a few and fill in \"Do 2, 4, 5\". Dismiss clears; prompt.submit clears chips then next(e) (does not rewrite the prompt text). AbovePrompt awaits next and renders below.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ayden723/ship-and-pick.git",
+        "path": "option-picker",
+        "sha": "aafa7ac5a32cea41da65bf134b26609051d2b890"
+      },
+      "homepage": "https://github.com/ayden723/ship-and-pick/tree/main/option-picker",
+      "license": "MIT",
+      "author": {
+        "name": "ayden723",
+        "url": "https://github.com/ayden723"
+      }
+    },
+    {
+      "name": "ship-track",
+      "description": "Side pane tracking Commit → GitHub → Live for the current git repo: uncommitted files, push/PR state, live URL health after wrangler/npm deploy. /ship-track, /ship-track url <link>, /ship-track deployed. Observes tool.call after next; prompt.fill only on button press; does not rewrite prompts.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ayden723/ship-and-pick.git",
+        "path": "ship-track",
+        "sha": "aafa7ac5a32cea41da65bf134b26609051d2b890"
+      },
+      "homepage": "https://github.com/ayden723/ship-and-pick/tree/main/ship-track",
+      "license": "MIT",
+      "author": {
+        "name": "ayden723",
+        "url": "https://github.com/ayden723"
+      }
+    },
+    {
+      "name": "prompts-graph",
+      "description": "GitHub-style contribution graph of prompts you send Claude Code (one square per day for 365 days). Pane beside chat; /prompts-graph. Counts prompts via session.append observation; scans local transcripts on session start. No prompt rewrite, no model.complete, no $.http of session content.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/joshuazesu/prompts-graph.git",
+        "path": "plugin",
+        "sha": "1dbaf553775726fc38017f1da456e3c23729eee0"
+      },
+      "homepage": "https://github.com/joshuazesu/prompts-graph/tree/main/plugin",
+      "license": "MIT",
+      "author": {
+        "name": "Joshua Su",
+        "url": "https://github.com/joshuazesu"
+      }
+    },
+    {
+      "name": "x-mcp-budget",
+      "description": "Caps X (Twitter) MCP read spend: clamps max_results on list/search/timeline (default 10), prices each post/user once per UTC day across sessions on this machine, refuses further X MCP calls once today's estimate hits dailyUsd (default $1). Soft estimate; fail-open on ledger errors. tool.call only; no prompt rewrite, no SessionStart shell, no model.complete.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/startupbros-com/hov-stack.git",
+        "path": "mods/x-mcp-budget",
+        "sha": "1c750ba404bbdbe9e7dac39136f35dd9b9d4edfb"
+      },
+      "homepage": "https://github.com/startupbros-com/hov-stack/tree/main/mods/x-mcp-budget",
+      "license": "MIT",
+      "author": {
+        "name": "StartupBros / House of Vibe",
+        "url": "https://houseofvibe.ai"
+      }
     }
   ]
 }
