@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 762 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 763 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 762 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 763 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 762 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 763 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 762 个精选 Claude Code mods，按类别组织：
+以下是本市场的 763 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -250,6 +250,7 @@ For detailed descriptions of all 762 mods, see the Chinese section below. The �
 | crosstalk | — | /crosstalk 打开窗格，记录本会话与其他 Claude Code 会话的 peer 收发，并可在窗格内回复；只读观察、不改写工具。备注：hook 本机 find/grep 扫描 session journal；thread 存 local store。 | MIT | [链接](https://github.com/kbrdn1/claude-crosstalk) |
 | readout | — | 只改显示：折叠的工具行里显示 Read 打开了哪些文件和行、搜索查了什么，失败或被拒原因附在后面；可选按主题给工具块加底色。备注：tool.call 原样 next，只记录原因。 | MIT | [链接](https://github.com/lucenity0/claude-readout) |
 | shell-highlight | — | Bash/PowerShell 工具调用语法高亮展示。纯 UI，不改写命令。 | MIT | [链接](https://github.com/Turbo-Thorschten/shell-highlight) |
+| sloppy | — | 边打字边拼写检查提示框：拼错的词加下划线（默认焦糖橙，可配色），光标落在错词末尾时 typeahead 给出最多 5 个改正建议（Tab/方向键选用），shift+左右跳到上一/下一错词；跳过代码块/行内代码、URL/路径、@提及、前导斜杠命令、粘贴占位、含数字/全大写/驼峰/蛇形命名。备注：词典来自随插件的 SCOWL 英词表（约 13 万词，本机 `$.fs.read`，美/英拼写都认）；`prompt.edit`/`prompt.autocomplete` 都先 `await next(e)` 再叠 decorations/建议，**从不改写将发送的正文**（无 `prompt.submit` 钩）；个人词表与开关存本机 `$.store`；`/sloppy on\|off\|add\|remove\|list`；不调模型、不联网、不起子进程。与 hal-grammar-check（本机 Ollama 语法）互补，本条是词典拼写。需 Claude Code 2.1.318+（作者测试）。 | MIT | [链接](https://github.com/voidesc/sloppy) |
 | status-bar | — | 把各 mod 状态行折成一行（或上方 band）。纯 UI。 |  | [链接](https://github.com/tylergraydev/cc-mods/tree/main/status-bar) |
 | stepscope | — | 步骤追踪与可视化窗格。 | MIT | [链接](https://github.com/5d0tal1gat0r/stepscope) |
 | thinking-band | — | 提示框上方显示本回合最新 thinking 文本（只观察 turn.step，不改写工具/提示）。 | MIT | [链接](https://github.com/orfevre-34/thinking-band) |
