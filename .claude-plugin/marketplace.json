@@ -6977,6 +6977,15 @@
       },
       "homepage": "https://github.com/danbaez/session-panel",
       "license": "MIT"
+    },
+    {
+      "name": "duckdb-results",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/duckdb/duckdb-claude-plugin.git",
+        "path": "duckdb-results",
+        "sha": "a76214b2115ca9d614bf3aebf4ebef0965648689"
+      }
     }
   ]
 }
