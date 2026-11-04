@@ -6914,6 +6914,21 @@
         "name": "Joshua Su",
         "url": "https://github.com/joshuazesu"
       }
+    },
+    {
+      "name": "speckit-companion",
+      "description": "Follow a Spec Kit run inside Claude Code: band above the prompt with feature/phase, pane with steps/times/documents/tasks ticking off, /speckit-tracker to switch specs. Enter reads a step document; o opens it in your editor. Stock Spec Kit only; read-only. No model calls, no prompt rewrite, no network.",
+      "source": {
+        "source": "github",
+        "repo": "alfredoperez/speckit-companion-claude-mod",
+        "sha": "69363cd48e48e6fd7aed7298c17a3f7932345f62"
+      },
+      "homepage": "https://github.com/alfredoperez/speckit-companion-claude-mod",
+      "license": "MIT",
+      "author": {
+        "name": "Alfredo Perez",
+        "url": "https://github.com/alfredoperez"
+      }
     }
   ]
 }
