@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 753 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 752 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 753 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 752 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 753 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 752 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 753 个精选 Claude Code mods，按类别组织：
+以下是本市场的 752 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -415,7 +415,6 @@ For detailed descriptions of all 753 mods, see the Chinese section below. The �
 | promote-lights | ⭐ 295（所在仓库） | 有打开中的 promote PR（base 为 main、head 为 dev 或 PROMOTE_HEAD，或带 promote 标签）时在提示框上方显示 CI 状态灯，/lights 查看详情。备注：本机运行 gh 只读查询，需已登录 gh；纯本机 UI。 | MIT | [链接](https://github.com/yonatangross/orchestkit/tree/main/mods/promote-lights) |
 | review-watch | ⭐ 260（所在仓库） | 提示框上方为每个进行中的代码审查（Codex `codex review` 或审查类子代理）显示一行：模型、审查对象、用时、最新输出，结束时弹 toast。备注：只观察，tool.call 原样执行；本机读取 Codex 输出和 ~/.codex 配置里的模型名；纯本机 UI。 | MIT | [链接](https://github.com/hamzafer/claude-code-mods/tree/main/mods/review-watch) |
 | filetree | ⭐ 207 | 侧栏文件树，跟住 Claude 正在读/写的文件并可点选带入提示。 |  | [链接](https://github.com/data-goblin/claude-code-filetree) |
-| interlock | ⭐ 56 | 基于 OpenSpec 的规格驱动开发：`/interlock:spec` 写好变更规格后停在人工检查点，`/interlock:ship` 再并行子代理实现到测试全绿并提交；附带 ship/spec/settle 仪表与 `/interlock-meter`、`/interlock-preflight`、`/interlock-handoff`。备注：`prompt.submit` 只观察并原样放行；AbovePrompt 会 `await next(e)` 保留其它条带；可选 userConfig `ntfy_topic`/`ntfy_url` 在 ship 结束时推一条完成通知（默认不发）；若本机无 `openspec` 可在插件缓存目录自备一份，不改仓库源码；与 openspec-status（底栏一行）/ spec-manager（变更窗格）互补，本条是执行与门控 harness。不默认调模型、不改写提示。 | MIT | [链接](https://github.com/renzrollon/interlock) |
 | xcode-mods | ⭐ 22（所在仓库） | Xcode 集成：构建/运行/测试面板、scheme 和目标设备条、通知，以及通过无头 Xcode MCP 渲染 SwiftUI 预览。备注：仅 macOS，需 Xcode MCP；tool.call 原样返回；面板里「Fix with Claude / Ask Claude」按钮会以你的身份提交一条包含构建错误、失败测试或控制台日志的提示（你按才会）。 | MIT | [链接](https://github.com/artemnovichkov/xcode-mods/tree/main/mods/xcode-mods) |
 | flight-recorder | ⭐ 20（所在仓库） | 回合内部的实时甘特时间线：模型请求、工具调用和子代理分泳道显示，附每道的 token 和费用；/timeline 打开。备注：prompt.submit 只读来源、原样放行；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/flight-recorder) |
 | repo-heatmap | ⭐ 20（所在仓库） | 当前项目的文件树状图，面积按文件大小，颜色随 Claude 读取、搜索、编辑和失败操作变化；/heatmap open。备注：跑本机 git ls-files/ls-tree 和 wc 统计文件；tool.call 只观察；不联网。 | MIT | [链接](https://github.com/promptadvisers/claude-mods-starter-kit/tree/main/plugins/repo-heatmap) |

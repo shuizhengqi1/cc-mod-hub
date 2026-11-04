@@ -6866,21 +6866,6 @@
         "name": "Sallvainian",
         "url": "https://github.com/Sallvainian"
       }
-    },
-    {
-      "name": "interlock",
-      "description": "Spec-driven development for Claude Code on OpenSpec: `/interlock:spec` writes a reviewed change then stops for the human checkpoint; `/interlock:ship` runs parallel agents to a green suite and commit. Observation meters (`/interlock-meter`, `/interlock-spec`, `/interlock-settle`, `/interlock-preflight`, `/interlock-handoff`); prompt.submit only observes and passes through; AbovePrompt awaits next(e). Optional ntfy topic for ship-complete push (user config). May provision a local OpenSpec copy under plugin cache. Complements openspec-status / spec-manager (status panes) rather than replacing them.",
-      "source": {
-        "source": "github",
-        "repo": "renzrollon/interlock",
-        "sha": "f5e3696379bc0181487cd66a8601b1e992f0e7af"
-      },
-      "homepage": "https://github.com/renzrollon/interlock",
-      "license": "MIT",
-      "author": {
-        "name": "Carl Rollon",
-        "url": "https://github.com/renzrollon"
-      }
     }
   ]
 }
