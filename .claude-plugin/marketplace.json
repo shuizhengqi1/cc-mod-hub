@@ -6944,6 +6944,39 @@
         "name": "5d0tal1gat0r",
         "url": "https://github.com/5d0tal1gat0r"
       }
+    },
+    {
+      "name": "launch-codes",
+      "description": "Dangerous Bash commands need launch codes: red alert pane, siren, a code to arm and a LAUNCH to fire. Deny-only on tool.call Bash (never rewrites the command); user types a short code then confirms LAUNCH via $.ui.ask; /launch-codes demo. Local only: no network, no model calls, no prompt rewrite.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/OneWave-AI/claude-code-mods.git",
+        "path": "launch-codes",
+        "sha": "e6da26ca36a88eec3be25605d30fa20f2c1c0cec"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "OneWave AI",
+        "url": "https://www.onewave-ai.com"
+      },
+      "homepage": "https://github.com/OneWave-AI/claude-code-mods/tree/main/launch-codes",
+      "license": "MIT"
+    },
+    {
+      "name": "session-panel",
+      "description": "A side panel like the Claude Code app's: environment, context use, connectors, outputs and changes, with a Create PR button. Auto-docks at ≥144 columns; /session-panel toggles. Create PR only submits when you press the button. Local only: no network, no model calls, no prompt rewrite.",
+      "source": {
+        "source": "github",
+        "repo": "danbaez/session-panel",
+        "sha": "4db677bbc9be4670a2d48074d3bf146151f859e7"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Daniel Baez",
+        "url": "https://github.com/danbaez"
+      },
+      "homepage": "https://github.com/danbaez/session-panel",
+      "license": "MIT"
     }
   ]
 }
