@@ -7027,6 +7027,14 @@
         "repo": "voidesc/sloppy",
         "sha": "44c3532f6b30c74ab5790b1aace9625f57a605ac"
       }
+    },
+    {
+      "name": "skills-cheatsheet",
+      "source": {
+        "source": "github",
+        "repo": "Rosh4an/skills-cheatsheet",
+        "sha": "35efd175db5a18cd03a01e635ea7ef968ca2fe43"
+      }
     }
   ]
 }

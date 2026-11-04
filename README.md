@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 763 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 764 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 763 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 764 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 763 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 764 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 763 个精选 Claude Code mods，按类别组织：
+以下是本市场的 764 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -509,6 +509,7 @@ For detailed descriptions of all 763 mods, see the Chinese section below. The �
 | session-activity | — | 侧栏 ledger 记录本会话外泄动作，等待中工作显示在 spinner；execute_sql 写操作可询问后 deny。备注：只 deny，不改写。 | MIT | [链接](https://github.com/bennewton999/claude-code-mods/tree/main/session-activity) |
 | skill-audit | — | 记录技能调用与文件改动的审计时间线窗格，/skill-audit-pane 开关。本机 process：自带 shell 钩子记录技能名称、调用参数与变更文件路径，不写入 stdout，追加到本机 ~/.claude/skill-audit/<会话>.ndjson，窗格读取同一本机日志。不改写工具或提示，不外发。 | MIT | [链接](https://github.com/DepickereSven/skill-audit) |
 | skill-session-mods | — | 按本地 SKILL.md 元数据给 /skill 会话命名与上色（只读本地技能文件）。 | MIT | [链接](https://github.com/aksh1618/claude-mods/tree/main/skill-session-mods) |
+| skills-cheatsheet | — | `/skills-cheatsheet` 打开窗格，列出已安装的全部技能（用户 `~/.claude/skills` 与项目 `.claude/skills`），按用途分组（设计/规划/构建/调试/验证/省 token/写作交接/设置等），标明 auto（模型可自行调用）或 manual（需你打 `/name`），点名称把 `/name` 填进输入框；可关键字过滤与 Rescan。备注：只挂 session.start（注册命令后 `next(e)`）、command.run、ui.render Pane（自有 requestId）；只读本机技能目录的 SKILL.md；`$.prompt.fill` 只在你点按钮时填草稿、不自动发送；不联网、不调模型、不改写提示。与 skill-map（看本会话已加载技能占上下文）、skill-stats（使用次数）、my-skills-anywhere（消息中间 `/` 补全）互补。MIT；仓曾自 melrickiki 迁到 Rosh4an。 | MIT | [链接](https://github.com/Rosh4an/skills-cheatsheet) |
 | test-progress | — | 后台测试进度窗格（backend/frontend）；/test-progress 查询或启动已配置的本机测试命令；AbovePrompt 先调 next 再叠加一行摘要。备注：本机 process（bash/PowerShell 收集器可跑本机测试）。 | MIT | [链接](https://github.com/fabiopbarbieri/claude-test-progress) |
 | wxmp-preview | — | 在侧边面板预览微信小程序 / uni-app 页面，Edit/Write 原样 next 后自动刷新；本机 process：node 桥接脚本、可自动 npm run 启动项目 dev server、无头 Chrome 截图、微信开发者工具 CLI，只连 localhost；桥接依赖需自行 npm 安装。 | Apache-2.0 | [链接](https://github.com/GrubbyLee/claude_wechat_view_mod) |
 | typst-preview | — | Claude 写/改 `.typ` 时在桌面旁窗格实时预览 Typst 文档（SVG/PNG），`/typst-preview` 可指定文件；磁盘保存后自动刷新，带 Prev/Next/Refresh 与编译错误行号。备注：首次用本机 `uv` 安装 Typst Python 绑定与 Pillow；无提示改写、无 model.complete、无 asUser、无 $.http；主要面向 Desktop 窗格。 | MIT | [链接](https://github.com/ewanni/typst-preview) |
