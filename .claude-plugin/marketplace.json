@@ -7019,6 +7019,14 @@
       },
       "homepage": "https://github.com/bsw0610/ai-usage-meter",
       "license": "MIT"
+    },
+    {
+      "name": "sloppy",
+      "source": {
+        "source": "github",
+        "repo": "voidesc/sloppy",
+        "sha": "44c3532f6b30c74ab5790b1aace9625f57a605ac"
+      }
     }
   ]
 }
