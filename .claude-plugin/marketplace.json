@@ -7155,6 +7155,23 @@
         "name": "Tyler Laprade",
         "url": "https://github.com/tylerlaprade"
       }
+    },
+    {
+      "name": "toolbox",
+      "description": "Side pane catalog of everything usable in Claude Code: slash commands, skills, mods, hooks and workflows (most-used first), plus ideas and drafts. /toolbox opens it; optional AbovePrompt launcher (off by default) awaits next(e). Pane Update/toggle buttons call $.prompt.submit only on your click (no asUser auto). No prompt rewrite, no model.complete, no network.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/chershtik/claude-mods.git",
+        "path": "plugins/toolbox",
+        "sha": "19916596fb8363c6e8b8202c32aee7e63549b046"
+      },
+      "version": "6.2.0",
+      "author": {
+        "name": "Carmel",
+        "url": "https://github.com/chershtik"
+      },
+      "homepage": "https://github.com/chershtik/claude-mods/tree/main/plugins/toolbox",
+      "license": "MIT"
     }
   ]
 }
