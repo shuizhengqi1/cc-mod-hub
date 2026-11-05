@@ -7092,6 +7092,15 @@
       },
       "homepage": "https://github.com/alecespiritu/open-items",
       "license": "MIT"
+    },
+    {
+      "name": "windbg-pane",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/glslang/windbg-mcp.git",
+        "path": "mods/windbg-pane",
+        "sha": "68a3b8e518b1a4e2b6c88aa1e4b483aca37ec9fb"
+      }
     }
   ]
 }
