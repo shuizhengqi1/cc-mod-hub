@@ -7237,6 +7237,57 @@
       },
       "homepage": "https://github.com/dshw1234-dot/ram-watch",
       "license": "MIT"
+    },
+    {
+      "name": "scope-fence",
+      "description": "Declare the paths Claude may change (.claude/fence.json or /scope-fence …); Write/Edit/MultiEdit outside are held with Allow once / Block, and a band shows the fence.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Arhun Saday",
+        "url": "https://arhun.fr"
+      },
+      "homepage": "https://github.com/arhunsaday/agent-kit/tree/main/plugins/scope-fence",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arhunsaday/agent-kit.git",
+        "path": "plugins/scope-fence",
+        "sha": "4e87e4eb2db9784a4bd16ed1bf3ab0026fa9a4a0"
+      }
+    },
+    {
+      "name": "context-diet",
+      "description": "Flags big tool results and files read three or more times, and suggests /compact when context passes a threshold; a band lists top offenders.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Arhun Saday",
+        "url": "https://arhun.fr"
+      },
+      "homepage": "https://github.com/arhunsaday/agent-kit/tree/main/plugins/context-diet",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arhunsaday/agent-kit.git",
+        "path": "plugins/context-diet",
+        "sha": "4e87e4eb2db9784a4bd16ed1bf3ab0026fa9a4a0"
+      }
+    },
+    {
+      "name": "decision-log",
+      "description": "Spots decisions in your prompts (French/English cues) and appends them to DECISIONS.md; a band shows the last one; /decision-log lists them.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Arhun Saday",
+        "url": "https://arhun.fr"
+      },
+      "homepage": "https://github.com/arhunsaday/agent-kit/tree/main/plugins/decision-log",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arhunsaday/agent-kit.git",
+        "path": "plugins/decision-log",
+        "sha": "4e87e4eb2db9784a4bd16ed1bf3ab0026fa9a4a0"
+      }
     }
   ]
 }
