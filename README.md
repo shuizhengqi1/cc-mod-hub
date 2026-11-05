@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 769 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 770 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 769 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 770 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 769 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 770 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 769 个精选 Claude Code mods，按类别组织：
+以下是本市场的 770 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -443,6 +443,7 @@ For detailed descriptions of all 769 mods, see the Chinese section below. The �
 | followthrough-band | ⭐ 7（所在仓库） | 提示框上方显示本仓库到期的 followthrough 跟进检查（Run / Snooze / Close）；会话里部署/发布后若没登记检查会提醒。备注：需安装 followthrough CLI；本机运行 followthrough 固定子命令；tool.call 原样返回；按「Run」或「Register checks」会以你的身份提交一条提示（你按才会）。 | MIT | [链接](https://github.com/BayramAnnakov/followthrough/tree/main/mod) |
 | gh-status | ⭐ 6 | 当前分支 GitHub PR 的实时状态：提示框上方一行显示 PR 号、状态、合并结论、流水线、审查和未解决讨论；`/gh`（或 `/pr`，被占用时用 `/gh-pr`）打开 PRs / Issues / Actions 三个标签的详情窗格，含合并队列、各 job 的实时步骤、默认分支 CI 失败提示，可按仓库 owner 自动用不同的 gh 账号。备注：**需要本机已登录的 gh**；只在本机运行 gh/git 读 GitHub 数据，token 只通过 GH_TOKEN 传给它启动的 gh 子进程，不发送会话内容；合并、进出合并队列、自动合并、approve / request changes、标记 ready、重跑失败 job 都要在窗格里确认后才执行；「失败检查」按钮只用 $.prompt.fill 填进提示框，不自动发送；tool.call 只在 Bash 结果返回后触发刷新，不改写（hooks/register.tsx 1531–1535）。和 github-actions、pr-view、aichemist-pr-review-pane 部分重叠，这个功能更完整。 | MIT | [链接](https://github.com/oborchers/claude-gh-status) |
 | time-blame | ⭐ 6 | 把每一轮的耗时拆成 Claude（等待/输出）、工具、你（审批、提问）和其他，回合结束时在 "Worked for" 位置显示一行分解，`/blame` 打开整个会话的耗时清单窗格。备注：只计时，所有钩子（tool.call、turn.step、classic.PermissionRequest/PostToolUse/PostToolUseFailure）都原样 next 后返回，不改写、不拒绝、不往对话里加内容（hooks/register.ts 138–230）；纯本机，不调用模型、不联网；作者写明需要 Claude Code 2.1.302+（box 上 2.1.292 冒烟也能加载）。 | MIT | [链接](https://github.com/karanb192/time-blame) |
+| speclink-skills | ⭐ 6（所在仓库） | Speclink（Spec-Driven Development）技能条与侧窗：提示框上方按流程分页列出本机已装的 `/speclink-*` 技能，点一下只填进输入框不发送；`/speclink-panel` 打开看板（变更/讨论/品质工单），`#` 自动完成提案中的 change 名；会话标题跟随当前步骤与 change。备注：需本机 PATH 上有 **speclink CLI**（`npm i -g @speclink/cli` 等）；按钮只用 `$.prompt.fill`，从不 `prompt.submit`；AbovePrompt / classic.SessionStart 均 `await next(e)` 后再叠自己的 UI，不吞其它 mod；tool.call 只观察 Bash/Skill 后刷新、原样放行（含 `.catch`）；不改写提示、不调模型、不外发会话。 | MIT | [链接](https://github.com/MomoChenisMe/speclink/tree/main/integrations/claude-code/speclink-skills) |
 | github-actions | ⭐ 5（所在仓库） | 提示框上方一条显示当前分支的 GitHub Actions 与 PR：只跟踪本会话里 `git push` 过的提交，列出每个 workflow 与 job 的通过/失败/运行中/等待状态（运行中或失败时显示当前步骤），以及该分支 PR 的编号、标题、draft、审查结论与检查计数；点击可在浏览器打开对应页面；跑完 `git push` 或 `gh pr/run/workflow` 后自动刷新，有运行中的任务时每 15 秒刷新。备注：界面为葡萄牙语；用本机 `git` 与已登录的 `gh`（`gh pr view`、`gh run list/view`、`gh api rate_limit`，只读）访问 GitHub，没装 gh 时整条隐藏、未登录或限流时显示提示；`tool.call` 只观察 Bash 命令、原样放行；推送过的提交记录（sha 与分支，最多 5 个/会话、保留 30 个会话）存在插件存储里；打开链接用 xdg-open/open/start；不注册命令；来自 Hangar 仓库，但单独可用，不需要装 Hangar。 | MIT | [链接](https://github.com/jeffer1312/hangar/tree/main/plugins/github-actions) |
 | dash-guard | ⭐ 5（所在仓库） | 拒绝在 md/txt 写入 em dash、en dash 或双连字符；只拒绝不改写。备注：本机 $.fs.read。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/dash-guard) |
 | skill-stats | ⭐ 5（所在仓库） | /skill-stats 列出你的每个技能被用了多少次（历史记录 + 本 mod 加载后的实时计数）、最后使用日期、在技能清单里占多少 token、是否只以名字出现（描述没进上下文），并列出从未触发的技能（加 all 包含插件和内置技能）；`/skill-fix <技能>` 把一条让 skill-creator 改进该技能描述的请求填进输入框。备注：历史次数用本机 `grep` 扫 `~/.claude/projects/` 下的会话记录（可在 config_dirs 设多个配置目录），只取技能名；最后使用日期用 macOS 的 `stat -f` 取，Linux 上可能显示为 never；/skill-fix 只填入输入框、不自动发送，source_dirs 设置后用 `find` 查找技能源文件；两个命令都不跑模型；不联网。 | MIT | [链接](https://github.com/mutlumehmet/claude-plugins/tree/main/plugins/skill-stats) |

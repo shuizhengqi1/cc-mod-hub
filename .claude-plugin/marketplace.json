@@ -7101,6 +7101,15 @@
         "path": "mods/windbg-pane",
         "sha": "68a3b8e518b1a4e2b6c88aa1e4b483aca37ec9fb"
       }
+    },
+    {
+      "name": "speclink-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MomoChenisMe/speclink.git",
+        "path": "integrations/claude-code/speclink-skills",
+        "sha": "0ef0f4c9e937da1e5e2edd88ff161f0ecea5ec17"
+      }
     }
   ]
 }
