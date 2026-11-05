@@ -7141,6 +7141,20 @@
         "name": "Vitalii Popov",
         "url": "https://github.com/popoffvg"
       }
+    },
+    {
+      "name": "tool-colors",
+      "description": "Colors Claude Code's Bash command rows (program in green, rest syntax-highlighted) and ToolGroup summary rows (colored verbs per activity). Display-only ui.render for ToolUse(Bash) and ToolGroup; leaves ctrl+o expand and other tools alone. No prompt rewrite, no model.complete, no network.",
+      "source": {
+        "source": "github",
+        "repo": "tylerlaprade/claude-tool-colors",
+        "sha": "dbe6fb14487d160a7bbbec0e3ae6f0826a85dc1e"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Tyler Laprade",
+        "url": "https://github.com/tylerlaprade"
+      }
     }
   ]
 }
