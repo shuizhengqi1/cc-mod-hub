@@ -7188,6 +7188,22 @@
       },
       "homepage": "https://github.com/vicmaster/projects-status",
       "license": "MIT"
+    },
+    {
+      "name": "env-rejector",
+      "description": "Denies Read, Bash and Grep access to .env files and strips .env hits from Grep results, so secrets stay out of the model's context. Fail-closed: a guard that crashes denies or withholds.",
+      "source": {
+        "source": "github",
+        "repo": "isabel-nh/claude-env-rejector",
+        "sha": "e8aeb0cf5f3d7a9644494ea8e8b058581cfab8e0"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Isabel Maskrey",
+        "url": "https://github.com/isabel-nh"
+      },
+      "homepage": "https://github.com/isabel-nh/claude-env-rejector",
+      "license": "MIT"
     }
   ]
 }
