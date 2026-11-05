@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 772 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 771 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 772 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 771 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 772 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 771 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 772 个精选 Claude Code mods，按类别组织：
+以下是本市场的 771 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -101,7 +101,7 @@ For detailed descriptions of all 772 mods, see the Chinese section below. The �
 | budget-guard | ⭐ 9（所在仓库） | 费用与 5 小时/7 天限额：接近上限警告，超额拒绝工具调用。 |  | [链接](https://github.com/Arunjay4213/claude-mods/tree/main/plugins/budget-guard) |
 | tokenscope-live | ⭐ 7（所在仓库） | `/tokenscope` 开关侧边窗格，实时显示本会话：你的目标（ASKED）、Claude 当前在做什么及持续时长（NOW）、测试失败数变化、已改文件、按回合的成本加权 token 走势图、费用和上下文占用；配合 tokenscope 的 `tokenscope live` 本机服务时还能按「意图」分组显示步骤与花费、子代理、成本/跑偏/循环告警（可确认或清除）和回合结束后的总结与建议，`/tokenscope top 5h\|24h\|7d\|30d` 列出最费 token 的会话或意图。备注：需另装 tokenscope（Python，读取本机 `~/.claude/projects` 会话记录，默认只监听 127.0.0.1 且默认脱敏）；没有服务时退回本机模式，只显示当前工具、调用计数和 token 走势；mod 每秒用 `$.http.fetch` 向本机服务（默认 `http://127.0.0.1:8765`，可用 `TOKENSCOPE_LIVE_URL` 改）读取本会话数据，只发送会话 id 和告警编号，不发送对话内容；所有钩子只观察、原样放行，不改提示、不注入上下文、不运行其他程序；服务端的 `--haiku` / `--name-with-claude` 是可选项，会经你自己的 claude CLI 发送脱敏后的提示开头。 | MIT | [链接](https://github.com/rstagi/tokenscope/tree/main/mod/tokenscope-live) |
 | turn-footer | ⭐ 6（所在仓库） | 每条回答下方改成回合摘要（工具、请求、tokens、缓存命中）。 | MIT | [链接](https://github.com/arasovic/claude-code-mods/tree/main/turn-footer) |
-| claudeglass | ⭐ 5 | 提示框上方用量带与窗格：上下文占用、本会话费用、压缩 keep 清单与上次压缩丢失回顾、适时省 token 建议；`/glass` 开 Checkpoint，`/glass startup` 看启动分项；`/glass guard` 默认关，开启后高成本发送前询问（可取消并把原文填回）；`/glass tighten` 仅在你执行时用 Haiku 缩短草稿。备注：AbovePrompt 先 `await next(e)` 再叠带；默认 `prompt.submit`/`compose`/`context` 只观察原样放行；不联网、不外发会话；插件在仓内 `plugin/` 子目录（git-subdir），仓根 Python 仪表盘不随 mod 安装。 | MIT | [链接](https://github.com/PaulMorrisDev/claudeglass/tree/main/plugin) |
+| claudeglass | ⭐ 5（所在仓库） | 提示框上方用量带与窗格：上下文占用、本会话费用、压缩 keep 清单与上次压缩丢失回顾、适时省 token 建议；`/glass` 开 Checkpoint，`/glass startup` 看启动分项；`/glass guard` 默认关，开启后高成本发送前询问（可取消并把原文填回）；`/glass tighten` 仅在你执行时用 Haiku 缩短草稿。备注：AbovePrompt 先 `await next(e)` 再叠带；默认 `prompt.submit`/`compose`/`context` 只观察原样放行；不联网、不外发会话；插件在仓内 `plugin/` 子目录（git-subdir），仓根 Python 仪表盘不随 mod 安装。 | MIT | [链接](https://github.com/PaulMorrisDev/claudeglass/tree/main/plugin) |
 | subagent-meter | ⭐ 4（所在仓库） | 状态行显示本会话子代理调用次数、子代理占输出/全部 token 的比例和用得最多的子代理类型。备注：只读 turn.complete 的用量并原样返回；纯本机 UI。 | MIT | [链接](https://github.com/NarenDawar/narens-claude-toolkit/tree/main/plugins/subagent-meter) |
 | omp-quota | ⭐ 2（所在仓库） | omp 各 provider 剩余配额条（/quota）；备注：通过本机 `omp usage --json` 读取，不改写工具。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/omp-quota) |
 | usagemeter | ⭐ 2 | /usagemeter 打开一个面板（英文界面），汇总 Claude Code、Codex、OpenCode、Antigravity 的花费和 token（按今天/7 天/30 天/90 天等范围、按模型或项目分组），另一页显示各账号的套餐限额。备注：用 $.process.run 调本机 node 跑仓库自带的 helper（helper/dist/usagemeter-helper.mjs，由 helper/src 打包、CI 校验与源码一致，需 Node ≥22.5），只读本机各工具的对话记录算用量，缓存写在 ~/.cache/usagemeter；每天从 GitHub raw 下载一次 LiteLLM 公开价目表（不带任何你的数据）；限额页只有在你配置了 CLIProxyAPI hub 地址和管理 key 后才会通过 hub 查询 Anthropic/OpenAI/Google 的用量接口，打开 openCodeGo 选项（默认关）时会读 OpenCode 的 auth.json 里的 key 去查 opencode.ai 用量；不改提示，不上传会话内容。 | MIT | [链接](https://github.com/Elesiann/usagemeter) |
@@ -308,7 +308,6 @@ For detailed descriptions of all 772 mods, see the Chinese section below. The �
 | thinking-pane | — | 侧栏实时显示 Claude 的 thinking（按回合折叠用户提示与思考卡，子代理各一页可点进），`/thinking` 开关。备注：只观察 turn.step / agent.spawn / ui.render，不改写提示、不调模型、不联网；与 thinking-band（提示框上方最新 thinking 一行）互补，本条是带历史与子代理页的侧栏。仓根 MIT LICENSE（此前因无证暂拒，现已补）。 | MIT | [链接](https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane) |
 | option-picker | — | Claude 回复以编号选项收尾时，在提示框上方显示可多选芯片，点 Use 填入「Do 1, 3」；Dismiss 清除。备注：AbovePrompt 先 `await next(e)` 再渲染下游；`prompt.submit` 只清状态后 `next(e)`，不改写提示正文；纯本机 UI。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/option-picker) |
 | open-items | — | 侧栏「Open items」：展示 Claude 最新回复里未勾选的 `- [ ]` Quick suggestions，以及 wrap-up 下一步框里正在等你的问题与选项链接；点 Add/选项会把行追加进输入框（可多选再一次发送），`/open-items` 重开窗格。备注：`prompt.submit` 只清空问题状态后 `next(e)`，不改写提示；`ui.render` 仅 Pane；无 AbovePrompt、不调模型、不联网；终端里只有 checklist 部分可用（问题部分依赖桌面 Code 标签的 wrap-up）。与 option-picker（编号选项芯片）互补。 | MIT | [链接](https://github.com/alecespiritu/open-items) |
-| side-chat | — | 侧窗旁路对话：用当前主会话 fork 出一支旁聊（主线程看不到）；`/side` 或窗格 Input 提问，`Use in prompt` 把最后回复追加进输入框。备注：仅用户触发才 `$.model.fork`（无法 fork 时退 `$.model.complete` sonnet）；不改写主会话提示；`ui.render` 仅 Pane；不联网。 | MIT | [链接](https://github.com/popoffvg/side-chat) |
 
 ### 趣味与吉祥物 Fun & Mascots
 

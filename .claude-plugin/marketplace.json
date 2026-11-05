@@ -7127,22 +7127,6 @@
       },
       "homepage": "https://github.com/PaulMorrisDev/claudeglass",
       "license": "MIT"
-    },
-    {
-      "name": "side-chat",
-      "description": "Side pane chat forked from the main conversation. /side or the pane Input asks via $.model.fork (falls back to $.model.complete sonnet if nothing to fork). Main-thread prompts are never rewritten. Pane-only UI. Use in prompt appends via $.prompt.fill. No network.",
-      "source": {
-        "source": "github",
-        "repo": "popoffvg/side-chat",
-        "sha": "da5c82d18bd0156490f0a9f03efd5cd5203d80a8"
-      },
-      "version": "0.1.0",
-      "author": {
-        "name": "Vitalii Popov",
-        "url": "https://github.com/popoffvg"
-      },
-      "homepage": "https://github.com/popoffvg/side-chat",
-      "license": "MIT"
     }
   ]
 }
