@@ -7172,6 +7172,22 @@
       },
       "homepage": "https://github.com/chershtik/claude-mods/tree/main/plugins/toolbox",
       "license": "MIT"
+    },
+    {
+      "name": "projects-status",
+      "description": "Pane listing git status of every child repo when the session is in a parent folder of projects: dirty/clean, ahead/behind, branch, last commit. /projects-status rescans. Local read-only git only; Pane UI; no prompt rewrite, no network, no model calls.",
+      "source": {
+        "source": "github",
+        "repo": "vicmaster/projects-status",
+        "sha": "6ee57244926484d3d1d60e410d1fe055ea09b4cf"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Victor Velázquez",
+        "url": "https://github.com/vicmaster"
+      },
+      "homepage": "https://github.com/vicmaster/projects-status",
+      "license": "MIT"
     }
   ]
 }
