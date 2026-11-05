@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 776 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 778 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 776 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 778 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 776 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 778 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 776 个精选 Claude Code mods，按类别组织：
+以下是本市场的 778 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -146,6 +146,7 @@ For detailed descriptions of all 776 mods, see the Chinese section below. The �
 | send-after-reset | — | 额度快用尽时在提示框上方出现「Send after reset」按钮：把当前输入框里的提示排队，等 5 小时/7 天限额重置后再自动发出（可设阈值默认 90%、重置后宽限秒数）；队列存在本机 store，重启后还在；可「现在发送」或移除。备注：仅桌面 Code 页；`$.prompt.submit` **只**在定时器到期（或你点 Send now）时发出你事先排好的原文，不改写、不调模型、不联网；应用关闭时不会代发。 | MIT | [链接](https://github.com/michalstocki/send-after-reset) |
 | usage-prediction | — | 提示框上方预测「提交当前输入」会花多少 token / 占 5 小时额度多少：根据本会话已学到的输入放大比、输出均值与近期倍率给出区间；回合中显示本回合实时消耗。韩/英界面（`/config` 或 language 选项）。备注：`prompt.submit`/`prompt.change`/`prompt.edit` 只观察后 `next(e)`，不改写提示；只读 `$.session.usage()`；统计存在本机 `$.store`；不调模型、不联网。 | MIT | [链接](https://github.com/cow-coding/claude-usage-prediction-mod) |
 | prompts-graph | — | GitHub 风格「提示贡献图」：过去 365 天每天一个方格，按当天发出的提示数着色；侧窗显示，`/prompts-graph` 打开。备注：session.append 只观察计数、原样 next；会话开始扫描本机 transcripts 补漏；可选自动打开窗格；不改写提示、不调模型、不把会话正文外传。 | MIT | [链接](https://github.com/joshuazesu/prompts-graph/tree/main/plugin) |
+| weekly-budget | — | 按你设的每日份额对照本周 Claude 用量：提示框上方一条进度带，跑得太快时 toast 提醒，可选 Block 模式拦下你的下一条提示（不改写、不注入）；`/budget` 看计划与 snooze，`/budget-config` 改每日份额。备注：默认 Warn；Block 时 `prompt.submit` 只 `{drop}` 本人下一条、不改正文；`$.clock.every` 只刷新 UI；不联网、不调模型；插件在仓内 `weekly-budget/`（git-subdir）。与 budget-guard（接近限额拒工具）互补，本条是按日计划的周节奏。 | MIT | [链接](https://github.com/fafafa12/claude-weekly-budget/tree/main/weekly-budget) |
 
 ### 上下文管理 Context Management
 
@@ -829,6 +830,7 @@ For detailed descriptions of all 776 mods, see the Chinese section below. The �
 | keep-awake-linux | — | 在 Linux 上让 Claude 工作时系统不进入空闲挂起或睡眠：每次回合开始、工具调用、回合结束都续期，空闲超过设定分钟数（默认 30）或会话结束就自动放开；`/keep-awake-info` 打开窗格，列出哪些 Claude 会话正在阻止休眠（活跃、孤儿、重复）。备注：仅限装有 systemd 的 Linux，与 macOS 专用的 cc-mod-caffeinate 互补；运行 `systemd-inhibit --what=idle:sleep … sleep 1800`（每段 30 分钟租期，Claude 异常退出后也会自己失效）并用 `ps` 读取状态（hooks/register.tsx 53–63、117、131）；没有 systemd-inhibit 时只弹一条提示、不报错（box 冒烟即如此）；tool.call 原样放行；不联网。 | MIT | [链接](https://github.com/hk9890/claude-dev-tools/tree/master/plugins/keep-awake-linux) |
 | session-load | — | 提示框上方一条带：按 Claude Code 会话（含它拉起的 shell、测试、开发服务器、子代理工具）显示 CPU 和内存柱状图与 90 秒趋势，黄色标出会话结束后仍在跑的残留进程（按 worktree 分组），并列出本机正在跑的测试/lint/构建/部署命令、本仓库进行中的 GitHub Actions 和运行中的子代理，按以往耗时估算完成百分比和剩余时间。备注：只支持 macOS（Linux 上缺 sysctl，session.start 报错被跳过、不显示）；定时运行固定只读命令 `ps`、`memory_pressure`、`sysctl`（每 3 秒），读 `~/.claude/sessions/*.json`（每 15 秒），在会话目录运行 `gh run list`（每 30 秒，用本机 gh 登录，只查 Actions 状态）（hooks/register.tsx 313–357、427–438）；钩子都原样放行（session.start 先 next，ui.render 把 next(e) 放在带下方）；耗时历史存插件 store；不调模型、不外发会话内容；带常驻约 8–10 行，没有开关命令。与 MacLoad（按应用）、strays（残留进程）、job-watch/test-watch（任务进度）部分重叠，本 mod 侧重按会话归属。 | MIT | [链接](https://github.com/chcliu/session-load) |
 | session-procs | — | 实时窗格列出当前会话启动的进程：Claude 跑的每条 Bash/PowerShell 命令（以命令本身为标题）及其子进程（PID、内存、运行时长）、shell 退出后仍在跑的进程、MCP 服务器和辅助进程（可折叠），带统计卡片和迷你趋势图；提示框上方一行显示从工具启动的进程数和总内存，按钮或 `/procs` 打开窗格，状态行显示 `procs: N running from tools`。备注：只读，从不结束或修改进程；定时运行固定的只读探测命令（macOS/Linux 为 `/bin/sh -c '… exec ps -A -o pid= -o ppid= -o rss= -o etime= -o args='`，Windows 为 `powershell.exe -NoProfile -NonInteractive` 跑固定的 `Get-CimInstance Win32_Process`），命令里不拼接任何会话内容（hooks/register.tsx 50–55、hooks/tree.ts 39–52）；tool.call 先 next 原样放行，只在 shell 工具后刷新（register.tsx 185–190）；不调模型、不联网、不发送提示；命令行里像密钥的参数会被遮盖。与 strays、session-load（仅 macOS）部分重叠，本 mod 跨平台且只看当前会话。 | MIT | [链接](https://github.com/iftahs/claude-mods/tree/main/mods/session-procs) |
+| ram-watch | — | Windows 侧窗：显示 Claude 桌面应用、Cowork 虚拟机和各会话的内存占用，可一键重启应用；`/ram-watch` 打开（`/ram-watch demo` 只演示数字）。备注：仅 Windows（本机 powershell Get-CimInstance）；`SessionMode` 先 `await next(e)` 再叠面板；`$.tool.check` 是调用方读决策、不是门控 hook 返回 allow；不联网、不改提示。与 session-load（仅 macOS）互补。 | MIT | [链接](https://github.com/dshw1234-dot/ram-watch) |
 | node-close | — | Claude 跑完测试、构建等命令后，自动结束这条命令留下还在跑的 Node 进程（测试运行器、worker、node_modules 里的 esbuild/swc/turbo 等），避免越积越多占内存；后台命令在停止或会话结束时再清理；`/node-close` 列出本机所有父进程已不在的 Node（CPU、运行时长），`/node-close kill <PID…>` 或 `kill all` 结束选中的。备注：只结束「命令开始后新出现、已失去父进程、且带本会话 CLAUDE_PID」的进程，带 `&`、nohup、pm2、--detach 的命令视为有意常驻，只提示不结束；会自动发 SIGTERM，1 秒后仍在则 SIGKILL（Windows 用 `taskkill /T /F`）；`kill` 子命令只在你自己输入时执行；tool.call 先 next 原样执行，只在结果后附一行说明结束了哪些进程（hooks/register.ts 600–664）；本机运行 ps（读候选进程环境变量里的 CLAUDE_PID）/kill，Windows 上用 PowerShell 内联编译一段可读的 C# 读取 CLAUDE_PID（173–212）；不联网、不调模型、不改提示。与 strays（仅 macOS、手动结束）、session-procs（只读）部分重叠，本 mod 跨平台且自动清理。 | MIT | [链接](https://github.com/AnnihilationWizard/node-close) |
 | tmux | — | 在 tmux 里同时开多个 Claude Code（和 Codex）会话时，侧边窗格列出当前 tmux 会话里所有交互会话及状态（工作中 / 等你处理 / 空闲），高亮你正对着的那个；点一行把它切到前台，点 [x] 两次关闭该会话，点 [new] 在新 tmux 窗口里启动一个新会话（启动命令可在插件配置里改）；`/tmux` 重新打开窗格。备注：会话开始时自动打开窗格；通过 $.process 跑本机 tmux（list-panes/select-pane/new-window/send-keys/kill-pane，关闭需二次确认），读 `~/.claude/sessions` 判断状态；不联网、不调模型、不碰提示和工具调用；不在 tmux 里时只显示提示；新仓库（12 次提交）。 | MIT | [链接](https://github.com/Elijah-J/claude-tmux-pane) |
 | session-tracker | — | 侧栏列出本机所有打开的 Claude Code 会话，优先显示 Needs you；可消息/结束会话。不依赖 tmux，与 tmux（仅当前 tmux 会话）互补。备注：读本机会话注册表与 transcript 尾部，不联网、不改写提示。 | MIT | [链接](https://github.com/fixter-dev/claude-code-session-tracker) |

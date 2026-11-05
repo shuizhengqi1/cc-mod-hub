@@ -7204,6 +7204,39 @@
       },
       "homepage": "https://github.com/isabel-nh/claude-env-rejector",
       "license": "MIT"
+    },
+    {
+      "name": "weekly-budget",
+      "description": "Compares your weekly Claude usage with a per-day plan and warns, or holds messages back, when you run ahead of it. Default Warn mode toasts; optional Block drops only your next prompt (no rewrite/inject). /budget and /budget-config.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/fafafa12/claude-weekly-budget.git",
+        "path": "weekly-budget",
+        "sha": "b23fd6135970315276bb5decfc9932b39eb7e3fa"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "anjrakot",
+        "url": "https://github.com/fafafa12"
+      },
+      "homepage": "https://github.com/fafafa12/claude-weekly-budget/tree/main/weekly-budget",
+      "license": "MIT"
+    },
+    {
+      "name": "ram-watch",
+      "description": "Windows side panel: RAM for Claude desktop, Cowork VM and each session, with a restart-app button. /ram-watch. SessionMode awaits next(e).",
+      "source": {
+        "source": "github",
+        "repo": "dshw1234-dot/ram-watch",
+        "sha": "0cf5a7153fdc789cdc9f5c61c011d0a38c76dd48"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "이원찬",
+        "url": "https://github.com/dshw1234-dot"
+      },
+      "homepage": "https://github.com/dshw1234-dot/ram-watch",
+      "license": "MIT"
     }
   ]
 }
