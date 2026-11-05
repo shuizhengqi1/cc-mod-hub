@@ -7060,6 +7060,22 @@
       },
       "homepage": "https://github.com/neoskyz/claude-code-autoscroll-toggle",
       "license": "MIT"
+    },
+    {
+      "name": "cache-kpis",
+      "description": "Prompt-cache KPIs for the active session: hit rate, whether the last turn invalidated the cache, misses with likely cause (Compaction / Model / TTL / Prefix), tokens lost, and per-subagent rows. Status line under the prompt; /cache-kpis opens a pane (Esc closes, r resets). Observes turn.step via yield* next(e) only—no AbovePrompt, no prompt rewrite, no model calls, no network.",
+      "source": {
+        "source": "github",
+        "repo": "ScalingMBA/claude-cache-kpis",
+        "sha": "3a54eff96b1fa17ff4a7c6e4927c2df3431dde94"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "Bajram Qelibari",
+        "url": "https://github.com/ScalingMBA"
+      },
+      "homepage": "https://github.com/ScalingMBA/claude-cache-kpis",
+      "license": "MIT"
     }
   ]
 }
