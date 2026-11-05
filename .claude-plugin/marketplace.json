@@ -7076,6 +7076,22 @@
       },
       "homepage": "https://github.com/ScalingMBA/claude-cache-kpis",
       "license": "MIT"
+    },
+    {
+      "name": "open-items",
+      "description": "Side panel with the open Quick suggestions (unchecked - [ ] lines from Claude's latest reply) and the question Claude is waiting on in the wrap-up box, with reply options as clickable links. Click Add/option to append lines into the message box; /open-items reopens the panel. prompt.submit only clears the question then next(e)—no rewrite, no model calls, no network. Pane-only UI (no AbovePrompt).",
+      "source": {
+        "source": "github",
+        "repo": "alecespiritu/open-items",
+        "sha": "5fec0fd1b3e743eb2006dd24cc9ed28870cff8c8"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Alec Espiritu",
+        "url": "https://github.com/alecespiritu"
+      },
+      "homepage": "https://github.com/alecespiritu/open-items",
+      "license": "MIT"
     }
   ]
 }

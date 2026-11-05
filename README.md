@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 767 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 768 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 767 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 768 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 767 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 768 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 767 个精选 Claude Code mods，按类别组织：
+以下是本市场的 768 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -306,6 +306,7 @@ For detailed descriptions of all 767 mods, see the Chinese section below. The �
 | code-colors | — | 用自己的配色给 Claude Code 终端界面上色（源自 anthropics/claude-code#48636）：回复里的代码块和正文（标题、列表、粗体、行内代码、链接，十六进制颜色码显示成它自己的颜色）、Edit/Write 的 diff 和新建文件（delta 风格底色，改动的词加深标出）、完整展开的 Bash 行（命令、heredoc 内容、命令打印出的文件和 grep/rg 结果按各自语言着色，diff 与 JSON 也着色）以及 WebFetch 结果；支持 18 种语言，配色在 hooks/highlight.ts、prose.ts、diff.ts 顶部常量里改。比 shell-highlight（只高亮 Bash 调用）覆盖面更广。备注：只改界面渲染，Claude 读到的内容和保存的会话记录不变；turn.step 只统计思考速度、原样转发；为给 Bash 打印的文件着色会在本机读该文件（≤2 MB）；设 `CODE_COLORS_DEBUG=<文件>` 才写调试日志；思考时 spinner 文字会变成彩虹色（不能单独关）；不联网、不调模型、不改写提示。 | MIT | [链接](https://github.com/duplonicus/claude-mods/tree/main/code-colors) |
 | thinking-pane | — | 侧栏实时显示 Claude 的 thinking（按回合折叠用户提示与思考卡，子代理各一页可点进），`/thinking` 开关。备注：只观察 turn.step / agent.spawn / ui.render，不改写提示、不调模型、不联网；与 thinking-band（提示框上方最新 thinking 一行）互补，本条是带历史与子代理页的侧栏。仓根 MIT LICENSE（此前因无证暂拒，现已补）。 | MIT | [链接](https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane) |
 | option-picker | — | Claude 回复以编号选项收尾时，在提示框上方显示可多选芯片，点 Use 填入「Do 1, 3」；Dismiss 清除。备注：AbovePrompt 先 `await next(e)` 再渲染下游；`prompt.submit` 只清状态后 `next(e)`，不改写提示正文；纯本机 UI。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/option-picker) |
+| open-items | — | 侧栏「Open items」：展示 Claude 最新回复里未勾选的 `- [ ]` Quick suggestions，以及 wrap-up 下一步框里正在等你的问题与选项链接；点 Add/选项会把行追加进输入框（可多选再一次发送），`/open-items` 重开窗格。备注：`prompt.submit` 只清空问题状态后 `next(e)`，不改写提示；`ui.render` 仅 Pane；无 AbovePrompt、不调模型、不联网；终端里只有 checklist 部分可用（问题部分依赖桌面 Code 标签的 wrap-up）。与 option-picker（编号选项芯片）互补。 | MIT | [链接](https://github.com/alecespiritu/open-items) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
