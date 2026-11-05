@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 765 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 766 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 765 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 766 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 765 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 766 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 765 个精选 Claude Code mods，按类别组织：
+以下是本市场的 766 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -260,6 +260,7 @@ For detailed descriptions of all 765 mods, see the Chinese section below. The �
 | progress-bar-3000 | — | 注册自己的 `progress` 工具和 /progress-bar-3000 命令，驱动本机渲染器在 tmux 里画两行进度窗格。备注：Go 程序，同仓库 `make build`，把路径设到 `binary` 选项；只处理自己的工具；只开本机 tmux 进程，不联网。 | MIT | [链接](https://github.com/atomicstack/progress-bar-3000/tree/main/claude-code-mod) |
 | vim | — | 提示框上方的 vim 命令行：:w / :e 按会话保存和读回草稿，:q 退出（:q! 强制），输入其他名字就执行对应斜杠命令，支持 Tab 补全；用聚焦快捷键打开。备注：prompt.fill 只把你自己 :w 保存的草稿回填到空提示框，不自动提交；classic.UserPromptSubmit 只在发送后删掉已存草稿，不改写 prompt；草稿存于插件本地 store，不联网。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/vim) |
 | attachments | — | 把草稿里的附件显示成提示框上方的小卡片：粘贴的图片和文本、@ 提到的文件与文件夹，各带类型图标、路径和简介，点 × 从草稿里移除。备注：prompt.fill 只在你点 × 时删掉对应占位或 @ 引用；会用本机 ffprobe（若已安装）读取媒体尺寸时长，并跑 id -u 定位临时图片目录；不联网、不提交 prompt。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/attachments) |
+| autoscroll-toggle | — | 全屏模式下用 `/autoscroll`（或 `/autoscroll on\|off`）一键开关 Auto-scroll，不用进 `/config` 菜单，也不消耗模型回合；命令标 `immediate`，Claude 忙时也能用，只弹 toast、不往转录里写字。备注：优先 `$.config.list`/`$.config.set` 翻 `/config` 里同一行（改动立即生效并写入用户设置）；失败时回退插件自带 `scripts/toggle-autoscroll.py`（仅标准库，原子改写 `autoScrollEnabled`）；`session.start` 调 `next(e)`；无 AbovePrompt、不改写提示、不调模型、不外发。可选在 `~/.claude/keybindings.json` 绑 `command:autoscroll`。与 submit-without-autoscroll（发送时不跳回底部）互补。需 Claude Code 2.1.287+（作者测 2.1.318）。 | MIT | [链接](https://github.com/neoskyz/claude-code-autoscroll-toggle) |
 | stfu | — | 去掉 Claude 工作时那行转圈提示里的俏皮动词（如「Sauteing…」），只留用时和 token 数；回合结束那行统一显示为「Worked for 3s」。任务自带的说明文字（如「Running tests」）保持不变。备注：纯显示改动，不联网、不运行外部命令。 | MIT | [链接](https://github.com/thefuga/claude-x/tree/main/mods/stfu) |
 | host-colors | — | 按主机名给提示框上方加一条整宽彩色横线并写上主机名，底部模式栏前也加一个同色主机标签，在不同机器上开的会话一眼就能分清；颜色可在源码表里改，没配置的主机自动分配固定颜色。备注：启动时运行一次本机 `hostname`；纯 UI，不联网。 |  | [链接](https://github.com/sshamilton/claude-mods) |
 | grid-tables | — | 把回复里的 Markdown 表格画成适配终端宽度的网格，而不是折成竖排列表。备注：只替换 AssistantMessage 渲染，纯本机。 | MIT | [链接](https://github.com/betoescobar46/pituto/tree/main/plugins/grid-tables) |

@@ -7043,6 +7043,23 @@
         "repo": "AnimeshDali/ClaudeCode-DirectoryViewerPlugin",
         "sha": "98edeeb94b97032982b9dbd11804676650b176db"
       }
+    },
+    {
+      "name": "autoscroll-toggle",
+      "description": "Adds /autoscroll [on|off] to flip fullscreen Auto-scroll (autoScrollEnabled) without a model turn: prefers $.config.set like the /config menu, falls back to a bundled stdlib-only Python script that atomically edits settings.json. Immediate command, toast only, nothing written into the transcript. Complements submit-without-autoscroll (send without jumping to bottom).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/neoskyz/claude-code-autoscroll-toggle.git",
+        "path": "plugins/autoscroll-toggle",
+        "sha": "5e58dc542debdec492f18fd9d2f2138e56efffeb"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Neo Sky",
+        "url": "https://github.com/neoskyz"
+      },
+      "homepage": "https://github.com/neoskyz/claude-code-autoscroll-toggle",
+      "license": "MIT"
     }
   ]
 }
