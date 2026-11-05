@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 771 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 773 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 771 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 773 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 771 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 773 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 771 个精选 Claude Code mods，按类别组织：
+以下是本市场的 773 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -308,6 +308,7 @@ For detailed descriptions of all 771 mods, see the Chinese section below. The �
 | thinking-pane | — | 侧栏实时显示 Claude 的 thinking（按回合折叠用户提示与思考卡，子代理各一页可点进），`/thinking` 开关。备注：只观察 turn.step / agent.spawn / ui.render，不改写提示、不调模型、不联网；与 thinking-band（提示框上方最新 thinking 一行）互补，本条是带历史与子代理页的侧栏。仓根 MIT LICENSE（此前因无证暂拒，现已补）。 | MIT | [链接](https://github.com/sallvainian/claude-code-mods/tree/main/plugins/thinking-pane) |
 | option-picker | — | Claude 回复以编号选项收尾时，在提示框上方显示可多选芯片，点 Use 填入「Do 1, 3」；Dismiss 清除。备注：AbovePrompt 先 `await next(e)` 再渲染下游；`prompt.submit` 只清状态后 `next(e)`，不改写提示正文；纯本机 UI。 | MIT | [链接](https://github.com/ayden723/ship-and-pick/tree/main/option-picker) |
 | open-items | — | 侧栏「Open items」：展示 Claude 最新回复里未勾选的 `- [ ]` Quick suggestions，以及 wrap-up 下一步框里正在等你的问题与选项链接；点 Add/选项会把行追加进输入框（可多选再一次发送），`/open-items` 重开窗格。备注：`prompt.submit` 只清空问题状态后 `next(e)`，不改写提示；`ui.render` 仅 Pane；无 AbovePrompt、不调模型、不联网；终端里只有 checklist 部分可用（问题部分依赖桌面 Code 标签的 wrap-up）。与 option-picker（编号选项芯片）互补。 | MIT | [链接](https://github.com/alecespiritu/open-items) |
+| annotate | — | 侧窗按块批注 Claude 回复或 markdown 文件（段落/列表/代码块/表格行）：👍/💬/✗ 后一键 Send 汇总成一条提示；`/annotate`、`/annotate N`、`/annotate path.md`。备注：`ui.render` 仅 Pane；只有你点 Send 才 `$.prompt.submit({asUser:true})`；不改写主提示、不调模型、不联网。 | MIT | [链接](https://github.com/popoffvg/annotate) |
 
 ### 趣味与吉祥物 Fun & Mascots
 
@@ -619,6 +620,7 @@ For detailed descriptions of all 771 mods, see the Chinese section below. The �
 | ext-agent | — | 新增子代理类型 ext-agent:worker，改由本机 pi 或 opencode CLI 运行，这些回合不消耗 Claude token；内置代理默认仍可用（除非 blockBuiltin），可选 worktree。备注：需要 function hooks，且 pi/opencode 在 PATH 上；只在本机拉起进程，无 $.http、不改写提示。 | MIT | [链接](https://github.com/darkautism/ext-agent/tree/main/plugins/ext-agent) |
 | agent-model-router | — | 按项目配置表（`.claude/agent-model-router.json`）给每个子代理选模型；同一任务被再次派发时自动升一档（haiku→sonnet→opus，maxModel 封顶），每次选择写入本地日志，附带只读的 model-tuner 代理据日志提出调表建议。`/model-router` 生成或调整配置，`status` 查看。备注：只改子代理的 model 字段、不改其提示，出错时放行；`/model-router` 只提交插件自带的固定提示；`fable on` 时用 $.model.complete 发一句不含会话内容的探测；无 $.http、无 $.process。作者标 2.1.293+。 | MIT | [链接](https://github.com/deki-lab/agent-model-router) |
 | lazy-agents | — | 把 ~/.claude/agents 下用户级子代理从 Agent 列表藏起，按需用 find_agent(query) 搜索并解锁匹配项，避免大代理库每会话/每子代理白烧约 14k token；内置/插件/项目代理与 PINNED 名单仍可见。备注：只观察/隐藏 agent.offer，解锁后交回引擎；注册本机工具 find_agent（运行时名 mcp__lazy-agents__find_agent）；只读 HOME 与 ~/.claude/agents/*.md（深≤6、文件≤1000，不跟随符号链接）；不联网、不调模型、不改写提示；PINNED 写在 hooks/register.ts，常用代理需自行改源码；单提交新仓。 | MIT | [链接](https://github.com/oscarpedrero/lazy-agents) |
+| agent-deck | — | 侧窗 Agent Deck：本会话子代理（实时耗时、当前工具、token、步骤、Stop）、上下文与订阅限额条，可选「保持 cache 温热」；`/agentdeck`（首个子代理启动时也可自动开）；安装时选 EN/DE。备注：`ui.render` 仅 Pane；保活仅在你打开开关后用固定文案 `$.model.fork`（最多 5 次），不送会话全文、不改写提示、不联网；插件在仓内 `mods/agent-deck`（git-subdir）。 | MIT | [链接](https://github.com/hayboeck/claude-code-agent-deck/tree/main/mods/agent-deck) |
 
 ### 通知提醒 Notifications & Alerts
 
