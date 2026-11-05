@@ -7110,6 +7110,39 @@
         "path": "integrations/claude-code/speclink-skills",
         "sha": "0ef0f4c9e937da1e5e2edd88ff161f0ecea5ec17"
       }
+    },
+    {
+      "name": "claudeglass",
+      "description": "Above-prompt usage band and panes: context fullness, session cost, compaction keep-list / last-summary review, coaching tips. /glass opens Checkpoint; /glass guard (opt-in, off by default) asks before costly sends; /glass tighten rewrites the draft shorter via Haiku only when you run the command. AbovePrompt awaits next(e) then overlays. Default prompt.submit/compose/context only observe and pass through. No network; no session outbound. Plugin lives under plugin/ (git-subdir).",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/PaulMorrisDev/claudeglass.git",
+        "path": "plugin",
+        "sha": "0e9e2691f1086f9d0e601653e84f295d5ecf2185"
+      },
+      "version": "0.16.0",
+      "author": {
+        "name": "PaulMorrisDev",
+        "url": "https://github.com/PaulMorrisDev"
+      },
+      "homepage": "https://github.com/PaulMorrisDev/claudeglass",
+      "license": "MIT"
+    },
+    {
+      "name": "side-chat",
+      "description": "Side pane chat forked from the main conversation. /side or the pane Input asks via $.model.fork (falls back to $.model.complete sonnet if nothing to fork). Main-thread prompts are never rewritten. Pane-only UI. Use in prompt appends via $.prompt.fill. No network.",
+      "source": {
+        "source": "github",
+        "repo": "popoffvg/side-chat",
+        "sha": "da5c82d18bd0156490f0a9f03efd5cd5203d80a8"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Vitalii Popov",
+        "url": "https://github.com/popoffvg"
+      },
+      "homepage": "https://github.com/popoffvg/side-chat",
+      "license": "MIT"
     }
   ]
 }
