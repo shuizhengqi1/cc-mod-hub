@@ -7141,20 +7141,6 @@
         "name": "Vitalii Popov",
         "url": "https://github.com/popoffvg"
       }
-    },
-    {
-      "name": "agent-deck",
-      "description": "Side pane for subagents (live run time, current tool, tokens, steps, Stop), session context, subscription usage limits, and an optional keep-cache-warm switch (EN/DE). /agentdeck. Pane-only. Cache warm uses $.model.fork with a fixed ping only after you turn it on. No network; no prompt rewrite.",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/hayboeck/claude-code-agent-deck.git",
-        "path": "mods/agent-deck",
-        "sha": "87fdac2308972687ea8ac76f8e3470ad80897e53"
-      },
-      "version": "0.9.0",
-      "author": {
-        "name": "Manuel Hayböck"
-      }
     }
   ]
 }
