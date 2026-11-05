@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 783 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 782 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 783 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 782 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 783 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 782 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 783 个精选 Claude Code mods，按类别组织：
+以下是本市场的 782 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -421,7 +421,6 @@ For detailed descriptions of all 783 mods, see the Chinese section below. The �
 | tripwire | — | 拦住从历史 transcript 归纳出的反复 Bash 翻车：无 `-maxdepth` 的整盘/`~`/`$HOME` `find`、前台长时间 sleep 轮询、`\| tail/head` 掩盖错误且无 pipefail、遗忘的后台壳；命令末加 `# tripwire:allow` 可跳过。备注：只 `deny` 或跑完后附加提示，不改写命令；与 bash-guard / shell-guard 互补；纯本机。 | MIT | [链接](https://github.com/oaustegard/claude-code-mods/tree/main/tripwire) |
 | env-rejector | — | 拒绝 Read / Bash / Grep 触及 `.env` / `.env.*`（含 `.env.example` 的 Read/Grep），目录搜索时从 Grep 结果里剥掉 `.env` 命中；git 命令只允许点名 `.env.example`。备注：只 deny 或过滤结果，不改写命令；守卫失败时 deny（fail-closed）；不联网、不调模型、不改提示。与 secrets-guard（写/cat）和 protected-paths-guard（Edit/Write）互补。 | MIT | [链接](https://github.com/isabel-nh/claude-env-rejector) |
 | scope-fence | — | 用 `/scope-fence src/api/`（或 `.claude/fence.json`）声明 Claude 可以改的路径；围栏外的 Write/Edit/MultiEdit 先拦住，提示框上方横条给出 Allow once / Block；无界面会话直接拒绝。备注：AbovePrompt 先 `await next(e)` 再叠带；只 deny/询问，不改写调用；不联网、不调模型、不改提示；同仓其它插件未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/scope-fence) |
-| git-aware-fs | — | Claude 用 Bash `rm`/`mv` 删改已跟踪文件时，默认（rewrite）改写成 `git rm`/`git mv`，或（deny 模式）一律拒绝并给出应跑的 git 命令；混路径、多仓库、通配符、PowerShell 删除/移动也拦。备注：只挂 Bash `tool.call`；守卫失败 fail-closed deny；不碰提示、不联网、不调模型；可选 `mode=rewrite\|deny`；与 **gitignore-guard** / **shell-guard** 互补（盯的是索引同步）。 | MIT | [链接](https://github.com/isabel-nh/claude-git-aware-fs) |
 
 ### 开发工具 Dev Tools
 

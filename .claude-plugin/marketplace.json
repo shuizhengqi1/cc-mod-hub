@@ -7290,22 +7290,6 @@
       }
     },
     {
-      "name": "git-aware-fs",
-      "description": "Keeps the git index in sync when Claude deletes or moves files: Bash rm / mv of git-tracked paths is rewritten to git rm / git mv, or denied with the git command to run.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Isabel Maskrey",
-        "url": "https://github.com/isabel-nh"
-      },
-      "homepage": "https://github.com/isabel-nh/claude-git-aware-fs",
-      "license": "MIT",
-      "source": {
-        "source": "github",
-        "repo": "isabel-nh/claude-git-aware-fs",
-        "sha": "06d3cf4e0e88cc39596077112f8a29b181cf91d0"
-      }
-    },
-    {
       "name": "web",
       "description": "WebFetchRaw tool: fetches a URL and saves the page's own content to a file (no model paraphrase); HTML via trafilatura to markdown/text/html/raw, other types byte-for-byte. Needs uv and CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1.",
       "version": "0.1.1",
