@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 788 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 789 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 788 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 789 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 788 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 789 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 788 个精选 Claude Code mods，按类别组织：
+以下是本市场的 789 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -423,6 +423,7 @@ For detailed descriptions of all 788 mods, see the Chinese section below. The �
 | env-rejector | — | 拒绝 Read / Bash / Grep 触及 `.env` / `.env.*`（含 `.env.example` 的 Read/Grep），目录搜索时从 Grep 结果里剥掉 `.env` 命中；git 命令只允许点名 `.env.example`。备注：只 deny 或过滤结果，不改写命令；守卫失败时 deny（fail-closed）；不联网、不调模型、不改提示。与 secrets-guard（写/cat）和 protected-paths-guard（Edit/Write）互补。 | MIT | [链接](https://github.com/isabel-nh/claude-env-rejector) |
 | scope-fence | — | 用 `/scope-fence src/api/`（或 `.claude/fence.json`）声明 Claude 可以改的路径；围栏外的 Write/Edit/MultiEdit 先拦住，提示框上方横条给出 Allow once / Block；无界面会话直接拒绝。备注：AbovePrompt 先 `await next(e)` 再叠带；只 deny/询问，不改写调用；不联网、不调模型、不改提示；同仓其它插件未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/scope-fence) |
 | workflow-guard | — | 拦住会削弱 GitHub Actions 工作流的改动：Write/Edit 若**新引入**未钉死 40 位 commit SHA 的外部 `uses:`，或顶层缺少 `permissions:` / 新开 `write`/`write-all`，默认 **deny** 并说明怎么改；`/config` 可改成 warn（放行但把发现追加进工具结果）。`/workflow-guard list|ignore|unignore`（只有你亲手键入的 ignore 才生效）。备注：只检查 `.github/workflows/*.{yml,yaml}` 与 `action.yml`；只 deny（默认）或不改写命令；不联网、不调模型。与 protected-paths-guard（整路径拦 CI 文件）互补。 | MIT | [链接](https://github.com/reponomics/plugins/tree/main/plugins/workflow-guard) |
+| hook-xray-live | — | `/hook-xray` 只读列出本会话从 --settings / SDK 内联设置与托管策略（MDM 等）注入的 hooks，并做配置 lint（从不跑、从不改）。备注：只挂 session.start 注册命令 + command.run；用 `$.settings.read` 读各 source；可选 `save` 写本机 JSON；输出不进模型 context；不改写提示、不调模型、不联网、不运行被检查的 hooks。配套同仓 CLI `npx hook-xray`（本条只上 live mod 子目录）。插件在仓内 `mods/hook-xray-live/`（git-subdir）。 | MIT | [链接](https://github.com/nazrul-kabir/hook-xray/tree/main/mods/hook-xray-live) |
 
 ### 开发工具 Dev Tools
 
