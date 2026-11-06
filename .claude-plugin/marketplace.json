@@ -7420,6 +7420,57 @@
         "path": "mods/hook-xray-live",
         "sha": "ec74509d6ef117ec357fa550a20b631ec45f576c"
       }
+    },
+    {
+      "name": "file-explorer",
+      "description": "File tree pane that follows Claude's reads, edits and searches, with git status, search, preview and @path mentions. Calls next(e) on all hooks. No prompt rewrite, no model.complete, no network.",
+      "version": "0.4.1",
+      "author": {
+        "name": "anderson-spider",
+        "url": "https://github.com/anderson-spider"
+      },
+      "homepage": "https://github.com/anderson-spider/spider-claude-mods/tree/main/plugins/file-explorer",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anderson-spider/spider-claude-mods.git",
+        "path": "plugins/file-explorer",
+        "sha": "b89e552c3bdc8a4935a472dfe66a5c3b52c3c063"
+      }
+    },
+    {
+      "name": "image-preview",
+      "description": "Terminal image thumbnails for pasted images above the prompt and for images Claude reads under their transcript rows. AbovePrompt awaits next(e). Complements prompt-image-preview. No prompt rewrite, no model.complete, no network.",
+      "version": "0.3.1",
+      "author": {
+        "name": "anderson-spider",
+        "url": "https://github.com/anderson-spider"
+      },
+      "homepage": "https://github.com/anderson-spider/spider-claude-mods/tree/main/plugins/image-preview",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anderson-spider/spider-claude-mods.git",
+        "path": "plugins/image-preview",
+        "sha": "b89e552c3bdc8a4935a472dfe66a5c3b52c3c063"
+      }
+    },
+    {
+      "name": "session-hud",
+      "description": "Card above the prompt with model, repo/branch, context/cache, 5h/7d limits, subagents and last-turn stats, plus /session-panel. AbovePrompt awaits next(e). Optional nextSteps (default off) uses $.model.fork for draft suggestions only via prompt.fill. No prompt rewrite, no network.",
+      "version": "0.14.0",
+      "author": {
+        "name": "anderson-spider",
+        "url": "https://github.com/anderson-spider"
+      },
+      "homepage": "https://github.com/anderson-spider/spider-claude-mods/tree/main/plugins/session-hud",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anderson-spider/spider-claude-mods.git",
+        "path": "plugins/session-hud",
+        "sha": "b89e552c3bdc8a4935a472dfe66a5c3b52c3c063"
+      }
     }
   ]
 }
