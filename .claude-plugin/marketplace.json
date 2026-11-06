@@ -7354,6 +7354,23 @@
         "repo": "taxi-tabby/git-workspace",
         "sha": "4ba95957e0f72a0fc1569c47be61922d705ff2e6"
       }
+    },
+    {
+      "name": "progress-timeline",
+      "description": "Opens a pane when a plan is ready and shows progress.md as a timeline of cards. Polls the file every 2s; opens on new ## sections, on ExitPlanMode approve, or via /progress-timeline. Observe-only: tool.call on ExitPlanMode awaits next then refreshes; reads progress.md via $.fs only; no prompt rewrite, no model.complete, no $.http.",
+      "version": "0.1.0",
+      "author": {
+        "name": "iaintsaket",
+        "url": "https://github.com/iaintsaket"
+      },
+      "homepage": "https://github.com/iaintsaket/how-saket-claudes/tree/main/plugins/progress-timeline",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/iaintsaket/how-saket-claudes.git",
+        "path": "plugins/progress-timeline",
+        "sha": "9f6349804f2cdb08e2f03bf753d473b18e7a3a9e"
+      }
     }
   ]
 }

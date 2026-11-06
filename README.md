@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 785 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 786 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 785 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 786 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 785 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 786 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 785 个精选 Claude Code mods，按类别组织：
+以下是本市场的 786 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -743,6 +743,7 @@ For detailed descriptions of all 785 mods, see the Chinese section below. The �
 | speckit-companion | — | Spec Kit 运行伴侣：提示框上方进度带显示当前功能/阶段，侧栏窗格列出步骤、耗时、文档与任务勾选；`/speckit-tracker` 切换规格，Enter 读步骤文档、o 用编辑器打开。备注：只读项目 Spec Kit 文件（`$.fs`），AbovePrompt `await next` 后叠自己的 band；tool.call 先 next 再刷新；无 prompt.submit、无 model.complete、无 SessionStart shell、不联网。比 astrolabe（仅状态栏一行）更完整；与 md-taskview（编辑 tasks.md）互补。 | MIT | [链接](https://github.com/alfredoperez/speckit-companion-claude-mod) |
 | plan-names | — | 在计划模式里每批准一个计划，就把它另存为项目里的 `plans/<日期>-<标题>.md`（标题取计划的第一个 Markdown 标题，文件夹可在插件配置里改），计划有了可读的文件名，之前的计划不会被覆盖；同一天再次批准同一个计划时更新那份副本（仅当副本内容没被别人改过）。备注：只挂 ExitPlanMode 的 tool.call，先放行再读结果，从不改变计划或调用结果；只通过 $.fs 写文件；不联网、不调模型；新仓库（8 次提交）。 | MIT | [链接](https://github.com/nightlab-agent/plan-names) |
 | plan-view | — | 在计划模式里，把 Claude 正在写的计划显示在对话旁的窗格里，Claude 写入或修改计划文件时实时刷新；终端够宽（约 144 列）时自动打开，也可用 `/plan-view` 打开，`/config` 里可关自动打开、调窗格宽度。只显示，不改变 Claude 的计划方式。备注：只读计划文件，$.store 只存各会话的计划路径与窗格状态（最近 100 个），不存计划内容；不联网、不调模型、不跑进程；新仓库（7 次提交，带测试）。 | MIT | [链接](https://github.com/yukisaitoo/claude-code-plan-view) |
+| progress-timeline | — | 计划批准后或 progress.md 出现新 ## 段落时，在对话旁打开时间线窗格：按日期徽章分组的任务卡片、勾选步骤进度（绿/黄/灰），点箭头展开步骤；/progress-timeline 随时打开。备注：每 2 秒只读查找 progress.md（工作目录向上直到 git 根）；tool.call 对 ExitPlanMode 先 await next 再刷新/开窗，不改写工具；无 prompt 改写、无 model.complete、不联网。与 plan-progress（MCP 进度条）互补，本条读文件时间线。 | MIT | [链接](https://github.com/iaintsaket/how-saket-claudes/tree/main/plugins/progress-timeline) |
 | decision-log | — | 用英法关键词从你的提示里识别「已拍板」的句子，追加到项目根 `DECISIONS.md`；提示框上方横条显示最近一条，`/decision-log` 列出。备注：`prompt.submit` 只记录、提示原样放行；AbovePrompt 先 `await next(e)`；不调模型、不联网、不改写；与 main **decision-tracker**（盯回复里的决定）互补；同仓其它插件未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/decision-log) |
 | noticed-issues | — | 会话外旁观问题清单（按优先级分组）：⚑ 条打开窗格；可开后台会话修复或用 gh 建 GitHub issue 并跟状态。备注：AbovePrompt 先 await next(e) 再叠带；note_issue/resolve_issue 只写本机 per-project 列表；本机 gh（可选）；不改写提示、不调模型、不外发会话。 | MIT | [链接](https://github.com/dostapovets/claude-noticed-issues) |
 
