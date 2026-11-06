@@ -7371,6 +7371,22 @@
         "path": "plugins/progress-timeline",
         "sha": "9f6349804f2cdb08e2f03bf753d473b18e7a3a9e"
       }
+    },
+    {
+      "name": "tailnet-sessions",
+      "description": "Pane of Claude Code sessions on your Tailscale/ssh hosts (tmux): agents, tasks, recent chat and Remote Control links; /remote opens one in a Windows Terminal split. Observe-only: ssh refresh only, no prompt rewrite, no model.complete, no $.http exfil. Complements local tmux/session-tracker.",
+      "version": "0.1.0",
+      "author": {
+        "name": "00PrabalK00",
+        "url": "https://github.com/00PrabalK00"
+      },
+      "homepage": "https://github.com/00PrabalK00/tailnet-claude",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "00PrabalK00/tailnet-claude",
+        "sha": "ba8de08f568a861a5c3a434e3b8c3c9f16520f81"
+      }
     }
   ]
 }
