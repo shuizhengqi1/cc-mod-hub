@@ -7305,6 +7305,23 @@
         "path": "plugins/web",
         "sha": "6e63e3dc5f1739d69d2250b5196618e6fe59fe24"
       }
+    },
+    {
+      "name": "workflow-guard",
+      "description": "Stops Claude from weakening GitHub Actions workflows: denies Write/Edit that newly add unpinned external uses: (not a full 40-char commit SHA) or that leave/widen a top-level permissions block without read-only/empty permissions. Default mode is block; warn mode lets the edit through and appends findings to the tool result. /workflow-guard list|ignore|unignore (ignore only when you type it). Deny-only by default; never rewrites commands; no network; no model calls.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/reponomics/plugins.git",
+        "path": "plugins/workflow-guard",
+        "sha": "65f5458f2fa9b6690d61ac7f0b8744fe838e8348"
+      },
+      "version": "0.3.0-beta.1",
+      "author": {
+        "name": "Reponomics",
+        "url": "https://github.com/reponomics"
+      },
+      "homepage": "https://github.com/reponomics/plugins/tree/main/plugins/workflow-guard",
+      "license": "MIT"
     }
   ]
 }
