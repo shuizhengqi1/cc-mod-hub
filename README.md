@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 783 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 785 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 783 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 785 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 783 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 785 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 783 个精选 Claude Code mods，按类别组织：
+以下是本市场的 785 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -593,6 +593,7 @@ For detailed descriptions of all 783 mods, see the Chinese section below. The �
 | agent-undo | — | 按 hunk 列出本会话 Claude（含子代理）的 Edit/Write；在 git 仓里还记录免确认的 Bash/MCP 改文件；`/agent-undo` 或 undo 工具可撤销单个 hunk 或整次编辑，你后来改过的行不动。备注：本机 `git` 私有 index 快照，不提交；`tool.check` 只观察 `next()` 的判定、从不自行返回 allow；无提示改写、无 model.complete、无 $.http、无 asUser。 | MIT | [链接](https://github.com/nightlab-agent/agent-undo) |
 | toolbox | — | 侧窗目录：本机可用的斜杠命令、技能、mod、hooks 与 workflows（常用置顶），并含 ideas/drafts；`/toolbox`（及 `/toolbox:open`）打开。备注：可选提示框上方 ⚒ 启动器（默认关），AbovePrompt 先 `await next(e)` 再叠图标；`session.start`/`tool.call`/`command.run` 原样 next；窗格里 Update/开关等按钮才会 `$.prompt.submit`（你点才发，无 asUser 自动）；不改写提示、不调模型、不外发会话。同仓 skim-colors 未收（`prompt.compose`）。 | MIT | [链接](https://github.com/chershtik/claude-mods/tree/main/plugins/toolbox) |
 | projects-status | — | 会话开在「放多个仓库的父目录」时打开 Projects 窗格：每个子仓库的脏/干净、ahead/behind、非 main 分支名、最近提交时间与主题；每 5 分钟或 `/projects-status`/Refresh 重扫。备注：只读本机 `git status --porcelain=v2 --branch` 与 `git log -1`；仅 Pane（无 AbovePrompt）；不改提示、不联网、不调模型；单测 2/2。与 multirepo-diff-mod（看 diff）互补。 | MIT | [链接](https://github.com/vicmaster/projects-status) |
+| git-workspace | — | 侧栏 git 工作区树：扫描某目录下所有嵌套仓库/worktree/submodule，显示分支、↑↓、暂存/改动/未跟踪/冲突与最近提交。/git-workspace [目录]；约 60 秒与 Bash 后刷新。备注：session.start 自动开窗格；tool.call(Bash) 只观察、await next 后刷新；本机 git；不改写提示、不调模型、不联网。 | MIT | [链接](https://github.com/taxi-tabby/git-workspace) |
 
 ### 子代理管理 Subagent Management
 
@@ -743,6 +744,7 @@ For detailed descriptions of all 783 mods, see the Chinese section below. The �
 | plan-names | — | 在计划模式里每批准一个计划，就把它另存为项目里的 `plans/<日期>-<标题>.md`（标题取计划的第一个 Markdown 标题，文件夹可在插件配置里改），计划有了可读的文件名，之前的计划不会被覆盖；同一天再次批准同一个计划时更新那份副本（仅当副本内容没被别人改过）。备注：只挂 ExitPlanMode 的 tool.call，先放行再读结果，从不改变计划或调用结果；只通过 $.fs 写文件；不联网、不调模型；新仓库（8 次提交）。 | MIT | [链接](https://github.com/nightlab-agent/plan-names) |
 | plan-view | — | 在计划模式里，把 Claude 正在写的计划显示在对话旁的窗格里，Claude 写入或修改计划文件时实时刷新；终端够宽（约 144 列）时自动打开，也可用 `/plan-view` 打开，`/config` 里可关自动打开、调窗格宽度。只显示，不改变 Claude 的计划方式。备注：只读计划文件，$.store 只存各会话的计划路径与窗格状态（最近 100 个），不存计划内容；不联网、不调模型、不跑进程；新仓库（7 次提交，带测试）。 | MIT | [链接](https://github.com/yukisaitoo/claude-code-plan-view) |
 | decision-log | — | 用英法关键词从你的提示里识别「已拍板」的句子，追加到项目根 `DECISIONS.md`；提示框上方横条显示最近一条，`/decision-log` 列出。备注：`prompt.submit` 只记录、提示原样放行；AbovePrompt 先 `await next(e)`；不调模型、不联网、不改写；与 main **decision-tracker**（盯回复里的决定）互补；同仓其它插件未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/decision-log) |
+| noticed-issues | — | 会话外旁观问题清单（按优先级分组）：⚑ 条打开窗格；可开后台会话修复或用 gh 建 GitHub issue 并跟状态。备注：AbovePrompt 先 await next(e) 再叠带；note_issue/resolve_issue 只写本机 per-project 列表；本机 gh（可选）；不改写提示、不调模型、不外发会话。 | MIT | [链接](https://github.com/dostapovets/claude-noticed-issues) |
 
 ### 外部集成 External Integrations
 
