@@ -7454,6 +7454,40 @@
         "path": "plugins/image-preview",
         "sha": "b89e552c3bdc8a4935a472dfe66a5c3b52c3c063"
       }
+    },
+    {
+      "name": "turn-meter",
+      "description": "Shows how long each turn took, tools used (main + subagents), and tokens in a status band above the prompt, with optional long-turn toast/notify. Observe-only: turn.complete/tool.call await next then record; AbovePrompt awaits next(e) and stacks below. /turn-meter toggles the band. No prompt rewrite, no model.complete, no network.",
+      "version": "0.1.5",
+      "author": {
+        "name": "Nery Murillo",
+        "url": "https://github.com/nerymurillohnd"
+      },
+      "homepage": "https://github.com/nerymurillohnd/the-claude-factory/tree/main/plugins/turn-meter",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nerymurillohnd/the-claude-factory.git",
+        "path": "plugins/turn-meter",
+        "sha": "2b73828bd0f7d7d6d66aec9445959c4a18e1cf4d"
+      }
+    },
+    {
+      "name": "model-trace",
+      "description": "Usage observability pane: counts skills, agents, MCP servers, plugins, hooks and web tools used this session, with Markdown/HTML export via /model-trace. Observe-only: every hook awaits next then records; no prompt rewrite, no context injection, no model.complete, no network.",
+      "version": "0.1.4",
+      "author": {
+        "name": "Nery Murillo",
+        "url": "https://github.com/nerymurillohnd"
+      },
+      "homepage": "https://github.com/nerymurillohnd/the-claude-factory/tree/main/plugins/model-trace",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nerymurillohnd/the-claude-factory.git",
+        "path": "plugins/model-trace",
+        "sha": "2b73828bd0f7d7d6d66aec9445959c4a18e1cf4d"
+      }
     }
   ]
 }
