@@ -7305,6 +7305,22 @@
         "path": "plugins/web",
         "sha": "6e63e3dc5f1739d69d2250b5196618e6fe59fe24"
       }
+    },
+    {
+      "name": "simaphore",
+      "description": "Traffic lights for iOS simulators, Android emulators and their builds (Xcode, Gradle, android) when several Claude Code agents share one Mac: live panel, build queue and device leases. Opt-in by opening the panel; off when the last panel closes. No model calls, no outbound session traffic.",
+      "source": {
+        "source": "github",
+        "repo": "omaestra/simaphore",
+        "sha": "8e33d19c8756ef020eced40faa8ab56823a3ab3d"
+      },
+      "version": "1.0.0",
+      "author": {
+        "name": "omaestra",
+        "url": "https://github.com/omaestra"
+      },
+      "homepage": "https://github.com/omaestra/simaphore",
+      "license": "MIT"
     }
   ]
 }
