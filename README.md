@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 791 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 793 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 791 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 793 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 791 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 793 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 791 个精选 Claude Code mods，按类别组织：
+以下是本市场的 793 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -118,6 +118,7 @@ For detailed descriptions of all 791 mods, see the Chinese section below. The �
 | usage-feed | ⭐ 1（所在仓库） | 把订阅账号的 5 小时、7 天与 spend_limit 限额窗口合并写进本地 usage.json（会话开始和每回合后更新，多会话同时写也按规则合并不回退），供同仓库的 Windows 11 任务栏小窗 usage_widget.py 画用量条。备注：**仅 Windows**，需在插件设置里填 dataDir（必须是盘符开头的本地绝对路径，拒绝 OneDrive 与网络路径），不填则什么都不做；只读 $.session.usage 与 session.measure，只写 dataDir 下 usage.json 与排障日志两个文件；不碰提示和工具；不联网；任务栏小窗是仓库里另行运行的 Python 脚本，不随插件安装。 |  | [链接](https://github.com/imrooki/claude-usage-bar/tree/main/plugins/usage-feed) |
 | repo-spend | ⭐ 1（所在仓库） | 提示框上方一条带：当前仓库（含其 worktree，按实际干活的仓库分摊）累计花了多少钱、今天和近 7 天的花费，以及本会话实时花费、近 30 分钟每小时消耗速率和走势小图；订阅用户显示按 API 价格折算的金额；按周归档，Claude Code 删掉旧日志后总额仍保留；`/repo-spend` 隐藏/显示。备注：需要本机 python3；本机跑 `git rev-parse` 和插件自带的 scan.py 读 `~/.claude/projects` 会话记录，缓存写 `~/.cache/claude-repo-spend`、归档写 `~/.local/share/claude-repo-spend`；不联网、不调模型、不改提示和工具调用。 | MIT | [链接](https://github.com/aseem-upadhyay/qol-mods/tree/main/plugins/repo-spend) |
 | loop-watch | ⭐ 1（所在仓库） | 发现某个项目在自己反复开会话（定时任务、keep-alive 循环等在烧 token）：每次会话开始记下项目名和是否有人值守，同一项目一小时内启动超过 10 次就弹出提示；`/loop-watch` 列出近 24 小时启动最多的项目及无人值守次数，`/loop-watch ignore\|unignore <项目>` 静音或恢复。备注：只在 `~/.claude/loop-watch/` 写启动记录（保留 24 小时）和忽略名单；`$.process.run` 只用来读取 $HOME；不联网、不调模型、不改提示和工具调用。 | Apache-2.0 | [链接](https://github.com/vinayagrw/claude-skills/tree/main/mods/loop-watch) |
+| turn-meter | ⭐ 1（所在仓库） | 提示框上方显示上一回合耗时、主线程与子代理的工具次数、token（可关）；回合过长（默认 120s）可 toast/系统通知；/turn-meter 显示/隐藏。备注：只观察——turn.complete/tool.call 先 next 再记录；AbovePrompt 先 await next(e) 再叠自己的一行，不吃掉其它 mod；不联网、不调模型、不改写提示。与 turn-duration（Desktop 回答下方复刻终端耗时行）互补（本 mod 是提示框上方条带，并含工具/token/长回合提醒）。同仓其它插件未收。 | MIT | [链接](https://github.com/nerymurillohnd/the-claude-factory/tree/main/plugins/turn-meter) |
 | usage-log | — | 每回合写本地 jsonl 用量日志，并显示相对 7 日节奏的差距。备注：本机 process 写本地文件。 | MIT | [链接](https://github.com/tanuu5/usage-log/tree/main/plugins/usage-log) |
 | ration-book | — | 按历史给每个会话设读取额度（Read/Grep/Glob/WebFetch/WebSearch 结果字节数），用完后拒绝这些调用，/ration grant <KB> 手动加额度。备注：只拒绝不改写；额度历史存本机 $.store。 | MIT | [链接](https://github.com/arazvan-ec/xmarks/tree/main/mods/ration-book) |
 | time-spent | — | 每个回合一张实时卡片：时间和花费分别耗在 Claude 思考和哪类工具上（Bash、读写、子代理、后台任务等），支持时间线、条形、紧凑等视图；/time-spent 切换视图、看本会话汇总。备注：tool.call、turn.step、session.append 都只计时观察、原样传递，不改写内容；纯本机，不联网。 | MIT | [链接](https://github.com/leviyehonatan/claude-time-spent) |
@@ -516,6 +517,7 @@ For detailed descriptions of all 791 mods, see the Chinese section below. The �
 | branch-janitor | ⭐ 1（所在仓库） | 已完成分支清理：自动发现工作已结束的本地 git 分支（已合并、squash/rebase 合并，或装了 gh 时 PR 已合并），确认删除不丢东西（没在任何 worktree 检出、没有独有提交、没有未推送、没有 stash、不在保护列表）后弹窗问你是否删除，默认 Keep；远端分支是单独的第二个问题；有未合并 PR 的分支绝不提议；每次都给出恢复命令 `git branch <名> <sha>`；`/branch-janitor` 列出全部分支（含 PR 状态），`/branch-janitor clean/on/off`。备注：只有你点删除才执行 `git branch -d/-D` 和 `git push <remote> --force-with-lease=… --delete`（hooks/remove.ts 12–33、67–71；询问流程 hooks/janitor.ts 243–323）；tool.call 先原样执行 Bash 再查看、原样返回结果（hooks/register.tsx 46–56）；prompt.submit 只起一个定时器、不改写不注入（65–71）；选「never」会写本仓库 `git config --local toolkit.branchJanitor false`（janitor.ts 228）；只跑本机 git 和只读 `gh pr list`，不调模型；作者注明对话框与 gh 未经真机验证、未在 Windows 测试。 | MIT | [链接](https://github.com/samuelbfernandes/moddeck/tree/main/mods/branch-janitor) |
 | idle-mod | ⭐ 1 | Claude 工作时，提示框上方轮播本会话的项目体检结果：Claude 改过的文件里的 FIXME/TODO、本会话提交了但还没 push 的 commit、本会话新出现的 npm audit 漏洞或大版本更新；`/idle-mod` 打开窗格，还能展开整个项目的旧分支（30 天未动）、stash、TODO 总数。可修的条目带「preview」和「fix with Claude」按钮，按下才会以你的身份发出一条固定的「先查看并提建议、不要改动」提示。备注：通过 $.process 跑本机 git 与 npm（npm audit/outdated 会访问 npm registry，仓库自带 .npmrc 时跳过 npm 检查）；tool.call 只记录改过的文件、原样放行；不调模型、无 $.http；只在交互会话里扫描。 | MIT | [链接](https://github.com/demartinogiuseppe/idle-mod) |
 | duckdb-results | ⭐ 1（所在仓库） | Claude 用 Bash 跑 `duckdb` CLI（DuckDB 2.0 agent mode）时，把模型看到的紧凑 Markdown 表改画成对齐表格（类型暗色、数字右齐、NULL 暗色、省略标记与行数作页脚，错误带类型与位置）；`/duckdb` 打开窗格看最近 20 次结果，`/duckdb <sql>` 不经 Claude 回合直接跑 SQL。备注：需 PATH 上有 duckdb ≥2.0；tool.call 只观察 Bash、先 await next，仅在解析到 duckdb 结果时往工具结果追加一句「表已画给用户、勿再贴行」的 context（不改 stdout）；ui.render ToolResult 仅在匹配到本 mod 记下的 duckdb 结果且未展开时自绘表格，否则 next；Pane 只服务本 mod 的 requestId=duckdb；不联网、不调模型；根仓另有 duckdb-dialect skills（本条只收 results mod）。 | MIT | [链接](https://github.com/duckdb/duckdb-claude-plugin/tree/main/duckdb-results) |
+| model-trace | ⭐ 1（所在仓库） | /model-trace 打开窗格：汇总本会话用过的 skill、子代理、MCP、插件、hooks、网页工具的次数与时间，可导出 Markdown/HTML。备注：只观察——skill.prompt/agent.spawn/tool.call/classic.* 等均先 next 再记录，不改写、不注入 context；可选 statusLine；导出目录须已存在（默认 ~/Downloads）；不联网、不调模型。与 agent-trace（回合到模型请求树）互补（本 mod 侧重能力点名册与导出）。同仓其它插件未收。 | MIT | [链接](https://github.com/nerymurillohnd/the-claude-factory/tree/main/plugins/model-trace) |
 | codebase-atlas | — | 代码库架构图随读写点亮；可选用本机 $.model.complete 与 $.model.fork 提取决策，向用户模型发函数源码与 git diff HEAD，不外传。备注：本机 git。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/codebase-atlas) |
 | editor-context | — | 在桌面端提示框上方显示 Cursor/VS Code 当前文件与选区，并在每次提交时把你正在看的内容悄悄告诉 Claude。 | MIT | [链接](https://github.com/talbarina/claude-editor-context/tree/main/plugins/editor-context) |
 | gitgraph | — | /branches 打开本机 git 分支提交线图画板，可勾选多条分支对比。备注：本机只读 git status、for-each-ref、log；面板打开时每 15 秒刷新，Claude 跑含 git 的 Bash 后也会刷新；Bash 工具调用只观察原样返回。 |  | [链接](https://github.com/TCcodemaster/claude-mods/tree/main/gitgraph) |
