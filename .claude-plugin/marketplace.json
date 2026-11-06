@@ -7404,6 +7404,22 @@
         "path": "plugins/code-copy",
         "sha": "a2222676797892aff4e5feda929051b0eeae8b7d"
       }
+    },
+    {
+      "name": "hook-xray-live",
+      "description": "Live /hook-xray command: lists hooks this session gets from --settings/SDK inline settings and managed policy, with read-only config lint. Companion to the hook-xray CLI. No prompt rewrite, no model.complete, no network, never runs the hooks it inspects.",
+      "version": "0.1.0",
+      "author": {
+        "name": "hook-xray contributors"
+      },
+      "homepage": "https://github.com/nazrul-kabir/hook-xray",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/nazrul-kabir/hook-xray.git",
+        "path": "mods/hook-xray-live",
+        "sha": "ec74509d6ef117ec357fa550a20b631ec45f576c"
+      }
     }
   ]
 }
