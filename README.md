@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 792 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 791 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 792 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 791 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 792 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 791 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 792 个精选 Claude Code mods，按类别组织：
+以下是本市场的 791 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -114,7 +114,6 @@ For detailed descriptions of all 792 mods, see the Chinese section below. The �
 | rtk-gain | ⭐ 1（所在仓库） | 在状态栏显示 RTK 节省的 token，`/rtk-gain` 把完整的 `rtk gain` 报告画成卡片（英语/法语）。备注：需要本机 `rtk`，每次 Bash 调用后跑一次 `rtk gain -f json`；tool.call 只观察、原样放行；不联网。 | MIT | [链接](https://github.com/Fazzani/claude-mods/tree/main/plugins/rtk-gain) |
 | weekly | ⭐ 1（所在仓库） | `/week` 对比本周（从周一起）和上周的会话数、轮数、工具调用、编辑文件数和花费及变化。备注：数据存在本地 `$.store`；不运行其他程序、不联网。 | MIT | [链接](https://github.com/baselane-sh/mods/tree/main/plugins/weekly) |
 | runway | ⭐ 1 | 提示框上方 Command Code 套餐额度与节奏；读本机凭据调 billing API，不上传会话正文。备注：本机读配置文件/密钥。 | MIT | [链接](https://github.com/Jovan1666/claude-code-runway) |
-| session-hud | ⭐ 1（所在仓库） | 提示框上方会话卡：模型、仓库/目录/分支、上下文与缓存、5 小时/7 天限额与节奏、运行中子代理（类型/模型/effort/token）、上一回合收发与错误；`/session-panel` 窗格汇总本会话代理与近 15 分钟。备注：AbovePrompt 先 `await next(e)`；可选 `nextSteps`（**默认关**）才用 `$.model.fork` 建议下一步，点选只用 `$.prompt.fill` 填草稿、从不自动提交；不改写提示、不联网。插件在仓内 `plugins/session-hud/`（git-subdir）。 | MIT | [链接](https://github.com/anderson-spider/spider-claude-mods/tree/main/plugins/session-hud) |
 | session-models | ⭐ 1（所在仓库） | 显示主模型、每个模型被多少子代理使用（几个正在跑），子代理扎堆或某个子代理上下文过大时弹提醒。备注：只读会话与子代理用量，纯本机 UI。 | MIT | [链接](https://github.com/AbhiramDwivedi/claude-mods/tree/main/plugins/session-models) |
 | usage-feed | ⭐ 1（所在仓库） | 把订阅账号的 5 小时、7 天与 spend_limit 限额窗口合并写进本地 usage.json（会话开始和每回合后更新，多会话同时写也按规则合并不回退），供同仓库的 Windows 11 任务栏小窗 usage_widget.py 画用量条。备注：**仅 Windows**，需在插件设置里填 dataDir（必须是盘符开头的本地绝对路径，拒绝 OneDrive 与网络路径），不填则什么都不做；只读 $.session.usage 与 session.measure，只写 dataDir 下 usage.json 与排障日志两个文件；不碰提示和工具；不联网；任务栏小窗是仓库里另行运行的 Python 脚本，不随插件安装。 |  | [链接](https://github.com/imrooki/claude-usage-bar/tree/main/plugins/usage-feed) |
 | repo-spend | ⭐ 1（所在仓库） | 提示框上方一条带：当前仓库（含其 worktree，按实际干活的仓库分摊）累计花了多少钱、今天和近 7 天的花费，以及本会话实时花费、近 30 分钟每小时消耗速率和走势小图；订阅用户显示按 API 价格折算的金额；按周归档，Claude Code 删掉旧日志后总额仍保留；`/repo-spend` 隐藏/显示。备注：需要本机 python3；本机跑 `git rev-parse` 和插件自带的 scan.py 读 `~/.claude/projects` 会话记录，缓存写 `~/.cache/claude-repo-spend`、归档写 `~/.local/share/claude-repo-spend`；不联网、不调模型、不改提示和工具调用。 | MIT | [链接](https://github.com/aseem-upadhyay/qol-mods/tree/main/plugins/repo-spend) |
