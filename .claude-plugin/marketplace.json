@@ -7387,6 +7387,23 @@
         "repo": "00PrabalK00/tailnet-claude",
         "sha": "ba8de08f568a861a5c3a434e3b8c3c9f16520f81"
       }
+    },
+    {
+      "name": "code-copy",
+      "description": "Adds a [Copy] button under each fenced code block in Claude's replies, plus /cp N to copy the Nth block when buttons are not clickable. UI strings Korean. AbovePrompt and AssistantMessage call next(e). Complements copy-command (shell-only). No prompt rewrite, no model.complete, no network.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Moksil",
+        "url": "https://github.com/Moksil"
+      },
+      "homepage": "https://github.com/Moksil/claude-mods",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Moksil/claude-mods.git",
+        "path": "plugins/code-copy",
+        "sha": "a2222676797892aff4e5feda929051b0eeae8b7d"
+      }
     }
   ]
 }
