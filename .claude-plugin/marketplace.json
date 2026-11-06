@@ -7290,6 +7290,40 @@
       }
     },
     {
+      "name": "change-ledger",
+      "version": "0.1.0",
+      "description": "Lists the files Claude touched this session with +/- lines in a band above the prompt, and a Commit this batch button that asks Claude to commit exactly those files; collapses to one line.",
+      "author": {
+        "name": "Arhun Saday",
+        "url": "https://arhun.fr"
+      },
+      "homepage": "https://github.com/arhunsaday/agent-kit/tree/main/plugins/change-ledger",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arhunsaday/agent-kit.git",
+        "path": "plugins/change-ledger",
+        "sha": "4e87e4eb2db9784a4bd16ed1bf3ab0026fa9a4a0"
+      }
+    },
+    {
+      "name": "cache-warm",
+      "version": "1.4.0",
+      "description": "Prompt-cache warmth above the prompt: a countdown bar, hit rate per reply, what the cache saved, lapse warnings and keep-warm pings (by hand or automatic); /cache-warm shows or hides it.",
+      "author": {
+        "name": "Arhun Saday",
+        "url": "https://arhun.fr"
+      },
+      "homepage": "https://github.com/arhunsaday/agent-kit/tree/main/plugins/cache-warm",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/arhunsaday/agent-kit.git",
+        "path": "plugins/cache-warm",
+        "sha": "4e87e4eb2db9784a4bd16ed1bf3ab0026fa9a4a0"
+      }
+    },
+    {
       "name": "web",
       "description": "WebFetchRaw tool: fetches a URL and saves the page's own content to a file (no model paraphrase); HTML via trafilatura to markdown/text/html/raw, other types byte-for-byte. Needs uv and CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1.",
       "version": "0.1.1",

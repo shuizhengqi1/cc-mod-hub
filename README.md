@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 793 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 795 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 793 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 795 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 793 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 795 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 793 个精选 Claude Code mods，按类别组织：
+以下是本市场的 795 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -148,6 +148,7 @@ For detailed descriptions of all 793 mods, see the Chinese section below. The �
 | usage-prediction | — | 提示框上方预测「提交当前输入」会花多少 token / 占 5 小时额度多少：根据本会话已学到的输入放大比、输出均值与近期倍率给出区间；回合中显示本回合实时消耗。韩/英界面（`/config` 或 language 选项）。备注：`prompt.submit`/`prompt.change`/`prompt.edit` 只观察后 `next(e)`，不改写提示；只读 `$.session.usage()`；统计存在本机 `$.store`；不调模型、不联网。 | MIT | [链接](https://github.com/cow-coding/claude-usage-prediction-mod) |
 | prompts-graph | — | GitHub 风格「提示贡献图」：过去 365 天每天一个方格，按当天发出的提示数着色；侧窗显示，`/prompts-graph` 打开。备注：session.append 只观察计数、原样 next；会话开始扫描本机 transcripts 补漏；可选自动打开窗格；不改写提示、不调模型、不把会话正文外传。 | MIT | [链接](https://github.com/joshuazesu/prompts-graph/tree/main/plugin) |
 | weekly-budget | — | 按你设的每日份额对照本周 Claude 用量：提示框上方一条进度带，跑得太快时 toast 提醒，可选 Block 模式拦下你的下一条提示（不改写、不注入）；`/budget` 看计划与 snooze，`/budget-config` 改每日份额。备注：默认 Warn；Block 时 `prompt.submit` 只 `{drop}` 本人下一条、不改正文；`$.clock.every` 只刷新 UI；不联网、不调模型；插件在仓内 `weekly-budget/`（git-subdir）。与 budget-guard（接近限额拒工具）互补，本条是按日计划的周节奏。 | MIT | [链接](https://github.com/fafafa12/claude-weekly-budget/tree/main/weekly-budget) |
+| cache-warm | — | 提示框上方显示 prompt cache 剩余温热时间、命中率、节省量与 lapse 警告；可手动或自动 keep-warm ping（$.model.fork 重读缓存前缀，避免冷启动重写）。/cache-warm 显示/隐藏，/cache-warm-auto 开关自动 ping。备注：classic.SessionStart 只更新温热状态后 next；自动 ping 需用户亲自打开；AbovePrompt 先 await next(e) 再叠自己的条，不吃掉其它 mod；不改写提示、不往 context 注入；与 prompt-cache-control（只读命中/倒计时）、cold-cache-guard（拦截）互补。同仓其它插件本轮未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/cache-warm) |
 
 ### 上下文管理 Context Management
 
@@ -600,6 +601,7 @@ For detailed descriptions of all 793 mods, see the Chinese section below. The �
 | toolbox | — | 侧窗目录：本机可用的斜杠命令、技能、mod、hooks 与 workflows（常用置顶），并含 ideas/drafts；`/toolbox`（及 `/toolbox:open`）打开。备注：可选提示框上方 ⚒ 启动器（默认关），AbovePrompt 先 `await next(e)` 再叠图标；`session.start`/`tool.call`/`command.run` 原样 next；窗格里 Update/开关等按钮才会 `$.prompt.submit`（你点才发，无 asUser 自动）；不改写提示、不调模型、不外发会话。同仓 skim-colors 未收（`prompt.compose`）。 | MIT | [链接](https://github.com/chershtik/claude-mods/tree/main/plugins/toolbox) |
 | projects-status | — | 会话开在「放多个仓库的父目录」时打开 Projects 窗格：每个子仓库的脏/干净、ahead/behind、非 main 分支名、最近提交时间与主题；每 5 分钟或 `/projects-status`/Refresh 重扫。备注：只读本机 `git status --porcelain=v2 --branch` 与 `git log -1`；仅 Pane（无 AbovePrompt）；不改提示、不联网、不调模型；单测 2/2。与 multirepo-diff-mod（看 diff）互补。 | MIT | [链接](https://github.com/vicmaster/projects-status) |
 | git-workspace | — | 侧栏 git 工作区树：扫描某目录下所有嵌套仓库/worktree/submodule，显示分支、↑↓、暂存/改动/未跟踪/冲突与最近提交。/git-workspace [目录]；约 60 秒与 Bash 后刷新。备注：session.start 自动开窗格；tool.call(Bash) 只观察、await next 后刷新；本机 git；不改写提示、不调模型、不联网。 | MIT | [链接](https://github.com/taxi-tabby/git-workspace) |
+| change-ledger | — | 提示框上方列出本批 Write/Edit/MultiEdit 改动的文件与 +/- 行数，可折叠；「Commit this batch」按钮让 Claude 只暂存并提交这些文件后开新批次。备注：Bash/sed/formatter 改动看不见；tool.call 先 next 再记录；AbovePrompt 先 await next(e)；Commit 按钮触发的 prompt.submit 无 asUser、不改写你的输入；不联网不调模型。与 repo-ledger（按仓库未提交状态）、changes-receipt（每轮白话收据）互补。同仓其它插件本轮未收。 | MIT | [链接](https://github.com/arhunsaday/agent-kit/tree/main/plugins/change-ledger) |
 
 ### 子代理管理 Subagent Management
 
