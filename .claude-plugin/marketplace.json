@@ -7322,6 +7322,38 @@
       },
       "homepage": "https://github.com/reponomics/plugins/tree/main/plugins/workflow-guard",
       "license": "MIT"
+    },
+    {
+      "name": "noticed-issues",
+      "description": "Per-project list of problems Claude noticed outside the current task (bug next door, leaked secret, broken config, failing check, stale docs), grouped by priority in a pane opened from a ⚑ count above the prompt; start a background session or file a GitHub issue per entry. AbovePrompt awaits next(e) and stacks the band; tools note_issue/resolve_issue only write the local list; no prompt rewrite, no model.complete, no $.http of session content.",
+      "version": "0.20.0",
+      "author": {
+        "name": "Dmytro Ostapovets",
+        "url": "https://github.com/dostapovets"
+      },
+      "homepage": "https://github.com/dostapovets/claude-noticed-issues",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "dostapovets/claude-noticed-issues",
+        "sha": "15c6141017ff8c010a53f7266facc8cf060ff4b1"
+      }
+    },
+    {
+      "name": "git-workspace",
+      "description": "Pane showing every git repository under a folder as a collapsible tree (nested repos, linked worktrees, submodules) with branch, ahead/behind, staged/modified/untracked/conflict counts and last commit age. /git-workspace [folder]; rescans every 60s and shortly after Bash. Observe-only tool.call on Bash (await next then refresh); no prompt rewrite, no model.complete, no $.http.",
+      "version": "0.4.0",
+      "author": {
+        "name": "taxi-tabby",
+        "url": "https://github.com/taxi-tabby"
+      },
+      "homepage": "https://github.com/taxi-tabby/git-workspace",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "taxi-tabby/git-workspace",
+        "sha": "4ba95957e0f72a0fc1569c47be61922d705ff2e6"
+      }
     }
   ]
 }
