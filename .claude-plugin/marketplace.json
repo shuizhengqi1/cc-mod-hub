@@ -7322,6 +7322,21 @@
       },
       "homepage": "https://github.com/reponomics/plugins/tree/main/plugins/workflow-guard",
       "license": "MIT"
+    },
+    {
+      "name": "who-approved",
+      "description": "Logs who approved each tool call (a hook, a settings rule, the auto-mode classifier, or a person) to a local JSONL file. Log only: never changes the decision.",
+      "source": {
+        "source": "github",
+        "repo": "aqaurius6666/claude-who-approved",
+        "sha": "5fd720384fcda401da2253c6326d076f78dd77c5"
+      },
+      "version": "0.2.0",
+      "author": {
+        "name": "aqaurius6666",
+        "url": "https://github.com/aqaurius6666"
+      },
+      "homepage": "https://github.com/aqaurius6666/claude-who-approved"
     }
   ]
 }
