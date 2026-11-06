@@ -7522,23 +7522,6 @@
         "path": "plugins/model-trace",
         "sha": "2b73828bd0f7d7d6d66aec9445959c4a18e1cf4d"
       }
-    },
-    {
-      "name": "harness-monitor",
-      "version": "0.2.2",
-      "description": "Read-only view of what the harness loaded and ran this session; /monitor opens the pane.",
-      "author": {
-        "name": "Viet Dung Nguyen",
-        "url": "https://github.com/stardust2602"
-      },
-      "homepage": "https://github.com/stardust2602/awesome-claude-mods/tree/main/plugins/harness-monitor",
-      "license": "MIT",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/stardust2602/awesome-claude-mods.git",
-        "path": "plugins/harness-monitor",
-        "sha": "163a7e8e1cade46169c855bdf71530f57803c490"
-      }
     }
   ]
 }
