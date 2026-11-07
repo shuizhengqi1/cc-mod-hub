@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 811 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 810 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 811 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 810 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 811 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 810 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 811 个精选 Claude Code mods，按类别组织：
+以下是本市场的 810 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -615,7 +615,6 @@ For detailed descriptions of all 811 mods, see the Chinese section below. The �
 | route-lens | — | 只观察：显示每条指令实际用到的 skill、agent、记忆文件与拦住它的 hook（`/route` 窗格 + 状态行）。备注：各钩子均 await next 后记录；ui.render 仅 Pane；不改写提示、不注入上下文、不调模型、不联网。与 agent-flow（子代理树）/ model-trace 角度不同：按「这条指令走了哪条 route」汇总。 | MIT | [链接](https://github.com/Buer2333/claude-guardrails/tree/main/plugins/route-lens) |
 | file-trail | — | 折叠的「Read 3 files」下加一行点出文件名；并记录每次 Read/Write/Edit/NotebookEdit/Glob/Grep 的时间与 blocked/error，侧窗 `/file-trail` + 状态行 + 项目内本地 trail 文件。备注：tool.call/tool.check 先 await next 再记录、原样放行；ToolGroup 先 next 再叠；无 AbovePrompt；不 deny、不改写工具、不读文件内容、不联网、不调模型。与 outputs-pane（写出文件清单）/ cc-file-history-mod（可还原编辑历史）/ change-ledger（+/- 批次）互补：本条展开折叠读文件组并标 blocked。同作者 date-check 因 prompt 注入 + Bash/Write 改写未收。 | MIT | [链接](https://github.com/nightlab-agent/file-trail) |
 | code-review-harness | — | 只读整仓架构/代码/安全评估：确定性证据 + 分阶段 specialist agents + 对抗验证，产出 ANALYSIS_REPORT / ARCHITECTURE / ROADMAP / SARIF；评审进行中状态行 + `/review-dashboard` 窗格。备注：Mod（register.tsx）只观察 status/progress、Spinner 调 next；附带 shell PreToolUse 仅在 CODE_REVIEW_ACTIVE 时 deny（不返回 allow、不注入 additionalContext）；不改写提示、不调 $.model.complete、不联网。与 review-pane / diff-review / pr-live-review 互补：本条是整仓只读评审流水线+仪表盘，不是会话/PR diff 窗格。 | Apache-2.0 | [链接](https://github.com/cwijayasundara/rig-code-reviewer) |
-| tavolozza | — | 会话内挑选本项目启用哪些插件：`/tavo` 打开窗格（或启动时按配置弹出），把选择写入项目 `.claude/settings.local.json` 的 `enabledPlugins`，再触发 `/reload-plugins`。备注：只写允许路径下的 settings.local.json；钩子 `await next`/`next(e)`；`prompt.submit` 只清提示带；不改写提示、不调模型、不联网；用户在窗格确认后才写入。同仓 MIT LICENSE。 | MIT | [链接](https://github.com/Psymboll/Tavolozza/tree/main/plugins/tavolozza) |
 
 ### 子代理管理 Subagent Management
 

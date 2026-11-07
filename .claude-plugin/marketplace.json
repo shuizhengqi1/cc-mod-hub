@@ -7755,23 +7755,6 @@
       }
     },
     {
-      "name": "tavolozza",
-      "version": "0.1.0",
-      "description": "Pick which plugins are on for this project, from inside the session: /tavo writes the choice to .claude/settings.local.json.",
-      "author": {
-        "name": "Psymboll"
-      },
-      "homepage": "https://github.com/Psymboll/Tavolozza/tree/main/plugins/tavolozza",
-      "repository": "https://github.com/Psymboll/Tavolozza",
-      "license": "MIT",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/Psymboll/Tavolozza.git",
-        "path": "plugins/tavolozza",
-        "sha": "82ecb02ad98d4a52f776e7b4d2db3b25fb35d824"
-      }
-    },
-    {
       "name": "slurm-watch",
       "version": "0.2.0",
       "description": "Keeps an eye on the Slurm jobs Claude submits: status line, a jobs panel, and a note with what each job used when it ends.",
