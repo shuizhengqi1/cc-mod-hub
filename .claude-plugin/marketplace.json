@@ -7687,6 +7687,39 @@
         "repo": "ktr0a/session-map",
         "sha": "4a69fbdf117d10603a73344e7cd13ea0bc63347b"
       }
+    },
+    {
+      "name": "cargo-builds",
+      "version": "0.1.0",
+      "description": "A pane beside the chat with every cargo build and test run: live progress from cargo's crate count, time, OK or FAILED with the first error, and a notification when it ends.",
+      "author": {
+        "name": "DoctorRyner"
+      },
+      "homepage": "https://github.com/doctorryner/cargo-builds-pane",
+      "repository": "https://github.com/doctorryner/cargo-builds-pane",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "doctorryner/cargo-builds-pane",
+        "sha": "231cd81fdbe1381e8633c17fb1c4479c1f1275f5"
+      }
+    },
+    {
+      "name": "slopsquat-guard",
+      "version": "1.0.0",
+      "description": "Stops Claude from installing hallucinated or typosquatted packages: every npm, pip, uv, poetry, cargo and gem install is checked against the registry for age and download volume; missing or suspicious packages are blocked or asked about first.",
+      "author": {
+        "name": "awesome-claude-mods"
+      },
+      "homepage": "https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/safety/slopsquat-guard",
+      "repository": "https://github.com/Singh-AP/awesome-claude-mods",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Singh-AP/awesome-claude-mods.git",
+        "path": "mods/safety/slopsquat-guard",
+        "sha": "2260e0d1490c34bdd43162b0252f88f9a81fc334"
+      }
     }
   ]
 }
