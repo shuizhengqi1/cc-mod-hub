@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 809 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 811 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 809 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 811 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 809 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 811 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 809 个精选 Claude Code mods，按类别组织：
+以下是本市场的 811 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -503,7 +503,9 @@ For detailed descriptions of all 809 mods, see the Chinese section below. The �
 | mock-server | ⭐ 1（所在仓库） | `/mock` 按 OpenAPI 规范在本机 127.0.0.1 起一个假 API 服务，先做前端不用等后端。备注：默认用内置 node 服务（hooks/register.tsx 154–163）；若设 engine=prism 且项目没装 prism，会用 `npx --yes @stoplight/prism-cli` 从 npm 下载（144）；只监听 127.0.0.1（11）；会话结束时停掉。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mock-server) |
 | mod-maker | ⭐ 1（所在仓库） | `/new-mod` 生成一个新的 Claude Code mod 骨架（manifest、hooks、测试、README）。备注：只在你运行命令时往当前目录写文件（hooks/register.ts 125–151）；git 只读 user.name 和 remote（52）；会跑 `claude plugin validate`/`claude plugin test` 检查生成结果（86、104）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/mod-maker) |
 | django-migrate-watch | ⭐ 1（所在仓库） | Django 模型改动后检查有没有漏建迁移，提示框上方提醒并可一键让 Claude 创建。备注：改了 models/迁移文件后会自动跑项目的 `python manage.py makemigrations --check --dry-run`（会加载你的 Django 项目代码，hooks/register.tsx 68）；只在你点 Create migrations 按钮时才 prompt.submit 发请求（118–130、181）；tool.call 先原样执行（141–158）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/django-migrate-watch) |
+| mysql-client | ⭐ 1 | MySQL 侧窗客户端与 SQL 编辑器：Claude 把查询写入编辑器，你检查后按 ▶ 跑；结果表可滚动，schema 感知补全；多服务器菜单（production 标红）；默认只读，写操作需你在窗格批准。`/sql` 开关窗格。备注：只挂 session.start / tool.call{mcp__mysql-client__console} / command.run{sql} / Pane；本机跑 mysql CLI；密码可来自配置文件、环境变量或命令；会话状态写 `~/.claude/mods/sql/`；不改写提示、不调模型、无 AbovePrompt；与 dbview（Postgres 只读浏览）互补。MIT。 | MIT | [链接](https://github.com/shohamtal/cc-mod-mysql-client) |
 | openapi-sync | ⭐ 1（所在仓库） | API 路由改了但 openapi.yaml 没跟着改时，提示框上方提醒，可一键让 Claude 更新规范。备注：tool.call 先原样执行再对比路由（hooks/register.tsx 95–109）；只在你点按钮时才 prompt.submit 发请求（80–83、136）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/openapi-sync) |
+| opensearch-console | ⭐ 1 | OpenSearch / Elasticsearch Dev Tools 风格侧窗：Claude 写入查询，你编辑并按 ▶ 执行；彩色 JSON 折叠查看；每次写请求先确认。`/opensearch` 开关窗格。备注：只挂 session.start / tool.call{mcp__opensearch-console__console} / command.run{opensearch} / Pane；经本机 curl 打集群 REST；凭据在本机 servers 配置；不改写提示、不调模型、无 AbovePrompt；与 dbview / mysql-client 同属侧窗数据工具。MIT。 | MIT | [链接](https://github.com/shohamtal/cc-mod-opensearch-console) |
 | storybook-nudge | ⭐ 1（所在仓库） | Claude 新建组件却没写 story 时提醒，可一键让 Claude 补上。备注：tool.call 先原样执行（hooks/register.tsx 75–92）；只在你点按钮时才 prompt.submit 发请求（108–111、120）；不运行其他程序、不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/storybook-nudge) |
 | log-tail | ⭐ 1（所在仓库） | `/tail` 在侧栏实时跟踪日志文件或 docker/compose 容器输出，可只看错误、过滤，选中几行发给 Claude 分析。备注：会按你的命令启动 tail 或 `docker logs` 进程（hooks/register.tsx 216）；只在你点 Send to Claude 时 prompt.submit（255–276、423）；会话结束时停掉；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/log-tail) |
 | profile-run | ⭐ 1（所在仓库） | `/profile <命令>` 用 node --cpu-prof、cProfile 或 go pprof 跑你的命令并显示最耗时的函数，可一键让 Claude 优化前三个。备注：会运行你给的命令（hooks/register.tsx 129）；只在你点按钮时 prompt.submit（194–199、299）；profile 文件写到项目下 `.claude/profiles/`（25）；不联网。 | MIT | [链接](https://github.com/Plagemes/claude-mods/tree/main/mods/profile-run) |
