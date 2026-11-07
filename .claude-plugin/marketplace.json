@@ -7737,23 +7737,6 @@
         "path": "plugins/quick-look",
         "sha": "bb45a5013cf6b5ff3ad83fd7dd5dcecc2dfab9d9"
       }
-    },
-    {
-      "name": "agent-walker",
-      "version": "0.21.2",
-      "description": "Shows agent-walker in a pane: the last 30 days of local multi-agent usage, and how this session went.",
-      "author": {
-        "name": "miiiiiiich"
-      },
-      "homepage": "https://github.com/miiiiiiich/agent-walker/tree/main/claude-mod",
-      "repository": "https://github.com/miiiiiiich/agent-walker",
-      "license": "MIT OR Apache-2.0",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/miiiiiiich/agent-walker.git",
-        "path": "claude-mod",
-        "sha": "04043d26fd3f48cc8f9286dbf23f7a4371938c14"
-      }
     }
   ]
 }
