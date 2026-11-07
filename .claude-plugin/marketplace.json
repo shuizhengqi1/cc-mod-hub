@@ -7655,6 +7655,22 @@
         "repo": "nightlab-agent/file-trail",
         "sha": "24c5b36e6754a29bb260c8bebe80a31e430b9c7e"
       }
+    },
+    {
+      "name": "code-review-harness",
+      "version": "2.1.0",
+      "description": "Read-only whole-codebase architecture, code quality and security evaluation with adversarial verification and deterministic reports (ANALYSIS_REPORT / ARCHITECTURE / ROADMAP / SARIF). Live status line + /review-dashboard pane while a review runs; shell PreToolUse only denies writes outside the review dir during an active review.",
+      "author": {
+        "name": "Chaminda Wijayasundara"
+      },
+      "homepage": "https://github.com/cwijayasundara/rig-code-reviewer",
+      "repository": "https://github.com/cwijayasundara/rig-code-reviewer",
+      "license": "Apache-2.0",
+      "source": {
+        "source": "github",
+        "repo": "cwijayasundara/rig-code-reviewer",
+        "sha": "d2e824e6e48c2ca5a3e5b5eda5dd99db3210c594"
+      }
     }
   ]
 }
