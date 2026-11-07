@@ -7785,6 +7785,20 @@
         "repo": "shohamtal/cc-mod-opensearch-console",
         "sha": "c454b086c49d4e39474ac7408e603ad10d99fb26"
       }
+    },
+    {
+      "name": "focus-sidebar",
+      "version": "0.6.9",
+      "description": "Claude Desktop sidebar that shows only what you work on: one section per project, busiest on top, folders idle a day or more hidden",
+      "author": { "name": "zigansh1n" },
+      "homepage": "https://github.com/zigansh1n/claude-focus-sidebar",
+      "repository": "https://github.com/zigansh1n/claude-focus-sidebar",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "zigansh1n/claude-focus-sidebar",
+        "sha": "b44f1300a531c3c55a6e0fc6dda91e54cc3620d3"
+      }
     }
   ]
 }
