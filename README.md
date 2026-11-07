@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 797 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 799 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 797 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 799 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 797 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 799 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 797 个精选 Claude Code mods，按类别组织：
+以下是本市场的 799 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -595,6 +595,8 @@ For detailed descriptions of all 797 mods, see the Chinese section below. The �
 | spec-manager | — | OpenSpec 实时窗格：每个变更的步骤条（proposal › specs › design › tasks › apply › archive）、下一步该 AI 还是你做、按 tasks.md 分节的任务进度、多模块总览，共享仓库里别人的变更置灰；有 openspec/ 的项目自动打开，`/spec-manager` 重新打开。备注：需本机已装 openspec 命令行，只运行 `openspec list/status --json`、`git config user.email`、`git log --format=%ae`（hooks/register.tsx 140–146、255–275）；每 10 秒读一次文件；不联网、不调模型、不读对话。比 openspec-status（提示框下方一行状态）更完整。 | MIT | [链接](https://github.com/jordan-temim/spec-manager) |
 | open-in-editor | — | 提示框上方列出 Claude 最近写或改过的 3 个文件（Write/Edit/NotebookEdit，新的在上），每行可复制路径、用 Zed 或 VS Code 打开，× 移除；Claude 写文件前不显示。备注：tool.call 先 next 再记录路径、原样放行；打开编辑器用 $.process.run 跑 `open -a`，仅 macOS；不联网、不调模型。 | MIT | [链接](https://github.com/berk-karaal/agent-plugins/tree/main/plugins/open-in-editor) |
 | outputs-pane | — | 侧窗列出本会话 Claude Write/Edit 过的文件，按 planning（md/txt）/code/scratch（默认 msg-*）分区，可过滤；点文件名用你的编辑器打开（默认 zed，可配）。备注：tool.call 先 await next(e) 再记录、原样放行；只跟 Write/Edit（不含 MultiEdit/NotebookEdit）；Rex 远程分屏查看为可选增强，不依赖 Rex；不改写提示、不联网、不调模型。与 open-in-editor（上方最近 3 个文件快捷打开）互补：本条是完整会话文件清单侧窗。同仓 agent-tree/artifacts/explore/kintsugi-runs 本轮未收（私有 herdr/Rex/kintsugi 流程或斜杠 /artifacts 冲突）。 | Apache-2.0 | [链接](https://github.com/russellpope/claude-mods/tree/main/outputs-pane) |
+| cc-code-format-mod | — | 把助手回复里每个围栏代码块按语言自动格式化（Web 栈 Prettier，Python black，Go gofmt，Rust rustfmt，Shell shfmt，本机已装才跑）；`/format-code` 开关/状态。备注：只挂 session.append { door: response }，改写 transcript 里的代码块文本；session.start 只注册命令；不改写提示、不联网、不调模型。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-code-format-mod) |
+| cc-file-history-mod | — | 提示框上方显示本会话编辑次数的条带，点 [View] 或 `/file-history` 打开侧窗：按文件分组列出 Write/Edit 前后快照，可一键 Revert。备注：AbovePrompt 有内容时先 await next(e) 再叠到其它 mod 下方；classic.SessionStart 仅 reset 状态不注入上下文；不改写提示、不联网、不调模型。与 file-explorer（跟读文件树）、outputs-pane（会话写出文件清单）互补：本条是可还原的编辑历史。同仓其它 mod 本轮未收（cc-context-mod 绑 MiniMax；cc-timing/cc-notify 与 turn-meter/desktop-notify 相似）。 | Apache-2.0 | [链接](https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod) |
 | open-in-obsidian | — | Claude 用 Write/Edit 改 Obsidian 仓库（含 `.obsidian` 目录）里的 `.md` 笔记时，在该次编辑下方出现「Open in Obsidian」按钮；`/obsidian` 打开侧窗列出本会话改过的 vault 笔记（最新在上）可一键打开。备注：自动向上找 `.obsidian` 判定 vault，忽略 vault 外与 `.obsidian/` 内文件；用本机 `open` 打开 `obsidian://open?vault=…&file=…`，**仅 macOS**；tool.call 先 next 再记录、原样放行；不联网、不调模型、不改写提示。与 open-in-editor（Zed/VS Code）互补。 | MIT | [链接](https://github.com/ben-rosenthal/open-in-obsidian) |
 | agents-skills | — | 让 Claude Code 用上 `.agents/skills/` 里的技能（`npx skills` 和其他代理工具装技能的位置）：每次会话开始把其中含 SKILL.md 的技能文件夹复制到 `.claude/skills/`，副本自带 `.gitignore` 和标记文件、不进 git，原件改了会刷新；你自己在 `.claude/skills/` 里同名的技能不会被覆盖（会弹提示）。可在插件配置里填一个主目录，把那里的 `.agents/skills` 也一并复制。备注：只挂 session.start 与 classic.SessionStart，只通过 $.fs 在 `.claude/skills` 内写文件；不联网、不调模型、不改提示；新仓库（8 次提交）；新建 `.claude/skills` 后需按提示跑一次 `/reload-skills`。 | MIT | [链接](https://github.com/nightlab-agent/agents-skills) |
 | editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
