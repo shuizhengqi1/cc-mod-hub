@@ -7753,6 +7753,38 @@
         "repo": "anguscyk/claude-mods-task-progress",
         "sha": "1a2cf9830e026b9bca924693b530458b84cac2bc"
       }
+    },
+    {
+      "name": "mysql-client",
+      "version": "0.3.1",
+      "description": "MySQL client and SQL editor in a Claude Code side pane: Claude writes the query, you run it and see the results as a table. A database client with schema-aware autocomplete and a server menu. Read-only by default; writes run only after you approve them.",
+      "author": {
+        "name": "shohamtal"
+      },
+      "homepage": "https://github.com/shohamtal/cc-mod-mysql-client",
+      "repository": "https://github.com/shohamtal/cc-mod-mysql-client",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "shohamtal/cc-mod-mysql-client",
+        "sha": "e4c7850187e2b5d844ddfe09ed464c7da19209d1"
+      }
+    },
+    {
+      "name": "opensearch-console",
+      "version": "0.3.1",
+      "description": "OpenSearch & Elasticsearch Dev Tools-style console in a Claude Code side pane: Claude injects queries, you edit and run them (read-only).",
+      "author": {
+        "name": "shohamtal"
+      },
+      "homepage": "https://github.com/shohamtal/cc-mod-opensearch-console",
+      "repository": "https://github.com/shohamtal/cc-mod-opensearch-console",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "shohamtal/cc-mod-opensearch-console",
+        "sha": "c454b086c49d4e39474ac7408e603ad10d99fb26"
+      }
     }
   ]
 }
