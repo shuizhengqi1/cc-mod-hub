@@ -5311,6 +5311,23 @@
       "license": "MIT"
     },
     {
+      "name": "nvim-replay",
+      "version": "0.1.0",
+      "description": "Replays Claude's Edit/Write in a real Neovim as if typed by hand (tmux split via /viz open); holds Claude until each replay finishes; /viz step|speed|on|off.",
+      "author": {
+        "name": "peterqlin",
+        "url": "https://github.com/peterqlin"
+      },
+      "homepage": "https://github.com/peterqlin/claude-viz",
+      "repository": "https://github.com/peterqlin/claude-viz",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "peterqlin/claude-viz",
+        "sha": "1ca107d4918bc71708682f89984ac2f7f4e71d33"
+      }
+    },
+    {
       "name": "tree",
       "description": "Browse this session's conversation tree, branches included, label entries, and branch or rewind from any of them.",
       "source": {
@@ -6069,6 +6086,24 @@
         "url": "https://github.com/berk-karaal/agent-plugins.git",
         "path": "plugins/open-in-editor",
         "sha": "106afb25faf3855c486f8107e60741a71f194622"
+      }
+    },
+    {
+      "name": "outputs-pane",
+      "version": "0.4.0",
+      "description": "Side pane listing files Claude writes or edits this session, split into planning, code and scratch, with a filter; click a file to open it in your editor (Rex remote viewer optional).",
+      "author": {
+        "name": "Russell Pope",
+        "url": "https://github.com/russellpope"
+      },
+      "homepage": "https://github.com/russellpope/claude-mods/tree/main/outputs-pane",
+      "repository": "https://github.com/russellpope/claude-mods",
+      "license": "Apache-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/russellpope/claude-mods.git",
+        "path": "outputs-pane",
+        "sha": "04aeec7468577736c630e7df9bcd3415c03ed624"
       }
     },
     {
