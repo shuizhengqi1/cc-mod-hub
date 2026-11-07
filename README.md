@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 807 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 809 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 807 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 809 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 807 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 809 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 807 个精选 Claude Code mods，按类别组织：
+以下是本市场的 809 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -92,6 +92,7 @@ For detailed descriptions of all 807 mods, see the Chinese section below. The �
 | cache-tax | ⭐ 196 | 提供 /keepwarm 命令，阻止一次冷启动发送。 |  | [链接](https://github.com/karanb192/cache-tax) |
 | vercel-deploy-status | ⭐ 66（所在仓库） | 提示框上方显示 Vercel 部署队列（零 token）。 |  | [链接](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/vercel-deploy-status) |
 | aimux | ⭐ 34（所在仓库） | 只在由 aimux 启动的会话里生效：提示框上方显示所有 aimux 订阅的 5 小时/每周用量，快用完时提醒，用完时可一键 /exit 交给 aimux 切到最空闲的订阅。备注：需安装 aimux（Digital-Threads/aimux）；本机运行 aimux status --json；额度用完且提示框为空时会在提示框预填 /exit（不改写你已输入的内容，需你按回车）。 | MIT | [链接](https://github.com/Digital-Threads/aimux/tree/master/mod) |
+| agent-walker | ⭐ 26 | `/agent-walker` 侧窗两页：Summary 汇总本机近 30 天 Claude Code/Codex/OpenCode/Copilot CLI/Grok Build/Antigravity 等用量（活动、token、项目、工具、并行、成本等），Session 看本会话；桌面端可画分享卡 SVG。备注：经 `npx -y agent-walker@<插件 version>`（或 `AGENT_WALKER_BIN`）在 `$HOME` 跑 CLI 读本机日志，不上传会话；`prompt.submit` 只关窗并 `next(e)`，不改写提示；CLI 仅拉公开价目表。LICENSE-MIT + LICENSE-APACHE。与 usagemeter（跨 CLI 用量面板）相近，本条为专用 pane 且 ⭐ 更高。 | MIT OR Apache-2.0 | [链接](https://github.com/miiiiiiich/agent-walker/tree/main/claude-mod) |
 | agent-flow | ⭐ 19 | /flow 侧栏实时显示 subagent 树（零 token）。 |  | [链接](https://github.com/Charlie0113-T/claude-agent-flow) |
 | cctop | ⭐ 15（所在仓库） | **推荐** btop 风格侧栏面板，展示上下文、tokens、成本、工具延迟等。 |  | [链接](https://github.com/tomstagl/cctop/tree/main/plugin) |
 | limit-watch | ⭐ 11（所在仓库） | 限额监视器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/limit-watch) |
@@ -472,6 +473,7 @@ For detailed descriptions of all 807 mods, see the Chinese section below. The �
 | snippets | ⭐ 3（所在仓库） | 常用提示一条命令调出：/snip review 把你保存的 review 提示填进输入框，自动替换 {{selection}}、{{branch}}、{{date}}、{{args}}。备注：只在你运行 /snip 时往输入框填文字，不自动发送；读分支只跑本机只读 git；不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/productivity/snippets) |
 | test-pulse | ⭐ 3（所在仓库） | 测试健康度：Claude 每次跑测试，结果都显示在状态栏（如 🧪 ✅ 44/44 passing · 2m ago），由绿变红或恢复时弹提示，/tests 看历史、通过率走势和疑似不稳定的测试。备注：tool.call 只读取测试输出、原样传递；纯本机，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/awareness/test-pulse) |
 | trace | ⭐ 3（所在仓库） | `/trace` 面板两个标签页：本会话加载过的技能（何时、来源、谁调用、多大），以及 Claude 抓取过或在搜索结果里看到的网页，可一键作为引用插入输入框。备注：`tool.call`/`skill.prompt` 只观察记录、原样返回；插入引用只在你按按钮时用 `$.prompt.fill` 插到草稿，不自动提交；纯本机。 | MIT | [链接](https://github.com/Hula-Hoop-AI/supermods/tree/main/plugins/trace) |
+| quick-look | ⭐ 3（所在仓库） | 收集本会话 agent 成功 Read/Write/Edit/NotebookEdit 的路径，以及回答里反引号且磁盘上存在的文件（最多 9）；`/ql` 开窗点选，`/ql N` 或 `/ql path` 直接用 macOS Quick Look（`qlmanage -p`）预览，任意终端（含 Warp）可用。备注：仅 macOS；钩子只观察并 `await next`/`next(e)`，不改写提示或工具；不联网、不调模型。与 file-peek（`@` 选择器里按 `p` 开 Quick Look）互补：本条盯 agent 刚碰过的文件列表。同仓 Apache-2.0 LICENSE。 | Apache-2.0 | [链接](https://github.com/AndrewDongminYoo/cc-agents-kit/tree/main/plugins/quick-look) |
 | runboard | ⭐ 3 | Claude 用 Bash 跑 Playwright 测试（`playwright test` 或调用它的 npm 脚本）时，提示框上方出现实时面板：进度、通过 / 失败 / flaky 计数、每个测试一个方块、预计剩余时间、Stop run 按钮、失败详情与 Trace 按钮，结束后可 Open report。备注：tool.call 原样放行，只读后台任务输出文件（register.tsx 262–295）；按钮才运行 `npx playwright show-report` / `show-trace`（159、447）或对 playwright 进程组发 SIGINT（167–174，失败再用 TaskStop）；插件还带一个 runboard skill（教 Claude 后台运行、不要传 --reporter）。 | MIT | [链接](https://github.com/Dbravi/runboard) |
 | spx-chart | ⭐ 2 | 在侧栏查看 PHP SPX 性能火焰图（需 php-spx-mcp）。 |  | [链接](https://github.com/zviryatko/claude-spx) |
 | docker-panel | ⭐ 2（所在仓库） | 提示框上方显示 Docker Compose 服务健康、端口、崩溃和配置过期提示，带一键操作（重启、看日志等）。备注：会在本机运行 `docker`/`docker compose`（操作只在你按按钮时执行）；“问 Claude”按钮只用 `$.prompt.fill` 把问题追加到输入框，由你决定是否发送；Claude 改了 compose 文件或 Dockerfile 后只触发刷新。 | MIT | [链接](https://github.com/SKFabric/docker-panel/tree/main/plugins/docker-panel) |
