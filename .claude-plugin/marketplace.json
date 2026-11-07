@@ -7593,6 +7593,16 @@
         "path": "plugins/model-trace",
         "sha": "2b73828bd0f7d7d6d66aec9445959c4a18e1cf4d"
       }
+    },
+    {
+      "name": "lid-awake",
+      "description": "One-click footer button that keeps your computer running with the lid closed (macOS, Linux, Windows). SessionMode button toggles lid-sleep inhibit; session end restores normal sleep. Complements keep-awake-linux (Linux idle inhibit) and cc-mod-caffeinate (macOS caffeinate).",
+      "source": {
+        "source": "github",
+        "repo": "apnauj/lid-awake",
+        "sha": "173e785ea360757166c964fd323feb35bf356121"
+      },
+      "license": "MIT"
     }
   ]
 }

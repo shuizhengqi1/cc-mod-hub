@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 799 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 800 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 799 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 800 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 799 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 800 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 799 个精选 Claude Code mods，按类别组织：
+以下是本市场的 800 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -842,6 +842,7 @@ For detailed descriptions of all 799 mods, see the Chinese section below. The �
 | ram-guard | — | 状态栏显示本机可用内存与正在跑的 Gradle/模拟器/Maven/Metro 进程数，每 15 秒刷新，内存低于 6 GiB 时弹提示；可用内存不足 6 GiB 或有 Gradle 守护进程/模拟器在跑时拒绝启动子代理（Agent/Workflow），不足 4 GiB 时拒绝 gradlew/mvn/emulator 等重型构建命令。备注：**仅 Linux**（读 /proc/meminfo，其他系统上读不到，子代理与 Bash 调用可能直接报错，macOS/Windows 请勿安装）；本机运行 ps 只统计进程；工具门只拒绝不改写；不联网。 |  | [链接](https://github.com/jimisola/claude-plugins/tree/main/plugins/ram-guard) |
 | clean-copy | — | **推荐** 终端里选中文本自动复制时，把复制内容清理干净：去掉左侧的引用竖线/面板边框和回复前的 ⏺ 标记，统一去掉缩进，把因终端宽度折断的句子重新接成一行（代码块、列表、标题、表格保持原样）。备注：每 250 毫秒检查一次当前选区，选区稳定且确实需要清理时，用本机 `wl-paste`、`xclip` 或 `pbpaste` 读一次剪贴板确认是 Claude Code 刚复制的内容，再写回清理后的文本；只处理剪贴板，不联网。 | MIT | [链接](https://github.com/kbrianps/claude-clean-copy/tree/main/plugins/clean-copy) |
 | cc-mod-caffeinate | — | Claude 工作时让 Mac 屏幕保持常亮、不进入睡眠，回合结束、等待你授权或回答问题时自动放开，状态栏显示 ☕；可选「合盖也保持唤醒」（仅接电源时有效）。备注：仅限 macOS，运行系统自带的 `/usr/bin/caffeinate -d -i -t 300`（勾选合盖选项时加 -s），每次 300 秒、工作中自动续期，会话异常退出也不会一直占着；其他系统上无效果（box 冒烟在 Linux 上只记一条找不到 caffeinate 的警告）；tool.call 只在 AskUserQuestion 期间标记等待、原样放行；不联网。 | MIT | [链接](https://github.com/williamchong/cc-mod-caffeinate) |
+| lid-awake | — | 提示框下方一键按钮：合盖时仍保持电脑不睡（macOS / Linux / Windows），再点或结束会话即恢复；macOS 需按 README 加一条仅允许 `pmset disablesleep` 的 sudoers。备注：SessionMode 先 `await next(e)` 再叠按钮；session.end 恢复睡眠；Linux 用 `systemd-inhibit --what=handle-lid-switch`，Windows 用 `powercfg` 改合盖动作并在关闭时还原；不改写提示、不联网、不调模型。与 keep-awake-linux（Linux 空闲抑制）/ cc-mod-caffeinate（macOS caffeinate）互补。 | MIT | [链接](https://github.com/apnauj/lid-awake) |
 | speak-aloud | — | 用 macOS 自带 `say` 朗读 Claude 的回复：每条回复旁加 🔊 按钮（朗读时变成 ■，点一下停止），`/speak` 朗读最新回复、`/speak-stop` 停止、`/speak-voice` 选声音、`/speak-rate` 调语速。备注：仅 macOS；本机 process（say），只读本会话消息，代码块不读、链接只读文字；不联网。 |  | [链接](https://github.com/tiger3645/claude-tts) |
 | split | — | `/split` 把当前会话分叉到旁边的 cmux 或 tmux 分屏里（`claude --resume --fork-session`），自动命名为 `<名称>-branch-<n>`。备注：用 `find`、`grep` 读本会话记录取标题；运行 cmux 或 tmux 开分屏，`/split` 后写的 claude 参数原样传过去；不在 cmux/tmux 里时只给出命令让你自己运行；不联网。 |  | [链接](https://github.com/abdelrahman-elkady/claude-plugins/tree/master/plugins/split) |
 | shell-mode | — | `/shell-mode` 打开一个 Bash 控制台面板，连续输入命令执行并保留颜色和当前目录，退出后命令和输出仍显示在对话记录里。备注：仅 Windows（用 Git for Windows 的 Bash，可用 CLAUDE_CODE_GIT_BASH_PATH 指定）；你在面板里输入的命令会照原样用 `bash --login -c` 执行；输出存到本机 `%LOCALAPPDATA%\Claude\shell-mode\history\`，对话记录（模型能看到的部分）里只留一个引用编号，显示时再从本机存档读出；不联网。 |  | [链接](https://github.com/h1048576/claude-mods/tree/main/shell-mode) |
