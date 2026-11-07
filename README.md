@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 808 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 810 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 808 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 810 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 808 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 810 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 808 个精选 Claude Code mods，按类别组织：
+以下是本市场的 810 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -523,6 +523,7 @@ For detailed descriptions of all 808 mods, see the Chinese section below. The �
 | idle-mod | ⭐ 1 | Claude 工作时，提示框上方轮播本会话的项目体检结果：Claude 改过的文件里的 FIXME/TODO、本会话提交了但还没 push 的 commit、本会话新出现的 npm audit 漏洞或大版本更新；`/idle-mod` 打开窗格，还能展开整个项目的旧分支（30 天未动）、stash、TODO 总数。可修的条目带「preview」和「fix with Claude」按钮，按下才会以你的身份发出一条固定的「先查看并提建议、不要改动」提示。备注：通过 $.process 跑本机 git 与 npm（npm audit/outdated 会访问 npm registry，仓库自带 .npmrc 时跳过 npm 检查）；tool.call 只记录改过的文件、原样放行；不调模型、无 $.http；只在交互会话里扫描。 | MIT | [链接](https://github.com/demartinogiuseppe/idle-mod) |
 | duckdb-results | ⭐ 1（所在仓库） | Claude 用 Bash 跑 `duckdb` CLI（DuckDB 2.0 agent mode）时，把模型看到的紧凑 Markdown 表改画成对齐表格（类型暗色、数字右齐、NULL 暗色、省略标记与行数作页脚，错误带类型与位置）；`/duckdb` 打开窗格看最近 20 次结果，`/duckdb <sql>` 不经 Claude 回合直接跑 SQL。备注：需 PATH 上有 duckdb ≥2.0；tool.call 只观察 Bash、先 await next，仅在解析到 duckdb 结果时往工具结果追加一句「表已画给用户、勿再贴行」的 context（不改 stdout）；ui.render ToolResult 仅在匹配到本 mod 记下的 duckdb 结果且未展开时自绘表格，否则 next；Pane 只服务本 mod 的 requestId=duckdb；不联网、不调模型；根仓另有 duckdb-dialect skills（本条只收 results mod）。 | MIT | [链接](https://github.com/duckdb/duckdb-claude-plugin/tree/main/duckdb-results) |
 | model-trace | ⭐ 1（所在仓库） | /model-trace 打开窗格：汇总本会话用过的 skill、子代理、MCP、插件、hooks、网页工具的次数与时间，可导出 Markdown/HTML。备注：只观察——skill.prompt/agent.spawn/tool.call/classic.* 等均先 next 再记录，不改写、不注入 context；可选 statusLine；导出目录须已存在（默认 ~/Downloads）；不联网、不调模型。与 agent-trace（回合到模型请求树）互补（本 mod 侧重能力点名册与导出）。同仓其它插件未收。 | MIT | [链接](https://github.com/nerymurillohnd/the-claude-factory/tree/main/plugins/model-trace) |
+| slurm-watch | ⭐ 1（所在仓库） | 盯住 Claude 用 `sbatch` 提交的 Slurm 作业：状态行摘要、`/slurm-jobs` 窗格列作业状态/耗时/主机/退出码/CPU·内存份额，结束时 toast。备注：`tool.call` 只观察 Bash 里的提交并 `next(e)`；本机 `sacct`/`squeue` 轮询；不改写提示或命令、不联网、不调模型。同仓 MIT LICENSE。面向 HPC/集群工作流，与 docker-panel（Compose）互补。 | MIT | [链接](https://github.com/vienna-bio-center/claude-vbc-mods/tree/main/mods/slurm-watch) |
 | codebase-atlas | — | 代码库架构图随读写点亮；可选用本机 $.model.complete 与 $.model.fork 提取决策，向用户模型发函数源码与 git diff HEAD，不外传。备注：本机 git。 |  | [链接](https://github.com/harshitmywork17/claude-mods/tree/main/plugins/codebase-atlas) |
 | editor-context | — | 在桌面端提示框上方显示 Cursor/VS Code 当前文件与选区，并在每次提交时把你正在看的内容悄悄告诉 Claude。 | MIT | [链接](https://github.com/talbarina/claude-editor-context/tree/main/plugins/editor-context) |
 | gitgraph | — | /branches 打开本机 git 分支提交线图画板，可勾选多条分支对比。备注：本机只读 git status、for-each-ref、log；面板打开时每 15 秒刷新，Claude 跑含 git 的 Bash 后也会刷新；Bash 工具调用只观察原样返回。 |  | [链接](https://github.com/TCcodemaster/claude-mods/tree/main/gitgraph) |
@@ -731,6 +732,7 @@ For detailed descriptions of all 808 mods, see the Chinese section below. The �
 | brainless-claude-progress | ⭐ 1 | `/progress` 窗格 + 状态栏一行摘要：当前工单步骤 Write→Review→Verify→CI→Merge、CI 状态与按历史中位数估算的剩余时间、后台子代理与 bash 任务、Claude 等你回复时标「Your turn」；界面支持英/繁中/简中/日。备注：本机 gh 只读命令（pr view、pr list --state merged、repo view）查 PR/CI；钩子只观察（tool.call 先 next，prompt.submit 只识别语言、原样放行）；动画火花可用 `/progress still` 关闭；无模型调用。与 gh-status、eta、task-band、plan-progress 部分重叠。 | MIT | [链接](https://github.com/greedysisyphus/Brainless-Claude-Progress) |
 | reading | ⭐ 1（所在仓库） | 阅读清单窗格：Claude 用工具发布文件片段/issue/笔记；你标记已读/确认/待讨论并写评论；只有你按「Send results」才把汇总发回一条消息。备注：无提示改写、无 model.complete；只读本机文件/可选 issue 命令；无定时代发。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/reading) |
 | walkthrough | ⭐ 1（所在仓库） | 手工测试清单窗格：Claude 发布步骤；你标 pass/fail/skip 与备注；只有你按「Send results」才汇总回一条消息。备注：无提示改写、无 model.complete、无 $.http、无定时/自动代发。 | MIT | [链接](https://github.com/enhki/claude-mods/tree/main/mods/walkthrough) |
+| task-progress | ⭐ 1 | 提示框上方任务进度带：有 TaskCreate/TaskUpdate/TodoWrite 或 markdown 核取清单时显示完成数/百分比/当前任务与每任务耗时；否则把本轮工具调用当步骤（✓/✗/▶）。默认收合，点按展开；每轮结束或下次送出提示自动收回。备注：AbovePrompt 先 `await next(e)` 再叠层；`prompt.submit` 只清展开状态并 `next(e)`，不改写提示；tool.call 只观察后 `next`；不联网、不调模型。繁中/英文 README；MIT LICENSE。与 turn-progress（回合阶段）、plan-progress（计划）互补：本条盯任务清单与本轮工具步骤。 | MIT | [链接](https://github.com/anguscyk/claude-mods-task-progress) |
 | backlog-pane | — | 侧栏看 git 状态和 Backlog.md 任务。 | MIT | [链接](https://github.com/LegendSilvia/claude-code-mods/tree/main/plugins/backlog-pane) |
 | bw-peek | — | Beadwork 工单侧栏：/bw 与回复下 id 按钮；备注：本机 process 跑 bw，不上网。 | MIT | [链接](https://github.com/iautom8things/bw-peek) |
 | decision-tracker | — | 把回复里提到的决定（「we decided / going with / 決定」等关键词句子）留在提示框上方的一条横栏里，直到你把它写进决策日志（默认路径含 `docs/decisions/` 的 Edit/Write 成功后自动清空）；点横栏展开全部，`/decisions` 列出、`/decisions done N` 删一条、`/decisions clear` 清空。备注：turn.complete 只读主代理回答做本地关键词匹配，tool.call 原样返回；只存在会话状态里，不联网、不调模型、不改写提示；关键词、日志路径、条数上限可在 /plugin configure 里改。 | MIT | [链接](https://github.com/i-noma-ru/claude-decision-tracker) |

@@ -7737,6 +7737,39 @@
         "path": "plugins/quick-look",
         "sha": "bb45a5013cf6b5ff3ad83fd7dd5dcecc2dfab9d9"
       }
+    },
+    {
+      "name": "task-progress",
+      "version": "0.6.0",
+      "description": "Shows a progress band above the prompt: a task progress bar with per-task durations, or the turn's tool calls as steps when there is no task list, plus elapsed time. Collapsed by default; press to expand.",
+      "author": {
+        "name": "anguscyk"
+      },
+      "homepage": "https://github.com/anguscyk/claude-mods-task-progress",
+      "repository": "https://github.com/anguscyk/claude-mods-task-progress",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "anguscyk/claude-mods-task-progress",
+        "sha": "1a2cf9830e026b9bca924693b530458b84cac2bc"
+      }
+    },
+    {
+      "name": "slurm-watch",
+      "version": "0.2.0",
+      "description": "Keeps an eye on the Slurm jobs Claude submits: status line, a jobs panel, and a note with what each job used when it ends.",
+      "author": {
+        "name": "Ronny Zimmermann"
+      },
+      "homepage": "https://github.com/vienna-bio-center/claude-vbc-mods/tree/main/mods/slurm-watch",
+      "repository": "https://github.com/vienna-bio-center/claude-vbc-mods",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vienna-bio-center/claude-vbc-mods.git",
+        "path": "mods/slurm-watch",
+        "sha": "667ea90b3ace6d544ce8caead0778ca358adc8a2"
+      }
     }
   ]
 }
