@@ -7753,23 +7753,6 @@
         "repo": "anguscyk/claude-mods-task-progress",
         "sha": "1a2cf9830e026b9bca924693b530458b84cac2bc"
       }
-    },
-    {
-      "name": "slurm-watch",
-      "version": "0.2.0",
-      "description": "Keeps an eye on the Slurm jobs Claude submits: status line, a jobs panel, and a note with what each job used when it ends.",
-      "author": {
-        "name": "Ronny Zimmermann"
-      },
-      "homepage": "https://github.com/vienna-bio-center/claude-vbc-mods/tree/main/mods/slurm-watch",
-      "repository": "https://github.com/vienna-bio-center/claude-vbc-mods",
-      "license": "MIT",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/vienna-bio-center/claude-vbc-mods.git",
-        "path": "mods/slurm-watch",
-        "sha": "667ea90b3ace6d544ce8caead0778ca358adc8a2"
-      }
     }
   ]
 }
