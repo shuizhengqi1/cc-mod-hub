@@ -7671,6 +7671,42 @@
         "repo": "cwijayasundara/rig-code-reviewer",
         "sha": "d2e824e6e48c2ca5a3e5b5eda5dd99db3210c594"
       }
+    },
+    {
+      "name": "files-board",
+      "version": "0.4.0",
+      "description": "CLI file browser pane for Claude Code terminal (/files): tree, search, preview tabs, auto-save editor and context menus; marks files Claude just edited until your next message. Terminal-only (desktop already has its own browser).",
+      "author": {
+        "name": "Mathis",
+        "url": "https://github.com/matwi5"
+      },
+      "homepage": "https://github.com/matwi5/mathis-plugins/tree/main/plugins/files-board",
+      "repository": "https://github.com/matwi5/mathis-plugins",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matwi5/mathis-plugins.git",
+        "path": "plugins/files-board",
+        "sha": "e8141b337f631d38d9a597572574346d2cdef61b"
+      }
+    },
+    {
+      "name": "asana-board",
+      "version": "0.12.0",
+      "description": "Live Asana task board in a pane and AbovePrompt band (/asana): create, complete, change status, assign and comment via your connected Asana MCP; project/section read from the folder CLAUDE.md.",
+      "author": {
+        "name": "Mathis",
+        "url": "https://github.com/matwi5"
+      },
+      "homepage": "https://github.com/matwi5/mathis-plugins/tree/main/plugins/asana-board",
+      "repository": "https://github.com/matwi5/mathis-plugins",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/matwi5/mathis-plugins.git",
+        "path": "plugins/asana-board",
+        "sha": "e8141b337f631d38d9a597572574346d2cdef61b"
+      }
     }
   ]
 }
