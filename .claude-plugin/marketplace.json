@@ -7603,6 +7603,42 @@
         "sha": "173e785ea360757166c964fd323feb35bf356121"
       },
       "license": "MIT"
+    },
+    {
+      "name": "harness-guard",
+      "version": "0.1.0",
+      "description": "Bind rules to actions: stop risky Bash/file actions until the files your hooks pointed to were read, and deny two silent verification mistakes (hand-typed commit SHA inside poll loops; test output piped through grep/head/tail/etc.). Deny-only, never rewrites commands; no network, no model calls.",
+      "author": {
+        "name": "Buer2333",
+        "url": "https://github.com/Buer2333"
+      },
+      "homepage": "https://github.com/Buer2333/claude-guardrails/tree/main/plugins/harness-guard",
+      "repository": "https://github.com/Buer2333/claude-guardrails",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Buer2333/claude-guardrails.git",
+        "path": "plugins/harness-guard",
+        "sha": "d266f6acaf2e3fb11e9d464838daf5ff655fa1bc"
+      }
+    },
+    {
+      "name": "route-lens",
+      "version": "0.1.0",
+      "description": "Observe-only pane/status showing which skills, agents, memory files and hooks each user instruction actually used (/route). Every hook awaits next then records; no prompt rewrite, no context injection, no model.complete, no network.",
+      "author": {
+        "name": "Buer2333",
+        "url": "https://github.com/Buer2333"
+      },
+      "homepage": "https://github.com/Buer2333/claude-guardrails/tree/main/plugins/route-lens",
+      "repository": "https://github.com/Buer2333/claude-guardrails",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Buer2333/claude-guardrails.git",
+        "path": "plugins/route-lens",
+        "sha": "d266f6acaf2e3fb11e9d464838daf5ff655fa1bc"
+      }
     }
   ]
 }
