@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 805 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 807 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 805 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 807 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 805 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 807 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 805 个精选 Claude Code mods，按类别组织：
+以下是本市场的 807 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -344,6 +344,7 @@ For detailed descriptions of all 805 mods, see the Chinese section below. The �
 | storage-guard | ⭐ 11（所在仓库） | 存储保护器。 |  | [链接](https://github.com/KilimcininKorOglu/claude-code-mods/tree/main/plugins/storage-guard) |
 | guards | ⭐ 8（所在仓库） | 会丢弃本会话没碰过的改动的 git 命令（reset --hard、checkout --force、clean 等）和会开始 vast.ai 计费的命令先暂停等你确认；拒绝在 .py/.ipynb 里写全局随机种子。备注：只 deny/暂停确认，不改写命令；本机运行 git status。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/guards) |
 | public-repo-guard | ⭐ 6（所在仓库） | 推送到公开 GitHub 仓库（或把仓库改成公开）前，扫描将要推出去的提交里的 Supabase 项目 ID、密钥、token、邮箱、本机路径等，发现就弹窗让你选拒绝、照推或记住放行；`/pushor` 开关；匈牙利语或英语。**备注**：只拦 Bash 里的 `git push` 和改可见性命令，结果只有拒绝或原样放行，不改写命令（register.tsx 233–270）；扫描时在本机运行只读的 `git log`/`git grep`/`git ls-tree` 等（139–176），并用你本机的 `gh repo view`/`gh repo list` 查仓库是否公开（103、114）。 | | [链接](https://github.com/Szotasz/claude-mods/tree/main/plugins/public-repo-guard) |
+| slopsquat-guard | ⭐ 5（所在仓库） | 拦住幻觉/拼写钓鱼包：解析 Bash 里的 npm/yarn/pnpm/bun/pip/uv/poetry/cargo/gem install，向对应 registry 查存在性、首次发布日与周下载量；缺失直接 deny，可疑则 `$.ui.ask`（Install anyway / Block）；`/slopsquat <生态> <名>` 可手查。备注：只 deny/询问，不改写命令、无 tool.check allow；`$.http.fetch` 只打 registry（不上传会话）；无人可问时偏拒绝；仓库根 MIT LICENSE。与 net-guard（主机白名单）互补。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/safety/slopsquat-guard) |
 | env | ⭐ 4 | 在面板里编辑 .env；Claude 管理键名但看不到真实密钥值。 | MIT | [链接](https://github.com/davekiss/env) |
 | prod-guard | ⭐ 4（所在仓库） | Claude 要跑生产部署（kamal deploy/redeploy/rollback）、生产 psql 或 make 删库类命令时先拦住，弹框显示将上线的提交、迁移、未提交改动和 CI 状态，你按 Deploy/Run 才执行，否则 deny。备注：只等待/deny，不改写命令；本机只读运行 git、kamal app version、gh run list；无人值守会话（claude -p）直接 deny。 | MIT | [链接](https://github.com/JeremyDwayne/dotfiles/tree/main/roles/claude/files/mods/prod-guard) |
 | net-guard | ⭐ 3（所在仓库） | 防数据外泄和意外联网：检查每条 curl、wget、ssh、scp、git push 和 WebFetch 的目标主机，按允许/拒绝名单放行或拒绝，没批准过的主机先弹窗问你（允许一次/本会话/拒绝）。备注：只对 Bash 和 WebFetch 做 deny 或询问，不改写命令；无人可问（-p 模式）时默认拒绝；纯本机解析，不联网。 | MIT | [链接](https://github.com/Singh-AP/awesome-claude-mods/tree/main/mods/safety/net-guard) |
@@ -576,6 +577,7 @@ For detailed descriptions of all 805 mods, see the Chinese section below. The �
 | loop-killer | — | Stop hook（比如 /goal）不停回灌、Claude 连着几轮不调用任何工具空转时（默认连续 3 轮回复相似，或任意 6 轮），自动执行 /goal clear 结束循环，弹出提示并在该回合回答末尾附一行说明；两次触发至少相隔 10 回合，子代理回合不计。备注：只挂 turn.complete，只读本会话消息；只在检测到空转时自动运行 /goal clear 并在回答末尾追加一行说明，不改提示、不注入上下文；不联网、不跑子进程。 | MIT | [链接](https://github.com/cavi-ai/loop-killer) |
 | worktrees | — | `/worktrees` 侧边窗格清理 git worktree：扫描设定目录（默认 `~/code`）下所有带关联 worktree 的仓库，每个 worktree 显示判定（SAFE 已合并且无未提交改动 / DIRTY / LOCAL ONLY 未合并也未推送 / UNMERGED / LIVE 有会话在跑 / MISSING 目录已不存在）、闲置时长、相对你选定目标分支的合并状态（能识别 squash 合并），以及在里面工作过的 Claude 会话（可 `claude -r <id>` 接回）；勾选后一键删除。备注：仅 macOS（git 2.38+）；用本机 bash 跑 find/git/stat/lsof 扫描，把会话 cwd 与标题缓存到 `~/.claude/worktree-sessions-cache`；只有点 Fetch 才 `git fetch --prune`；Delete 先确认，跳过有会话在跑的，有改动或锁定的需打开 force，只对已合并分支执行 `git branch -D`；不上传会话内容，不改写提示或工具调用。 | MIT | [链接](https://github.com/ambareeshav/worktrees) |
 | dbview | — | `/db` 打开只读的 PostgreSQL 浏览窗格：树状列出已保存的连接和本机 Docker 里的 Postgres 容器，逐层展开数据库、schema、表，查看列、约束、索引、示例行和 DDL；`/db connect <url>` 保存连接，`/db forget`、`/db refresh`、`/db theme` 管理。备注：只读，所有查询经本机 psql 执行并强制 `default_transaction_read_only=on` 和语句超时；Docker 容器用 `docker ps`/`docker inspect`/`docker exec … psql` 访问，需本机装有 psql 或 docker；`/db connect` 保存的 URL（含密码）存在插件存储里，密码通过 PGPASSWORD 传给 psql、不出现在命令行；除数据库连接本身外不联网，不调模型，不改提示或工具调用。 | MIT | [链接](https://github.com/agntflw/claude-dbview) |
+| cargo-builds | — | 侧窗列出本会话每次 cargo build/test/check/clippy/run/bench：进行中/OK/失败、crate 进度条、当前编译目标、耗时、警告数与首条 error；结束时 toast + 桌面通知；`/builds` 置前。备注：Claude 经 Bash/PowerShell 跑的 cargo 只观察（`await next(e)` 后写 `~/.cargo-builds` 状态文件），不改写命令；配 `scripts/track-cargo.sh\|ps1` 可拿实时进度；无 AbovePrompt、无 model.complete、不联网。与 cargo-progress（命令下方进度条、会包装 Bash）互补：本条是历史窗格+通知。 | MIT | [链接](https://github.com/doctorryner/cargo-builds-pane) |
 | cargo-progress | — | Rust 项目里 Claude 跑 cargo 命令时，在命令下方显示 cargo 自己的进度条（不再一个 crate 一行），结束后留一行结果：编译错误/lint 错误/警告数和耗时，或测试通过/失败/忽略数及失败用例名；`cargo test 2>&1 \| tail` 这类管道命令也能统计。备注：会改写调用 cargo 的 Bash 命令——在前面加一个 `cargo` shell 函数，让 cargo 经插件自带的 `bin/cargo-progress.pl` 运行（hooks/register.tsx 114–128、hooks/progress.ts 17–23），Claude 拿到的仍是 cargo 原本的输出（只去掉进度条帧）和退出码；README 已写明，权限确认里会看到包装后的长命令；对原命令另做一次权限检查，你的规则拒绝就拒绝，自己从不放行（register.tsx 146–163）；后台运行和按路径调用的 cargo 不处理；需本机 perl，没有就照常跑 cargo；只读写 `$TMPDIR` 下自己的临时文件并 `rm -f`；不联网；单次提交，带测试。 | CC0-1.0 | [链接](https://github.com/Celsiusss/cargo-progress-claude-mod) |
 | tf-plan-summary | — | 给 Claude 一个 `plan_summary` 工具：对已保存的 Terraform 计划（`terraform plan -out=FILE`）在本机跑 `terraform show -json`，只返回几行摘要——增/改/替换/销毁/导入数量、漂移、每个销毁与替换（含强制替换的属性）、IAM/KMS/安全组/S3 策略等敏感变更（只列属性名，不带值）和变化的 outputs，让 Claude 不用读完整 plan 输出。备注：需本机 terraform；经 $.process.spawn 直接运行、不经 shell，失败时只返回 terraform 的首条 Error 行；不联网、不调模型。 | MIT | [链接](https://github.com/DustyStudy/claude-code-guardrails/tree/main/mods/tf-plan-summary) |
 | agent-trace | — | `/agent-trace` 打开「轨迹」面板：按回合 → 模型请求 → 工具调用 → 子代理逐层展示的 Langfuse 式树；每个模型请求可看这次新增的消息、token、缓存命中（低于 50% 标黄，未缓存输入暴涨 3 倍标 ⚠）、首 token 时间与 tok/s、思考与回复预览；按工具统计次数/耗时/失败，三泳道可点时间线，支持搜索。备注：只观察——turn.step 原样透传、tool.call 只记录不改写；可选 captureSystemPrompt（默认关）只读 prompt.compose 结果原样返回；记录存在会话状态（最多 2000 行、最近 150 条完整载荷）；不联网、不跑进程、不调模型；与 stepscope、flight-recorder 部分重叠（本 mod 侧重每次模型请求看到了什么和缓存命中）。 | MIT | [链接](https://github.com/jasoncai0/claude-agent-trace) |
