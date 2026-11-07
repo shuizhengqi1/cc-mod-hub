@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 795 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 797 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 795 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 797 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 795 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 797 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 795 个精选 Claude Code mods，按类别组织：
+以下是本市场的 797 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -579,6 +579,7 @@ For detailed descriptions of all 795 mods, see the Chinese section below. The �
 | agent-trace | — | `/agent-trace` 打开「轨迹」面板：按回合 → 模型请求 → 工具调用 → 子代理逐层展示的 Langfuse 式树；每个模型请求可看这次新增的消息、token、缓存命中（低于 50% 标黄，未缓存输入暴涨 3 倍标 ⚠）、首 token 时间与 tok/s、思考与回复预览；按工具统计次数/耗时/失败，三泳道可点时间线，支持搜索。备注：只观察——turn.step 原样透传、tool.call 只记录不改写；可选 captureSystemPrompt（默认关）只读 prompt.compose 结果原样返回；记录存在会话状态（最多 2000 行、最近 150 条完整载荷）；不联网、不跑进程、不调模型；与 stepscope、flight-recorder 部分重叠（本 mod 侧重每次模型请求看到了什么和缓存命中）。 | MIT | [链接](https://github.com/jasoncai0/claude-agent-trace) |
 | lean-comments | — | Claude 每次 Edit/Write 时检查这次新增的注释，拒绝加横幅/分隔线注释、多行注释（含多行 `/** */` 文档注释，可开 allowDocComments 放行）、超过 120 字符的注释、复述代码的注释（如「Step 1: …」「# Helpers」），以及一次新增超过 3 条注释的改动，让 Claude 改成只写一行说明「为什么」的短注释；只查新增注释，eslint-disable、@ts-expect-error、noqa、许可证头等指令不算，Markdown 等文档文件跳过。备注：默认 block 模式只拒绝不改写（hooks/register.ts 165）；可在 /config 改为 warn（放行并在工具结果后附说明）或 off，并调 maxLength、maxNewComments；不联网、不调模型、不起子进程。 | MIT | [链接](https://github.com/WilsonKinyua/claude-mods/tree/main/plugins/lean-comments) |
 | nvim-inline-review | — | 配合同仓库的 Neovim 插件 claude-inline-review.nvim，在你真实的 Neovim 缓冲区里逐块（hunk）审阅、接受或拒绝 Claude 的改动：Claude 首次 Edit/Write/NotebookEdit 某个文件前先给它拍快照，Neovim 端据此显示新旧差异。备注：需另装 Neovim 插件（Neovim ≥ 0.11），单独装 mod 只记录不显示；工具调用原样放行，只在无法记录时拒绝并中止回合；快照用 `git hash-object -w` 存进本仓库 git 对象库（不提交、不暂存），记录写在 .git/claude-inline-review/session.json；记录失败或按 Esc 中断回合时会往会话追加一条系统说明；不联网、不调模型。 | MIT | [链接](https://github.com/rohitsrao/claude-inline-review.nvim/tree/main/claude-mod) |
+| nvim-replay | — | 在真实 Neovim 里按可调速度回放 Claude 的 Edit/Write（像人手打字），回放结束才放行工具；`/viz open` 在 tmux 里开分屏，`/viz step\|speed\|on\|off` 控制。备注：tool.call 先对本机 nvim socket 发任务再 await next(e)；bin/viz-send、viz-open 为 shell 脚本（非不透明二进制）；需本机 nvim，建议 tmux；不改写提示、不联网、不调模型。与 nvim-inline-review（快照给 nvim 插件做 hunk review）互补：本条是实时打字回放。 | MIT | [链接](https://github.com/peterqlin/claude-viz) |
 | ast-grep | — | 给 Claude 四个结构化代码工具（ast-grep CLI）：按语法模式搜索（如 `console.log($A)`）、预览改写的完整 diff、照预览原样应用或丢弃；应用前比对每个文件的 SHA-256，文件在预览后改过就一个都不写；`/ast-grep on\|off\|discard`。备注：需自行安装 ast-grep CLI；本机以参数数组运行 ast-grep（不经 shell，hooks/register.ts 136、150）；每个文件都通过内置 Write 工具写入，先 `$.tool.check` 再 `$.tool.call`，照常走你的权限规则和确认（349、377）；只读会话目录内的普通 UTF-8 文件；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-ast-grep) |
 | edit-diagnostics | — | Claude 每次 Edit/Write/NotebookEdit 后，跑你仓库 `.claude/edit-diagnostics.json` 里配置的检查（tsc、ruff 或输出简单 JSON 的命令），把这次改到的文件里新出现的问题用几行告诉 Claude，已报告过的只计数；检查没正常结束会标「未验证」而不是「干净」。备注：必须先在提示框亲自输入 `/edit-diagnostics approve` 批准配置文件原文才会运行，文件改一个字节就要重新批准（hooks/register.ts 280–289）；检查结果作为该次编辑工具结果的附加 context 给模型（标明是工具输出、不是指令，329–342），不改提示、不改编辑、不拦截；命令不经 shell、带超时；不调模型、不联网。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-edit-diagnostics) |
 | pr-evidence | — | 给 Claude 一个只读工具 `pr_evidence`：按 repo+PR 号或精确 commit SHA 一次取回 PR 元数据、diff、该 commit 的 CI 运行/检查状态和失败任务的日志尾部，并按固定规则给出结论（排队中算 pending、没有 workflow 不算通过、发现不完整算 inconclusive），避免把没跑完或没跑的 CI 说成通过；`/pr-evidence on\|off`。备注：用本机已登录的 `gh` 只读查询，命令白名单只放行 `gh api --method GET`、`gh run view --log-failed`、`gh pr view --json` 和 `git rev-parse HEAD`（hooks/gh.ts 85–106）；默认拒绝子代理调用；不发送会话内容、不调模型。 | MIT | [链接](https://github.com/chrisvaillancourt/claude-pr-evidence) |
@@ -593,6 +594,7 @@ For detailed descriptions of all 795 mods, see the Chinese section below. The �
 | qa-gate | — | Claude 改过代码、想结束回合时，跑 package.json 里的 lint、类型检查、拼写检查和 test 脚本，不通过就让它继续修，直到通过（超过 maxAttempts 次后放行并提示）；没有的脚本跳过并在状态栏说明。备注：经 classic.Stop 阻止结束；通过 $.process 跑本项目 npm/pnpm/yarn/bun 脚本和 git status；tool.call 只记录改过的文件、原样放行；不联网、不调模型。 | MIT | [链接](https://github.com/WasteOfADrumBum/one-small-mods-pack/tree/main/mods/qa-gate) |
 | spec-manager | — | OpenSpec 实时窗格：每个变更的步骤条（proposal › specs › design › tasks › apply › archive）、下一步该 AI 还是你做、按 tasks.md 分节的任务进度、多模块总览，共享仓库里别人的变更置灰；有 openspec/ 的项目自动打开，`/spec-manager` 重新打开。备注：需本机已装 openspec 命令行，只运行 `openspec list/status --json`、`git config user.email`、`git log --format=%ae`（hooks/register.tsx 140–146、255–275）；每 10 秒读一次文件；不联网、不调模型、不读对话。比 openspec-status（提示框下方一行状态）更完整。 | MIT | [链接](https://github.com/jordan-temim/spec-manager) |
 | open-in-editor | — | 提示框上方列出 Claude 最近写或改过的 3 个文件（Write/Edit/NotebookEdit，新的在上），每行可复制路径、用 Zed 或 VS Code 打开，× 移除；Claude 写文件前不显示。备注：tool.call 先 next 再记录路径、原样放行；打开编辑器用 $.process.run 跑 `open -a`，仅 macOS；不联网、不调模型。 | MIT | [链接](https://github.com/berk-karaal/agent-plugins/tree/main/plugins/open-in-editor) |
+| outputs-pane | — | 侧窗列出本会话 Claude Write/Edit 过的文件，按 planning（md/txt）/code/scratch（默认 msg-*）分区，可过滤；点文件名用你的编辑器打开（默认 zed，可配）。备注：tool.call 先 await next(e) 再记录、原样放行；只跟 Write/Edit（不含 MultiEdit/NotebookEdit）；Rex 远程分屏查看为可选增强，不依赖 Rex；不改写提示、不联网、不调模型。与 open-in-editor（上方最近 3 个文件快捷打开）互补：本条是完整会话文件清单侧窗。同仓 agent-tree/artifacts/explore/kintsugi-runs 本轮未收（私有 herdr/Rex/kintsugi 流程或斜杠 /artifacts 冲突）。 | Apache-2.0 | [链接](https://github.com/russellpope/claude-mods/tree/main/outputs-pane) |
 | open-in-obsidian | — | Claude 用 Write/Edit 改 Obsidian 仓库（含 `.obsidian` 目录）里的 `.md` 笔记时，在该次编辑下方出现「Open in Obsidian」按钮；`/obsidian` 打开侧窗列出本会话改过的 vault 笔记（最新在上）可一键打开。备注：自动向上找 `.obsidian` 判定 vault，忽略 vault 外与 `.obsidian/` 内文件；用本机 `open` 打开 `obsidian://open?vault=…&file=…`，**仅 macOS**；tool.call 先 next 再记录、原样放行；不联网、不调模型、不改写提示。与 open-in-editor（Zed/VS Code）互补。 | MIT | [链接](https://github.com/ben-rosenthal/open-in-obsidian) |
 | agents-skills | — | 让 Claude Code 用上 `.agents/skills/` 里的技能（`npx skills` 和其他代理工具装技能的位置）：每次会话开始把其中含 SKILL.md 的技能文件夹复制到 `.claude/skills/`，副本自带 `.gitignore` 和标记文件、不进 git，原件改了会刷新；你自己在 `.claude/skills/` 里同名的技能不会被覆盖（会弹提示）。可在插件配置里填一个主目录，把那里的 `.agents/skills` 也一并复制。备注：只挂 session.start 与 classic.SessionStart，只通过 $.fs 在 `.claude/skills` 内写文件；不联网、不调模型、不改提示；新仓库（8 次提交）；新建 `.claude/skills` 后需按提示跑一次 `/reload-skills`。 | MIT | [链接](https://github.com/nightlab-agent/agents-skills) |
 | editable-diff | — | 「Claude's edits」窗格：汇总本会话 Claude 改过的文件，GitHub Desktop 风格可就地编辑的 diff，可保存、可按行留评论后一键发给 Claude；首次编辑自动打开，`/editable-diff` 重开。备注：保存只写本机文件，并往会话追加一句「用户已保存自改、下次编辑前请重读」；只有你点发送评论时才 `$.prompt.submit`（asUser）；本机 git/fs；不调模型、不外传会话。与 diff-review / redpen 互补（可编辑 diff + 评论面板）。 | MIT | [链接](https://github.com/tg-bomze/editable-diff) |
