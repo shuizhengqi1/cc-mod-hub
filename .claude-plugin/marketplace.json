@@ -6107,6 +6107,42 @@
       }
     },
     {
+      "name": "cc-file-history-mod",
+      "version": "0.2.0",
+      "description": "AbovePrompt band showing this session's edit count + pane of file edits grouped by path with one-click Revert (/file-history). AbovePrompt awaits next(e) and stacks. No prompt rewrite, no model.complete, no network.",
+      "author": {
+        "name": "lixinghui",
+        "url": "https://github.com/kukaka"
+      },
+      "homepage": "https://github.com/kukaka/cc-mods/tree/main/cc-file-history-mod",
+      "repository": "https://github.com/kukaka/cc-mods",
+      "license": "Apache-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kukaka/cc-mods.git",
+        "path": "cc-file-history-mod",
+        "sha": "8f7b616fc3a5886dbd74d2c78a875c5cf697a8c9"
+      }
+    },
+    {
+      "name": "cc-code-format-mod",
+      "version": "0.1.0",
+      "description": "Auto-formats fenced code blocks in assistant replies (Prettier / black / gofmt / rustfmt / shfmt when installed); /format-code toggles. session.append only. No prompt rewrite, no model.complete, no network.",
+      "author": {
+        "name": "lixinghui",
+        "url": "https://github.com/kukaka"
+      },
+      "homepage": "https://github.com/kukaka/cc-mods/tree/main/cc-code-format-mod",
+      "repository": "https://github.com/kukaka/cc-mods",
+      "license": "Apache-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/kukaka/cc-mods.git",
+        "path": "cc-code-format-mod",
+        "sha": "8f7b616fc3a5886dbd74d2c78a875c5cf697a8c9"
+      }
+    },
+    {
       "name": "session-manager",
       "description": "See every Claude Code session on your computer, open one, move a session or a whole project to another folder when the project moved, and send sessions or all orphans to the trash, always with a preview and a confirmation. A local browser page (127.0.0.1, random token) or /sessions commands.",
       "source": {
