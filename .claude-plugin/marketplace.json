@@ -7639,6 +7639,22 @@
         "path": "plugins/route-lens",
         "sha": "d266f6acaf2e3fb11e9d464838daf5ff655fa1bc"
       }
+    },
+    {
+      "name": "file-trail",
+      "version": "0.4.8",
+      "description": "Shows which file each Read, Edit and Write touched (Glob and Grep too, where the build has them as tools), with the time and whether it was blocked, in a side pane, the status line and a local file.",
+      "author": {
+        "name": "Nightlab"
+      },
+      "homepage": "https://github.com/nightlab-agent/file-trail#readme",
+      "repository": "https://github.com/nightlab-agent/file-trail",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "nightlab-agent/file-trail",
+        "sha": "24c5b36e6754a29bb260c8bebe80a31e430b9c7e"
+      }
     }
   ]
 }
