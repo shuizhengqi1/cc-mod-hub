@@ -7671,6 +7671,22 @@
         "repo": "cwijayasundara/rig-code-reviewer",
         "sha": "d2e824e6e48c2ca5a3e5b5eda5dd99db3210c594"
       }
+    },
+    {
+      "name": "session-map",
+      "version": "0.1.0",
+      "description": "Group your sessions into nested bundles in a side pane, and see them all on an interactive, draggable map with live status and links.",
+      "author": {
+        "name": "ktr0a"
+      },
+      "homepage": "https://github.com/ktr0a/session-map",
+      "repository": "https://github.com/ktr0a/session-map",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "ktr0a/session-map",
+        "sha": "4a69fbdf117d10603a73344e7cd13ea0bc63347b"
+      }
     }
   ]
 }
