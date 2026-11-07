@@ -7720,6 +7720,23 @@
         "path": "mods/safety/slopsquat-guard",
         "sha": "2260e0d1490c34bdd43162b0252f88f9a81fc334"
       }
+    },
+    {
+      "name": "quick-look",
+      "version": "0.1.0",
+      "description": "Collects the files the agent reads, writes or names in its answer, and opens them in macOS Quick Look from a /ql command or a pane, in any terminal including Warp.",
+      "author": {
+        "name": "Dongmin Yu"
+      },
+      "homepage": "https://github.com/AndrewDongminYoo/cc-agents-kit/tree/main/plugins/quick-look",
+      "repository": "https://github.com/AndrewDongminYoo/cc-agents-kit",
+      "license": "Apache-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/AndrewDongminYoo/cc-agents-kit.git",
+        "path": "plugins/quick-look",
+        "sha": "bb45a5013cf6b5ff3ad83fd7dd5dcecc2dfab9d9"
+      }
     }
   ]
 }
