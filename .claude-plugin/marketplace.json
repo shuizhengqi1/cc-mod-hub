@@ -7799,6 +7799,24 @@
         "repo": "zigansh1n/claude-focus-sidebar",
         "sha": "b44f1300a531c3c55a6e0fc6dda91e54cc3620d3"
       }
+    },
+    {
+      "name": "thryx-tasks",
+      "version": "0.2.0",
+      "description": "A Claude Code panel beside the chat for your ThryX board: the active sprint or all open tasks, yours or everyone's, in Doing, Review and Up next with the sprint's progress; a card per task with its pull requests and checks; notices when tickets move; a summary on the hint line under the prompt; a board picker across your workspaces; and a /thryx-tasks command. Calls ThryX through the thryx plugin's MCP server, using a fixed list of read tools.",
+      "author": {
+        "name": "ogxo",
+        "url": "https://github.com/ogxo-io"
+      },
+      "homepage": "https://github.com/ogxo-io/plugins/tree/main/plugins/thryx-tasks",
+      "repository": "https://github.com/ogxo-io/plugins",
+      "license": "MIT",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ogxo-io/plugins.git",
+        "path": "plugins/thryx-tasks",
+        "sha": "61f91317939d744e270d42ef16d18fdcc75ded78"
+      }
     }
   ]
 }

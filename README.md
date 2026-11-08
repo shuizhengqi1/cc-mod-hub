@@ -2,7 +2,7 @@
 
 **cc-mod-hub** is a curated Claude Code mod marketplace. A mod is a TypeScript event hook (such as tool.call, ui.render, etc.) packaged inside a plugin, not a general skill or slash command.
 
-**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 812 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
+**cc-mod-hub** 是一个精选的 Claude Code mod 市场。Mod 是一种打包在插件内的 TypeScript 事件钩子（如 tool.call、ui.render 等），而不是通用技能或斜杠命令。这个 plugin marketplace 提供 813 个精选的 Claude Code mods，包括内置核心 mod、官方示例以及社区开发的 TypeScript hooks。
 
 > **Requirements** | **要求**  
 > Claude Code 2.1.287 or higher | Claude Code 2.1.287 或更高版本
@@ -35,7 +35,7 @@ Install any mod from this marketplace | 从此市场安装任意 mod：
 
 ### What is cc-mod-hub?
 
-**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 812 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
+**cc-mod-hub** is a curated Claude Code plugin marketplace featuring 813 hand-picked mods. Mods are TypeScript hooks that extend Claude Code's behavior by intercepting events like `tool.call`, `ui.render`, `prompt.submit`, and more.
 
 This marketplace includes:
 - **Built-in mods** from the Claude Code core repository
@@ -48,13 +48,13 @@ This marketplace includes:
 2. Browse the [mod list below](#mod-列表--available-mods) (organized by category)
 3. Install: `/plugin install <mod-name>@cc-mod-hub`
 
-For detailed descriptions of all 812 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
+For detailed descriptions of all 813 mods, see the Chinese section below. The ⭐ column shows the GitHub stars of each mod's source repository (as of 2026-10-16; mods from the same repository share its count, and cells marked 「（所在仓库）」 are the host repository's stars, not the mod's own).
 
 ---
 
 ## 📦 Mod 列表 | Available Mods
 
-以下是本市场的 812 个精选 Claude Code mods，按类别组织：
+以下是本市场的 813 个精选 Claude Code mods，按类别组织：
 
 > ⭐ 为来源 GitHub 仓库的 star 数（star 数截至 2026-10-16）；同一仓库里的多个 mod 共用该仓库的 star 数，「—」表示 0 star。每个类别内按 star 数从高到低排列。  
 > 标「（所在仓库）」的 mod 只是某个仓库里的一个子目录（如 anthropics/claude-code、davila7/claude-code-templates 或作者的 mod 合集），这个数字是整个所在仓库的 star，不代表这个 mod 本身的受欢迎程度。  
@@ -788,6 +788,7 @@ For detailed descriptions of all 812 mods, see the Chinese section below. The �
 | agentbar | ⭐ 9（所在仓库） | AgentBar 桌面应用的配套 mod：把 Claude Code 未经询问自行决定的操作，以及上下文、用量上限、运行中子代理等指标写到 `~/.agentbar/mods.d/` 给 AgentBar 应用和 CLI 读；可选在别的会话等你时在提示框上方显示一行。备注：只观察（`tool.check`/`tool.call` 原样返回结果，从不批准或拒绝）；点那行时在 macOS 用 `/usr/bin/open agentbar://…` 唤起应用；不联网。 | MIT | [链接](https://github.com/michalstrnadel/AgentBar/tree/main/Scripts/mods/claude) |
 | vast-cost | ⭐ 8（所在仓库） | 输入框下方状态行显示 vast.ai 上正在运行的实例数和每小时费用，还有几台停止中（仍按磁盘计费），每 5 分钟刷新。备注：本机运行 `vastai show instances`，需自行安装并登录 vastai；tool.call 只在 Bash 里出现 vastai 后刷新，原样返回。 |  | [链接](https://github.com/wmayner/dotfiles/tree/main/claude/vast-cost) |
 | web | ⭐ 7（所在仓库） | 注册工具 **WebFetchRaw**：把 URL 页面原文写入文件（一行结果指出路径），HTML 用 trafilatura 抽正文为 markdown/text/html/raw，其它类型原样落盘；与内置 WebFetch（小模型摘要）互补。备注：需本机 `uv` 与 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`；`session.start` 注册工具，`tool.call` 本机跑插件 `scripts/webfetch_raw.py`；不改写提示、不调模型；同仓 modes / agentic-engineering 等未收（上下文注入或 shell SessionStart）。 | MIT | [链接](https://github.com/proxify-dev/agentic-kit/tree/main/plugins/web) |
+| thryx-tasks | ⭐ 5（所在仓库） | 聊天旁窗格显示 ThryX 看板：进行中/评审/下一步、冲刺进度、工单卡片（PR 与检查状态）、跨工作区选板；提示行末尾有自己的未完成工单摘要；`/thryx-tasks` 筛选/刷新。备注：**需另装同仓 `thryx` 插件并用 `/thryx:connect` 连上 ThryX MCP**（或已配置的 `claude.ai ThryX`）；只经 `$.mcp.call` 调固定只读工具，不发会话内容、不调模型、不用 `$.http`；点「Ask Claude」用 `$.prompt.fill` 把 `About ThryX ticket KEY: ` 追加进输入框（只预填不发送）；`/thryx-tasks permissions` 只打印建议写入 settings.json 的 MCP 只读 allow 列表，不改文件；`session.start` 注册命令后 `await next(e)`，PromptHint 经 `next` 追加尾注；默认可自动打开窗格并每 5 分钟刷新（可关）。与 jira-board（Atlassian MCP）、linear-tickets 同类、互补。 | MIT | [链接](https://github.com/ogxo-io/plugins/tree/main/plugins/thryx-tasks) |
 | inbox-pane | ⭐ 4（所在仓库） | 侧栏窗格展示 claude-inbox 各分区会话，支持快捷键操作。备注：读写本机 `~/.config/claude-inbox/`；可在无写入时拉起 ... |  | [链接](https://github.com/jordanbyron/claude-inbox/tree/main/mod) |
 | coderabbit-band | ⭐ 3（所在仓库） | 提示框上方一条带，显示当前分支 GitLab MR 上未解决的 CodeRabbit 评论（按严重程度）和 nitpick 数，附链接；没有未解决项时不显示，`/coderabbit` 隐藏到数量变化。备注：只支持 GitLab `origin` 远程，定时跑 `glab mr view` 和 `glab api` 拉讨论（push 后 15 分钟内每分钟、有内容时每 5 分钟、否则每 15 分钟），需要已登录的 glab；tool.call 只观察 push 与 resolve；不改写任何调用。 |  | [链接](https://github.com/schreibse/claude-code-mods/tree/main/coderabbit-band) |
 | calendar | ⭐ 2（所在仓库） | AbovePrompt 显示即将到来的 Google Calendar 事件（/cal）。备注：通过用户已配置的「claude.ai Google Calendar」MCP 读取。 | MIT | [链接](https://github.com/musingfox/cc-plugins/tree/main/calendar) |
